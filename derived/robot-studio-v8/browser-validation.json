@@ -1,0 +1,2851 @@
+{
+  "schema": "robot-studio-v8-browser/1",
+  "html": "share/Robot-Studio-v8.html",
+  "html_sha256": "36f85b762112741434b8d1636fb43a99e0c98330369edef0d61d32775c7dbcea",
+  "browser": "Playwright Chromium headless shell, SwiftShader WebGL, direct file URL, offline context",
+  "errors": [],
+  "warnings": [],
+  "externalRequests": [],
+  "stoppingInteraction": {
+    "workspace": "stopping",
+    "ready": true,
+    "config": "shaft-down",
+    "caseIndex": 0,
+    "studyIndex": 1,
+    "scenario": "turning",
+    "mode": "dynamic-brake",
+    "modelVariant": "reciprocal-speed-fit",
+    "stoppingRuns": 56,
+    "mechanismCases": 162,
+    "trackMm": 202,
+    "historicalTrackMm": 176,
+    "meshes": {
+      "frame": 368,
+      "calls": 1,
+      "triangles": 2,
+      "points": 0,
+      "lines": 0
+    },
+    "finite": true
+  },
+  "mechanismInteraction": {
+    "workspace": "mechanism",
+    "ready": true,
+    "config": "shaft-down",
+    "caseIndex": 5,
+    "studyIndex": 1,
+    "scenario": "turning",
+    "mode": "dynamic-brake",
+    "modelVariant": "reciprocal-speed-fit",
+    "stoppingRuns": 56,
+    "mechanismCases": 162,
+    "trackMm": 202,
+    "historicalTrackMm": 176,
+    "meshes": {
+      "frame": 1482,
+      "calls": 15,
+      "triangles": 5514,
+      "points": 0,
+      "lines": 144
+    },
+    "finite": true
+  },
+  "mechanismChecks": [
+    {
+      "caseIndex": 0,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 0,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 0,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 1,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 1,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 1,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 2,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 2,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 2,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 3,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 3,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 3,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 4,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 4,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 4,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 5,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 5,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 5,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 6,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 6,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 6,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 7,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 7,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 7,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 8,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 8,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 8,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 9,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 9,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 9,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 10,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 10,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 10,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 11,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 11,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 11,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 12,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 12,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 12,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 13,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 13,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 13,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 14,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 14,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 14,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 15,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 15,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 15,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 16,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 16,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 16,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 17,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 17,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 17,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 18,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 18,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 18,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 19,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 19,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 19,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 20,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 20,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 20,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 21,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 21,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 21,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 22,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 22,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 22,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 23,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 23,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 23,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 24,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 24,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 24,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 25,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 25,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 25,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 26,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 26,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 26,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 27,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 27,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 27,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 28,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 28,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 28,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 29,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 29,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 29,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 30,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 30,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 30,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 31,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 31,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 31,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 32,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 32,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 32,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 33,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 33,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 33,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 34,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 34,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 34,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 35,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 35,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 35,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 36,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 36,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 36,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 37,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 37,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 37,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 38,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 38,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 38,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 39,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 39,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 39,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 40,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 40,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 40,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 41,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 41,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 41,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 42,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 42,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 42,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 43,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 43,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 43,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 44,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 44,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 44,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 45,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 45,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 45,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 46,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 46,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 46,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 47,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 47,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 47,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 48,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 48,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 48,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 49,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 49,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 49,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 50,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 50,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 50,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 51,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 51,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 51,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 52,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 52,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 52,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 53,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 53,
+      "sample": 6,
+      "finite": true
+    },
+    {
+      "caseIndex": 53,
+      "sample": 12,
+      "finite": true
+    },
+    {
+      "caseIndex": 54,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 54,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 54,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 55,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 55,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 55,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 56,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 56,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 56,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 57,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 57,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 57,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 58,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 58,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 58,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 59,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 59,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 59,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 60,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 60,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 60,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 61,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 61,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 61,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 62,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 62,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 62,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 63,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 63,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 63,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 64,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 64,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 64,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 65,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 65,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 65,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 66,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 66,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 66,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 67,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 67,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 67,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 68,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 68,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 68,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 69,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 69,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 69,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 70,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 70,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 70,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 71,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 71,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 71,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 72,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 72,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 72,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 73,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 73,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 73,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 74,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 74,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 74,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 75,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 75,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 75,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 76,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 76,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 76,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 77,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 77,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 77,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 78,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 78,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 78,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 79,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 79,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 79,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 80,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 80,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 80,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 81,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 81,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 81,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 82,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 82,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 82,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 83,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 83,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 83,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 84,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 84,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 84,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 85,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 85,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 85,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 86,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 86,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 86,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 87,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 87,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 87,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 88,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 88,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 88,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 89,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 89,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 89,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 90,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 90,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 90,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 91,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 91,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 91,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 92,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 92,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 92,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 93,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 93,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 93,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 94,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 94,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 94,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 95,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 95,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 95,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 96,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 96,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 96,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 97,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 97,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 97,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 98,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 98,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 98,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 99,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 99,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 99,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 100,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 100,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 100,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 101,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 101,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 101,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 102,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 102,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 102,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 103,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 103,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 103,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 104,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 104,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 104,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 105,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 105,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 105,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 106,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 106,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 106,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 107,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 107,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 107,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 108,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 108,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 108,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 109,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 109,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 109,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 110,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 110,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 110,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 111,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 111,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 111,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 112,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 112,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 112,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 113,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 113,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 113,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 114,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 114,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 114,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 115,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 115,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 115,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 116,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 116,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 116,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 117,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 117,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 117,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 118,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 118,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 118,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 119,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 119,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 119,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 120,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 120,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 120,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 121,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 121,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 121,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 122,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 122,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 122,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 123,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 123,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 123,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 124,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 124,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 124,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 125,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 125,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 125,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 126,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 126,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 126,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 127,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 127,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 127,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 128,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 128,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 128,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 129,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 129,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 129,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 130,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 130,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 130,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 131,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 131,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 131,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 132,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 132,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 132,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 133,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 133,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 133,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 134,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 134,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 134,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 135,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 135,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 135,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 136,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 136,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 136,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 137,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 137,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 137,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 138,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 138,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 138,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 139,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 139,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 139,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 140,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 140,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 140,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 141,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 141,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 141,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 142,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 142,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 142,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 143,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 143,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 143,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 144,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 144,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 144,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 145,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 145,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 145,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 146,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 146,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 146,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 147,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 147,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 147,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 148,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 148,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 148,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 149,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 149,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 149,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 150,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 150,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 150,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 151,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 151,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 151,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 152,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 152,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 152,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 153,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 153,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 153,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 154,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 154,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 154,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 155,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 155,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 155,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 156,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 156,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 156,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 157,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 157,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 157,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 158,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 158,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 158,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 159,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 159,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 159,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 160,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 160,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 160,
+      "sample": 20,
+      "finite": true
+    },
+    {
+      "caseIndex": 161,
+      "sample": 0,
+      "finite": true
+    },
+    {
+      "caseIndex": 161,
+      "sample": 10,
+      "finite": true
+    },
+    {
+      "caseIndex": 161,
+      "sample": 20,
+      "finite": true
+    }
+  ],
+  "stoppingChecks": [
+    {
+      "scenario": "straight",
+      "mode": "driven",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "straight",
+      "mode": "coast",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "straight",
+      "mode": "dynamic-brake",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "straight",
+      "mode": "active-stop",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "turning",
+      "mode": "driven",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "turning",
+      "mode": "coast",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "turning",
+      "mode": "dynamic-brake",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "turning",
+      "mode": "active-stop",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "asymmetric-traction",
+      "mode": "driven",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "asymmetric-traction",
+      "mode": "coast",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "asymmetric-traction",
+      "mode": "dynamic-brake",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "asymmetric-traction",
+      "mode": "active-stop",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "drive-loss",
+      "mode": "driven",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "drive-loss",
+      "mode": "coast",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "drive-loss",
+      "mode": "dynamic-brake",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "drive-loss",
+      "mode": "active-stop",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "low-voltage",
+      "mode": "driven",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "low-voltage",
+      "mode": "coast",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "low-voltage",
+      "mode": "dynamic-brake",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "low-voltage",
+      "mode": "active-stop",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "high-voltage",
+      "mode": "driven",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "high-voltage",
+      "mode": "coast",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "high-voltage",
+      "mode": "dynamic-brake",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "high-voltage",
+      "mode": "active-stop",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "low-current-limit",
+      "mode": "driven",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "low-current-limit",
+      "mode": "coast",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "low-current-limit",
+      "mode": "dynamic-brake",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "low-current-limit",
+      "mode": "active-stop",
+      "model": "reciprocal-speed-fit",
+      "finite": true
+    },
+    {
+      "scenario": "straight",
+      "mode": "driven",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "straight",
+      "mode": "coast",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "straight",
+      "mode": "dynamic-brake",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "straight",
+      "mode": "active-stop",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "turning",
+      "mode": "driven",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "turning",
+      "mode": "coast",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "turning",
+      "mode": "dynamic-brake",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "turning",
+      "mode": "active-stop",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "asymmetric-traction",
+      "mode": "driven",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "asymmetric-traction",
+      "mode": "coast",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "asymmetric-traction",
+      "mode": "dynamic-brake",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "asymmetric-traction",
+      "mode": "active-stop",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "drive-loss",
+      "mode": "driven",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "drive-loss",
+      "mode": "coast",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "drive-loss",
+      "mode": "dynamic-brake",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "drive-loss",
+      "mode": "active-stop",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "low-voltage",
+      "mode": "driven",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "low-voltage",
+      "mode": "coast",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "low-voltage",
+      "mode": "dynamic-brake",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "low-voltage",
+      "mode": "active-stop",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "high-voltage",
+      "mode": "driven",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "high-voltage",
+      "mode": "coast",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "high-voltage",
+      "mode": "dynamic-brake",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "high-voltage",
+      "mode": "active-stop",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "low-current-limit",
+      "mode": "driven",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "low-current-limit",
+      "mode": "coast",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "low-current-limit",
+      "mode": "dynamic-brake",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    },
+    {
+      "scenario": "low-current-limit",
+      "mode": "active-stop",
+      "model": "reciprocal-no-load-loss",
+      "finite": true
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "screenshots/assembly.png",
+      "query": "",
+      "sha256": "a50bab94a48d462ec6689f61dab5146c57ddd76f7171a006a1a0c642fddbc73f"
+    },
+    {
+      "file": "screenshots/stopping.png",
+      "query": "?workspace=stopping&sample=30",
+      "sha256": "7bd36ac1ef59840c52949d3d827cecbf51baa54d1b9569e940cddc6daa3b4bb9"
+    },
+    {
+      "file": "screenshots/mechanism.png",
+      "query": "?workspace=mechanism&case=0&sample=8",
+      "sha256": "1442890af14a34681e50163e6992ddeb4a9fe22a3519eab782fcd3c8b4b800dc"
+    },
+    {
+      "file": "screenshots/evidence.png",
+      "query": "?workspace=evidence",
+      "sha256": "6d51cd12f1e3fe5ef9548ff44b058358e5356d19c602cbcc303b1d4e00b5291e"
+    }
+  ],
+  "notChecked": [
+    "real-GPU performance",
+    "mobile layout",
+    "physical robot behavior",
+    "visual inspection by this tool"
+  ]
+}

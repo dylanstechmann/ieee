@@ -1,5 +1,11 @@
 # IEEE 2027 hardware competition
 
+> **Start with [PROJECT-STATUS.md](PROJECT-STATUS.md). Open `share/Robot-Studio-v8.html` for the consolidated offline studio.** It combines the earlier source review and engineering datasets with v7's vendor-CAD renderer: assembly/field, 56 stopping trajectories, all 162 mechanism cases / 2,970 frames, and an evidence/next-steps workspace. Guide: `derived/robot-studio-v8/README.md`.
+>
+> **This is a digital study, not a validated competition robot.** The old dynamics/mechanism packages use a 176 mm track; vendor CAD gives 202 mm. v8 retains that mismatch visibly rather than silently combining incompatible geometry. No mechanism, final chassis, driver, battery or fabrication release is selected.
+>
+> **History:** this folder had no Git repository before November 1, 2026. A local baseline commit and full pre-consolidation tarball now preserve the surviving files; earlier edits are not retroactively Git history. No private IEEE GitHub remote was found. The old `website/` repository remains independent.
+
 > **Robot Studio v7 (November 1, 2026):** open `/workspace/ieee/ieee/share/Robot-Studio-v7.html` (private page: <https://claude.ai/artifact/Ux6aG1Vkz2i4yW4avsNGhs>). It renders the Order A mule from **Pololu's own CAD** for the motor, bracket, hub, wheel and caster, with physically based materials and studio lighting, on the GM2 V3 field (exact AprilTag bits and the organizer tire STL). It includes an illustrative drive and a provenance badge on every part. Guide: `derived/robot-studio-v7/README.md`; handoff: `SESSION-STATE-2026-11-01.md`.
 >
 > **The vendor CAD contradicts the mule kit.** The gearmotor's output shaft is 7.0 mm off center, so the kit's 21.6 mm deck would leave the **drive wheels 7.09 mm off the floor**. The bracket holes sit 3.25 mm outboard of the drill template, and stock parts give a **202 mm track, not 176 mm**. Corrected layouts are proposed in the studio; nothing sealed was changed.
