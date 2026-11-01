@@ -1,0 +1,94 @@
+[
+  {
+    "file": "diagram-A-south.svg",
+    "policy": "selectable-original-regions",
+    "label": "Diagram A",
+    "obstacle_case": "empty-control",
+    "wall": "inside-nominal",
+    "mode": "constrained-variants",
+    "route_id": "connected-differential-pit_box_1",
+    "target_id": "pit_box_1",
+    "segment_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      47,
+      82,
+      114
+    ],
+    "docking_waypoint_index": 47,
+    "footprint_indices": [
+      0,
+      12,
+      47,
+      82,
+      114,
+      43,
+      45,
+      80
+    ],
+    "robot": {
+      "length_in": 10,
+      "width_in": 10
+    },
+    "official_finish_line": null
+  },
+  {
+    "file": "diagram-B-north.svg",
+    "policy": "experimental-north-pit-access",
+    "label": "Diagram B",
+    "obstacle_case": "empty-control",
+    "wall": "inside-nominal",
+    "mode": "constrained-variants",
+    "route_id": "connected-differential-pit_box_1",
+    "target_id": "pit_box_1",
+    "segment_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      113,
+      214,
+      246
+    ],
+    "docking_waypoint_index": 113,
+    "footprint_indices": [
+      0,
+      12,
+      113,
+      214,
+      246,
+      14,
+      48,
+      78,
+      111,
+      130,
+      163,
+      180
+    ],
+    "robot": {
+      "length_in": 10,
+      "width_in": 10
+    },
+    "official_finish_line": null
+  }
+]

@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1422"><meta name="description" content="Offline interactive 3D assembly and planar physics lab for a conceptual IEEE Stock Car robot."><title>Stock Car Robot Lab · Concept v0.1</title><style>
+:root{--bg:#08111d;--panel:#101c2c;--panel2:#152438;--ink:#e8eef5;--muted:#9aacc0;--line:#2b3c50;--lime:#d5f249;--blue:#68c8ee;--orange:#f0a35e;font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}*{box-sizing:border-box}body{margin:0}button,select,textarea{font:inherit}button,select{color:var(--ink);background:#18283b;border:1px solid #38506a;border-radius:7px;padding:.48rem .7rem}button{cursor:pointer}button:hover{border-color:var(--blue);background:#20354c}button:focus-visible,select:focus-visible,textarea:focus-visible,input:focus-visible,canvas:focus-visible{outline:3px solid var(--lime);outline-offset:2px}button.active,.mode-tabs button[aria-selected=true]{background:var(--lime);border-color:var(--lime);color:#14202c;font-weight:750}button.primary{background:var(--blue);border-color:var(--blue);color:#092031;font-weight:750;min-width:105px}h1,h2,h3,p{margin-top:0}h1{font-size:1.65rem;letter-spacing:-.04em;margin-bottom:0}h2{font-size:1.5rem;line-height:1.2;letter-spacing:-.025em;margin-bottom:.65rem}h3{font-size:1rem;margin-bottom:.5rem}p{color:var(--muted)}code{color:var(--blue)}[hidden]{display:none!important}header{max-width:1540px;margin:auto;padding:24px 28px 12px;display:flex;align-items:end;justify-content:space-between;gap:20px}.eyebrow{font-size:.7rem;letter-spacing:.13em;font-weight:800;color:var(--blue);margin-bottom:5px}.header-badges{display:flex;gap:7px;flex-wrap:wrap}.header-badges span{border:1px solid var(--line);border-radius:99px;padding:5px 10px;font-size:.73rem;color:var(--muted)}.header-badges .warning{color:var(--orange);border-color:#705135}main{max-width:1540px;margin:auto;padding:0 28px 25px}.intro{display:flex;justify-content:space-between;align-items:center;gap:24px;margin:16px 0}.intro p{margin-bottom:0;max-width:760px}.mode-tabs{display:flex;gap:8px;white-space:nowrap}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 345px;gap:16px;align-items:start}.viewer-card,.sidebar>section,.evidence{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}.viewer-wrap{height:clamp(430px,62vh,690px);position:relative;background:#09101c}canvas{display:block;width:100%;height:100%;cursor:grab;touch-action:none}canvas:active{cursor:grabbing}.viewer-top{position:absolute;top:14px;left:14px;right:14px;display:flex;justify-content:space-between;pointer-events:none;font-size:.72rem;letter-spacing:.08em}.viewer-top span{background:#07101ddd;border:1px solid #32445a;padding:5px 9px;border-radius:5px}.camera-controls{position:absolute;right:12px;bottom:45px;display:flex;gap:5px;flex-wrap:wrap;justify-content:end}.camera-controls button{font-size:.72rem;padding:5px 8px;background:#0b1726dd}.viewer-legend{position:absolute;left:14px;bottom:13px;right:14px;color:#b6c4d3;font-size:.72rem;pointer-events:none}.viewer-error{position:absolute;inset:25%;padding:25px;background:#301d25;border:1px solid #d76c78;border-radius:10px;z-index:5}.transport{padding:14px 16px}.transport-buttons{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.transport-buttons label{margin-left:auto;color:var(--muted);font-size:.8rem}.scrub{display:grid;grid-template-columns:1fr 118px;gap:12px;align-items:center;margin-top:13px}.scrub output{font-variant-numeric:tabular-nums;color:var(--blue);font-size:.82rem;text-align:right}input[type=range]{width:100%;accent-color:var(--lime)}#transport-note{font-size:.74rem;margin:7px 0 0}.sidebar{display:flex;flex-direction:column;gap:12px}.sidebar>section{padding:18px}.sidebar h2{font-size:1.3rem}.step-count{font-size:.74rem;color:var(--lime);margin-bottom:7px}.stage-list{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:14px 0}.stage-list button{padding:6px 2px;font-size:.72rem}.part-browser{border-top:1px solid var(--line);padding-top:10px}.part-browser summary{cursor:pointer;font-weight:700}#part-list{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;max-height:125px;overflow:auto}#part-list button{font-size:.69rem;padding:4px 7px}.detail-card{background:var(--panel2);border-left:3px solid var(--blue);padding:12px;margin-top:14px}.detail-card p{font-size:.82rem;margin-bottom:0}.question-card{border-top:2px solid var(--lime)!important}.question-card h3{margin-bottom:6px}.question-card p{font-size:.8rem}textarea{width:100%;resize:vertical;background:#0a1523;color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:9px}#copy-status{font-size:.72rem;color:var(--lime);margin-left:8px}.route-label{display:grid;gap:6px;color:var(--muted);font-size:.78rem}.route-label select{width:100%}.telemetry{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:14px 0}.telemetry div{background:#0b1726;padding:8px;border-radius:6px}.telemetry span{display:block;color:var(--muted);font-size:.68rem}.telemetry strong{display:block;font-size:.82rem;font-variant-numeric:tabular-nums}.event-log{padding-left:20px;max-height:130px;overflow:auto;color:var(--muted);font-size:.75rem}.event-log li{margin-bottom:7px}.evidence{margin-top:16px;padding:0 18px}.evidence summary{cursor:pointer;padding:15px 0;font-weight:750}.evidence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;padding-bottom:15px}.evidence-grid p{font-size:.82rem}footer{max-width:1540px;margin:auto;padding:0 28px 25px;color:#71869c;font-size:.72rem;display:flex;justify-content:space-between}
+@media(max-width:1050px){.workspace{grid-template-columns:minmax(0,1fr) 300px}.intro{align-items:flex-start;flex-direction:column}.viewer-wrap{height:560px}}@media(max-width:800px){header{align-items:flex-start;flex-direction:column;padding:18px}.workspace{grid-template-columns:1fr}main{padding:0 14px 20px}.intro{margin-top:8px}.viewer-wrap{height:520px}.sidebar{display:grid;grid-template-columns:1fr 1fr}.evidence-grid{grid-template-columns:1fr}.question-card{align-self:start}}@media(max-width:540px){.sidebar{display:flex}.mode-tabs{width:100%}.mode-tabs button{flex:1}.viewer-wrap{height:440px}.transport-buttons label{margin-left:0}.scrub{grid-template-columns:1fr}.scrub output{text-align:left}.camera-controls{bottom:50px}.header-badges{display:none}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+</style></head>
+<body>
+<header><div><p class="eyebrow">IEEE SOUTHEASTCON 2027 · HOBBY / LEARNING PROJECT</p><h1>Stock Car Robot Lab</h1></div><div class="header-badges"><span>Concept v0.1</span><span>Offline · no dependencies</span><span class="warning">Not fabrication CAD</span></div></header>
+<main>
+<section class="intro"><div><h2>Build it. Scrub it. Drive the assumptions.</h2><p>Explore an agent-authored 10 × 10-inch differential-drive concept, then run live planar physics on the provisional field. Drag to orbit; scroll to zoom.</p></div><div class="mode-tabs" role="tablist" aria-label="Robot lab mode"><button id="tab-assembly" class="active" role="tab" aria-selected="true" data-mode="assembly">1 · Assembly</button><button id="tab-simulation" role="tab" aria-selected="false" data-mode="simulation">2 · Field simulation</button></div></section>
+<div class="workspace">
+<section class="viewer-card" aria-label="Interactive 3D viewer">
+<div class="viewer-wrap"><canvas id="view" tabindex="0" aria-label="3D robot and field. Drag to orbit, scroll to zoom. Use adjacent buttons for camera presets."></canvas><div id="webgl-error" class="viewer-error" hidden></div><div class="viewer-top"><span id="view-badge">EXPLODED ASSEMBLY</span><span id="view-status">Paused</span></div><div class="camera-controls" aria-label="Camera presets"><button data-camera="reset">Orbit reset</button><button data-camera="top">Top</button><button data-camera="follow">Follow</button><button id="fullscreen">Full screen</button></div><div class="viewer-legend" id="viewer-legend">30 conceptual parts · official tire proportions · dimensions otherwise assumed</div></div>
+<div class="transport"><div class="transport-buttons"><button id="reset" title="Reset (R)">|◀ <span>Reset</span></button><button id="back" title="Back one second">−1 s</button><button id="play" class="primary" title="Play or pause (Space)">▶ Play</button><button id="forward" title="Forward one second">+1 s</button><label>Speed <select id="speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div><div class="scrub"><input id="timeline" type="range" min="0" max="32" step="0.01" value="0" aria-label="Playback time"><output id="time">00:00.0 / 00:32.0</output></div><p id="transport-note">Assembly is deterministic: scrub to any point without losing component state.</p></div>
+</section>
+<aside class="sidebar">
+<section id="assembly-panel"><p class="eyebrow">ASSEMBLY SEQUENCE</p><div class="step-count" id="step-count">Step 1 of 8</div><h2 id="stage-title"></h2><p id="stage-description"></p><div id="stage-list" class="stage-list" aria-label="Assembly stages"></div><details open class="part-browser"><summary>Inspect a component</summary><div id="part-list"></div></details><article id="part-detail" class="detail-card"><h3>Why this concept?</h3><p>Small differential-drive motions match the existing forward/reverse/spin route studies. Every component remains a placeholder until packaging, sensing and physical tests select real hardware.</p></article></section>
+<section id="simulation-panel" hidden><p class="eyebrow">LIVE PLANAR PHYSICS / 3D VIEW</p><h2>Conditional pit-route study</h2><label class="route-label">Guide route <select id="route"><option value="south">South approach · conditional</option><option value="north">North approach · experimental</option></select></label><div class="telemetry"><div><span>Status</span><strong id="sim-status">Ready</strong></div><div><span>Sim time</span><strong id="sim-time">0.0 s</strong></div><div><span>Position</span><strong id="sim-pose">—</strong></div><div><span>Body speed</span><strong id="sim-speed">0.0 in/s</strong></div><div><span>Distance</span><strong id="sim-distance">0.0 in</strong></div><div><span>Command</span><strong id="sim-command">—</strong></div><div><span>Carried tire</span><strong id="sim-tire">Red preload</strong></div><div><span>Route progress</span><strong id="sim-progress">0%</strong></div></div><article class="detail-card"><h3>Physics boundary</h3><p>120 Hz unicycle/differential-drive integration, acceleration limits, full-footprint collision rejection and waypoint feedback. No slip, suspension, sensor noise, 3D contacts, obstacles, scoring or lap adjudication.</p></article><h3>Event log</h3><ol id="event-log" class="event-log"></ol></section>
+<section class="question-card"><p class="eyebrow">ASK ABOUT THIS VIEW</p><h3>Bring a focused question back to the chat</h3><p id="question-suggestion">Select a part or stage, then copy a question with its context.</p><textarea id="question-input" rows="3" aria-label="Question to copy" placeholder="Why is the tire mechanism conceptual rather than a selected gripper?"></textarea><button id="copy-question">Copy question</button><span id="copy-status" role="status"></span></section>
+</aside>
+</div>
+<details class="evidence"><summary>Assumptions, controls and evidence boundary</summary><div class="evidence-grid"><div><h3>Controls</h3><p><b>Space</b> play/pause · <b>R</b> reset · <b>←/→</b> one second · drag orbit · wheel zoom. Follow keeps the simulated robot centered. Field scrubbing re-simulates from the initial pose at the same fixed time step.</p></div><div><h3>What this does not prove</h3><p>No manufacturing readiness, selected BOM, legal route, complete mission, reliable tire exchange, continuous collision proof, sensor performance or physical score. The north route crosses the illustrated start area and remains experimental.</p></div><div><h3>Sources</h3><p>Existing constrained-field geometry, connected-navigation empty-control routes and official tire proportions. Robot parts are visualization concepts. The reviewed organizer questions are saved separately in <code>confirmation-questions-v3.json</code>.</p></div></div></details>
+</main>
+<footer>Agent-built concept lab · local/offline · no purchases or hardware tests implied <span id="build-version">v0.1.0</span></footer>
+<script>
+/* Generated by tools/build-robot-lab-v3.js. */
+globalThis.ROBOT_LAB_DATA = {"generated":"2026-10-31","status":"agent-built-concept-lab-not-hardware-or-rules-validation","model":{"version":"0.1.0","title":"Stock Car Robot Lab","status":"concept-visualization-not-final-cad-not-hardware-validation","physics":{"fixed_step_s":0.008333333333333333,"max_forward_in_s":10,"max_reverse_in_s":7,"max_angular_deg_s":100,"linear_accel_in_s2":24,"angular_accel_deg_s2":300,"wheel_track_in":8,"dock_dwell_s":1.5,"position_tolerance_in":0.3,"heading_tolerance_deg":2},"stages":[{"id":"frame","title":"Build the lower frame","duration_s":4,"description":"A flat open frame establishes the 10 × 10-inch concept envelope. Dimensions and material are placeholders, not fabrication instructions.","question":"What material and fastening method should survive wheel impacts without adding unnecessary weight?"},{"id":"drive","title":"Add the differential drive","duration_s":4,"description":"Two powered wheels on a centered 8-inch track provide forward, reverse and in-place rotation. Small caster contacts are illustrative; real traction and scrub require testing.","question":"Should the concept use two drive wheels plus casters, or four driven wheels?"},{"id":"power","title":"Install power and emergency stop","duration_s":4,"description":"Battery, power distribution and a visible emergency-stop control occupy the rear deck. Battery chemistry, voltage, wiring and mounting are not selected.","question":"What battery and fuse architecture would meet the rules and the measured drivetrain load?"},{"id":"compute","title":"Add control electronics","duration_s":4,"description":"A controller and motor driver sit on the open middle deck for access. Board models, connectors and computing power remain conceptual.","question":"Which controller can handle odometry, range sensing and camera/tag processing with margin?"},{"id":"sensors","title":"Add navigation sensors","duration_s":4,"description":"A raised camera, front/side range sensors and a low line array represent complementary sensing. Their fields of view and actual placements need calibration and rules review.","question":"Which sensors are necessary for reliable tag, line and obstacle observations under venue lighting?"},{"id":"tires","title":"Add the tire-handling fork","duration_s":4,"description":"A short front fork illustrates a passive capture concept for the official-size tire. It is not a proven gripper and does not establish exchange or parking legality.","question":"Can a passive fork reliably acquire and retain the tire across its unknown initial poses and friction?"},{"id":"flag","title":"Add the final-lap flag","duration_s":4,"description":"A lightweight mast and flag fit beneath the conceptual 12-inch starting-height ceiling. Deployment timing and school artwork are not modeled.","question":"Should the flag be fixed, hinged or actively deployed after the second lap?"},{"id":"integration","title":"Protect wiring and inspect the envelope","duration_s":4,"description":"A cable cover completes the visual assembly. Real integration still needs strain relief, interference checks, fastener retention, mass measurement and emergency-stop testing.","question":"What physical inspection and low-speed tests should gate the first field run?"}],"parts":[{"id":"baseplate","name":"Lower deck","stage":1,"kind":"box","pos":[0,0,1.65],"size":[9,8,0.3],"color":"#66788a","exploded":[-7,-6,7],"description":"Conceptual structural deck; material and thickness are not selected."},{"id":"rail-left","name":"Left frame rail","stage":1,"kind":"box","pos":[0,4.25,2.1],"size":[9,0.5,0.8],"color":"#9aabba","exploded":[-6,-8,8]},{"id":"rail-right","name":"Right frame rail","stage":1,"kind":"box","pos":[0,-4.25,2.1],"size":[9,0.5,0.8],"color":"#9aabba","exploded":[6,-8,8]},{"id":"cross-front","name":"Front cross-member","stage":1,"kind":"box","pos":[4.25,0,2.1],"size":[0.5,8,0.8],"color":"#9aabba","exploded":[9,0,7]},{"id":"cross-rear","name":"Rear cross-member","stage":1,"kind":"box","pos":[-4.25,0,2.1],"size":[0.5,8,0.8],"color":"#9aabba","exploded":[-10,0,7]},{"id":"motor-left","name":"Left drive motor","stage":2,"kind":"box","pos":[0,3.55,1.65],"size":[2.5,1,1.2],"color":"#e0a24a","exploded":[-3,10,5]},{"id":"motor-right","name":"Right drive motor","stage":2,"kind":"box","pos":[0,-3.55,1.65],"size":[2.5,1,1.2],"color":"#e0a24a","exploded":[-3,-10,5]},{"id":"wheel-left","name":"Left drive wheel","stage":2,"kind":"cylinder","pos":[0,4.5,1.5],"size":[1.5,1.5,0.75],"rot":[1.5707963267948966,0,0],"color":"#202833","exploded":[0,11,3]},{"id":"wheel-right","name":"Right drive wheel","stage":2,"kind":"cylinder","pos":[0,-4.5,1.5],"size":[1.5,1.5,0.75],"rot":[1.5707963267948966,0,0],"color":"#202833","exploded":[0,-11,3]},{"id":"caster-front","name":"Front support contact","stage":2,"kind":"cylinder","pos":[3.5,0,0.55],"size":[0.55,0.55,0.5],"color":"#485563","exploded":[8,5,3]},{"id":"caster-rear","name":"Rear support contact","stage":2,"kind":"cylinder","pos":[-3.5,0,0.55],"size":[0.55,0.55,0.5],"color":"#485563","exploded":[-8,5,3]},{"id":"battery","name":"Battery placeholder","stage":3,"kind":"box","pos":[-2.2,0,2.65],"size":[3.8,4.2,1.4],"color":"#425d75","exploded":[-10,-5,9]},{"id":"power","name":"Power distribution","stage":3,"kind":"box","pos":[-2.2,-2.8,2.5],"size":[2.4,1.2,0.5],"color":"#e5c14f","exploded":[-8,-9,8]},{"id":"estop","name":"Emergency-stop control","stage":3,"kind":"cylinder","pos":[-3.4,2.7,3.15],"size":[0.5,0.5,0.5],"color":"#e45d5d","exploded":[-9,8,9]},{"id":"controller","name":"Controller placeholder","stage":4,"kind":"box","pos":[1.2,0,2.45],"size":[3.5,3,0.25],"color":"#37a884","exploded":[5,0,11]},{"id":"driver","name":"Motor driver placeholder","stage":4,"kind":"box","pos":[0,-2.5,2.45],"size":[2.2,1.3,0.25],"color":"#4a91c9","exploded":[2,-8,10]},{"id":"mast","name":"Camera mast","stage":5,"kind":"box","pos":[2.8,0,4.5],"size":[0.35,0.35,4],"color":"#a8b4c0","exploded":[7,4,12]},{"id":"camera","name":"AprilTag camera","stage":5,"kind":"box","pos":[3,0,6.3],"size":[0.8,1.5,0.8],"color":"#8b75d7","exploded":[10,3,12]},{"id":"range-front","name":"Front range sensor","stage":5,"kind":"box","pos":[4.4,0,2.8],"size":[0.25,1.4,0.6],"color":"#65c8e0","exploded":[11,0,8]},{"id":"range-left","name":"Left range sensor","stage":5,"kind":"box","pos":[0,4.3,2.8],"size":[1.2,0.25,0.6],"color":"#65c8e0","exploded":[3,10,8]},{"id":"range-right","name":"Right range sensor","stage":5,"kind":"box","pos":[0,-4.3,2.8],"size":[1.2,0.25,0.6],"color":"#65c8e0","exploded":[3,-10,8]},{"id":"line-array","name":"Low line-sensor array","stage":5,"kind":"box","pos":[3.6,0,1.1],"size":[0.5,4.5,0.25],"color":"#38444f","exploded":[8,-5,5]},{"id":"fork-left","name":"Left tire-fork rail","stage":6,"kind":"box","pos":[3.9,1.5,2.5],"size":[2.2,0.25,0.35],"color":"#e6874c","exploded":[10,7,6]},{"id":"fork-right","name":"Right tire-fork rail","stage":6,"kind":"box","pos":[3.9,-1.5,2.5],"size":[2.2,0.25,0.35],"color":"#e6874c","exploded":[10,-7,6]},{"id":"palm-left","name":"Left capture palm","stage":6,"kind":"box","pos":[4.8,1.5,2.8],"size":[0.3,0.4,1.2],"color":"#e6874c","exploded":[12,6,7]},{"id":"palm-right","name":"Right capture palm","stage":6,"kind":"box","pos":[4.8,-1.5,2.8],"size":[0.3,0.4,1.2],"color":"#e6874c","exploded":[12,-6,7]},{"id":"carried-tire","name":"Carried spare tire","stage":6,"kind":"torus","pos":[4,0,3.25],"size":[1.068,1.068,1.068],"color":"#d84f57","exploded":[12,0,5],"description":"Official tire proportions: approximately 68.18 mm OD and 40.30 mm bore. Red is the preload; the simulation substitutes blue after its conceptual dock event."},{"id":"flag-mast","name":"Flag mast","stage":7,"kind":"cylinder","pos":[-3.6,2.8,5],"size":[0.12,0.12,5],"color":"#d6dee5","exploded":[-10,8,12]},{"id":"flag","name":"School-flag placeholder","stage":7,"kind":"box","pos":[-3.55,2.8,7],"size":[0.08,2.5,1.4],"color":"#d5f249","exploded":[-11,10,13]},{"id":"cable-cover","name":"Central cable cover","stage":8,"kind":"box","pos":[-0.5,0,3.15],"size":[6,0.25,0.25],"color":"#f0c94d","exploded":[0,0,14]}],"limitations":["All robot part dimensions, placements and mechanisms are agent-authored visualization choices, not selected hardware or manufacturing CAD.","Physics is planar differential-drive motion with acceleration limits and discrete collision rejection, rendered in 3D. It omits suspension, tire slip, motor electrical dynamics, sensor noise, mechanism dynamics and 3D rigid-body contacts.","The stored south/north routes are conditional engineering examples to pit box 1 with an empty field, not complete three-lap missions or official legality determinations.","No obstacle vehicles, field tolerances, lap adjudication or scoring are simulated in this version.","Assembly playback is deterministic; field physics advances only while playing. Fast-forward changes simulated time rate, not solver fidelity."]},"field":{"units":"inches","bounds":{"min_x":1,"max_x":95,"min_y":1,"max_y":47},"features":[{"id":"pit_box_1","kind":"marking","vertices_in":[[1.017,3.045],[13.017,3.045],[13.017,15.045],[1.017,15.045]],"provenance":"12-inch width and 3-inch gap: V3 drawing; depth and origin assumed"},{"id":"pit_box_2","kind":"marking","vertices_in":[[1.017,18.045],[13.017,18.045],[13.017,30.045],[1.017,30.045]],"provenance":"12-inch width and 3-inch gap: V3 drawing; depth and origin assumed"},{"id":"pit_box_3","kind":"marking","vertices_in":[[1.017,33.045],[13.017,33.045],[13.017,45.045],[1.017,45.045]],"provenance":"12-inch width and 3-inch gap: V3 drawing; depth and origin assumed"},{"id":"start_box","kind":"marking","vertices_in":[[14.378,32.918],[26.378,32.918],[26.378,44.918],[14.378,44.918]],"provenance":"trace origin and 12-inch square assumed"},{"id":"center_divider_axis","kind":"divider_axis","vertices_in":[[43.87,24.073],[79.87,24.073]],"provenance":"36-inch length: V3 drawing; axis center trace-derived"},{"id":"pit_divider_axis","kind":"divider_axis","vertices_in":[[28,16.073],[28,32.073]],"provenance":"16-inch length and 28-inch division: V3 drawing; alignment and axis center assumed"},{"id":"track_marking_trace","kind":"trace","vertices_in":[[88.012,17.837],[88.012,30.308],[80.024,36.399],[43.57,36.399],[35.873,30.308],[35.873,17.837],[43.57,11.601],[80.024,11.601]],"provenance":"unconstrained image trace; not dimensioned"}],"solids":[{"id":"center_divider_axis","vertices_in":[[43.87,23.573],[79.87,23.573],[79.87,24.573],[43.87,24.573]]},{"id":"pit_divider_axis","vertices_in":[[27.5,16.073],[28.5,16.073],[28.5,32.073],[27.5,32.073]]}],"board":{"length":96,"width":48,"thickness":0.719},"wallScenario":"inside-nominal","obstacleCase":"empty-control"},"routes":{"south":{"id":"south","label":"South-end approach · conditional","policy":"selectable-original-regions","target_id":"pit_box_1","waypoints":[[20.378,38.918,0],[36,38.918,0],[36,38.918,270],[36,36,270],[36,36,0],[87,36,0],[87,36,270],[87,12,270],[87,12,180],[36,12,180],[36,12,270],[36,9,270],[36,9,180],[35,9,180],[34,9,180],[33,9,180],[32,9,180],[31,9,180],[30,9,180],[29,9,180],[28,9,180],[27,9,180],[26,9,180],[25,9,180],[24,9,180],[23,9,180],[22.435,9,180],[22,9,180],[21,9,180],[20.378,9,180],[20,9,180],[19,9,180],[18,9,180],[17,9,180],[16,9,180],[15,9,180],[14.25,9,180],[14,9,180],[13,9,180],[12,9,180],[11,9,180],[10,9,180],[9,9,180],[9,9,270],[9,9.045,270],[9,9.045,180],[8,9.045,180],[7.0169999999999995,9.045,180],[8,9.045,180],[9,9.045,180],[10,9.045,180],[11,9.045,180],[12,9.045,180],[13,9.045,180],[14,9.045,180],[14.25,9.045,180],[15,9.045,180],[16,9.045,180],[17,9.045,180],[18,9.045,180],[19,9.045,180],[20,9.045,180],[20.378,9.045,180],[21,9.045,180],[22,9.045,180],[22.435,9.045,180],[23,9.045,180],[24,9.045,180],[25,9.045,180],[26,9.045,180],[27,9.045,180],[28,9.045,180],[29,9.045,180],[30,9.045,180],[31,9.045,180],[32,9.045,180],[33,9.045,180],[34,9.045,180],[35,9.045,180],[36,9.045,180],[36,9.045,270],[36,9,270],[36,9,0],[36,9,270],[36,9.045,270],[36,10,270],[36,11,270],[36,12,270],[36,12.2865,270],[36,13,270],[36,14,270],[36,15,270],[36,16,270],[36,17,270],[36,18,270],[36,19,270],[36,20,270],[36,21,270],[36,22,270],[36,23,270],[36,24,270],[36,25,270],[36,26,270],[36,27,270],[36,28,270],[36,29,270],[36,30,270],[36,31,270],[36,32,270],[36,33,270],[36,34,270],[36,35,270],[36,35.786500000000004,270],[36,36,270],[36,36,0]],"docking_waypoint_index":47,"segment_indices":[0,1,2,3,4,5,6,7,8,9,10,11,12,47,82,114],"status":"stored-empty-control-route-not-a-legal-or-complete-mission"},"north":{"id":"north","label":"North-end approach · experimental","policy":"experimental-north-pit-access","target_id":"pit_box_1","waypoints":[[20.378,38.918,0],[36,38.918,0],[36,38.918,270],[36,36,270],[36,36,0],[87,36,0],[87,36,270],[87,12,270],[87,12,180],[36,12,180],[36,12,270],[36,9,270],[36,9,180],[35,9,180],[35,9,90],[35,9.045,90],[35,10,90],[35,11,90],[35,12,90],[35,12.2865,90],[35,13,90],[35,14,90],[35,15,90],[35,16,90],[35,17,90],[35,18,90],[35,19,90],[35,20,90],[35,21,90],[35,22,90],[35,23,90],[35,24,90],[35,25,90],[35,26,90],[35,27,90],[35,28,90],[35,29,90],[35,30,90],[35,31,90],[35,32,90],[35,33,90],[35,34,90],[35,35,90],[35,35.786500000000004,90],[35,36,90],[35,37,90],[35,38,90],[35,38.918,90],[35,38.918,180],[34,38.918,180],[33,38.918,180],[32,38.918,180],[31,38.918,180],[30,38.918,180],[29,38.918,180],[28,38.918,180],[27,38.918,180],[26,38.918,180],[25,38.918,180],[24,38.918,180],[23,38.918,180],[22.435,38.918,180],[22,38.918,180],[21,38.918,180],[20.378,38.918,180],[20,38.918,180],[19,38.918,180],[18,38.918,180],[17,38.918,180],[16,38.918,180],[15,38.918,180],[14.25,38.918,180],[14,38.918,180],[13,38.918,180],[12,38.918,180],[11,38.918,180],[10,38.918,180],[9,38.918,180],[9,38.918,90],[9,38,90],[9,37,90],[9,36,90],[9,35.786500000000004,90],[9,35,90],[9,34,90],[9,33,90],[9,32,90],[9,31,90],[9,30,90],[9,29,90],[9,28,90],[9,27,90],[9,26,90],[9,25,90],[9,24,90],[9,23,90],[9,22,90],[9,21,90],[9,20,90],[9,19,90],[9,18,90],[9,17,90],[9,16,90],[9,15,90],[9,14,90],[9,13,90],[9,12.2865,90],[9,12,90],[9,11,90],[9,10,90],[9,9.045,90],[9,9.045,180],[8,9.045,180],[7.0169999999999995,9.045,180],[8,9.045,180],[9,9.045,180],[10,9.045,180],[11,9.045,180],[12,9.045,180],[13,9.045,180],[14,9.045,180],[14.25,9.045,180],[15,9.045,180],[16,9.045,180],[17,9.045,180],[18,9.045,180],[19,9.045,180],[20,9.045,180],[20.378,9.045,180],[21,9.045,180],[21,9.045,270],[21,10,270],[21,11,270],[21,12,270],[21,12.2865,270],[21,13,270],[21,14,270],[21,15,270],[21,16,270],[21,17,270],[21,18,270],[21,19,270],[21,20,270],[21,21,270],[21,22,270],[21,23,270],[21,24,270],[21,25,270],[21,26,270],[21,27,270],[21,28,270],[21,29,270],[21,30,270],[21,31,270],[21,32,270],[21,33,270],[21,34,270],[21,35,270],[21,35.786500000000004,270],[21,36,270],[21,37,270],[21,38,270],[21,38.918,270],[21,38.918,180],[22,38.918,180],[22.435,38.918,180],[23,38.918,180],[24,38.918,180],[25,38.918,180],[26,38.918,180],[27,38.918,180],[28,38.918,180],[29,38.918,180],[30,38.918,180],[31,38.918,180],[32,38.918,180],[33,38.918,180],[34,38.918,180],[35,38.918,180],[36,38.918,180],[36,38.918,270],[36,38,270],[36,37,270],[36,36,270],[36,35.786500000000004,270],[36,35,270],[36,34,270],[36,33,270],[36,32,270],[36,31,270],[36,30,270],[36,29,270],[36,28,270],[36,27,270],[36,26,270],[36,25,270],[36,24,270],[36,23,270],[36,22,270],[36,21,270],[36,20,270],[36,19,270],[36,18,270],[36,17,270],[36,16,270],[36,15,270],[36,14,270],[36,13,270],[36,12.2865,270],[36,12,270],[36,11,270],[36,10,270],[36,9.045,270],[36,9,270],[36,9,0],[36,9,270],[36,9.045,270],[36,10,270],[36,11,270],[36,12,270],[36,12.2865,270],[36,13,270],[36,14,270],[36,15,270],[36,16,270],[36,17,270],[36,18,270],[36,19,270],[36,20,270],[36,21,270],[36,22,270],[36,23,270],[36,24,270],[36,25,270],[36,26,270],[36,27,270],[36,28,270],[36,29,270],[36,30,270],[36,31,270],[36,32,270],[36,33,270],[36,34,270],[36,35,270],[36,35.786500000000004,270],[36,36,270],[36,36,0]],"docking_waypoint_index":113,"segment_indices":[0,1,2,3,4,5,6,7,8,9,10,11,12,113,214,246],"status":"stored-empty-control-route-not-a-legal-or-complete-mission"}},"sources":["robot-lab-v3/model.json","constrained-field-v3.json","derived/drawing-layout-v3/layout.json","derived/connected-navigation-v3/report.json","VERIFIED-FACTS.md","confirmation-questions-v3.json"],"questionPacket":"derived/confirmation-packet-v3/questions-to-organizer.md"};
+
+</script><script>
+/* Stock Car Robot Lab: dependency-free deterministic assembly and planar drive core. */
+(function (root, factory) {
+  const api = factory();
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  root.RobotLabCore = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
+  const EPS = 1e-8;
+  const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+  const wrap = a => Math.atan2(Math.sin(a), Math.cos(a));
+  const rad = d => d * Math.PI / 180;
+  const deg = r => r * 180 / Math.PI;
+  const smooth = t => { t = clamp(t, 0, 1); return t * t * (3 - 2 * t); };
+  const finite = (v, name) => { if (!Number.isFinite(v)) throw new Error(`${name} must be finite`); return v; };
+
+  function validateModel(model) {
+    if (!model || !Array.isArray(model.stages) || !model.stages.length || !Array.isArray(model.parts)) throw new Error('assembly stages and parts required');
+    const ids = new Set();
+    for (const p of model.parts) {
+      if (!p.id || ids.has(p.id) || !Number.isInteger(p.stage) || !model.stages[p.stage - 1]) throw new Error('valid unique part stage required');
+      if (!['box', 'cylinder', 'torus'].includes(p.kind) || p.pos.length !== 3 || p.size.length !== 3 || p.exploded.length !== 3) throw new Error(`invalid part ${p.id}`);
+      [...p.pos, ...p.size, ...p.exploded].forEach((n, i) => finite(n, `${p.id}[${i}]`));
+      if (p.size.some(n => n <= 0)) throw new Error(`positive part size required: ${p.id}`);
+      ids.add(p.id);
+    }
+    let total = 0;
+    for (const s of model.stages) { finite(s.duration_s, 'stage duration'); if (s.duration_s <= 0) throw new Error('positive stage duration required'); total += s.duration_s; }
+    return total;
+  }
+
+  function assemblyFrame(model, time) {
+    const total = validateModel(model), t = clamp(finite(time, 'assembly time'), 0, total);
+    let elapsed = 0, stageIndex = model.stages.length - 1;
+    const starts = model.stages.map(s => { const start = elapsed; elapsed += s.duration_s; return start; });
+    if (t < total) stageIndex = model.stages.findIndex((s, i) => t < starts[i] + s.duration_s);
+    const parts = model.parts.map(p => {
+      const stage = model.stages[p.stage - 1], start = starts[p.stage - 1];
+      const progress = smooth((t - start) / stage.duration_s);
+      const position = progress === 1 ? [...p.pos] : progress === 0 ? [...p.exploded] : p.exploded.map((v, i) => v + (p.pos[i] - v) * progress);
+      return {...p, progress, position};
+    });
+    return {time:t, total, stageIndex, stage:model.stages[stageIndex], starts,
+      assembledCount:parts.filter(p => p.progress === 1).length, parts};
+  }
+
+  function compileRoute(route) {
+    if (!route || !Array.isArray(route.waypoints) || route.waypoints.length < 2) throw new Error('route waypoints required');
+    const commands = [], dock = route.docking_waypoint_index;
+    for (let i = 1; i < route.waypoints.length; i++) {
+      const a = route.waypoints[i - 1], b = route.waypoints[i];
+      if (a.length !== 3 || b.length !== 3 || [...a, ...b].some(n => !Number.isFinite(n))) throw new Error('finite route poses required');
+      const dx = b[0] - a[0], dy = b[1] - a[1], length = Math.hypot(dx, dy), angle = wrap(rad(b[2] - a[2]));
+      const prev = commands[commands.length - 1];
+      if (length > EPS) {
+        const h = rad(a[2]), along = dx * Math.cos(h) + dy * Math.sin(h), lateral = -dx * Math.sin(h) + dy * Math.cos(h);
+        if (Math.abs(lateral) > 1e-5 || Math.abs(along) < EPS) throw new Error(`non-drive-compatible segment ${i}`);
+        const direction = Math.sign(along), heading = Math.atan2(dy, dx);
+        if (prev && prev.kind === 'translate' && prev.direction === direction && prev.toWaypoint !== dock && Math.abs(wrap(prev.pathHeading - heading)) < 1e-5) {
+          prev.to = [...b]; prev.length += length; prev.toWaypoint = i;
+        } else commands.push({kind:'translate', from:[...a], to:[...b], direction, length, pathHeading:heading, toWaypoint:i});
+      } else if (Math.abs(angle) > EPS) {
+        if (prev && prev.kind === 'spin' && prev.toWaypoint !== dock && Math.hypot(prev.to[0] - a[0], prev.to[1] - a[1]) < EPS) {
+          prev.to = [...b]; prev.angle = wrap(rad(b[2] - prev.from[2])); prev.toWaypoint = i;
+        } else commands.push({kind:'spin', from:[...a], to:[...b], angle, toWaypoint:i});
+      }
+    }
+    if (!commands.length) throw new Error('route contains no motion');
+    const dockCommandIndex = commands.findIndex(c => c.toWaypoint === dock);
+    if (!Number.isInteger(dock) || dockCommandIndex < 0) throw new Error('dock must terminate a motion command');
+    return {commands, dockCommandIndex};
+  }
+
+  function robotPolygon(x, y, theta, length = 10, width = 10) {
+    const c = Math.cos(theta), s = Math.sin(theta);
+    return [[-length / 2, -width / 2], [length / 2, -width / 2], [length / 2, width / 2], [-length / 2, width / 2]]
+      .map(([a, b]) => [x + a * c - b * s, y + a * s + b * c]);
+  }
+
+  function intersects(a, b) {
+    for (const poly of [a, b]) for (let i = 0; i < poly.length; i++) {
+      const p = poly[i], q = poly[(i + 1) % poly.length], nx = p[1] - q[1], ny = q[0] - p[0];
+      const pa = a.map(v => v[0] * nx + v[1] * ny), pb = b.map(v => v[0] * nx + v[1] * ny);
+      if (Math.max(...pa) <= Math.min(...pb) + EPS || Math.max(...pb) <= Math.min(...pa) + EPS) return false;
+    }
+    return true;
+  }
+
+  function collisionAt(data, x, y, theta) {
+    const poly = robotPolygon(x, y, theta), b = data.field.bounds;
+    if (poly.some(p => p[0] <= b.min_x + EPS || p[0] >= b.max_x - EPS || p[1] <= b.min_y + EPS || p[1] >= b.max_y - EPS)) return 'outer-wall';
+    for (const solid of data.field.solids) if (intersects(poly, solid.vertices_in)) return solid.id;
+    return null;
+  }
+
+  function createSimulation(data, routeId = 'south') {
+    const route = data.routes[routeId];
+    if (!route) throw new Error(`unknown route ${routeId}`);
+    const compiled = compileRoute(route), commands = compiled.commands, cfg = data.model.physics;
+    const initial = collisionAt(data, route.waypoints[0][0], route.waypoints[0][1], rad(route.waypoints[0][2]));
+    if (initial) throw new Error(`initial route collision: ${initial}`);
+    const state = {};
+    function reset() {
+      const p = route.waypoints[0];
+      Object.assign(state, {x:p[0], y:p[1], theta:rad(p[2]), v:0, omega:0, time:0, distance:0,
+        commandIndex:0, status:'ready', tire:'red', dwell:0, collision:null, wheelLeft:0, wheelRight:0,
+        events:[{time:0, type:'reset', message:`${route.label} loaded; no lap or scoring claim.`}]});
+    }
+    reset();
+    function finishCommand() {
+      const command = commands[state.commandIndex];
+      state.commandIndex++;
+      if (command.toWaypoint === route.docking_waypoint_index) {
+        state.dwell = cfg.dock_dwell_s; state.tire = 'blue';
+        state.events.push({time:state.time, type:'exchange', message:'Conceptual dock reached: red drop / blue pickup event. Task legality is unresolved.'});
+      }
+      if (state.commandIndex >= commands.length) {
+        state.status = 'completed'; state.v = state.omega = 0;
+        state.events.push({time:state.time, type:'complete', message:'Stored route complete; this is not a complete three-lap mission.'});
+      }
+    }
+    function substep(h) {
+      if (state.status === 'ready') state.status = 'running';
+      if (state.status === 'completed' || state.status === 'collision') return;
+      state.time += h;
+      if (state.dwell > 0) {
+        state.dwell = Math.max(0, state.dwell - h); state.v = state.omega = 0; return;
+      }
+      if (state.commandIndex >= commands.length) return;
+      const c = commands[state.commandIndex], maxOmega = rad(cfg.max_angular_deg_s);
+      let targetV = 0, targetOmega = 0;
+      if (c.kind === 'spin') {
+        const error = wrap(rad(c.to[2]) - state.theta);
+        if (Math.abs(error) <= rad(cfg.heading_tolerance_deg)) { finishCommand(); return; }
+        targetOmega = clamp(error * 3, -maxOmega, maxOmega);
+      } else {
+        const dx = c.to[0] - state.x, dy = c.to[1] - state.y, remaining = Math.hypot(dx, dy);
+        const finalError = wrap(rad(c.to[2]) - state.theta);
+        if (remaining <= cfg.position_tolerance_in) {
+          if (Math.abs(finalError) <= rad(cfg.heading_tolerance_deg)) { finishCommand(); return; }
+          targetOmega = clamp(finalError * 3, -maxOmega, maxOmega);
+        } else {
+          const path = Math.atan2(dy, dx), desired = c.direction > 0 ? path : wrap(path + Math.PI);
+          const error = wrap(desired - state.theta), maxV = c.direction > 0 ? cfg.max_forward_in_s : cfg.max_reverse_in_s;
+          targetV = c.direction * Math.min(maxV, Math.max(0.8, remaining * 2.2)) * clamp(1 - Math.abs(error) / 1.2, 0.12, 1);
+          targetOmega = clamp(error * 3.2, -maxOmega, maxOmega);
+        }
+      }
+      const approach = (value, target, amount) => value + clamp(target - value, -amount, amount);
+      state.v = approach(state.v, targetV, cfg.linear_accel_in_s2 * h);
+      state.omega = approach(state.omega, targetOmega, rad(cfg.angular_accel_deg_s2) * h);
+      const nextTheta = wrap(state.theta + state.omega * h);
+      let nextX, nextY;
+      if (Math.abs(state.omega) > EPS) {
+        nextX = state.x + state.v / state.omega * (Math.sin(nextTheta) - Math.sin(state.theta));
+        nextY = state.y - state.v / state.omega * (Math.cos(nextTheta) - Math.cos(state.theta));
+      } else {
+        nextX = state.x + state.v * Math.cos(state.theta) * h;
+        nextY = state.y + state.v * Math.sin(state.theta) * h;
+      }
+      const hit = collisionAt(data, nextX, nextY, nextTheta);
+      if (hit) {
+        state.status = 'collision'; state.v = state.omega = 0;
+        state.collision = {collider:hit, commandIndex:state.commandIndex, time:state.time, x:nextX, y:nextY, theta:nextTheta};
+        state.events.push({time:state.time, type:'collision', message:`Physics stopped on ${hit}; candidate pose rejected.`});
+        return;
+      }
+      state.distance += Math.hypot(nextX - state.x, nextY - state.y);
+      state.x = nextX; state.y = nextY; state.theta = nextTheta;
+      state.wheelLeft += (state.v - state.omega * cfg.wheel_track_in / 2) * h / 1.5;
+      state.wheelRight += (state.v + state.omega * cfg.wheel_track_in / 2) * h / 1.5;
+    }
+    function step(dt) {
+      finite(dt, 'simulation dt');
+      if (dt < 0 || dt > 120) throw new Error('simulation dt must be between 0 and 120 seconds');
+      const count = Math.ceil(dt / cfg.fixed_step_s);
+      for (let i = 0; i < count; i++) substep(Math.min(cfg.fixed_step_s, dt - i * cfg.fixed_step_s));
+      return state;
+    }
+    return {state, route, commands, reset, step,
+      get progress() { return state.commandIndex / commands.length; }};
+  }
+
+  function formatTime(seconds) {
+    seconds = Math.max(0, finite(seconds, 'time'));
+    const m = Math.floor(seconds / 60), s = seconds - m * 60;
+    return `${String(m).padStart(2, '0')}:${s.toFixed(1).padStart(4, '0')}`;
+  }
+
+  return {clamp, wrap, rad, deg, smooth, validateModel, assemblyFrame, compileRoute,
+    robotPolygon, intersects, collisionAt, createSimulation, formatTime};
+});
+
+</script><script>
+/* Minimal WebGL renderer: no libraries, network requests or hidden simulation. */
+(function (root) {
+  'use strict';
+  const TAU = Math.PI * 2;
+  const add = (a, b) => a.map((v, i) => v + b[i]);
+  const sub = (a, b) => a.map((v, i) => v - b[i]);
+  const mul = (a, s) => a.map(v => v * s);
+  const dot = (a, b) => a.reduce((s, v, i) => s + v * b[i], 0);
+  const cross = (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]];
+  const norm = a => mul(a, 1 / Math.hypot(...a));
+  function multiply(a, b) {
+    const out = new Array(16).fill(0);
+    for (let c = 0; c < 4; c++) for (let r = 0; r < 4; r++) for (let k = 0; k < 4; k++) out[c * 4 + r] += a[k * 4 + r] * b[c * 4 + k];
+    return out;
+  }
+  const translation = p => [1,0,0,0,0,1,0,0,0,0,1,0,p[0],p[1],p[2],1];
+  const scaling = s => [s[0],0,0,0,0,s[1],0,0,0,0,s[2],0,0,0,0,1];
+  const rotationX = a => [1,0,0,0,0,Math.cos(a),Math.sin(a),0,0,-Math.sin(a),Math.cos(a),0,0,0,0,1];
+  const rotationY = a => [Math.cos(a),0,-Math.sin(a),0,0,1,0,0,Math.sin(a),0,Math.cos(a),0,0,0,0,1];
+  const rotationZ = a => [Math.cos(a),Math.sin(a),0,0,-Math.sin(a),Math.cos(a),0,0,0,0,1,0,0,0,0,1];
+  function modelMatrix(o) {
+    const r = o.rot || [0, 0, 0];
+    let m = translation(o.pos);
+    m = multiply(m, rotationZ(r[2] || 0)); m = multiply(m, rotationY(r[1] || 0)); m = multiply(m, rotationX(r[0] || 0));
+    return multiply(m, scaling(o.scale));
+  }
+  function perspective(fov, aspect, near, far) {
+    const f = 1 / Math.tan(fov / 2), nf = 1 / (near - far);
+    return [f / aspect,0,0,0,0,f,0,0,0,0,(far + near) * nf,-1,0,0,2 * far * near * nf,0];
+  }
+  function lookAt(eye, target) {
+    const z = norm(sub(eye, target)), x = norm(cross([0, 0, 1], z)), y = cross(z, x);
+    return [x[0],y[0],z[0],0,x[1],y[1],z[1],0,x[2],y[2],z[2],0,-dot(x, eye),-dot(y, eye),-dot(z, eye),1];
+  }
+  function cameraMatrix(camera, aspect) {
+    const cp = Math.cos(camera.pitch), eye = add(camera.target, [
+      camera.distance * cp * Math.cos(camera.yaw), camera.distance * cp * Math.sin(camera.yaw), camera.distance * Math.sin(camera.pitch)]);
+    return multiply(perspective(Math.PI / 4, aspect, 0.1, 500), lookAt(eye, camera.target));
+  }
+  function color(hex) {
+    const n = parseInt(hex.replace('#', ''), 16);
+    return [(n >> 16 & 255) / 255, (n >> 8 & 255) / 255, (n & 255) / 255];
+  }
+  function cube() {
+    const p = [], n = [], idx = [];
+    const faces = [
+      [[1,0,0], [[.5,-.5,-.5],[.5,.5,-.5],[.5,.5,.5],[.5,-.5,.5]]],
+      [[-1,0,0], [[-.5,.5,-.5],[-.5,-.5,-.5],[-.5,-.5,.5],[-.5,.5,.5]]],
+      [[0,1,0], [[.5,.5,-.5],[-.5,.5,-.5],[-.5,.5,.5],[.5,.5,.5]]],
+      [[0,-1,0], [[-.5,-.5,-.5],[.5,-.5,-.5],[.5,-.5,.5],[-.5,-.5,.5]]],
+      [[0,0,1], [[-.5,-.5,.5],[.5,-.5,.5],[.5,.5,.5],[-.5,.5,.5]]],
+      [[0,0,-1], [[-.5,.5,-.5],[.5,.5,-.5],[.5,-.5,-.5],[-.5,-.5,-.5]]]
+    ];
+    for (const [normal, verts] of faces) {
+      const base = p.length / 3;
+      for (const v of verts) { p.push(...v); n.push(...normal); }
+      idx.push(base,base+1,base+2,base,base+2,base+3);
+    }
+    return {positions:p, normals:n, indices:idx};
+  }
+  function cylinder(segments = 28) {
+    const p = [], n = [], idx = [];
+    for (let i = 0; i <= segments; i++) {
+      const a = i / segments * TAU, x = Math.cos(a), y = Math.sin(a);
+      p.push(x,y,-.5, x,y,.5); n.push(x,y,0, x,y,0);
+    }
+    for (let i = 0; i < segments; i++) { const a = i * 2; idx.push(a,a+1,a+2,a+1,a+3,a+2); }
+    for (const z of [-.5, .5]) {
+      const center = p.length / 3; p.push(0,0,z); n.push(0,0,Math.sign(z));
+      for (let i = 0; i <= segments; i++) { const a = i / segments * TAU; p.push(Math.cos(a),Math.sin(a),z); n.push(0,0,Math.sign(z)); }
+      for (let i = 0; i < segments; i++) idx.push(center,center+i+1,center+i+2);
+    }
+    return {positions:p, normals:n, indices:idx};
+  }
+  function torus(major = 32, minor = 12) {
+    const p = [], n = [], idx = [], tube = 0.2568;
+    for (let i = 0; i <= major; i++) for (let j = 0; j <= minor; j++) {
+      const u = i / major * TAU, v = j / minor * TAU, ring = 1 + tube * Math.cos(v);
+      p.push(ring * Math.cos(u),ring * Math.sin(u),tube * Math.sin(v));
+      n.push(Math.cos(v) * Math.cos(u),Math.cos(v) * Math.sin(u),Math.sin(v));
+    }
+    for (let i = 0; i < major; i++) for (let j = 0; j < minor; j++) {
+      const a = i * (minor + 1) + j, b = a + minor + 1; idx.push(a,b,a+1,b,b+1,a+1);
+    }
+    return {positions:p, normals:n, indices:idx};
+  }
+
+  function createRenderer(canvas) {
+    const gl = canvas.getContext('webgl', {antialias:true, alpha:false});
+    if (!gl) throw new Error('WebGL is unavailable. Enable browser graphics acceleration to use the 3D lab.');
+    const vertex = `
+      attribute vec3 aPosition; attribute vec3 aNormal;
+      uniform mat4 uModel, uViewProjection; uniform vec3 uScale;
+      varying vec3 vNormal; varying vec3 vWorld;
+      void main(){ vec4 world=uModel*vec4(aPosition,1.0); vWorld=world.xyz;
+        vNormal=normalize(mat3(uModel)*(aNormal/(uScale*uScale)));
+        gl_Position=uViewProjection*world; }`;
+    const fragment = `
+      precision mediump float; uniform vec3 uColor; uniform float uSelected;
+      varying vec3 vNormal; varying vec3 vWorld;
+      void main(){ vec3 normal=normalize(vNormal); vec3 light=normalize(vec3(-0.45,-0.35,0.9));
+        float diffuse=max(dot(normal,light),0.0); float rim=pow(1.0-abs(normal.z),3.0)*0.08;
+        vec3 c=uColor*(0.38+0.62*diffuse)+rim;
+        c=mix(c,vec3(0.84,0.95,0.29),uSelected*0.48); gl_FragColor=vec4(c,1.0); }`;
+    function shader(type, source) {
+      const s = gl.createShader(type); gl.shaderSource(s, source); gl.compileShader(s);
+      if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s));
+      return s;
+    }
+    const program = gl.createProgram();
+    gl.attachShader(program, shader(gl.VERTEX_SHADER, vertex)); gl.attachShader(program, shader(gl.FRAGMENT_SHADER, fragment));
+    gl.linkProgram(program);
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(program));
+    const loc = {
+      position:gl.getAttribLocation(program, 'aPosition'), normal:gl.getAttribLocation(program, 'aNormal'),
+      model:gl.getUniformLocation(program, 'uModel'), vp:gl.getUniformLocation(program, 'uViewProjection'),
+      scale:gl.getUniformLocation(program, 'uScale'), color:gl.getUniformLocation(program, 'uColor'), selected:gl.getUniformLocation(program, 'uSelected')
+    };
+    function upload(mesh) {
+      const result = {count:mesh.indices.length};
+      for (const [key, values, attribute] of [['position',mesh.positions,loc.position],['normal',mesh.normals,loc.normal]]) {
+        const buffer = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buffer); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(values), gl.STATIC_DRAW);
+        result[key] = {buffer, attribute};
+      }
+      result.index = gl.createBuffer(); gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, result.index); gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(mesh.indices), gl.STATIC_DRAW);
+      return result;
+    }
+    const meshes = {box:upload(cube()), cylinder:upload(cylinder()), torus:upload(torus())};
+    let latestVP = null;
+    function resize() {
+      const ratio = Math.min(2, globalThis.devicePixelRatio || 1), w = Math.max(1, Math.round(canvas.clientWidth * ratio)), h = Math.max(1, Math.round(canvas.clientHeight * ratio));
+      if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
+      return canvas.width / canvas.height;
+    }
+    function render(instances, camera) {
+      const aspect = resize(); gl.viewport(0, 0, canvas.width, canvas.height);
+      gl.clearColor(0.035, 0.055, 0.085, 1); gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+      gl.enable(gl.DEPTH_TEST); gl.enable(gl.CULL_FACE); gl.cullFace(gl.BACK); gl.useProgram(program);
+      latestVP = cameraMatrix(camera, aspect); gl.uniformMatrix4fv(loc.vp, false, new Float32Array(latestVP));
+      for (const o of instances) {
+        const mesh = meshes[o.mesh || 'box']; if (!mesh) continue;
+        for (const key of ['position','normal']) { gl.bindBuffer(gl.ARRAY_BUFFER, mesh[key].buffer); gl.enableVertexAttribArray(mesh[key].attribute); gl.vertexAttribPointer(mesh[key].attribute, 3, gl.FLOAT, false, 0, 0); }
+        gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, mesh.index);
+        gl.uniformMatrix4fv(loc.model, false, new Float32Array(modelMatrix(o)));
+        gl.uniform3fv(loc.scale, o.scale); gl.uniform3fv(loc.color, color(o.color || '#ffffff')); gl.uniform1f(loc.selected, o.selected ? 1 : 0);
+        gl.drawElements(gl.TRIANGLES, mesh.count, gl.UNSIGNED_SHORT, 0);
+      }
+    }
+    function project(point) {
+      if (!latestVP) return null;
+      const m = latestVP, x = m[0]*point[0]+m[4]*point[1]+m[8]*point[2]+m[12], y = m[1]*point[0]+m[5]*point[1]+m[9]*point[2]+m[13], w = m[3]*point[0]+m[7]*point[1]+m[11]*point[2]+m[15];
+      if (w <= 0) return null;
+      return {x:(x / w * 0.5 + 0.5) * canvas.clientWidth, y:(0.5 - y / w * 0.5) * canvas.clientHeight};
+    }
+    return {render, project, resize};
+  }
+  root.RobotLabRenderer = {createRenderer, multiply, modelMatrix, cameraMatrix};
+})(typeof globalThis !== 'undefined' ? globalThis : this);
+
+</script><script>
+/* Browser application. All state and sources are visible in the bundled HTML. */
+(function () {
+  'use strict';
+  const data = globalThis.ROBOT_LAB_DATA, Core = globalThis.RobotLabCore;
+  const $ = id => document.getElementById(id), canvas = $('view');
+  if (!data || !Core || !globalThis.RobotLabRenderer) throw new Error('Robot lab scripts did not load in the required order.');
+  let renderer;
+  try { renderer = globalThis.RobotLabRenderer.createRenderer(canvas); }
+  catch (error) { $('webgl-error').hidden = false; $('webgl-error').textContent = error.message; console.error(error); }
+  let mode = 'assembly', playing = false, speed = 1, assemblyTime = 0, selectedPart = null, follow = false;
+  let sim = Core.createSimulation(data, 'south'), lastStage = -1, lastEventCount = 0;
+  const cameras = {
+    assembly:{target:[0,0,3], distance:44, yaw:-0.85, pitch:0.82},
+    simulation:{target:[48,24,0], distance:128, yaw:-1.12, pitch:1.0}
+  };
+  const partInstance = (p, position, yaw = 0, colorOverride = null) => ({id:p.id, mesh:p.kind, pos:position,
+    rot:[...(p.rot || [0,0,0])].map((v, i) => i === 2 ? v + yaw : v), scale:p.size,
+    color:colorOverride || p.color, selected:selectedPart === p.id});
+  const box = (pos, scale, color, rot = [0,0,0]) => ({mesh:'box', pos, scale, color, rot});
+  function lineBox(a, b, width, color, z = 0.06) {
+    const dx = b[0] - a[0], dy = b[1] - a[1], length = Math.hypot(dx, dy);
+    if (length < 1e-7) return null;
+    return box([(a[0]+b[0])/2,(a[1]+b[1])/2,z], [length,width,0.045], color, [0,0,Math.atan2(dy,dx)]);
+  }
+  function outline(vertices, color, width = 0.18, z = 0.06) {
+    return vertices.map((p, i) => lineBox(p, vertices[(i+1)%vertices.length], width, color, z)).filter(Boolean);
+  }
+  function assemblyScene() {
+    const frame = Core.assemblyFrame(data.model, assemblyTime), items = [box([0,0,-0.35],[36,34,0.5],'#172433')];
+    for (let x = -16; x <= 16; x += 4) items.push(box([x,0,-0.07],[0.035,32,0.025],'#304156'));
+    for (let y = -16; y <= 16; y += 4) items.push(box([0,y,-0.07],[32,0.035,0.025],'#304156'));
+    for (const p of frame.parts) items.push(partInstance(p, p.position));
+    return {items, frame};
+  }
+  function robotItems(state) {
+    const c = Math.cos(state.theta), s = Math.sin(state.theta);
+    return data.model.parts.map(p => {
+      const local = p.pos, position = [state.x + local[0]*c - local[1]*s, state.y + local[0]*s + local[1]*c, local[2]];
+      const color = p.id === 'carried-tire' ? (state.tire === 'blue' ? '#408bd5' : '#d84f57') : null;
+      return partInstance(p, position, state.theta, color);
+    });
+  }
+  function fieldScene() {
+    const items = [box([48,24,-0.36],[96,48,0.719],'#313b44')];
+    items.push(box([48,0.5,2],[96,1,4],'#7b838a'), box([48,47.5,2],[96,1,4],'#7b838a'),
+      box([0.5,24,2],[1,48,4],'#7b838a'), box([95.5,24,2],[1,48,4],'#7b838a'));
+    for (let x = 5; x < 96; x += 5) items.push(box([x,24,0.012],[0.025,46,0.02],'#46515b'));
+    for (let y = 4; y < 48; y += 4) items.push(box([48,y,0.012],[94,0.025,0.02],'#46515b'));
+    for (const solid of data.field.solids) {
+      const xs = solid.vertices_in.map(p => p[0]), ys = solid.vertices_in.map(p => p[1]);
+      const minX = Math.min(...xs), maxX = Math.max(...xs), minY = Math.min(...ys), maxY = Math.max(...ys), center = solid.id.includes('center');
+      items.push(box([(minX+maxX)/2,(minY+maxY)/2,center?1:0.75],[maxX-minX,maxY-minY,center?2:1.5],'#69737b'));
+    }
+    for (const f of data.field.features.filter(f => f.kind === 'marking')) {
+      const start = f.id === 'start_box'; items.push(...outline(f.vertices_in, start?'#ab8cdb':'#e5e9e8',0.22));
+    }
+    const trace = data.field.features.find(f => f.id === 'track_marking_trace');
+    items.push(...outline(trace.vertices_in,'#a2a9aa',0.45));
+    const route = data.routes[$('route').value];
+    for (let i = 1; i < route.waypoints.length; i++) {
+      const a = route.waypoints[i-1], b = route.waypoints[i], line = lineBox(a,b,0.22,route.id === 'north'?'#e69b55':'#48c3b1',0.09);
+      if (line) items.push(line);
+    }
+    const target = data.field.features.find(f => f.id === route.target_id), cx = (target.vertices_in[0][0]+target.vertices_in[2][0])/2, cy = (target.vertices_in[0][1]+target.vertices_in[2][1])/2;
+    const tire = {id:'field-tire',kind:'torus',size:[1.068,1.068,1.068],rot:[0,0,0]};
+    if (sim.state.tire === 'red') items.push(partInstance(tire,[cx,cy,0.3],0,'#408bd5'));
+    else items.push(partInstance(tire,[cx+1.8,cy,0.3],0,'#d84f57'));
+    items.push(...robotItems(sim.state));
+    items.push(...outline(Core.robotPolygon(sim.state.x,sim.state.y,sim.state.theta),'#d5f249',0.14,0.11));
+    if (sim.state.collision) { const p = sim.state.collision; items.push(...outline(Core.robotPolygon(p.x,p.y,p.theta),'#ff5964',0.3,0.15)); }
+    return {items};
+  }
+
+  data.model.stages.forEach((stage, i) => {
+    const button = document.createElement('button'); button.textContent = `${i+1} · ${stage.id}`; button.dataset.stage = i;
+    button.title = stage.title; button.addEventListener('click', () => { setPlaying(false); assemblyTime = Core.assemblyFrame(data.model,0).starts[i]; });
+    $('stage-list').appendChild(button);
+  });
+  for (const p of data.model.parts) {
+    const button = document.createElement('button'); button.textContent = p.name; button.dataset.part = p.id;
+    button.addEventListener('click', () => selectPart(p.id)); $('part-list').appendChild(button);
+  }
+  function selectPart(id) {
+    selectedPart = selectedPart === id ? null : id;
+    for (const b of document.querySelectorAll('[data-part]')) b.classList.toggle('active', b.dataset.part === selectedPart);
+    const p = data.model.parts.find(p => p.id === selectedPart), detail = $('part-detail');
+    detail.replaceChildren();
+    const title = document.createElement('h3'), text = document.createElement('p');
+    if (p) {
+      title.textContent = p.name; text.textContent = p.description || `${data.model.stages[p.stage-1].description} This is a conceptual ${p.kind} with assumed placement and dimensions.`;
+      $('question-suggestion').textContent = `Ask about ${p.name}, its assumed geometry, or what evidence would be needed to select real hardware.`;
+      $('question-input').value = `In the Robot Lab, explain the ${p.name}: what is assumed, what would it do, and what should we test before choosing a real part?`;
+    } else {
+      title.textContent = 'Why this concept?'; text.textContent = 'Small differential-drive motions match the existing forward/reverse/spin route studies. Every component remains a placeholder until packaging, sensing and physical tests select real hardware.';
+      const stage = Core.assemblyFrame(data.model,assemblyTime).stage;
+      $('question-suggestion').textContent = 'Select a part or stage, then copy a question with its context.';
+      $('question-input').value = `During “${stage.title}” in the Robot Lab: ${stage.question}`;
+    }
+    detail.append(title,text);
+  }
+  function setPlaying(value) {
+    if (value && mode === 'simulation' && (sim.state.status === 'completed' || sim.state.status === 'collision')) sim.reset();
+    playing = value; $('play').textContent = playing ? '❚❚ Pause' : '▶ Play'; $('view-status').textContent = playing ? `Running · ${speed}×` : 'Paused';
+  }
+  function resetCamera() {
+    follow = false;
+    const c = mode === 'assembly' ? cameras.assembly : cameras.simulation;
+    Object.assign(c, mode === 'assembly' ? {target:[0,0,3],distance:44,yaw:-0.85,pitch:0.82} : {target:[48,24,0],distance:128,yaw:-1.12,pitch:1.0});
+  }
+  function setMode(next) {
+    setPlaying(false); mode = next; selectedPart = null; selectPart(null); resetCamera();
+    for (const name of ['assembly','simulation']) {
+      $(`tab-${name}`).classList.toggle('active', name === mode); $(`tab-${name}`).setAttribute('aria-selected', String(name === mode)); $(`${name}-panel`).hidden = name !== mode;
+    }
+    $('timeline').max = mode === 'assembly' ? Core.assemblyFrame(data.model,0).total : 120;
+    $('view-badge').textContent = mode === 'assembly' ? 'EXPLODED ASSEMBLY' : 'EMPTY-FIELD PHYSICS · NOT A LEGAL MISSION';
+    $('viewer-legend').textContent = mode === 'assembly' ? '30 conceptual parts · official tire proportions · dimensions otherwise assumed' : 'Teal/orange guide path · green full footprint · grey walls/dividers · no obstacles';
+    $('transport-note').textContent = mode === 'assembly' ? 'Assembly is deterministic: scrub to any point without losing component state.' : 'Live physics while playing. Scrub/rewind resets and deterministically re-simulates to that time.';
+    $('question-suggestion').textContent = mode === 'assembly' ? 'Select a part or stage, then copy a question with its context.' : 'Ask about the controller, collision model, route assumptions, or a telemetry value.';
+    if (mode === 'simulation') $('question-input').value = 'In the Robot Lab field simulation, explain which physics and route assumptions most limit what this run proves.';
+  }
+  function seekSimulation(time) {
+    const target = Core.clamp(time,0,120); sim.reset(); if (target > 0) sim.step(target); lastEventCount = 0;
+  }
+  function reset() { setPlaying(false); if (mode === 'assembly') assemblyTime = 0; else sim.reset(); }
+  function stepBy(delta) {
+    setPlaying(false);
+    if (mode === 'assembly') assemblyTime = Core.clamp(assemblyTime+delta,0,Core.assemblyFrame(data.model,0).total);
+    else if (delta < 0) seekSimulation(sim.state.time+delta); else sim.step(delta);
+  }
+  for (const button of document.querySelectorAll('[data-mode]')) button.addEventListener('click', () => setMode(button.dataset.mode));
+  $('play').addEventListener('click', () => setPlaying(!playing)); $('reset').addEventListener('click', reset);
+  $('back').addEventListener('click', () => stepBy(-1)); $('forward').addEventListener('click', () => stepBy(1));
+  $('speed').addEventListener('change', () => { speed = Number($('speed').value); if (playing) $('view-status').textContent = `Running · ${speed}×`; });
+  $('timeline').addEventListener('input', () => { setPlaying(false); const t = Number($('timeline').value); if (mode === 'assembly') assemblyTime = t; else seekSimulation(t); });
+  $('route').addEventListener('change', () => { setPlaying(false); sim = Core.createSimulation(data,$('route').value); lastEventCount = 0; resetCamera(); });
+
+  for (const button of document.querySelectorAll('[data-camera]')) button.addEventListener('click', () => {
+    const c = cameras[mode], action = button.dataset.camera;
+    if (action === 'reset') resetCamera();
+    if (action === 'top') { follow = false; c.pitch = 1.52; c.yaw = -Math.PI/2; c.distance = mode === 'assembly' ? 43 : 128; c.target = mode === 'assembly' ? [0,0,2] : [48,24,0]; }
+    if (action === 'follow') { follow = mode === 'simulation'; if (follow) { c.distance = 30; c.pitch = 0.82; } }
+  });
+  let drag = null;
+  canvas.addEventListener('pointerdown', e => { drag = {x:e.clientX,y:e.clientY,lastX:e.clientX,lastY:e.clientY,moved:0}; canvas.setPointerCapture(e.pointerId); });
+  canvas.addEventListener('pointermove', e => {
+    if (!drag) return; const dx = e.clientX-drag.lastX, dy = e.clientY-drag.lastY; drag.moved += Math.abs(dx)+Math.abs(dy); drag.lastX=e.clientX; drag.lastY=e.clientY;
+    const c = cameras[mode]; c.yaw -= dx*0.008; c.pitch = Core.clamp(c.pitch+dy*0.008,0.12,1.53); follow = false;
+  });
+  canvas.addEventListener('pointerup', e => {
+    if (drag && drag.moved < 6 && renderer && mode === 'assembly') {
+      const rect = canvas.getBoundingClientRect(), x = e.clientX-rect.left, y = e.clientY-rect.top;
+      let best = null;
+      for (const p of Core.assemblyFrame(data.model,assemblyTime).parts) {
+        const screen = renderer.project(p.position); if (!screen) continue;
+        const distance = Math.hypot(screen.x-x,screen.y-y); if (distance < 42 && (!best || distance < best.distance)) best = {id:p.id,distance};
+      }
+      if (best) selectPart(best.id);
+    }
+    drag = null;
+  });
+  canvas.addEventListener('pointercancel', () => { drag = null; });
+  canvas.addEventListener('wheel', e => { e.preventDefault(); const c = cameras[mode]; c.distance = Core.clamp(c.distance*Math.exp(e.deltaY*0.001),8,240); }, {passive:false});
+  $('fullscreen').addEventListener('click', async () => {
+    try { if (document.fullscreenElement) await document.exitFullscreen(); else await document.querySelector('.viewer-card').requestFullscreen(); }
+    catch { $('view-status').textContent = 'Fullscreen unavailable'; }
+  });
+  $('copy-question').addEventListener('click', async () => {
+    const text = $('question-input').value.trim() || $('question-suggestion').textContent;
+    let copied = false;
+    try { await navigator.clipboard.writeText(text); copied = true; }
+    catch { $('question-input').value = text; $('question-input').select(); copied = document.execCommand('copy'); }
+    $('copy-status').textContent = copied ? 'Copied' : 'Select and copy manually';
+  });
+  document.addEventListener('keydown', e => {
+    if (['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)) return;
+    if (e.code === 'Space') { e.preventDefault(); setPlaying(!playing); }
+    if (e.key.toLowerCase() === 'r') reset();
+    if (e.key === 'ArrowLeft') { e.preventDefault(); stepBy(-1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); stepBy(1); }
+  });
+  function updateAssembly(frame) {
+    $('timeline').value = frame.time; $('time').textContent = `${Core.formatTime(frame.time)} / ${Core.formatTime(frame.total)}`;
+    $('step-count').textContent = `Step ${frame.stageIndex+1} of ${data.model.stages.length} · ${frame.assembledCount}/${frame.parts.length} parts seated`;
+    if (lastStage !== frame.stageIndex) {
+      lastStage = frame.stageIndex; $('stage-title').textContent = frame.stage.title; $('stage-description').textContent = frame.stage.description;
+      for (const b of document.querySelectorAll('[data-stage]')) b.classList.toggle('active',Number(b.dataset.stage) === lastStage);
+      if (!selectedPart) { $('question-suggestion').textContent = frame.stage.question; $('question-input').value = `During “${frame.stage.title}” in the Robot Lab: ${frame.stage.question}`; }
+    }
+  }
+  function updateSimulation() {
+    const s = sim.state, command = sim.commands[Math.min(s.commandIndex,sim.commands.length-1)];
+    $('timeline').value = s.time; $('time').textContent = `${Core.formatTime(s.time)} / 02:00.0`;
+    $('sim-status').textContent = s.dwell > 0 ? `Dock dwell ${s.dwell.toFixed(1)} s` : s.status;
+    $('sim-time').textContent = `${s.time.toFixed(1)} s`; $('sim-pose').textContent = `${s.x.toFixed(1)}, ${s.y.toFixed(1)} in · ${Core.deg(s.theta).toFixed(0)}°`;
+    $('sim-speed').textContent = `${s.v.toFixed(1)} in/s`; $('sim-distance').textContent = `${s.distance.toFixed(1)} in`;
+    $('sim-command').textContent = `${Math.min(s.commandIndex+1,sim.commands.length)}/${sim.commands.length} · ${command ? command.kind : 'done'}`;
+    $('sim-tire').textContent = s.tire === 'blue' ? 'Blue · conceptual pickup' : 'Red preload'; $('sim-progress').textContent = `${Math.round(sim.progress*100)}%`;
+    if (lastEventCount !== s.events.length) {
+      lastEventCount = s.events.length; $('event-log').replaceChildren();
+      for (const event of s.events) { const li = document.createElement('li'); li.textContent = `${event.time.toFixed(1)} s — ${event.message}`; $('event-log').appendChild(li); }
+      $('event-log').scrollTop = $('event-log').scrollHeight;
+    }
+  }
+  let previous = performance.now();
+  function tick(now) {
+    const dt = Math.min(0.05,Math.max(0,(now-previous)/1000)); previous = now;
+    if (playing) {
+      if (mode === 'assembly') {
+        const total = Core.assemblyFrame(data.model,0).total; assemblyTime = Math.min(total,assemblyTime+dt*speed); if (assemblyTime >= total) setPlaying(false);
+      } else { sim.step(dt*speed); if (sim.state.status === 'completed' || sim.state.status === 'collision') setPlaying(false); }
+    }
+    if (mode === 'simulation' && follow) cameras.simulation.target = [sim.state.x,sim.state.y,1.8];
+    const scene = mode === 'assembly' ? assemblyScene() : fieldScene();
+    if (renderer) renderer.render(scene.items,cameras[mode]);
+    if (mode === 'assembly') updateAssembly(scene.frame); else updateSimulation();
+    requestAnimationFrame(tick);
+  }
+  globalThis.robotLab = {getDiagnostics:() => ({mode,playing,speed,assemblyTime,selectedPart,
+    stage:Core.assemblyFrame(data.model,assemblyTime).stageIndex,
+    assembled:Core.assemblyFrame(data.model,assemblyTime).assembledCount,
+    simulation:{time:sim.state.time,status:sim.state.status,x:sim.state.x,y:sim.state.y,theta:sim.state.theta,
+      tire:sim.state.tire,commandIndex:sim.state.commandIndex,commands:sim.commands.length,events:sim.state.events.length},
+    canvas:{width:canvas.width,height:canvas.height},webgl:Boolean(renderer)})};
+  setMode('assembly'); requestAnimationFrame(tick);
+})();
+
+</script>
+</body></html>

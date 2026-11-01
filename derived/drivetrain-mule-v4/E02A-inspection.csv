@@ -1,0 +1,13 @@
+check_id,part_id,requirement,instrument_id,repeat_1,repeat_2,repeat_3,unit,result,pass,notes
+identity,all,SKUs and quantities match receipt,,,,,text,,,
+wheel-diameter,A-WHEEL,80 nominal; record actual,,,,,mm,,,
+wheel-width,A-WHEEL,10 nominal; record actual,,,,,mm,,,
+shaft,A-MOTOR,6 mm D; 16 mm nominal length,,,,,mm,,,
+bracket-spacing,A-BRACKET,three M3 holes at 14.8 mm pitch,,,,,mm,,,
+hub-stack,A-HUB,record hub/wheel axial stack-up,,,,,mm,,,
+caster-height,A-CASTER,13.5 mm body plus selected spacer,,,,,mm,,,
+motor-engagement,A-MOTOR,no more than 3.5 mm into motor mounting holes,,,,,mm,,,
+free-rotation,assembly,no binding or wheel/deck contact,,,,,text,,,
+deck-clearance,assembly,at least 3 mm nominal; measure actual,,,,,mm,,,
+winding-resistance,A-MOTOR,record with approved meter and temperature,,,,,ohm,,,
+encoder-pinout,A-MOTOR,verify six-lead functions with approved equipment,,,,,text,,,

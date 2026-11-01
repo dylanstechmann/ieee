@@ -1,0 +1,377 @@
+{
+  "version": "0.1.0",
+  "date": "2026-10-31",
+  "status": "agent-built-requirements-and-experiment-plan-no-components-selected-no-hardware-tested",
+  "sources": [
+    "robot-lab-v3/model.json",
+    "VERIFIED-FACTS.md",
+    "RULES-AND-SOURCES.md",
+    "GEOMETRY-AND-CONCEPTS.md",
+    "STRATEGY-AND-ARCHITECTURE.md",
+    "RESOURCES-AND-BUDGET.md",
+    "confirmation-questions-v3.json"
+  ],
+  "assumptions": {
+    "wheel_diameter_in": 3,
+    "wheel_track_in": 8,
+    "max_forward_in_s": 10,
+    "cruise_in_s": 8,
+    "acceleration_in_s2": 24,
+    "rolling_resistance_coefficient": 0.03,
+    "driven_weight_fraction": 0.8,
+    "drivetrain_efficiency": 0.5,
+    "design_torque_factor": 2,
+    "speed_margin_factor": 1.2,
+    "gravity_m_s2": 9.81,
+    "mass_cases_kg": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "design_mass_kg": 4,
+    "friction_cases": [
+      0.1,
+      0.2,
+      0.4
+    ],
+    "odometry_quantum_in": 0.05,
+    "battery_voltage_cases_v": [
+      7.4,
+      11.1
+    ],
+    "average_electrical_power_cases_w": [
+      6,
+      12,
+      24
+    ],
+    "test_window_min": 30,
+    "usable_battery_fraction": 0.8,
+    "energy_reserve_factor": 1.25
+  },
+  "assumption_notes": [
+    "All analysis values are engineering scenarios inherited from the concept or newly labeled assumptions, not measurements or vendor specifications.",
+    "The 4 kg design case is not a mass estimate. Measure the heaviest intended configuration before selection.",
+    "Rolling resistance, driven-weight fraction and efficiency are placeholders; caster scrub and turning resistance are not calculated.",
+    "Battery voltage and average-power cases are arithmetic scenarios only. Chemistry, charger, pack, fuse and current remain unselected.",
+    "The official tire STL supports geometry studies, not official tire mass, friction, compliance or initial-pose claims."
+  ],
+  "drive_cases": [
+    {
+      "mass_kg": 2,
+      "wheel_radius_m": 0.0381,
+      "top_speed_m_s": 0.254,
+      "cruise_speed_m_s": 0.2032,
+      "top_wheel_rpm": 63.661977,
+      "cruise_wheel_rpm": 50.929582,
+      "required_loaded_rpm_with_margin": 76.394373,
+      "acceleration_force_n": 1.2192,
+      "rolling_force_n": 0.5886,
+      "total_tractive_force_n": 1.8078,
+      "nominal_per_side_torque_nm": 0.034439,
+      "design_per_side_torque_nm": 0.068877,
+      "conservative_mechanical_w_per_side_with_torque_margin": 0.459181,
+      "minimum_motor_mechanical_w_per_side_at_assumed_efficiency": 0.918362,
+      "required_friction_coefficient_at_driven_weight_fraction": 0.115176
+    },
+    {
+      "mass_kg": 3,
+      "wheel_radius_m": 0.0381,
+      "top_speed_m_s": 0.254,
+      "cruise_speed_m_s": 0.2032,
+      "top_wheel_rpm": 63.661977,
+      "cruise_wheel_rpm": 50.929582,
+      "required_loaded_rpm_with_margin": 76.394373,
+      "acceleration_force_n": 1.8288,
+      "rolling_force_n": 0.8829,
+      "total_tractive_force_n": 2.7117,
+      "nominal_per_side_torque_nm": 0.051658,
+      "design_per_side_torque_nm": 0.103316,
+      "conservative_mechanical_w_per_side_with_torque_margin": 0.688772,
+      "minimum_motor_mechanical_w_per_side_at_assumed_efficiency": 1.377544,
+      "required_friction_coefficient_at_driven_weight_fraction": 0.115176
+    },
+    {
+      "mass_kg": 4,
+      "wheel_radius_m": 0.0381,
+      "top_speed_m_s": 0.254,
+      "cruise_speed_m_s": 0.2032,
+      "top_wheel_rpm": 63.661977,
+      "cruise_wheel_rpm": 50.929582,
+      "required_loaded_rpm_with_margin": 76.394373,
+      "acceleration_force_n": 2.4384,
+      "rolling_force_n": 1.1772,
+      "total_tractive_force_n": 3.6156,
+      "nominal_per_side_torque_nm": 0.068877,
+      "design_per_side_torque_nm": 0.137754,
+      "conservative_mechanical_w_per_side_with_torque_margin": 0.918362,
+      "minimum_motor_mechanical_w_per_side_at_assumed_efficiency": 1.836725,
+      "required_friction_coefficient_at_driven_weight_fraction": 0.115176
+    },
+    {
+      "mass_kg": 5,
+      "wheel_radius_m": 0.0381,
+      "top_speed_m_s": 0.254,
+      "cruise_speed_m_s": 0.2032,
+      "top_wheel_rpm": 63.661977,
+      "cruise_wheel_rpm": 50.929582,
+      "required_loaded_rpm_with_margin": 76.394373,
+      "acceleration_force_n": 3.048,
+      "rolling_force_n": 1.4715,
+      "total_tractive_force_n": 4.5195,
+      "nominal_per_side_torque_nm": 0.086096,
+      "design_per_side_torque_nm": 0.172193,
+      "conservative_mechanical_w_per_side_with_torque_margin": 1.147953,
+      "minimum_motor_mechanical_w_per_side_at_assumed_efficiency": 2.295906,
+      "required_friction_coefficient_at_driven_weight_fraction": 0.115176
+    },
+    {
+      "mass_kg": 6,
+      "wheel_radius_m": 0.0381,
+      "top_speed_m_s": 0.254,
+      "cruise_speed_m_s": 0.2032,
+      "top_wheel_rpm": 63.661977,
+      "cruise_wheel_rpm": 50.929582,
+      "required_loaded_rpm_with_margin": 76.394373,
+      "acceleration_force_n": 3.6576,
+      "rolling_force_n": 1.7658,
+      "total_tractive_force_n": 5.4234,
+      "nominal_per_side_torque_nm": 0.103316,
+      "design_per_side_torque_nm": 0.206632,
+      "conservative_mechanical_w_per_side_with_torque_margin": 1.377544,
+      "minimum_motor_mechanical_w_per_side_at_assumed_efficiency": 2.755087,
+      "required_friction_coefficient_at_driven_weight_fraction": 0.115176
+    }
+  ],
+  "design_case": {
+    "mass_kg": 4,
+    "wheel_radius_m": 0.0381,
+    "top_speed_m_s": 0.254,
+    "cruise_speed_m_s": 0.2032,
+    "top_wheel_rpm": 63.661977,
+    "cruise_wheel_rpm": 50.929582,
+    "required_loaded_rpm_with_margin": 76.394373,
+    "acceleration_force_n": 2.4384,
+    "rolling_force_n": 1.1772,
+    "total_tractive_force_n": 3.6156,
+    "nominal_per_side_torque_nm": 0.068877,
+    "design_per_side_torque_nm": 0.137754,
+    "conservative_mechanical_w_per_side_with_torque_margin": 0.918362,
+    "minimum_motor_mechanical_w_per_side_at_assumed_efficiency": 1.836725,
+    "required_friction_coefficient_at_driven_weight_fraction": 0.115176
+  },
+  "encoder_counts_per_wheel_rev_min": 189,
+  "friction_cases": [
+    {
+      "assumed_mu": 0.1,
+      "traction_limited_acceleration_in_s2": 19.311024,
+      "meets_concept_acceleration": false
+    },
+    {
+      "assumed_mu": 0.2,
+      "traction_limited_acceleration_in_s2": 50.208661,
+      "meets_concept_acceleration": true
+    },
+    {
+      "assumed_mu": 0.4,
+      "traction_limited_acceleration_in_s2": 112.003937,
+      "meets_concept_acceleration": true
+    }
+  ],
+  "battery_cases": [
+    {
+      "average_electrical_w": 6,
+      "measured_window_energy_wh": 3,
+      "nameplate_energy_wh_with_reserve": 4.6875,
+      "capacity_ah_by_voltage_scenario": {
+        "7.4": 0.633446,
+        "11.1": 0.422297
+      }
+    },
+    {
+      "average_electrical_w": 12,
+      "measured_window_energy_wh": 6,
+      "nameplate_energy_wh_with_reserve": 9.375,
+      "capacity_ah_by_voltage_scenario": {
+        "7.4": 1.266892,
+        "11.1": 0.844595
+      }
+    },
+    {
+      "average_electrical_w": 24,
+      "measured_window_energy_wh": 12,
+      "nameplate_energy_wh_with_reserve": 18.75,
+      "capacity_ah_by_voltage_scenario": {
+        "7.4": 2.533784,
+        "11.1": 1.689189
+      }
+    }
+  ],
+  "requirements": [
+    {
+      "id": "MOTOR-01",
+      "component": "Two motor/gearbox assemblies",
+      "requirement": "Per side: loaded output >= 76.394373 RPM and >= 0.137754 N m at the 4 kg scenario; verify actual motor curves and hot operation.",
+      "evidence": "Concept calculation + E02; margins are assumptions, not vendor ratings.",
+      "status": "ready-for-candidate-screening-not-selected"
+    },
+    {
+      "id": "ENC-01",
+      "component": "Wheel-speed feedback",
+      "requirement": "At least 189 effective counts per wheel revolution for <= 0.05 in ideal distance quantization; account for gearbox ratio and all decoder edges.",
+      "evidence": "Geometry calculation; slip/odometry accuracy still requires E03.",
+      "status": "ready-for-candidate-screening-not-selected"
+    },
+    {
+      "id": "DRIVER-01",
+      "component": "Two-channel motor driver",
+      "requirement": "Continuous per-channel rating >= 1.25x measured hot continuous current; peak/supply ratings cover measured motor stall and transients at maximum intended pack voltage.",
+      "evidence": "Blocked on actual motor and E02; no defensible current number yet.",
+      "status": "blocked-on-measurement"
+    },
+    {
+      "id": "POWER-01",
+      "component": "Battery, distribution, fuse and wiring",
+      "requirement": "Energy from measured average power over the intended test/match window with 0.8 usable fraction and 1.25 reserve scenario; current/fuse/wire ratings from measured load; distribution <=30 V.",
+      "evidence": "GM1 R02/R16 limit + E02/E03/E05; voltage cases are not a pack selection.",
+      "status": "blocked-on-measurement-and-policy"
+    },
+    {
+      "id": "ESTOP-01",
+      "component": "Emergency power removal",
+      "requirement": "Clearly marked, accessible emergency stop and supervised power-off verification with no unintended drive output.",
+      "evidence": "GM1 R03-R04 + E05.",
+      "status": "requirement-only-not-tested"
+    },
+    {
+      "id": "TIRE-01",
+      "component": "Tire capture actuator and structure",
+      "requirement": "Size from measured tire/mechanism mass, bore/OD clearance, friction/deformation, moment arms and jam loads; meet E04 acquisition, retention and release gates.",
+      "evidence": "Official STL geometry + E01/E04; no 80 g mass assumption or servo torque selected.",
+      "status": "blocked-on-measurement-and-architecture"
+    },
+    {
+      "id": "STRUCT-01",
+      "component": "Chassis/support/fasteners",
+      "requirement": "Full intended configuration measured <=12 kg; starting/configuration envelope and full mechanism sweep inspected; survives E03 without loosening or wheel contact.",
+      "evidence": "GM1 R01/R02 + E03/E05; no final dimensions/material selected.",
+      "status": "blocked-on-architecture-and-measurement"
+    },
+    {
+      "id": "CONTROL-01",
+      "component": "Controller and power conversion",
+      "requirement": "Enough encoder, motor, mechanism and chosen sensor interfaces with measured regulator margins and brownout-free E02-E05 logs.",
+      "evidence": "Interface count follows selected architecture and sensor experiments.",
+      "status": "blocked-on-architecture-and-measurement"
+    }
+  ],
+  "architectures": {
+    "drivetrain": [
+      {
+        "id": "2WD-CASTER",
+        "name": "Two encoder gearmotors plus low-scrub support",
+        "status": "first-mule-candidate",
+        "benefit": "Simple forward/reverse/spin control and two motor channels.",
+        "risk": "Caster scrub, unequal wheel loading and turn odometry error.",
+        "decision_test": "E02/E03 against traction, straightness and spin-error gates."
+      },
+      {
+        "id": "4WD-SKID",
+        "name": "Four driven wheels",
+        "status": "fallback-not-selected",
+        "benefit": "More driven contact area and redundancy against a light wheel.",
+        "risk": "More scrub, current, mass and control channels; does not automatically improve turning.",
+        "decision_test": "Test only if two-wheel mule cannot meet traction or loading gates."
+      }
+    ],
+    "tire_handling": [
+      {
+        "id": "PASSIVE-FORK",
+        "name": "Passive capture fork/cradle and release",
+        "status": "prototype-for-comparison",
+        "benefit": "Fewest actuators and simple failure recovery.",
+        "risk": "Alignment, initial pose and TPU friction sensitivity; current lab shape is not a proven mechanism.",
+        "decision_test": "E04 identical placement matrix and retention/release trials."
+      },
+      {
+        "id": "BORE-CAPTURE",
+        "name": "Guided expanding-bore capture with lift",
+        "status": "prototype-for-comparison",
+        "benefit": "Uses the documented bore and can retain geometrically rather than relying only on clamp friction.",
+        "risk": "Requires pose/access confirmation, alignment, tine clearance, lift volume and jam recovery.",
+        "decision_test": "E04 after physical bore and access measurements; no unverified 80 g tire-mass assumption."
+      },
+      {
+        "id": "OD-GRIPPER",
+        "name": "Active outside-diameter gripper",
+        "status": "fallback-for-comparison",
+        "benefit": "Does not require insertion into the bore and may tolerate more poses.",
+        "risk": "More sweep, clamp load, control and possible interference with box or robot envelope.",
+        "decision_test": "E04 with measured tire deformation and full swept-envelope checks."
+      }
+    ]
+  },
+  "experiments": [
+    {
+      "id": "E00",
+      "title": "Inventory and metrology gate",
+      "purpose": "Record school/home access, tools, measurement capability and battery policies before proposing spend.",
+      "method": "Owner records available scale, calipers, multimeter, bench supply, fabrication and supervised test space; unknown is acceptable.",
+      "sample": "One dated inventory and access record.",
+      "pass_gate": "Enough measurement and supervision identified for E01–E05; otherwise borrow or revise the experiment before buying parts.",
+      "output": "Actual measured inputs and resource constraints."
+    },
+    {
+      "id": "E01",
+      "title": "Tire geometry and material characterization",
+      "purpose": "Separate official STL geometry from physical-tire mass, friction, compliance and pose.",
+      "method": "Inspect/measure the official tire when accessible. An organizer-STL print may test geometry only and must be labeled a surrogate with its own measured mass/material.",
+      "sample": "Three repeated measurements per dimension; five mass readings; actual tire and surrogate recorded separately.",
+      "pass_gate": "Versioned dimensions/mass/material and permitted initial-pose set exist before mechanism freeze.",
+      "output": "Mechanism input sheet; no friction transfer from a printed surrogate to the official tire."
+    },
+    {
+      "id": "E02",
+      "title": "Motor/gearbox bench characterization",
+      "purpose": "Measure candidate output speed, torque/current and thermal behavior instead of trusting nominal RPM.",
+      "method": "Use supervised instrumentation and a safe fixture at min/nominal/max intended bus voltage; record loaded speed, continuous current, peak/stall data from the actual motor/driver combination.",
+      "sample": "Three runs per operating point after a repeatable warmup; log voltage, current, speed, torque and temperature.",
+      "pass_gate": "At measured design mass, loaded output meets calculated RPM/torque margins and driver limits with no thermal or protection fault.",
+      "output": "Measured motor curves and evidence for driver, fuse and wire ratings."
+    },
+    {
+      "id": "E03",
+      "title": "Ballasted rolling-chassis traction and control",
+      "purpose": "Test two-wheel drive plus support under changing mass and surface conditions.",
+      "method": "Instrumented mule with full-footprint ballast at 2, 4 and 6 kg; straight 1 m runs and left/right 180-degree spins on documented field-like surfaces.",
+      "sample": "Ten straight runs and twenty spins per direction per mass/surface cell; include hot repeated runs.",
+      "pass_gate": "At 4 kg, at least 9/10 straight runs drift no more than 25 mm over 1 m; all commanded runs reach 8 in/s cruise without slip/thermal faults; median spin error no more than 5 degrees and every trial is logged.",
+      "output": "Measured traction, tracking, spin error and current; decide 2WD-CASTER versus fallback."
+    },
+    {
+      "id": "E04",
+      "title": "Tire-mechanism bake-off",
+      "purpose": "Compare all three capture concepts under identical placement, alignment and retention conditions.",
+      "method": "Vary lateral offset -12.7/0/+12.7 mm, yaw -10/0/+10 degrees, and documented pose class. Add tilt/upright only as diagnostic cases until official poses are known. Use the same approach and fixture for each concept.",
+      "sample": "Per candidate and officially required pose class: five attempts at each of nine alignment cells plus five nominal repeats (50 total), then twenty retention and twenty release attempts for qualifying concepts.",
+      "pass_gate": "For every officially required pose class: at least 48/50 acquisitions overall and 4/5 in each alignment cell; 20/20 retention through acceleration and both spin directions; 20/20 releases; no tire damage or uncontrolled jam. Unknown-pose failures remain visible.",
+      "output": "Architecture decision based on success, recovery, mass, volume and measured actuator loads."
+    },
+    {
+      "id": "E05",
+      "title": "Integrated docking, recovery and power-off review",
+      "purpose": "Prove that a failed exchange can end cleanly and that power/safety integration is testable.",
+      "method": "Run instrumented low-speed docking, inject acquisition failures, and conduct supervised power-isolation, fuse/wiring and emergency-stop reviews on a secured fixture.",
+      "sample": "Thirty dock cycles and ten injected failures; repeat after hot operation.",
+      "pass_gate": "At least 28/30 docks complete; 10/10 failed acquisitions retreat within the 20 s engineering bail-out; emergency power removal passes every supervised trial with no unintended drive output.",
+      "output": "Reliability record and updated component requirements, not a scoring adjudication."
+    }
+  ],
+  "limitations": [
+    "No physical measurements, vendor datasheets, prices or hardware trials are included.",
+    "Torque is a straight-line two-drive-wheel scenario; caster scrub, impacts and turning torque require measurement.",
+    "Battery current, motor-driver current and actuator torque are intentionally not guessed.",
+    "Experiment gates are engineering proposals, not organizer rules, legal interpretations or score predictions."
+  ]
+}

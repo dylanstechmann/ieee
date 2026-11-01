@@ -1,0 +1,17 @@
+{
+  "status": "agent-run-selectable-construction-waypoints-not-official-mission",
+  "grid_step_in": 1,
+  "grid_origins_in": [[0, 0], [0.5, 0.5]],
+  "max_expansions": 20000,
+  "modes": ["constrained-nominal", "constrained-variants"],
+  "policies": ["original-fixed", "selectable-original-regions", "experimental-north-pit-access"],
+  "experimental_north_access_rect_in": [0, 0, 43.87, 48],
+  "notes": [
+    "Regression probes remain hypothetical 2-in squares, not official toy-car shapes or legal three-obstacle arrangements.",
+    "Board-reference grid origins are independent of wall inset. Geometry-derived passage midpoints supplement both grids.",
+    "Race task staging and ordered gates are retained. Only pit-entry/docking/withdrawal construction waypoints are freed in selectable modes.",
+    "North pit access is an explicitly alternative engineering corridor around the far end of the pit divider, not permission to enter there.",
+    "Fixed start, docking pose and final race staging are preserved; selectable approaches must both arrive and leave.",
+    "One origin is used for expensive full-route comparisons; both origins are compared on the failed upper leg without geometry supplements first."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "cases": 162,
+  "samples": 2970,
+  "source_triangles": 5380,
+  "preserved_artifacts": 7,
+  "physical_trials": 0,
+  "selected_mechanism": null
+}

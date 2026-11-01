@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "standalone": "share/Mule-Dynamics-Studio-v5.html",
+  "cases": 324,
+  "sensitivity_runs": 48,
+  "nominal_trajectories": 6,
+  "browser_errors": 0,
+  "screenshots": 4,
+  "physical_trials": 0,
+  "purchased_components": 0
+}

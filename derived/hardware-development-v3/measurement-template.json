@@ -1,0 +1,23 @@
+{
+  "status": "blank-template-no-measurements",
+  "date": null,
+  "measured_by": null,
+  "equipment_ids": [],
+  "robot_mass_kg": null,
+  "wheel_diameter_mm": null,
+  "driven_weight_fraction": null,
+  "rolling_resistance_coefficient": null,
+  "friction_coefficient": null,
+  "tire_mass_g": null,
+  "tire_material": null,
+  "tire_pose_classes": [],
+  "average_electrical_w": null,
+  "hot_continuous_current_a_per_side": null,
+  "motor_stall_current_a_at_max_voltage": null,
+  "bus_voltage_min_nominal_max_v": [
+    null,
+    null,
+    null
+  ],
+  "notes": "Replace nulls only with dated physical measurements and equipment IDs; do not edit derived report values directly."
+}

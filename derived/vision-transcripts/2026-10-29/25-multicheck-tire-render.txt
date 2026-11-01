@@ -1,0 +1,11 @@
+
+===== MODEL: nvidia/nemotron-3.5-super-vl =====
+27.2 diah
+
+===== MODEL: qwen/qwen3-vl-235b-a22b-instruct =====
+27.2 mm
+
+===== MODEL: google/gemini-2.5-flash =====
+The dimension text box reads: **27.2 mm**
+
+There are no other visible labels that are clearly decipherable.

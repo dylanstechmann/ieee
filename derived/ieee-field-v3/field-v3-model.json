@@ -1,0 +1,37 @@
+{
+ "source": "constrained-field-v3.json + field-v3.parameters.json + derived/drawing-layout-v3/layout.json",
+ "frame": "x pit-end->race-end, y left->right, z up; inches; base top = z0",
+ "built": {
+  "base": "96x48x0.719",
+  "walls": "1x4x96 callout, INSIDE-mounted (end walls assumed)",
+  "center_divider": "1x2x36 at x 43.87..79.87 y 23.57..24.57 (V3)",
+  "pit_divider": "1x1x16 at x 27.82..28.82 y 16.07..32.07",
+  "marking": "callout octagon center (62,24.073): sides y 11.053/37.093, flats x 36.730/87.270, 0.5-in line assumed",
+  "checker": "x 27.82..28.82, openings 15.08 L / 14.94 R",
+  "pit_boxes": "3x 12x12 trace outlines + start box 12x12",
+  "tags": "41h12 68mm x3, poses assumed",
+  "quadrants": "4x 16x16 illustrative (2-in wall offset, 4-in gap), placement unverified",
+  "tires": "REAL Spare Tire v2.stl imported via host mirror path (OD 68.184 / bore ~40.25 / thickness 27.600 mm), lie-flat assumed"
+ },
+ "clearance_sweep_in": {
+  "walls_inside_nominal_1in": {
+   "bottom_lane": 10.05,
+   "top_lane": 9.91,
+   "right_strip": 7.73,
+   "left_mouth": 8.41
+  },
+  "walls_inside_actual_0.75in": {
+   "bottom_lane": 10.3,
+   "top_lane": 10.16,
+   "right_strip": 7.98,
+   "left_mouth": 8.41
+  },
+  "walls_outside": {
+   "bottom_lane": 11.05,
+   "top_lane": 10.91,
+   "right_strip": 8.73,
+   "left_mouth": 8.41
+  }
+ },
+ "robot_minimum_in": 10.0
+}

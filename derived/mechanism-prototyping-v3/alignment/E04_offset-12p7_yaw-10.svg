@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="120mm" height="120mm" viewBox="0 0 120 120" data-offset-mm="12.7" data-yaw-deg="10" data-calibration-mm="50">
+<rect width="120" height="120" fill="white"/><g fill="none" stroke="#152333" stroke-width="0.25">
+<circle id="tire-outer" cx="60" cy="47.3" r="34.092"/><circle id="tire-bore" cx="60" cy="47.3" r="20.15" stroke-dasharray="1 1"/>
+<line id="robot-centerline" x1="5" y1="60" x2="115" y2="60" stroke="#237a8c" stroke-dasharray="3 2"/>
+<line id="yaw-witness" x1="60" y1="47.3" x2="86.58980933132962" y2="42.611499202992874" stroke="#c34d38" stroke-width="0.5"/>
+<circle cx="60" cy="47.3" r="0.8" fill="#c34d38"/>
+<path d="M 5 58 v 4 M 5 60 h 5 M 10 58 v 4"/>
+<path d="M 10 110 h 50 M 10 108 v 4 M 60 108 v 4" stroke-width="0.5"/>
+</g><g font-family="sans-serif" fill="#152333" font-size="3">
+<text x="5" y="6" font-size="4">E04 offset-12p7_yaw-10 — 100% / ACTUAL SIZE</text>
+<text x="5" y="11">Offset 12.7 mm (+ = robot-left/page up); yaw 10° CCW</text>
+<text x="96" y="6" font-size="2.2">Ø68.184 / bore Ø40.3</text>
+<text x="10" y="106">MEASURE: line below = 50 mm. Reject print if scale differs.</text>
+<text x="10" y="117">Geometry template only — not a mechanism or rules approval.</text>
+</g></svg>

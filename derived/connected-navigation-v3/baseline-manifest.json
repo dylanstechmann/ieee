@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-30",
+  "node": "v24.18.1",
+  "tests": {
+    "passed": 65,
+    "failed": 0,
+    "skipped": 0
+  },
+  "files": {
+    "/workspace/ieee/ieee/tools/avoidance-v3.js": "239992278bf2488c0ccdce9ad473baa0a03c92430857a4c3f3235c317ac8f70b",
+    "/workspace/ieee/ieee/tools/route-progress-v3.js": "535adcbf48ea53829b1de6569c4794e1bc48a14de88b795b62ce1ceaba9ee546",
+    "/workspace/ieee/ieee/route-contract-v3.json": "ff73ce45a70cade4a8093991bc0648383e5165dffbd9abe2d3107261bb9d5f42",
+    "/workspace/ieee/ieee/avoidance-v3.json": "67d36de9a57ba3c382942b1d840a1c6bd7e56696d6ff81baed758abbff78cc07",
+    "/workspace/ieee/ieee/navigation-v3.json": "c38838349ceb915e0a7b2d00bc1fa9fdf02df89f024862a6404412dcedbfa326",
+    "/workspace/ieee/ieee/derived/avoidance-v3/report.json": "86c864ca5bffea2437a4a640b639184cbbc51e3284e6c5ec7de7fc5c1aa8db9a",
+    "/workspace/ieee/ieee/derived/contract-navigation-v3/report.json": "cae6f2a27774b92ea23a8992c83c4f62d16e77598b852d401292297d12afbda3",
+    "/workspace/ieee/ieee/derived/planner-diagnostics-v3/report.json": "9f31bec1e092d94e50863938ede03cea717437ab3167976f63e63fa95e9ab5c0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": "agent-run-fixed-contract-failure-investigation",
+  "grid_steps_in": [2, 1],
+  "max_expansions": 20000,
+  "budget_retry_expansions": 80000,
+  "failed_legs": [
+    {"obstacle_case": "upper-lane-blocker", "leg": 4, "staging_x_in": [18]},
+    {"obstacle_case": "pit-gate-blocker", "leg": 12, "staging_x_in": [18, 16, 15]}
+  ],
+  "notes": [
+    "Failed-leg experiments only, not complete routes or uncertainty trial counts.",
+    "Same archived footprint, fixed task poses, phase regions and uncertainty as contract-navigation-v3.",
+    "Only retry larger budget after budget-exhausted, never after grid-exhausted.",
+    "Diagnostics count first rejection per attempted transition; cache hits can repeat counts. Not independent collision trials. Expanded samples are the first 500 expansions, not a complete frontier."
+  ]
+}

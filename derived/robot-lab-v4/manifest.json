@@ -1,0 +1,23 @@
+{
+  "generated": "2026-10-31",
+  "status": "agent-built-high-fidelity-candidate-lab-not-hardware-or-rules-validation",
+  "standalone": "share/Robot-Lab-v4.html",
+  "input_hashes": {
+    "robot-lab-v4/model.json": "e71d960ab1c79f6c5ad72c2cb60071a0b1ee0bfa0104f74670ba9a4d3725dac7",
+    "robot-lab-v4/wiring.json": "9920287a95219c1df5cf8100fcf542536ac5ee9334994757beee5d8cca613fa3",
+    "robot-lab-v4/index.html": "6af7bee550c440a12b0783d3da1c34a4f188d895be074fedc97dd63beb1eec5f",
+    "robot-lab-v4/styles.css": "c0c47fe5229b60cad0cf9087423de9a7d2b35fffa21c9fcc4b0e8c79cf2f3f7b",
+    "robot-lab-v4/core.js": "17f8aacdbd2c0679b528d49965117631c21c47d356428dad39d27591c259accc",
+    "robot-lab-v4/hardware.js": "0a5dfa14b91ea087c620959f14ac47db893d84204c4180d79e74923792a5712a",
+    "robot-lab-v4/renderer.js": "ed835b4ba5209261a7716f774322276bc295925843adc425d710120cdc004260",
+    "robot-lab-v4/app.js": "3b81bc3a68d72784e247bd646e38bab34c8ea6c0e94f75c6f4a1be329cf2570d",
+    "tools/build-robot-lab-v4.js": "7e148c6e83b933736ad557369bfb1418fad1320099ea233095961fc51af1c580",
+    "derived/connected-navigation-v3/report.json": "3889ebbf6fe25ed8f404aeb7d788707be7eaca5d3d9b92162dd7488947e19333",
+    "constrained-field-v3.json": "3088ae57b556ec718ac0d771f27b5655fdeb426d6668c6f5d7742dc14a822c20",
+    "derived/drawing-layout-v3/layout.json": "d65d46462d41b85a7d79f4560347f5ee011dc5938f5c84757692bcd6ab5ae0b9"
+  },
+  "output_hashes": {
+    "robot-lab-v4/scene-data.js": "65f6496bb44a16d44cd6d032abe04799c5ceab02f830698ac1c5a5dc2fb97994",
+    "share/Robot-Lab-v4.html": "5ca14ec070047867cc9eea8a16f334c924203abad5c7b5408d3ee0e12623543f"
+  }
+}

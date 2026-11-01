@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-31",
+  "status": "agent-selected-digital-candidates-synthetic-planar-study-not-hardware-validated",
+  "standalone": "share/Mule-Dynamics-Studio-v5.html",
+  "input_hashes": {
+    "mule-dynamics-v5.json": "3eae775cdcc945198cb66f05b96e2c33d04d927785c653d935f8fd87119df95f",
+    "drivetrain-mule-v4.json": "342f2bb93eb7b9b47e333487a1fda019a819d7458f1e9385982ebf56161a2dec",
+    "order-a-procurement-v4.json": "12fa6454864d0d21bc27464b5ab9072d90ffc18e0fe218134de871719353f2da",
+    "hardware-development-v3.json": "0ed672009f04074aa95411fca9cea1071b7bbcdd7d79da2646b661e92c119549",
+    "tools/mule-dynamics-v5.js": "9144325006f7ba050fef7dff7b0a4f509dd4cb5f6be4b174779804d85a7d27d6",
+    "tools/build-mule-dynamics-studio-v5.js": "7e3895f2b4951766d794e5cecfd480fa2c772b8f6d92a6fa2419065981bbeaec",
+    "tools/build-mule-studio-v4.js": "c951e04b25f1c828735ac64ee9a76d9b893305b506832131f1bf669d8d8fc881",
+    "tools/drivetrain-mule-v4.js": "29b9a941147a527e7a0180ff40a715adc09b9ed3a1f425f4cf0233a7657fa2bd",
+    "tools/order-a-procurement-v4.js": "257c1b2be0245a2ea54798e97cb6e23f3891feba83fd9c319e29c87ae986a557",
+    "mule-studio/core.js": "6b245c631575f486aa233ca1442915bde00ec9240cb90a3b79044ae426abf450",
+    "mule-dynamics-studio/index.html": "a72f04c24c2369ce54edc1a614eaefdfd59c4e4a96341e7cfbf3e17687e5f492",
+    "mule-dynamics-studio/styles.css": "d85c3380efb6f4f9b6c590ac0a64b6c5b1f8885a40aaf4c309aab5bfe0f548eb",
+    "mule-dynamics-studio/core.js": "7da1bf496b05e30b3b14c463b9d950e15c72c715d8bfeabf799423cca72060af",
+    "mule-dynamics-studio/app.js": "5f51c19bf8bcc6a5526ff594bd089f43df0bf8ebfb626347fd5dfa21538eb0a2",
+    "robot-lab-v4/hardware.js": "0a5dfa14b91ea087c620959f14ac47db893d84204c4180d79e74923792a5712a",
+    "robot-lab-v4/renderer.js": "ed835b4ba5209261a7716f774322276bc295925843adc425d710120cdc004260"
+  },
+  "output_hashes": {
+    "derived/mule-dynamics-v5/README.md": "dcc96026add10a61ba701294e26b1338af4a8c7346b835dae254e1b446c37dbb",
+    "derived/mule-dynamics-v5/selection-requirements.md": "48290b8ff94a839b22625b88a67c9662e90369e230a3ce7ab2a0f7b2c1e66b5f",
+    "derived/mule-dynamics-v5/simulation-matrix.json": "625306ec888979a61cc8ba4c44da0d632e1a8937ee6ece2b9e3b95a0874a7ea9",
+    "derived/mule-dynamics-v5/nominal-simulations.json": "5bd59fc627850bf5f717ac64fff654930573f3cb0ec158c0aa0e55322ce3d132",
+    "derived/mule-dynamics-v5/report.json": "23dfdfeb54c34483f9a23d58740a0298ce7c9b1133b04ab58a302ea381fc6024",
+    "mule-dynamics-studio/scene-data.js": "9f793d26b9dd98c8467154f6432fd3ca7544bc7a6908cee64ccb431bb0345a19",
+    "mule-dynamics-studio/dynamics.js": "9144325006f7ba050fef7dff7b0a4f509dd4cb5f6be4b174779804d85a7d27d6",
+    "share/Mule-Dynamics-Studio-v5.html": "090389221c51337d5b1346ce8d3c54e1eca5d7d551cc4729d0a39c3099a1907f"
+  }
+}

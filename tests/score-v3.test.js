@@ -1,0 +1,10 @@
+'use strict';
+const { test } = require('node:test');
+const assert = require('node:assert/strict');
+const { score } = require('../tools/score-v3');
+const full = () => ({ enteredCourse:true, greenStart:true, earlyStart:false, finishedInAssignedBox:true, flagOnFinalLap:true, publicity:false, redCard:false, cleanWallLaps:[true,true,true], cleanObstacleLaps:[true,true,true], tireDrop:'assigned', tirePickup:'assigned', finishSeconds:164.999 });
+test('nominal 390 robot points and publicity', () => { assert.equal(score(full()).total,390); assert.equal(score({...full(),publicity:true}).total,400); });
+test('strict speed boundary, match boundary and no finish', () => { assert.equal(score({...full(),finishSeconds:165}).breakdown.speed,0); assert.equal(score({...full(),finishSeconds:180}).breakdown.finish,100); assert.equal(score({...full(),finishSeconds:null}).breakdown.finish,0); assert.throws(() => score({...full(),finishSeconds:180.001})); });
+test('tire alternatives and independently awarded laps', () => { const x=score({...full(),tireDrop:'other',tirePickup:'none',cleanWallLaps:[true,false,true],cleanObstacleLaps:[false,true,false]}); assert.equal(x.breakdown.tireDrop,12); assert.equal(x.breakdown.tirePickup,0); assert.equal(x.breakdown.wallLaps,30); assert.equal(x.breakdown.obstacleLaps,25); });
+test('early start removes credit and adds penalty; red card overrides', () => { const x=score({...full(),earlyStart:true}); assert.equal(x.breakdown.greenStart,0); assert.equal(x.breakdown.earlyStartPenalty,-2); assert.equal(score({...full(),redCard:true}).total,0); });
+test('missing, malformed and non-finite inputs rejected', () => { for(const x of [{...full(),finishSeconds:undefined},{...full(),finishSeconds:NaN},{...full(),tireDrop:'both'},{...full(),greenStart:1},{...full(),cleanWallLaps:[true,true]}]) assert.throws(()=>score(x)); });

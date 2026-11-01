@@ -1,0 +1,19 @@
+
+===== MODEL: anthropic/claude-sonnet-5.5 =====
+**Correction: I see only one diagonal-segment label, not two.**
+
+- **9 3/4 in** is on the upper-left diagonal of the octagon. Its dimension line runs parallel to that slanted edge, and the text is rotated to match, so it appears as 9¾.
+- The upper-right, lower-left and lower-right diagonals have no labels.
+- I can't find a **6 3/4 in** label on any diagonal, so the earlier reading isn't supported.
+- There are no 90° angle marks around the octagon.
+
+So the answer is neither "two different values" nor "the same value twice" nor "angle marks." There is a single 9 3/4 in diagonal label. The other octagon dimensions are not diagonals: 12 1/4 in across the top flat, 36 3/4 in on the left vertical side, and 16 and 15 for the vertical gaps above and below. The fraction text is small, so the 9 3/4 reading is the least certain part. It could also be read as 9 1/4.
+
+===== MODEL: openai/gpt-5.2 =====
+Around the **octagonal marking**, I can see **only one diagonal-segment dimension label**:
+
+1. **“9 3/4” (in)** — placed on the **upper-left slanted (diagonal) edge** of the octagon, with arrowheads at each end along that diagonal segment.
+
+I **do not see any “6 3/4”** label on any other diagonal segment in this rendering, and I **do not see any 90° angle marks** around the octagon.
+
+So, based strictly on what’s visible here: it’s **not two different diagonal values**; it’s **just a single visible diagonal label: 9 3/4 in**.

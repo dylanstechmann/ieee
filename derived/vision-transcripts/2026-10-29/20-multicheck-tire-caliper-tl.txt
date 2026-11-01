@@ -1,0 +1,33 @@
+
+===== MODEL: nvidia/nemotron-3.5-super-vl =====
+The LCD display reads: **27.1**
+
+*   **Digit by digit:** 2, 7, ., 1
+*   **Unit indicator:** The **mm** indicator appears lit (visible in the bottom right corner of the display).
+*   **Ambiguity:** The decimal point is faint but standard for this resolution; the digits themselves are clear.
+*   **Feature measured:** The caliper's outside jaws are clamping the exterior of the blue object, so it is measuring the **outer diameter** of the blue 3D-printed ring.
+
+===== MODEL: qwen/qwen3-vl-235b-a22b-instruct =====
+LCD display reads exactly: 27.1
+
+Unit indicator: The “mm” indicator is lit (visible as a small “mm” symbol to the right of the digits on the display).
+
+Feature being measured: The caliper is measuring the outer diameter of the blue 3D-printed ring (spare tire), as the jaws are placed across the widest part of the circular cross-section.
+
+Note: All digits are clear and unambiguous. The decimal point is present between the “7” and “1”. No other digits or symbols are visible on the display beyond “27.1 mm”.
+
+===== MODEL: google/gemini-2.5-flash =====
+Let's break down the caliper reading:
+
+**Caliper LCD Display:**
+
+*   **Digits:** 27.1
+*   **Decimal Point:** Appears between the '7' and the '1'.
+*   **Ambiguous Digits:** None, all digits are clear.
+*   **Unit Indicator:** The "mm" indicator is clearly lit on the right side of the display, just above the last digit.
+
+**Full Reading:** 27.1 mm
+
+**Feature of the Ring Being Measured:**
+
+The caliper's jaws are measuring the **inner diameter** of the blue 3D-printed ring.

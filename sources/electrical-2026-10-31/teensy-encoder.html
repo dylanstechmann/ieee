@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Encoder Library, for Measuring Quadarature Encoded Position or Rotation Signals</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="/favicon.ico">
+<style>
+body,td,p {font-family: Arial, Helvetica, sans-serif;}
+html { scroll-behavior: smooth; }
+img { max-width:100%; height:auto; }
+nav.left { float:left; width:172px; }
+.logoimg { display:block; padding-left:40px; }
+.notmobile {/* display:normal */}
+.navtopwidth { width=100%; max-width:calc(185px + 1080px); }
+.headertop { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:2px }
+.navtop { display:flex; justify-content:space-around; background-color:#D0E0FF; }
+.navtopitem { padding:6px; }
+.navbreadcrumb { background-color:#F0F0F0; }
+main { float:left; margin-left:10px; width:calc(100% - 185px); max-width:1080px; }
+aside { float:right; }
+figure { display:table; }
+figcaption { display:table-caption; caption-side:bottom; font-size:0.8em; font-weight:bold; }
+@media only screen and (max-width:960px) {
+	aside { float:none; display:table; margin:auto; }
+}
+@media only screen and (max-width:600px) {
+	nav.left { display:none; }
+	.notmobile { display:none; }
+	.logoimg { padding-left:6px; }
+	main { width:100%; margin-left:0; }
+	table { font-size:75%; }
+}
+.center { margin: auto; }
+h1 {font-size: 200% }
+h2 {font-size: 160% }
+h3 {font-size: 140% }
+h4 {font-size: 120% }
+h5 {font-size: 110% }
+dl.featurelist dt {
+	font-weight: bold;
+	font-size: 130%;
+	margin-left: 2em;
+	display: list-item;
+	list-style-type: disc;
+}
+dl.featurelist dd {
+	margin-left: 4em;
+	padding-bottom: 0.75em;
+}
+ul.subfeaturelist {
+	padding-top: 0.4em;
+}
+ul.subfeaturelist li {
+	font-size: 90%;
+	padding-bottom: 0.25em;
+}
+.orderButton {
+	background:linear-gradient(to bottom, #c5f7be 5%, #cae0b3 100%);
+	background-color:#c5f7be;
+	border-radius:6px;
+	cursor:pointer;
+	padding:8px 20px;
+}
+.orderButton:hover {
+	background:linear-gradient(to bottom, #cae0b3 5%, #c5f7be 100%);
+	background-color:#cae0b3;
+}
+.orderButton:active {
+	position:relative;
+	top:1px;
+}
+tr.top {background-color:#C0C0C0}
+tr.odd {background-color:#F0F0F0}
+tr.even {background-color:#E0E0E0}
+p.desc {padding-left:3em; margin:0px; padding-top:0.2em; padding-bottom:0.8em; font-size:0.75em}
+span.literal {color: #006666}
+span.comment {color: #777755}
+span.keyword {color: #cc6600}
+span.function {color: #996600}
+span.mainfunction {color: #993300; font-weight: bolder}
+span.footnote {vertical-align: super; font-size: smaller; color: #ff0000;}
+a.footnote:link {text-decoration: none}
+a.footnote:visited {text-decoration: none}
+</style>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#0000D0" vlink="#202080">
+<!--nav begin-->
+<header class="headertop navtopwidth">
+<div><a href="/"><img src="/img/logo.gif" alt="PJRC" width=276 height=31 class=logoimg></a></div>
+<div>
+<small>
+<a href="https://www.pjrc.com/cart/cart.php">Shopping&nbsp;Cart</a>
+<span class=notmobile><img src="/img/a.gif" width=10 height=10 alt="">
+<a href="/cgi-bin/archive/summary">Download&nbsp;Website</a></span>
+</small>
+</div>
+</header>
+<nav class="navtop navtopwidth">
+<div class=navtopitem><a href="/">Home</a></div>
+<div class=navtopitem><a href="/store/">Products</a></div>
+<div class=navtopitem><a href="/teensy/">Teensy</a></div>
+<div class=navtopitem><a href="/blog/">Blog</a></div>
+<div class=navtopitem><a href="https://forum.pjrc.com/">Forum</a></div>
+</nav>
+<nav class="navbreadcrumb navtopwidth">
+<small><span class=notmobile>You are here:</span>
+<a href="/teensy/">Teensy</a>
+<img src="/img/b.gif" width=10 height=10 alt="">
+<a href="teensyduino.html">Teensyduino</a>
+<img src="/img/b.gif" width=10 height=10 alt="">
+<a href="td_libs.html">Libraries</a>
+<img src="/img/b.gif" width=10 height=10 alt="">
+<span style="background-color: #B0E4A8">Encoder</span>
+</small></nav>
+<p>
+<nav class=left>
+<table width=172 border=0 cellspacing=0 cellpadding=6>
+<tr><td bgcolor="#D0E0FF" align=center>
+<big><b>PJRC Store</b></big>
+</td></tr>
+<tr><td bgcolor="#F0F0F0">
+<small>
+<img src="/img/a.gif" width=10 height=10 alt="" align=middle>
+<a href="/store/teensy41.html">Teensy 4.1</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="" align=middle>
+<a href="/store/teensy40.html">Teensy 4.0</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="" align=middle>
+<a href="/store/ic_mkl02_t4.html">Chips for PCB</a><br>
+</small></td></tr>
+<tr><td height=15></td></tr>
+<tr><td bgcolor="#D0E0FF" align=center>
+<big><b>Teensy</b></big>
+</td></tr>
+<tr><td bgcolor="#F0F0F0" style="line-height: 96%">
+<small>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="index.html">Main Page</a><br>
+<a href="techspecs.html"><img src="/img/c.gif" width=10 height=10 alt="" border=0>
+<b>Hardware</b></a><br>
+<a href="first_use.html"><img src="/img/c.gif" width=10 height=10 alt="" border=0>
+<b>Getting Started</b></a><br>
+<a href="tutorial.html"><img src="/img/c.gif" width=10 height=10 alt="" border=0>
+<b>Tutorial</b></a><br>
+<a href="pins.html"><img src="/img/c.gif" width=10 height=10 alt="" border=0>
+<b>How-To Tips</b></a><br>
+<a href="usb_debug_only.html"><img src="/img/c.gif" width=10 height=10 alt="" border=0>
+<b>Code Library</b></a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="projects.html">Projects</a><br>
+<img src="/img/b.gif" width=10 height=10 alt="">
+<b>Teensyduino</b><br>
+</small>
+<div style="padding-left: 1.2em">
+<small>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="teensyduino.html">Main</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_download.html">Download+Install</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_usage.html">Basic Usage</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_digital.html">Digital I/O</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_pulse.html">PWM & Tone</a><br>
+<a href="td_timing.html"><img src="/img/c.gif" width=10 height=10 alt="" border=0>
+<b>Timing</b></a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_code_security.html">Code Security</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_startup.html">Startup</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_crashreport.html">CrashReport</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_serial.html">USB Serial</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_keyboard.html">USB Keyboard</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_mouse.html">USB Mouse</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_joystick.html">USB Joystick</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_midi.html">USB MIDI</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_flightsim.html">USB Flight Sim</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_uart.html">Serial</a><br>
+<img src="/img/b.gif" width=10 height=10 alt="">
+<b>Libraries</b><br>
+</small>
+<div style="padding-left: 1.2em">
+<small>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs.html">Main List</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_GLCD.html">GLCD</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_LiquidCrystal.html">LiquidCrystal</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_OctoWS2811.html">OctoWS2811</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_FastSPI_LED.html">FastSPI_LED</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_Matrix.html">Matrix/Sprite</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_LedDisplay.html">LedDisplay</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_LedControl.html">LedControl</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_DogLcd.html">DogLcd</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_ST7565.html">ST7565</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_AltSoftSerial.html">AltSoftSerial</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_SoftwareSerial.html">SoftwareSerial</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_MIDI.html">MIDI</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_PS2Keyboard.html">PS2Keyboard</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_DmxSimple.html">DmxSimple</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_Firmata.html">Firmata</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_Wire.html">Wire</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_SPI.html">SPI</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_OneWire.html">OneWire</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_XBee.html">XBee</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_VirtualWire.html">VirtualWire</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_x10.html">X10</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_IRremote.html">IRremote</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_TinyGPS.html">TinyGPS</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_USBHostShield.html">USBHostShield</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_Ethernet.html">Ethernet</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_Bounce.html">Bounce</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_Keypad.html">Keypad</a><br>
+<a href="td_libs_Audio.html"><img src="/img/c.gif" width=10 height=10 alt="" border=0>
+<b>Audio</b></a><br>
+<img src="/img/b.gif" width=10 height=10 alt="selected">
+<span style="background-color: #B0E4A8">Encoder</span><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_Ping.html">Ping</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_CapacitiveSensor.html">CapacitiveSensor</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_FreqCount.html">FreqCount</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_FreqMeasure.html">FreqMeasure</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_Servo.html">Servo</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_PulsePosition.html">PulsePosition</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_Stepper.html">Stepper</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_AccelStepper.html">AccelStepper</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_FrequencyTimer2.html">FrequencyTimer2</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_Tlc5940.html">Tlc5940</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_SoftPWM.html">SoftPWM</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_ShiftPWM.html">ShiftPWM</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_Time.html">Time</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_TimeAlarms.html">TimeAlarms</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_DS1307RTC.html">DS1307RTC</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_Metro.html">Metro</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_TimerOne.html">TimerOne</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_MsTimer2.html">MsTimer2</a><br>
+<img src="/img/a.gif" width=10 height=10 alt="">
+<a href="td_libs_EEPROM.html">EEPROM</a><br>
+</small>
+</div>
+<small>
+</small>
+</div>
+<small>
+<a href="pinout.html"><img src="/img/c.gif" width=10 height=10 alt="" border=0>
+<b>Reference</b></a><br>
+</small></td></tr>
+<tr><td height=60></td></tr>
+</table><br>
+<a name="navend"> </a>
+</nav>
+<!--nav end-->
+
+
+
+<main>
+<h1>Encoder Library</h1>
+
+Encoder counts pulses from quadrature encoded signals, which are commonly
+available from rotary knobs, motor or shaft sensors and other position
+sensors.
+<p>
+<!--<b>Download</b>: <a href="arduino_libraries/Encoder.zip">Encoder.zip</a> (version 1.2)-->
+<table><tr><td valign=top><b>Download</b>:</td><td>
+Included with the <a href="td_download.html">Teensyduino Installer</a><br>
+Latest Developments on <a href="https://github.com/PaulStoffregen/Encoder">Github</a>
+</td></tr></table>
+<p>
+Encoder provides 4X counting mode and highly optimized code
+(<a href="#optimize">explained below</a>)
+when running on Teensy or Arduino boards.  Chipkit boards have limited support.
+<p>
+<small>Update: TLB has posted 
+<a href="http://forum.pjrc.com/threads/26803-Hardware-Quadrature-Code-for-Teensy-3-x">code to use Teensy 3.1's hardware quadrature encoders</a>.</small>
+<p>
+<table align=center><tr><td>
+<object width="720" height="440"><param name="movie" value="http://www.youtube-nocookie.com/v/2puhIong-cs?version=3&amp;hl=en_US&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube-nocookie.com/v/2puhIong-cs?version=3&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" width="720" height="440" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+</td></tr></table>
+
+<h2>Hardware Requirements</h2>
+<table align=center><tr><td>
+<img src="td_libs_Encoder_1.jpg"><br><small><b>
+</b></small></td></tr></table>
+<p>
+Encoders have 2 signals, which must be connected to 2 pins.  There are three
+options.
+<p>
+<ol>
+<li><b>Best Performance:</b> Both signals connect to interrupt pins.
+<li><b>Good Performance:</b> First signal connects to an interrupt pin, second to a non-interrupt pin.
+<li><b>Low Performance:</b> Both signals connect to non-interrupt pins,
+<a href="#polling">details below</a>.
+</ol>
+<p>
+<table align=center cellspacing=4>
+<tr class=top><th>Board</th><th>Interrupt<br>Pins</th><th>LED Pin<br><small>(do not use)</small></th></tr>
+<tr class=odd><td>Teensy 4.0 - 4.1</td><td align=center>All Digital Pins</td><td align=center>13</td></tr>
+<tr class=odd><td>Teensy 3.0 - 3.6</td><td align=center>All Digital Pins</td><td align=center>13</td></tr>
+<tr class=odd><td>Teensy LC</td><td align=center>2 - 12, 14, 15, 20 - 23</td><td align=center>13</td></tr>
+<tr class=odd><td>Teensy 2.0</td><td align=center>5, 6, 7, 8</td><td align=center>11</td></tr>
+<tr class=odd><td>Teensy 1.0</td><td align=center>0, 1, 2, 3, 4, 6, 7, 16</td><td align=center></td></tr>
+<tr class=odd><td>Teensy++ 2.0</td><td align=center>0, 1, 2, 3, 18, 19, 36, 37</td><td align=center>6</td></tr>
+<tr class=odd><td>Teensy++ 1.0</td><td align=center>0, 1, 2, 3, 18, 19, 36, 37</td><td align=center></td></tr>
+
+
+<tr class=odd><td>Arduino Due</td><td align=center>All Digital Pins</td><td align=center>13</td></td></tr>
+<tr class=odd><td>Arduino Uno</td><td align=center>2, 3</td><td align=center>13</td></tr>
+<tr class=odd><td>Arduino Leonardo</td><td align=center>0, 1, 2, 3</td><td align=center>13</td></tr>
+<tr class=odd><td>Arduino Mega</td><td align=center>2, 3, 18, 19, 20, 21</td><td align=center>13</td></tr>
+<tr class=odd><td>Sanguino</td><td align=center>2, 10, 11</td><td align=center>0</td></tr>
+</table>
+<p>
+Low cost encoders only connect their pins to ground.  Encoder will activate the
+on-chip pullup resistors.  If you connect lengthy wires, adding 1K pullup resistors
+may provide a better signal.
+
+
+<h2>Basic Usage</h2>
+
+
+<span style="color: #CC6600;">Encoder</span> myEnc(pin1, pin2);
+<p class=desc>Create an Encoder object, using 2 pins.  You may create mulitple
+Encoder objects, where each uses its own 2 pins.  The first pin should be
+capable of interrupts.  If both pins have interrupt capability, both will be
+used for best performance.  Encoder will also work in low performance polling
+mode if neither pin has interrupts.
+</p>
+myEnc.<span style="color: #CC6600;">read</span>();
+<p class=desc>Returns the accumulated position.  This number can be positive
+or negative.
+</p>
+myEnc.<span style="color: #CC6600;">write</span>(newPosition);
+<p class=desc>
+Set the accumulated position to a new number.
+</p>
+
+<h2>Understanding Quadrature Encoded Signals</h2>
+
+Encoders can sense movement in either direction, by detecting holes or
+marks as they move past 2 positions.  When the blue disc in the
+diagram below spins clockwise, the changes are first detected by
+pin 1, and then by pin 2.  When it spins counterclockwise, pin 2
+is first to detect changes.  This scheme is called "quadrature encoding"
+because the waveforms detected by the 2 pins are 90 degrees out of
+phase.
+<p>
+<table align=center width=660>
+<tr><td align=center height=244><img src="td_libs_Encoder_pos1.png" id="quad"></td></tr>
+<tr><td align=center><form action="#">
+<input type=submit value="<-- Counterclockwise" onClick="rotate(-1); return false">
+<input type=text value="0" id="accum" size=6>
+<input type=submit value="Clockwise -->" onClick="rotate(1); return false">
+</form></td></tr>
+</table>
+<p>
+The Encoder library monitors the 2 pins and updates a count of
+the relative change in position.  The library updates its count at
+each change, which is often called 4X counting, since 4 counts are
+available for each physical mark or hole in the encoder hardware.
+
+<!-- this hidden div provides links to all 4 images used by the
+javascript above, so the archive site script will include them
+in the downloadable ZIP file archive -->
+<div id="td" style="position:absolute; left:-800; top:0; width:650; height:242; clip:rect(0,650,242,0); z-index:1; visibility:hidden;">
+<img src="td_libs_Encoder_pos1.png">
+<img src="td_libs_Encoder_pos2.png">
+<img src="td_libs_Encoder_pos3.png">
+<img src="td_libs_Encoder_pos4.png">
+</div>
+
+<h2>Example Program</h2>
+
+This examples program is available from the menu: <b>File &gt; Examples &gt; Encoder &gt; TwoKnobs</b>.
+
+<pre style="padding-left: 2em">
+<span style="color: #7E7E7E;">/*&nbsp;Encoder&nbsp;Library&nbsp;-&nbsp;TwoKnobs&nbsp;Example</span>
+<span style="color: #7E7E7E;">&nbsp;*&nbsp;http://www.pjrc.com/teensy/td_libs_Encoder.html</span>
+<span style="color: #7E7E7E;">&nbsp;*</span>
+<span style="color: #7E7E7E;">&nbsp;*&nbsp;This&nbsp;example&nbsp;code&nbsp;is&nbsp;in&nbsp;the&nbsp;public&nbsp;domain.</span>
+<span style="color: #7E7E7E;">&nbsp;*/</span>
+
+#include&nbsp;&lt;<span style="color: #CC6600;">Encoder</span>.h&gt;
+
+<span style="color: #7E7E7E;">//&nbsp;Change&nbsp;these&nbsp;pin&nbsp;numbers&nbsp;to&nbsp;the&nbsp;pins&nbsp;connected&nbsp;to&nbsp;your&nbsp;encoder.</span>
+<span style="color: #7E7E7E;">//&nbsp;&nbsp;&nbsp;Best&nbsp;Performance:&nbsp;both&nbsp;pins&nbsp;have&nbsp;interrupt&nbsp;capability</span>
+<span style="color: #7E7E7E;">//&nbsp;&nbsp;&nbsp;Good&nbsp;Performance:&nbsp;only&nbsp;the&nbsp;first&nbsp;pin&nbsp;has&nbsp;interrupt&nbsp;capability</span>
+<span style="color: #7E7E7E;">//&nbsp;&nbsp;&nbsp;Low&nbsp;Performance:&nbsp;&nbsp;neither&nbsp;pin&nbsp;has&nbsp;interrupt&nbsp;capability</span>
+<span style="color: #CC6600;">Encoder</span> knobLeft(5, 6);
+<span style="color: #CC6600;">Encoder</span> knobRight(7, 8);
+<span style="color: #7E7E7E;">//&nbsp;&nbsp;&nbsp;avoid&nbsp;using&nbsp;pins&nbsp;with&nbsp;LEDs&nbsp;attached</span>
+
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">begin</span>(9600);
+&nbsp;&nbsp;<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">println</span>(<span style="color: #006699;">"TwoKnobs Encoder Test:"</span>);
+}
+
+<span style="color: #CC6600;">long</span> positionLeft  = -999;
+<span style="color: #CC6600;">long</span> positionRight = -999;
+
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>loop</b></span>() {
+&nbsp;&nbsp;<span style="color: #CC6600;">long</span> newLeft, newRight;
+&nbsp;&nbsp;newLeft&nbsp;=&nbsp;knobLeft.<span style="color: #CC6600;">read</span>();
+&nbsp;&nbsp;newRight&nbsp;=&nbsp;knobRight.<span style="color: #CC6600;">read</span>();
+&nbsp;&nbsp;<span style="color: #CC6600;">if</span> (newLeft != positionLeft || newRight != positionRight) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">"Left = "</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">print</span>(newLeft);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">", Right = "</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">print</span>(newRight);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">println</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;positionLeft&nbsp;=&nbsp;newLeft;
+&nbsp;&nbsp;&nbsp;&nbsp;positionRight&nbsp;=&nbsp;newRight;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// if a character is sent from the serial monitor,</span>
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// reset both back to zero.</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">if</span> (<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">available</span>()) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">read</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">println</span>(<span style="color: #006699;">"Reset both knobs to zero"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;knobLeft.<span style="color: #CC6600;">write</span>(0);
+&nbsp;&nbsp;&nbsp;&nbsp;knobRight.<span style="color: #CC6600;">write</span>(0);
+&nbsp;&nbsp;}
+}
+</pre>
+<table align=center><tr><td>
+<img src="td_libs_Encoder_2.png"><br><small><b>
+</b></small></td></tr></table>
+
+
+<h2><a name="signals"></a></h2>
+
+<h2><a name="latency">Interrupt Latency Requirements</a></h2>
+
+Encoder requires low latency response to changes of the signals.  Using
+either the first or both pins with interrupts works very well.  However,
+if interrupts are disabled for lengthy times, either by your code or
+another library, Encoder may miss a change.  The result is incorrect
+counting.  The next 1, 2 or 3 changes may produce wrong results.
+<p>
+SoftwareSerial and NewSoftSerial are very likely to cause problems.
+
+
+<h2><a name="optimize">Optimized Interrupt Option</a></h2>
+
+When used on Teensy and Arduino, Encoder uses very
+optimized interrupt routines written in assembly language.
+Normally, Encoder uses
+<span style="color: #CC6600;">attachInterrupt</span>(), which
+allows dynamically attaching functions to each interrupt.  The
+dynamic function call adds slight overhead.  To eliminate this
+extra overhead, you can use this option.
+<p>
+<pre style="padding-left: 2em">
+<span style="color: #7E7E7E;">//&nbsp;This&nbsp;optional&nbsp;setting&nbsp;causes&nbsp;Encoder&nbsp;to&nbsp;use&nbsp;more&nbsp;optimized&nbsp;code,</span>
+<span style="color: #7E7E7E;">//&nbsp;It&nbsp;must&nbsp;be&nbsp;defined&nbsp;before&nbsp;Encoder.h&nbsp;is&nbsp;included.</span>
+#define&nbsp;<span style="color: #006699;">ENCODER_OPTIMIZE_INTERRUPTS</span>
+#include&nbsp;&lt;<span style="color: #CC6600;">Encoder</span>.h&gt;
+</pre>
+<p>
+Encoder will directly define interrupts the minimum overhead.
+The downside is a conflict if any other code in your sketch
+or any libraries you use require attachInterrupt().
+
+
+<h2><a name="speed">Maximum Speed and CPU Usage</a></h2>
+
+SpeedTest example, in <b>File &gt; Examples &gt; Encoder &gt; SpeedTest</b>,
+provides a simple way to verify how much
+CPU time Encoder is consuming.
+The following SpeedTest results have been measured:
+<p>
+<table align=center cellspacing=4>
+<tr class=top><th>Board</th><th>Maximum<br>Interrupt Rate<br><small>(approximate)</small></th><th>Conditions</th></tr>
+<tr class=odd><td>Teensy 2.0</td><td align=center>100 kHz</td><td>Normal</td></tr>
+<tr class=odd><td>Teensy 2.0</td><td align=center>127 kHz</td><td>ENCODER_OPTIMIZE_INTERRUPTS</td></tr>
+</table>
+
+<p>
+
+<h3>Emulating Quadrature Encoded Signals</h3>
+
+This simple circuit, using a Dual Flip-Flop chip, can emulate
+quadrature encoder signals.  The clock can come from a fancy
+function generator or a cheap 555 timer chip.  The clock
+frequency can be measured with another board running
+<a href="http://www.pjrc.com/teensy/td_libs_FreqCount.html">FreqCount</a>.
+
+<pre>
+                        +5V
+                         |        Quadrature Encoder Signal Emulator
+ Clock                   |
+ Input o----*--------------------------      ---------------------------o Output1
+            |            |14           |    |
+            |     _______|_______      |    |     _______________ 
+            |    |    CD4013     |     |    |    |    CD4013     |
+            |  5 |               | 1   |    |  9 |               | 13
+        ---------|  D         Q  |-----|----*----|  D         Q  |------o Output2
+       |    |    |               |     |         |               |
+       |    |  3 |               |     |      11 |               |
+       |     ----|&gt; Clk          |      ---------|&gt; Clk          |
+       |         |               |               |               |
+       |       6 |               |             8 |               |
+       |     ----|  S            |           ----|  S            |
+       |    |    |               |          |    |               |
+       |    |  4 |            _  | 2        | 10 |            _  | 12
+       |    *----|  R         Q  |---       *----|  R         Q  |----
+       |    |    |               |          |    |               |    |
+       |    |    |_______________|          |    |_______________|    |
+       |    |            |                  |                         |
+       |    |            | 7                |                         |
+       |    |            |                  |                         |
+        --------------------------------------------------------------
+            |            |                  |
+            |            |                  |
+          -----        -----              -----
+           ---          ---                ---
+            -            -                  -
+</pre>
+
+<h3><a name="measure">Measuring Maximum Interrupt Rates</a></h3>
+
+Connect a DC voltmeter to the
+output pin and measure the voltage while the encoder is stopped
+or running at a very slow speed.  Even though the pin is rapidly
+pulsing, a DC voltmeter will show the average voltage.  Due to
+software timing, it will read a number much less than a steady
+logic high, but this number will give you a baseline reading
+for output with minimal interrupt overhead.  Then increase the
+encoder speed.  The voltage will decrease as the processor spends
+more time in Encoder's interrupt routines counting the pulses
+and less time pulsing the output pin.  When the voltage is
+close to zero and will not decrease any farther, you have reached
+the absolute speed limit.
+
+<p>
+<table align=center width=726><tr><td>
+<img src="td_libs_Encoder_3.jpg"><br><small><b>
+SpeedTest: 147 mV (close to zero CPU remaining) at 127 kHz interrupt rate.
+</b></small></td></tr></table>
+<p>
+If using a mechanical system where
+you reach a speed limit imposed by your motors or other hardware,
+the amount this voltage has decreased, compared to the baseline,
+should give you a good approximation of the portion of available
+CPU time Encoder is consuming at your maximum speed.
+
+<p>
+
+<h2><a name="polling">Low Performance Polling Mode</a></h2>
+
+If neither pin has interrupt capability, Encoder can still work.  The
+signals are only checked during each use of the
+<span style="color: #CC6600;">read</span>() function.  As long as your program
+continues to call <span style="color: #CC6600;">read</span>() quickly enough,
+you will get accurate results.  Low resolution rotary encoders used for dials
+or knobs turned only by human fingers are good candidates for low performance polling
+mode.  High resolution encoders attached to motors usually require interrupts!
+<p>
+With Arduino Uno, Duemilanove or Mega, Serial.print() can cause trouble.
+Arduino 1.0 provides transmit buffering, which works much better than
+Arduino 0023 and earlier.  With either, a high speed baud rate should be
+used, and minimizing the amount of data transmitted helps.
+<p>
+As of January 2012, Chipkit does not support attachInterrupt's CHANGE mode
+so low performance
+polling mode is always used.  Chipkit's Serial.print() lacks transmit buffering
+(same issue as Arduino Uno on pre-1.0 Arduino).
+Chipkit does not support the pullup resistors, so you must provide
+real resistors on both signals.  The Chipkit developers have been contacted
+regarding these issues.  Hopefully future versions of MPIDE will fix these problems.
+
+
+
+<h2><a name="details">Other Encoder Pages</a></h2>
+
+<a href="http://wiring.org.co/reference/libraries/Encoder/index.html">Wiring's Encoder Library</a>
+is similar to this library.  It only works with Wiring.
+<p>
+<a href="http://arduino.cc/playground/Main/RotaryEncoders">This Arduino Playground page</a>
+has the most info and example code.
+<pre>
+More links:
+
+http://arduino.cc/playground/Main/RotaryEncoderAcceleration
+http://www.circuitsathome.com/mcu/reading-rotary-encoder-on-arduino
+http://www.marginallyclever.com/2011/03/using-a-rotary-encoder-with-arduino/
+http://hacks.ayars.org/2009/12/using-quadrature-encoder-rotary-switch.html
+http://www.helicron.net/avr/quadrature/
+</pre>
+
+
+
+</main>
+</body>
+</html>

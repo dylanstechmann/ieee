@@ -1,0 +1,5 @@
+Here is the dimension label from the image:
+
+*   **Label:** Paint Grey
+*   **Appears to dimension:** This is a callout indicating a painting instruction for a surface or component. It's not a numerical dimension.
+*   **Position in this crop:** The text "Paint Grey" is located in the upper left portion of the image. It has an underline and a leader line pointing towards the right, ending with an arrowhead that appears to indicate a surface between two vertical lines.

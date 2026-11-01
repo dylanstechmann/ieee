@@ -1,0 +1,9 @@
+{
+  "scenario": "neutral (planning assumptions, not measurements)",
+  "pEnter": 0.95, "pGreenStart": 0.90, "pEarlyStart": 0.05, "pFinish": 0.80, "pSpeedBonus": 0.75,
+  "pParkAssigned": 0.85, "pDropAssigned": 0.80, "pPickupAssigned": 0.65, "pFlag": 0.90,
+  "pPublicity": 1.0, "pRedCard": 0.01,
+  "pWallCleanLaps": [0.85, 0.80, 0.80],
+  "pObstacleCleanLaps": [0.70, 0.65, 0.65],
+  "improvementDelta": 0.05
+}

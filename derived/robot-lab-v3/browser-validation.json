@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-31",
+  "status": "passed",
+  "record": "Agent-run Playwright interaction checks against the generated standalone bundle served from 127.0.0.1, plus a direct file:// load with WebGL active; not a physical or rules validation.",
+  "javascript_errors": 0,
+  "warnings": "Headless WebGL ReadPixels/GPU-stall performance warnings only.",
+  "checks": {
+    "play_pause": true,
+    "step_forward_back": true,
+    "assembly_complete": true,
+    "part_inspection": true,
+    "south_route": true,
+    "north_route": true,
+    "fast_forward": true,
+    "deterministic_rewind": true,
+    "pause_freezes_physics": true,
+    "reset": true,
+    "standalone_file_protocol": true
+  },
+  "observed": {
+    "assembly_final": {"time_s": 32, "assembled_parts": 30, "stage_index": 7},
+    "south_at_20_s": {"command_index": 7, "commands": 23, "x_in": 86.99726240823607, "y_in": 12.28524545314417},
+    "north_at_30_s": {"command_index": 11, "commands": 31, "x_in": 36.04625163913957, "y_in": 9.285363315164922},
+    "fast_forward_setting": 4,
+    "rewind_error_s": 0,
+    "reset_tire": "red",
+    "webgl": true
+  },
+  "visual_review": "Completed assembly and south-route dock/top views rendered and inspected at 1440 × 1000. Viewer transport remains aligned; robot, field, path, telemetry and legends are visible.",
+  "scope": "No obstacle, scoring, complete-mission, sensor, mechanism, hardware or official-legality qualification."
+}

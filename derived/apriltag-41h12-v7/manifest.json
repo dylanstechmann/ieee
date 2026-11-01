@@ -1,0 +1,14 @@
+{
+ "schema": "apriltag-41h12-v7-manifest/1",
+ "input_hashes": {
+  "derived/GM2-V3.1/media/image5.jpg": "f1fa53afa205b11fecb90f386beef9721c23241feba2766fbfedeafa6a0316fa",
+  "sources/organizer-2026-10-29/Game-Manual-2027-2-V3-1.docx": "90e4061310f81d4b42027ecb3b2c9a0ad9167dc8adf9c917c0b25017560039b8",
+  "tools/apriltag-41h12-v7.py": "5b1b430233f4aa0241807494557ceb5408bbcd2d8b1cbcf7e1c67a6d328497db"
+ },
+ "output_hashes": {
+  "derived/apriltag-41h12-v7/report.json": "89d7c8f3c6f4c9529b2395946d7f94ac7456b1e24753ed967c5cab3068cb1e66",
+  "derived/apriltag-41h12-v7/organizer-sheet-detections.png": "cd10006e6c41849e46e596b6c463cc8736ee7c5a10c01b86b996b1b59ae4e535",
+  "derived/apriltag-41h12-v7/synthetic-examples.png": "19ccfa9166fda541c7d38d7cb2addc1984853e957389a83703ad8a81cdb3d067",
+  "derived/apriltag-41h12-v7/README.md": "9e27634791a054ec2d336b025b1c1073e7dec79125b76d1d294c90296c061080"
+ }
+}

@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-31",
+  "node": "v24.18.1",
+  "excluded": [
+    "verify-planner-diagnostics-v3.js (pre-existing stale-source mismatch)"
+  ],
+  "count": 14,
+  "all_passed": true,
+  "results": [
+    {
+      "file": "verify-confirmation-packet-v3.js",
+      "command": "node tools/verify-confirmation-packet-v3.js",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "file": "verify-connected-navigation-v3.js",
+      "command": "node tools/verify-connected-navigation-v3.js",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "file": "verify-drivetrain-mule-v4.js",
+      "command": "node tools/verify-drivetrain-mule-v4.js",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "file": "verify-electrical-selection-v6.js",
+      "command": "node tools/verify-electrical-selection-v6.js",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "file": "verify-hardware-development-v3.js",
+      "command": "node tools/verify-hardware-development-v3.js",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "file": "verify-integration-studio-v6.js",
+      "command": "node tools/verify-integration-studio-v6.js",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "file": "verify-mechanism-envelope-v6.js",
+      "command": "node tools/verify-mechanism-envelope-v6.js",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "file": "verify-mechanism-prototyping-v3.js",
+      "command": "node tools/verify-mechanism-prototyping-v3.js",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "file": "verify-mule-dynamics-v5.js",
+      "command": "node tools/verify-mule-dynamics-v5.js",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "file": "verify-mule-studio-v4.js",
+      "command": "node tools/verify-mule-studio-v4.js",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "file": "verify-order-a-procurement-v4.js",
+      "command": "node tools/verify-order-a-procurement-v4.js",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "file": "verify-robot-lab-v3.js",
+      "command": "node tools/verify-robot-lab-v3.js",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "file": "verify-robot-lab-v4.js",
+      "command": "node tools/verify-robot-lab-v4.js",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "file": "verify-stopping-dynamics-v6.js",
+      "command": "node tools/verify-stopping-dynamics-v6.js",
+      "exit": 0,
+      "signal": null
+    }
+  ]
+}

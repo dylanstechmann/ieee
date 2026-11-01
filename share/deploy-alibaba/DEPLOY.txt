@@ -1,0 +1,67 @@
+ROAD TO DAYTONA — ALIBABA CLOUD PUBLIC-IP DEPLOYMENT
+
+Use a running Ubuntu or Debian Alibaba Simple Application Server (or ECS server)
+with a public IPv4 address/public bandwidth and a login that can use sudo.
+This kit does not create or purchase a
+server. Your server-plan total must stay within USD 5/month including bandwidth,
+tax and fees; verify that total in the purchase console and omit paid add-ons.
+
+In PowerShell, open the folder containing this DEPLOY.txt file,
+replace SSH_USER and SERVER_PUBLIC_IP below. Use your existing SSH login method.
+If it requires a key, add -i "C:\path\to\your-key.pem" to both commands. Keep the
+private key on your own computer; do not upload it with the website.
+
+1. Upload the standalone page and installer to the server's home directory:
+   scp ".\Road-to-Daytona.html" ".\deploy.sh" SSH_USER@SERVER_PUBLIC_IP:./
+
+2. Install and verify the website (enter your sudo password if prompted):
+   ssh -t SSH_USER@SERVER_PUBLIC_IP "sudo bash ./deploy.sh ./Road-to-Daytona.html"
+
+For Simple Application Server, open the instance's Firewall settings in its
+console and allow incoming TCP port 8080 from 0.0.0.0/0 for public viewing.
+For ECS, add the equivalent inbound Allow / Custom TCP rule to the attached
+security group (destination port 8080 or 8080/8080). If UFW is already active,
+also run sudo ufw allow 8080/tcp. For another active firewall, add the equivalent
+TCP rule. The installer does not enable, disable or change firewalls. Keep SSH
+(usually TCP 22) restricted to your own public IP /32 or administrator network.
+
+Open and share: http://SERVER_PUBLIC_IP:8080/
+The page has the same interface as the supplied site, with its stylesheet inside
+the HTML. Port 8080 uses HTTP. Check the link from a device outside the server.
+
+The installer serves /var/www/ieee-daytona/index.html through the separate
+ieee-daytona.service. It checks for other listeners and Nginx configuration using
+the selected port, and stops instead of taking them over. Existing default sites
+are preserved. When installing Nginx for the first time, its distribution service
+is kept inactive; this kit starts its own service. Reruns save the prior page,
+configuration and unit under /var/backups/ieee-daytona/ before updating them.
+
+Optional port 80, after checking the clean server:
+  sudo ss -ltnp 'sport = :80'
+  sudo nginx -T
+Review any listener and listen 80 directive before changing it. The Nginx package
+may include an inactive default configuration on port 80. The installer refuses
+that configuration too; it does not remove or edit it. Only after the server
+administrator has confirmed port 80 and its configuration are available, run:
+  sudo bash ./deploy.sh ./Road-to-Daytona.html --port 80
+Allow TCP 80 in the security group/active firewall, test http://SERVER_PUBLIC_IP/,
+then remove the now-unused public TCP 8080 rule. A domain and HTTPS can be added
+later if needed; they are not needed for this public-IP preview.
+
+If the installer stops, read the stated conflict rather than disabling unrelated
+services. Useful checks:
+  sudo systemctl status ieee-daytona.service
+  sudo journalctl -u ieee-daytona.service -n 30 --no-pager
+  curl http://127.0.0.1:8080/
+
+Official Alibaba Cloud source information (checked 2026-10-13):
+Simple Application Server creation, regions and price confirmation:
+https://www.alibabacloud.com/help/en/simple-application-server/user-guide/create-a-server
+Simple Application Server firewall and public IP information:
+https://www.alibabacloud.com/help/en/simple-application-server/support/faq
+SSH/public-IP prerequisites and login:
+https://www.alibabacloud.com/help/en/ecs/user-guide/connect-to-a-linux-instance-by-using-an-ssh-key-pair
+Security-group rule components and port ranges:
+https://www.alibabacloud.com/help/en/ecs/user-guide/security-group-rules
+Public service and restricted SSH rule examples:
+https://www.alibabacloud.com/help/en/ecs/user-guide/security-groups-for-different-use-cases

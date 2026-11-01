@@ -1,0 +1,13 @@
+check_id,quantity,nominal_value,unit,basis,reference_limit,part_serials,instrument_id,calibration_check_id,repeat_1,repeat_2,repeat_3,uncertainty,measured_result,disposition,reviewer,reviewed_at,evidence_ref
+motor-gap,motor body center gap,8,mm,engineering nominal minimum,8,,,,,,,,,,,,
+wheel-clearance,wheel/deck lateral clearance,3,mm,engineering nominal minimum,3,,,,,,,,,,,,
+caster-contact,caster contact Z,-0.075,mm,engineering nominal absolute tolerance,0.25,,,,,,,,,,,,
+caster-height,caster plus selected spacer,16.675,mm,manufacturer drawing arithmetic,,,,,,,,,,,,,
+hole-ligament,motor-hole edge ligament,4.3,mm,engineering nominal minimum,4,,,,,,,,,,,,
+screw-engagement,motor mounting screw penetration,3.5,mm,archived manufacturer maximum,3.5,,,,,,,,,,,,
+hub-stack,hub wheel axial stack-up,,mm,unknown; inspect received parts,,,,,,,,,,,,,
+free-rotation,free rotation and no binding,,text,assembly inspection,,,,,,,,,,,,,
+cable-exit,cable exit and strain relief space,,mm,unknown; setup review required,,,,,,,,,,,,,
+ballast-restraint,ballast restraint and fastener selection,,text,unreleased; approval required,,,,,,,,,,,,,
+bench-restraint,fixture attachment and restraint,,text,unreleased; setup approval required,,,,,,,,,,,,,
+support-contact,wheel loading and tipping in each support configuration,,text,nominal contact is not traction evidence,,,,,,,,,,,,,

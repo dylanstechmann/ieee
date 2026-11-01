@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-31",
+  "status": "passed-with-recorded-webgl-performance-warning",
+  "method": "localhost on port 8767; self-contained bundle; direct file navigation not tested",
+  "standalone": "share/Mule-Integration-Studio-v6.html",
+  "standalone_sha256": "7284ff956c41c37a58ab03137929646250d59fa5b522f262e27748148fc8a870",
+  "javascript_errors": 0,
+  "browser_warnings": 4,
+  "warning_details": "Repeated WebGL GPU stall due to ReadPixels performance messages; not suppressed",
+  "mechanism_cases_reviewed": 162,
+  "stopping_combinations_reviewed": 28,
+  "interactions": [
+    "workspace/scenario/mode selection",
+    "case selection and last-frame render",
+    "timeline seek",
+    "play/pause",
+    "top/overview camera"
+  ],
+  "screenshots": [
+    {
+      "path": "derived/integration-studio-v6/integration-stopping-review.png",
+      "sha256": "2c1a5ae3a1018e432335218460ce11f8bf0129d043c35014c97f78a231d62493",
+      "agent_inspected": true
+    },
+    {
+      "path": "derived/integration-studio-v6/integration-bore-review.png",
+      "sha256": "9c9222d6ab6c4953320503a596f57279d5a7e59b7b8ee56e196366ffdeaee3d9",
+      "agent_inspected": true
+    },
+    {
+      "path": "derived/integration-studio-v6/integration-upright-review.png",
+      "sha256": "c5538bd4d353b48ee7301bd0d45e3971959acaf5a275dd917920d039eb52b1c3",
+      "agent_inspected": true
+    }
+  ]
+}

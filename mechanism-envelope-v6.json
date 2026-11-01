@@ -1,0 +1,44 @@
+{
+  "version":"0.6.0",
+  "date":"2026-10-31",
+  "status":"synthetic-geometric-comparison-not-capture-validation-or-production-cad",
+  "prototype_config":"mechanism-prototyping-v3.json",
+  "mule_config":"drivetrain-mule-v4.json",
+  "electrical_config":"electrical-selection-v6.json",
+  "target_center_x_mm":145,
+  "fork_bottom_z_mm":2,
+  "approach_distance_mm":60,
+  "approach_intervals":12,
+  "actuation_intervals":8,
+  "orientations":["flat","upright"],
+  "tolerances":[
+    {"id":"nominal","outer_diameter_delta_mm":0,"bore_diameter_delta_mm":0,"thickness_delta_mm":0},
+    {"id":"material-heavy","outer_diameter_delta_mm":1,"bore_diameter_delta_mm":-1,"thickness_delta_mm":1},
+    {"id":"material-light","outer_diameter_delta_mm":-1,"bore_diameter_delta_mm":1,"thickness_delta_mm":-1}
+  ],
+  "bore_pin":{"diameter_mm":39,"insertion_mm":20,"retracted_clearance_mm":10},
+  "gripper":{"open_gap_mm":96,"closed_diametral_interference_mm":2,"jaw_thickness_mm":6,"jaw_length_mm":70,"jaw_bottom_z_mm":8,"jaw_height_mm":12},
+  "reserved_boxes":[
+    {"id":"electronics-reservation","min":[-35,-35,21.6],"max":[35,35,50],"basis":"synthetic space reservation, not Pico 2/G2/regulator installed envelope"},
+    {"id":"cable-corridor","min":[30,-8,20],"max":[105,8,32],"basis":"synthetic routing keep-out; no harness bend-radius or connector design"},
+    {"id":"sensor-view-reservation","min":[90,-10,25],"max":[125,10,55],"basis":"synthetic keep-out; no acquisition sensor chosen"}
+  ],
+  "robot_envelope_limit_mm":null,
+  "robot_envelope_limit_basis":"Unresolved rule application and deployment state: null disables only the numerical envelope limit, never grants legality. When configured, compare full assembly including tire and all path samples.",
+  "concepts":[
+    {"id":"passive-fork","label":"Passive fork/cradle coupon","actuator_count_lower_bound":0,"recovery":"Reverse approach is a geometric possibility only; no retained load, release or jam recovery demonstrated.","unknowns":["Floor-to-coupon acquisition and tire lifting/compliance","Mounting from low coupon to deck","Retention, reverse motion and release"]},
+    {"id":"guided-bore","label":"Vertical guided-bore pin concept","actuator_count_lower_bound":1,"recovery":"Retract vertical pin before reversing; force detection, position confirmation and jam recovery unimplemented.","unknowns":["Vertical stage, drive, loads and pin mounting","Bore-axis alignment and actual bore minimum","Upright tire needs reorientation or a different pin axis"]},
+    {"id":"od-gripper","label":"Parallel OD jaw concept","actuator_count_lower_bound":1,"recovery":"Open jaws before reversing; synchronized jaws, force limit and release confirmation unimplemented.","unknowns":["Actuator/transmission and grip-force requirement","Flexible tire deformation, friction and retention","Jaw mounting, tire lifting and release"]}
+  ],
+  "limitations":[
+    "Approach is relative kinematics: tire translates toward a fixed robot; no contact dynamics or tire movement response is solved.",
+    "Flat tire uses a circular annular extrusion enclosing the STL outer radius with nominal design-callout bore. Tread and internal details are not collision geometry; nominal bore is not mesh-certified or measured.",
+    "Yaw rotates the tire around global Z; flat circular proxy is yaw invariant. This is not yaw error of the robot approach heading, nor tire roll or tipping.",
+    "Upright tire is an outer-cylinder AABB broad phase, including its empty bore; overlap means potential interference, not proven contact.",
+    "Finite approach/actuation samples are not continuous swept collision certification. Swept AABB unions are enclosing boxes, not occupied solids.",
+    "Plus/minus 1 mm dimensional cases are synthetic sensitivity inputs, not manufacturing tolerances or measured probabilities.",
+    "Intended OD jaw interference remains a rigid-proxy conflict, not a successful grip or a load/retention prediction.",
+    "Actuator counts are conceptual lower bounds; mechanisms, sensors, harness, structural capacity and mounting remain unresolved.",
+    "No purchases, fabrication, physical trials, complete mechanism CAD, competition legality or physical setup approval."
+  ]
+}

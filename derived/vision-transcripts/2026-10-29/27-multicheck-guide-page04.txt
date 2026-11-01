@@ -1,0 +1,40 @@
+
+===== MODEL: qwen/qwen3-vl-235b-a22b-instruct =====
+Here is the exact transcription of the requested labels, listed with their positions as specified:
+
+1.  **Top left diagonal segment label**:  
+    `90°`
+
+2.  **Top right diagonal segment label**:  
+    `90°`
+
+3.  **Top horizontal segment label**:  
+    `12in`
+
+4.  **Bottom-right small labels (from top to bottom, left to right)**:  
+    - `7in` (vertical dimension on right side of rightmost square)  
+    - `1 1/2in` (horizontal dimension above the rightmost square)  
+    - `2` (label pointing to the small square/rectangle on the far right, near the “Apriltag” callout)
+
+5.  **Center divider callout**:  
+    `1"x1"x36"`
+
+Note: The drawing does not contain “6 1/2in” or “9 3/4in” on the top diagonal segments — those are 90° angle indicators. The top horizontal segment is labeled “12in”, not “12 1/4in”. The bottom-right labels are “7in”, “1 1/2in”, and “2” as shown. The center divider is explicitly labeled “1"x1"x36"”.
+
+===== MODEL: google/gemini-2.5-flash =====
+Here are the transcriptions of the requested labels from the PDF page:
+
+*   **Top diagonal segments:**
+    *   `6 3/4in` (top-left diagonal segment), approximately at grid coordinate B2-C2.
+    *   `9 3/4in` (top-right diagonal segment), approximately at grid coordinate B4-C4.
+
+*   **Top horizontal segment:**
+    *   `12 1/4in` (top horizontal segment), approximately at grid coordinate B3-B4.
+
+*   **Bottom-right small labels:**
+    *   `17in` (vertical label), approximately at grid coordinate F5-G5.
+    *   `1 1/2in` (vertical label next to `17in`), approximately at grid coordinate G5-G5.
+    *   `2` (horizontal label above `1 1/2in`), approximately at grid coordinate F5-F5.
+
+*   **Center divider callout:**
+    *   `1"x1"x36'` (callout pointing to the vertical divider in the center of the arena), approximately at grid coordinate C4.

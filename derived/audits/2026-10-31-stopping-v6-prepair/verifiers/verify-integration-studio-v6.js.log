@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "protocol": "file:",
+  "offline": true,
+  "mechanism_cases": 162,
+  "mechanism_sampled_frames": 486,
+  "stopping_trajectories": 56,
+  "stopping_sampled_frames": 168,
+  "javascript_errors": 0,
+  "browser_warnings": 4,
+  "physical_trials": 0
+}

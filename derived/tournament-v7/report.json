@@ -1,0 +1,225 @@
+{
+ "schema": "tournament-v7/1",
+ "rule_set": "GM2-V3-2026-10-04 + GM1-V3-2026-09-18",
+ "status": "agent-run planning arithmetic with illustrative probabilities; not measured, not a prediction",
+ "format": {
+  "qualification": "three Matches; rank by best score, ties by second then third best (GM1 V3 §4.7.1)",
+  "elimination": "single head-to-head Matches; higher score wins (GM1 V3 §3.3.1); seeds 7-10 play in (§4.9)"
+ },
+ "profiles": {
+  "drive-only": {
+   "pGreenStart": 0.9,
+   "pEarlyStart": 0.03,
+   "pEnter": 0.97,
+   "pLapComplete": [
+    0.95,
+    0.95,
+    0.95
+   ],
+   "pWallClean": [
+    0.85,
+    0.85,
+    0.85
+   ],
+   "pObstacleClean": [
+    0.75,
+    0.75,
+    0.75
+   ],
+   "pFlag": 0.92,
+   "pFinishInTime": 0.99,
+   "pUnder245": 0.95,
+   "pPark": 0.8,
+   "pRedCard": 0.01,
+   "attemptExchange": false,
+   "pitAfterLap": 2,
+   "pDropAssigned": 0,
+   "pDropOther": 0,
+   "pPickupAssigned": 0,
+   "pPickupOther": 0,
+   "pRetain": 1,
+   "pPitComplete": 1
+  },
+  "full-mission-pit-after-lap-2": {
+   "pGreenStart": 0.9,
+   "pEarlyStart": 0.03,
+   "pEnter": 0.97,
+   "pLapComplete": [
+    0.95,
+    0.95,
+    0.95
+   ],
+   "pWallClean": [
+    0.85,
+    0.85,
+    0.85
+   ],
+   "pObstacleClean": [
+    0.75,
+    0.75,
+    0.75
+   ],
+   "pFlag": 0.92,
+   "pFinishInTime": 0.99,
+   "pUnder245": 0.85,
+   "pPark": 0.8,
+   "pRedCard": 0.01,
+   "attemptExchange": true,
+   "pitAfterLap": 2,
+   "pDropAssigned": 0.8,
+   "pDropOther": 0.08,
+   "pPickupAssigned": 0.6,
+   "pPickupOther": 0.1,
+   "pRetain": 0.9,
+   "pPitComplete": 0.9
+  },
+  "full-mission-pit-after-lap-1": {
+   "pGreenStart": 0.9,
+   "pEarlyStart": 0.03,
+   "pEnter": 0.97,
+   "pLapComplete": [
+    0.95,
+    0.95,
+    0.95
+   ],
+   "pWallClean": [
+    0.85,
+    0.85,
+    0.85
+   ],
+   "pObstacleClean": [
+    0.75,
+    0.75,
+    0.75
+   ],
+   "pFlag": 0.92,
+   "pFinishInTime": 0.99,
+   "pUnder245": 0.85,
+   "pPark": 0.8,
+   "pRedCard": 0.01,
+   "attemptExchange": true,
+   "pitAfterLap": 1,
+   "pDropAssigned": 0.8,
+   "pDropOther": 0.08,
+   "pPickupAssigned": 0.6,
+   "pPickupOther": 0.1,
+   "pRetain": 0.9,
+   "pPitComplete": 0.9
+  }
+ },
+ "results": {
+  "drive-only": {
+   "single_match": {
+    "mean": 249.286,
+    "median": 285,
+    "p10": 60,
+    "p90": 325,
+    "p_at_least": {
+     "200": 0.815,
+     "250": 0.774,
+     "300": 0.404,
+     "330": 0
+    }
+   },
+   "best_of_3": {
+    "mean": 306.106,
+    "median": 310,
+    "p10": 285,
+    "p_at_least": {
+     "200": 0.994,
+     "250": 0.989,
+     "300": 0.788,
+     "330": 0
+    }
+   },
+   "second_best_of_3_tiebreak": {
+    "mean": 269.219,
+    "median": 285
+   }
+  },
+  "full-mission-pit-after-lap-2": {
+   "single_match": {
+    "mean": 269.492,
+    "median": 320,
+    "p10": 60,
+    "p90": 367,
+    "p_at_least": {
+     "200": 0.743,
+     "250": 0.727,
+     "300": 0.627,
+     "330": 0.411
+    }
+   },
+   "best_of_3": {
+    "mean": 348.481,
+    "median": 350,
+    "p10": 312,
+    "p_at_least": {
+     "200": 0.983,
+     "250": 0.98,
+     "300": 0.948,
+     "330": 0.796
+    }
+   },
+   "second_best_of_3_tiebreak": {
+    "mean": 289.539,
+    "median": 320
+   }
+  },
+  "full-mission-pit-after-lap-1": {
+   "single_match": {
+    "mean": 268.785,
+    "median": 320,
+    "p10": 75,
+    "p90": 367,
+    "p_at_least": {
+     "200": 0.743,
+     "250": 0.727,
+     "300": 0.627,
+     "330": 0.411
+    }
+   },
+   "best_of_3": {
+    "mean": 348.316,
+    "median": 350,
+    "p10": 312,
+    "p_at_least": {
+     "200": 0.983,
+     "250": 0.98,
+     "300": 0.948,
+     "330": 0.796
+    }
+   },
+   "second_best_of_3_tiebreak": {
+    "mean": 288.538,
+    "median": 320
+   }
+  }
+ },
+ "head_to_head_single_match": {
+  "a": "full-mission-pit-after-lap-2",
+  "b": "drive-only",
+  "win": 0.6578,
+  "tie": 0.0263,
+  "loss": 0.3159
+ },
+ "break_even_pit_stall": {
+  "meaning": "largest probability of stalling in the pit (run over) at which the full-mission profile still equals drive-only",
+  "single_match_mean": 0.2279,
+  "best_of_3_mean": 0.4899,
+  "best_of_3_p_at_least_300": 0.4201
+ },
+ "per_match_probability_needed": {
+  "0.5": 0.2063,
+  "0.8": 0.4152,
+  "0.9": 0.5358,
+  "0.95": 0.6316
+ },
+ "notes": [
+  "Probabilities are conditional on reaching each phase; a failed phase ends the run with credits already earned.",
+  "Pickup credit is kept only if the blue tire is still held (pRetain); retention after a pit stall is an interpretation.",
+  "Skipping the exchange assumes the race still counts without tire credits; confirm in official Q&A before relying on it.",
+  "Publicity (10) is excluded. Matches are treated as independent; learning between Matches is not modeled.",
+  "Only mechanisms presented at Inspection may be added, removed or reconfigured between Matches (GM1 V3 §6.1)."
+ ]
+}

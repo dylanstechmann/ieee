@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "recommendation": "M70",
+  "priced_subtotal_usd": 177.25,
+  "landed_total": "unquoted",
+  "candidates": [
+    {
+      "sku": "4753",
+      "max_efficiency_rpm": 180,
+      "max_efficiency_torque_nm": 0.215746,
+      "availability": "Backorder shown; backorders allowed; no ship date verified"
+    },
+    {
+      "sku": "4754",
+      "max_efficiency_rpm": 130,
+      "max_efficiency_torque_nm": 0.313813,
+      "availability": "Add to cart shown; backorders allowed; stock quantity and ship date not verified"
+    },
+    {
+      "sku": "4755",
+      "max_efficiency_rpm": 87,
+      "max_efficiency_torque_nm": 0.411879,
+      "availability": "Add to cart shown; backorders allowed; stock quantity and ship date not verified"
+    }
+  ],
+  "archived_sources": 22,
+  "ordered": false,
+  "hardware_validated": false
+}

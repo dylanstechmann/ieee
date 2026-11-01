@@ -1,0 +1,46 @@
+{
+  "version":"0.1.0",
+  "date":"2026-10-31",
+  "status":"agent-generated-geometry-coupons-not-validated-mechanisms-not-production-cad",
+  "tire_source":{
+    "path":"derived/organizer-cad/Spare Tire v2.stl",
+    "sha256":"e04ac6ac4874902f0aa7a4383f738e04d0f0b0b88f553b85f008d66de448e2df",
+    "outer_diameter_mm":68.184,
+    "bore_diameter_mm":40.30,
+    "thickness_mm":27.600,
+    "evidence":"Organizer STL plus the reviewed mm-unit evidence in VERIFIED-FACTS.md; nominal bore is a design callout, not a clearance-certified manufactured minimum."
+  },
+  "mesh":{
+    "segments":96,
+    "gauge_diameters_mm":[39.0,39.4,39.8],
+    "gauge_stem_length_mm":20,
+    "gauge_handle_length_mm":8,
+    "gauge_handle_diameter_mm":50,
+    "gauge_tip_chamfer_mm":2
+  },
+  "fork":{
+    "thickness_mm":4,
+    "rear_x_mm":-50,
+    "front_x_mm":20,
+    "outer_half_width_mm":45,
+    "mouth_half_width_mm":38,
+    "throat_clearance_mm":1.0,
+    "throat_x_mm":-5,
+    "inner_back_x_mm":-45
+  },
+  "alignment_template":{
+    "page_size_mm":120,
+    "lateral_offsets_mm":[-12.7,0,12.7],
+    "yaw_angles_deg":[-10,0,10],
+    "calibration_line_mm":50,
+    "attempts_per_cell":5,
+    "nominal_repeat_attempts":5
+  },
+  "limitations":[
+    "Coupons are for low-force geometry and alignment experiments only; they are not complete capture mechanisms or production CAD.",
+    "Gauge diameters are nominal STL dimensions. Measure printed parts and the actual tire; do not force a gauge or infer a production fit.",
+    "The fork coupon tests approach geometry only and has no retention, release, actuator, structural or competition-legality validation.",
+    "A printed tire surrogate does not reproduce official TPU mass, friction, compliance or surface finish.",
+    "Paper/SVG templates must be printed at 100%/actual size and rejected if the 50 mm calibration line is not 50 mm."
+  ]
+}

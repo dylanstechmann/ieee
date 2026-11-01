@@ -1,0 +1,936 @@
+{
+  "status": "agent-built-geometric-study-not-hardware-validation",
+  "units": "inches and degrees",
+  "provenance": "Agent-run kinematic geometry study using constrained-field-v3.json and field-v3.parameters.json; not owner hardware testing.",
+  "policy": {
+    "translation_step_in": 0.25,
+    "rotation_step_deg": 2,
+    "touching_is_collision": true,
+    "guarantee": "Finite sampled poses only; not continuous collision certification. Min clearance is measured at samples, not a penetration depth.",
+    "overlap": "Robot plan-area fraction within target polygon; >75% is a study metric, not an official parking interpretation.",
+    "scope": "No dynamics, traction, sensing, lap legality, flag operation or tire manipulation. Empty obstacle list is an obstacle-free baseline. One-at-a-time element shifts and constant pose-error combinations are not exhaustive."
+  },
+  "assumptions": [
+    "End walls assumed present. Divider thickness is an assumed collision footprint, not the verified installed stock size.",
+    "Markings are excluded from collision solids for this conditional study; this is not an organizer ruling.",
+    "Obstacle polygons may be added as {id, vertices_in}; an empty list does not represent a competition-ready field.",
+    "Element shifts test one divider or target box at a time, not all simultaneous field variations. Board and stock dimensions remain fixed.",
+    "Position and heading errors are deterministic constant offsets along a route, not a localization or control model.",
+    "Waypoint interpolation permits sideways translation and in-place rotation. No differential-drive or steering constraints are enforced. Routes are independent maneuvers, not a connected legal mission."
+  ],
+  "config": {
+    "status": "agent-built-geometric-study-not-hardware-validation",
+    "robot": {
+      "length_in": 10,
+      "width_in": 10
+    },
+    "sampling": {
+      "translation_step_in": 0.25,
+      "rotation_step_deg": 2
+    },
+    "uncertainty": {
+      "element_shift_in": 1,
+      "position_error_in": 0.5,
+      "heading_error_deg": 3
+    },
+    "wall_scenarios": [
+      {
+        "id": "inside-nominal",
+        "inset_in": 1
+      },
+      {
+        "id": "inside-three-quarter",
+        "inset_in": 0.75
+      },
+      {
+        "id": "outside",
+        "inset_in": 0
+      }
+    ],
+    "divider_thickness_in": 1,
+    "obstacles": [],
+    "notes": [
+      "End walls assumed present. Divider thickness is an assumed collision footprint, not the verified installed stock size.",
+      "Markings are excluded from collision solids for this conditional study; this is not an organizer ruling.",
+      "Obstacle polygons may be added as {id, vertices_in}; an empty list does not represent a competition-ready field.",
+      "Element shifts test one divider or target box at a time, not all simultaneous field variations. Board and stock dimensions remain fixed.",
+      "Position and heading errors are deterministic constant offsets along a route, not a localization or control model.",
+      "Waypoint interpolation permits sideways translation and in-place rotation. No differential-drive or steering constraints are enforced. Routes are independent maneuvers, not a connected legal mission."
+    ]
+  },
+  "routes": [
+    {
+      "id": "start-exit",
+      "waypoints": [
+        [
+          20.378,
+          38.918,
+          0
+        ],
+        [
+          38,
+          38.918,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "divider-loop",
+      "waypoints": [
+        [
+          38,
+          12,
+          0
+        ],
+        [
+          87,
+          12,
+          0
+        ],
+        [
+          87,
+          12,
+          90
+        ],
+        [
+          87,
+          36,
+          90
+        ],
+        [
+          87,
+          36,
+          180
+        ],
+        [
+          38,
+          36,
+          180
+        ],
+        [
+          38,
+          36,
+          270
+        ],
+        [
+          38,
+          12,
+          270
+        ],
+        [
+          38,
+          12,
+          360
+        ]
+      ]
+    },
+    {
+      "id": "divider-loop-wider-return",
+      "waypoints": [
+        [
+          36,
+          12,
+          0
+        ],
+        [
+          87,
+          12,
+          0
+        ],
+        [
+          87,
+          12,
+          90
+        ],
+        [
+          87,
+          36,
+          90
+        ],
+        [
+          87,
+          36,
+          180
+        ],
+        [
+          36,
+          36,
+          180
+        ],
+        [
+          36,
+          36,
+          270
+        ],
+        [
+          36,
+          12,
+          270
+        ],
+        [
+          36,
+          12,
+          360
+        ]
+      ]
+    },
+    {
+      "id": "dock-pit_box_1",
+      "target_id": "pit_box_1",
+      "waypoints": [
+        [
+          38,
+          9,
+          180
+        ],
+        [
+          18,
+          9,
+          180
+        ],
+        [
+          18,
+          9.045,
+          180
+        ],
+        [
+          7.0169999999999995,
+          9.045,
+          180
+        ]
+      ]
+    },
+    {
+      "id": "back-out-pit_box_1",
+      "waypoints": [
+        [
+          7.0169999999999995,
+          9.045,
+          180
+        ],
+        [
+          18,
+          9.045,
+          180
+        ],
+        [
+          18,
+          9,
+          180
+        ],
+        [
+          38,
+          9,
+          180
+        ]
+      ]
+    },
+    {
+      "id": "dock-pit_box_2",
+      "target_id": "pit_box_2",
+      "waypoints": [
+        [
+          38,
+          9,
+          180
+        ],
+        [
+          18,
+          9,
+          180
+        ],
+        [
+          18,
+          24.045,
+          180
+        ],
+        [
+          7.0169999999999995,
+          24.045,
+          180
+        ]
+      ]
+    },
+    {
+      "id": "back-out-pit_box_2",
+      "waypoints": [
+        [
+          7.0169999999999995,
+          24.045,
+          180
+        ],
+        [
+          18,
+          24.045,
+          180
+        ],
+        [
+          18,
+          9,
+          180
+        ],
+        [
+          38,
+          9,
+          180
+        ]
+      ]
+    },
+    {
+      "id": "dock-pit_box_3",
+      "target_id": "pit_box_3",
+      "waypoints": [
+        [
+          38,
+          9,
+          180
+        ],
+        [
+          18,
+          9,
+          180
+        ],
+        [
+          18,
+          39.045,
+          180
+        ],
+        [
+          7.0169999999999995,
+          39.045,
+          180
+        ]
+      ]
+    },
+    {
+      "id": "back-out-pit_box_3",
+      "waypoints": [
+        [
+          7.0169999999999995,
+          39.045,
+          180
+        ],
+        [
+          18,
+          39.045,
+          180
+        ],
+        [
+          18,
+          9,
+          180
+        ],
+        [
+          38,
+          9,
+          180
+        ]
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "wall": "inside-nominal",
+      "route": "start-exit",
+      "nominal": {
+        "sample_count": 72,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.8449999999999989,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.8449999999999989,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "inside-nominal",
+      "route": "divider-loop",
+      "nominal": {
+        "sample_count": 765,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 0.8699999999999974,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 1,
+        "min_sampled_clearance_in": 0,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": [
+          {
+            "variant": "shift:center_divider_axis:0:-1",
+            "sample_count": 765,
+            "collision_free": false,
+            "colliding_samples": 44,
+            "first_collision": {
+              "sample": 649,
+              "pose": [
+                38,
+                29.5,
+                270
+              ],
+              "hits": [
+                "center_divider_axis"
+              ]
+            },
+            "min_sampled_clearance_in": 0,
+            "docking_overlap_fraction": null,
+            "docking_over_75_percent": null
+          }
+        ]
+      }
+    },
+    {
+      "wall": "inside-nominal",
+      "route": "divider-loop-wider-return",
+      "nominal": {
+        "sample_count": 781,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 0.9300091460117557,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.4289321881345245,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "inside-nominal",
+      "route": "dock-pit_box_1",
+      "nominal": {
+        "sample_count": 126,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.016999999999999,
+        "docking_overlap_fraction": 1,
+        "docking_over_75_percent": true
+      },
+      "sweep": {
+        "cases": 39,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.2621725450124113,
+        "min_docking_overlap_fraction": 1,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "inside-nominal",
+      "route": "back-out-pit_box_1",
+      "nominal": {
+        "sample_count": 126,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.016999999999999,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.2621725450124113,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "inside-nominal",
+      "route": "dock-pit_box_2",
+      "nominal": {
+        "sample_count": 186,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.016999999999999,
+        "docking_overlap_fraction": 1,
+        "docking_over_75_percent": true
+      },
+      "sweep": {
+        "cases": 39,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.2621725450124113,
+        "min_docking_overlap_fraction": 1,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "inside-nominal",
+      "route": "back-out-pit_box_2",
+      "nominal": {
+        "sample_count": 186,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.016999999999999,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.2621725450124113,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "inside-nominal",
+      "route": "dock-pit_box_3",
+      "nominal": {
+        "sample_count": 246,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.016999999999999,
+        "docking_overlap_fraction": 1,
+        "docking_over_75_percent": true
+      },
+      "sweep": {
+        "cases": 39,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.2621725450124113,
+        "min_docking_overlap_fraction": 1,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "inside-nominal",
+      "route": "back-out-pit_box_3",
+      "nominal": {
+        "sample_count": 246,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.016999999999999,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.2621725450124113,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "inside-three-quarter",
+      "route": "start-exit",
+      "nominal": {
+        "sample_count": 72,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.8449999999999989,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.8449999999999989,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "inside-three-quarter",
+      "route": "divider-loop",
+      "nominal": {
+        "sample_count": 765,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 0.8699999999999974,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 1,
+        "min_sampled_clearance_in": 0,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": [
+          {
+            "variant": "shift:center_divider_axis:0:-1",
+            "sample_count": 765,
+            "collision_free": false,
+            "colliding_samples": 44,
+            "first_collision": {
+              "sample": 649,
+              "pose": [
+                38,
+                29.5,
+                270
+              ],
+              "hits": [
+                "center_divider_axis"
+              ]
+            },
+            "min_sampled_clearance_in": 0,
+            "docking_overlap_fraction": null,
+            "docking_over_75_percent": null
+          }
+        ]
+      }
+    },
+    {
+      "wall": "inside-three-quarter",
+      "route": "divider-loop-wider-return",
+      "nominal": {
+        "sample_count": 781,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.1800091460117557,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.5233958802115232,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "inside-three-quarter",
+      "route": "dock-pit_box_1",
+      "nominal": {
+        "sample_count": 126,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.266999999999999,
+        "docking_overlap_fraction": 1,
+        "docking_over_75_percent": true
+      },
+      "sweep": {
+        "cases": 39,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.5121725450124113,
+        "min_docking_overlap_fraction": 1,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "inside-three-quarter",
+      "route": "back-out-pit_box_1",
+      "nominal": {
+        "sample_count": 126,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.266999999999999,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.5121725450124113,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "inside-three-quarter",
+      "route": "dock-pit_box_2",
+      "nominal": {
+        "sample_count": 186,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.266999999999999,
+        "docking_overlap_fraction": 1,
+        "docking_over_75_percent": true
+      },
+      "sweep": {
+        "cases": 39,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.5121725450124113,
+        "min_docking_overlap_fraction": 1,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "inside-three-quarter",
+      "route": "back-out-pit_box_2",
+      "nominal": {
+        "sample_count": 186,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.266999999999999,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.5121725450124113,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "inside-three-quarter",
+      "route": "dock-pit_box_3",
+      "nominal": {
+        "sample_count": 246,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.266999999999999,
+        "docking_overlap_fraction": 1,
+        "docking_over_75_percent": true
+      },
+      "sweep": {
+        "cases": 39,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.5121725450124113,
+        "min_docking_overlap_fraction": 1,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "inside-three-quarter",
+      "route": "back-out-pit_box_3",
+      "nominal": {
+        "sample_count": 246,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.266999999999999,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.5121725450124113,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "outside",
+      "route": "start-exit",
+      "nominal": {
+        "sample_count": 72,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.8449999999999989,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.8449999999999989,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "outside",
+      "route": "divider-loop",
+      "nominal": {
+        "sample_count": 765,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 0.8699999999999974,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 1,
+        "min_sampled_clearance_in": 0,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": [
+          {
+            "variant": "shift:center_divider_axis:0:-1",
+            "sample_count": 765,
+            "collision_free": false,
+            "colliding_samples": 44,
+            "first_collision": {
+              "sample": 649,
+              "pose": [
+                38,
+                29.5,
+                270
+              ],
+              "hits": [
+                "center_divider_axis"
+              ]
+            },
+            "min_sampled_clearance_in": 0,
+            "docking_overlap_fraction": null,
+            "docking_over_75_percent": null
+          }
+        ]
+      }
+    },
+    {
+      "wall": "outside",
+      "route": "divider-loop-wider-return",
+      "nominal": {
+        "sample_count": 781,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 1.3974704554787298,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 0,
+        "min_sampled_clearance_in": 0.5233958802115232,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "outside",
+      "route": "dock-pit_box_1",
+      "nominal": {
+        "sample_count": 126,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 2.016999999999999,
+        "docking_overlap_fraction": 1,
+        "docking_over_75_percent": true
+      },
+      "sweep": {
+        "cases": 39,
+        "failures": 0,
+        "min_sampled_clearance_in": 1.0730000000000004,
+        "min_docking_overlap_fraction": 1,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "outside",
+      "route": "back-out-pit_box_1",
+      "nominal": {
+        "sample_count": 126,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 2.016999999999999,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 0,
+        "min_sampled_clearance_in": 1.0730000000000004,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "outside",
+      "route": "dock-pit_box_2",
+      "nominal": {
+        "sample_count": 186,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 2.016999999999999,
+        "docking_overlap_fraction": 1,
+        "docking_over_75_percent": true
+      },
+      "sweep": {
+        "cases": 39,
+        "failures": 0,
+        "min_sampled_clearance_in": 1.0730000000000004,
+        "min_docking_overlap_fraction": 1,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "outside",
+      "route": "back-out-pit_box_2",
+      "nominal": {
+        "sample_count": 186,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 2.016999999999999,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 0,
+        "min_sampled_clearance_in": 1.0730000000000004,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "outside",
+      "route": "dock-pit_box_3",
+      "nominal": {
+        "sample_count": 246,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 2.016999999999999,
+        "docking_overlap_fraction": 1,
+        "docking_over_75_percent": true
+      },
+      "sweep": {
+        "cases": 39,
+        "failures": 0,
+        "min_sampled_clearance_in": 1.0730000000000004,
+        "min_docking_overlap_fraction": 1,
+        "failure_examples": []
+      }
+    },
+    {
+      "wall": "outside",
+      "route": "back-out-pit_box_3",
+      "nominal": {
+        "sample_count": 246,
+        "collision_free": true,
+        "colliding_samples": 0,
+        "first_collision": null,
+        "min_sampled_clearance_in": 2.016999999999999,
+        "docking_overlap_fraction": null,
+        "docking_over_75_percent": null
+      },
+      "sweep": {
+        "cases": 35,
+        "failures": 0,
+        "min_sampled_clearance_in": 1.0730000000000004,
+        "min_docking_overlap_fraction": null,
+        "failure_examples": []
+      }
+    }
+  ]
+}

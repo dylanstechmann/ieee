@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-31",
+  "status": "agent-generated-geometry-coupons-not-validated-mechanisms-not-production-cad",
+  "input_hashes": {
+    "mechanism-prototyping-v3.json": "a92f8e8e09358f2a6d8e158ded9f101c0304c9b696efed6e0c95c16356885da1",
+    "tools/mechanism-prototyping-v3.js": "7527fbda1c4225d4ef1f629d7249b270af316c7b9ee15fafc493d1e6bfce487d",
+    "derived/organizer-cad/Spare Tire v2.stl": "e04ac6ac4874902f0aa7a4383f738e04d0f0b0b88f553b85f008d66de448e2df",
+    "hardware-development-v3.json": "0ed672009f04074aa95411fca9cea1071b7bbcdd7d79da2646b661e92c119549",
+    "VERIFIED-FACTS.md": "874305c737866f73a06a0e3aefd64377b0dadcb831943de6d1ad804759c198e3"
+  },
+  "output_hashes": {
+    "stl/passive-fork-coupon.stl": "e685243ff6eaef692f7336cc7d6caa6bbde7a72d9db997b365623ad6ed48154a",
+    "stl/bore-gauge-39.stl": "5e3bdf701767875215b6cb79e4e05cb9c683df0678ca538349e0e177e199b5cf",
+    "stl/bore-gauge-39p4.stl": "e6aff081ff66c753824cc77814717de2074fd88274cf7af5cca96d7df8138773",
+    "stl/bore-gauge-39p8.stl": "2c1fc512c3571f1e06096e1e2c29735a35f4816a0b845785fbefaa6b119a4c2c",
+    "alignment/E04_offset-m12p7_yaw-m10.svg": "f63ec02c335a9af04cf874c290598ab659138a3e65ae1a387968d4f43acf218e",
+    "alignment/E04_offset-m12p7_yaw-0.svg": "4b04ebde6de893cfbbdc9248bdc2e4c01633b1370bb57e77f24d704e81790d47",
+    "alignment/E04_offset-m12p7_yaw-10.svg": "b6ac6aa2667f0d3bd46057d6f156aeedf8a1f435bb143bd3eeb975e9b408de24",
+    "alignment/E04_offset-0_yaw-m10.svg": "19ce01b7fdd58fdba5b93d739ea4430265f8d5a1ac204ce9f19870bd8729b293",
+    "alignment/E04_offset-0_yaw-0.svg": "6b06f12b7b85b0d3b4321a065658834a7cabb819ce071e65f58edd4999e20b9b",
+    "alignment/E04_offset-0_yaw-10.svg": "509b2280695b19dcdb3f1b6c00e0cfd60a758fff78a5300459c7b6fb676e1bf5",
+    "alignment/E04_offset-12p7_yaw-m10.svg": "f2e3b6df6b09a5fc9c4f41a91ada17bdd4ed111ba71f22e495332933cf8dee95",
+    "alignment/E04_offset-12p7_yaw-0.svg": "2394e54e07cbb1e4be6506ccda0608c9fa45246fc3dbc19d1ddad78e625cca91",
+    "alignment/E04_offset-12p7_yaw-10.svg": "2d63c92d44314b86b848b095194b8c65d46156476108830e52e4fb965ce0cceb",
+    "report.json": "7062f31ee5727f2634af54b7471eceb14d706dcd68da35e44b0fb5897268ca2b",
+    "README.md": "c8e28de3f670f02455b87a19a851129101119b2c689bc1a5c1ae9ec84a8fa399",
+    "coupon-preview.svg": "78362908e04ff3b4f88612c425ced2e815678d4294fcc2af1dec5039ff61ed8d",
+    "E04-trial-matrix.csv": "fbc6c29b460677a2fd17c0a2f341f83f59d9b25b6bea293375dcd15de92f4990"
+  }
+}

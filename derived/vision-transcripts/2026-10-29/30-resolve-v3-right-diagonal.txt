@@ -1,0 +1,21 @@
+
+===== MODEL: anthropic/claude-sonnet-5.5 =====
+**There is no diagonal label on this right slant.** It is not 9 3/4 or 6 3/4. The slanted segment, which runs from about (150, 50) down to (355, 315), has no text along it. Neither "9 3/4" nor "6 3/4" appears anywhere in this crop.
+
+Every visible label in the crop:
+
+1. **"15in"** is at the top, around x≈228, y≈10–105. It is rotated 90° so it reads vertically. It belongs to the vertical dimension line with an arrowhead, which runs down to about y≈320 and ends at a short horizontal tick or extension line. This text is close to the diagonal and crosses it visually, but it is the dimension for that vertical line, not a label on the slant.
+2. **"1"x2"x36""** (partially cut off) is at the bottom edge, around x≈150–380, y≈705–725. Only the top part of the characters is visible. It is the likely label for the vertical rail, reading roughly 1"×2"×36". The exact characters are uncertain because of the cropping.
+
+Other features with no text:
+- The two parallel lines of the rail run horizontally along the top left.
+- The two parallel lines run diagonally from the top, then turn into two vertical lines on the right.
+- There is a short dash at the very top, around x≈145, y≈0–20.
+
+===== MODEL: google/gemini-2.5-flash =====
+There is NO diagonal label on this right slant.
+
+Other visible labels in this crop:
+
+*   **15in** (vertical, top-right, next to the slanted segment)
+*   **1"x2"x26"** (horizontal, bottom-left)

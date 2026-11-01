@@ -1,0 +1,24 @@
+
+===== MODEL: nvidia/nemotron-3.5-super-vl =====
+LCD reading: "403" (no decimal point visible on the display).
+
+Units indicator: I do not see a clearly lit "mm" or "inch" indicator in the image.
+
+If the caliper is set to mm, the measurement is 40.3 mm; if it is set to inches, it is 4.03 inches.
+
+Feature being measured: The outside diameter (outer edge) of the blue 3D-printed ring/spare tire, using the caliper's outside measuring jaws.
+
+===== MODEL: qwen/qwen3-vl-235b-a22b-instruct =====
+Reading the caliper LCD display exactly, digit by digit:
+
+4 0 . 3
+
+The decimal point is clearly visible between the “0” and the “3”.
+
+Unit indicator: The “mm” indicator is lit (visible as a small “mm” symbol to the right of the digits on the LCD). The “in” (inch) indicator is not lit.
+
+Feature being measured: The caliper is measuring the outer diameter (OD) of the blue 3D-printed ring — specifically, the distance across the widest part of the ring’s circular cross-section, from one outer edge to the opposite outer edge.
+
+Note: All digits are clear and unambiguous in this image. No alternate interpretations needed.
+
+Final reading: 40.3 mm (outer diameter)

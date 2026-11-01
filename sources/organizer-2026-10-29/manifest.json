@@ -1,0 +1,30 @@
+{
+  "retrieved_date": "2026-10-29",
+  "organizer_page": "https://ieeesoutheastcon.org/student-competitions/",
+  "files": [
+    {
+      "file": "2027-IEEE-SoutheastCon-Arena_Fusion360.zip",
+      "source_url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/2027-IEEE-SoutheastCon-Arena_Fusion360.zip",
+      "bytes": 451760,
+      "sha256": "b756b73be6e2c0991929051bc9e272ba64589fb9c7dfe519687be87648a12a69"
+    },
+    {
+      "file": "Game-Manual-2027-1-V3.docx",
+      "source_url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/Game-Manual-2027-1-V3.docx",
+      "bytes": 2537454,
+      "sha256": "b25f2f4c6e5da3ca6487f6f9bfe2e90ebe985df5352c30771538290fc57fac7d"
+    },
+    {
+      "file": "Game-Manual-2027-2-V3-1.docx",
+      "source_url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/Game-Manual-2027-2-V3-1.docx",
+      "bytes": 4599780,
+      "sha256": "90e4061310f81d4b42027ecb3b2c9a0ad9167dc8adf9c917c0b25017560039b8"
+    },
+    {
+      "file": "Spare-Tire-v2.zip",
+      "source_url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/Spare-Tire-v2.zip",
+      "bytes": 395023,
+      "sha256": "aea89a466c90548d4abad1f39c580ff360ce3c8228236d6a1648bc222bf058c7"
+    }
+  ]
+}

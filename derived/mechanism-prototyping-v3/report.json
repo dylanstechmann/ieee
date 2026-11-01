@@ -1,0 +1,196 @@
+{
+  "version": "0.1.0",
+  "date": "2026-10-31",
+  "status": "agent-generated-geometry-coupons-not-validated-mechanisms-not-production-cad",
+  "tire_source": {
+    "path": "derived/organizer-cad/Spare Tire v2.stl",
+    "sha256": "e04ac6ac4874902f0aa7a4383f738e04d0f0b0b88f553b85f008d66de448e2df",
+    "outer_diameter_mm": 68.184,
+    "bore_diameter_mm": 40.3,
+    "thickness_mm": 27.6,
+    "evidence": "Organizer STL plus the reviewed mm-unit evidence in VERIFIED-FACTS.md; nominal bore is a design callout, not a clearance-certified manufactured minimum."
+  },
+  "physical_trials_completed": 0,
+  "printed_parts_inspected": 0,
+  "geometry_check_scope": "Closed edge-two-manifold, nondegenerate triangles and positive signed volume only; not slicer, print, fit or mechanism validation.",
+  "meshes": [
+    {
+      "kind": "passive-fork",
+      "file": "stl/passive-fork-coupon.stl",
+      "nominal_throat_width_mm": 70.184,
+      "vertices": 20,
+      "triangles": 36,
+      "edges": 54,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_triangles": 0,
+      "min_triangle_area_mm2": 14,
+      "signed_volume_mm3": 6661.36,
+      "bounds_mm": {
+        "min": [
+          -50,
+          -45,
+          0
+        ],
+        "max": [
+          20,
+          45,
+          4
+        ]
+      }
+    },
+    {
+      "kind": "bore-gauge",
+      "file": "stl/bore-gauge-39.stl",
+      "nominal_diameter_mm": 39,
+      "diametral_clearance_mm": 1.3,
+      "radial_clearance_mm": 0.65,
+      "vertices": 482,
+      "triangles": 960,
+      "edges": 1440,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_triangles": 0,
+      "min_triangle_area_mm2": 1.619078,
+      "signed_volume_mm3": 39335.011594,
+      "bounds_mm": {
+        "min": [
+          -25,
+          -25,
+          0
+        ],
+        "max": [
+          25,
+          25,
+          28
+        ]
+      }
+    },
+    {
+      "kind": "bore-gauge",
+      "file": "stl/bore-gauge-39p4.stl",
+      "nominal_diameter_mm": 39.4,
+      "diametral_clearance_mm": 0.9,
+      "radial_clearance_mm": 0.45,
+      "vertices": 482,
+      "triangles": 960,
+      "edges": 1440,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_triangles": 0,
+      "min_triangle_area_mm2": 1.637582,
+      "signed_volume_mm3": 39824.750226,
+      "bounds_mm": {
+        "min": [
+          -25,
+          -25,
+          0
+        ],
+        "max": [
+          25,
+          25,
+          28
+        ]
+      }
+    },
+    {
+      "kind": "bore-gauge",
+      "file": "stl/bore-gauge-39p8.stl",
+      "nominal_diameter_mm": 39.8,
+      "diametral_clearance_mm": 0.5,
+      "radial_clearance_mm": 0.25,
+      "vertices": 482,
+      "triangles": 960,
+      "edges": 1440,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_triangles": 0,
+      "min_triangle_area_mm2": 1.656086,
+      "signed_volume_mm3": 40319.511818,
+      "bounds_mm": {
+        "min": [
+          -25,
+          -25,
+          0
+        ],
+        "max": [
+          25,
+          25,
+          28
+        ]
+      }
+    }
+  ],
+  "alignment_cases": [
+    {
+      "id": "offset-m12p7_yaw-m10",
+      "offset_mm": -12.7,
+      "yaw_deg": -10,
+      "attempts": 5,
+      "file": "alignment/E04_offset-m12p7_yaw-m10.svg"
+    },
+    {
+      "id": "offset-m12p7_yaw-0",
+      "offset_mm": -12.7,
+      "yaw_deg": 0,
+      "attempts": 5,
+      "file": "alignment/E04_offset-m12p7_yaw-0.svg"
+    },
+    {
+      "id": "offset-m12p7_yaw-10",
+      "offset_mm": -12.7,
+      "yaw_deg": 10,
+      "attempts": 5,
+      "file": "alignment/E04_offset-m12p7_yaw-10.svg"
+    },
+    {
+      "id": "offset-0_yaw-m10",
+      "offset_mm": 0,
+      "yaw_deg": -10,
+      "attempts": 5,
+      "file": "alignment/E04_offset-0_yaw-m10.svg"
+    },
+    {
+      "id": "offset-0_yaw-0",
+      "offset_mm": 0,
+      "yaw_deg": 0,
+      "attempts": 5,
+      "file": "alignment/E04_offset-0_yaw-0.svg"
+    },
+    {
+      "id": "offset-0_yaw-10",
+      "offset_mm": 0,
+      "yaw_deg": 10,
+      "attempts": 5,
+      "file": "alignment/E04_offset-0_yaw-10.svg"
+    },
+    {
+      "id": "offset-12p7_yaw-m10",
+      "offset_mm": 12.7,
+      "yaw_deg": -10,
+      "attempts": 5,
+      "file": "alignment/E04_offset-12p7_yaw-m10.svg"
+    },
+    {
+      "id": "offset-12p7_yaw-0",
+      "offset_mm": 12.7,
+      "yaw_deg": 0,
+      "attempts": 5,
+      "file": "alignment/E04_offset-12p7_yaw-0.svg"
+    },
+    {
+      "id": "offset-12p7_yaw-10",
+      "offset_mm": 12.7,
+      "yaw_deg": 10,
+      "attempts": 5,
+      "file": "alignment/E04_offset-12p7_yaw-10.svg"
+    }
+  ],
+  "limitations": [
+    "Coupons are for low-force geometry and alignment experiments only; they are not complete capture mechanisms or production CAD.",
+    "Gauge diameters are nominal STL dimensions. Measure printed parts and the actual tire; do not force a gauge or infer a production fit.",
+    "The fork coupon tests approach geometry only and has no retention, release, actuator, structural or competition-legality validation.",
+    "A printed tire surrogate does not reproduce official TPU mass, friction, compliance or surface finish.",
+    "Paper/SVG templates must be printed at 100%/actual size and rejected if the 50 mm calibration line is not 50 mm."
+  ]
+}

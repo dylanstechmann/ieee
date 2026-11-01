@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "systems": 30,
+  "render_instances": 481,
+  "cable_meshes": 23,
+  "routes": {
+    "south": {
+      "status": "completed",
+      "time_s": 54.06666666666424,
+      "energy_wh": 0.06990164117706564,
+      "soc_pct": 99.71375249313242
+    },
+    "north": {
+      "status": "completed",
+      "time_s": 81.65000000001105,
+      "energy_wh": 0.10466841337862916,
+      "soc_pct": 99.57138241859693
+    }
+  },
+  "standalone": "share/Robot-Lab-v4.html",
+  "browser_evidence": true,
+  "scope": "detailed-visualization-planar-physics-illustrative-electrical-observer-only"
+}

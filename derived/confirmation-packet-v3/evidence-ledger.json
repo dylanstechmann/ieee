@@ -1,0 +1,246 @@
+{
+  "date": "2026-10-31",
+  "status": "unresolved-owner-reported-no-new-information",
+  "published_files": [
+    {
+      "file": "2027-IEEE-SoutheastCon-Arena_Fusion360.zip",
+      "sha256": "b756b73be6e2c0991929051bc9e272ba64589fb9c7dfe519687be87648a12a69",
+      "byte_identical_to_archive": true
+    },
+    {
+      "file": "Game-Manual-2027-1-V3.docx",
+      "sha256": "b25f2f4c6e5da3ca6487f6f9bfe2e90ebe985df5352c30771538290fc57fac7d",
+      "byte_identical_to_archive": true
+    },
+    {
+      "file": "Game-Manual-2027-2-V3-1.docx",
+      "sha256": "90e4061310f81d4b42027ecb3b2c9a0ad9167dc8adf9c917c0b25017560039b8",
+      "byte_identical_to_archive": true
+    },
+    {
+      "file": "Spare-Tire-v2.zip",
+      "sha256": "aea89a466c90548d4abad1f39c580ff360ce3c8228236d6a1648bc222bf058c7",
+      "byte_identical_to_archive": true
+    },
+    {
+      "file": "SEC-2027-Arena-Build-Guide.pdf",
+      "sha256": "82cd41b28fe6ba3f0bae452ea37491fcd551eb922263cef5649a77bec6dc5e4a",
+      "byte_identical_to_archive": true
+    }
+  ],
+  "qa": {
+    "status": "not-reviewed",
+    "channel": "Official SoutheastCon Discord Q&A, identified by current hardware tab",
+    "invite": "https://discord.gg/cuqdFvQFe8",
+    "observed": "Public invite resolves to IEEE SoutheastCon - Official Discord; channel messages not available without account/login. No account created, server joined, messages sent or credentials accessed."
+  },
+  "owner_review": {
+    "recorded_date": "2026-10-31",
+    "checked_at": null,
+    "status": "owner-reported-no-new-information",
+    "statement": "I just looked through the discord and there's nothing new; therefore, you can ignore.",
+    "provenance": "Owner message in this conversation; channel scope and exact check time not supplied; no message export or permalink supplied.",
+    "agent_reviewed_messages": false,
+    "legality_confirmed": false
+  },
+  "geometry_evidence": [
+    {
+      "id": "obstacle-count",
+      "category": "organizer-specified",
+      "source_refs": [
+        "GM2:118"
+      ],
+      "fact": "Three randomly placed obstacles; text says different lanes.",
+      "dimensions_in": null,
+      "unknown": "Exact allocation across lanes and quadrants.",
+      "question_ids": [
+        "Q4"
+      ]
+    },
+    {
+      "id": "placement-regions",
+      "category": "organizer-specified",
+      "source_refs": [
+        "GM2:165",
+        "GM2:362"
+      ],
+      "fact": "Straightaway inner/outer lanes; Appendix E specifies 2-in offsets, 16-in spans and 4-in gap. These are placement regions, not toy footprints.",
+      "dimensions_in": null,
+      "unknown": "Datum faces, containment reference, allocation and allowed orientation.",
+      "question_ids": [
+        "Q4",
+        "Q6"
+      ]
+    },
+    {
+      "id": "general-tolerance",
+      "category": "organizer-specified",
+      "source_refs": [
+        "GM2:192",
+        "GM2:193"
+      ],
+      "fact": "G02 publishes +/-1-in positional tolerance and explains dimensional/location variation. This is not a measured distribution or a vehicle dimension.",
+      "dimensions_in": null,
+      "unknown": "Application to placement boundaries, divider endpoints and specific installed vehicle envelopes.",
+      "question_ids": [
+        "Q5",
+        "Q6"
+      ]
+    },
+    {
+      "id": "vehicle-identity",
+      "category": "organizer-specified",
+      "source_refs": [
+        "GM2:307",
+        "GM2:311"
+      ],
+      "fact": "Manual links a Toy Vehicle Obstacle Set; archived relationship identifies ASIN B00EX5K1GG.",
+      "dimensions_in": null,
+      "unknown": "Which installed vehicles/substitutions and their full envelopes.",
+      "question_ids": [
+        "Q5"
+      ]
+    },
+    {
+      "id": "manufacturer-envelope",
+      "category": "manufacturer-documented",
+      "source_refs": [],
+      "fact": null,
+      "dimensions_in": null,
+      "unknown": "No verified manufacturer vehicle-envelope document in this baseline; product identity and package size are insufficient.",
+      "question_ids": [
+        "Q5"
+      ]
+    },
+    {
+      "id": "physical-envelope",
+      "category": "physically-measured",
+      "source_refs": [],
+      "fact": null,
+      "dimensions_in": null,
+      "unknown": "No approved specimen/field measurements supplied or performed.",
+      "question_ids": [
+        "Q5",
+        "Q6"
+      ]
+    },
+    {
+      "id": "square-probes",
+      "category": "engineering-assumption",
+      "source_refs": [],
+      "fact": "Existing square obstacle probes and traced divider geometry remain diagnostic assumptions, not installed obstacle measurements.",
+      "dimensions_in": null,
+      "unknown": "Official applicability; no probe is promoted by this packet.",
+      "question_ids": [
+        "Q1",
+        "Q4",
+        "Q5",
+        "Q6"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "Q1",
+      "topic": "Pit access at either end of divider",
+      "status": "unresolved",
+      "answer": null,
+      "source_refs": [
+        "GM2:118",
+        "GM2:160",
+        "GM2:371",
+        "GM2:374"
+      ],
+      "model_effect": "Select source-backed entry/exit policies; leave experimental north access disabled for legal-coverage claims until answered.",
+      "answer_provenance": null,
+      "required_regression_review": true
+    },
+    {
+      "id": "Q2",
+      "topic": "Track markings and robot envelope",
+      "status": "unresolved",
+      "answer": null,
+      "source_refs": [
+        "GM2:148",
+        "GM2:184",
+        "GM2:143",
+        "GM2:144"
+      ],
+      "model_effect": "Replace engineering center regions with the specified boundary/envelope rules; separately model chassis, carried tire and mechanism sweep.",
+      "answer_provenance": null,
+      "required_regression_review": true
+    },
+    {
+      "id": "Q3",
+      "topic": "Lap counting and pit detours",
+      "status": "unresolved",
+      "answer": null,
+      "source_refs": [
+        "GM2:118",
+        "GM2:139",
+        "GM2:140",
+        "GM2:374"
+      ],
+      "model_effect": "Replace provisional progress gates with an official lap state machine and test extra/reverse crossings; extend to a complete three-lap mission only afterward.",
+      "answer_provenance": null,
+      "required_regression_review": true
+    },
+    {
+      "id": "Q4",
+      "topic": "Three-obstacle allocation and placement",
+      "status": "unresolved",
+      "answer": null,
+      "source_refs": [
+        "GM2:118",
+        "GM2:165",
+        "GM2:362"
+      ],
+      "model_effect": "Define admissible three-obstacle placements and rotations instead of independent square regression probes.",
+      "answer_provenance": null,
+      "required_regression_review": true
+    },
+    {
+      "id": "Q5",
+      "topic": "Vehicle dimensions and substitutions",
+      "status": "unresolved",
+      "answer": null,
+      "source_refs": [
+        "GM2:307",
+        "GM2:311"
+      ],
+      "model_effect": "Version actual obstacle polygons/heights and conservative bounds. A product identity or package size alone does not qualify footprint geometry.",
+      "answer_provenance": null,
+      "required_regression_review": true
+    },
+    {
+      "id": "Q6",
+      "topic": "Placement datum and built-field tolerances",
+      "status": "unresolved",
+      "answer": null,
+      "source_refs": [
+        "GM2:121",
+        "GM2:362",
+        "GM2:192",
+        "GM2:193"
+      ],
+      "model_effect": "Replace traced/nominal divider and wall assumptions with dimensioned geometry and justified uncertainty bounds.",
+      "answer_provenance": null,
+      "required_regression_review": true
+    },
+    {
+      "id": "Q7",
+      "topic": "Tire exchange versus final parking",
+      "status": "unresolved",
+      "answer": null,
+      "source_refs": [
+        "GM2:150",
+        "GM2:371",
+        "GM2:373",
+        "GM2:374"
+      ],
+      "model_effect": "Separate fixed task events from selectable docking poses and mechanism reach; preserve current conservative dock until task requirements are settled.",
+      "answer_provenance": null,
+      "required_regression_review": true
+    }
+  ]
+}

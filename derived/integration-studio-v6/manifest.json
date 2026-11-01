@@ -1,0 +1,27 @@
+{
+  "status": "synthetic-integration-not-hardware-release",
+  "input_hashes": {
+    "tools/build-integration-studio-v6.js": "89385595ba677d2a6e74eb3b1e40de6656ced4a5fc5b4e7a5d0363697a7e3f8e",
+    "integration-studio/index.html": "f5285423e7e24d704d677993a02a9fd8c310b1883cb19177a42b3f83d9510415",
+    "integration-studio/core.js": "ae935e13e7a8ebd7f8a1198b1df30c890acece9ee879c1f355e184c9a8c024de",
+    "integration-studio/app.js": "945d0bc3c163b11ca9cd04da8a177f55b3c3508555d0049162d9625c226a8966",
+    "stopping-dynamics-v6.json": "97aaf0f0ce245f65190b6b68366096c498611369fce3e481fec8e6fb84e3323c",
+    "derived/stopping-dynamics-v6/nominal-simulations.json": "7fb5367f5394fc353a780872d6ae965042cf2f8c178cb0a7551e91a24f512aae",
+    "derived/stopping-dynamics-v6/manifest.json": "b33e2d5aee008f8f2984e817081ec123a43168da1e7592afcf9a18023e7a3a45",
+    "derived/mechanism-envelope-v6/report.json": "c979575dfa710d2524745b5ac3a81acb8f9078120abd428a1e6baee3b9ab0ad2",
+    "derived/mechanism-envelope-v6/manifest.json": "f1f399c19279cda22f97cdb4f26f9a68950024b9169d520d44a3ca83a0ac010c",
+    "electrical-selection-v6.json": "369e0cebf41d56f8178f21f310a5faf5f8b2d99bfc4585c8dfb3439db84f78dd",
+    "derived/organizer-cad/Spare Tire v2.stl": "e04ac6ac4874902f0aa7a4383f738e04d0f0b0b88f553b85f008d66de448e2df",
+    "robot-lab-v4/renderer.js": "ed835b4ba5209261a7716f774322276bc295925843adc425d710120cdc004260",
+    "robot-lab-v4/hardware.js": "0a5dfa14b91ea087c620959f14ac47db893d84204c4180d79e74923792a5712a",
+    "mule-studio/core.js": "6b245c631575f486aa233ca1442915bde00ec9240cb90a3b79044ae426abf450",
+    "mule-dynamics-studio/core.js": "7da1bf496b05e30b3b14c463b9d950e15c72c715d8bfeabf799423cca72060af",
+    "tools/build-mule-studio-v4.js": "c951e04b25f1c828735ac64ee9a76d9b893305b506832131f1bf669d8d8fc881",
+    "drivetrain-mule-v4.json": "342f2bb93eb7b9b47e333487a1fda019a819d7458f1e9385982ebf56161a2dec",
+    "order-a-procurement-v4.json": "12fa6454864d0d21bc27464b5ab9072d90ffc18e0fe218134de871719353f2da",
+    "hardware-development-v3.json": "0ed672009f04074aa95411fca9cea1071b7bbcdd7d79da2646b661e92c119549"
+  },
+  "output_hashes": {
+    "share/Mule-Integration-Studio-v6.html": "e4677f1cdb69fb8781d14c93b6caaf9b49fe35d49dc19946a257774e7d560a29"
+  }
+}

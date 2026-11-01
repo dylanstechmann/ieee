@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-31",
+  "status": "selected-prototype-baseline-not-ordered-not-fabricated-not-hardware-validated",
+  "input_hashes": {
+    "drivetrain-mule-v4.json": "342f2bb93eb7b9b47e333487a1fda019a819d7458f1e9385982ebf56161a2dec",
+    "tools/drivetrain-mule-v4.js": "29b9a941147a527e7a0180ff40a715adc09b9ed3a1f425f4cf0233a7657fa2bd",
+    "tools/mule-readiness-v4.js": "cc15cca32b5e587f677770425c76c64b8db3ca57112217157432ab553fd9336b",
+    "tools/mule-measurements-v4.js": "018ae9e87d3b8107a0c32e39ba2bbd5edd3792a9dafceb192f272da63dabaa51",
+    "order-a-procurement-v4.json": "12fa6454864d0d21bc27464b5ab9072d90ffc18e0fe218134de871719353f2da",
+    "hardware-development-v3.json": "0ed672009f04074aa95411fca9cea1071b7bbcdd7d79da2646b661e92c119549",
+    "sources/hardware-2026-10-31/pololu/step/37d-gearmotor-50-70-encoder.step": "f7d729d723ed3bbb9f71bf8a4b54d055565f036df0ddfbd438e950eaed713c15",
+    "sources/hardware-2026-10-31/pololu/step/1995-machined-bracket.step": "33c57cdf90fbc398fa9dfa3c0cd04346dbd7b5bb137774b74cb38b1a573b827a",
+    "sources/hardware-2026-10-31/pololu/step/953-ball-caster.step": "6299298cfb032ac64d025773c2ce15d49e3df4a6021ded1c2b3da4592b05620a",
+    "sources/hardware-2026-10-31/pololu/product-1430-overview.html": "7fa55d7d662c0ff9aade8bc0a00eeaeeabc2c3b04ceee8c26db5882df06d2393"
+  },
+  "output_hashes": {
+    "stl/mule-deck-blank.stl": "7153c2b67d7d4e896396a9d92efc69c7ded3afe5664b4df3ba4996de6e83a073",
+    "deck-drill-template.svg": "80bbd84632f08c329ea3bba99b28fb4fcb59af50500909de08894b6242a53845",
+    "assembly-layout.svg": "c92d938e65de8a27e1192de4a41d7b4da59da34a36beed321a97deaf677704eb",
+    "motor-wheel-comparison.svg": "1952bd0ca89dca78c72c32af5443de733d20b04a4ee083e25a38e4b8c08c0203",
+    "preview.html": "798d5dac0141a42ef5e9ffaf23544cf5e4d3e6cea3b8826838f96c1b7e42f979",
+    "received-parts.csv": "1e4a4e9b8d089036407d686926200d9dcd8d0954d017b5f41129a770b225f3c5",
+    "E02A-inspection.csv": "ed6f1c9670b307a0024f53787f3703bd0509d3fec280ed727199849773b17dc0",
+    "E02-characterization.csv": "4953a603ca918389f8c86c5da4c7e603ae31453ba144eaee47dc0e41558696a2",
+    "E03-trials.csv": "da772fedc085cd9ab1b10d798ffec0967c07a271538792e892d0ca7c227c4288",
+    "configuration-matrix.json": "5b6710fc18e749cbf182ab971341b125e906d5aa6b5d2ab6d56be91b96a75b43",
+    "measurement-schema.json": "f6d18c3f00c9764cc80bd955cddb691f3f75e9ca72754ca78b747c69c300644f",
+    "report.json": "9aa1a52a62566f2bee6c55288be77efe431595b34cb451aca07e336c3fff02f9",
+    "README.md": "3229b2e8b762f37109080126009b93a94c00165890f34e00b3cbea13ff85e6b7",
+    "experiment-workflow.md": "6e92875a8ebee94051338ac169037fd649ae4561650444ddb4fee82e769314a3",
+    "fit-review.csv": "9df6ce6cb94903c491b7da63814735049a4a7a6c143a11848d8516f76dd72d69",
+    "equipment-readiness.csv": "cd1d80ba7df126f573432f52959719806c59a3ec6a0e79bdf44bb2df2deac0c5",
+    "session-record.json": "91f2ecf5659eb0d68d052b53756db421f9070b923cca34dd13707b2c886106fa",
+    "bench-readiness.md": "41126d839588aacff3ddb3762f1ab6e88e8897ebaea2a2b8804c498df6550623"
+  }
+}

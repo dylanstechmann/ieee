@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "cases": 168,
+  "model_variants": 2,
+  "independently_recomputed_refinement_cases": 168,
+  "physical_trials": 0,
+  "purchases": 0,
+  "maximum_energy_residual_j": 0.0030892309111205662,
+  "refinement_summary": {
+    "case_count": 168,
+    "all_residuals_reduced": true,
+    "all_stop_statuses_unchanged": true,
+    "maximum_stop_time_delta_s": 0.00013020833333332593,
+    "maximum_stop_distance_delta_m": 0.0000048817298278804044,
+    "maximum_current_delta_a": 0.0034572827950506424
+  }
+}

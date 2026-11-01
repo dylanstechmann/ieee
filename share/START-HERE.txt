@@ -1,0 +1,18 @@
+ROAD TO DAYTONA - SIMPLE SHARING
+
+View or share the plan
+Double-click Road-to-Daytona.html to open it in your browser.
+Send that one HTML file to teammates; no other files are required.
+The layout, fonts, navigation and expandable sections work offline.
+The source/reference links open online pages and need internet access.
+
+Host it on your Alibaba server
+Road-to-Daytona-Alibaba.zip contains index.html at the ZIP root.
+Extract it and place index.html in your web server's document root.
+With a running web server and allowed HTTP/HTTPS access, teammates can
+visit your server's public IP or domain. The ZIP itself does not set up
+the server or change its firewall rules.
+
+This is a copy of the existing plan prepared October 8, 2026.
+Official rules and source material may change; follow the cited links
+for current information. The embedded fonts include their licenses.

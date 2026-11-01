@@ -1,0 +1,147 @@
+{
+  "status": "pre-repair-baseline-preserved",
+  "date": "2026-10-31",
+  "file_count": 28,
+  "files": [
+    {
+      "path": "EXECUTION.md",
+      "bytes": 30284,
+      "sha256": "565d0c82eca6a1d9ba5edb4584b2ee838781edb8d4caa98b83988997cca6d18c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13044,
+      "sha256": "4810ee77dcec2519c019bf7219ad5a64f06f14760269858fdfc08172b6cb049a"
+    },
+    {
+      "path": "SESSION-STATE-2026-10-31.md",
+      "bytes": 21877,
+      "sha256": "a2fa9ebba2cde0f102154bfe3570a4c26ca2340a102eabc1186a0def666144a2"
+    },
+    {
+      "path": "derived/integration-studio-v6/README.md",
+      "bytes": 3484,
+      "sha256": "638b300f22cfd89e72654aa72fd983f24b9189fd41c51f6219cc9aa2adf9bbd8"
+    },
+    {
+      "path": "derived/integration-studio-v6/browser-validation.json",
+      "bytes": 1374,
+      "sha256": "31507c701a6ceb2b19110cdff4324debf8c38ab8a5345f5b8ffecf08802b4832"
+    },
+    {
+      "path": "derived/integration-studio-v6/integration-bore-review.png",
+      "bytes": 233966,
+      "sha256": "9c9222d6ab6c4953320503a596f57279d5a7e59b7b8ee56e196366ffdeaee3d9"
+    },
+    {
+      "path": "derived/integration-studio-v6/integration-stopping-review.png",
+      "bytes": 262695,
+      "sha256": "2c1a5ae3a1018e432335218460ce11f8bf0129d043c35014c97f78a231d62493"
+    },
+    {
+      "path": "derived/integration-studio-v6/integration-upright-review.png",
+      "bytes": 288340,
+      "sha256": "c5538bd4d353b48ee7301bd0d45e3971959acaf5a275dd917920d039eb52b1c3"
+    },
+    {
+      "path": "derived/integration-studio-v6/manifest.json",
+      "bytes": 2256,
+      "sha256": "1a272ac08d6efac516d7dac80d6e0ec7179f3289a5f33c2b032736a0863aa029"
+    },
+    {
+      "path": "derived/stopping-dynamics-v6/README.md",
+      "bytes": 3825,
+      "sha256": "8e9a4b3d06775309b82eb77c9f53a8a054e9c498892d99311374e3cbfa82818d"
+    },
+    {
+      "path": "derived/stopping-dynamics-v6/manifest.json",
+      "bytes": 2660,
+      "sha256": "4bcd3896fb3c5b8ba63fd18da5f82a6d227f125406bd07f2acd575fe4dc82c04"
+    },
+    {
+      "path": "derived/stopping-dynamics-v6/nominal-simulations.json",
+      "bytes": 3801294,
+      "sha256": "a2212cf36c1c6cac47fb45b4875195479138a3a8491ed687763d47bf286a4e08"
+    },
+    {
+      "path": "derived/stopping-dynamics-v6/refinement-study.json",
+      "bytes": 29709,
+      "sha256": "ab7c068c59600e0ca2e925e237eb1ce72d3ef9ad4f4e58cad7f4ba3d023c7e4b"
+    },
+    {
+      "path": "derived/stopping-dynamics-v6/report.json",
+      "bytes": 116342,
+      "sha256": "c521ef6ab91ddef7c972ca0cd3c2b8782274bdc9fee9289fd3086674062f2222"
+    },
+    {
+      "path": "derived/stopping-dynamics-v6/summary.csv",
+      "bytes": 17518,
+      "sha256": "351a2471c8ba7c3755c0a971a689cf35ad4f05d72209b4564817326bf7379323"
+    },
+    {
+      "path": "integration-studio/app.js",
+      "bytes": 7862,
+      "sha256": "7bb9f93236cbc186b8108b70f4ca2188d73d67e14ebb441ad6e6a1189ae4edf0"
+    },
+    {
+      "path": "integration-studio/core.js",
+      "bytes": 6464,
+      "sha256": "12ef387b1cddf5b9fd52eec3350a1431d2e981364c10516b9343d083a5476b50"
+    },
+    {
+      "path": "integration-studio/index.html",
+      "bytes": 4339,
+      "sha256": "696caf0e89fd6241ea02bb75ad3e0f7b986f30f21f0afcad40dbddb1444fc8b7"
+    },
+    {
+      "path": "share/Mule-Integration-Studio-v6.html",
+      "bytes": 6551662,
+      "sha256": "7284ff956c41c37a58ab03137929646250d59fa5b522f262e27748148fc8a870"
+    },
+    {
+      "path": "stopping-dynamics-v6.json",
+      "bytes": 3339,
+      "sha256": "c61196b0c31286ead9f242707eac33b732c4f560e81dfebdefb2435d56f66019"
+    },
+    {
+      "path": "tests/integration-studio-v6.test.js",
+      "bytes": 3489,
+      "sha256": "cff9390bf73a9d5d94ce553c560b84f0a233630f00a0d926dd7173b3607472f2"
+    },
+    {
+      "path": "tests/stopping-dynamics-v6.test.js",
+      "bytes": 4976,
+      "sha256": "f103233678280182df1ecc803b52606cbf79a14f03c849e5dda7c04e27eccdcd"
+    },
+    {
+      "path": "tools/build-integration-studio-v6.js",
+      "bytes": 2739,
+      "sha256": "89385595ba677d2a6e74eb3b1e40de6656ced4a5fc5b4e7a5d0363697a7e3f8e"
+    },
+    {
+      "path": "tools/build-stopping-dynamics-v6.js",
+      "bytes": 5895,
+      "sha256": "ba677207f0d7e115411afa9c535845d057392c9af50e1446320081c478ce9c29"
+    },
+    {
+      "path": "tools/refine-stopping-dynamics-v6.js",
+      "bytes": 2059,
+      "sha256": "de6c4e89d824cad6b6faaad87b9d9a952e8555b6861b621822655400ba2e2a20"
+    },
+    {
+      "path": "tools/stopping-dynamics-v6.js",
+      "bytes": 11252,
+      "sha256": "8fd620bbcb8b8cb737f0680edbbe19783be3dddc744855e112b9daa14d37a45f"
+    },
+    {
+      "path": "tools/verify-integration-studio-v6.js",
+      "bytes": 1306,
+      "sha256": "b371c9e793b051bfacebe9af68b21ad6d0e75e34177150dd9a87892f47348fb7"
+    },
+    {
+      "path": "tools/verify-stopping-dynamics-v6.js",
+      "bytes": 1748,
+      "sha256": "04e7c3a60dcf1f2dac62d9d935111948a586da12565e879c7597add9fa9d9faf"
+    }
+  ]
+}

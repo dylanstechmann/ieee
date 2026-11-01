@@ -1,0 +1,6 @@
+Total messages: 4 (Errors: 0, Warnings: 4)
+
+[WARNING] [.WebGL-0x2d44001a7000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ file:///workspace/ieee/ieee/share/Mule-Integration-Studio-v6.html:0
+[WARNING] [.WebGL-0x2d44001a7000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ file:///workspace/ieee/ieee/share/Mule-Integration-Studio-v6.html:0
+[WARNING] [.WebGL-0x2d44001a7000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ file:///workspace/ieee/ieee/share/Mule-Integration-Studio-v6.html:0
+[WARNING] [.WebGL-0x2d44001a7000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat) @ file:///workspace/ieee/ieee/share/Mule-Integration-Studio-v6.html:0

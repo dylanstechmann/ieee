@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "selected": "Pololu #4754 / 80 mm / machined brackets",
+  "priced_order_a_subtotal_usd": 177.25,
+  "configurations": 18,
+  "deck_volume_mm3": 152000,
+  "caster_contact_z_mm": -0.075,
+  "blank_e03_trials": 450,
+  "blank_e02_trials": 18,
+  "ordered": false,
+  "fabricated": false,
+  "physical_trials": 0
+}

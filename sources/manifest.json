@@ -1,0 +1,29 @@
+{
+  "retrieved_date": "2026-10-08",
+  "competition_assumption": "IEEE SoutheastCon 2027 Stock Car Race",
+  "files": [
+    {
+      "file": "Game-Manual-2027-1-V2.docx",
+      "url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/Game-Manual-2027-1-V2.docx",
+      "revision": "2.0",
+      "revision_date": "2026-06-15",
+      "bytes": 2539069,
+      "sha256": "9C747CBCCC4C46E9F8EFB60D4DCCEDAA59F810ECED6078546428B05CC1BD0235"
+    },
+    {
+      "file": "Game-Manual-2027-2-V2.docx",
+      "url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/Game-Manual-2027-2-V2.docx",
+      "revision": "2.0",
+      "revision_date": "2026-06-15",
+      "bytes": 2917053,
+      "sha256": "8250AF0571814C51598CD959B500B7EDA636F2A963E212B58C49DF6CE7BE0C0C"
+    },
+    {
+      "file": "SEC-2027-Arena-Build-Guide.pdf",
+      "url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/SEC-2027-Arena-Build-Guide.pdf",
+      "status": "Supplemental reference; geometry not inspected during backcasting",
+      "bytes": 1962562,
+      "sha256": "82CD41B28FE6BA3F0BAE452EA37491FCD551EB922263CEF5649A77BEC6DC5E4A"
+    }
+  ]
+}

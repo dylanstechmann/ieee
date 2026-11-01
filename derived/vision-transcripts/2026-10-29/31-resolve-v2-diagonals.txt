@@ -1,0 +1,56 @@
+
+===== MODEL: anthropic/claude-sonnet-5.5 =====
+**Diagonal labels: I find only one.**
+
+- The only diagonal dimension is at the upper-right corner of the octagon, on the chamfer between the top edge and the right edge. It reads **9 ¾** (a 9 with a stacked ¾). The fraction is small, so ¾ is my best reading, but it is the clearest candidate.
+- It sits at the end of the course farthest from the left-hand structure. That structure is the column of small squares and the 16 in vertical bar near the left. I don't see a distinct checkered start/finish strip in this image, so I can't place the label relative to one. The left-hand column is the nearest thing to it.
+- The other three chamfers (upper-left, lower-left, lower-right) have no diagonal label.
+- There is no 6 ¾ anywhere, so there are not two different diagonal values. Nor is the same value repeated: 9 ¾ appears once.
+- There are no 90° angle marks. The drawing has only linear dimensions and leader lines.
+
+**Top horizontal segment: it is none of 12, 12 ¼ or 12 ½.**
+
+- The top flat of the octagon is dimensioned **36 ¾ in**, running from the start of the top flat to its end.
+- The 12-type values are elsewhere:
+  - The **12 ¼ in** is the vertical dimension on the right side of the octagon.
+  - The plain **12** at the upper left is the width of the left-hand boxes.
+  - The other plain 12 labels in the left-hand column are also box dimensions.
+- The **36** inside the course is the length of the 1"×1"×36" center bar, not the top edge.
+
+===== MODEL: openai/gpt-5.2 =====
+### Diagonal-segment labels around the octagonal racecourse marking
+Looking only at the **octagonal racecourse outline**, there is **one diagonal (beveled-corner) dimension callout shown** on the sheet:
+
+1. **9 3/4 in** — shown on the **upper-right diagonal/beveled corner** of the octagon (right half of the drawing), i.e., **on the end opposite the checkered start/finish strip** (the checkered strip is on the left-side area).
+
+No other diagonal corners of the octagon have their own separate diagonal value labeled anywhere else on the drawing (they’re unlabeled, presumably symmetric but not explicitly dimensioned).
+
+### Are there two different diagonal values, repeats, or 90° angle marks?
+- **Two different diagonal values (e.g., 6 3/4 and 9 3/4)?** No — only **9 3/4 in** appears.
+- **Same diagonal value shown twice?** No — it’s **only labeled once**.
+- **Any 90-degree angle marks called out on the octagon corners?** No — I do not see any 90° angle symbols/marks on the octagon.
+
+### Top horizontal segment value (12 vs 12 1/4 vs 12 1/2)
+The **top horizontal segment dimension in question is labeled “12” (exactly)** — not 12 1/4 and not 12 1/2.
+
+===== MODEL: google/gemini-2.5-flash =====
+Let's break down the details of the dimensioned arena drawing, focusing on the octagonal racecourse.
+
+**Diagonal-Segment Labels and Positions:**
+
+There are four diagonal segments on the octagonal racecourse, and they all appear to have the same value due to the symmetry of the octagon.
+
+1.  **Top Right Diagonal Segment:** Value is **$9^{3}$** (which likely means $9.3$ or $9 \frac{3}{10}$ inches). This segment is positioned near the top right corner of the octagonal racecourse, between grid lines B and C, and just below grid line 2.
+2.  **Top Left Diagonal Segment:** Value is **$9^{3}$**. This segment would be mirrored from the top right, positioned near the top left corner of the octagonal racecourse, between grid lines D and E, and just below grid line 2. (The explicit label is not shown but inferred from symmetry).
+3.  **Bottom Right Diagonal Segment:** Value is **$9^{3}$**. This segment would be mirrored from the top right, positioned near the bottom right corner of the octagonal racecourse, between grid lines B and C, and just above grid line 4. (The explicit label is not shown but inferred from symmetry).
+4.  **Bottom Left Diagonal Segment:** Value is **$9^{3}$**. This segment would be mirrored from the top right, positioned near the bottom left corner of the octagonal racecourse, between grid lines D and E, and just above grid line 4. (The explicit label is not shown but inferred from symmetry).
+
+**Are there two different diagonal values, the same value twice, or 90-degree angle marks?**
+
+*   **Two different diagonal values:** No, based on the provided dimension and the symmetrical nature of the octagonal shape shown, there is only *one* diagonal value: $9^{3}$ (or $9.3$ inches).
+*   **The same value twice:** Yes, the value $9^{3}$ appears explicitly once, and implicitly three more times on the other diagonal segments of the octagonal racecourse due to symmetry, making it appear four times in total.
+*   **90-degree angle marks:** No explicit 90-degree angle marks are shown on the octagonal racecourse itself. The racecourse corners are chamfered (cut at an angle), not sharp 90-degree turns.
+
+**Confirm the top horizontal segment value:**
+
+The top horizontal segment of the octagonal racecourse has a dimension label of **$36^{3in}$** (which likely means $36.3$ inches). This segment runs between grid lines D and C, near grid line 2.

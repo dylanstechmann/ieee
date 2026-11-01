@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-31",
+  "status": "draft-not-sent-no-organizer-answers",
+  "source_snapshot": "sources/confirmation-2026-10-31/manifest.json",
+  "scope": "Agent-prepared hobby/learning project clarification packet, not a competition legality determination or hardware test",
+  "questions": [
+    {
+      "id": "Q1",
+      "topic": "Pit access at either end of divider",
+      "source_refs": ["GM2:118", "GM2:160", "GM2:371", "GM2:374"],
+      "question": "The text requires the robot to enter the Pit Area, but I could not find designated pit entrances or exits. May the robot pass around either end of the divider between the racecourse and Pit Area? May it enter and leave through the same end? After the race starts, may it traverse the start box as illustrated in Diagram B? Diagram labels north/south are local drawing labels, not official field names.",
+      "model_effect": "Select source-backed entry/exit policies; leave experimental north access disabled for legal-coverage claims until answered.",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "Q2",
+      "topic": "Track markings and robot envelope",
+      "source_refs": ["GM2:148", "GM2:184", "GM2:143", "GM2:144"],
+      "question": "Must the robot remain within a particular lane or between any internal course markings for a lap to be valid? May it cross those markings while remaining inside the field perimeter, and would doing so affect scoring? If a boundary applies, is compliance determined from the vertical projection of the entire robot—including attachments and the carried tire—relative to the inside edge described in the definition of Area? We understand S01 forbids reaching outside the field; this question concerns internal markings.",
+      "model_effect": "Replace engineering center regions with the specified boundary/envelope rules; separately model chassis, carried tire and mechanism sweep.",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "Q3",
+      "topic": "Lap counting and pit detours",
+      "source_refs": ["GM2:118", "GM2:139", "GM2:140", "GM2:374"],
+      "question": "Must all laps follow a particular direction around the center divider? Are reverse driving or briefly retracing part of the course permitted? If pit entry or re-entry causes repeated finish-line crossings, how are those crossings treated for lap counting and end-of-race timing? Please identify the official finish-line endpoints and counting direction on Figure 3.2.1. Our diagrams show one circuit plus a pit detour only, not a proposed complete three-lap match.",
+      "model_effect": "Replace provisional progress gates with an official lap state machine and test extra/reverse crossings; extend to a complete three-lap mission only afterward.",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "Q4",
+      "topic": "Three-obstacle allocation and placement",
+      "source_refs": ["GM2:118", "GM2:165", "GM2:362"],
+      "question": "How are the three toy vehicles allocated among Appendix E quadrants 1–4 and the inner/outer lanes? May more than one occupy a quadrant, and may any be placed in a turn or pit-access opening? Must each entire vehicle footprint, including wheels, lie in the placement region, or is a reference point used? What orientations are permitted?",
+      "model_effect": "Define admissible three-obstacle placements and rotations instead of independent square regression probes.",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "Q5",
+      "topic": "Vehicle dimensions and substitutions",
+      "source_refs": ["GM2:307", "GM2:311"],
+      "question": "Will the field use the linked toy set (archived ASIN B00EX5K1GG), and which exact vehicle models or substitutions are possible? Please provide maximum installed length, width including wheels/protrusions, height and permitted orientation for each, or an approved bounding envelope and dimensional tolerance. Is the set fixed during an event?",
+      "model_effect": "Version actual obstacle polygons/heights and conservative bounds. A product identity or package size alone does not qualify footprint geometry.",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "Q6",
+      "topic": "Placement datum and built-field tolerances",
+      "source_refs": ["GM2:121", "GM2:362", "GM2:192", "GM2:193"],
+      "question": "For Appendix E's 2-in offsets, 16-in spans and 4-in gap, which installed side/center rail faces and longitudinal endpoints are the datums? Is there a dimensioned top-down placement drawing? G02 already specifies +/-1-in positional tolerance and discusses dimensional/location variation. How does it apply to placement-region boundaries, individual obstacles and divider endpoints? Please identify installed clearances and any flag-tower projections affecting pit access; nominal lumber callouts alone do not resolve these.",
+      "model_effect": "Replace traced/nominal divider and wall assumptions with dimensioned geometry and justified uncertainty bounds.",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "Q7",
+      "topic": "Tire exchange versus final parking",
+      "source_refs": ["GM2:150", "GM2:371", "GM2:373", "GM2:374"],
+      "question": "Appendix G says the robot itself need not enter its assigned box for the tire exchange, while its sequence says enter the assigned box. Is reaching in from the pit area sufficient if the red drop and different blue pickup satisfy the scoring requirements? What constitutes a completed pit stop, and how is the separate end-of-race >75% parking requirement measured and timed relative to the finish-line crossing?",
+      "model_effect": "Separate fixed task events from selectable docking poses and mechanism reach; preserve current conservative dock until task requirements are settled.",
+      "status": "unresolved",
+      "answer": null
+    }
+  ],
+  "answer_acceptance": [
+    "Use the latest applicable official manual or GDC clarification in the official Q&A channel; GM1 C00 ranks head-referee decisions at competition above Q&A, followed by written GM2 and GM1, their images and other GDC documents.",
+    "Record question ID, exact answer, responder role, channel/message permalink, timestamp, attachments, manual revision and any superseding answer. Do not promote informal community guesses or private unverified claims.",
+    "An official answer may permit, prohibit, qualify or leave the case unresolved. No reply means unresolved, never permission.",
+    "Do not change planner constraints automatically. Add explicit source-backed parameter and regression tests, preserve historical experiments, then independently review the interpretation."
+  ]
+}

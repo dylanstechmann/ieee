@@ -1,0 +1,18 @@
+
+===== MODEL: nvidia/nemotron-3.5-super-vl =====
+Based on the provided drawing, here are the transcribed labels around the octagonal racecourse marking:
+
+*   **Diagonal corner segments:** `9 3/4in` — Located at the top-right corner of the octagon (associated with a 45° angle mark).
+*   **Vertical side segment:** `12 1/2in` — Located on the right side of the octagon, indicating the length of the vertical wall segment.
+*   **Top horizontal side:** `36 3/4in` — Located above the top segment of the octagon. (Note: The drawing shows this dimension horizontally across the top, not on a vertical side).
+*   **Center divider callout:** `1"x1"x36"` — Located in the center of the arena, with a leader line pointing to the central rectangular barrier.
+
+===== MODEL: google/gemini-2.5-flash =====
+Here are the labels around the octagonal racecourse marking, as requested:
+
+*   **Diagonal corner segments:** 9 3/4 in (labeled on the top right diagonal segment, in quadrant B2/C2)
+*   **12 1/2 in or 12 in labels:**
+    *   12 1/2 in (labeled on the right vertical side of the octagon, in quadrant B3)
+    *   12 in (labeled on the left vertical side of the octagon, in quadrant D3)
+*   **36 3/4 in vertical sides:** 36 3/4 in (labeled on the top horizontal segment of the octagon, in quadrants C2/D2)
+*   **Center divider callout:** 1"x1"x36" (labeled along the length of the center divider, in quadrants B3/C3/D3)

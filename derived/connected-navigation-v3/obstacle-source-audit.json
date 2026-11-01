@@ -1,0 +1,48 @@
+{
+  "scope": "Archived text only; dimensions unresolved; no live source review",
+  "source": "/workspace/ieee/ieee/sources/organizer-2026-10-29/Game-Manual-2027-2-V3-1.docx",
+  "sha256": "90e4061310f81d4b42027ecb3b2c9a0ad9167dc8adf9c917c0b25017560039b8",
+  "extraction": "zero-based w:p paragraphs and concatenated w:t text, including empty paragraphs",
+  "paragraphs": [
+    {
+      "index": 46,
+      "text": "Changed From 2 to 3 Obstacles"
+    },
+    {
+      "index": 118,
+      "text": "It is February, and the IEEE Stock Car Racing Season is about to begin. The first event is in Daytona Beach, Florida. The event starts with the Time Trials. For your Team’s race Robot to compete, it must compete in the time trial. When it is time for your team to race, your Robot will be positioned in the start box. When the green flag is lowered, your Robot will begin. Alternatively, you may manually start your Robot based on the Referee giving the start command. Your Robot will enter the racecourse and complete three laps. After either lap one or two your Robot will enter the pit area and complete a pit stop. See Appendix G for full details. When your Robot crosses the finish line the referee will stop counting your time. All Robots must complete the course in 3 minutes or less, to receive the points for completing the course. There will be 3 randomly placed obstacles on the course. The obstacles will be placed in different lanes. Robots completing a lap without contacting the gray walls or the obstacles will be awarded additional points for each clean lap. Points will be awarded for the Robot entering the course. On the final (victory) lap, if the Robots raise a flag with the school logo, colors, emblem, etc., additional points will be awarded. Finishing the course in less than 2 minutes and 45 will receive extra points. Finishing in the assigned Pit Box will gain additional points."
+    },
+    {
+      "index": 165,
+      "text": "The course obstacles will be randomly placed on the racecourse. The obstacles will be placed in quadrants on the straight aways, in the inner lane and the outer lane."
+    },
+    {
+      "index": 307,
+      "text": "Toy Vehicle Obstacle Set"
+    },
+    {
+      "index": 311,
+      "text": "Amazon Toy Vehicle Obstacle Set"
+    },
+    {
+      "index": 361,
+      "text": "Appendix E: Obstacle Placement Quadrants"
+    },
+    {
+      "index": 362,
+      "text": "The Quadrants will all be the same size. The pictures are distorted due to the camera angle. The Quadrants will start 2 inches from the side rail and stop 2 inches from the center rail with a total width of 16 inches. The length will start from each end of the center rail and for 16 inches. There will be 4 inches in between."
+    }
+  ],
+  "hyperlink": {
+    "relationship": "rId24",
+    "asin": "B00EX5K1GG",
+    "status": "archived link identity, not dimensions or selected purchase"
+  },
+  "appendix_image": {
+    "relationship": "rId30",
+    "path": "/workspace/ieee/ieee/derived/GM2-V3.1/media/image8.tmp",
+    "format": "PNG despite tmp suffix",
+    "sha256": "5b568b7e02e911bb456172028632e9046309e9136991eeae9347a9b8729c875e",
+    "inspection": "Four orange quadrants labeled 1–4 on both sides of center rail; three toy vehicles illustrated in 1/2/3; no dimensional scale for vehicle footprint"
+  }
+}

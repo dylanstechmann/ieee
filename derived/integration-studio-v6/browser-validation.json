@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-31",
+  "captured_at": "2026-10-31T21:21:28.356Z",
+  "status": "passed-with-recorded-webgl-performance-warnings",
+  "method": "direct file URI with Chromium context offline; no localhost server",
+  "protocol": "file:",
+  "offline_context": true,
+  "standalone": "share/Mule-Integration-Studio-v6.html",
+  "standalone_sha256": "e4677f1cdb69fb8781d14c93b6caaf9b49fe35d49dc19946a257774e7d560a29",
+  "browser": {
+    "name": "Chromium",
+    "version": "155.0.8059.12",
+    "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.8059.12 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    }
+  },
+  "javascript_errors": 0,
+  "browser_warnings": 4,
+  "warning_details": [
+    "[.WebGL-0x2d44001a7000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x2d44001a7000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+  ],
+  "mechanism_cases_reviewed": 162,
+  "mechanism_sampled_frames": 486,
+  "mechanism_presentation": "stationary-tire-presentation-with-complete-robot-approach",
+  "stopping_combinations_reviewed": 56,
+  "stopping_sampled_frames": 168,
+  "interactions": [
+    {
+      "name": "model-select",
+      "passed": true,
+      "details": {
+        "modelVariant": "reciprocal-no-load-loss",
+        "index": 0
+      }
+    },
+    {
+      "name": "mode-select",
+      "passed": true,
+      "details": {
+        "mode": "dynamic-brake",
+        "index": 0
+      }
+    },
+    {
+      "name": "timeline-seek",
+      "passed": true,
+      "details": {
+        "index": 30
+      }
+    },
+    {
+      "name": "play-pause",
+      "passed": true,
+      "details": {
+        "index_after_playback": 58,
+        "play_label": "Play"
+      }
+    },
+    {
+      "name": "previous-next",
+      "passed": true,
+      "details": {
+        "before": 58,
+        "afterBack": 57,
+        "afterNext": 58
+      }
+    },
+    {
+      "name": "restart",
+      "passed": true,
+      "details": {
+        "index": 0
+      }
+    },
+    {
+      "name": "workspace-case-select",
+      "passed": true,
+      "details": {
+        "workspace": "mechanism",
+        "caseIndex": 5,
+        "presentation": "stationary-tire-presentation"
+      }
+    },
+    {
+      "name": "display-options",
+      "passed": true,
+      "details": {
+        "baseline": 134,
+        "withoutProxies": 86,
+        "withSwept": 98,
+        "withoutComponents": 95
+      }
+    },
+    {
+      "name": "camera-controls",
+      "passed": true,
+      "details": {
+        "buttons": [
+          "top",
+          "detail",
+          "overview"
+        ]
+      }
+    }
+  ],
+  "failures": [],
+  "network_requests": [
+    {
+      "url": "file:///workspace/ieee/ieee/share/Mule-Integration-Studio-v6.html",
+      "resource_type": "document"
+    }
+  ],
+  "external_requests": [],
+  "physical_trials": 0,
+  "purchases": 0,
+  "raw_evidence": {
+    "path": "derived/integration-studio-v6/browser-raw.json",
+    "sha256": "f38dbbe7c104c16091b5630a487fe7d86f09090f25a53fa6141bed3cb17105a8"
+  },
+  "console_tool": {
+    "path": "derived/integration-studio-v6/browser-console-tool.txt",
+    "sha256": "7b04a21b4157fc30a6217af70bbb3721372b1c68e28755aa6c172d1cadb10dd6"
+  },
+  "network_tool": {
+    "path": "derived/integration-studio-v6/browser-network-tool.txt",
+    "sha256": "70faac1e1c68f6e9e79aa843a7553752c869899aecad928567be2860507862a2"
+  },
+  "source_hashes": {
+    "derived/mechanism-envelope-v6/report.json": "c979575dfa710d2524745b5ac3a81acb8f9078120abd428a1e6baee3b9ab0ad2",
+    "derived/stopping-dynamics-v6/nominal-simulations.json": "7fb5367f5394fc353a780872d6ae965042cf2f8c178cb0a7551e91a24f512aae"
+  },
+  "seal_tool_sha256": "cfcf2242215c11ded6c72ee56c12dccdca5ddcad4d66d2511d28f7688b19157b",
+  "screenshots": [
+    {
+      "path": "derived/integration-studio-v6/integration-stopping-review.png",
+      "sha256": "1bd2ca84e05d94df4590bf09d7228674f518a19dcecad6214f21f5c5ad2e692a",
+      "agent_inspected": true
+    },
+    {
+      "path": "derived/integration-studio-v6/integration-bore-review.png",
+      "sha256": "de297f0e573bc1db2a138d3eebf4e245312bea297210255727805a82a9d1a811",
+      "agent_inspected": true
+    },
+    {
+      "path": "derived/integration-studio-v6/integration-upright-review.png",
+      "sha256": "d92ae64da87bea47cd053f7eb108ee8c3f53c8bc636a1e41cee0abe7aa5e0b58",
+      "agent_inspected": true
+    },
+    {
+      "path": "derived/integration-studio-v6/integration-approach-start.png",
+      "sha256": "b482b41b3faf3b978ccd6aa77a48cc609dee5d0db44e492cda3c4a18f8c329ca",
+      "agent_inspected": true
+    },
+    {
+      "path": "derived/integration-studio-v6/integration-approach-mid.png",
+      "sha256": "59a3af28812b7c5e669d51d66edbf508fc3fe63ffa1c1cd1f864cbba40b1614e",
+      "agent_inspected": true
+    },
+    {
+      "path": "derived/integration-studio-v6/integration-approach-final.png",
+      "sha256": "58e736c45767fc5569557fc017c2e808434ad26375ff948f83013debcbe1ecf9",
+      "agent_inspected": true
+    }
+  ]
+}

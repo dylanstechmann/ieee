@@ -1,0 +1,21 @@
+
+===== MODEL: nvidia/nemotron-3.5-super-vl =====
+41.1 mm, inner diameter
+
+===== MODEL: qwen/qwen3-vl-235b-a22b-instruct =====
+Reading the digital caliper LCD display exactly, digit by digit:
+
+Display reads: **14.1**
+
+- Digit 1: “1”
+- Digit 2: “4”
+- Decimal point: visible and lit between “4” and “1”
+- Digit 3: “1”
+
+Unit indicator: The “mm” indicator is lit (visible as a small “mm” symbol to the right of the digits on the LCD — faint but discernible in the image). The “inch” indicator is not lit.
+
+Feature being measured: The caliper jaws are measuring the **outer diameter** of the blue 3D-printed ring (spare tire for robot competition). The jaws are placed across the widest part of the ring’s circular cross-section, spanning from one outer edge to the opposite outer edge.
+
+Ambiguity note: The display is slightly pixelated and blurry, but “14.1” is clearly legible. No other digits or decimal placements are plausible.
+
+✅ Final reading: **14.1 mm** (outer diameter)

@@ -1,0 +1,106 @@
+{
+  "version": "0.5.0",
+  "date": "2026-10-31",
+  "status": "agent-selected-digital-candidates-synthetic-planar-study-not-hardware-validated",
+  "selection": {
+    "sku": "4754",
+    "wheel_diameter_mm": 80,
+    "support_configuration": "dual-front-rear"
+  },
+  "case_count": 324,
+  "ensemble": {
+    "seed": 731,
+    "run_count": 48,
+    "summary": {
+      "maximum_abs_current_a_p50": 0.122888,
+      "maximum_abs_current_a_p95": 0.166175,
+      "maximum_abs_slip_m_s_p95": 0,
+      "maximum_steady_speed_error_m_s_p95": 0.000701
+    },
+    "distribution_status": "synthetic-deterministic-not-measured-probability"
+  },
+  "nominal_metrics": {
+    "cruise": {
+      "duration_s": 6,
+      "distance_m": 1.160843,
+      "final_speed_m_s": 0.20322,
+      "final_yaw_rad": 0,
+      "final_yaw_error_rad": 0,
+      "maximum_abs_current_a": 0.11617,
+      "maximum_abs_slip_m_s": 0,
+      "maximum_steady_speed_error_m_s": 0.000391,
+      "saturation_samples": 0,
+      "energy_wh": 0.002193
+    },
+    "spin": {
+      "duration_s": 6,
+      "distance_m": 0,
+      "final_speed_m_s": 0,
+      "final_yaw_rad": 3.13517,
+      "final_yaw_error_rad": 0.006423,
+      "maximum_abs_current_a": 0.057458,
+      "maximum_abs_slip_m_s": 0,
+      "maximum_steady_speed_error_m_s": 0,
+      "saturation_samples": 0,
+      "energy_wh": 0.000543
+    },
+    "low-voltage": {
+      "duration_s": 6,
+      "distance_m": 1.160796,
+      "final_speed_m_s": 0.20322,
+      "final_yaw_rad": 0,
+      "final_yaw_error_rad": 0,
+      "maximum_abs_current_a": 0.116032,
+      "maximum_abs_slip_m_s": 0,
+      "maximum_steady_speed_error_m_s": 0.000385,
+      "saturation_samples": 0,
+      "energy_wh": 0.001827
+    },
+    "asymmetric-traction": {
+      "duration_s": 6,
+      "distance_m": 1.278223,
+      "final_speed_m_s": 0.215989,
+      "final_yaw_rad": 0.33256,
+      "final_yaw_error_rad": 0.33256,
+      "maximum_abs_current_a": 0.499336,
+      "maximum_abs_slip_m_s": 0.085752,
+      "maximum_steady_speed_error_m_s": 0.013001,
+      "saturation_samples": 0,
+      "energy_wh": 0.002208
+    },
+    "encoder-dropout": {
+      "duration_s": 6,
+      "distance_m": 1.337002,
+      "final_speed_m_s": 0.231094,
+      "final_yaw_rad": -0.140229,
+      "final_yaw_error_rad": 0.140229,
+      "maximum_abs_current_a": 0.340888,
+      "maximum_abs_slip_m_s": 0.058539,
+      "maximum_steady_speed_error_m_s": 0.035755,
+      "saturation_samples": 0,
+      "energy_wh": 0.002238
+    },
+    "brake-hold": {
+      "duration_s": 6,
+      "distance_m": 0.630791,
+      "final_speed_m_s": 0.006242,
+      "final_yaw_rad": 0,
+      "final_yaw_error_rad": 0,
+      "maximum_abs_current_a": 3,
+      "maximum_abs_slip_m_s": 0.270418,
+      "maximum_steady_speed_error_m_s": 0.000391,
+      "saturation_samples": 89,
+      "energy_wh": 0.027328
+    }
+  },
+  "physical_trials_completed": 0,
+  "components_purchased": 0,
+  "limitations": [
+    "Planar longitudinal/yaw dynamics with a switching no-slip/traction-cap approximation; no 3D suspension, lateral tire model, flexible carcass, impact or rigid-body contact solver.",
+    "Linear motor approximation uses archived no-load and extrapolated stall values; it is not a calibrated motor, gearbox, driver, thermal or battery model.",
+    "Mass, inertia, wheel inertia, driven load, friction, scrub, resistance, current limit and control gains are synthetic assumptions.",
+    "Encoder delay/dropout and saturation are software fault scenarios, not safety certification.",
+    "Sensitivity ensembles are deterministic scenario coverage, not measured distributions, probabilities or reliability evidence.",
+    "Digital candidate selection and simulation do not release purchases, fabrication, energization or competition legality."
+  ]
+}

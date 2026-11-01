@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "scope": "computational-geometry-and-print-scale-artifacts-only",
+  "closed_meshes": 4,
+  "alignment_templates": 9,
+  "physical_trials": 0,
+  "printed_parts_inspected": 0,
+  "production_cad": false,
+  "validated_mechanism": false
+}

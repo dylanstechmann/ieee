@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "scope": "requirements-and-experiment-artifacts-only",
+  "design_mass_scenario_kg": 4,
+  "loaded_rpm_screen": 76.394373,
+  "design_torque_nm_per_side": 0.137754,
+  "requirements": 8,
+  "experiments": 6,
+  "hardware_tested": false,
+  "components_selected": false
+}

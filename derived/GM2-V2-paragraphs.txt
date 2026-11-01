@@ -1,0 +1,320 @@
+Derived document.xml paragraphs; tables are flattened, images and headers omitted. Consult the original.
+Source: sources/Game-Manual-2027-2-V2.docx
+
+
+
+SoutheastCon 2027
+Hardware Competition
+Stock Car Race
+
+
+
+
+
+
+Revision History
+Revision
+Date
+Description
+1.0
+3/15/2026
+Initial Release
+2.0
+6/15/2026
+Second Release
+2.0
+6/15/2026
+Defined Pit Stop Assignment 3.1
+2.0
+6/15/2026
+Added Tire Change to Pit Stop 3.1 And 3.6
+2.0
+6/15/2026
+Added Flag Raising During Final Lap 3.1 And 3.6
+2.0
+6/15/2026
+Added Scoring for Robot Initial Entry Onto Course 3.1 and 3.6
+2.0
+6/15/2026
+Replaced Penalty Scoring with Positive Scoring 3.1 And 3.6
+2.0
+6/15/2026
+Removed 1 Pit Area 3.2.1 And Appendix C
+2.0
+6/15/2026
+Move Apriltag Pit Indicator 3.2.1
+2.0
+6/15/2026
+Modified Bill of Materials Appendix B
+
+
+Contents
+1.0 Introduction	4
+What is IEEE SoutheastCon Hardware Competition?	4
+2.0 How to Use This Document	5
+3.0 The Game	6
+3.1 Introduction	6
+3.2.1 Field Illustration	8
+3.2.2	9
+Gameplay Overview	9
+3.3 Game Specific Definitions	9
+3.4 Gameplay	10
+3.4.1 Pre-Match	10
+3.4.2 Match Play	10
+3.4.3 Post-Match	10
+3.5 Rules of Gameplay	11
+3.5.1 Safety Rules	11
+3.5.2 General Game Rules	11
+3.5.3 Game-Specific Rules	12
+3.5.4 Team Game Element Construction Rules	13
+3.6 Scoring Summary	13
+Appendix A: Season Outline	15
+Appendix B: Bill of Materials	16
+Appendix C: Apriltags	17
+Appendix D: Spare Tire	18
+
+
+
+1.0 Introduction
+
+What is IEEE SoutheastCon Hardware Competition?
+IEEE SoutheastCon Hardware Competition is a student-centered program focused on giving college students a unique and exciting learning opportunity with robotics. Each year, teams take on a new game where they design, build, test, and program a fully Autonomous Robot to perform a series of tasks. The competition will be held at the IEEE Region 3 SoutheastCon. To find out more about the conference visit https://ieeesoutheastcon.org/.
+
+
+2.0 How to Use This Document
+
+The intent of this manual is that the text means exactly, and only what it says. Please avoid interpreting the text based on assumptions about intent, implementation of past rules, or how a situation might be in “real life”. There are no hidden requirements or restrictions, if you have read everything, you know everything. 
+Keywords are defined either in Game Manual 1 (GM1) or in the 3.3 Game Specific Definitions section of this manual and will be formatted with the first letter capitalized and in italics. For example, the term Robot is a keyword with a definition in GM1.
+Notes from the Game Design Committee which are not rules but are contextual information useful for interpretation of rules are in purple boxes.
+This document describes IEEE Stock Car Race, the 2027 IEEE SoutheastCon Hardware Competition. A game animation will be available shortly. It is highly recommended to view the game animation in conjunction with reading this manual to gain a better understanding of the game. The animation is a summary of the game – It is not intended to provide all the necessary information to understand the official game rules fully.
+Teams must comply with all the rules and regulations provided by this document as well as Game Manual 1. Clarifications to the rules are issued in the Question-and-Answer section of the Discord. Official Q&A responses take precedence over game manual text.
+Teams should refer to Game Manual 1 for more information about the competition such as how rankings work, competition logistics, judged awards, and Robot construction rules.
+
+
+3.0 The Game
+
+3.1 Introduction
+It is February, and the IEEE Stock Car Racing Season is about to begin. The first event is in Daytona Beach, Florida. The event starts with the Time Trials. For your Team’s race Robot to compete, it must compete in the time trial. When it is time for your team to race, your Robot will be positioned in the start box. When the green flag is lowered, your Robot will begin. Alternatively, you may manually start your Robot based on the Referee giving the start command. Your Robot will enter the racecourse and complete three laps. After either lap one or two your Robot will enter the pit area and stop in the spot assigned by the Apriltag adjected to the start area. The Robot must drop off a tire (the Robot will carry the tire from the start of the race). The Robot will pick up a tire from the pit area. These two tasks will generate additional points. The pit spot will be selected at the beginning of the Race by the role of a die. I and 4 will be pit spot 1, 2 and 5 will be pit spot 2, and 3 and 6 will be pit spot 3. After a minimum stop of 2 seconds (verified by the referee, a point penalty will be incurred if your Robot leaves before the required 2 seconds) your Robot will re-enter the course to complete the required three laps. When your Robot crosses the finish line the referee will stop counting your time. All Robots must complete the course in 3 minutes or less, to receive the points for completing the course. There will be 2 randomly place obstacles on the course. The obstacles will be placed in different lanes. Robots completing a lap without contacting the gray walls or the obstacles will be awarded additional points. Each clean lap will get additional points. Points will be awarded for the Robot entering the course. On the final lap if the Robots raise a flag with the school logo, colors, emblem, etc., additional points will be awarded. Finishing the course in less than 3 minutes will receive extra points. Finishing in the assigned Pit Spot will gain additional points.
+
+
+3.2 Game Description
+The course will be 4’ by 8’ based on a 23/32 in. x 4 ft. x 8 ft. RTD Sheathing Syp. There are 2 areas on the field: the racecourse and the pit area.
+
+
+
+3.2.1 Field Illustration
+
+
+
+
+
+
+
+
+
+Figure 3.2.1
+3.2.2 
+Gameplay Overview
+Welcome to Stock Car Racing Time Trials! Races are played on a Field initially set up as pictured above in Figure 3.2.1. The object of the game is to earn as many points as possible by performing the achievements outlined below.
+The Race starts either by a Start Flag or via a start switch from which point Robots operate Autonomously using only pre-programmed instructions and sensor inputs. The following Robot actions earn points during the Race. 
+Robot starting from the Start Flag
+Robot completes three laps around the course in under 3 minutes.
+Robot makes a pit stop between lap 1 and 2 or between lap 2 and 3.
+Robot stops in its assigned pit area (1-3) as specified by the randomized Apriltag.
+Robot completes its race in its assigned pit area (1-3) as specified by the randomized Apriltag.
+Robots do not contact any of the course walls (identified by gray color)
+Robots do not contact any of the course obstacles (cars randomly placed on the course)
+3.3 Game Specific Definitions
+Apriltag - A visual fiducial system, useful for a wide variety of tasks including augmented reality, robotics, and camera calibration. One (1) Apriltag is affixed within the Field to aid the Robot in determining its pit area. The Apriltag will have a randomized ID between one (1) and three (3).
+
+Area - The space defined by the vertical projection of the inside edge of a region's boundary element. (tape, wall, etc.) The boundary element is not part of the Area.
+
+In / Completely In – For the Robot to be considered in the Pit Spot for the mandatory Pit Stop and the End of Race Stop more than 75% of the Robot must be in the Pit Spot to be awarded points. No partial points will be awarded; your Robot is either or not. 
+
+Inadvertent - An unintended side effect of a Robot action. Unexpected Robot actions based on software commands are not considered to be Inadvertent.
+
+Inconsequential - An outcome that does not influence scoring or gameplay.
+
+Pre-Load - A Game Element that a Technician positions during pre-Race setup so that it touches a Robot or is possessed by a Robot.
+
+Start Flag - A green flag attached to the Field on the wall tower separating the pit area from the racecourse.
+
+Robot’s Pit Stop Area – There are 3 Pit Stop areas; the Apriltag mounted to the Field on the wall separating the pit area from the racecourse will specify which area your Robot is assigned to.
+3.4 Gameplay
+3.4.1 Pre-Match
+Field Personnel set up the Field as depicted in Figure 3.2.1
+An Apriltag defining the Pit Stop – End of Race spot assigned to your Robot will be selected and fastened to the wall by the starting area.
+The two course obstacles will be randomly placed on the racecourse. One on each of the long straight aways, one will be placed in the inner lane and one in the outer lane.
+The green start flag will be secured in the down position.
+Technician set up their Robots on the Field with the following constraints.
+Robots must be placed Completely in the Start Box.
+The Technician declares to the ref that all settings are selected, and the Robot is ready for match start.
+3.4.2 Match Play
+The match starts when a Referee raises the Start Flag and declares the Match started.
+If a Team’s Robot does not start with the Start Flag, the Technician can press a Start Button/Switch.
+Points scored for a Match
+See the Scoring Summary
+3.4.3 Post-Match
+After the three (3) minute timer ends or the Technician decides to stop the Match early, the Technician must stop all their Team’s Robot Units without disturbing Game Element positions. Any gameplay that occurs after the timer ends or after the Technician begins to stop the Robot will not contribute to the Team’s score. 
+It is highly suggested that teams include a mechanism to automatically stop their Robot 3 minutes after the Race is started. Attempting to stop the Robot manually is allowed but can often lead to complications in scoring Game Elements that a Robot is interacting with at the end of the Race. Having a mechanism in place to automatically halt and idle your Robot is vastly preferred. 
+Referees will then finalize the score and signal to the Technician to retrieve their Robot. Field personnel will then set up the playing Field for the next match.
+Causing a delay of the match due to extremely complicated retrieval will result in a Yellow Card.
+3.5 Rules of Gameplay
+3.5.1 Safety Rules 
+<S01> Robot Action Envelope - Robots must remain on the Field and are not allowed to interact with anything outside the Field. Robots are not allowed to reach outside the Field perimeter. If a Robot noticeably reaches further, or contacts any objects outside of the Field, the Team will be issued a Yellow Card. If a Referee determines the rule infringement was intentional and consequential, the Team can be issued a Red Card.
+<S02> Game Element Action Envelope - Similar to <S01>, Game Elements must remain on the Field and are not allowed to interact with anything outside the Field. Game Elements are not allowed to reach outside the Field. If a Game Element noticeably reaches further, or contacts any objects outside of the Field, the Team will be issued a Yellow Card. If a Referee determines the rule infringement was intentional and consequential, the Team can be issued a Red Card.
+Robots and Game Elements are intended to compete on the Field, not with the surrounding environment. The space around the Field is finite so a limit must be set. Robots and Game Elements are allowed to interact with all parts of the Field and Field perimeter however, the Field may be placed on the floor, and touching the floor outside the Field perimeter would constitute interaction with outside environments and would receive a penalty. The restriction to the field is only policed by eye, it is strongly recommended that Teams stay far from the limits to avoid unnecessary penalties.
+
+<S03> Unsafe Robot or Field Damage - If at any time Robot operation is deemed unsafe or has damaged the Field, by the determination of the Referees, the Match will end early, the Robot must be stopped as quickly as possible, and the Team will receive a Yellow Card. Damage that requires significant repair and/or delays subsequent Match play is likely to escalate to a Red Card.
+3.5.2 General Game Rules
+<G00> Practice Fields - Practice Fields will be provided by hardware competition organizers. Teams are not permitted to bring their own practice fields to the Pit Area due to spacing considerations. Time on the provided practice Fields will be coordinated by event organizers. 
+<G01> Inadvertent and Inconsequential - Accidental, non-consequential damage to the Field can be ruled Inadvertent and Inconsequential as a discretionary call by the Referee. If an action is deemed Inadvertent and Inconsequential there will not be a penalty assigned.
+<G02> Playing Field Tolerances - Competition provided Field and Game Elements will start each Match with positional tolerances that may vary by 土 1 inch (25.4 mm). Teams should design their Robots accordingly.
+Field and Game Elements are expected to be manufactured, assembled, and set up using a high standard for dimensional and location accuracy. The intent of the generous +/- 1 inch is to accommodate any unintentional size and location variations that might occur due to the warping tendencies of wood.
+<G03> Starting Volume - The starting Robot configuration should not exceed the starting volume of a 12 inches x 12 inches x 12 inches cube designated by the Landing Site region on the Field. After the Match begins, the Robot is permitted to expand beyond these dimensions.
+<G04> Post-Match Removal - The Technician is responsible for stopping the Robot at the end of the Match. The Robot should be able to be stopped via the emergency stop button for safe retrieval.	
+<G05> Starting Early / Starting Late - An early start via premature activation of the start switch or faulty sensing of the Start Flag will result in a Yellow Card and a 2-point penalty. There is no penalty for a late start, nor will the Match time be extended to compensate for a late start.
+<G06> End-Of-Period Robot Actions - Any actions taken by the Robot that would result in scoring points after the Match time has expired will not be counted. However, any actions that would result in Field or Game Element damage will still be penalized with a Yellow Card.
+<G07> Robot Control - Robots are to be Autonomous. No external commands or signals of any kind may be used to manipulate the Robot’s actions during the Match. 
+<G08> Technician Contact with Field - During Pre-Match set-up the Technician is allowed to set and position the Robot in any way within the 12 inches starting cube outlined by the Starting Site. The Technician is not permitted to touch or manipulate any other aspect of the Field or Game Elements. Any intentional violation of this rule will result in a Red Card.
+<G09> Egregious Behavior - Teams are intended to always be respectful of each other. They should be mindful of the space they occupy within the hardware room and keep all their belongings within their Team’s designated spaces. Any behavior that is deemed inappropriate can result in disqualification from the competition. 
+3.5.3 Game-Specific Rules
+<GS01> Interacting with Robot/Field After Randomization - Interactions with the Field after Randomization of the Game Elements is forbidden. If this occurs, the Robot cannot score points for any tasks affected by Randomization (Obstacles or Apriltags). 
+3.5.4 Team Game Element Construction Rules
+<TE01> Inspection - Each Team Game Element must pass Inspection before it is allowed to be used in a Match.
+<TE02> Material Constraints - The Team Game Element is subject to the Robot Mechanical Parts and Materials Rules in GM1 section 5.2.1.
+Teams are encouraged to be creative in construction and decoration of their Robots. 
+3.6 Scoring Summary
+Scoring Achievement
+Score
+The Robot enters the course
+25
+Crossing the finish line in 3 minutes or less 
+100
+Crossing the finish line in less than 3 minutes – 1 point per each full 10 seconds
+Example – The Robot finishes the course with a time of 2:54 – no bonus points are given.
+The Robot finishes the course with a time of 2:49 – 1 bonus point is given
+Various
+Start based on green flag. An early start will result in this being eliminated
+10
+Making a pit stop (one per round) after lap 1 or 2
+The Robot moves in less than 2 seconds – only receives 10 points
+15
+Stopping in the pit area specified by the Apriltag
+15
+Dropping tire in the pit area
+25
+Picking up a fresh tire from the pit area – may not be the same tire dropped
+40
+Ending in the area specified by the Apriltag
+15
+Not contacting the gray walls (per lap)
+10
+Not contacting the vehicle obstacle (per lap)
+15
+Robot raises school flag during the last lap
+25
+Team enters the publicity contest
+10
+
+
+
+Appendix A: Season Outline
+
+Event
+Date / Frequency
+Description
+Calls with GDC
+Once a month, starting in May
+These calls are a great way to meet other people in the community and get some unofficial clarifications on rules. They will be about an hour long. Each month the GDC will send out a form with a couple of options, and the highest voted one will be the date/time.
+SoutheastCon! 🎉
+April 15 - 18, 2027
+This is the conference the competition will be held at!
+
+
+Appendix B: Bill of Materials
+The Gorilla tape was determined to be too wide. We painted the field where the center line should be white, covered it with masking tape, then painted the field black.
+Teams will require doublesided tape, paint brushes, rollers, and paint trays. These are not specifically specified. Teams may choose what suits them. The estimated cost is less than $35.00.
+Please note:
+Prices may change.
+The Home Depot prices are based on the Home Depot in Daytona Beach
+
+Item
+Price
+Quantity
+Total Price
+Item Link
+Field Floor
+$35.48 
+1
+$35.48 
+23-32-in-x-4-ft-x-8-ft-RTD-Sheathing-Syp
+1”x4”x8’
+$3.34 
+3
+$10.02 
+1-in-x-4-in-x-8-ft-Furring-Strip
+1”x2”x8’
+$1.53 
+1
+$1.53 
+1-in-x-2-in-x-8-ft-Furring-Strip
+Wood Screws
+$10.98 
+2
+$21.96 
+Grip-Rite 8 x 1-5/8 in. Star Drive Dual Flat Head Coarse Thread Construction Screws 1 lb. Box
+Black Paint - ONYX
+PPG1011-7
+$25.98 
+1
+$25.98 
+Glidden-Premium-1-gal-Base-3-Flat-Interior-Paint
+Gray Paint - Winter Chill
+PPG1036-2
+$12.98 
+1
+$12.98 
+Glidden-Premium-1-qt-Base-3-Flat-Interior-Paint
+White Paint - Delicate White PPG1001-1
+$12.98 
+1
+$12.98 
+Glidden-Premium-1-qt-Base-3-Flat-Interior-Paint
+Start Line Checkerboard
+$9.19 
+1
+$9.19 
+Amazon Checker Board Adhesive Roll
+Green Start Flag - Single Pack Price Includes Shipping Cost
+$13.54 
+1
+$13.54 
+Amazon Green Start Flag
+Toy Vehicle Obstacle Set
+$35.95 
+1
+$35.95 
+Amazon Toy Vehicle Obstacle Set
+Masking Tape
+$2.78 
+1
+$2.78 
+Scotch 1 ' Masking Tape
+Total
+ 
+ 
+$182.39 
+ 
+
+
+Appendix C: Apriltags
+
+
+It is recommended to cut the Apriltags and laminate them.
+
+
+
+Appendix D: Spare Tire
+
+

@@ -1,0 +1,29 @@
+{
+  "status": "agent-run-hypothetical-packaging-and-obstacle-stress-study",
+  "notes": [
+    "All added dimensions and obstacle poses are hypothetical engineering probes, not measurements or official legal obstacle configurations.",
+    "Envelope extents are measured from the assumed axle midpoint along body-forward, body-rear, body-left and body-right axes.",
+    "An asymmetric envelope is conservatively enclosed in a centered rectangle using twice the maximum opposing extent. Docking uses that rectangle too, not the actual mechanism outline.",
+    "Each envelope is held fixed for the entire route, including docking. No mechanism deployment sequence, tire geometry, height or envelope-rule compliance is established.",
+    "The routes are fixed. Blocked cases diagnose missing avoidance capability; this study does not plan a detour.",
+    "Between-sample clearance bounds apply only to nominal modeled paths. Uncertainty variants retain the inherited sampled checker."
+  ],
+  "envelopes": [
+    {"id": "baseline-10x10", "front_in": 5, "rear_in": 5, "left_in": 5, "right_in": 5},
+    {"id": "front-extension-1in", "front_in": 6, "rear_in": 5, "left_in": 5, "right_in": 5},
+    {"id": "side-extension-1in", "front_in": 5, "rear_in": 5, "left_in": 6, "right_in": 5},
+    {"id": "front-and-side-extension-1in", "front_in": 6, "rear_in": 5, "left_in": 6, "right_in": 5}
+  ],
+  "obstacle_cases": [
+    {"id": "empty-control", "evidence": "hypothetical", "obstacles": []},
+    {"id": "off-route-control", "evidence": "hypothetical", "obstacles": [
+      {"id": "off-route-probe", "vertices_in": [[59,44],[61,44],[61,46],[59,46]]}
+    ]},
+    {"id": "upper-lane-blocker", "evidence": "hypothetical", "obstacles": [
+      {"id": "lane-blocker-probe", "vertices_in": [[59,35],[61,35],[61,37],[59,37]]}
+    ]},
+    {"id": "pit-gate-blocker", "evidence": "hypothetical", "obstacles": [
+      {"id": "gate-blocker-probe", "vertices_in": [[24,8],[26,8],[26,10],[24,10]]}
+    ]}
+  ]
+}

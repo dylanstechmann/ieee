@@ -1,0 +1,40 @@
+Here is a transcription of all dimension labels and text callouts from the provided image:
+
+**Main Arena Dimensions:**
+*   Top horizontal: `48in` (between A and B)
+*   Left vertical: `68in` (between C and D)
+
+**Inner Obstacle/Arena Dimensions:**
+*   Top inner horizontal: `12 1/4in` (aligned with the top flat section of the octagon)
+*   Right vertical, near the top right diagonal: `6 1/2in` (aligned with the top right diagonal section of the octagon)
+*   Left vertical, near the top left diagonal: `6 1/2in` (aligned with the top left diagonal section of the octagon)
+*   Center vertical, main length of the octagon: `36 3/4in` (between B and E)
+*   Bottom vertical, from bottom of octagon to bottom of center divider: `5`
+*   Center divider: `1"x1"x36` (centered vertically within the octagon)
+
+**Lower Section Dimensions and Callouts:**
+*   Left callout, top: `1"x4"x96"` (near A)
+*   Left callout, middle: `Paint Grey` (near C)
+*   Left callout, bottom: `Paint Black` (near E)
+*   Vertical dimension on the left side of the lower section: `28in` (between F and G)
+*   Horizontal dimension for the overall lower structure: `15in` (top left, between E and F)
+*   Horizontal dimension for the overall lower structure: `16in` (middle, between E and F)
+*   Callout within the largest lower rectangle: `1"x1"x16"` (aligned horizontally with F)
+*   Vertical dimension of the lower rectangles: `12` (leftmost, near G)
+*   Small horizontal dimension above the first lower rectangle: `12`
+*   Small horizontal dimension below the first lower rectangle: `6 1/2in`
+*   Small horizontal dimension above the second lower rectangle: `3`
+*   Small horizontal dimension below the second lower rectangle: `12in`
+*   Small horizontal dimension above the third lower rectangle: `3`
+*   Small horizontal dimension below the third lower rectangle: `12in`
+*   Small horizontal dimension below the rightmost lower structure: `6 1/2in`
+*   Small vertical dimension to the right of the rightmost lower structure, top: `2`
+*   Small vertical dimension to the right of the rightmost lower structure, middle: `7in`
+*   Small vertical dimension to the right of the rightmost lower structure, bottom: `1 1/2in`
+*   Callout to the right of the lower structure: `Apriltag` (near F)
+*   Callout below the lower structure: `Apriltags` (near G)
+
+**Title Block (Bottom Right):**
+*   `Created by` `DJhari Cooper` `6/12/2026`
+*   `Title` `2027 IEEE SouthEast-Con Field Assembled`
+*   `Sheet` `1/2`

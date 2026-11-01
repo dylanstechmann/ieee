@@ -1,0 +1,440 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1422"><meta name="description" content="Offline interactive Order A drivetrain mule configuration and visualization studio."><title>Order A Mule Studio v0.4</title><style>
+:root{color-scheme:dark;--bg:#0b1420;--panel:#142334;--line:#2b4256;--text:#dce7ef;--muted:#9db2c1;--teal:#48c3b1;--gold:#e5c14f;--warn:#f09a67}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,sans-serif}header,main,footer{max-width:1500px;margin:auto;padding:20px 28px}header{display:flex;justify-content:space-between;gap:20px;align-items:center}h1,h2,p{margin-top:0}h1{margin-bottom:0;font-size:30px}h1 span{font-weight:400;color:var(--muted)}h2{font-size:24px}.eyebrow{color:var(--teal);font-size:11px;letter-spacing:.15em;font-weight:700}.badges{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end}.badges span{padding:5px 9px;border:1px solid var(--line);border-radius:20px;font-size:12px}.badges .warning{color:var(--gold)}.intro{display:flex;justify-content:space-between;gap:20px;align-items:center}.intro p{color:var(--muted);max-width:800px;margin-bottom:0}.total{display:grid;text-align:right;min-width:220px}.total span,.total small{color:var(--muted)}.total strong{font-size:32px;color:var(--teal)}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 345px;gap:18px}.viewer-card,aside section,.evidence{border:1px solid var(--line);background:var(--panel);border-radius:14px;overflow:hidden}.viewer-wrap{height:680px;position:relative;background:#0a121b}canvas{display:block;width:100%;height:100%;touch-action:none;outline:none}.viewer-top{position:absolute;top:14px;left:14px;right:14px;display:flex;justify-content:space-between;pointer-events:none;font-size:11px;letter-spacing:.08em}.viewer-top span{padding:5px 8px;background:#0b1420cc;border-radius:5px}.camera-controls{position:absolute;left:14px;bottom:14px;display:flex;gap:6px}button,select,input{font:inherit}button,select{background:#1c3347;color:var(--text);border:1px solid #3b5870;border-radius:6px;padding:7px 9px}button{cursor:pointer}button:hover{border-color:var(--teal)}.render-stats{position:absolute;right:14px;bottom:14px;color:var(--muted);font-size:11px;text-align:right;white-space:pre-line}.transport{padding:14px 18px}.transport label{display:flex;align-items:center;gap:12px}.transport input{flex:1}.transport p{margin:7px 0 0;color:var(--muted);font-size:12px}aside{display:flex;flex-direction:column;gap:12px}aside section{padding:17px}aside label{display:grid;gap:5px;margin:10px 0;color:var(--muted)}aside select{width:100%;color:var(--text)}.toggles{display:flex;gap:15px}.toggles label{display:flex;align-items:center;gap:5px}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px}.metrics div{padding:8px;background:#0e1b29;border-radius:7px}.metrics span{display:block;color:var(--muted);font-size:11px}.metrics strong{font-size:17px}.warnings{margin-top:12px;color:var(--teal);font-size:13px}.warnings.review{color:var(--warn)}.warnings ul{padding-left:18px;margin-bottom:0}.boundary p{color:var(--muted);margin-bottom:0}.evidence{margin-top:18px;padding:15px 18px;color:var(--muted)}footer{color:var(--muted);display:flex;justify-content:space-between}.viewer-error{position:absolute;inset:20%;padding:30px;background:#301d24;border:1px solid var(--warn)}@media(max-width:1050px){.workspace{grid-template-columns:1fr}aside{display:grid;grid-template-columns:1fr 1fr}.viewer-wrap{height:580px}}@media(max-width:700px){header,.intro{align-items:flex-start;flex-direction:column}header,main,footer{padding:14px}.badges{justify-content:flex-start}.total{text-align:left}.viewer-wrap{height:460px}aside{display:flex}.camera-controls{flex-wrap:wrap;right:14px}.render-stats{display:none}}
+
+</style></head><body><header><div><p class="eyebrow">IEEE ROBOT · ORDER A DIGITAL PROTOTYPE</p><h1>Mule Studio <span>Hardware configuration</span></h1></div><div class="badges"><span>#4754 · 80 mm default</span><span>Offline WebGL</span><span class="warning">Not ordered · not fabrication CAD</span></div></header><main><section class="intro"><div><h2>Configure the mule. Expose the consequences.</h2><p>Motor, wheel and support choices share the generated procurement and geometry baseline. Warnings identify arithmetic or nominal-fit issues; they are not physical test results.</p></div><div class="total"><span>Required Order A subtotal</span><strong>$177.25</strong><small>before shipping, tax and unpriced items</small></div></section><div class="workspace"><section class="viewer-card"><div class="viewer-wrap"><canvas id="view" tabindex="0" aria-label="Interactive 3D drivetrain mule. Drag to orbit and scroll to zoom."></canvas><div id="webgl-error" class="viewer-error" hidden></div><div class="viewer-top"><span id="view-badge">M70 · 80 MM · DUAL SUPPORT</span><span id="view-status">Nominal digital checks</span></div><div class="camera-controls"><button data-camera="reset">Orbit reset</button><button data-camera="detail">Detail</button><button data-camera="top">Top</button><button id="fullscreen">Full screen</button></div><div id="render-stats" class="render-stats"></div></div><div class="transport"><label>Exploded separation <input id="exploded" type="range" min="0" max="1" step="0.01" value="0"><output id="exploded-value">0%</output></label><p>Exploding the assembly hides the conceptual leads so cable endpoints never appear falsely connected.</p></div></section><aside><section><p class="eyebrow">CONFIGURATION</p><label>Motor / gear ratio<select id="motor"><option value="4754">#4754 · 70:1 · balanced default</option><option value="4753">#4753 · 50:1 · speed / backorder</option><option value="4755">#4755 · 100:1 · torque / longer body</option></select></label><label>Wheel<select id="wheel"><option value="80">80 mm · silicone-tired COTS pair</option><option value="76.2">76.2 mm · custom printed alternative</option></select></label><label>Support<select id="support"><option value="dual-front-rear">Dual front + rear casters</option><option value="front-only">Front caster only</option><option value="rear-only">Rear caster only</option></select></label><div class="toggles"><label><input id="show-wiring" type="checkbox" checked> Conceptual leads</label><label><input id="xray" type="checkbox"> X-ray deck</label></div></section><section><p class="eyebrow">ARITHMETIC SCREEN</p><div class="metrics"><div><span>Speed margin</span><strong id="speed-margin">—</strong></div><div><span>Torque margin</span><strong id="torque-margin">—</strong></div><div><span>Max-efficiency RPM</span><strong id="motor-rpm">—</strong></div><div><span>Max-efficiency torque</span><strong id="motor-torque">—</strong></div><div><span>Output CPR</span><strong id="output-cpr">—</strong></div><div><span>Encoder quantum</span><strong id="encoder-quantum">—</strong></div></div></section><section><p class="eyebrow">NOMINAL GEOMETRY</p><div class="metrics"><div><span>Wheel track</span><strong id="track">—</strong></div><div><span>Overall width</span><strong id="width">—</strong></div><div><span>Motor-body gap</span><strong id="motor-gap">—</strong></div><div><span>Caster contact Z</span><strong id="caster-contact">—</strong></div></div><div id="warnings" class="warnings" role="status"></div></section><section class="boundary"><h3>Evidence boundary</h3><p>Selected for digital prototyping only. No supplier order, print, fabrication, driver, battery or physical validation is recorded. Leads show functions and packaging questions, not a released harness.</p></section></aside></div><details class="evidence"><summary>Source and substitution process</summary><p>Generated from <code>drivetrain-mule-v4.json</code> and the corrected Order A package. Eighteen configurations preserve 50:1/70:1/100:1, 76.2/80 mm and three support choices. Re-run the generators after a club/FAU change; do not overwrite measured evidence.</p></details></main><footer>Agent-built interactive mule study · local/offline · nominal geometry only <span>v0.4.0</span></footer><script>
+/* Generated by tools/build-mule-studio-v4.js. */
+globalThis.MULE_STUDIO_DATA={"version":"0.4.0","date":"2026-10-31","status":"selected-mule-studio-not-ordered-not-hardware-validated","config":{"version":"0.4.0","date":"2026-10-31","status":"selected-prototype-baseline-not-ordered-not-fabricated-not-hardware-validated","units":"mm, kg, V, A, N m","procurement_config":"order-a-procurement-v4.json","hardware_config":"hardware-development-v3.json","selected":{"motor_id":"M70","wheel_diameter_mm":80,"bracket_sku":"1995","hub_sku":"1083","wheel_sku":"1430","caster_sku":"953","support_configuration":"dual-front-rear"},"deck":{"length_mm":190,"width_mm":160,"thickness_mm":5,"material":"FAU-printed prototype blank; material and process not selected","motor_hole_diameter_mm":3.4,"caster_hole_diameter_mm":2.5},"drive":{"motor_body_diameter_mm":37,"motor_body_length_mm":70,"gearbox_face_y_mm":74,"shaft_length_mm":16,"wheel_width_mm":10,"wheel_center_y_mm":88,"wheel_radius_mm":40,"axle_center_x_mm":0},"bracket":{"shaft_center_above_mount_face_mm":18.4,"bottom_tapped_hole_spacing_mm":14.8,"bottom_tapped_hole_count":3,"overall_face_mm":36.8,"base_thickness_mm":6.5,"drawing":"sources/hardware-2026-10-31/pololu/1995-37D-machined-bracket.pdf"},"caster":{"body_height_mm":13.5,"selected_spacer_mm":3.175,"available_spacers_mm":[1.5875,3.175],"mount_hole_spacing_mm":14.7,"mount_hole_diameter_mm":2.3,"body_width_mm":20.3,"ball_diameter_mm":12.7,"positions_x_mm":[-75,75],"drawing":"sources/hardware-2026-10-31/pololu/953-ball-caster-dimension-diagram.pdf"},"support_configurations":[{"id":"dual-front-rear","caster_positions":["rear","front"],"purpose":"stable initial bench configuration; check four-contact wheel unloading"},{"id":"front-only","caster_positions":["front"],"purpose":"three-contact comparison; check rear tipping and turning"},{"id":"rear-only","caster_positions":["rear"],"purpose":"three-contact comparison; check front approach and mechanism load"}],"wheel_variants_mm":[80,76.2],"mass_cases_kg":[2,4,6],"sources":{"motor_step":"sources/hardware-2026-10-31/pololu/step/37d-gearmotor-50-70-encoder.step","bracket_step":"sources/hardware-2026-10-31/pololu/step/1995-machined-bracket.step","caster_step":"sources/hardware-2026-10-31/pololu/step/953-ball-caster.step","wheel_page":"sources/hardware-2026-10-31/pololu/product-1430-overview.html"},"gates":{"caster_contact_tolerance_mm":0.25,"minimum_wheel_deck_lateral_clearance_mm":3,"minimum_motor_body_gap_mm":8,"minimum_motor_hole_edge_ligament_mm":4,"e03_mass_kg":4,"straight_runs_per_cell":10,"spin_runs_per_direction_per_cell":20,"straight_length_m":1,"maximum_straight_drift_mm":25,"minimum_straight_passes":9,"cruise_speed_in_s":8,"median_spin_error_deg":5},"limitations":["Selected for continued digital prototyping only; no supplier order, print, fabrication or energized test is recorded.","Deck and drilling geometry are nominal candidates. Inspect received parts and verify bracket orientation, screw engagement, hub stack-up and tolerances before fabrication.","The deck STL is an undrilled blank. The true-scale SVG is the proposed drill template; optional ballast marks are not released mounting holes.","The caster preload calculation is rigid nominal arithmetic, not a suspension, flatness, traction or wheel-loading guarantee.","Dual and single-caster configurations require E03 comparison. Metal-ball caster load and scrub limits remain relevant.","Motor maximum-efficiency data and ideal motor curves are not loaded or thermal validation. Driver, battery and controller remain unselected.","The 80 mm mule is separate from the 3-inch route-simulation baseline."]},"selected":{"sku":"4754","wheel_diameter_mm":80,"support_configuration":"dual-front-rear"},"order":{"candidates":[{"id":"M50","sku":"4753","name":"Pololu 50:1 Metal Gearmotor 37Dx70L mm 12V with 64 CPR Encoder (Helical Pinion)","role":"speed/efficiency alternative","unit_price_usd":60.95,"availability":"Backorder shown; backorders allowed; no ship date verified","gear_ratio":50,"no_load_rpm":200,"no_load_speed_margin":2.617994,"max_efficiency":{"rpm":180,"torque_kgcm":2.2,"current_a":0.66,"efficiency_pct":51,"output_w":4,"torque_nm":0.215746,"speed_margin":2.356194,"torque_margin":1.566171},"max_efficiency_point_exceeds_both_gates":true,"output_cpr":3200,"encoder_quantum_in":0.00294524,"encoder_gate_pass":true,"stall_current_a_extrapolated":5.5,"stall_torque_kgcm_extrapolated":21,"mass_g":205,"size_mm":"37D x 70L","shaft":"6 mm D, 16 mm long","product_url":"https://www.pololu.com/product/4753","source":"sources/hardware-2026-10-31/pololu/product-4753-specs.html","mule_80mm":{"id":"M50","sku":"4753","name":"Pololu 50:1 Metal Gearmotor 37Dx70L mm 12V with 64 CPR Encoder (Helical Pinion)","role":"speed/efficiency alternative","unit_price_usd":60.95,"availability":"Backorder shown; backorders allowed; no ship date verified","gear_ratio":50,"no_load_rpm":200,"no_load_speed_margin":2.74855,"max_efficiency":{"rpm":180,"torque_kgcm":2.2,"current_a":0.66,"efficiency_pct":51,"output_w":4,"torque_nm":0.215746,"speed_margin":2.473695,"torque_margin":1.491774},"max_efficiency_point_exceeds_both_gates":true,"output_cpr":3200,"encoder_quantum_in":0.00309212,"encoder_gate_pass":true,"stall_current_a_extrapolated":5.5,"stall_torque_kgcm_extrapolated":21,"mass_g":205,"size_mm":"37D x 70L","shaft":"6 mm D, 16 mm long","product_url":"https://www.pololu.com/product/4753","source":"sources/hardware-2026-10-31/pololu/product-4753-specs.html"}},{"id":"M70","sku":"4754","name":"Pololu 70:1 Metal Gearmotor 37Dx70L mm 12V with 64 CPR Encoder (Helical Pinion)","role":"recommended balanced Order A candidate","unit_price_usd":60.95,"availability":"Add to cart shown; backorders allowed; stock quantity and ship date not verified","gear_ratio":70,"no_load_rpm":150,"no_load_speed_margin":1.963495,"max_efficiency":{"rpm":130,"torque_kgcm":3.2,"current_a":0.68,"efficiency_pct":52,"output_w":4.2,"torque_nm":0.313813,"speed_margin":1.701696,"torque_margin":2.278067},"max_efficiency_point_exceeds_both_gates":true,"output_cpr":4480,"encoder_quantum_in":0.00210375,"encoder_gate_pass":true,"stall_current_a_extrapolated":5.5,"stall_torque_kgcm_extrapolated":27,"mass_g":205,"size_mm":"37D x 70L","shaft":"6 mm D, 16 mm long","product_url":"https://www.pololu.com/product/4754","source":"sources/hardware-2026-10-31/pololu/product-4754-specs.html","mule_80mm":{"id":"M70","sku":"4754","name":"Pololu 70:1 Metal Gearmotor 37Dx70L mm 12V with 64 CPR Encoder (Helical Pinion)","role":"recommended balanced Order A candidate","unit_price_usd":60.95,"availability":"Add to cart shown; backorders allowed; stock quantity and ship date not verified","gear_ratio":70,"no_load_rpm":150,"no_load_speed_margin":2.061413,"max_efficiency":{"rpm":130,"torque_kgcm":3.2,"current_a":0.68,"efficiency_pct":52,"output_w":4.2,"torque_nm":0.313813,"speed_margin":1.786558,"torque_margin":2.169853},"max_efficiency_point_exceeds_both_gates":true,"output_cpr":4480,"encoder_quantum_in":0.00220866,"encoder_gate_pass":true,"stall_current_a_extrapolated":5.5,"stall_torque_kgcm_extrapolated":27,"mass_g":205,"size_mm":"37D x 70L","shaft":"6 mm D, 16 mm long","product_url":"https://www.pololu.com/product/4754","source":"sources/hardware-2026-10-31/pololu/product-4754-specs.html"}},{"id":"M100","sku":"4755","name":"Pololu 100:1 Metal Gearmotor 37Dx73L mm 12V with 64 CPR Encoder (Helical Pinion)","role":"higher-torque/lower-speed alternative","unit_price_usd":60.95,"availability":"Add to cart shown; backorders allowed; stock quantity and ship date not verified","gear_ratio":102.08,"no_load_rpm":100,"no_load_speed_margin":1.308997,"max_efficiency":{"rpm":87,"torque_kgcm":4.2,"current_a":0.72,"efficiency_pct":44,"output_w":3.8,"torque_nm":0.411879,"speed_margin":1.138827,"torque_margin":2.989963},"max_efficiency_point_exceeds_both_gates":true,"output_cpr":6533,"encoder_quantum_in":0.00144264,"encoder_gate_pass":true,"stall_current_a_extrapolated":5.5,"stall_torque_kgcm_extrapolated":34,"mass_g":210,"size_mm":"37D x 72.5L (73L in product title)","shaft":"6 mm D, 16 mm long","product_url":"https://www.pololu.com/product/4755","source":"sources/hardware-2026-10-31/pololu/product-4755-specs.html","mule_80mm":{"id":"M100","sku":"4755","name":"Pololu 100:1 Metal Gearmotor 37Dx73L mm 12V with 64 CPR Encoder (Helical Pinion)","role":"higher-torque/lower-speed alternative","unit_price_usd":60.95,"availability":"Add to cart shown; backorders allowed; stock quantity and ship date not verified","gear_ratio":102.08,"no_load_rpm":100,"no_load_speed_margin":1.374275,"max_efficiency":{"rpm":87,"torque_kgcm":4.2,"current_a":0.72,"efficiency_pct":44,"output_w":3.8,"torque_nm":0.411879,"speed_margin":1.195619,"torque_margin":2.847932},"max_efficiency_point_exceeds_both_gates":true,"output_cpr":6533,"encoder_quantum_in":0.00151458,"encoder_gate_pass":true,"stall_current_a_extrapolated":5.5,"stall_torque_kgcm_extrapolated":34,"mass_g":210,"size_mm":"37D x 72.5L (73L in product title)","shaft":"6 mm D, 16 mm long","product_url":"https://www.pololu.com/product/4755","source":"sources/hardware-2026-10-31/pololu/product-4755-specs.html"}}],"totals":{"priced_order_a_subtotal_usd":177.25,"shipping_tax_landed_total_usd":null,"shipping_snapshot":{"advertised_policy":"Free shipping in USA over $100","quoted_shipping_usd":null,"quoted_tax_usd":null,"delivery_date":null,"note":"Eligibility, destination, method, stock quantity and delivery date were not verified; no landed total is claimed."},"unpriced_lines":["A-FAU-FIXTURE","A-BENCH-CONSUMABLES"]}},"matrix":{"configurations":[{"id":"M50-W80-dual-front-rear","motor_id":"M50","sku":"4753","wheel_diameter_mm":80,"support_configuration":"dual-front-rear","required_loaded_rpm":72.76564,"required_torque_nm":0.144624,"max_efficiency_rpm":180,"max_efficiency_torque_nm":0.215746,"speed_margin":2.473695,"torque_margin":1.491772,"output_cpr":3200,"encoder_quantum_in":0.00309212,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M50-W80-front-only","motor_id":"M50","sku":"4753","wheel_diameter_mm":80,"support_configuration":"front-only","required_loaded_rpm":72.76564,"required_torque_nm":0.144624,"max_efficiency_rpm":180,"max_efficiency_torque_nm":0.215746,"speed_margin":2.473695,"torque_margin":1.491772,"output_cpr":3200,"encoder_quantum_in":0.00309212,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M50-W80-rear-only","motor_id":"M50","sku":"4753","wheel_diameter_mm":80,"support_configuration":"rear-only","required_loaded_rpm":72.76564,"required_torque_nm":0.144624,"max_efficiency_rpm":180,"max_efficiency_torque_nm":0.215746,"speed_margin":2.473695,"torque_margin":1.491772,"output_cpr":3200,"encoder_quantum_in":0.00309212,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M50-W76p2-dual-front-rear","motor_id":"M50","sku":"4753","wheel_diameter_mm":76.2,"support_configuration":"dual-front-rear","required_loaded_rpm":76.394373,"required_torque_nm":0.137754,"max_efficiency_rpm":180,"max_efficiency_torque_nm":0.215746,"speed_margin":2.356194,"torque_margin":1.566169,"output_cpr":3200,"encoder_quantum_in":0.00294524,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M50-W76p2-front-only","motor_id":"M50","sku":"4753","wheel_diameter_mm":76.2,"support_configuration":"front-only","required_loaded_rpm":76.394373,"required_torque_nm":0.137754,"max_efficiency_rpm":180,"max_efficiency_torque_nm":0.215746,"speed_margin":2.356194,"torque_margin":1.566169,"output_cpr":3200,"encoder_quantum_in":0.00294524,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M50-W76p2-rear-only","motor_id":"M50","sku":"4753","wheel_diameter_mm":76.2,"support_configuration":"rear-only","required_loaded_rpm":76.394373,"required_torque_nm":0.137754,"max_efficiency_rpm":180,"max_efficiency_torque_nm":0.215746,"speed_margin":2.356194,"torque_margin":1.566169,"output_cpr":3200,"encoder_quantum_in":0.00294524,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M70-W80-dual-front-rear","motor_id":"M70","sku":"4754","wheel_diameter_mm":80,"support_configuration":"dual-front-rear","required_loaded_rpm":72.76564,"required_torque_nm":0.144624,"max_efficiency_rpm":130,"max_efficiency_torque_nm":0.313813,"speed_margin":1.786558,"torque_margin":2.169854,"output_cpr":4480,"encoder_quantum_in":0.00220866,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M70-W80-front-only","motor_id":"M70","sku":"4754","wheel_diameter_mm":80,"support_configuration":"front-only","required_loaded_rpm":72.76564,"required_torque_nm":0.144624,"max_efficiency_rpm":130,"max_efficiency_torque_nm":0.313813,"speed_margin":1.786558,"torque_margin":2.169854,"output_cpr":4480,"encoder_quantum_in":0.00220866,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M70-W80-rear-only","motor_id":"M70","sku":"4754","wheel_diameter_mm":80,"support_configuration":"rear-only","required_loaded_rpm":72.76564,"required_torque_nm":0.144624,"max_efficiency_rpm":130,"max_efficiency_torque_nm":0.313813,"speed_margin":1.786558,"torque_margin":2.169854,"output_cpr":4480,"encoder_quantum_in":0.00220866,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M70-W76p2-dual-front-rear","motor_id":"M70","sku":"4754","wheel_diameter_mm":76.2,"support_configuration":"dual-front-rear","required_loaded_rpm":76.394373,"required_torque_nm":0.137754,"max_efficiency_rpm":130,"max_efficiency_torque_nm":0.313813,"speed_margin":1.701696,"torque_margin":2.278068,"output_cpr":4480,"encoder_quantum_in":0.00210375,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M70-W76p2-front-only","motor_id":"M70","sku":"4754","wheel_diameter_mm":76.2,"support_configuration":"front-only","required_loaded_rpm":76.394373,"required_torque_nm":0.137754,"max_efficiency_rpm":130,"max_efficiency_torque_nm":0.313813,"speed_margin":1.701696,"torque_margin":2.278068,"output_cpr":4480,"encoder_quantum_in":0.00210375,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M70-W76p2-rear-only","motor_id":"M70","sku":"4754","wheel_diameter_mm":76.2,"support_configuration":"rear-only","required_loaded_rpm":76.394373,"required_torque_nm":0.137754,"max_efficiency_rpm":130,"max_efficiency_torque_nm":0.313813,"speed_margin":1.701696,"torque_margin":2.278068,"output_cpr":4480,"encoder_quantum_in":0.00210375,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M100-W80-dual-front-rear","motor_id":"M100","sku":"4755","wheel_diameter_mm":80,"support_configuration":"dual-front-rear","required_loaded_rpm":72.76564,"required_torque_nm":0.144624,"max_efficiency_rpm":87,"max_efficiency_torque_nm":0.411879,"speed_margin":1.195619,"torque_margin":2.84793,"output_cpr":6533,"encoder_quantum_in":0.00151458,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M100-W80-front-only","motor_id":"M100","sku":"4755","wheel_diameter_mm":80,"support_configuration":"front-only","required_loaded_rpm":72.76564,"required_torque_nm":0.144624,"max_efficiency_rpm":87,"max_efficiency_torque_nm":0.411879,"speed_margin":1.195619,"torque_margin":2.84793,"output_cpr":6533,"encoder_quantum_in":0.00151458,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M100-W80-rear-only","motor_id":"M100","sku":"4755","wheel_diameter_mm":80,"support_configuration":"rear-only","required_loaded_rpm":72.76564,"required_torque_nm":0.144624,"max_efficiency_rpm":87,"max_efficiency_torque_nm":0.411879,"speed_margin":1.195619,"torque_margin":2.84793,"output_cpr":6533,"encoder_quantum_in":0.00151458,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M100-W76p2-dual-front-rear","motor_id":"M100","sku":"4755","wheel_diameter_mm":76.2,"support_configuration":"dual-front-rear","required_loaded_rpm":76.394373,"required_torque_nm":0.137754,"max_efficiency_rpm":87,"max_efficiency_torque_nm":0.411879,"speed_margin":1.138827,"torque_margin":2.98996,"output_cpr":6533,"encoder_quantum_in":0.00144264,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M100-W76p2-front-only","motor_id":"M100","sku":"4755","wheel_diameter_mm":76.2,"support_configuration":"front-only","required_loaded_rpm":76.394373,"required_torque_nm":0.137754,"max_efficiency_rpm":87,"max_efficiency_torque_nm":0.411879,"speed_margin":1.138827,"torque_margin":2.98996,"output_cpr":6533,"encoder_quantum_in":0.00144264,"arithmetic_screen_pass":true,"physical_validation":false},{"id":"M100-W76p2-rear-only","motor_id":"M100","sku":"4755","wheel_diameter_mm":76.2,"support_configuration":"rear-only","required_loaded_rpm":76.394373,"required_torque_nm":0.137754,"max_efficiency_rpm":87,"max_efficiency_torque_nm":0.411879,"speed_margin":1.138827,"torque_margin":2.98996,"output_cpr":6533,"encoder_quantum_in":0.00144264,"arithmetic_screen_pass":true,"physical_validation":false}]},"nominal_geometry":{"axle_z_mm":40,"deck_top_z_mm":21.6,"deck_bottom_z_mm":16.6,"caster_height_with_selected_spacer_mm":16.675,"caster_contact_z_mm":-0.075,"wheel_track_mm":176,"overall_drive_width_mm":186,"overall_length_mm":190,"overall_height_mm":80,"motor_body_center_gap_mm":8,"wheel_deck_lateral_clearance_mm":3,"motor_hole_edge_ligament_mm":4.3},"sources":{"motor_step":"sources/hardware-2026-10-31/pololu/step/37d-gearmotor-50-70-encoder.step","bracket_step":"sources/hardware-2026-10-31/pololu/step/1995-machined-bracket.step","caster_step":"sources/hardware-2026-10-31/pololu/step/953-ball-caster.step","wheel_page":"sources/hardware-2026-10-31/pololu/product-1430-overview.html"}};
+
+</script><script>
+/* Detailed procedural hardware and routed wiring; no external models or dependencies. */
+(function (root, factory) {
+  const api = factory();
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  root.RobotLabHardware = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
+  const TAU = Math.PI*2, geometryCache = new Map();
+  const add = (a,b) => a.map((v,i) => v+b[i]);
+  const norm = a => { const n=Math.hypot(...a)||1; return a.map(v=>v/n); };
+  const cross = (a,b) => [a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+  const item = (mesh,pos,scale,material,extra={}) => ({mesh,pos,scale,material,rot:[0,0,0],...extra});
+  function context(p, selectedPart) {
+    const base = p.position || p.pos, selected = selectedPart === p.id, items = [];
+    const make = (mesh,offset,scale,material,extra={}) => { const value=item(mesh,add(base,offset),scale,material,{id:p.id,selected,...extra}); items.push(value); return value; };
+    return {p,make,items,
+      box:(o,s,m,e)=>make('bevelBox',o,s,m,e),
+      cyl:(o,s,m,e)=>make('cylinder',o,s,m,e),
+      ring:(o,s,m,e)=>make('ring',o,s,m,e),
+      sphere:(o,s,m,e)=>make('sphere',o,s,m,e)};
+  }
+  function screw(c, offset, radius=0.09) {
+    c.cyl(offset,[radius*2,radius*2,0.07],'steel');
+    c.box([offset[0],offset[1],offset[2]+0.04],[radius*1.25,0.025,0.012],'blackMetal');
+  }
+  function pcb(c, offset, size) {
+    c.box(offset,[size[0],size[1],0.09],'pcb');
+    for (const x of [-1,1]) for (const y of [-1,1]) screw(c,[offset[0]+x*(size[0]/2-0.14),offset[1]+y*(size[1]/2-0.14),offset[2]+0.08],0.055);
+  }
+  function chip(c, offset, size=[0.55,0.55,0.12]) {
+    c.box(offset,size,'ic');
+    c.box([offset[0],offset[1],offset[2]+size[2]/2+0.006],[size[0]*0.55,0.025,0.008],'silkscreen');
+  }
+  function header(c, offset, count=10, axis='x') {
+    const size=axis==='x'?[count*0.1+0.08,0.22,0.16]:[0.22,count*0.1+0.08,0.16];
+    c.box(offset,size,'blackPlastic');
+    for(let i=0;i<count;i++) {
+      const d=(i-(count-1)/2)*0.1, pos=[offset[0]+(axis==='x'?d:0),offset[1]+(axis==='y'?d:0),offset[2]+0.12];
+      c.box(pos,[0.035,0.035,0.16],'gold');
+    }
+  }
+  function capacitor(c, offset, radius=0.12, height=0.35) {
+    c.cyl(offset,[radius*2,radius*2,height],'capacitor');
+    c.cyl([offset[0],offset[1],offset[2]+height/2+0.006],[radius*1.75,radius*1.75,0.018],'aluminum');
+    c.box([offset[0],offset[1],offset[2]+height/2+0.018],[radius*1.1,0.018,0.008],'blackMetal');
+  }
+  function catmull(points, samples=8) {
+    const out=[];
+    for(let i=0;i<points.length-1;i++) {
+      const p0=points[Math.max(0,i-1)],p1=points[i],p2=points[i+1],p3=points[Math.min(points.length-1,i+2)];
+      for(let j=0;j<samples;j++) {
+        const t=j/samples,t2=t*t,t3=t2*t;
+        out.push([0,1,2].map(k=>0.5*((2*p1[k])+(-p0[k]+p2[k])*t+(2*p0[k]-5*p1[k]+4*p2[k]-p3[k])*t2+(-p0[k]+3*p1[k]-3*p2[k]+p3[k])*t3)));
+      }
+    }
+    out.push([...points[points.length-1]]); return out;
+  }
+  function tubeGeometry(wire) {
+    if(geometryCache.has(wire.id)) return geometryCache.get(wire.id);
+    const centers=catmull(wire.points,8),positions=[],normals=[],indices=[],sides=10,r=wire.diameter_in/2;
+    for(let i=0;i<centers.length;i++) {
+      const tangent=norm(centers[Math.min(i+1,centers.length-1)].map((v,k)=>v-centers[Math.max(0,i-1)][k]));
+      const ref=Math.abs(tangent[2])<0.9?[0,0,1]:[0,1,0],n=norm(cross(tangent,ref)),b=norm(cross(tangent,n));
+      for(let j=0;j<sides;j++) {
+        const a=j/sides*TAU,radial=n.map((v,k)=>v*Math.cos(a)+b[k]*Math.sin(a));
+        positions.push(...centers[i].map((v,k)=>v+radial[k]*r)); normals.push(...radial);
+      }
+    }
+    for(let i=0;i<centers.length-1;i++) for(let j=0;j<sides;j++) {
+      const a=i*sides+j,b=i*sides+(j+1)%sides,c=(i+1)*sides+j,d=(i+1)*sides+(j+1)%sides;
+      indices.push(a,c,b,b,c,d);
+    }
+    const geometry={positions,normals,indices}; geometryCache.set(wire.id,geometry); return geometry;
+  }
+
+  function detailPart(p,options={}) {
+    const c=context(p,options.selectedPart),s=options.state||{};
+    switch(p.id) {
+      case 'baseplate': {
+        c.box([0,0,0],[9,8,0.24],'aluminum');
+        for(const x of [-4.15,-2.8,0,2.8,4.15]) for(const y of [-3.65,3.65]) screw(c,[x,y,0.16]);
+        for(const x of [-2.8,0,2.8]) c.box([x,0,0.128],[1.3,4.8,0.016],'blackMetal');
+        break;
+      }
+      case 'rail-left': case 'rail-right': case 'cross-front': case 'cross-rear': {
+        c.box([0,0,0],p.size,'aluminum');
+        const alongX=p.size[0]>p.size[1];
+        c.box([0,0,p.size[2]/2+0.008],alongX?[p.size[0]*0.8,0.11,0.018]:[0.11,p.size[1]*0.8,0.018],'blackMetal');
+        const ends=alongX?[[-p.size[0]/2+0.25,0,p.size[2]/2+0.04],[p.size[0]/2-0.25,0,p.size[2]/2+0.04]]:[[0,-p.size[1]/2+0.25,p.size[2]/2+0.04],[0,p.size[1]/2-0.25,p.size[2]/2+0.04]];
+        ends.forEach(o=>screw(c,o)); break;
+      }
+      case 'motor-left': case 'motor-right': {
+        const sign=p.id.endsWith('left')?1:-1;
+        c.cyl([0,-sign*0.35,0],[1.25,1.25,1.65],'motorSteel',{rot:[Math.PI/2,0,0]});
+        c.cyl([0,-sign*1.15,0],[1.3,1.3,0.22],'blackMetal',{rot:[Math.PI/2,0,0]});
+        c.cyl([0,sign*0.62,0],[1.4,1.4,0.58],'gearbox',{rot:[Math.PI/2,0,0]});
+        c.cyl([0,sign*1.0,0],[0.24,0.24,0.55],'steel',{rot:[Math.PI/2,0,0]});
+        c.box([0,0,-0.68],[1.65,1.8,0.12],'blackMetal');
+        for(const x of [-0.55,0.55]) for(const y of [-0.55,0.55]) screw(c,[x,y,-0.59],0.07);
+        c.box([0.35,-sign*1.18,0.35],[0.48,0.16,0.4],'pcb');
+        for(let i=-3;i<=3;i++) c.box([i*0.16,-sign*0.35,0.63],[0.045,1.1,0.025],'blackMetal');
+        break;
+      }
+      case 'wheel-left': case 'wheel-right': {
+        const left=p.id.endsWith('left'),spin=(left?s.wheelLeft:s.wheelRight)||0;
+        c.ring([0,0,0],[3,3,0.82],'rubber',{rot:[Math.PI/2,spin,0]});
+        c.cyl([0,0,0],[1.55,1.55,0.86],'wheelHub',{rot:[Math.PI/2,spin,0]});
+        c.cyl([0,left?0.45:-0.45,0],[0.48,0.48,0.12],'steel',{rot:[Math.PI/2,0,0]});
+        for(let i=0;i<6;i++) {
+          const a=i/6*TAU+spin,x=Math.cos(a)*0.57,z=Math.sin(a)*0.57;
+          c.cyl([x,left?0.46:-0.46,z],[0.13,0.13,0.08],'steel',{rot:[Math.PI/2,0,0]});
+        }
+        for(const side of [-1,1]) c.ring([0,side*0.37,0],[2.72,2.72,0.055],'rubberSidewall',{rot:[Math.PI/2,0,0]});
+        break;
+      }
+      case 'caster-front': case 'caster-rear': {
+        c.sphere([0,0,-0.1],[0.75,0.75,0.75],'steel');
+        c.box([0,0,0.32],[1.0,0.85,0.12],'blackMetal');
+        for(const x of [-0.43,0.43]) c.box([x,0,0.02],[0.09,0.8,0.65],'zinc');
+        screw(c,[0,0,0.42]); break;
+      }
+      case 'battery': {
+        c.box([0,0,0],[3.2,1.8,1.35],'batteryWrap');
+        for(const x of [-0.8,0,0.8]) c.box([x,0,0.68],[0.035,1.65,0.02],'batterySeam');
+        c.box([0,0,0.69],[1.85,1.05,0.025],'batteryLabel');
+        c.box([0,0.12,0.71],[1.35,0.09,0.012],'silkscreen');
+        c.box([0,-0.12,0.71],[0.95,0.06,0.012],'silkscreen');
+        c.box([1.1,-0.15,0.12],[0.5,0.8,0.55],'connectorYellow');
+        for(const y of [-0.2,0.2]) c.box([1.36,y-0.15,0.12],[0.08,0.22,0.25],'gold');
+        for(const x of [-1.25,1.25]) c.box([x,0,0.75],[0.18,2.0,0.08],'strap');
+        break;
+      }
+      case 'power': {
+        pcb(c,[0,0,0],[2.4,1.2]);
+        for(let i=0;i<4;i++) {
+          c.box([-0.78+i*0.5,-0.38,0.18],[0.38,0.32,0.28],'terminalBlue');
+          screw(c,[-0.78+i*0.5,-0.38,0.35],0.06);
+        }
+        c.box([-0.1,0.25,0.24],[0.5,0.22,0.42],'fuseAmber');
+        c.box([1.2,1.1,0.15],[1.0,0.65,0.12],'pcb');
+        chip(c,[1.2,1.1,0.28],[0.42,0.35,0.15]);
+        capacitor(c,[1.48,1.1,0.38],0.1,0.32);
+        break;
+      }
+      case 'estop': {
+        c.cyl([0,0,-0.18],[1.25,1.25,0.18],'estopYellow');
+        c.cyl([0,0,0],[0.72,0.72,0.38],'blackPlastic');
+        c.cyl([0,0,0.28],[1.0,1.0,0.38],'estopRed');
+        c.cyl([0,0,0.49],[0.72,0.72,0.06],'estopRedTop');
+        c.box([0,0,-0.07],[1.5,0.18,0.03],'blackPlastic');
+        break;
+      }
+      case 'controller': {
+        pcb(c,[0,0,0],[3.5,3]);
+        chip(c,[0.25,0.25,0.15],[0.85,0.85,0.18]);
+        c.box([-1.45,0.65,0.25],[0.65,1.25,0.48],'connectorMetal');
+        for(const y of [-0.7,-0.05]) c.box([-1.55,y,0.2],[0.7,0.48,0.35],'connectorMetal');
+        for(const y of [-0.7,-0.05]) c.box([-1.91,y,0.2],[0.025,0.3,0.18],'blackPlastic');
+        header(c,[0.35,1.25,0.14],20,'x');
+        c.box([1.45,0.25,0.16],[0.35,1.1,0.24],'connectorWhite');
+        c.box([1.45,-0.9,0.13],[0.32,0.55,0.18],'connectorWhite');
+        for(let i=0;i<6;i++) capacitor(c,[-0.7+i*0.25,-1.1,0.18],0.055,0.18);
+        c.cyl([1.25,1.05,0.16],[0.15,0.15,0.08],'ledGreen');
+        break;
+      }
+      case 'driver': {
+        pcb(c,[0,0,0],[2.2,1.3]);
+        c.box([0,0.12,0.2],[1.25,0.75,0.16],'blackMetal');
+        for(let i=0;i<8;i++) c.box([-0.54+i*0.155,0.12,0.48],[0.055,0.8,0.55],'heatsink');
+        capacitor(c,[-0.8,0.35,0.35],0.13,0.45); capacitor(c,[0.82,0.35,0.35],0.13,0.45);
+        for(const x of [-0.75,-0.25,0.25,0.75]) {
+          c.box([x,-0.48,0.17],[0.36,0.3,0.26],'terminalBlue'); screw(c,[x,-0.48,0.33],0.055);
+        }
+        chip(c,[0.65,-0.05,0.14],[0.35,0.35,0.12]); break;
+      }
+      case 'mast': {
+        c.box([0,0,0],p.size,'aluminum');
+        c.box([0,-0.18,0],[0.12,0.025,p.size[2]*0.86],'blackMetal');
+        c.box([0,0,-p.size[2]/2+0.1],[1.1,1.1,0.16],'blackMetal');
+        for(const x of [-0.4,0.4]) for(const y of [-0.4,0.4]) screw(c,[x,y,-p.size[2]/2+0.2]);
+        break;
+      }
+      case 'camera': {
+        c.box([0,0,0],[0.85,1.5,0.8],'cameraBody');
+        c.box([-0.44,0,0],[0.08,1.35,0.68],'pcb');
+        c.cyl([0.52,0,0],[0.62,0.62,0.5],'lensBarrel',{rot:[0,Math.PI/2,0]});
+        c.cyl([0.79,0,0],[0.48,0.48,0.06],'lensGlass',{rot:[0,Math.PI/2,0]});
+        c.cyl([0.83,0,0],[0.22,0.22,0.025],'lensCoating',{rot:[0,Math.PI/2,0]});
+        for(const y of [-0.55,0.55]) screw(c,[0.44,y,0.25],0.055); break;
+      }
+      case 'range-front': case 'range-left': case 'range-right': {
+        pcb(c,[0,0,0],p.size);
+        const front=p.id==='range-front',rot=front?[0,Math.PI/2,0]:[Math.PI/2,0,0];
+        for(const d of [-0.32,0.32]) {
+          const o=front?[0.18,d,0.12]:[d,0,0.12];
+          c.cyl(o,[0.36,0.36,0.18],'lensBarrel',{rot});
+          const g=front?[0.28,d,0.12]:[d,front?0:0.1,0.12];
+          c.cyl(g,[0.25,0.25,0.03],'lensGlass',{rot});
+        }
+        chip(c,[0,0,0.12],[0.28,0.25,0.1]); break;
+      }
+      case 'line-array': {
+        pcb(c,[0,0,0],[0.5,4.5]);
+        for(let i=0;i<8;i++) {
+          const y=-1.85+i*0.53;
+          c.box([0,y,0.1],[0.32,0.28,0.15],'ic');
+          c.box([0.17,y,0.1],[0.035,0.12,0.08],'ledRed');
+        }
+        header(c,[0,2.0,0.13],5,'y'); break;
+      }
+      case 'fork-left': case 'fork-right': {
+        c.box([0,0,0],p.size,'forkOrange');
+        c.box([0.35,0,0.22],[1.1,0.3,0.12],'forkOrange');
+        for(const x of [-0.75,0.65]) screw(c,[x,0,0.23],0.07);
+        c.box([0.7,0,-0.2],[0.75,0.32,0.08],'rubberPad'); break;
+      }
+      case 'palm-left': case 'palm-right': {
+        c.box([0,0,0],p.size,'forkOrange');
+        c.box([0.18,0,0],[0.12,0.46,0.85],'rubberPad');
+        for(const z of [-0.35,0.35]) c.cyl([0.22,0,z],[0.12,0.12,0.08],'steel',{rot:[0,Math.PI/2,0]}); break;
+      }
+      case 'carried-tire': {
+        const blue=s.tire==='blue';
+        c.ring([0,0,0],[2.684,2.684,1.087],blue?'tireBlue':'tireRed');
+        for(const z of [-0.48,0.48]) c.ring([0,0,z],[2.56,2.56,0.07],blue?'tireBlue':'tireRed');
+        break;
+      }
+      case 'flag-mast': {
+        c.cyl([0,0,0],p.size,'steel');
+        c.cyl([0,0,-2.25],[0.5,0.5,0.35],'blackMetal');
+        c.cyl([0,0,2.48],[0.22,0.22,0.12],'gold'); break;
+      }
+      case 'flag': {
+        c.box([0,0,0],p.size,'flagFabric');
+        for(const y of [-1.05,1.05]) c.box([0,y,0],[0.12,0.12,1.42],'flagHem');
+        c.box([0.055,0,0.25],[0.02,1.3,0.18],'silkscreen'); break;
+      }
+      case 'cable-cover': {
+        c.cyl([0,0,0],[0.34,0.34,6],'conduit',{rot:[0,Math.PI/2,0]});
+        for(let x=-2.8;x<=2.8;x+=0.28) c.cyl([x,0,0],[0.39,0.39,0.055],'conduitRib',{rot:[0,Math.PI/2,0]});
+        break;
+      }
+      default: c.box([0,0,0],p.size,'plastic',{color:p.color});
+    }
+    return c.items;
+  }
+
+  function buildWires(wiring,options={}) {
+    if(!options.showWiring) return [];
+    const items=[],progress=options.progress===undefined?1:options.progress,lift=(1-progress)*9,state=options.state||{};
+    for(const w of wiring.wires) {
+      const current=options.Core?options.Core.netCurrent(w.net,state):0;
+      items.push(item('custom',[0,0,lift],[1,1,1],w.kind==='ground'?'wireBlack':'wire',{
+        id:w.id,wireId:w.id,geometry:tubeGeometry(w),color:w.color,activity:Math.min(1,Math.abs(current)/3),
+        current,selected:options.selectedWire===w.id,roughness:0.46
+      }));
+    }
+    for(const c of wiring.connectors) for(const [pin,pos] of Object.entries(c.pins)) {
+      items.push(item('bevelBox',[pos[0],pos[1],pos[2]+lift],[0.11,0.11,0.11],'gold',{id:c.part,connector:`${c.id}.${pin}`}));
+    }
+    return items;
+  }
+
+  function buildRobot(parts,wiring,options={}) {
+    const items=[];
+    for(const p of parts) {
+      const detail=detailPart(p,options);
+      if(options.xray && ['baseplate','rail-left','rail-right','cross-front','cross-rear','cable-cover'].includes(p.id)) for(const o of detail) o.alpha=0.2;
+      items.push(...detail);
+    }
+    const integration=parts.find(p=>p.id==='cable-cover');
+    items.push(...buildWires(wiring,{...options,progress:integration?integration.progress:1}));
+    return items;
+  }
+
+  function transformRobot(items,state) {
+    const c=Math.cos(state.theta),s=Math.sin(state.theta);
+    return items.map(o=>({...o,pos:[state.x+o.pos[0]*c-o.pos[1]*s,state.y+o.pos[0]*s+o.pos[1]*c,o.pos[2]],
+      rot:[o.rot[0],o.rot[1],o.rot[2]+state.theta]}));
+  }
+
+  return {buildRobot,buildWires,transformRobot,tubeGeometry,catmull,detailPart};
+});
+
+</script><script>
+/* Offline parametric Order A mule geometry; nominal visualization, not fabrication CAD. */
+(function(root,factory){const api=factory(typeof module==='object'&&module.exports?require('../robot-lab-v4/hardware'):root.RobotLabHardware);if(typeof module==='object'&&module.exports)module.exports=api;root.MuleStudioCore=api;})(typeof globalThis!=='undefined'?globalThis:this,function(Hardware){
+  'use strict';
+  const IN=1/25.4,round=(n,p=6)=>Number(n.toFixed(p));
+  function validateData(data){if(!data||data.status!=='selected-mule-studio-not-ordered-not-hardware-validated')throw new Error('explicit mule studio status required');if(!data.matrix||data.matrix.configurations.length!==18)throw new Error('18 configurations required');if(!data.order||data.order.totals.priced_order_a_subtotal_usd!==177.25)throw new Error('linked Order A total required');return true;}
+  function motor(data,sku){const m=data.order.candidates.find(x=>x.sku===String(sku));if(!m)throw new Error(`unknown motor ${sku}`);return m;}
+  function variant(data,selection){
+    validateData(data);const m=motor(data,selection.sku),wheel=Number(selection.wheel_diameter_mm),support=selection.support_configuration;
+    const row=data.matrix.configurations.find(x=>x.sku===m.sku&&x.wheel_diameter_mm===wheel&&x.support_configuration===support);if(!row)throw new Error('unknown configuration');const c=data.config,d=c.drive,r=wheel/2,length=m.id==='M100'?72.5:70;
+    const deck_top=r-c.bracket.shaft_center_above_mount_face_mm,deck_bottom=deck_top-c.deck.thickness_mm,caster_contact=deck_bottom-(c.caster.body_height_mm+c.caster.selected_spacer_mm),motor_gap=2*(d.gearbox_face_y_mm-length),clearance=d.wheel_center_y_mm-d.wheel_width_mm/2-c.deck.width_mm/2;
+    const warnings=[];if(Math.abs(caster_contact)>c.gates.caster_contact_tolerance_mm)warnings.push(`Caster contact ${round(caster_contact,3)} mm exceeds ±${c.gates.caster_contact_tolerance_mm} mm; change spacer/deck geometry.`);if(motor_gap<c.gates.minimum_motor_body_gap_mm)warnings.push(`Motor-body gap ${motor_gap} mm is below ${c.gates.minimum_motor_body_gap_mm} mm; move gearbox faces outward or revise deck.`);if(clearance<c.gates.minimum_wheel_deck_lateral_clearance_mm)warnings.push('Wheel/deck lateral clearance failed.');if(!row.arithmetic_screen_pass)warnings.push('Arithmetic motor/wheel gate failed.');
+    return{row,motor:m,wheel_diameter_mm:wheel,support_configuration:support,geometry:{wheel_radius_mm:r,motor_body_length_mm:length,deck_top_z_mm:round(deck_top),deck_bottom_z_mm:round(deck_bottom),caster_contact_z_mm:round(caster_contact),motor_body_center_gap_mm:round(motor_gap),wheel_deck_lateral_clearance_mm:round(clearance),wheel_track_mm:2*d.wheel_center_y_mm,overall_drive_width_mm:2*(d.wheel_center_y_mm+d.wheel_width_mm/2),overall_height_mm:wheel},warnings,status:warnings.length?'review-required':'nominal-digital-checks-pass'};
+  }
+  function buildItems(data,selection,options={}){
+    const v=variant(data,selection),c=data.config,d=c.drive,g=v.geometry,ex=Number(options.exploded)||0,items=[];
+    const item=(mesh,pos,scale,material,color,rot=[0,0,0],extra={})=>{const o={mesh,pos:pos.map(x=>x*IN),scale:scale.map(x=>x*IN),material,color,rot,...extra};items.push(o);return o;};
+    const deckColor=options.xray?'#425466':'#49677d';item('bevelBox',[0,0,(g.deck_top_z_mm+g.deck_bottom_z_mm)/2],[c.deck.length_mm,c.deck.width_mm,c.deck.thickness_mm],'plastic',deckColor,[0,0,0],options.xray?{alpha:.22}:{});
+    for(const side of[-1,1]){
+      const motorY=side*(d.gearbox_face_y_mm-g.motor_body_length_mm/2+ex*18),faceY=side*(d.gearbox_face_y_mm+ex*18),wheelY=side*(d.wheel_center_y_mm+ex*42),z=g.wheel_radius_mm;
+      item('cylinder',[0,motorY,z],[c.drive.motor_body_diameter_mm,c.drive.motor_body_diameter_mm,g.motor_body_length_mm],'aluminum','#9ba9b5',[Math.PI/2,0,0],{id:`motor-${side}`});
+      item('cylinder',[0,side*(d.gearbox_face_y_mm-5+ex*18),z],[37,37,10],'blackMetal','#566570',[Math.PI/2,0,0],{id:`gearbox-${side}`});
+      item('cylinder',[0,side*(d.gearbox_face_y_mm+8+ex*18),z],[6,6,16],'steel','#ccd5dc',[Math.PI/2,0,0]);
+      item('bevelBox',[0,faceY,z],[36.8,2.9,36.8],'aluminum','#bbc5ce',[0,0,0],{id:`bracket-${side}`});
+      item('bevelBox',[0,faceY-side*3.25,g.deck_top_z_mm+3.25],[36.8,6.5,6.5],'aluminum','#bbc5ce');
+      item('cylinder',[0,wheelY,z],[v.wheel_diameter_mm,v.wheel_diameter_mm,c.drive.wheel_width_mm],'rubber','#20252a',[Math.PI/2,0,0],{id:`wheel-${side}`});
+      item('cylinder',[0,wheelY-side*5.2,z],[28,28,1.8],'plastic','#303a43',[Math.PI/2,0,0]);
+      item('cylinder',[0,wheelY,z],[17,17,12],'aluminum','#bcc7cf',[Math.PI/2,0,0],{id:`hub-${side}`});
+      for(const x of[-14.8,0,14.8])item('cylinder',[x,faceY-side*2,g.deck_top_z_mm+1],[5,2,5],'steel','#d9e0e5');
+    }
+    item('bevelBox',[-45,0,g.deck_top_z_mm+4],[20,20,8],'blackPlastic','#202a33',[0,0,0],{id:'encoder-termination-proxy'});
+    const active=selection.support_configuration==='dual-front-rear'?c.caster.positions_x_mm:selection.support_configuration==='front-only'?[75]:[-75];
+    for(const x of active){const xx=x+Math.sign(x)*ex*25;item('sphere',[xx,0,g.caster_contact_z_mm+c.caster.ball_diameter_mm/2],[12.7,12.7,12.7],'steel','#9da9b2',[0,0,0],{id:`caster-${x}`});item('bevelBox',[xx,0,g.deck_bottom_z_mm-4],[20.3,15.2,8],'plastic','#303941');item('bevelBox',[xx,0,g.deck_top_z_mm+1],[24,20,2],'blackMetal','#9b7a2e');for(const dx of[-7.35,7.35])item('cylinder',[xx+dx,0,g.deck_top_z_mm+2.5],[4,4,2],'steel','#e5c14f');}
+    if(options.showWiring!==false&&ex<.05)items.push(...wires(data,g));
+    return{items,variant:v};
+  }
+  function wires(data,g){
+    const colors={red:'#e45d5d',black:'#20242a',green:'#4dbb72',blue:'#4591df',yellow:'#e5c14f',white:'#e8edf0'},items=[];
+    for(const side of[-1,1]){let index=0;for(const[name,color]of Object.entries(colors)){const start=[-12*IN,side*4*IN,(g.wheel_radius_mm+18)*IN],end=[-45*IN,(index-2.5)*3*IN,(g.deck_top_z_mm+9)*IN],mid=[(-25-index*2)*IN,side*(12+index*2)*IN,(g.deck_top_z_mm+40+index)*IN];const w={id:`encoder-${side}-${name}`,diameter_in:.035,points:[start,mid,end]};items.push({mesh:'custom',pos:[0,0,0],scale:[1,1,1],material:'wire',color,rot:[0,0,0],geometry:Hardware.tubeGeometry(w),id:w.id,wireId:w.id});index++;}}
+    return items;
+  }
+  return{validateData,variant,buildItems,wires};
+});
+
+</script><script>
+/* Offline WebGL hardware renderer: beveled meshes, PBR-style materials and PCF shadows. */
+(function (root) {
+  'use strict';
+  const TAU=Math.PI*2;
+  const add=(a,b)=>a.map((v,i)=>v+b[i]),sub=(a,b)=>a.map((v,i)=>v-b[i]),mul=(a,s)=>a.map(v=>v*s);
+  const dot=(a,b)=>a.reduce((s,v,i)=>s+v*b[i],0),cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+  const norm=a=>mul(a,1/(Math.hypot(...a)||1));
+  function multiply(a,b){const o=new Array(16).fill(0);for(let c=0;c<4;c++)for(let r=0;r<4;r++)for(let k=0;k<4;k++)o[c*4+r]+=a[k*4+r]*b[c*4+k];return o;}
+  const translation=p=>[1,0,0,0,0,1,0,0,0,0,1,0,p[0],p[1],p[2],1],scaling=s=>[s[0],0,0,0,0,s[1],0,0,0,0,s[2],0,0,0,0,1];
+  const rotationX=a=>[1,0,0,0,0,Math.cos(a),Math.sin(a),0,0,-Math.sin(a),Math.cos(a),0,0,0,0,1];
+  const rotationY=a=>[Math.cos(a),0,-Math.sin(a),0,0,1,0,0,Math.sin(a),0,Math.cos(a),0,0,0,0,1];
+  const rotationZ=a=>[Math.cos(a),Math.sin(a),0,0,-Math.sin(a),Math.cos(a),0,0,0,0,1,0,0,0,0,1];
+  function modelMatrix(o){const r=o.rot||[0,0,0];let m=translation(o.pos);m=multiply(m,rotationZ(r[2]||0));m=multiply(m,rotationY(r[1]||0));m=multiply(m,rotationX(r[0]||0));return multiply(m,scaling(o.scale));}
+  function perspective(fov,aspect,near,far){const f=1/Math.tan(fov/2),nf=1/(near-far);return[f/aspect,0,0,0,0,f,0,0,0,0,(far+near)*nf,-1,0,0,2*far*near*nf,0];}
+  function ortho(l,r,b,t,n,f){return[2/(r-l),0,0,0,0,2/(t-b),0,0,0,0,-2/(f-n),0,-(r+l)/(r-l),-(t+b)/(t-b),-(f+n)/(f-n),1];}
+  function lookAt(eye,target){const z=norm(sub(eye,target)),x=norm(cross([0,0,1],z)),y=cross(z,x);return[x[0],y[0],z[0],0,x[1],y[1],z[1],0,x[2],y[2],z[2],0,-dot(x,eye),-dot(y,eye),-dot(z,eye),1];}
+  function cameraEye(camera){const cp=Math.cos(camera.pitch);return add(camera.target,[camera.distance*cp*Math.cos(camera.yaw),camera.distance*cp*Math.sin(camera.yaw),camera.distance*Math.sin(camera.pitch)]);}
+  function cameraMatrix(camera,aspect){return multiply(perspective(Math.PI/4,aspect,0.1,600),lookAt(cameraEye(camera),camera.target));}
+  function color(hex){const n=parseInt((hex||'#ffffff').replace('#',''),16);return[(n>>16&255)/255,(n>>8&255)/255,(n&255)/255];}
+  const materials={
+    aluminum:['#a9b2b8',0.86,0.3,1],steel:['#c2cbd0',0.92,0.22,1],zinc:['#8e9aa2',0.82,0.36,1],blackMetal:['#252d33',0.78,0.34,0],motorSteel:['#aeb8bd',0.9,0.26,1],gearbox:['#b29b68',0.8,0.3,1],gold:['#caa854',0.84,0.24,0],heatsink:['#4c5960',0.88,0.27,1],connectorMetal:['#a8b0b5',0.86,0.24,0],
+    rubber:['#202326',0.02,0.82,2],rubberSidewall:['#292d30',0.01,0.74,2],rubberPad:['#242729',0,0.9,2],tireRed:['#b82e35',0,0.78,2],tireBlue:['#246aa4',0,0.78,2],wheelHub:['#d4d7d5',0.65,0.32,0],
+    pcb:['#17674d',0.12,0.48,3],ic:['#171b1e',0.05,0.58,0],blackPlastic:['#20262b',0,0.5,0],plastic:['#76828c',0,0.52,0],cameraBody:['#24292d',0.05,0.38,0],lensBarrel:['#161b20',0.5,0.25,0],lensGlass:['#152d3c',0.65,0.08,0],lensCoating:['#304a71',0.72,0.06,0],silkscreen:['#e6e9df',0,0.6,0],capacitor:['#252d35',0.35,0.38,0],terminalBlue:['#236e9e',0,0.48,0],connectorWhite:['#dedfd6',0,0.52,0],connectorYellow:['#e2ad27',0,0.5,0],fuseAmber:['#cc791c',0.05,0.32,0],
+    batteryWrap:['#245681',0.05,0.42,0],batterySeam:['#183c5d',0,0.55,0],batteryLabel:['#d7d9d2',0,0.62,0],strap:['#25292b',0,0.86,0],estopYellow:['#e5b928',0,0.45,0],estopRed:['#b92727',0,0.34,0],estopRedTop:['#d13b35',0,0.3,0],forkOrange:['#d87332',0,0.58,0],flagFabric:['#b8d943',0,0.88,0],flagHem:['#78942b',0,0.86,0],conduit:['#b78c28',0,0.62,0],conduitRib:['#d2a93c',0,0.55,0],wire:['#ffffff',0,0.48,0],wireBlack:['#252a2e',0,0.58,0],field:['#52575a',0,0.88,0],wall:['#a4a6a2',0,0.78,0],path:['#54b6d4',0.1,0.42,0],
+    ledGreen:['#4cf58a',0,0.25,0,1.8],ledRed:['#ef4b42',0,0.25,0,1.2]
+  };
+  function bevelBox(segments=4,radius=0.075){const p=[],n=[],idx=[];const faces=[[[1,0,0],[0,1,0],[0,0,1]],[[-1,0,0],[0,-1,0],[0,0,1]],[[0,1,0],[0,0,1],[1,0,0]],[[0,-1,0],[0,0,-1],[1,0,0]],[[0,0,1],[1,0,0],[0,1,0]],[[0,0,-1],[-1,0,0],[0,1,0]]];
+    for(const [normal,u,v] of faces){const base=p.length/3;for(let j=0;j<=segments;j++)for(let i=0;i<=segments;i++){const point=[0,1,2].map(k=>normal[k]*0.5+u[k]*(i/segments-0.5)+v[k]*(j/segments-0.5));const inner=point.map(x=>Math.max(-0.5+radius,Math.min(0.5-radius,x))),d=norm(point.map((x,k)=>x-inner[k]));p.push(...point.map((x,k)=>inner[k]+d[k]*radius));n.push(...d);}for(let j=0;j<segments;j++)for(let i=0;i<segments;i++){const a=base+j*(segments+1)+i,b=a+1,c=a+segments+1,d=c+1;idx.push(a,b,c,b,d,c);}}
+    return{positions:p,normals:n,indices:idx};
+  }
+  function cylinder(segments=64){const p=[],n=[],idx=[];for(let i=0;i<=segments;i++){const a=i/segments*TAU,x=Math.cos(a),y=Math.sin(a);p.push(x,y,-.5,x,y,.5);n.push(x,y,0,x,y,0);}for(let i=0;i<segments;i++){const a=i*2;idx.push(a,a+2,a+1,a+1,a+2,a+3);}for(const z of[-.5,.5]){const center=p.length/3;p.push(0,0,z);n.push(0,0,Math.sign(z));for(let i=0;i<=segments;i++){const a=i/segments*TAU;p.push(Math.cos(a),Math.sin(a),z);n.push(0,0,Math.sign(z));}for(let i=0;i<segments;i++){if(z>0)idx.push(center,center+i+1,center+i+2);else idx.push(center,center+i+2,center+i+1);}}return{positions:p,normals:n,indices:idx};}
+  function ring(segments=64){const p=[],n=[],idx=[];const quad=(verts,normals)=>{const base=p.length/3;verts.forEach((v,i)=>{p.push(...v);n.push(...(Array.isArray(normals[0])?normals[i]:normals));});idx.push(base,base+1,base+2,base,base+2,base+3);};const r=.5,ri=.295;
+    for(let i=0;i<segments;i++){const a=i/segments*TAU,b=(i+1)/segments*TAU,ca=Math.cos(a),sa=Math.sin(a),cb=Math.cos(b),sb=Math.sin(b);
+      quad([[ca*r,sa*r,-.5],[cb*r,sb*r,-.5],[cb*r,sb*r,.5],[ca*r,sa*r,.5]],[[ca,sa,0],[cb,sb,0],[cb,sb,0],[ca,sa,0]]);
+      quad([[ca*ri,sa*ri,.5],[cb*ri,sb*ri,.5],[cb*ri,sb*ri,-.5],[ca*ri,sa*ri,-.5]],[[-ca,-sa,0],[-cb,-sb,0],[-cb,-sb,0],[-ca,-sa,0]]);
+      quad([[ca*r,sa*r,.5],[cb*r,sb*r,.5],[cb*ri,sb*ri,.5],[ca*ri,sa*ri,.5]],[0,0,1]);
+      quad([[ca*r,sa*r,-.5],[ca*ri,sa*ri,-.5],[cb*ri,sb*ri,-.5],[cb*r,sb*r,-.5]],[0,0,-1]);
+    }return{positions:p,normals:n,indices:idx};
+  }
+  function sphere(lat=16,lon=28){const p=[],n=[],idx=[];for(let y=0;y<=lat;y++)for(let x=0;x<=lon;x++){const t=y/lat*Math.PI,a=x/lon*TAU,v=[Math.sin(t)*Math.cos(a),Math.sin(t)*Math.sin(a),Math.cos(t)];p.push(...v);n.push(...v);}for(let y=0;y<lat;y++)for(let x=0;x<lon;x++){const a=y*(lon+1)+x,b=a+1,c=a+lon+1,d=c+1;idx.push(a,c,b,b,c,d);}return{positions:p,normals:n,indices:idx};}
+  function createRenderer(canvas){const gl=canvas.getContext('webgl',{antialias:true,alpha:false,powerPreference:'high-performance'});if(!gl)throw new Error('WebGL is unavailable. Enable browser graphics acceleration to open Hardware Studio.');
+    const vertex=`attribute vec3 aPosition;attribute vec3 aNormal;uniform mat4 uModel,uViewProjection,uLightVP;uniform vec3 uScale;varying vec3 vWorld,vNormal,vLocal;varying vec4 vShadow;void main(){vec4 world=uModel*vec4(aPosition,1.0);vWorld=world.xyz;vLocal=aPosition;vNormal=normalize(mat3(uModel)*(aNormal/max(uScale,vec3(0.0001))));vShadow=uLightVP*world;gl_Position=uViewProjection*world;}`;
+    const fragment=`precision highp float;varying vec3 vWorld,vNormal,vLocal;varying vec4 vShadow;uniform vec3 uColor,uEye;uniform float uMetal,uRough,uSelected,uAlpha,uActivity,uTime,uTexture,uEmissive,uShadowEnabled;uniform sampler2D uShadowMap;
+      float hash(vec3 p){return fract(sin(dot(p,vec3(17.13,91.71,43.77)))*43758.5453);}
+      float shadow(vec3 n,vec3 l){if(uShadowEnabled<0.5)return 1.0;vec3 s=vShadow.xyz/vShadow.w*0.5+0.5;if(s.x<0.0||s.x>1.0||s.y<0.0||s.y>1.0||s.z>1.0)return 1.0;float bias=max(0.00035*(1.0-dot(n,l)),0.00012),sum=0.0;for(int x=-1;x<=1;x++)for(int y=-1;y<=1;y++){float d=texture2D(uShadowMap,s.xy+vec2(float(x),float(y))/1024.0).r;sum+=s.z-bias<=d?1.0:0.45;}return sum/9.0;}
+      void main(){vec3 N=normalize(vNormal),V=normalize(uEye-vWorld),base=pow(uColor,vec3(2.2));float rough=uRough;
+        if(uTexture>0.5&&uTexture<1.5){float brush=hash(vec3(vLocal.x*4.0,vLocal.y*180.0,vLocal.z*180.0));rough=clamp(rough+(brush-0.5)*0.12,0.08,1.0);base*=0.92+brush*0.12;}
+        if(uTexture>1.5&&uTexture<2.5){float angle=atan(vLocal.y,vLocal.x)/6.2831853;float tread=smoothstep(0.72,0.82,fract(angle*24.0+vLocal.z*2.0));base*=1.0-tread*0.32;rough=clamp(rough+hash(vLocal*90.0)*0.08,0.0,1.0);}
+        if(uTexture>2.5){base*=0.95+hash(vLocal*65.0)*0.1;}
+        vec3 L=normalize(vec3(-0.48,-0.62,0.9)),H=normalize(V+L);float NdotL=max(dot(N,L),0.0),NdotV=max(dot(N,V),0.001),NdotH=max(dot(N,H),0.0),VdotH=max(dot(V,H),0.0);float a=rough*rough,a2=a*a,den=NdotH*NdotH*(a2-1.0)+1.0,D=a2/(3.14159265*den*den+0.0001);float k=(rough+1.0)*(rough+1.0)/8.0,G=NdotV/(NdotV*(1.0-k)+k)*NdotL/(NdotL*(1.0-k)+k);vec3 F0=mix(vec3(0.04),base,uMetal),F=F0+(1.0-F0)*pow(1.0-VdotH,5.0);vec3 spec=D*G*F/max(0.001,4.0*NdotV*NdotL);vec3 diff=(1.0-F)*(1.0-uMetal)*base/3.14159265;float sh=shadow(N,L);vec3 lit=(diff+spec)*vec3(1.0,0.94,0.84)*NdotL*sh*3.2;
+        vec3 fillDir=normalize(vec3(0.65,0.3,0.55));float fill=max(dot(N,fillDir),0.0);lit+=base*(0.12+0.16*max(N.z,0.0))+base*fill*vec3(0.18,0.25,0.34);lit+=F0*pow(1.0-NdotV,3.0)*0.22;
+        float pulse=0.5+0.5*sin((vWorld.x+vWorld.y)*4.0-uTime*8.0);lit+=base*uActivity*pulse*0.3;lit+=uColor*uEmissive;lit+=vec3(0.55,0.9,0.15)*uSelected*(0.18+0.35*pow(1.0-NdotV,2.0));lit=lit/(lit+vec3(1.0));lit=pow(lit,vec3(1.0/2.2));gl_FragColor=vec4(lit,uAlpha);}`;
+    const depthVertex=`attribute vec3 aPosition;uniform mat4 uModel,uViewProjection;void main(){gl_Position=uViewProjection*uModel*vec4(aPosition,1.0);}`,depthFragment=`precision mediump float;void main(){gl_FragColor=vec4(1.0);}`;
+    function program(vs,fs){const shader=(type,source)=>{const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(s));return s;};const p=gl.createProgram();gl.attachShader(p,shader(gl.VERTEX_SHADER,vs));gl.attachShader(p,shader(gl.FRAGMENT_SHADER,fs));gl.linkProgram(p);if(!gl.getProgramParameter(p,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(p));return p;}
+    const main=program(vertex,fragment),depth=program(depthVertex,depthFragment),uniforms=(p,names)=>Object.fromEntries(names.map(n=>[n,gl.getUniformLocation(p,n)]));
+    const loc={position:gl.getAttribLocation(main,'aPosition'),normal:gl.getAttribLocation(main,'aNormal'),...uniforms(main,['uModel','uViewProjection','uLightVP','uScale','uColor','uEye','uMetal','uRough','uSelected','uAlpha','uActivity','uTime','uTexture','uEmissive','uShadowEnabled','uShadowMap'])};
+    const depthLoc={position:gl.getAttribLocation(depth,'aPosition'),...uniforms(depth,['uModel','uViewProjection'])};
+    function upload(g){const m={count:g.indices.length};for(const key of['positions','normals']){const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(g[key]),gl.STATIC_DRAW);m[key]=buffer;}m.index=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,m.index);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint16Array(g.indices),gl.STATIC_DRAW);return m;}
+    const meshes={box:upload(bevelBox(1,0.02)),bevelBox:upload(bevelBox()),cylinder:upload(cylinder()),ring:upload(ring()),sphere:upload(sphere())},custom=new WeakMap();
+    function bind(m,l){gl.bindBuffer(gl.ARRAY_BUFFER,m.positions);gl.enableVertexAttribArray(l.position);gl.vertexAttribPointer(l.position,3,gl.FLOAT,false,0,0);if(l.normal!==undefined&&l.normal>=0){gl.bindBuffer(gl.ARRAY_BUFFER,m.normals);gl.enableVertexAttribArray(l.normal);gl.vertexAttribPointer(l.normal,3,gl.FLOAT,false,0,0);}gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,m.index);}
+    function meshFor(o){if(o.geometry){if(!custom.has(o.geometry))custom.set(o.geometry,upload(o.geometry));return custom.get(o.geometry);}return meshes[o.mesh||'bevelBox']||meshes.bevelBox;}
+    let shadow=null;const depthExtension=gl.getExtension('WEBGL_depth_texture');
+    if(depthExtension){const texture=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,texture);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.NEAREST);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.NEAREST);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.texImage2D(gl.TEXTURE_2D,0,gl.DEPTH_COMPONENT,1024,1024,0,gl.DEPTH_COMPONENT,gl.UNSIGNED_INT,null);const framebuffer=gl.createFramebuffer();gl.bindFramebuffer(gl.FRAMEBUFFER,framebuffer);gl.framebufferTexture2D(gl.FRAMEBUFFER,gl.DEPTH_ATTACHMENT,gl.TEXTURE_2D,texture,0);if(gl.checkFramebufferStatus(gl.FRAMEBUFFER)===gl.FRAMEBUFFER_COMPLETE)shadow={texture,framebuffer};gl.bindFramebuffer(gl.FRAMEBUFFER,null);}
+    let latestVP=null,stats={instances:0,triangles:0,drawCalls:0,shadows:Boolean(shadow)};
+    function resize(){const ratio=Math.min(2,globalThis.devicePixelRatio||1),w=Math.max(1,Math.round(canvas.clientWidth*ratio)),h=Math.max(1,Math.round(canvas.clientHeight*ratio));if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}return canvas.width/canvas.height;}
+    function lightMatrix(items){const min=[Infinity,Infinity,Infinity],max=[-Infinity,-Infinity,-Infinity];for(const o of items){if(o.mesh==='custom')continue;for(let k=0;k<3;k++){min[k]=Math.min(min[k],o.pos[k]);max[k]=Math.max(max[k],o.pos[k]);}}if(!Number.isFinite(min[0]))return multiply(ortho(-30,30,-30,30,1,150),lookAt([-30,-40,70],[0,0,0]));const center=min.map((v,k)=>(v+max[k])/2),extent=Math.max(max[0]-min[0],max[1]-min[1])*0.72+12,eye=add(center,[-extent*0.7,-extent*0.9,extent*1.65]);return multiply(ortho(-extent,extent,-extent,extent,0.5,extent*5),lookAt(eye,center));}
+    function render(instances,camera,options={}){const aspect=resize(),lightVP=lightMatrix(instances);stats={instances:instances.length,triangles:0,drawCalls:0,shadows:Boolean(shadow)};
+      if(shadow){gl.bindFramebuffer(gl.FRAMEBUFFER,shadow.framebuffer);gl.viewport(0,0,1024,1024);gl.clear(gl.DEPTH_BUFFER_BIT);gl.enable(gl.DEPTH_TEST);gl.enable(gl.CULL_FACE);gl.cullFace(gl.BACK);gl.useProgram(depth);gl.uniformMatrix4fv(depthLoc.uViewProjection,false,new Float32Array(lightVP));for(const o of instances){if(o.castShadow===false)continue;const m=meshFor(o);bind(m,depthLoc);gl.uniformMatrix4fv(depthLoc.uModel,false,new Float32Array(modelMatrix(o)));gl.drawElements(gl.TRIANGLES,m.count,gl.UNSIGNED_SHORT,0);}gl.bindFramebuffer(gl.FRAMEBUFFER,null);}
+      gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(0.025,0.038,0.055,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.enable(gl.DEPTH_TEST);gl.enable(gl.CULL_FACE);gl.cullFace(gl.BACK);gl.useProgram(main);latestVP=cameraMatrix(camera,aspect);gl.uniformMatrix4fv(loc.uViewProjection,false,new Float32Array(latestVP));gl.uniformMatrix4fv(loc.uLightVP,false,new Float32Array(lightVP));gl.uniform3fv(loc.uEye,cameraEye(camera));gl.uniform1f(loc.uTime,options.time||0);gl.uniform1f(loc.uShadowEnabled,shadow?1:0);gl.uniform1i(loc.uShadowMap,0);gl.activeTexture(gl.TEXTURE0);if(shadow)gl.bindTexture(gl.TEXTURE_2D,shadow.texture);
+      const ordered=[...instances].sort((a,b)=>(a.alpha===undefined?1:a.alpha)-(b.alpha===undefined?1:b.alpha));
+      for(const o of ordered){const mat=materials[o.material]||materials.plastic,m=meshFor(o),alpha=o.alpha===undefined?1:o.alpha;if(alpha<1){gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);gl.depthMask(false);}else{gl.disable(gl.BLEND);gl.depthMask(true);}bind(m,loc);gl.uniformMatrix4fv(loc.uModel,false,new Float32Array(modelMatrix(o)));gl.uniform3fv(loc.uScale,o.scale);gl.uniform3fv(loc.uColor,color(o.color||mat[0]));gl.uniform1f(loc.uMetal,o.metalness===undefined?mat[1]:o.metalness);gl.uniform1f(loc.uRough,o.roughness===undefined?mat[2]:o.roughness);gl.uniform1f(loc.uTexture,mat[3]||0);gl.uniform1f(loc.uEmissive,mat[4]||0);gl.uniform1f(loc.uSelected,o.selected?1:0);gl.uniform1f(loc.uAlpha,alpha);gl.uniform1f(loc.uActivity,o.activity||0);gl.drawElements(gl.TRIANGLES,m.count,gl.UNSIGNED_SHORT,0);stats.drawCalls++;stats.triangles+=m.count/3;}gl.depthMask(true);gl.disable(gl.BLEND);
+    }
+    function project(point){if(!latestVP)return null;const m=latestVP,x=m[0]*point[0]+m[4]*point[1]+m[8]*point[2]+m[12],y=m[1]*point[0]+m[5]*point[1]+m[9]*point[2]+m[13],w=m[3]*point[0]+m[7]*point[1]+m[11]*point[2]+m[15];if(w<=0)return null;return{x:(x/w*.5+.5)*canvas.clientWidth,y:(.5-y/w*.5)*canvas.clientHeight};}
+    return{render,project,resize,getStats:()=>({...stats}),meshCounts:()=>Object.fromEntries(Object.entries(meshes).map(([k,v])=>[k,v.count/3]))};
+  }
+  root.RobotLabRenderer={createRenderer,multiply,modelMatrix,cameraMatrix,materials};
+})(typeof globalThis!=='undefined'?globalThis:this);
+
+</script><script>
+/* Browser controller for the offline parametric Mule Studio. */
+(function(){
+  'use strict';
+  const data=globalThis.MULE_STUDIO_DATA,Core=globalThis.MuleStudioCore,$=id=>document.getElementById(id),canvas=$('view');
+  if(!data||!Core||!globalThis.RobotLabRenderer)throw new Error('Mule Studio scripts did not load.');Core.validateData(data);
+  let renderer;try{renderer=globalThis.RobotLabRenderer.createRenderer(canvas);}catch(error){$('webgl-error').hidden=false;$('webgl-error').textContent=error.message;console.error(error);}
+  const selection={...data.selected},camera={target:[0,0,1.3],distance:22,yaw:-.9,pitch:.78};let exploded=0,showWiring=true,xray=false,dirty=true,lastScene=null;
+  const box=(pos,scale,color,material='plastic')=>({mesh:'bevelBox',pos,scale,color,material,rot:[0,0,0]});
+  function scene(){const built=Core.buildItems(data,selection,{exploded,showWiring,xray}),items=[box([0,0,-.16],[15,13,.25],'#202c36')];for(let x=-7;x<=7;x++)items.push(box([x,0,-.025],[.018,12,.018],'#425362','blackMetal'));for(let y=-6;y<=6;y++)items.push(box([0,y,-.025],[14,.018,.018],'#425362','blackMetal'));items.push(...built.items);return{...built,items};}
+  function metric(id,text){$(id).textContent=text;}
+  function update(v){const r=v.row,g=v.geometry;metric('speed-margin',`${r.speed_margin.toFixed(3)}×`);metric('torque-margin',`${r.torque_margin.toFixed(3)}×`);metric('motor-rpm',`${r.max_efficiency_rpm} RPM`);metric('motor-torque',`${r.max_efficiency_torque_nm.toFixed(3)} N·m`);metric('output-cpr',String(r.output_cpr));metric('encoder-quantum',`${r.encoder_quantum_in.toFixed(5)} in`);metric('track',`${g.wheel_track_mm} mm`);metric('width',`${g.overall_drive_width_mm} mm`);metric('motor-gap',`${g.motor_body_center_gap_mm} mm`);metric('caster-contact',`${g.caster_contact_z_mm} mm`);
+    $('view-badge').textContent=`${v.motor.id} · ${v.wheel_diameter_mm} MM · ${v.support_configuration.toUpperCase()}`;$('view-status').textContent=v.warnings.length?`${v.warnings.length} geometry review flag${v.warnings.length===1?'':'s'}`:'Nominal digital checks pass';$('view-status').style.color=v.warnings.length?'#f09a67':'#48c3b1';
+    const warnings=$('warnings');warnings.replaceChildren();warnings.classList.toggle('review',v.warnings.length>0);if(v.warnings.length){const ul=document.createElement('ul');for(const text of v.warnings){const li=document.createElement('li');li.textContent=text;ul.appendChild(li);}warnings.appendChild(ul);}else warnings.textContent='No nominal geometry flags. E02/E03 still required.';
+  }
+  function render(){const s=scene();lastScene=s;if(renderer)renderer.render(s.items,camera,{time:0});update(s.variant);const stats=renderer?renderer.getStats():{instances:0,triangles:0,shadows:false};$('render-stats').textContent=`${stats.instances} meshes · ${Math.round(stats.triangles/1000)}k triangles\n${stats.shadows?'PCF shadows':'WebGL'}`;}
+  function invalidate(){dirty=true;}for(const[id,key,number]of[['motor','sku',false],['wheel','wheel_diameter_mm',true],['support','support_configuration',false]])$(id).addEventListener('change',()=>{selection[key]=number?Number($(id).value):$(id).value;invalidate();});
+  $('exploded').addEventListener('input',()=>{exploded=Number($('exploded').value);$('exploded-value').textContent=`${Math.round(exploded*100)}%`;invalidate();});$('show-wiring').addEventListener('change',()=>{showWiring=$('show-wiring').checked;invalidate();});$('xray').addEventListener('change',()=>{xray=$('xray').checked;invalidate();});
+  function cameraPreset(name){if(name==='top')Object.assign(camera,{target:[0,0,1],distance:18,yaw:0,pitch:1.52});else if(name==='detail')Object.assign(camera,{target:[0,0,1.4],distance:10,yaw:-.75,pitch:.55});else Object.assign(camera,{target:[0,0,1.3],distance:22,yaw:-.9,pitch:.78});invalidate();}
+  for(const b of document.querySelectorAll('[data-camera]'))b.addEventListener('click',()=>cameraPreset(b.dataset.camera));$('fullscreen').addEventListener('click',()=>document.querySelector('.viewer-wrap').requestFullscreen?.());
+  let drag=null;canvas.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId);});canvas.addEventListener('pointermove',e=>{if(!drag)return;camera.yaw-=(e.clientX-drag.x)*.008;camera.pitch=Math.max(.08,Math.min(1.54,camera.pitch+(e.clientY-drag.y)*.006));drag={x:e.clientX,y:e.clientY};invalidate();});canvas.addEventListener('pointerup',()=>{drag=null;});canvas.addEventListener('pointercancel',()=>{drag=null;});canvas.addEventListener('wheel',e=>{e.preventDefault();camera.distance=Math.max(5,Math.min(40,camera.distance*Math.exp(e.deltaY*.001)));invalidate();},{passive:false});
+  function tick(){if(dirty){render();dirty=false;}requestAnimationFrame(tick);}globalThis.muleStudio={getDiagnostics:()=>{const s=lastScene||scene();return{version:data.version,selection:{...selection},exploded,showWiring,xray,variant:s.variant,item_count:s.items.length,wire_count:s.items.filter(x=>x.wireId).length,canvas:{width:canvas.width,height:canvas.height},webgl:Boolean(renderer),render:renderer?renderer.getStats():null};},reset:()=>{cameraPreset('reset');}};tick();
+})();
+
+</script></body></html>

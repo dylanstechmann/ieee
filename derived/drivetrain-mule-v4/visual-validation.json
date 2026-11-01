@@ -1,0 +1,11 @@
+{
+  "date":"2026-10-31",
+  "status":"passed-static-svg-and-browser-visual-review-not-fabrication-validation",
+  "preview":"preview.html",
+  "preview_sha256":"798d5dac0141a42ef5e9ffaf23544cf5e4d3e6cea3b8826838f96c1b7e42f979",
+  "reviewed":["assembly-layout.svg","motor-wheel-comparison.svg","deck-drill-template.svg"],
+  "checks":["Assembly top and side geometry visible","Six motor and six wheel-case margin bars visible","True-scale deck border, six motor holes, four caster holes, optional ballast marks and 50 mm calibration line visible"],
+  "screenshot":{"file":"visual-review.png","sha256":"d808bb71928c573c935789f460aff6441cd76e46daea0721d41243f863fe0ac3"},
+  "printed_parts_inspected":0,
+  "physical_trials":0
+}

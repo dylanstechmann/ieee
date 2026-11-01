@@ -1,0 +1,30 @@
+{
+ "schema": "robot-studio-v7-build/1",
+ "status": "agent-built visualization; vendor CAD shapes, assumed finishes, illustrative kinematic drive",
+ "toolchain": {
+  "three": "0.170.0",
+  "esbuild": "0.24.0"
+ },
+ "input_hashes": {
+  "robot-studio-v7/app.js": "08564ea04f5829f7a1b324891d970bad0da3d9c01b3a75a0195a74148e5e1096",
+  "robot-studio-v7/index.html": "5cd643b5484d8527a946186854aafc1dec1b571ab6c30b1ccb0a816724da518d",
+  "tools/build-robot-studio-v7.js": "bd91925287e20526c5f5e184bc521a022b97d5be8507d0b5d5509f5dadf8e491",
+  "derived/robot-studio-v7/parts.json": "bcd14f7e684c2559a16aa45c3c95aba4e2da362a78600412ab2f4a3442a3bc86",
+  "derived/robot-studio-v7/assembly.json": "2e2d68cb0890bbec1a7622174f31d45ec27034ea9babf13bc54c657721be1646",
+  "drivetrain-mule-v4.json": "342f2bb93eb7b9b47e333487a1fda019a819d7458f1e9385982ebf56161a2dec",
+  "derived/constrained-field-v3/layout.json": "1f0bf9e446109884673b2dcda376e9e3db6e2ce5cb47d0bcb90d8f727da26447",
+  "derived/apriltag-41h12-v7/report.json": "89d7c8f3c6f4c9529b2395946d7f94ac7456b1e24753ed967c5cab3068cb1e66",
+  "derived/organizer-cad/Spare Tire v2.stl": "e04ac6ac4874902f0aa7a4383f738e04d0f0b0b88f553b85f008d66de448e2df",
+  "derived/robot-studio-v7/parts/motor.glb": "60ea63613a1e06f17a9055146b63d8bedd709676b431ad77e945b8ee247f99df",
+  "derived/robot-studio-v7/parts/bracket.glb": "7e1e5412203be7cd462ea25e9e66c1ddfb575f7717f8b3579ed696f485442676",
+  "derived/robot-studio-v7/parts/hub.glb": "13a3dfe016fef8dc8a87486e1f206e65fa75c1a4e746b3a501bf0cdf0309d8b3",
+  "derived/robot-studio-v7/parts/wheel.glb": "75f6ca9ffd2c96615fadcf6231c8a2ea4cc5568fbc002eca46cb76bc561e253d",
+  "derived/robot-studio-v7/parts/caster.glb": "202b92c369dfd3f4a5962ae7de7e129248202404610a4157398bf25a67ef6fd9"
+ },
+ "output": {
+  "file": "share/Robot-Studio-v7.html",
+  "bytes": 4284491,
+  "sha256": "d6dda02d416cab974b26c06a71d552ee779cd4f460ec05a3ee81add978283151",
+  "bundle_bytes": 647129
+ }
+}

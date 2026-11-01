@@ -1,0 +1,70 @@
+{
+  "retrieved_date": "2026-10-31",
+  "organizer_page": "https://ieeesoutheastcon.org/student-competitions/",
+  "page": {
+    "file": "student-competitions.html",
+    "source_url": "https://ieeesoutheastcon.org/student-competitions/",
+    "final_url": "https://ieeesoutheastcon.org/student-competitions/",
+    "retrieved_at": "2026-10-31T00:05:47.861Z",
+    "bytes": 93183,
+    "sha256": "64b57da0dd811dd5291902e927abbd69efdae4cc378a4c5014f14256d7589c59"
+  },
+  "files": [
+    {
+      "file": "2027-IEEE-SoutheastCon-Arena_Fusion360.zip",
+      "source_url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/2027-IEEE-SoutheastCon-Arena_Fusion360.zip",
+      "final_url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/2027-IEEE-SoutheastCon-Arena_Fusion360.zip",
+      "retrieved_at": "2026-10-31T00:05:48.177Z",
+      "bytes": 451760,
+      "sha256": "b756b73be6e2c0991929051bc9e272ba64589fb9c7dfe519687be87648a12a69",
+      "previous_sha256": "b756b73be6e2c0991929051bc9e272ba64589fb9c7dfe519687be87648a12a69",
+      "byte_identical_to_archive": true
+    },
+    {
+      "file": "Game-Manual-2027-1-V3.docx",
+      "source_url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/Game-Manual-2027-1-V3.docx",
+      "final_url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/Game-Manual-2027-1-V3.docx",
+      "retrieved_at": "2026-10-31T00:05:48.315Z",
+      "bytes": 2537454,
+      "sha256": "b25f2f4c6e5da3ca6487f6f9bfe2e90ebe985df5352c30771538290fc57fac7d",
+      "previous_sha256": "b25f2f4c6e5da3ca6487f6f9bfe2e90ebe985df5352c30771538290fc57fac7d",
+      "byte_identical_to_archive": true
+    },
+    {
+      "file": "Game-Manual-2027-2-V3-1.docx",
+      "source_url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/Game-Manual-2027-2-V3-1.docx",
+      "final_url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/Game-Manual-2027-2-V3-1.docx",
+      "retrieved_at": "2026-10-31T00:05:48.527Z",
+      "bytes": 4599780,
+      "sha256": "90e4061310f81d4b42027ecb3b2c9a0ad9167dc8adf9c917c0b25017560039b8",
+      "previous_sha256": "90e4061310f81d4b42027ecb3b2c9a0ad9167dc8adf9c917c0b25017560039b8",
+      "byte_identical_to_archive": true
+    },
+    {
+      "file": "Spare-Tire-v2.zip",
+      "source_url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/Spare-Tire-v2.zip",
+      "final_url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/Spare-Tire-v2.zip",
+      "retrieved_at": "2026-10-31T00:05:48.213Z",
+      "bytes": 395023,
+      "sha256": "aea89a466c90548d4abad1f39c580ff360ce3c8228236d6a1648bc222bf058c7",
+      "previous_sha256": "aea89a466c90548d4abad1f39c580ff360ce3c8228236d6a1648bc222bf058c7",
+      "byte_identical_to_archive": true
+    },
+    {
+      "file": "SEC-2027-Arena-Build-Guide.pdf",
+      "source_url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/SEC-2027-Arena-Build-Guide.pdf",
+      "final_url": "https://ieeesoutheastcon.org/wp-content/uploads/sites/755/SEC-2027-Arena-Build-Guide.pdf",
+      "retrieved_at": "2026-10-31T00:05:48.336Z",
+      "bytes": 1962562,
+      "sha256": "82cd41b28fe6ba3f0bae452ea37491fcd551eb922263cef5649a77bec6dc5e4a",
+      "previous_sha256": "82cd41b28fe6ba3f0bae452ea37491fcd551eb922263cef5649a77bec6dc5e4a",
+      "byte_identical_to_archive": true
+    }
+  ],
+  "qa": {
+    "status": "not-reviewed",
+    "channel": "Official SoutheastCon Discord Q&A, identified by current hardware tab",
+    "invite": "https://discord.gg/cuqdFvQFe8",
+    "observed": "Public invite resolves to IEEE SoutheastCon - Official Discord; channel messages not available without account/login. No account created, server joined, messages sent or credentials accessed."
+  }
+}

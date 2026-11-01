@@ -1,0 +1,305 @@
+{
+  "version": "0.6.0",
+  "date": "2026-10-31",
+  "status": "conditional-digital-shortlist-not-purchase-or-hardware-release",
+  "encoder_rates": [
+    {
+      "sku": "4753",
+      "archived_output_cpr": 3200,
+      "archived_no_load_rpm_12v": 200,
+      "quadrature_edges_per_s_per_motor": 10666.666667,
+      "a_channel_cycles_per_s": 2666.666667,
+      "two_motor_edges_per_s": 21333.333333,
+      "design_allowance_edges_per_s_per_motor": 21333.333333,
+      "two_motor_design_allowance_edges_per_s": 42666.666667,
+      "source": "sources/hardware-2026-10-31/pololu/product-4753-specs.html",
+      "basis": "64 counts includes all four quadrature edges: do not multiply output CPR by four again; archived rounded gearing/CPR preserved"
+    },
+    {
+      "sku": "4754",
+      "archived_output_cpr": 4480,
+      "archived_no_load_rpm_12v": 150,
+      "quadrature_edges_per_s_per_motor": 11200,
+      "a_channel_cycles_per_s": 2800,
+      "two_motor_edges_per_s": 22400,
+      "design_allowance_edges_per_s_per_motor": 22400,
+      "two_motor_design_allowance_edges_per_s": 44800,
+      "source": "sources/hardware-2026-10-31/pololu/product-4754-specs.html",
+      "basis": "64 counts includes all four quadrature edges: do not multiply output CPR by four again; archived rounded gearing/CPR preserved"
+    },
+    {
+      "sku": "4755",
+      "archived_output_cpr": 6533,
+      "archived_no_load_rpm_12v": 100,
+      "quadrature_edges_per_s_per_motor": 10888.333333,
+      "a_channel_cycles_per_s": 2722.083333,
+      "two_motor_edges_per_s": 21776.666667,
+      "design_allowance_edges_per_s_per_motor": 21776.666667,
+      "two_motor_design_allowance_edges_per_s": 43553.333333,
+      "source": "sources/hardware-2026-10-31/pololu/product-4755-specs.html",
+      "basis": "64 counts includes all four quadrature edges: do not multiply output CPR by four again; archived rounded gearing/CPR preserved"
+    }
+  ],
+  "gpio_budget": 20,
+  "controller_screens": [
+    {
+      "id": "pico2",
+      "gpio_budget": 20,
+      "gpio_remaining": 6,
+      "status": "count-only-conditional",
+      "pin_map_validated": false,
+      "firmware_validated": false
+    },
+    {
+      "id": "teensy41",
+      "gpio_budget": 20,
+      "gpio_remaining": 22,
+      "status": "count-only-conditional",
+      "pin_map_validated": false,
+      "firmware_validated": false
+    }
+  ],
+  "driver_power_screens": [
+    {
+      "driver_id": "mc33926-dual",
+      "power_id": "regulated-12v",
+      "boards_required": 1,
+      "voltage_logic_status": "conditional-not-qualified",
+      "failures": [],
+      "unknowns": [
+        "thermal/current-duration qualification",
+        "braking-energy/transient control",
+        "reset/disable truth table and fault recovery",
+        "minimum loaded bus and brownout",
+        "maximum transient bus voltage"
+      ]
+    },
+    {
+      "driver_id": "mc33926-dual",
+      "power_id": "3s-4v2-direct",
+      "boards_required": 1,
+      "voltage_logic_status": "conditional-not-qualified",
+      "failures": [],
+      "unknowns": [
+        "thermal/current-duration qualification",
+        "braking-energy/transient control",
+        "reset/disable truth table and fault recovery",
+        "minimum loaded bus and brownout",
+        "maximum transient bus voltage"
+      ]
+    },
+    {
+      "driver_id": "mc33926-dual",
+      "power_id": "3s-regulated-motor",
+      "boards_required": 1,
+      "voltage_logic_status": "conditional-not-qualified",
+      "failures": [],
+      "unknowns": [
+        "thermal/current-duration qualification",
+        "braking-energy/transient control",
+        "reset/disable truth table and fault recovery",
+        "minimum loaded bus and brownout",
+        "maximum transient bus voltage"
+      ]
+    },
+    {
+      "driver_id": "g2-18v17-pair",
+      "power_id": "regulated-12v",
+      "boards_required": 2,
+      "voltage_logic_status": "conditional-not-qualified",
+      "failures": [],
+      "unknowns": [
+        "thermal/current-duration qualification",
+        "braking-energy/transient control",
+        "reset/disable truth table and fault recovery",
+        "minimum loaded bus and brownout",
+        "maximum transient bus voltage"
+      ]
+    },
+    {
+      "driver_id": "g2-18v17-pair",
+      "power_id": "3s-4v2-direct",
+      "boards_required": 2,
+      "voltage_logic_status": "conditional-not-qualified",
+      "failures": [],
+      "unknowns": [
+        "thermal/current-duration qualification",
+        "braking-energy/transient control",
+        "reset/disable truth table and fault recovery",
+        "minimum loaded bus and brownout",
+        "maximum transient bus voltage"
+      ]
+    },
+    {
+      "driver_id": "g2-18v17-pair",
+      "power_id": "3s-regulated-motor",
+      "boards_required": 2,
+      "voltage_logic_status": "conditional-not-qualified",
+      "failures": [],
+      "unknowns": [
+        "thermal/current-duration qualification",
+        "braking-energy/transient control",
+        "reset/disable truth table and fault recovery",
+        "minimum loaded bus and brownout",
+        "maximum transient bus voltage"
+      ]
+    },
+    {
+      "driver_id": "drv8833-dual",
+      "power_id": "regulated-12v",
+      "boards_required": 1,
+      "voltage_logic_status": "rejected",
+      "failures": [
+        "maximum steady bus outside driver operating range"
+      ],
+      "unknowns": [
+        "thermal/current-duration qualification",
+        "braking-energy/transient control",
+        "reset/disable truth table and fault recovery",
+        "minimum loaded bus and brownout",
+        "maximum transient bus voltage"
+      ]
+    },
+    {
+      "driver_id": "drv8833-dual",
+      "power_id": "3s-4v2-direct",
+      "boards_required": 1,
+      "voltage_logic_status": "rejected",
+      "failures": [
+        "maximum steady bus outside driver operating range"
+      ],
+      "unknowns": [
+        "thermal/current-duration qualification",
+        "braking-energy/transient control",
+        "reset/disable truth table and fault recovery",
+        "minimum loaded bus and brownout",
+        "maximum transient bus voltage"
+      ]
+    },
+    {
+      "driver_id": "drv8833-dual",
+      "power_id": "3s-regulated-motor",
+      "boards_required": 1,
+      "voltage_logic_status": "rejected",
+      "failures": [
+        "maximum steady bus outside driver operating range"
+      ],
+      "unknowns": [
+        "thermal/current-duration qualification",
+        "braking-energy/transient control",
+        "reset/disable truth table and fault recovery",
+        "minimum loaded bus and brownout",
+        "maximum transient bus voltage"
+      ]
+    },
+    {
+      "driver_id": "vnh5019-old",
+      "power_id": "regulated-12v",
+      "boards_required": 1,
+      "voltage_logic_status": "rejected",
+      "failures": [
+        "discontinued product"
+      ],
+      "unknowns": [
+        "thermal/current-duration qualification",
+        "braking-energy/transient control",
+        "reset/disable truth table and fault recovery",
+        "minimum loaded bus and brownout",
+        "maximum transient bus voltage"
+      ]
+    },
+    {
+      "driver_id": "vnh5019-old",
+      "power_id": "3s-4v2-direct",
+      "boards_required": 1,
+      "voltage_logic_status": "rejected",
+      "failures": [
+        "discontinued product"
+      ],
+      "unknowns": [
+        "thermal/current-duration qualification",
+        "braking-energy/transient control",
+        "reset/disable truth table and fault recovery",
+        "minimum loaded bus and brownout",
+        "maximum transient bus voltage"
+      ]
+    },
+    {
+      "driver_id": "vnh5019-old",
+      "power_id": "3s-regulated-motor",
+      "boards_required": 1,
+      "voltage_logic_status": "rejected",
+      "failures": [
+        "discontinued product"
+      ],
+      "unknowns": [
+        "thermal/current-duration qualification",
+        "braking-energy/transient control",
+        "reset/disable truth table and fault recovery",
+        "minimum loaded bus and brownout",
+        "maximum transient bus voltage"
+      ]
+    }
+  ],
+  "current_evidence": {
+    "continuous_required_a": null,
+    "startup_duration_s": null,
+    "stall_a_per_motor_extrapolated": [
+      {
+        "sku": "4753",
+        "a": 5.5
+      },
+      {
+        "sku": "4754",
+        "a": 5.5
+      },
+      {
+        "sku": "4755",
+        "a": 5.5
+      }
+    ],
+    "simulation_limit_a": 3,
+    "maximum_sampled_simulation_current_a": 3,
+    "scope": "30 Hz samples can miss integration peaks; synthetic clipped current is neither a continuous rating nor a validated protection setting"
+  },
+  "motor_voltage_screens": [
+    {
+      "power_id": "regulated-12v",
+      "maximum_v": 12,
+      "motor_reference_v": 12,
+      "status": "voltage-only-conditional",
+      "scope": "Driver compatibility does not qualify motor overvoltage; PWM average does not remove full bus pulses or stall exposure."
+    },
+    {
+      "power_id": "3s-4v2-direct",
+      "maximum_v": 12.6,
+      "motor_reference_v": 12,
+      "status": "over-12v-reference-review-required",
+      "scope": "Driver compatibility does not qualify motor overvoltage; PWM average does not remove full bus pulses or stall exposure."
+    },
+    {
+      "power_id": "3s-regulated-motor",
+      "maximum_v": 12,
+      "motor_reference_v": 12,
+      "status": "voltage-only-conditional",
+      "scope": "Driver compatibility does not qualify motor overvoltage; PWM average does not remove full bus pulses or stall exposure."
+    }
+  ],
+  "conditional_preferences": {
+    "controller": "pico2",
+    "driver_packaging_study": "g2-18v17-pair",
+    "lower_cost_driver_alternative": "mc33926-dual",
+    "power_architecture": "separate motor bus and regulated 5 V logic/encoder rail; pack and motor-bus regulation undecided",
+    "final_components_selected": false
+  },
+  "physical_trials": 0,
+  "purchases": 0,
+  "hold_points": [
+    "No purchasing, fabrication, energization, charging or physical setup approval",
+    "E02/E03 motor characterization and approved bench equipment remain required",
+    "Continuous current, stall exposure, temperature and current-limit calibration are not measured",
+    "Battery/BMS/charger, fuse, wire gauge, switch, connectors, capacitor and transient suppression remain unselected",
+    "Actual tire loads, compliance, retention and mechanism actuator remain unknown",
+    "Mechanism-envelope study, coast/brake dynamics variants and Integration Studio are subsequent work, not implemented here"
+  ]
+}

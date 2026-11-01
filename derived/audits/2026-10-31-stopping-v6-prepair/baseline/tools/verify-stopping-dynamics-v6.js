@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict'),Build=require('./build-stopping-dynamics-v6');
+const root=path.resolve(__dirname,'..'),read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8')),hash=f=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex'),manifest=read('derived/stopping-dynamics-v6/manifest.json');
+for(const group of['input_hashes','output_hashes','preserved_hashes'])for(const[f,h]of Object.entries(manifest[group]))assert.equal(hash(f),h,`${group}: ${f}`);
+const built=Build.buildArtifacts();for(const[n,t]of Object.entries(built.files))assert.equal(fs.readFileSync(path.join(root,'derived/stopping-dynamics-v6',n),'utf8'),t,n);
+const refinement=read('derived/stopping-dynamics-v6/refinement-study.json');for(const[f,h]of Object.entries(refinement.input_hashes))assert.equal(hash(f),h,`stale refinement ${f}`);assert.equal(refinement.summary.case_count,84);assert.equal(refinement.summary.all_residuals_reduced,true);assert.equal(refinement.summary.all_stop_statuses_unchanged,true);assert.ok(refinement.summary.maximum_stop_distance_delta_m<.0001);
+assert.equal(built.report.case_count,84);for(const r of built.runs){assert.ok(r.samples.every(s=>Number.isFinite(s.speed_m_s)));assert.ok(r.metrics.maximum_abs_energy_balance_residual_j<.01);assert.ok(r.metrics.slip_j>=-1e-8);if(r.mode==='coast'){assert.equal(r.metrics.source_drawn_j,0);assert.equal(r.metrics.returned_boundary_j,0);}}
+console.log(JSON.stringify({status:'passed',cases:84,physical_trials:0,purchases:0,maximum_energy_residual_j:Math.max(...built.runs.map(r=>r.metrics.maximum_abs_energy_balance_residual_j))},null,2));

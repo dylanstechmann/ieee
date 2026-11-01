@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),D=require('./stopping-dynamics-v6');
+const root=path.resolve(__dirname,'..'),read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8')),hash=f=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex');
+const nullableDelta=(a,b)=>a===null||b===null?null:Math.abs(a-b);
+function generate(){
+  const config=read('stopping-dynamics-v6.json'),report=read('derived/stopping-dynamics-v6/report.json'),fine=structuredClone(config);fine.numerics.dt_s/=2;
+  const cases=report.cases.map(a=>{
+    const motor=report.motor_models.find(m=>m.sku===a.motor_sku&&m.model_variant===a.model_variant);
+    if(!motor)throw new Error('missing motor model for refinement');
+    const b=D.simulate(fine,motor,a.scenario_id,a.mode);
+    return{
+      motor_sku:a.motor_sku,model_variant:a.model_variant,scenario_id:a.scenario_id,mode:a.mode,
+      coarse_residual_j:a.metrics.maximum_abs_energy_balance_residual_j,fine_residual_j:b.metrics.maximum_abs_energy_balance_residual_j,
+      stop_status_unchanged:a.metrics.stop_status===b.metrics.stop_status,
+      stop_time_delta_s:nullableDelta(a.metrics.stop_time_s,b.metrics.stop_time_s),
+      stop_distance_delta_m:nullableDelta(a.metrics.stop_distance_m,b.metrics.stop_distance_m),
+      maximum_current_delta_a:Math.abs(a.metrics.maximum_abs_current_a-b.metrics.maximum_abs_current_a),
+      final_speed_delta_m_s:Math.abs(a.metrics.final_speed_m_s-b.metrics.final_speed_m_s)
+    };
+  });
+  const inputs=['tools/refine-stopping-dynamics-v6.js','tools/stopping-dynamics-v6.js','stopping-dynamics-v6.json','derived/stopping-dynamics-v6/report.json'];
+  const result={status:'synthetic-timestep-refinement-not-physical-validation',coarse_dt_s:config.numerics.dt_s,fine_dt_s:fine.numerics.dt_s,unchanged_control_dt_s:config.numerics.control_dt_s,input_hashes:Object.fromEntries(inputs.map(f=>[f,hash(f)])),summary:{case_count:cases.length,all_residuals_reduced:cases.every(x=>x.fine_residual_j<x.coarse_residual_j),all_stop_statuses_unchanged:cases.every(x=>x.stop_status_unchanged),maximum_stop_time_delta_s:Math.max(...cases.map(x=>x.stop_time_delta_s??0)),maximum_stop_distance_delta_m:Math.max(...cases.map(x=>x.stop_distance_delta_m??0)),maximum_current_delta_a:Math.max(...cases.map(x=>x.maximum_current_delta_a))},cases};
+  fs.writeFileSync(path.join(root,'derived/stopping-dynamics-v6/refinement-study.json'),JSON.stringify(result,null,2)+'\n');return result;
+}
+module.exports={generate,nullableDelta};if(require.main===module)console.log(JSON.stringify(generate().summary,null,2));

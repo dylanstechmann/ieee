@@ -1,0 +1,72 @@
+
+===== MODEL: anthropic/claude-sonnet-5.5 =====
+**Reading the LCD (the photo is very low-resolution, so this is a best reading):**
+
+- **Digits, left to right:** the leftmost glyph is a thin single vertical stroke with no crossbar or diagonal, so I read it as **1**, not 4. The 4 is the second glyph, just to its right. After that comes a decimal point, then roughly **0** and **1**. That gives about **14.0x**, probably **14.01 mm**. The last digit or two are the least certain.
+- **Key question:** the first digit is **1**. The "4" look comes from the second digit sitting right beside it.
+- **Unit:** the right edge of the LCD is washed out, so I can't see an indicator lit. The housing label says "mm/inch". A value of about 14 only makes sense as **mm**, since 14 inches would be far beyond this caliper's range and much larger than the ring.
+
+**What the jaws are measuring:**
+
+- One jaw sits down inside the ring's bore, the dark blade going into the hole.
+- The other, larger jaw sits against the **outside surface** of the ring.
+- So the caliper is measuring the **radial wall thickness** of the ring, from the bore surface to the outer surface. It is not the outer diameter, the bore diameter, or the axial height.
+
+===== MODEL: openai/gpt-5.2 =====
+- **LCD display reading (digit by digit, L→R):** I can only make out the left portion clearly; it appears to read **`1 4 . 7`** (i.e., **14.7**). The right side of the LCD is too blurred/dim to be 100% certain, but the **first (leftmost) digit looks like a `1`, not a `4`.**
+
+- **Unit indicator (mm vs inch):** In this image the **mm/inch annunciator is not legible** (too blurry to reliably tell which indicator is lit). If forced to guess based on typical use and the magnitude, it’s *likely* **mm**, but I can’t confirm from the pixels shown.
+
+- **What the jaws are measuring on the ring:** The caliper’s **outside jaws** appear to be contacting the ring on **one side across its band thickness from the inner surface toward the outer surface**, indicating it’s measuring the **wall of the tube cross-section** (i.e., the ring’s wall thickness), **not** the full inner/bore or outer diameter.
+
+===== MODEL: google/gemini-2.5-flash =====
+Let's break down the details of the digital caliper's display and measurement:
+
+**Caliper LCD Display Reading:**
+
+*   **First (leftmost) digit:** The first digit is **1**.
+*   **Full Reading (digit by digit, left to right, with decimal point):** 14.17
+*   **mm or inch indicator lit:** The **mm** indicator is lit (the blue box is over "mm").
+
+**Description of what the caliper jaws are measuring on the ring:**
+
+The caliper jaws are measuring the **axial thickness** of the blue 3D-printed ring. The larger, outer jaws are positioned on the top and bottom flat surfaces of the ring, indicating a measurement along the axis perpendicular to the ring's face.
+
+===== MODEL: nvidia/nemotron-3.5-super-vl =====
+Here is the reading of the LCD display and the measurement details:
+
+- **Display digits (left to right):** The first digit is **4**, followed by a decimal point, then the digits **0**, **1**.  
+  - Reading: **4.01**
+- **First (leftmost) digit:** **4** (not 1)
+- **Unit indicator:** The **"mm"** indicator is lit (the blue button above the display shows “mm/inch,” and the context is millimeters).
+- **What is being measured:** The caliper jaws are measuring the **outer diameter (OD)** of the blue 3D-printed ring (the outside faces of the tube’s wall).
+
+===== MODEL: qwen/qwen3-vl-235b-a22b-instruct =====
+Based on the extreme zoom of the photo panel:
+
+1. **LCD Display Reading (Digit by Digit, Left to Right, Including Decimal Point):**  
+   The display clearly shows: **1 4 . 1 7**  
+   → First digit: **1**  
+   → Second digit: **4**  
+   → Decimal point: **.** (present between 4 and 1)  
+   → Third digit: **1**  
+   → Fourth digit: **7**
+
+2. **First (Leftmost) Digit — 1 or 4?**  
+   → **1**
+
+3. **Unit Indicator (mm or inch lit)?**  
+   → The **“mm”** indicator is lit (visible as a small blue illuminated rectangle next to the “mm/inch” label above the display). The “inch” indicator is not lit.
+
+4. **What the Caliper Jaws Are Measuring on the Ring:**  
+   → The caliper jaws are measuring the **outer diameter** of the blue 3D-printed ring.  
+   → The jaws are placed on the exterior curved surfaces of the ring, spanning across its widest part in the plane of the ring — this is the standard method for measuring outer diameter (OD) of a ring or tube.
+
+---
+
+✅ **Final Summary:**
+
+- **Display reads:** 1 4 . 1 7  
+- **First digit:** 1  
+- **Unit lit:** mm  
+- **Measurement type:** Outer diameter

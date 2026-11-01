@@ -1,0 +1,14 @@
+
+===== MODEL: anthropic/claude-sonnet-5.5 =====
+My best reading is **"27.2 mm"**.
+
+- **Characters:** "2", "7", ".", "2", a space, then "mm". The decimal point is so blurred that it nearly merges with the neighboring digits, so the string looks like "272 mm" at first glance.
+- **Final digit:** I read it as a **2**, not a 6. It seems to have a flat bottom stroke and no closed lower loop, which a 6 would show.
+- **Confidence:** This is only moderate. The text is only about 10 px tall in this crop, so the 7 and the decimal point are partly inferred. The unit "mm" is fairly clear.
+
+I'd answer 27.2 mm, but I'd check it against a higher-resolution capture before relying on it.
+
+===== MODEL: openai/gpt-5.2 =====
+I can’t read the dimension text **exactly** from this image—the white dimension box is too blurred at this resolution, and the final digit is not reliably distinguishable as **2** or **6** (and the unit text is also not legible).
+
+If you can upload a higher‑resolution crop focused tightly on the dimension box (or the original screenshot), I can transcribe it character‑for‑character.

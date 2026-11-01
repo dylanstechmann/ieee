@@ -1,0 +1,26 @@
+
+===== MODEL: nvidia/nemotron-3.5-super-vl =====
+The LCD display reads **68.2**.
+
+*   **Digit 1:** 6 (best guess, slightly blurry)
+*   **Digit 2:** 8
+*   **Decimal point:** Visible between the second and third digits.
+*   **Digit 3:** 2
+
+**Unit:** The **mm** indicator appears to be lit (visible in the bottom right corner of the LCD), though it is faint.
+
+**Feature being measured:** The outside diameter (OD) of the blue 3D-printed ring.
+
+===== MODEL: qwen/qwen3-vl-235b-a22b-instruct =====
+Reading the caliper LCD display exactly, digit by digit:
+
+**6.82**
+
+- The display shows: “6.82” — all digits are clear and unambiguous.
+- The decimal point is present between the “6” and “8”.
+- The unit indicator: The “mm” indicator is lit (visible as a small “mm” label illuminated in blue/white near the top right of the display, next to the brand logo “iGaging”). The “in” (inch) indicator is not lit.
+
+Feature being measured:
+The caliper is measuring the **outer diameter** of the blue 3D-printed ring (spare tire). The jaws are placed across the widest part of the ring’s exterior circumference.
+
+✅ Final reading: **6.82 mm** (unit confirmed as millimeters)

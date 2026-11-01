@@ -1,0 +1,126 @@
+#!/usr/bin/env node
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const Proto=require('./mechanism-prototyping-v3');
+const root=path.resolve(__dirname,'..'),out='derived/mechanism-envelope-v6',EPS=1e-9;
+const read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'));
+const hash=f=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex');
+const round=n=>Number(n.toFixed(6)),json=x=>JSON.stringify(x,null,2)+'\n';
+function bounds(points){return {min:[0,1,2].map(i=>Math.min(...points.map(p=>p[i]))),max:[0,1,2].map(i=>Math.max(...points.map(p=>p[i])))};}
+function union(boxes){return bounds(boxes.flatMap(b=>[b.min,b.max]));}
+function overlap(a,b){return [0,1,2].every(i=>Math.min(a.max[i],b.max[i])-Math.max(a.min[i],b.min[i])>EPS);}
+function stlEnvelope(buffer){
+  if(buffer.length<84)throw new Error('binary STL header missing');
+  const n=buffer.readUInt32LE(80);if(!n||buffer.length!==84+50*n)throw new Error('binary STL length mismatch');
+  const points=[];for(let i=0;i<n;i++)for(let j=0;j<3;j++){const p=[0,1,2].map(k=>buffer.readFloatLE(96+i*50+j*12+k*4));if(!p.every(Number.isFinite))throw new Error('nonfinite STL vertex');points.push(p);}
+  const b=bounds(points),center=b.min.map((v,i)=>(v+b.max[i])/2),radius=Math.max(...points.map(p=>Math.hypot(p[0]-center[0],p[2]-center[2])));
+  return {triangles:n,bounds_mm:b,size_mm:b.min.map((v,i)=>b.max[i]-v),center_mm:center,enclosing_outer_radius_mm:radius,thickness_mm:b.max[1]-b.min[1],axis_basis:'STL Y is thickness axis; STL X/Z radial plane; recentered from bounding-box midpoint'};
+}
+function validate(c,p){
+  if(c.status!=='synthetic-geometric-comparison-not-capture-validation-or-production-cad')throw new Error('explicit geometric-only status required');
+  for(const k of['approach_intervals','actuation_intervals'])if(!Number.isInteger(c[k])||c[k]<1||c[k]>200)throw new Error('bounded positive intervals required');
+  for(const k of['target_center_x_mm','approach_distance_mm'])if(!(Number.isFinite(c[k])&&c[k]>0))throw new Error('positive approach/target required');
+  if(c.orientations.length!==2||!['flat','upright'].every(x=>c.orientations.includes(x)))throw new Error('flat and upright cases required');
+  if(c.concepts.length!==3||new Set(c.concepts.map(x=>x.id)).size!==3||!['passive-fork','guided-bore','od-gripper'].every(x=>c.concepts.some(y=>y.id===x)))throw new Error('three distinct concepts required');
+  if(!c.tolerances.length||new Set(c.tolerances.map(t=>t.id)).size!==c.tolerances.length)throw new Error('distinct tolerance cases required');
+  for(const t of c.tolerances)for(const k of['outer_diameter_delta_mm','bore_diameter_delta_mm','thickness_delta_mm'])if(!Number.isFinite(t[k]))throw new Error('finite tolerances required');
+  for(const t of c.tolerances)if(!(p.tire_source.bore_diameter_mm+t.bore_diameter_delta_mm>0&&p.tire_source.thickness_mm+t.thickness_delta_mm>0&&p.tire_source.outer_diameter_mm+t.outer_diameter_delta_mm>p.tire_source.bore_diameter_mm+t.bore_diameter_delta_mm))throw new Error('positive ordered tire dimensions required');
+  if(!(c.bore_pin.diameter_mm>0&&c.bore_pin.insertion_mm>0&&c.bore_pin.retracted_clearance_mm>0&&c.fork_bottom_z_mm>=0))throw new Error('invalid pin/fork geometry');
+  if(!Object.values(c.gripper).every(x=>Number.isFinite(x)&&x>0))throw new Error('positive gripper dimensions required');
+  for(const b of c.reserved_boxes)if(!b.min.every((v,i)=>Number.isFinite(v)&&Number.isFinite(b.max[i])&&b.max[i]>v))throw new Error('ordered reservation bounds required');
+  if(c.robot_envelope_limit_mm!==null&&!(c.robot_envelope_limit_mm.length===3&&c.robot_envelope_limit_mm.every(x=>Number.isFinite(x)&&x>0)))throw new Error('positive XYZ limit or null required');
+  return true;
+}
+function tireGeometry(mesh,p,t){return {outer_radius_mm:mesh.enclosing_outer_radius_mm+t.outer_diameter_delta_mm/2,bore_radius_mm:(p.tire_source.bore_diameter_mm+t.bore_diameter_delta_mm)/2,thickness_mm:mesh.thickness_mm+t.thickness_delta_mm};}
+function tireBounds(tire,center,orientation,yaw){
+  if(!['flat','upright'].includes(orientation))throw new Error('unknown tire orientation');
+  const a=yaw*Math.PI/180,n=orientation==='flat'?[0,0,1]:[Math.cos(a),Math.sin(a),0];
+  const e=n.map(v=>tire.outer_radius_mm*Math.sqrt(Math.max(0,1-v*v))+Math.abs(v)*tire.thickness_mm/2);
+  return {min:center.map((v,i)=>v-e[i]),max:center.map((v,i)=>v+e[i])};
+}
+function distanceToSegment(p,a,b){const dx=b[0]-a[0],dy=b[1]-a[1],l=dx*dx+dy*dy,u=l?Math.max(0,Math.min(1,((p[0]-a[0])*dx+(p[1]-a[1])*dy)/l)):0;return Math.hypot(p[0]-a[0]-u*dx,p[1]-a[1]-u*dy);}
+function inside(p,poly){let result=false;for(let i=0,j=poly.length-1;i<poly.length;j=i++){const a=poly[i],b=poly[j];if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])result=!result;}return result;}
+function radialRange(part,center){
+  const p=center.slice(0,2);
+  if(part.circle){const d=Math.hypot(p[0]-part.circle[0],p[1]-part.circle[1]);return [Math.max(0,d-part.radius),d+part.radius];}
+  const poly=part.polygon;return [inside(p,poly)?0:Math.min(...poly.map((a,i)=>distanceToSegment(p,a,poly[(i+1)%poly.length]))),Math.max(...poly.map(a=>Math.hypot(a[0]-p[0],a[1]-p[1])))];
+}
+function flatContact(part,tire,center){
+  const z0=center[2]-tire.thickness_mm/2,z1=center[2]+tire.thickness_mm/2;
+  if(Math.min(part.box.max[2],z1)-Math.max(part.box.min[2],z0)<=EPS)return false;
+  const [lo,hi]=radialRange(part,center);
+  return Math.min(hi,tire.outer_radius_mm)-Math.max(lo,tire.bore_radius_mm)>EPS;
+}
+function rectangle(id,min,max,intended=false){return {id,polygon:[[min[0],min[1]],[max[0],min[1]],[max[0],max[1]],[min[0],max[1]]],box:{min,max},intended_contact:intended};}
+function parts(c,p,tire,id,progress){
+  const x=c.target_center_x_mm;
+  if(id==='passive-fork'){
+    const polygon=Proto.forkPolygon(p).map(v=>[v[0]+x,v[1]]),z=c.fork_bottom_z_mm;
+    return [{id:'fork-coupon',polygon,box:bounds(polygon.flatMap(v=>[[...v,z],[...v,z+p.fork.thickness_mm]])),intended_contact:false}];
+  }
+  if(id==='guided-bore'){
+    const b=c.bore_pin,tip=tire.thickness_mm+b.retracted_clearance_mm-progress*(b.retracted_clearance_mm+b.insertion_mm),r=b.diameter_mm/2;
+    return [{id:'vertical-pin',circle:[x,0],radius:r,box:{min:[x-r,-r,tip],max:[x+r,r,tip+b.insertion_mm]},intended_contact:false},rectangle('stage-reservation',[x-50,-12,48],[x+10,12,60])];
+  }
+  if(id!=='od-gripper')throw new Error('unknown concept');
+  const g=c.gripper,closed=2*tire.outer_radius_mm-g.closed_diametral_interference_mm,gap=g.open_gap_mm+(closed-g.open_gap_mm)*progress;
+  return [-1,1].map(side=>{const low=side<0?-gap/2-g.jaw_thickness_mm:gap/2;return rectangle(`jaw-${side}`, [x-g.jaw_length_mm/2,low,g.jaw_bottom_z_mm],[x+g.jaw_length_mm/2,low+g.jaw_thickness_mm,g.jaw_bottom_z_mm+g.jaw_height_mm],true);}).concat(rectangle('actuator-reservation',[90,-15,25],[120,15,60]));
+}
+function obstacles(c,m){
+  const z=m.drive.wheel_radius_mm-m.bracket.shaft_center_above_mount_face_mm,deck=m.deck,d=m.drive;
+  const boxes=[{id:'deck',min:[-deck.length_mm/2,-deck.width_mm/2,z-deck.thickness_mm],max:[deck.length_mm/2,deck.width_mm/2,z]}];
+  for(const s of[-1,1]){
+    const cy=s*d.wheel_center_y_mm;
+    boxes.push({id:`wheel-${s}`,min:[-d.wheel_radius_mm,cy-d.wheel_width_mm/2,0],max:[d.wheel_radius_mm,cy+d.wheel_width_mm/2,2*d.wheel_radius_mm]});
+    const ends=[s*d.gearbox_face_y_mm,s*(d.gearbox_face_y_mm-d.motor_body_length_mm)],r=d.motor_body_diameter_mm/2;
+    boxes.push({id:`motor-${s}`,min:[-r,Math.min(...ends),d.wheel_radius_mm-r],max:[r,Math.max(...ends),d.wheel_radius_mm+r]});
+  }
+  return boxes.concat(c.reserved_boxes);
+}
+function envelopeCheck(box,limit){return limit===null?{status:'not-evaluated-unresolved-limit',legality:'unresolved'}:{status:box.min.map((v,i)=>box.max[i]-v).some((v,i)=>v>limit[i]+EPS)?'exceeds-configured-limit':'within-configured-limit-only',legality:'unresolved'};}
+function evaluate(c,p,m,mesh,id,orientation,tolerance,alignment){
+  const tire=tireGeometry(mesh,p,tolerance),fixed=obstacles(c,m),frames=[];
+  const evaluateFrame=(phase,u,progress)=>{
+    const center=[c.target_center_x_mm+(1-u)*c.approach_distance_mm,alignment.offset_mm,orientation==='flat'?tire.thickness_mm/2:tire.outer_radius_mm],b=tireBounds(tire,center,orientation,alignment.yaw_deg),pieces=parts(c,p,tire,id,progress);
+    const contacts=pieces.filter(part=>orientation==='flat'?flatContact(part,tire,center):overlap(part.box,b)).map(part=>({part:part.id,classification:orientation==='flat'?'annular-proxy-overlap':'aabb-potential-overlap',intended_contact:part.intended_contact}));
+    const robotConflicts=pieces.flatMap(part=>fixed.filter(o=>overlap(part.box,o)).map(o=>({part:part.id,obstacle:o.id,classification:'aabb-potential-overlap'})));
+    const tireConflicts=fixed.filter(o=>overlap(b,o)).map(o=>o.id);
+    const assembly=union([...pieces.map(x=>x.box),...fixed.filter(o=>!c.reserved_boxes.some(r=>r.id===o.id)),b]);
+    frames.push({index:frames.length,phase,approach_fraction:u,actuation_fraction:progress,tire_center_mm:center,tire_box:b,parts:pieces,contacts,robot_conflicts:robotConflicts,tire_robot_potential_overlaps:tireConflicts,assembly_box:assembly,envelope_check:envelopeCheck(assembly,c.robot_envelope_limit_mm)});
+  };
+  for(let i=0;i<=c.approach_intervals;i++)evaluateFrame('approach',i/c.approach_intervals,0);
+  if(id!=='passive-fork')for(let i=1;i<=c.actuation_intervals;i++)evaluateFrame('actuation',1,i/c.actuation_intervals);
+  const final=frames.at(-1),contactFrames=frames.filter(f=>f.contacts.length),conflicts=[...new Set(frames.flatMap(f=>f.robot_conflicts.map(x=>`${x.part}:${x.obstacle}`)))];
+  return {id:`${id}__${orientation}__${tolerance.id}__${alignment.id}`,concept_id:id,orientation,tolerance_id:tolerance.id,alignment_id:alignment.id,offset_mm:alignment.offset_mm,yaw_deg:alignment.yaw_deg,tire,frames,summary:{sample_count:frames.length,contact_sample_count:contactFrames.length,first_contact_index:contactFrames[0]?.index??null,unintended_contact_samples:frames.filter(f=>f.contacts.some(x=>!x.intended_contact)).length,intended_jaw_contact_samples:frames.filter(f=>f.contacts.some(x=>x.intended_contact)).length,robot_potential_conflicts:conflicts,tire_robot_potential_conflicts:[...new Set(frames.flatMap(f=>f.tire_robot_potential_overlaps))],final_contacts:final.contacts,pin_axis_status:id==='guided-bore'?(orientation==='flat'?'aligned-to-nominal-bore-axis':'incompatible-with-upright-bore-axis'):'not-applicable',final_pin_radial_clearance_mm:id==='guided-bore'&&orientation==='flat'?round(tire.bore_radius_mm-c.bore_pin.diameter_mm/2-Math.abs(alignment.offset_mm)):null,sampled_swept_box:union(frames.map(f=>f.assembly_box)),mechanism_swept_box:union(frames.flatMap(f=>f.parts.map(x=>x.box))),envelope_status:frames.some(f=>f.envelope_check.status==='exceeds-configured-limit')?'exceeds-configured-limit':final.envelope_check.status,acquisition_status:'not-evaluated',retention_status:'not-evaluated',physical_trials:0}};
+}
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+function svgFrame(row,frame,obstacleList){
+  const rect=(b,axes,color,opacity=.3)=>`<rect x="${b.min[axes[0]]}" y="${-b.max[axes[1]]}" width="${b.max[axes[0]]-b.min[axes[0]]}" height="${b.max[axes[1]]-b.min[axes[1]]}" fill="${color}" fill-opacity="${opacity}" stroke="${color}" stroke-width=".8"/>`;
+  const view=(axes,shift)=>`<g transform="translate(${shift} 0)">${obstacleList.map(o=>rect(o,axes,o.basis?'#cba85a':'#65869b')).join('')}${rect(row.summary.mechanism_swept_box,axes,'#b68bdf',.08)}${rect(frame.tire_box,axes,'#35c6b4',.15)}${axes[1]===1&&row.orientation==='flat'?`<circle cx="${frame.tire_center_mm[0]}" cy="${-frame.tire_center_mm[1]}" r="${row.tire.outer_radius_mm}" fill="none" stroke="#35c6b4"/><circle cx="${frame.tire_center_mm[0]}" cy="${-frame.tire_center_mm[1]}" r="${row.tire.bore_radius_mm}" fill="none" stroke="#35c6b4" stroke-dasharray="2 2"/>`:''}${frame.parts.map(part=>axes[1]===1&&part.polygon?`<polygon points="${part.polygon.map(p=>`${p[0]},${-p[1]}`).join(' ')}" fill="#efbd65" fill-opacity=".6" stroke="#efbd65" stroke-width=".7"/>`:rect(part.box,axes,'#efbd65',.6)).join('')}<text x="-90" y="-115" font-size="8" fill="#dce7ef">${axes[1]===1?'TOP X/Y':'SIDE X/Z'} · mm</text></g>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-110 -125 850 245" role="img" aria-label="Top and side geometric proxy comparison"><rect x="-110" y="-125" width="850" height="245" fill="#101f2b"/>${view([0,1],0)}${view([0,2],430)}</svg>`;
+}
+function viewer(report){
+  const data=JSON.stringify(report).replace(/</g,'\\u003c');
+  return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mechanism envelopes v6 · geometric review</title><style>body{margin:0;background:#091520;color:#dce7ef;font:16px system-ui}main{max-width:1250px;margin:auto;padding:24px}h1{color:#35c6b4}select,input,button{font:inherit;background:#193347;color:#fff;padding:8px;border:1px solid #628094;border-radius:5px}label{display:inline-block;margin:6px}svg{width:100%;border:1px solid #416174;border-radius:8px}pre{white-space:pre-wrap;background:#102534;padding:16px;border-radius:8px}.boundary{color:#efbd65}p{line-height:1.6}#position{width:65%}</style><main><h1>Mechanism-envelope review · v6</h1><p class="boundary">Synthetic geometry only · no capture/retention prediction · no physical release · not an Integration Studio or 3D contact simulation</p><p>Teal: tire outer AABB / flat annulus. Gold: mechanism profiles and actuator/stage reservations. Gray: mule AABBs. Gold translucent: cable/sensor/electronics keep-outs. Purple: mechanism sampled swept enclosing box, not occupied solid.</p><section><label>Concept <select id="concept"></select></label><label>Tire pose <select id="orientation"></select></label><label>Dimensions <select id="tolerance"></select></label><label>E04 alignment <select id="alignment"></select></label></section><p><label>Relative approach / actuation sample <input id="position" type="range" min="0" value="0" step="1"></label><button id="final">Final sample</button></p><div id="views"></div><pre id="state"></pre><h2>Interpretation boundary</h2><p>Flat yaw changes the witness pose but not the circular envelope. Upright boxes include the empty bore: overlap is only potential interference. Vertical bore pin stays vertical for both poses; upright axis incompatibility is retained. Jaw interference is intended contact, not successful grip. Geometry is fixed; no compliance, tire response, lifting or motion controller is solved. Unknown legal envelope is not passed.</p><pre id="limits"></pre><p>Agent-built hobby/learning analysis. Organizer STL and prior agent-authored prototype dimensions are credited in the report and manifest. Source references are local; no external assets are loaded.</p></main><script>const DATA=${data};const svgFrame=${svgFrame.toString()};const esc=${esc.toString()};
+const $=id=>document.getElementById(id);const opts=(id,rows)=>{$(id).innerHTML=rows.map(([v,l])=>'<option value="'+esc(v)+'">'+esc(l)+'</option>').join('');};opts('concept',DATA.concepts.map(x=>[x.id,x.label]));opts('orientation',DATA.orientations.map(x=>[x,x]));opts('tolerance',DATA.tolerances.map(x=>[x.id,x.id]));opts('alignment',DATA.alignments.map(x=>[x.id,'offset '+x.offset_mm+' mm / yaw '+x.yaw_deg+' deg']));$('alignment').value=DATA.alignments.find(x=>x.offset_mm===0&&x.yaw_deg===0).id;
+function render(){const row=DATA.cases.find(x=>x.concept_id===$('concept').value&&x.orientation===$('orientation').value&&x.tolerance_id===$('tolerance').value&&x.alignment_id===$('alignment').value);$('position').max=row.frames.length-1;const index=Math.min(Number($('position').value),row.frames.length-1),f=row.frames[index];$('position').value=index;$('views').innerHTML=svgFrame(row,f,DATA.obstacles);$('state').textContent=JSON.stringify({case_id:row.id,sample:index,phase:f.phase,actuation_fraction:f.actuation_fraction,contacts:f.contacts,robot_potential_conflicts:f.robot_conflicts,tire_robot_potential_overlaps:f.tire_robot_potential_overlaps,pin_axis:row.summary.pin_axis_status,final_pin_radial_clearance_mm:row.summary.final_pin_radial_clearance_mm,envelope:f.envelope_check,acquisition:row.summary.acquisition_status,retention:row.summary.retention_status},null,2);globalThis.mechanismReview={case_id:row.id,index,sample_count:row.frames.length,summary:row.summary};}for(const id of ['concept','orientation','tolerance','alignment'])$(id).addEventListener('change',render);$('position').addEventListener('input',render);$('final').addEventListener('click',()=>{$('position').value=$('position').max;render();});$('limits').textContent=DATA.limitations.join('\\n');render();</script></html>\n`;
+}
+function buildArtifacts(c=read('mechanism-envelope-v6.json')){
+  const p=read(c.prototype_config),m=read(c.mule_config);validate(c,p);
+  if(hash(p.tire_source.path)!==p.tire_source.sha256)throw new Error('organizer tire hash mismatch');
+  const mesh=stlEnvelope(fs.readFileSync(path.join(root,p.tire_source.path))),alignments=Proto.alignmentCases(p),cases=[];
+  for(const concept of c.concepts)for(const orientation of c.orientations)for(const tolerance of c.tolerances)for(const alignment of alignments)cases.push(evaluate(c,p,m,mesh,concept.id,orientation,tolerance,alignment));
+  const report={version:c.version,date:c.date,status:c.status,source_tire:{...p.tire_source,mesh_envelope:mesh},concepts:c.concepts,orientations:c.orientations,tolerances:c.tolerances,alignments,obstacles:obstacles(c,m),case_count:cases.length,sample_count:cases.reduce((n,x)=>n+x.frames.length,0),approach_step_mm:c.approach_distance_mm/c.approach_intervals,actuation_fraction_step:1/c.actuation_intervals,robot_envelope_limit_mm:c.robot_envelope_limit_mm,cases,limitations:c.limitations,physical_trials:0,components_purchased:0,selected_mechanism:null};
+  const nominal=cases.filter(x=>x.orientation==='flat'&&x.tolerance_id==='nominal');
+  const readme=`# Mechanism-envelope comparison v6\n\n**Agent-run synthetic geometry study for a hobby/learning project. Not capture, retention, production CAD or physical validation.**\n\nOpen /workspace/ieee/ieee/derived/mechanism-envelope-v6/review.html directly: offline top/side sample review (not 3D Integration Studio). Compare three concepts, flat/upright poses, nine E04 offsets/yaws and three synthetic dimensional cases: **${cases.length} cases / ${report.sample_count} samples**. Approach step ${report.approach_step_mm} mm; actuation step ${report.actuation_fraction_step}. No continuous collision certificate.\n\n## Tire evidence and coordinates\n\nOrganizer source: /workspace/ieee/ieee/${p.tire_source.path}; original archive sources/organizer-2026-10-29/Spare-Tire-v2.zip. ${mesh.triangles} STL facets. Axis extents ${mesh.size_mm.map(round).join(' × ')} mm; enclosing radial diameter ${round(2*mesh.enclosing_outer_radius_mm)} mm from centered X/Z vertices. STL Y becomes flat thickness axis/global Z. Outer circular cylinder encloses vertices; nominal ${p.tire_source.bore_diameter_mm} mm bore remains a design callout, not a mesh-verified or physical minimum.\n\nGlobal +X is forward, +Y lateral, +Z up; tire rests on Z=0. Fixed robot; relative tire translates ${c.approach_distance_mm} mm toward target X=${c.target_center_x_mm}. Tire offset is lateral; yaw rotates tire about Z, NOT robot heading error. Flat circular envelope is invariant to yaw. Upright bore axis is horizontal [cos(yaw),sin(yaw),0]. No tilt dynamics or pose correction.\n\n## Comparison (flat, nominal dimensions)\n\n| Concept | E04 cases | Cases with unintended proxy overlaps | Cases with intended jaw overlaps | Axis boundary |\n|---|---:|---:|---:|---|\n${c.concepts.map(k=>{const rows=nominal.filter(x=>x.concept_id===k.id);return `| ${k.label} | ${rows.length} | ${rows.filter(x=>x.summary.unintended_contact_samples>0).length} | ${rows.filter(x=>x.summary.intended_jaw_contact_samples>0).length} | ${k.id==='guided-bore'?'vertical pin; incompatible with upright bore':'no validated acquisition/retention'} |`;}).join('\n')}\n\nThese counts are geometric conflicts, not success rates. Flat profiles use analytic radial-range versus annulus and extrusion-Z overlap checks. Upright uses outer AABB broad phase (bore filled): only potential conflicts. Robot and reserved-space conflicts also use AABB broad phase. Touching boundaries without penetration are not flagged. Fork derives unchanged coupon polygon; placement/height, OD jaws and vertical stage are synthetic. No floor ramp, mounting, structural model or forces have been designed.\n\nThe bore pin is retracted above a flat tire during approach and lowered after alignment. Its single vertical stroke is a concept assumption; stage structure/control unresolved. OD jaws start open and close with ${c.gripper.closed_diametral_interference_mm} mm diametral rigid overlap: intended contact only, not a force or grip result. No physical tire motion response is solved. Keep-outs reveal packaging questions rather than disappear on favorable cases.\n\n## Interfaces, complexity and recovery\n\n${c.concepts.map(x=>`### ${x.label}\n\nConceptual actuator lower bound: ${x.actuator_count_lower_bound}, not a selected actuator. ${x.recovery}\n\n${x.unknowns.map(u=>`- ${u}`).join('\n')}`).join('\n\n')}\n\nElectrical interface source: /workspace/ieee/ieee/${c.electrical_config}. Its four-GPIO mechanism allowance does not size or power an actuator. No sensor/controller timing, limit switches, force limits or safe recovery is qualified. Sensor/cable/electronics keep-outs are illustrative and are not installed vendor geometry.\n\n## Envelope and decision\n\nRule limit: ${JSON.stringify(c.robot_envelope_limit_mm)}. Null means not evaluated; legality remains unresolved even if a configured XYZ box passes. Full assembly/path boxes include tire and conservative wheel/motor bounds. Sampled swept boxes enclose all samples, not occupied volume or continuous sweeps.\n\n**No mechanism selected.** Keep passive fork as the lowest-actuation experiment baseline, not a reliability winner. Guided bore needs flat-axis alignment and vertical-stage work; OD gripping needs force/compliance/retention evidence. Upright cases retain their axis and broad-phase limitations. Preserve every conflict/unknown.\n\n${c.limitations.map(x=>`- ${x}`).join('\n')}\n\n## Reproduce\n\nFrom /workspace/ieee/ieee: node tools/mechanism-envelope-v6.js; node tools/verify-mechanism-envelope-v6.js; node --test tests/mechanism-envelope-v6.test.js. report.json contains full samples; summary.csv retains every case. Existing v3 coupons and v4/v5 viewers are unchanged. Coast/brake variants and Integration Studio remain subsequent work.\n`;
+  const csv='case_id,concept,orientation,tolerance,offset_mm,yaw_deg,contact_samples,unintended_contact_samples,intended_jaw_contact_samples,robot_potential_conflicts,pin_axis_status,envelope_status,acquisition_status,retention_status\n'+cases.map(x=>[x.id,x.concept_id,x.orientation,x.tolerance_id,x.offset_mm,x.yaw_deg,x.summary.contact_sample_count,x.summary.unintended_contact_samples,x.summary.intended_jaw_contact_samples,x.summary.robot_potential_conflicts.join(';'),x.summary.pin_axis_status,x.summary.envelope_status,x.summary.acquisition_status,x.summary.retention_status].join(',')).join('\n')+'\n';
+  return {report,files:{'README.md':readme,'report.json':json(report),'summary.csv':csv,'review.html':viewer(report)}};
+}
+function generate(){
+  const c=read('mechanism-envelope-v6.json'),built=buildArtifacts(c),p=read(c.prototype_config);fs.mkdirSync(path.join(root,out),{recursive:true});for(const [name,text]of Object.entries(built.files))fs.writeFileSync(path.join(root,out,name),text);
+  const inputs=['mechanism-envelope-v6.json',c.prototype_config,c.mule_config,c.electrical_config,'tools/mechanism-envelope-v6.js','tools/mechanism-prototyping-v3.js',p.tire_source.path];
+  const preserved=['share/Robot-Lab-v3.html','share/Robot-Lab-v4.html','share/Mule-Studio-v4.html','share/Mule-Dynamics-Studio-v5.html','derived/mule-dynamics-v5/browser-validation.json','derived/mechanism-prototyping-v3/manifest.json','derived/electrical-selection-v6/manifest.json'];
+  fs.writeFileSync(path.join(root,out,'manifest.json'),json({status:c.status,input_hashes:Object.fromEntries(inputs.map(f=>[f,hash(f)])),output_hashes:Object.fromEntries(Object.keys(built.files).map(f=>[`${out}/${f}`,hash(`${out}/${f}`)])),preserved_hashes:Object.fromEntries(preserved.map(f=>[f,hash(f)]))}));return built;
+}
+module.exports={bounds,union,overlap,stlEnvelope,validate,tireGeometry,tireBounds,radialRange,flatContact,rectangle,parts,obstacles,envelopeCheck,evaluate,svgFrame,buildArtifacts,generate};
+if(require.main===module){const b=generate();console.log(json({cases:b.report.case_count,samples:b.report.sample_count,status:b.report.status,physical_trials:0,selected_mechanism:null}));}

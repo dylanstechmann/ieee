@@ -1,0 +1,200 @@
+{
+  "status": "provisional-dimension-constrained-not-for-construction",
+  "source": "derived/GM2-V3.1/media/image4.JPG (GM2 V3 field illustration)",
+  "units": "inches",
+  "frame": "x from pit end toward race end; y left to right in source image; z upward",
+  "dimensions": {
+    "board_length": 96,
+    "board_width": 48,
+    "pit_length": 28,
+    "race_length": 68,
+    "pit_box_width": 12,
+    "pit_box_depth": 12,
+    "pit_box_gap": 3,
+    "center_divider_length": 36,
+    "pit_divider_length": 16
+  },
+  "assumptions": {
+    "pit_box_near_x": 1.017,
+    "first_box_near_y": 3.045,
+    "center_divider_mid_x": 61.87,
+    "center_divider_y": 24.073,
+    "pit_divider_mid_y": 24.073,
+    "start_box_near_x": 14.378,
+    "start_box_near_y": 32.918,
+    "start_box_width": 12,
+    "start_box_depth": 12
+  },
+  "features": [
+    {
+      "id": "pit_box_1",
+      "kind": "marking",
+      "vertices_in": [
+        [
+          1.017,
+          3.045
+        ],
+        [
+          13.017,
+          3.045
+        ],
+        [
+          13.017,
+          15.045
+        ],
+        [
+          1.017,
+          15.045
+        ]
+      ],
+      "provenance": "12-inch width and 3-inch gap: V3 drawing; depth and origin assumed"
+    },
+    {
+      "id": "pit_box_2",
+      "kind": "marking",
+      "vertices_in": [
+        [
+          1.017,
+          18.045
+        ],
+        [
+          13.017,
+          18.045
+        ],
+        [
+          13.017,
+          30.045
+        ],
+        [
+          1.017,
+          30.045
+        ]
+      ],
+      "provenance": "12-inch width and 3-inch gap: V3 drawing; depth and origin assumed"
+    },
+    {
+      "id": "pit_box_3",
+      "kind": "marking",
+      "vertices_in": [
+        [
+          1.017,
+          33.045
+        ],
+        [
+          13.017,
+          33.045
+        ],
+        [
+          13.017,
+          45.045
+        ],
+        [
+          1.017,
+          45.045
+        ]
+      ],
+      "provenance": "12-inch width and 3-inch gap: V3 drawing; depth and origin assumed"
+    },
+    {
+      "id": "start_box",
+      "kind": "marking",
+      "vertices_in": [
+        [
+          14.378,
+          32.918
+        ],
+        [
+          26.378,
+          32.918
+        ],
+        [
+          26.378,
+          44.918
+        ],
+        [
+          14.378,
+          44.918
+        ]
+      ],
+      "provenance": "trace origin and 12-inch square assumed"
+    },
+    {
+      "id": "center_divider_axis",
+      "kind": "divider_axis",
+      "vertices_in": [
+        [
+          43.87,
+          24.073
+        ],
+        [
+          79.87,
+          24.073
+        ]
+      ],
+      "provenance": "36-inch length: V3 drawing; axis center trace-derived"
+    },
+    {
+      "id": "pit_divider_axis",
+      "kind": "divider_axis",
+      "vertices_in": [
+        [
+          28,
+          16.073
+        ],
+        [
+          28,
+          32.073
+        ]
+      ],
+      "provenance": "16-inch length and 28-inch division: V3 drawing; alignment and axis center assumed"
+    },
+    {
+      "id": "track_marking_trace",
+      "kind": "trace",
+      "vertices_in": [
+        [
+          88.012,
+          17.837
+        ],
+        [
+          88.012,
+          30.308
+        ],
+        [
+          80.024,
+          36.399
+        ],
+        [
+          43.57,
+          36.399
+        ],
+        [
+          35.873,
+          30.308
+        ],
+        [
+          35.873,
+          17.837
+        ],
+        [
+          43.57,
+          11.601
+        ],
+        [
+          80.024,
+          11.601
+        ]
+      ],
+      "provenance": "unconstrained image trace; not dimensioned"
+    }
+  ],
+  "limitations": [
+    "box offsets and divider centers from image trace, not callouts",
+    "pit-box depth and start-box size treated as 12-inch squares pending endpoint verification",
+    "transition and pit divider share x=28 by assumption",
+    "track marking remains a low-resolution image trace",
+    "physical wall thickness and divider width are unknown",
+    "opening callouts 15 and 15.02 are not interpreted as usable clearances",
+    "no obstacle placements, tags, flag, tire or physical tolerances are modeled"
+  ]
+}

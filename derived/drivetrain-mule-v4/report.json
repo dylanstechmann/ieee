@@ -1,0 +1,70 @@
+{
+  "version": "0.4.0",
+  "date": "2026-10-31",
+  "status": "selected-prototype-baseline-not-ordered-not-fabricated-not-hardware-validated",
+  "selected": {
+    "motor_id": "M70",
+    "wheel_diameter_mm": 80,
+    "bracket_sku": "1995",
+    "hub_sku": "1083",
+    "wheel_sku": "1430",
+    "caster_sku": "953",
+    "support_configuration": "dual-front-rear"
+  },
+  "order_a_priced_subtotal_usd": 177.25,
+  "geometry": {
+    "axle_z_mm": 40,
+    "deck_top_z_mm": 21.6,
+    "deck_bottom_z_mm": 16.6,
+    "caster_height_with_selected_spacer_mm": 16.675,
+    "caster_contact_z_mm": -0.075,
+    "wheel_track_mm": 176,
+    "overall_drive_width_mm": 186,
+    "overall_length_mm": 190,
+    "overall_height_mm": 80,
+    "motor_body_center_gap_mm": 8,
+    "wheel_deck_lateral_clearance_mm": 3,
+    "motor_hole_edge_ligament_mm": 4.3
+  },
+  "configuration_count": 18,
+  "physical_trials_completed": 0,
+  "printed_parts_inspected": 0,
+  "mesh": {
+    "file": "stl/mule-deck-blank.stl",
+    "vertices": 8,
+    "triangles": 12,
+    "edges": 18,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "min_triangle_area_mm2": 400,
+    "signed_volume_mm3": 152000,
+    "bounds_mm": {
+      "min": [
+        -95,
+        -80,
+        0
+      ],
+      "max": [
+        95,
+        80,
+        5
+      ]
+    }
+  },
+  "source_documents": {
+    "motor_step": "sources/hardware-2026-10-31/pololu/step/37d-gearmotor-50-70-encoder.step",
+    "bracket_step": "sources/hardware-2026-10-31/pololu/step/1995-machined-bracket.step",
+    "caster_step": "sources/hardware-2026-10-31/pololu/step/953-ball-caster.step",
+    "wheel_page": "sources/hardware-2026-10-31/pololu/product-1430-overview.html"
+  },
+  "limitations": [
+    "Selected for continued digital prototyping only; no supplier order, print, fabrication or energized test is recorded.",
+    "Deck and drilling geometry are nominal candidates. Inspect received parts and verify bracket orientation, screw engagement, hub stack-up and tolerances before fabrication.",
+    "The deck STL is an undrilled blank. The true-scale SVG is the proposed drill template; optional ballast marks are not released mounting holes.",
+    "The caster preload calculation is rigid nominal arithmetic, not a suspension, flatness, traction or wheel-loading guarantee.",
+    "Dual and single-caster configurations require E03 comparison. Metal-ball caster load and scrub limits remain relevant.",
+    "Motor maximum-efficiency data and ideal motor curves are not loaded or thermal validation. Driver, battery and controller remain unselected.",
+    "The 80 mm mule is separate from the 3-inch route-simulation baseline."
+  ]
+}

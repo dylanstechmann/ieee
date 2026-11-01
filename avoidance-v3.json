@@ -1,0 +1,8 @@
+{
+  "status": "agent-run-ideal-cardinal-avoidance-study-not-hardware-validation",
+  "grid_step_in": 2,
+  "clearance_margin_in": 0.05,
+  "max_expansions": 20000,
+  "wheel_track_in": 8,
+  "obstacle_case_ids": ["empty-control", "upper-lane-blocker", "pit-gate-blocker"]
+}

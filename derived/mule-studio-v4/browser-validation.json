@@ -1,0 +1,20 @@
+{
+  "date":"2026-10-31",
+  "status":"passed-browser-interaction-and-render-review-not-hardware-validation",
+  "standalone":"share/Mule-Studio-v4.html",
+  "standalone_sha256":"fd5687b5b7e57951c6a1c7811d4f34a3394800563848c4fb6c396a11b1df01e0",
+  "browser":"Playwright Chromium with WebGL",
+  "console":{"javascript_errors":0,"warnings":2,"warning_scope":"GL Driver ReadPixels performance messages during screenshot capture; no application exception"},
+  "default":{"selection":{"sku":"4754","wheel_diameter_mm":80,"support_configuration":"dual-front-rear"},"exploded":0,"item_count":75,"wire_count":12,"render":{"instances":75,"triangles":18752,"drawCalls":75,"shadows":true},"geometry_status":"nominal-digital-checks-pass","warnings":[]},
+  "motor_substitution":{"sku":"4755","wheel_diameter_mm":80,"motor_body_gap_mm":3,"warning":"Motor-body gap 3 mm is below 8 mm; move gearbox faces outward or revise deck."},
+  "wheel_substitution":{"sku":"4755","wheel_diameter_mm":76.2,"caster_contact_z_mm":-1.975,"encoder_quantum_in":0.00144264,"warnings":["Caster contact -1.975 mm exceeds ±0.25 mm; change spacer/deck geometry.","Motor-body gap 3 mm is below 8 mm; move gearbox faces outward or revise deck."]},
+  "support_and_exploded":{"support_configuration":"front-only","exploded":0.65,"wire_count":0,"item_count":58,"warning_count":2},
+  "screenshots":[
+    {"file":"default.png","sha256":"6d570af7898e9bf328ff7a7fd0386e7aee264f624bd973ed32b21ee6e99adaf5","scope":"default three-quarter review"},
+    {"file":"top.png","sha256":"22deffa430cdfb5c91fe693fe08b81e85dffafe87b017264502ad55bc5827deb","scope":"top support and lead-routing review"},
+    {"file":"substitution-warning.png","sha256":"acc0e021410cafdde57506b3af9e6a8dd93923aa46a12d3efa0ddb8a9e86fd18","scope":"M100 / 76.2 mm / front-only / 65 percent exploded warning review"}
+  ],
+  "ordered":false,
+  "fabricated":false,
+  "physical_trials":0
+}

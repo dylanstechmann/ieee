@@ -1,0 +1,96 @@
+{
+  "status": "provisional-dimension-constrained-not-for-construction",
+  "units": "inches unless stated otherwise",
+  "evidence_date": "2026-10-29",
+  "evidence_note": "Dimension callouts transcribed from organizer images by a vision model (see derived/vision-transcripts/2026-10-29/) and cross-checked against the revision history, the V2 drawing and the rendered arena guide PDF. Small digits and fractions still merit human confirmation.",
+  "coordinate_frame": {
+    "origin": "lower-left outside corner of base, with pit end at x=0; top-view convention proposed, not organizer-provided",
+    "x_axis": "along 96-inch nominal base toward racecourse end",
+    "y_axis": "along 48-inch nominal base width",
+    "z_axis": "up from top surface of base"
+  },
+  "base": {"length": 96, "width": 48, "thickness_nominal": 0.71875, "source": "GM2 V3 section 3.2; nominal stock"},
+  "walls": {
+    "stock_callout": "1 x 4 x 96 in",
+    "paint": "grey",
+    "confirmed_by": "vision transcription of V3 drawing image4.JPG, 2026-10-29",
+    "thickness": null,
+    "height": null,
+    "positions": null,
+    "source": "nominal 1x4 lumber callout; installed dimensions still unverified"
+  },
+  "center_divider": {
+    "length_nominal": 36,
+    "stock_callout": "1 x 2 x 36 in",
+    "confirmed_by": "vision transcription of V3 drawing image4.JPG, 2026-10-29; June-2026 guide and V2 drawing show 1 x 1 x 36",
+    "actual_cross_section": null,
+    "pose": null,
+    "source": "GM2 V3 Figure 3.2.1 drawing"
+  },
+  "pit_divider": {
+    "stock_callout": "1 x 1 x 16 in",
+    "confirmed_by": "vision transcription, 2026-10-29",
+    "actual_cross_section": null,
+    "pose": null,
+    "source": "GM2 V3 Figure 3.2.1 drawing"
+  },
+  "paint_scheme": {"walls": "grey (PPG1036-2 per BOM)", "background_areas": "black (PPG1011-7 per BOM)", "source": "drawing callouts transcribed 2026-10-29; BOM appendix"},
+  "track_marking_callouts_in": {
+    "top_flat": 12.25,
+    "vertical_sides": 36.75,
+    "top_left_diagonal": 9.75,
+    "diagonal_evidence": "multi-model consensus 2026-10-29: single 9 3/4 label (V3 left slant 4/4; V3 right slant unlabeled; V2 and June guide each show one 9 3/4 label; no 6 3/4 and no 90-degree marks exist) - symmetric chamfers implied",
+    "top_offset": 15,
+    "note": "octagonal racecourse marking labels from the V3 drawing"
+  },
+  "pit_boxes": {
+    "count": 3,
+    "width_in": 12,
+    "gap_in": 3,
+    "edge_spans_in": [6.5, 1.5],
+    "box_polygons": null,
+    "source": "V3 drawing labels transcribed 2026-10-29; physical boundaries still require validation"
+  },
+  "pit_transition_spans_in": {
+    "left": 15,
+    "right": 15.02,
+    "right_edge_cluster": [2, 17, 12, 6.5],
+    "right_edge_cluster_confirmed_by": "4/4 multi-model vote 2026-10-29 (17in, not 7in; one model pixel-scale-verified ~17-19 in)",
+    "reference_surfaces": "unverified; the 15.02-in span runs from the checkered notch edge to the right edge per vision reading"
+  },
+  "obstacles": {
+    "count": 3,
+    "quadrant_count": 4,
+    "quadrant_width_in": 16,
+    "quadrant_length_in": 16,
+    "offset_from_side_and_center_rails_in": 2,
+    "gap_between_longitudinal_quadrants_in": 4,
+    "placement_regions": null,
+    "obstacle_geometry": null,
+    "quadrant_arrangement_confirmed_by": "image8.tmp photo overlays: two quadrants per lane either side of the center divider",
+    "source": "GM2 V3 section 3.1 and Appendix E; measurement reference surfaces and coordinates unverified"
+  },
+  "apriltags": {
+    "family": "41h12",
+    "tag_size_mm": 68,
+    "numbered_tags_in_figure": [1, 2, 3],
+    "attachment": "magnetic to board per guide legend",
+    "source": "GM2 V3.1 media/image5.jpg vision-transcribed 2026-10-29 (same image in V2); poses unverified"
+  },
+  "field_element_placement_tolerance_in": {"value": 1, "interpretation": "plus or minus; not a universal material-size tolerance", "source": "GM2 V3 G02"},
+  "track_line_polygons": null,
+  "start_flag_pose": null,
+  "tire": {
+    "stl_model_units": "millimetres (confirmed by lit mm indicators plus 3-way value match with the STL)",
+    "outer_diameter_mm": 68.184,
+    "thickness_mm": 27.6,
+    "bore_callout_mm": 40.3,
+    "bore_mesh_sampled_mm": 40.25,
+    "caliper_readings_mm": {"top_left": 27.1, "top_middle": 40.3, "top_right": 68.2, "bottom_left": 14.1},
+    "bottom_left_feature": "radial wall thickness (design 13.94); 8x re-read 2026-10-29: 14.01/14.7/14.17/14.17, 4/5 models read first digit as 1",
+    "radial_wall_design_mm": 13.94,
+    "evidence": "Multi-model consensus 2026-10-29 on 4x panel zooms: calipers 68.2 / 27.1 / 40.3 mm with mm indicators lit; sketch O40.30 pointing to the inner circle (3/3); render 27.2 mm (3/3, plausibly 27.6); STL extents 68.184 x 27.600 x 68.192 with mesh bore ~40.25",
+    "printed_tolerances": null,
+    "source": "organizer Spare Tire v2.stl plus Appendix D images; transcripts in derived/vision-transcripts/2026-10-29/"
+  }
+}

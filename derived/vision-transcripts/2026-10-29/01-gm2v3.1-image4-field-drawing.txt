@@ -1,0 +1,32 @@
+Here is a transcription of all visible dimensions and text callouts from the drawing:
+
+*   **48in** - Top center
+*   **1"x4"x96"** - Left edge upper
+*   **Paint Grey** - Left edge upper
+*   **68in** - Left edge upper/middle
+*   **9⁶⁄₈in** - Inside the racecourse, top left diagonal segment
+*   **12in** - Inside the racecourse, top straight segment
+*   **15in** - Inside the racecourse, right edge upper (next to 12in)
+*   **36³/₄in** - Inside the racecourse, left edge middle straight segment
+*   **36** - Near the center divider (length of the inner obstacle)
+*   **1"x2"x36"** - Near the center divider (label for the inner obstacle)
+*   **Paint Black** - Left edge lower
+*   **15in** - Inside the racecourse, right edge lower (next to 15.02in)
+*   **15.02in** - Inside the racecourse, bottom right diagonal segment
+*   **28in** - Left edge lower
+*   **15in** - Pit area bottom, left section width
+*   **12** - Pit area bottom, left box height
+*   **6²/₈in** - Pit area bottom, left box horizontal dimension
+*   **12in** - Pit area bottom, center box width
+*   **3** - Pit area bottom, gap between left and center boxes
+*   **3** - Pit area bottom, gap between center and right boxes
+*   **1"x1"x16"** - Pit area bottom, label for the rightmost vertical obstacle
+*   **12in** - Pit area bottom, right box width
+*   **6²/₈in** - Pit area bottom, rightmost vertical obstacle horizontal dimension
+*   **17in** - Pit area bottom, rightmost vertical obstacle height
+*   **12in** - Pit area bottom, rightmost section, right edge upper vertical dimension
+*   **2** - Pit area bottom, rightmost section, width of top right horizontal obstacle
+*   **Apriltag** - Right edge, near the pit area
+*   **Apriltags** - Pit area bottom, lower left
+
+The drawing depicts a robot competition arena, laid out on a 96x48 inch board. The top portion features an octagonal racecourse with a straight central divider, while the bottom portion designates a "pit area" composed of several rectangular sections and obstacles. The overall layout is rectangular, with the long side oriented vertically on the page.

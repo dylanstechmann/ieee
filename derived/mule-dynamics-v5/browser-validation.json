@@ -1,0 +1,410 @@
+{
+  "version": "0.5.0",
+  "date": "2026-10-31",
+  "status": "passed-offline-browser-and-visual-review-synthetic-only",
+  "protocol": "file://",
+  "standalone": "share/Mule-Dynamics-Studio-v5.html",
+  "standalone_sha256": "090389221c51337d5b1346ce8d3c54e1eca5d7d551cc4729d0a39c3099a1907f",
+  "console": {
+    "javascript_errors": 0,
+    "webgl_performance_warnings": 4,
+    "scope": "GPU ReadPixels stall messages across repeated WebGL rendering/screenshot passes; no JavaScript exception"
+  },
+  "visual_review": {
+    "status": "passed",
+    "review": "Agent-inspected refreshed default cruise, final spin, asymmetric traction and exploded full-page screenshots; framing, telemetry, plots, boundaries and mode changes readable."
+  },
+  "default": {
+    "version": "0.5.0",
+    "selection": {
+      "sku": "4754",
+      "wheel_diameter_mm": 80,
+      "support_configuration": "dual-front-rear"
+    },
+    "options": {
+      "showPath": true,
+      "showWiring": true,
+      "showMechanism": true,
+      "showReserved": true,
+      "xray": false,
+      "exploded": 0
+    },
+    "playing": false,
+    "scenario": "cruise",
+    "mass_kg": 4,
+    "index": 60,
+    "sample_count": 181,
+    "state": {
+      "t": 2,
+      "x_m": 0.347698,
+      "y_m": 0,
+      "yaw_rad": 0,
+      "speed_m_s": 0.203591,
+      "yaw_rate_rad_s": 0,
+      "wheel_omega_rad_s": [
+        5.089764,
+        5.089764
+      ],
+      "wheel_angle_rad": [
+        8.692452,
+        8.692452
+      ],
+      "duty": [
+        0.333578,
+        0.333578
+      ],
+      "current_a": [
+        0.048789,
+        0.048789
+      ],
+      "torque_nm": [
+        0.023488,
+        0.023488
+      ],
+      "bus_v": 11.975605,
+      "energy_wh": 0.000892,
+      "slip_m_s": [
+        0,
+        0
+      ],
+      "saturated": [
+        false,
+        false
+      ],
+      "encoder_rad_s": [
+        5.089661,
+        5.089661
+      ]
+    },
+    "metrics": {
+      "duration_s": 6,
+      "distance_m": 1.160843,
+      "final_speed_m_s": 0.20322,
+      "final_yaw_rad": 0,
+      "final_yaw_error_rad": 0,
+      "maximum_abs_current_a": 0.11617,
+      "maximum_abs_slip_m_s": 0,
+      "maximum_steady_speed_error_m_s": 0.000391,
+      "saturation_samples": 0,
+      "energy_wh": 0.002193
+    },
+    "warnings": [],
+    "item_count": 100,
+    "wire_count": 12,
+    "phase_count": 2,
+    "canvas": {
+      "width": 1139,
+      "height": 680
+    },
+    "webgl": true,
+    "render": {
+      "instances": 100,
+      "triangles": 32960,
+      "drawCalls": 100,
+      "shadows": true
+    }
+  },
+  "spin": {
+    "version": "0.5.0",
+    "selection": {
+      "sku": "4754",
+      "wheel_diameter_mm": 80,
+      "support_configuration": "dual-front-rear"
+    },
+    "options": {
+      "showPath": true,
+      "showWiring": true,
+      "showMechanism": true,
+      "showReserved": true,
+      "xray": false,
+      "exploded": 0
+    },
+    "playing": false,
+    "scenario": "spin",
+    "mass_kg": 4,
+    "index": 180,
+    "sample_count": 181,
+    "state": {
+      "t": 6,
+      "x_m": 0,
+      "y_m": 0,
+      "yaw_rad": 3.13517,
+      "speed_m_s": 0,
+      "yaw_rate_rad_s": 0.011917,
+      "wheel_omega_rad_s": [
+        -0.026217,
+        0.026217
+      ],
+      "wheel_angle_rad": [
+        -6.897374,
+        6.897374
+      ],
+      "duty": [
+        -0.004363,
+        0.004363
+      ],
+      "current_a": [
+        -0.014766,
+        0.014766
+      ],
+      "torque_nm": [
+        -0.007109,
+        0.007109
+      ],
+      "bus_v": 11.996309,
+      "energy_wh": 0.000543,
+      "slip_m_s": [
+        0,
+        0
+      ],
+      "saturated": [
+        false,
+        false
+      ],
+      "encoder_rad_s": [
+        -0.026647,
+        0.026647
+      ]
+    },
+    "metrics": {
+      "duration_s": 6,
+      "distance_m": 0,
+      "final_speed_m_s": 0,
+      "final_yaw_rad": 3.13517,
+      "final_yaw_error_rad": 0.006423,
+      "maximum_abs_current_a": 0.057458,
+      "maximum_abs_slip_m_s": 0,
+      "maximum_steady_speed_error_m_s": 0,
+      "saturation_samples": 0,
+      "energy_wh": 0.000543
+    },
+    "warnings": [],
+    "item_count": 99,
+    "wire_count": 12,
+    "phase_count": 2,
+    "canvas": {
+      "width": 1139,
+      "height": 680
+    },
+    "webgl": true,
+    "render": {
+      "instances": 99,
+      "triangles": 23360,
+      "drawCalls": 99,
+      "shadows": true
+    }
+  },
+  "asymmetric_traction": {
+    "version": "0.5.0",
+    "selection": {
+      "sku": "4754",
+      "wheel_diameter_mm": 80,
+      "support_configuration": "dual-front-rear"
+    },
+    "options": {
+      "showPath": true,
+      "showWiring": true,
+      "showMechanism": true,
+      "showReserved": true,
+      "xray": false,
+      "exploded": 0
+    },
+    "playing": false,
+    "scenario": "asymmetric-traction",
+    "mass_kg": 4,
+    "index": 60,
+    "sample_count": 181,
+    "state": {
+      "t": 2,
+      "x_m": 0.405459,
+      "y_m": 0.091925,
+      "yaw_rad": 0.312576,
+      "speed_m_s": 0.216201,
+      "yaw_rate_rad_s": 0.028034,
+      "wheel_omega_rad_s": [
+        6.848718,
+        3.322889
+      ],
+      "wheel_angle_rad": [
+        12.663325,
+        6.989036
+      ],
+      "duty": [
+        0.441404,
+        0.225258
+      ],
+      "current_a": [
+        0.024877,
+        0.072777
+      ],
+      "torque_nm": [
+        0.011976,
+        0.035036
+      ],
+      "bus_v": 11.975586,
+      "energy_wh": 0.000907,
+      "slip_m_s": [
+        0.060215,
+        -0.085752
+      ],
+      "saturated": [
+        false,
+        false
+      ],
+      "encoder_rad_s": [
+        6.846989,
+        3.32532
+      ]
+    },
+    "metrics": {
+      "duration_s": 6,
+      "distance_m": 1.278223,
+      "final_speed_m_s": 0.215989,
+      "final_yaw_rad": 0.33256,
+      "final_yaw_error_rad": 0.33256,
+      "maximum_abs_current_a": 0.499336,
+      "maximum_abs_slip_m_s": 0.085752,
+      "maximum_steady_speed_error_m_s": 0.013001,
+      "saturation_samples": 0,
+      "energy_wh": 0.002208
+    },
+    "warnings": [],
+    "item_count": 100,
+    "wire_count": 12,
+    "phase_count": 2,
+    "canvas": {
+      "width": 1139,
+      "height": 680
+    },
+    "webgl": true,
+    "render": {
+      "instances": 100,
+      "triangles": 32960,
+      "drawCalls": 100,
+      "shadows": true
+    }
+  },
+  "exploded": {
+    "version": "0.5.0",
+    "selection": {
+      "sku": "4754",
+      "wheel_diameter_mm": 80,
+      "support_configuration": "dual-front-rear"
+    },
+    "options": {
+      "showPath": true,
+      "showWiring": true,
+      "showMechanism": true,
+      "showReserved": true,
+      "xray": false,
+      "exploded": 1
+    },
+    "playing": false,
+    "scenario": "asymmetric-traction",
+    "mass_kg": 4,
+    "index": 60,
+    "sample_count": 181,
+    "state": {
+      "t": 2,
+      "x_m": 0.405459,
+      "y_m": 0.091925,
+      "yaw_rad": 0.312576,
+      "speed_m_s": 0.216201,
+      "yaw_rate_rad_s": 0.028034,
+      "wheel_omega_rad_s": [
+        6.848718,
+        3.322889
+      ],
+      "wheel_angle_rad": [
+        12.663325,
+        6.989036
+      ],
+      "duty": [
+        0.441404,
+        0.225258
+      ],
+      "current_a": [
+        0.024877,
+        0.072777
+      ],
+      "torque_nm": [
+        0.011976,
+        0.035036
+      ],
+      "bus_v": 11.975586,
+      "energy_wh": 0.000907,
+      "slip_m_s": [
+        0.060215,
+        -0.085752
+      ],
+      "saturated": [
+        false,
+        false
+      ],
+      "encoder_rad_s": [
+        6.846989,
+        3.32532
+      ]
+    },
+    "metrics": {
+      "duration_s": 6,
+      "distance_m": 1.278223,
+      "final_speed_m_s": 0.215989,
+      "final_yaw_rad": 0.33256,
+      "final_yaw_error_rad": 0.33256,
+      "maximum_abs_current_a": 0.499336,
+      "maximum_abs_slip_m_s": 0.085752,
+      "maximum_steady_speed_error_m_s": 0.013001,
+      "saturation_samples": 0,
+      "energy_wh": 0.002208
+    },
+    "warnings": [],
+    "item_count": 82,
+    "wire_count": 0,
+    "phase_count": 0,
+    "canvas": {
+      "width": 1139,
+      "height": 680
+    },
+    "webgl": true,
+    "render": {
+      "instances": 82,
+      "triangles": 27968,
+      "drawCalls": 82,
+      "shadows": true
+    }
+  },
+  "interactions": {
+    "played_time_s": 0.266667,
+    "played_index": 8,
+    "stepped_index": 9,
+    "long_motor_warnings": [
+      "Motor-body gap 3 mm is below 8 mm; move gearbox faces outward or revise deck."
+    ],
+    "custom_wheel_warnings": [
+      "Motor-body gap 3 mm is below 8 mm; move gearbox faces outward or revise deck."
+    ],
+    "altered_mass_kg": 6,
+    "xray": true
+  },
+  "screenshots": [
+    {
+      "file": "default-cruise.png",
+      "sha256": "af4a7bafd1c6ebd9c40ad7bcc1e104ced6e05886432e67e8d53cb0fcc1a7e849"
+    },
+    {
+      "file": "spin.png",
+      "sha256": "b5615f58a8bfc5cf5abfe57f014994e49bcfb17c09869fa23a1a04e2d20705be"
+    },
+    {
+      "file": "asymmetric-traction.png",
+      "sha256": "c75aacfc3a3a9acc122c244cdcccc9ee35c894d23b95eecc44713d8b12c9e979"
+    },
+    {
+      "file": "exploded.png",
+      "sha256": "ebe9464ac045c105c8671909eb9aaa83a800aefa492f0f2f720af2a81949f799"
+    }
+  ],
+  "physical_trials": 0,
+  "purchased_components": 0
+}

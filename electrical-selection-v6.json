@@ -1,0 +1,267 @@
+{
+  "version": "0.6.0",
+  "date": "2026-10-31",
+  "status": "conditional-digital-shortlist-not-purchase-or-hardware-release",
+  "source_directory": "sources/electrical-2026-10-31",
+  "requirements": {
+    "drive_channels": 2,
+    "quadrature_encoders": 2,
+    "encoder_supply_v": 5,
+    "controller_logic_v": 3.3,
+    "encoder_rate_margin": 2,
+    "encoder_rate_basis": "2x archived 12 V no-load rate is a digital design allowance, not a measured maximum; overspeed/back-driving can exceed it.",
+    "gpio_budget": {
+      "encoder_ab": 4,
+      "motor_pwm": 2,
+      "motor_direction": 2,
+      "motor_enable": 2,
+      "driver_fault": 2,
+      "current_adc": 2,
+      "mechanism_reserve": 4,
+      "i2c_reserve": 2
+    },
+    "control_target_hz": 240,
+    "telemetry_target_hz": 30,
+    "scheduler_status": "proposed targets inherited from v5; execution time, jitter, watchdog, counter integrity and fault response unimplemented and unverified",
+    "continuous_current_a_per_motor": null,
+    "startup_current_duration_s": null,
+    "qualified_driver_current_limit_a": null,
+    "battery_capacity_ah": null,
+    "fuse_rating_a": null,
+    "wire_gauge_awg": null,
+    "mechanism_actuator": null,
+    "mechanism_status": "passive fork/cradle, guided bore and OD gripper remain alternatives; loads, tire pose, retention, sensors, recovery and actuator interfaces unresolved"
+  },
+  "drivers": [
+    {
+      "id": "mc33926-dual",
+      "name": "Pololu #1213 Dual MC33926",
+      "channels_per_board": 2,
+      "bus_min_v": 5,
+      "bus_max_v": 28,
+      "logic_min_v": 3,
+      "logic_max_v": 5,
+      "continuous_advertised_a": 3,
+      "continuous_qualifier": "almost 3 A per channel; thermal conditions and enclosure derating must be checked",
+      "peak_advertised_a": 5,
+      "peak_qualifier": "few seconds; not a repeatable startup rating",
+      "price_usd": 39.95,
+      "availability": "Active; add-to-cart/backorders allowed, stock and lead time unverified",
+      "dimensions_mm": null,
+      "source": "driver-1213.html",
+      "decision": "lower-cost-conditional-alternative",
+      "blockers": [
+        "5 A peak is below the archived 5.5 A stall extrapolation; unrestricted startup/stall is not qualified",
+        "No qualified 3 A limit: v5 current clipping does not configure this board",
+        "Pin truth table, disable/brake/coast behavior, analog scaling and thermal duty require design review"
+      ]
+    },
+    {
+      "id": "g2-18v17-pair",
+      "name": "Two Pololu #2991 G2 18v17",
+      "channels_per_board": 1,
+      "bus_min_v": 6.5,
+      "bus_max_v": 24,
+      "absolute_max_v": 30,
+      "logic_min_v": 1.8,
+      "logic_max_v": 5,
+      "continuous_advertised_a": 17,
+      "continuous_qualifier": "manufacturer room-temperature test, no heat sink/forced airflow; MOSFET temperature and enclosure derating remain unresolved",
+      "peak_advertised_a": null,
+      "peak_qualifier": "no startup-duration rating promoted",
+      "price_usd": 44.95,
+      "availability": "Active and Preferred; add-to-cart/backorders allowed, quantity and lead time unverified",
+      "dimensions_mm": [
+        33.02,
+        20.32,
+        null
+      ],
+      "default_current_chop_a": 40,
+      "source": "driver-2991.html",
+      "decision": "preferred-packaging-study-candidate-not-qualified",
+      "blockers": [
+        "Default ~40 A chopping does not protect these 5.5 A extrapolated-stall motors; low-setting accuracy is explicitly poor",
+        "No MOSFET over-temperature shutdown; fault output is not a motor thermal safeguard",
+        "External protection/current-limit design, braking bus transients and enable/reset states remain unresolved",
+        "Two boards, capacitors, connectors and protection increase cost/area"
+      ],
+      "bus_voltage_basis": "24 V is manufacturer approximate safe maximum with ripple allowance, not absolute maximum; 30 V absolute maximum; maximum recommended nominal battery 18 V"
+    },
+    {
+      "id": "drv8833-dual",
+      "name": "Pololu #2130 DRV8833",
+      "channels_per_board": 2,
+      "bus_min_v": 2.7,
+      "bus_max_v": 10.8,
+      "logic_min_v": 2,
+      "logic_max_v": 5.5,
+      "continuous_advertised_a": 1.2,
+      "continuous_qualifier": "manufacturer carrier rating, not measured in robot",
+      "peak_advertised_a": 2,
+      "peak_qualifier": "not continuous",
+      "price_usd": 10.95,
+      "availability": "Active and Preferred; quantity unverified",
+      "dimensions_mm": null,
+      "source": "driver-2130.html",
+      "decision": "reject-for-12v-bus",
+      "blockers": [
+        "10.8 V operating maximum is below both 12 V and the 12.6 V full-charge scenario"
+      ]
+    },
+    {
+      "id": "vnh5019-old",
+      "name": "Pololu #2502 Dual VNH5019 ash02a",
+      "channels_per_board": 2,
+      "bus_min_v": 5.5,
+      "bus_max_v": 24,
+      "logic_min_v": 2.1,
+      "logic_max_v": 5,
+      "continuous_advertised_a": 12,
+      "continuous_qualifier": "historical board specification, not robot thermal qualification",
+      "peak_advertised_a": 30,
+      "peak_qualifier": "not continuous",
+      "price_usd": null,
+      "availability": "Discontinued; replacement must be separately researched",
+      "dimensions_mm": null,
+      "source": "driver-2502.html",
+      "decision": "exclude-discontinued",
+      "blockers": [
+        "Do not order an obsolete board or transfer its specifications to its replacement without review"
+      ]
+    }
+  ],
+  "controllers": [
+    {
+      "id": "pico2",
+      "name": "Raspberry Pi Pico 2 (non-wireless)",
+      "logic_v": 3.3,
+      "gpio_available": 26,
+      "clock_mhz": 150,
+      "sram_kib": 520,
+      "flash_mib": 4,
+      "dimensions_mm": [
+        51,
+        21,
+        null
+      ],
+      "price_usd": null,
+      "price_note": "manufacturer product-page archive request returned HTTP 403; no landed/current price asserted",
+      "availability": "datasheet archived; supplier quantity/lead time not checked",
+      "source": "pico2-datasheet.pdf",
+      "encoder_source": "pico-quadrature.pio",
+      "encoder_strategy": "Two PIO state machines, one per encoder, on consecutive A/B pin pairs; reference example only, no firmware compiled or flashed",
+      "decision": "preferred-digital-controller",
+      "blockers": [
+        "5 V encoder A/B must be conditioned to 3.3 V",
+        "Proposed pin budget is not an assigned/multiplexing-audited pin map",
+        "Compile/bench throughput, counter wrap, noise, scheduler and reset behavior unverified",
+        "Check current RP2350 errata and power sequencing before hardware integration"
+      ]
+    },
+    {
+      "id": "teensy41",
+      "name": "PJRC Teensy 4.1",
+      "logic_v": 3.3,
+      "gpio_available": 42,
+      "clock_mhz": 600,
+      "sram_kib": 1024,
+      "flash_mib": null,
+      "dimensions_mm": null,
+      "price_usd": null,
+      "price_note": "PJRC directs purchasing to SparkFun; exact variant, price and stock not archived",
+      "availability": "Manufacturer now SparkFun per PJRC; exact SKU procurement unresolved",
+      "source": "teensy41.html",
+      "encoder_source": "teensy-encoder.html",
+      "encoder_strategy": "Encoder library with interrupt-capable A/B pins; two-encoder load and other interrupts must be benchmarked",
+      "decision": "higher-capability-alternative",
+      "blockers": [
+        "Digital and analog pins are not 5 V tolerant",
+        "VIN/USB backfeed prevention must follow board guidance",
+        "No measured interrupt throughput, assigned pin map or deterministic firmware"
+      ]
+    }
+  ],
+  "encoder_conditioner": {
+    "name": "TI SN74LVC245A at 3.3 V",
+    "input_max_v": 5.5,
+    "supply_range_v": [
+      1.65,
+      3.6
+    ],
+    "channels": 8,
+    "source": "sn74lvc245a.pdf",
+    "status": "conditional-circuit-candidate-not-wiring-release",
+    "requirements": [
+      "Four encoder lines only, fixed encoder-to-controller direction, defined OE and unused inputs",
+      "Review VIH/VIL, output loading, decoupling, connector ground/reference and power sequencing",
+      "No pull-up-only conversion: motor outputs swing to encoder Vcc",
+      "Do not connect motor power or analog current feedback through this digital buffer",
+      "No package/breakout SKU, price or final schematic selected"
+    ]
+  },
+  "logic_regulator": {
+    "name": "Pololu #2858 D24V22F5",
+    "output_v": 5,
+    "input_range_v": [
+      5.3,
+      36
+    ],
+    "typical_max_current_a": 2.5,
+    "rating_basis": "2.5 A at 24 V input; actual continuous current depends on input voltage and thermal dissipation",
+    "dimensions_mm": [
+      17.8,
+      17.8,
+      8
+    ],
+    "price_usd": 26.95,
+    "availability": "Rationed (Active and Preferred); backorders allowed; no quantity or delivery verified",
+    "source": "regulator-2858.html",
+    "status": "conditional-logic-rail-candidate-not-selected",
+    "blockers": [
+      "Logic/sensor load budget, dropout, startup, noise and thermal performance at actual bus unqualified",
+      "Not a motor-bus regulator or a battery charger",
+      "USB/external supply backfeed and enable sequencing require separate design"
+    ]
+  },
+  "power_scenarios": [
+    {
+      "id": "regulated-12v",
+      "nominal_v": 12,
+      "maximum_v": 12,
+      "minimum_v": null,
+      "transient_max_v": null,
+      "charge_cell_v": null,
+      "series_cells": null,
+      "status": "ideal regulated motor-bus study; output tolerance, current rating and braking-energy absorption unresolved"
+    },
+    {
+      "id": "3s-4v2-direct",
+      "nominal_v": 11.1,
+      "maximum_v": 12.6,
+      "minimum_v": null,
+      "transient_max_v": null,
+      "charge_cell_v": 4.2,
+      "series_cells": 3,
+      "charge_reference": "bq24610.pdf",
+      "status": "conditional arithmetic for a 4.2 V/cell Li-ion/Li-polymer chemistry only, not all lithium cells; no pack, BMS or charger selected"
+    },
+    {
+      "id": "3s-regulated-motor",
+      "nominal_v": 12,
+      "maximum_v": 12,
+      "minimum_v": null,
+      "transient_max_v": null,
+      "charge_cell_v": 4.2,
+      "series_cells": 3,
+      "status": "hypothetical buck-boost motor bus from 3S; converter current, efficiency, dropout and reverse-energy behavior unknown"
+    }
+  ],
+  "hold_points": [
+    "No purchasing, fabrication, energization, charging or physical setup approval",
+    "E02/E03 motor characterization and approved bench equipment remain required",
+    "Continuous current, stall exposure, temperature and current-limit calibration are not measured",
+    "Battery/BMS/charger, fuse, wire gauge, switch, connectors, capacitor and transient suppression remain unselected",
+    "Actual tire loads, compliance, retention and mechanism actuator remain unknown",
+    "Mechanism-envelope study, coast/brake dynamics variants and Integration Studio are subsequent work, not implemented here"
+  ]
+}

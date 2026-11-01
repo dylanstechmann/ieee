@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict'),Build=require('./build-integration-studio-v6'),Seal=require('./seal-integration-studio-v6');
+const root=path.resolve(__dirname,'..'),read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8')),hash=f=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex'),manifest=read('derived/integration-studio-v6/manifest.json');
+for(const group of['input_hashes','output_hashes'])for(const[f,h]of Object.entries(manifest[group]))assert.equal(hash(f),h,`${group}: ${f}`);
+assert.equal(fs.readFileSync(path.join(root,'share/Mule-Integration-Studio-v6.html'),'utf8'),Build.buildHtml());
+const evidence=read('derived/integration-studio-v6/browser-validation.json'),expected=Seal.buildValidation();assert.deepEqual(evidence,expected);
+assert.equal(evidence.protocol,'file:');assert.equal(evidence.offline_context,true);assert.equal(evidence.javascript_errors,0);assert.equal(evidence.mechanism_cases_reviewed,162);assert.equal(evidence.mechanism_sampled_frames,486);assert.equal(evidence.mechanism_presentation,'stationary-tire-presentation-with-complete-robot-approach');assert.equal(evidence.screenshots.length,6);assert.equal(evidence.stopping_combinations_reviewed,56);assert.equal(evidence.stopping_sampled_frames,168);assert.deepEqual(evidence.failures,[]);assert.deepEqual(evidence.external_requests,[]);assert.equal(evidence.physical_trials,0);
+console.log(JSON.stringify({status:'passed',protocol:evidence.protocol,offline:evidence.offline_context,mechanism_cases:162,mechanism_sampled_frames:486,stopping_trajectories:56,stopping_sampled_frames:168,javascript_errors:0,browser_warnings:evidence.browser_warnings,physical_trials:0},null,2));

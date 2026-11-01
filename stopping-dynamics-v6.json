@@ -1,0 +1,33 @@
+{
+  "version": "0.6.1",
+  "date": "2026-10-31",
+  "status": "synthetic-stopping-study-not-driver-or-hardware-qualification",
+  "reference_voltage_v": 12,
+  "numerics": {"dt_s": 0.00013020833333333333, "sample_dt_s": 0.03333333333333333, "control_dt_s": 0.004166666666666667},
+  "vehicle": {"mass_kg": 4, "yaw_inertia_kg_m2": 0.06, "wheel_inertia_kg_m2": 0.00035, "wheel_radius_m": 0.04, "track_m": 0.176, "driven_weight_fraction": 0.8, "rolling_resistance_coefficient": 0.03, "caster_scrub_nm": 0.06},
+  "electrical": {"source_voltage_v": 12, "source_resistance_ohm": 0.25, "synthetic_current_limit_a": 3, "returned_energy_destination": "unresolved-ideal-boundary-not-a-battery-model"},
+  "control": {"speed_kp": 0.045, "speed_ki": 0.12, "integral_limit": 0.8},
+  "stop": {"speed_threshold_m_s": 0.005, "yaw_rate_threshold_rad_s": 0.02, "wheel_speed_threshold_rad_s": 0.125, "dwell_s": 0.2},
+  "modes": ["driven", "coast", "dynamic-brake", "active-stop"],
+  "model_variants": ["reciprocal-speed-fit", "reciprocal-no-load-loss"],
+  "sensitivity_status": "assumption-cases-not-confidence-bounds-or-hardware-validation",
+  "scenarios": [
+    {"id": "straight", "duration_s": 3, "initial_speed_m_s": 0.2032, "initial_yaw_rate_rad_s": 0, "friction": [0.35, 0.35]},
+    {"id": "turning", "duration_s": 3, "initial_speed_m_s": 0.2032, "initial_yaw_rate_rad_s": 0.8, "friction": [0.35, 0.35]},
+    {"id": "asymmetric-traction", "duration_s": 3, "initial_speed_m_s": 0.2032, "initial_yaw_rate_rad_s": 0, "friction": [0.04, 0.35]},
+    {"id": "drive-loss", "duration_s": 3, "initial_speed_m_s": 0.2032, "initial_yaw_rate_rad_s": 0, "friction": [0.35, 0.35], "drive_loss_at_s": 0.25},
+    {"id": "low-voltage", "duration_s": 3, "initial_speed_m_s": 0.2032, "initial_yaw_rate_rad_s": 0, "friction": [0.35, 0.35], "source_voltage_v": 9},
+    {"id": "high-voltage", "duration_s": 3, "initial_speed_m_s": 0.2032, "initial_yaw_rate_rad_s": 0, "friction": [0.35, 0.35], "source_voltage_v": 12.6},
+    {"id": "low-current-limit", "duration_s": 3, "initial_speed_m_s": 0.2032, "initial_yaw_rate_rad_s": 0, "friction": [0.35, 0.35], "synthetic_current_limit_a": 0.5}
+  ],
+  "limitations": [
+    "Agent-run hobby/learning study; not calibrated, measured, a safety function or a physical release.",
+    "Two passive reciprocal assumption cases are compared: a stall/no-load-speed fit and a no-load-current loss sensitivity. Neither reproduces every archived operating point. Published no-load current and maximum-efficiency discrepancies are retained in motor_source_audit. An exact three-endpoint nonreciprocal fit is rejected for four-quadrant simulation when its loss equation has a negative witness; assumption spread is not a confidence bound.",
+    "No inductance, switching ripple, brush drop, driver losses, thermal states, static friction, lateral dynamics, compliance or impact.",
+    "Coast is an ideal open circuit; dynamic brake is an ideal short. No mapping to any candidate driver inputs, disable or fault states is qualified.",
+    "Current clipping adjusts terminal voltage as an ideal four-quadrant actuator; it does not configure a hardware limiter. Dynamic-brake current is NOT clipped.",
+    "Negative source power crosses an ideal unresolved boundary; no battery charge acceptance, capacitor voltage, transient clamp or safe bus prediction.",
+    "Drive loss is a synthetic transition to coast, not a candidate driver's documented reset/fault behavior.",
+    "Synthetic friction and inertia; bounded contact-impulse longitudinal/yaw model, no lateral tire physics. Contact dissipation includes timestep-dependent projection loss; refinement is required. Initial speed is imposed, not acquired by a preceding run."
+  ]
+}

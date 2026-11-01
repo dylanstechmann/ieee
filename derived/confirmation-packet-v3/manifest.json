@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-31",
+  "provenance": "Agent-prepared hobby/learning project clarification packet, not a competition legality determination or hardware test",
+  "external_communication": "none",
+  "input_hashes": {
+    "tools/confirmation-packet-v3.js": "5106ed2f85e1b1759ddc087bb0ad9e75dde7529758392f954cd0af9fb2b4981b",
+    "confirmation-questions-v3.json": "173ecf0b3d12a8e7742f9a028bab640b96bd0cec660534cbd42aab52fc27c026",
+    "confirmation-baseline-v3.json": "c749ff21b53f8b7383b5c9abe61c67947c37f22d498dc7bd5f0746265ef7ee85",
+    "sources/confirmation-2026-10-31/manifest.json": "5d568f2bc888a2524bf91f86bee141c6108c1cfdccfd416ae2083b6d0792635a",
+    "sources/confirmation-2026-10-31/Game-Manual-2027-1-V3.docx": "b25f2f4c6e5da3ca6487f6f9bfe2e90ebe985df5352c30771538290fc57fac7d",
+    "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx": "90e4061310f81d4b42027ecb3b2c9a0ad9167dc8adf9c917c0b25017560039b8",
+    "constrained-field-v3.json": "3088ae57b556ec718ac0d771f27b5655fdeb426d6668c6f5d7742dc14a822c20",
+    "derived/drawing-layout-v3/layout.json": "d65d46462d41b85a7d79f4560347f5ee011dc5938f5c84757692bcd6ab5ae0b9",
+    "derived/connected-navigation-v3/report.json": "3889ebbf6fe25ed8f404aeb7d788707be7eaca5d3d9b92162dd7488947e19333",
+    "tools/navigation-v3.js": "a7a70ba03b773244c48a752c3c365bfe4abd6258e5c168083c08581b48226695",
+    "tools/constrained-field-v3.js": "2eb50713d845fb4e4fd0c02a2514c762a0ae7805931364dd437191e9bbf9b6b8"
+  },
+  "artifact_hashes": {
+    "questions-to-organizer.md": "e7af13493d035294effd56d9896f9c9c6853e6fd0a4b50465df5385bd288b1c6",
+    "source-excerpts.json": "aa94097a2aadf0a16a98d4d55523274c696ad09b1adda77c5e106dd75a9ad4c2",
+    "evidence-ledger.json": "149b677d1dc52382612ca1f2f86fbd9867552df76239169ca9b6a1e4c35c896f",
+    "acceptance-specification.json": "13eeb764b185462acdeb47db1bb0e17cd6237f08f993ae58c621694f9cc34107",
+    "geometry-evidence.md": "d31e5bcdae15ea913935612f5ba55f608d471499a7274e8c4cf47b58a359c272",
+    "diagram-A-south.svg": "4429c4041e9dd6632cf1f27831dcb7c94359237048eb2ab8fd05c8ed7bf7a183",
+    "diagram-B-north.svg": "a968e5e4b7fca9577dcbd337409a50f910d1fc2b28be4afe2cc6ccbb843e9bb3",
+    "diagram-metadata.json": "bb59658f227c92f91b3f2ff1fd63ae965c7b54530ce8e79a839f36e90aa27e7d"
+  }
+}

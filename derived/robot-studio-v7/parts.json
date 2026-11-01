@@ -1,0 +1,100 @@
+{
+ "schema": "robot-studio-v7-parts/1",
+ "parts": [
+  {
+   "id": "motor",
+   "sku": "4754",
+   "name": "70:1 37D 12 V gearmotor, 64 CPR encoder",
+   "step": "sources/hardware-2026-10-31/pololu/step/37d-gearmotor-50-70-encoder.step",
+   "note": "Pololu publishes one model for the 50:1 and 70:1 encoder gearmotors (same gearbox length, 24.0 mm).",
+   "step_sha256": "f7d729d723ed3bbb9f71bf8a4b54d055565f036df0ddfbd438e950eaed713c15",
+   "glb": "parts/motor.glb",
+   "glb_sha256": "60ea63613a1e06f17a9055146b63d8bedd709676b431ad77e945b8ee247f99df",
+   "triangles": 19452,
+   "sub_meshes": 16,
+   "size_mm": [
+    36.88,
+    41.23,
+    92.1
+   ],
+   "tessellation_tolerance_mm": 0.01,
+   "provenance": "vendor CAD (Pololu STEP)"
+  },
+  {
+   "id": "bracket",
+   "sku": "1995",
+   "name": "Machined aluminum bracket for 37D gearmotors",
+   "step": "sources/hardware-2026-10-31/pololu/step/1995-machined-bracket.step",
+   "note": null,
+   "step_sha256": "33c57cdf90fbc398fa9dfa3c0cd04346dbd7b5bb137774b74cb38b1a573b827a",
+   "glb": "parts/bracket.glb",
+   "glb_sha256": "7e1e5412203be7cd462ea25e9e66c1ddfb575f7717f8b3579ed696f485442676",
+   "triangles": 6584,
+   "sub_meshes": 1,
+   "size_mm": [
+    36.8,
+    36.8,
+    6.5
+   ],
+   "tessellation_tolerance_mm": 0.01,
+   "provenance": "vendor CAD (Pololu STEP)"
+  },
+  {
+   "id": "hub",
+   "sku": "1083",
+   "name": "Universal aluminum mounting hub, 6 mm shaft, #4-40 holes",
+   "step": "sources/hardware-2026-11-01/pololu/step/1083-hub-6mm-4-40.step",
+   "note": null,
+   "step_sha256": "a0cd01fbc076b1c404f7c0fa77dd981fc77a974df9282f66bd39b2ad3b28b647",
+   "glb": "parts/hub.glb",
+   "glb_sha256": "13a3dfe016fef8dc8a87486e1f206e65fa75c1a4e746b3a501bf0cdf0309d8b3",
+   "triangles": 7460,
+   "sub_meshes": 1,
+   "size_mm": [
+    25.4,
+    25.4,
+    9.2
+   ],
+   "tessellation_tolerance_mm": 0.01,
+   "provenance": "vendor CAD (Pololu STEP)"
+  },
+  {
+   "id": "wheel",
+   "sku": "1430",
+   "name": "Pololu wheel 80 x 10 mm, black, silicone tire",
+   "step": "sources/hardware-2026-11-01/pololu/step/pololu-wheel-80x10mm-black.step",
+   "note": null,
+   "step_sha256": "075a09e030a515eeda53fbc9b71aa6f8cee7d8f2f03c33a402d91041274fb981",
+   "glb": "parts/wheel.glb",
+   "glb_sha256": "75f6ca9ffd2c96615fadcf6231c8a2ea4cc5568fbc002eca46cb76bc561e253d",
+   "triangles": 52686,
+   "sub_meshes": 2,
+   "size_mm": [
+    11.75,
+    79.99,
+    80.0
+   ],
+   "tessellation_tolerance_mm": 0.02,
+   "provenance": "vendor CAD (Pololu STEP)"
+  },
+  {
+   "id": "caster",
+   "sku": "953",
+   "name": "Ball caster with 1/2 in metal ball",
+   "step": "sources/hardware-2026-10-31/pololu/step/953-ball-caster.step",
+   "note": null,
+   "step_sha256": "6299298cfb032ac64d025773c2ce15d49e3df4a6021ded1c2b3da4592b05620a",
+   "glb": "parts/caster.glb",
+   "glb_sha256": "202b92c369dfd3f4a5962ae7de7e129248202404610a4157398bf25a67ef6fd9",
+   "triangles": 10066,
+   "sub_meshes": 2,
+   "size_mm": [
+    20.32,
+    15.24,
+    13.52
+   ],
+   "tessellation_tolerance_mm": 0.01,
+   "provenance": "vendor CAD (Pololu STEP)"
+  }
+ ]
+}

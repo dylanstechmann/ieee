@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-31",
+  "status": "selected-mule-baseline-not-ordered-not-hardware-validated",
+  "input_hashes": {
+    "order-a-procurement-v4.json": "12fa6454864d0d21bc27464b5ab9072d90ffc18e0fe218134de871719353f2da",
+    "tools/order-a-procurement-v4.js": "257c1b2be0245a2ea54798e97cb6e23f3891feba83fd9c319e29c87ae986a557",
+    "hardware-development-v3.json": "0ed672009f04074aa95411fca9cea1071b7bbcdd7d79da2646b661e92c119549",
+    "sources/hardware-2026-10-31/pololu/product-4753-specs.html": "3301ff579c3b140e86c3967f208e1326bbd487efec380455d4a12ce49c9e9b40",
+    "sources/hardware-2026-10-31/pololu/product-4754-specs.html": "75e2d2b69b0277c45daabbb4f2ae617d3fbb14a9c89cf9fa43effba5f42afc71",
+    "sources/hardware-2026-10-31/pololu/product-4755-specs.html": "672852a51a8fe04f778520f0be1ef3bca5356feb6cb59d92239a6ff74873412e",
+    "sources/hardware-2026-10-31/pololu/product-1995-specs.html": "ea2166a33dd94364672d799c0061f8f70e026e4fdd9eb5ec831c773cba78b9a5",
+    "sources/hardware-2026-10-31/pololu/product-1083-overview.html": "a9763335465cb40165a81f8973dcac3904c2493984d374234a517b0fcf9d60fa",
+    "sources/hardware-2026-10-31/pololu/product-1430-overview.html": "7fa55d7d662c0ff9aade8bc0a00eeaeeabc2c3b04ceee8c26db5882df06d2393",
+    "sources/hardware-2026-10-31/pololu/product-953-overview.html": "e6a12c40cf1783ffc7ff1da2767a3275b34a611d27196c604d1b569af329d8d2",
+    "sources/hardware-2026-10-31/pololu/product-1962-specs.html": "ffc8d15ae7edce923314c3bb3f0d4cc796f49da42dfd2d3b7d9ce6f524cf52d0",
+    "sources/hardware-2026-10-31/pololu/product-1084-specs.html": "331c21b2b36fa9157fd9a1547006fd56defe6ef8ded0874cf6e81e6ac8129d42",
+    "sources/hardware-2026-10-31/pololu/product-4750-encoder.html": "f3de3cf960c38f787e5051e14e839736f69a6b068bc9b48ec9066d8ddf551707",
+    "sources/hardware-2026-10-31/pololu/product-4754-resources.html": "f4f61ef280ee2060615723b7aa524da4a8cba55f795cc3c8acad7b3bf78b6a14",
+    "sources/hardware-2026-10-31/pololu/pololu-37d-metal-gearmotors-rev-1-2.pdf": "71172f074ecd6752d59863f04616bcd341d7bdca5588734de31d328a10735ba1",
+    "sources/hardware-2026-10-31/pololu/37d-metal-gearmotors-dimension-diagram.pdf": "1628c15b18667a3aa5f699fb8f1806f7808a01c6de7ee87e38e963f173ae9e86",
+    "sources/hardware-2026-10-31/pololu/37d-gearmotor-3d-models.zip": "a4baf9f61a7d4f461324d9b853996a0adde648408862630e3a6b047d8a29c455",
+    "sources/hardware-2026-10-31/pololu/step/37d-gearmotor-50-70-encoder.step": "f7d729d723ed3bbb9f71bf8a4b54d055565f036df0ddfbd438e950eaed713c15",
+    "sources/hardware-2026-10-31/pololu/step/37d-gearmotor-100-131-150-encoder.step": "a2450812d02c82cf362dfab5a6d0c4fbe801a90bee45602c5e8390ccb8cb8aef",
+    "sources/hardware-2026-10-31/pololu/product-1995-resources.html": "15ff7a0108ec93246f7200422247c05d86795cb5d3200f2ca7b91d706d60fc48",
+    "sources/hardware-2026-10-31/pololu/product-953-resources.html": "ff54c8ed1915249ea26b405f173ec554e2d692a4476461f1e46ca410be9968d8",
+    "sources/hardware-2026-10-31/pololu/1995-37D-machined-bracket.pdf": "6a854a8de72d3ed3ea24d58b24d8ffe5e2a02927bff9e0fc105a08bb12c0456d",
+    "sources/hardware-2026-10-31/pololu/step/1995-machined-bracket.step": "33c57cdf90fbc398fa9dfa3c0cd04346dbd7b5bb137774b74cb38b1a573b827a",
+    "sources/hardware-2026-10-31/pololu/953-ball-caster-dimension-diagram.pdf": "055f4a44547108a5f3c1c5babdf2e931cdeb536cc92db1d36ce62a256fa58e9c",
+    "sources/hardware-2026-10-31/pololu/step/953-ball-caster.step": "6299298cfb032ac64d025773c2ce15d49e3df4a6021ded1c2b3da4592b05620a"
+  },
+  "output_hashes": {
+    "report.json": "3bcbc4e789e363f680000ff0f78fc2eb2016abc2fd0f3fc329267f087cd042b2",
+    "README.md": "c348fe61ae8fdae4aad2b1d408b47d8f17bee28db3a90be9c91d29d6c65b2e74",
+    "motor-comparison.md": "5d1892ea8e440efe9e402fa87f9a085d1ea8d59a20a2282fd3bc165c4f5253e9",
+    "order-a-bom.md": "39c43e7d4df49266b677ea3d425891a034652382ff691054e77636f3a0b1af29",
+    "order-a-bom.csv": "bca7b121e39ac57df48867f6ba3397088b5912b464e781460595e2c13e8abeae",
+    "budget.json": "3359ebbfa198a60ab32fb1f1e98f594b7f80b413f433ee8ab189a505cb454f50",
+    "source-manifest.json": "64616472aed379dce45d9b4a8c587f95599080c1756d7670c12e62e5d0af0d9d"
+  }
+}

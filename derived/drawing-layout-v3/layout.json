@@ -1,0 +1,224 @@
+{
+  "status": "illustrative-pixel-trace-not-verified-cad",
+  "source": "derived/GM2-V3.1/media/image4.JPG, GM2 V3 section 3.2.1",
+  "frame": "x increases from pit-end board edge toward racecourse end; y increases from left to right in the source image; z is up",
+  "trace_method": "Approximate visual pixel picks on low-resolution drawing; affine scaling from outer board edges. Each chosen feature is illustrative, not measured or authoritative. No pixel error bound has been established.",
+  "board_inches": {
+    "length_x": 96,
+    "width_y": 48
+  },
+  "features": [
+    {
+      "id": "pit_box_left",
+      "kind": "marking",
+      "shape": "polygon",
+      "vertices_in": [
+        [
+          13.071,
+          3.045
+        ],
+        [
+          13.071,
+          14.937
+        ],
+        [
+          1.017,
+          14.937
+        ],
+        [
+          1.017,
+          3.045
+        ]
+      ]
+    },
+    {
+      "id": "pit_box_middle",
+      "kind": "marking",
+      "shape": "polygon",
+      "vertices_in": [
+        [
+          13.071,
+          17.982
+        ],
+        [
+          13.071,
+          30.018
+        ],
+        [
+          1.017,
+          30.018
+        ],
+        [
+          1.017,
+          17.982
+        ]
+      ]
+    },
+    {
+      "id": "pit_box_right",
+      "kind": "marking",
+      "shape": "polygon",
+      "vertices_in": [
+        [
+          13.071,
+          32.918
+        ],
+        [
+          13.071,
+          44.955
+        ],
+        [
+          1.017,
+          44.955
+        ],
+        [
+          1.017,
+          32.918
+        ]
+      ]
+    },
+    {
+      "id": "start_box",
+      "kind": "marking",
+      "shape": "polygon",
+      "vertices_in": [
+        [
+          26.433,
+          32.918
+        ],
+        [
+          26.433,
+          44.955
+        ],
+        [
+          14.378,
+          44.955
+        ],
+        [
+          14.378,
+          32.918
+        ]
+      ]
+    },
+    {
+      "id": "track_marking_outer_edge",
+      "kind": "marking",
+      "shape": "polygon",
+      "vertices_in": [
+        [
+          88.012,
+          17.837
+        ],
+        [
+          88.012,
+          30.308
+        ],
+        [
+          80.024,
+          36.399
+        ],
+        [
+          43.57,
+          36.399
+        ],
+        [
+          35.873,
+          30.308
+        ],
+        [
+          35.873,
+          17.837
+        ],
+        [
+          43.57,
+          11.601
+        ],
+        [
+          80.024,
+          11.601
+        ]
+      ]
+    },
+    {
+      "id": "center_divider_axis",
+      "kind": "physical_centerline",
+      "shape": "line",
+      "vertices_in": [
+        [
+          80.024,
+          24.073
+        ],
+        [
+          43.716,
+          24.073
+        ]
+      ]
+    },
+    {
+      "id": "pit_divider_axis",
+      "kind": "physical_centerline",
+      "shape": "line",
+      "vertices_in": [
+        [
+          28.321,
+          16.097
+        ],
+        [
+          28.321,
+          32.048
+        ]
+      ]
+    },
+    {
+      "id": "checkered_left_extent",
+      "kind": "marking",
+      "shape": "line",
+      "vertices_in": [
+        [
+          28.321,
+          1.015
+        ],
+        [
+          28.321,
+          16.097
+        ]
+      ]
+    },
+    {
+      "id": "checkered_right_extent",
+      "kind": "marking",
+      "shape": "line",
+      "vertices_in": [
+        [
+          28.321,
+          32.048
+        ],
+        [
+          28.321,
+          46.985
+        ]
+      ]
+    }
+  ],
+  "omissions": [
+    "wall thickness and height",
+    "physical divider thickness and height",
+    "line width",
+    "checkered individual squares",
+    "AprilTag poses",
+    "obstacles",
+    "start flag",
+    "verified pit box numbering"
+  ],
+  "drawing_callouts_in": {
+    "board_width": 48,
+    "race_end_to_transition": 68,
+    "pit_end_to_transition": 28,
+    "center_divider_length": 36,
+    "pit_divider_length": 16,
+    "pit_box_width": 12,
+    "pit_box_gap": 3,
+    "checkered_opening_left": 15,
+    "checkered_opening_right": 15.02
+  }
+}

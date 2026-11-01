@@ -1,0 +1,62 @@
+Here is the transcription of every dimension label and text callout from the provided drawing, with locations:
+
+**Top Section:**
+
+*   **1"x4"x96"**: Top right corner, pointing to the outer border line.
+*   **Paint Grey**: Above and to the left of the "1"x4"x96"" label, pointing to the inner area outline.
+*   **Paint Black**: Along the left edge of the main playing field, above the pit area.
+*   **68in**: Top center, measuring the length of the main playing field (inside dimensions).
+*   **48in**: Far right side, measuring the total height of the board.
+
+**Pit Area (Left Side):**
+
+*   **28in**: Top left, measuring the width of the entire pit area.
+*   **12**: Inside the top left rectangular box, measuring its width.
+*   **8in**: Inside the top left rectangular box, measuring its height.
+*   **Apriltags**: Left side, pointing to the rectangular boxes along the left edge of the pit area.
+*   **12in**: Below the top left box, measuring the height of the second box from the top.
+*   **3**: Below the second box from the top, measuring the gap between boxes.
+*   **12**: Below the third box from the top, measuring the height of the fourth box from the top.
+*   **3**: Below the fourth box from the top, measuring the gap between boxes.
+*   **12in**: Below the fifth box from the top, measuring the height of the sixth box from the top.
+*   **3**: Below the sixth box from the top, measuring the gap between boxes.
+*   **6in**: Below the seventh box from the top, measuring the height of the eighth box from the top.
+*   **17in**: Bottom left, measuring the width of the bottommost box.
+*   **2in**: Bottom left, measuring the height of the bottommost box.
+*   **Apriltag**: Bottom right of the pit area, pointing to the rectangular boxes along the right edge of the pit area.
+*   **1"x1"x16"**: Center of the pit area, referring to the horizontal beam dividing the pit area.
+*   **16in**: Below the "1"x1"x16"" label, measuring the length of the beam.
+*   **15in**: Right side of the pit area, measuring the distance from the top of the pit to the "1"x1"x16"" beam.
+
+**Main Playing Field (Right Side):**
+
+*   **36in**: Top center of the octagonal outline, measuring its top width.
+*   **9in**: Top right diagonal segment of the octagonal outline, measuring its length. (Looks like 9 with a slightly skewed ³ or a superscript 3, likely "9.75" or "9.75in" but appears as "9³" on the image.)
+*   **12in**: Right side of the octagonal outline, measuring its vertical segment height.
+*   **16**: Below the 12in, measuring the gap between the octagonal outline and the inner rectangle.
+*   **36**: Inside the octagonal outline, measuring the length of the inner divider.
+*   **1"x1"x36"**: Below the "36" label, referring to the inner divider.
+*   **15**: Left of the octagonal outline, at the same height as the "1"x1"x16"" in the pit area. This value aligns horizontally with the center of the inner horizontal divider in the pit area.
+
+**Title Block (Bottom Left):**
+
+*   **Title**: (unclear, seems to be a label "Title" with a value below it)
+*   **2021 IEEE SouthEast-Con Field Assembled**: Below "Title", this is the main title.
+*   **Created by**: (unclear, seems to be a label "Created by" with a value below it)
+*   **D’Jhan Cooper**: Below "Created by".
+*   **6/12/2026**: Below "D'Jhan Cooper", indicating the date.
+*   **Document Type**: (unclear, seems to be a label "Document Type" with a value below it)
+*   **Document Status**: (unclear, seems to be a label "Document Status" with a value below it)
+*   **Rev.** : (unclear, seems to be a label "Rev." with an empty box below it)
+*   **Date of Issue**: (unclear, seems to be a label "Date of Issue" with an empty box below it)
+*   **DWG No.** : (unclear, seems to be a label "DWG No." with an empty box below it)
+*   **Sheet**: Bottom right corner of the title block.
+*   **1/2**: Below "Sheet".
+
+**Clarification on Center Divider Callout:**
+
+The center divider callout within the main playing field is **1"x1"x36"**.
+
+**Unreadable Items:**
+
+*   The small text labels in the title block such as "Title", "Created by", "Document Type", "Document Status", "Rev.", "Date of Issue", and "DWG No." are visible as headings for fields, but the actual values in those fields (if any besides the main title, author, and date) are empty or too small to read. The labels "Dept." and "Technical reference" are also present but unclear if they have content.

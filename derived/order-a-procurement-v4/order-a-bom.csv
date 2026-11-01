@@ -1,0 +1,9 @@
+id,sku,name,quantity,unit,unit_price_usd,extended_price_usd,product_url,source
+"A-MOTOR","4754","70:1 37D 12V gearmotor with 64 CPR encoder","2","each","60.95","121.9","https://www.pololu.com/product/4754","sources/hardware-2026-10-31/pololu/product-4754-specs.html"
+"A-BRACKET","1995","Machined aluminum bracket for 37D gearmotors; includes nine M3 screws per bracket","2","each","12.95","25.9","https://www.pololu.com/product/1995","sources/hardware-2026-10-31/pololu/product-1995-specs.html"
+"A-HUB","1083","Universal aluminum hubs for 6 mm shafts; two hubs, four set screws and 0.05-inch Allen wrench; wheel screws not included","1","2-pack","12.95","12.95","https://www.pololu.com/product/1083","sources/hardware-2026-10-31/pololu/product-1083-overview.html"
+"A-WHEEL","1430","80 x 10 mm black plastic wheels with silicone tires; mule geometry variant; hub-compatible mounting holes","1","pair","8.75","8.75","https://www.pololu.com/product/1430","sources/hardware-2026-10-31/pololu/product-1430-overview.html"
+"A-CASTER","953","Ball caster with 1/2-inch metal ball, spacers, two #2 screws and nuts included per kit","2","each","2.95","5.9","https://www.pololu.com/product/953","sources/hardware-2026-10-31/pololu/product-953-overview.html"
+"A-WHEEL-SCREWS","1962","#4-40 x 1/2-inch Phillips machine screws for wheel/hub mounting","1","25-pack","1.85","1.85","https://www.pololu.com/product/1962","sources/hardware-2026-10-31/pololu/product-1962-specs.html"
+"A-FAU-FIXTURE","FAU-PRINT","Printed mule deck, ballast fixture and bench adapters using assumed FAU access","1","fixture set","","","",""
+"A-BENCH-CONSUMABLES","TBD","Wire, bench connections, insulation and any unavailable measurement accessories; scope after FAU inventory","1","unpriced allowance","","","",""

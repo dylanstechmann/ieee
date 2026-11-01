@@ -1,0 +1,42 @@
+{
+  "status": "blank-template-not-approved-not-executed",
+  "session_id": null,
+  "configuration_id": null,
+  "operator_id": null,
+  "supervisor_or_reviewer": null,
+  "facility_permission_ref": null,
+  "setup_record_id": null,
+  "setup_approval_ref": null,
+  "instrument_ids": [],
+  "calibration_check_id": null,
+  "control_revision": null,
+  "warmup_record_id": null,
+  "uncertainty_record_id": null,
+  "raw_observation_refs": [],
+  "surface_description_ref": null,
+  "measurement_methods": {
+    "rpm": null,
+    "torque_nm": null,
+    "current_a": null,
+    "transient_current_a": null,
+    "temperature_c": null,
+    "duration_s": null,
+    "drift_mm": null,
+    "spin_error_deg": null
+  },
+  "stop_conditions": {
+    "source_limits_ref": null,
+    "approved_bus_range_v": null,
+    "current_limit_a": null,
+    "temperature_limit_c": null,
+    "maximum_test_duration_s": null,
+    "disconnect_check_ref": null,
+    "mechanical_stop_conditions": null,
+    "fault_response_ref": null
+  },
+  "approval": {
+    "reviewer": null,
+    "reviewed_at": null,
+    "decision": null
+  }
+}

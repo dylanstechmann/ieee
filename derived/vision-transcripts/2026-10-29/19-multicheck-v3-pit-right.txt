@@ -1,0 +1,52 @@
+
+===== MODEL: nvidia/nemotron-3.5-super-vl =====
+The tall vertical label is **17in**, not '7in'. It runs along the right-hand vertical feature.
+
+Labels and what they appear to dimension:
+
+- **2**: A small dimension (units not visible in the crop) near the top, spanning a short horizontal offset at the top of the vertical wall.
+- **1 1/2in**: Vertical dimension on the right side, measuring a gap/offset between two vertical lines.
+- **6 1/2in**: Horizontal dimension at the bottom, measuring from the left edge to the right-hand vertical wall.
+- **12in**: Horizontal dimension across the top-left region, spanning from the left edge to the right-hand wall.
+
+===== MODEL: qwen/qwen3-vl-235b-a22b-instruct =====
+Transcribing all labels exactly as they appear in the image:
+
+(a) The tall vertical label is **‘17in’** — not ‘7in’. The ‘1’ is clearly present before the ‘7’.
+
+(b) Confirmed values and units, with what each appears to dimension:
+
+- **‘2’** — This is a horizontal dimension. It appears to dimension the width of the vertical wall/structure at the right edge, between the outer face and an inner edge or feature. (No unit is shown, but in context, it is almost certainly inches — “2in” — though the “in” is omitted.)
+
+- **‘1½in’** — This is a vertical dimension. It appears to dimension the height of a small step or ledge at the top right, just below the checkered transition line.
+
+- **‘6½in’** — This is a horizontal dimension. It appears to dimension the width of a lower horizontal section or platform, measured from the inner face of the vertical wall to the left edge of that section.
+
+- **‘12in’** — This is a horizontal dimension. It appears to dimension the total width of the main arena floor or track area, measured from the left edge of the drawing to the inner face of the vertical wall on the right.
+
+Note: The ‘17in’ is a vertical dimension spanning the full height of the main vertical wall structure shown, from the bottom of the lower platform to the top of the wall (just below the checkered transition).
+
+All labels are transcribed exactly as written, including fractions and units.
+
+===== MODEL: google/gemini-2.5-flash =====
+Here are the transcriptions of the labels and what they appear to dimension:
+
+(a) The tall vertical label is **17in**. It dimensions the height from the bottom horizontal line segment to the lower edge of the horizontal feature on the left.
+
+(b) Here are the other labels:
+*   **2**: This label dimensions the horizontal thickness of the vertical wall/structure on the right.
+*   **1 1/2in** (appears as `1/2in` with a '1' above it): This label dimensions a vertical height segment on the far right, specifically the distance between two horizontal lines.
+*   **6 1/2in** (appears as `6 1/2in`): This label dimensions a horizontal length segment at the bottom left, from the corner to an inner vertical line.
+*   **12in**: This label dimensions a horizontal length segment on the left side, indicating the width of the open space or room.
+
+===== MODEL: anthropic/claude-sonnet-5.5 =====
+**Transcription (as read from the crop)**
+
+- **(a)** The tall vertical label reads **"17in"**, not "7in". It is rotated, and the "1" is thin and sits close to the "7", so it is easy to miss. Scale supports this reading. Its dimension line runs from the tick near y≈185 down to the arrowhead near y≈520, about 335 px. The "6½in" dimension is about 115 px, roughly 18 px per inch, so 335 px comes to about 17–19 in. A 7 in dimension would be only about 125 px long.
+- **(b)** The other labels:
+  - **"2"** (top, horizontal): there is **no unit printed**. It dimensions the narrow gap between the inner wall line (x≈152) and the thin vertical bar (x≈192) that the leader line from the upper right points to. That is about 40 px, which fits roughly 2 in at this scale, so the unit is probably inches but is not shown.
+  - **"1 1/2in"** (right side, rotated): the "1" is a whole number, followed by a stacked fraction ½, then "in". It dimensions the vertical spacing between the two horizontal extension lines at y≈257 and y≈287, which looks like the thickness of the horizontal band or rail. That is about 30 px, or 1.5 in at about 20 px/in.
+  - **"6 1/2in"** (bottom, horizontal): the "6" is followed by a stacked ½, then "in". It dimensions the horizontal distance from the tick at x≈60 to the vertical dimension line and wall at x≈175, along the bottom edge.
+  - **"12in"** (left, partly clipped, with a diagonal leader line): the dimension line has an arrow on the right ending at the vertical wall at x≈150. It dimensions the horizontal run from somewhere left of the crop to that wall.
+
+The "17in" label sits on the vertical dimension line (x≈175) and gives the vertical distance from near the top ledge down to the bottom wall.

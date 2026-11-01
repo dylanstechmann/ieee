@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-31",
+  "status": "selected-mule-baseline-not-ordered-not-hardware-validated",
+  "totals": {
+    "priced_order_a_subtotal_usd": 177.25,
+    "shipping_tax_landed_total_usd": null,
+    "shipping_snapshot": {
+      "advertised_policy": "Free shipping in USA over $100",
+      "quoted_shipping_usd": null,
+      "quoted_tax_usd": null,
+      "delivery_date": null,
+      "note": "Eligibility, destination, method, stock quantity and delivery date were not verified; no landed total is claimed."
+    },
+    "unpriced_lines": [
+      "A-FAU-FIXTURE",
+      "A-BENCH-CONSUMABLES"
+    ]
+  },
+  "budget": {
+    "working_target_usd": 750,
+    "hard_cap_usd": 1000,
+    "later_reserves_usd": {
+      "controller_and_sensors": 120,
+      "driver_distribution_protection": 100,
+      "battery_and_charger": 100,
+      "mechanism": 80,
+      "harness_and_consumables": 60
+    },
+    "later_reserve_total_usd": 460,
+    "contingency_within_working_target_usd": 112.75,
+    "additional_room_to_hard_cap_usd": 250
+  },
+  "exclusions": [
+    "shipping",
+    "sales tax",
+    "FAU material/machine charges",
+    "unpriced bench consumables",
+    "driver",
+    "battery",
+    "charger",
+    "controller",
+    "mechanism actuator",
+    "final production chassis",
+    "event/travel costs"
+  ]
+}

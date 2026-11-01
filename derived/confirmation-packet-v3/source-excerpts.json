@@ -1,0 +1,173 @@
+{
+  "extraction": "zero-based w:p paragraphs, concatenated w:t including empty paragraphs; XML entities retained",
+  "excerpts": [
+    {
+      "ref": "GM2:118",
+      "paragraph_index": 118,
+      "text": "It is February, and the IEEE Stock Car Racing Season is about to begin. The first event is in Daytona Beach, Florida. The event starts with the Time Trials. For your Team’s race Robot to compete, it must compete in the time trial. When it is time for your team to race, your Robot will be positioned in the start box. When the green flag is lowered, your Robot will begin. Alternatively, you may manually start your Robot based on the Referee giving the start command. Your Robot will enter the racecourse and complete three laps. After either lap one or two your Robot will enter the pit area and complete a pit stop. See Appendix G for full details. When your Robot crosses the finish line the referee will stop counting your time. All Robots must complete the course in 3 minutes or less, to receive the points for completing the course. There will be 3 randomly placed obstacles on the course. The obstacles will be placed in different lanes. Robots completing a lap without contacting the gray walls or the obstacles will be awarded additional points for each clean lap. Points will be awarded for the Robot entering the course. On the final (victory) lap, if the Robots raise a flag with the school logo, colors, emblem, etc., additional points will be awarded. Finishing the course in less than 2 minutes and 45 will receive extra points. Finishing in the assigned Pit Box will gain additional points.",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:160",
+      "paragraph_index": 160,
+      "text": "Robot’s Pit Stop Area – There are 3 Pit Stop Boxes in the Pit Area; the Apriltag mounted to the Field on the wall separating the pit area from the racecourse will specify which pit box your Robot is assigned to.",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:371",
+      "paragraph_index": 371,
+      "text": "The Pit Box will be assigned by the Apriltag adjected to the start area. The assigned pit box will be selected before the beginning of the Race by the role of a die. I and 4 will be pit box 1, 2 and 5 will be pit box 2, and 3 and 6 will be pit box 3.  The race begins with the robot preloaded with a Red spare tire anywhere on the robot that keeps it within the defined 5.2.1 Mechanical Robot Rules &lt;R01&gt; Robot Starting Size. During the pit stop the robot must enter the Pit Area and drop off the old spare tire which is red and pick up the new spare tire which is blue.",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:374",
+      "paragraph_index": 374,
+      "text": "Complete Lap 1 or 2 → enter assigned Pit Box → drop existing Pre-Load Red Tire → acquire a different Fresh Blue Tire → leave Pit → retain Fresh Tire for remainder of Match.",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:148",
+      "paragraph_index": 148,
+      "text": "Area - The space defined by the vertical projection of the inside edge of a region's boundary element. (tape, wall, etc.) The boundary element is not part of the Area.",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:184",
+      "paragraph_index": 184,
+      "text": "&lt;S01&gt; Robot Action Envelope - Robots must remain on the Field and are not allowed to interact with anything outside the Field. Robots are not allowed to reach outside the Field perimeter. If a Robot noticeably reaches further, or contacts any objects outside of the Field, the Team will be issued a Yellow Card. If a Referee determines the rule infringement was intentional and consequential, the Team can be issued a Red Card.",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:143",
+      "paragraph_index": 143,
+      "text": "Robots do not contact any of the course walls (identified by gray color)",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:144",
+      "paragraph_index": 144,
+      "text": "Robots do not contact any of the course obstacles (cars randomly placed on the course)",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:139",
+      "paragraph_index": 139,
+      "text": "Robot completes three laps around the course in under 3 minutes.",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:140",
+      "paragraph_index": 140,
+      "text": "Robot makes a pit stop between lap 1 and 2 or between lap 2 and 3.",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:165",
+      "paragraph_index": 165,
+      "text": "The course obstacles will be randomly placed on the racecourse. The obstacles will be placed in quadrants on the straight aways, in the inner lane and the outer lane.",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:362",
+      "paragraph_index": 362,
+      "text": "The Quadrants will all be the same size. The pictures are distorted due to the camera angle. The Quadrants will start 2 inches from the side rail and stop 2 inches from the center rail with a total width of 16 inches. The length will start from each end of the center rail and for 16 inches. There will be 4 inches in between.",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:307",
+      "paragraph_index": 307,
+      "text": "Toy Vehicle Obstacle Set",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:311",
+      "paragraph_index": 311,
+      "text": "Amazon Toy Vehicle Obstacle Set",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:121",
+      "paragraph_index": 121,
+      "text": "The course will be 4’ by 8’ based on a 23/32 in. x 4 ft. x 8 ft. RTD Sheathing Syp. There are 2 areas on the field: the racecourse and the pit area.",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:192",
+      "paragraph_index": 192,
+      "text": "&lt;G02&gt; Playing Field Tolerances - Competition provided Field and Game Elements will start each Match with positional tolerances that may vary by 土 1 inch (25.4 mm). Teams should design their Robots accordingly.",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:193",
+      "paragraph_index": 193,
+      "text": "Field and Game Elements are expected to be manufactured, assembled, and set up using a high standard for dimensional and location accuracy. The intent of the generous +/- 1 inch is to accommodate any unintentional size and location variations that might occur due to the warping tendencies of wood.",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:150",
+      "paragraph_index": 150,
+      "text": "In / Completely In – For the Robot to be considered in the Assigned Pit Box  at the End of Race more than 75% of the Robot must be in the Assigned Pit Box to be awarded points. No partial points will be awarded; your Robot is either in or not. ",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM2:373",
+      "paragraph_index": 373,
+      "text": " The robot itself does not have to enter the assigned pit box during the challenge. It can simply drop off then pick up. If the Robot picks up and drops off the tires in a Pit Box other than their assigned Pit Box, they will receive only 12 points for the drop off and 20 points for the pickup. The pickup points will be removed if the Robot drops the tire before crossing the finish line.",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-2-V3-1.docx"
+    },
+    {
+      "ref": "GM1:142",
+      "paragraph_index": 142,
+      "text": "Q&amp;A - Official Q&amp;A takes place over the course of the year on the official IEEE SoutheastCon Discord. Q&amp;A answers are intended to clarify game manual rules or fix loopholes. Q&amp;A answers supersede any game manual information. Q&amp;A answers (from the #qna channel) or updates to the official game manuals are the only legitimate and enforceable changes to the game. See &lt;C02&gt; for more information on information hierarchy.",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-1-V3.docx"
+    },
+    {
+      "ref": "GM1:145",
+      "paragraph_index": 145,
+      "text": "&lt;C00&gt; Information Hierarchy - Official game rules, information, and changes, will only be communicated by the GDC. Information will be proliferated by the GDC in the following locations with the following order of precedence. Higher on the list has higher precedence.",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-1-V3.docx"
+    },
+    {
+      "ref": "GM1:147",
+      "paragraph_index": 147,
+      "text": "Head Referee Decision at Competition ",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-1-V3.docx"
+    },
+    {
+      "ref": "GM1:148",
+      "paragraph_index": 148,
+      "text": "???Official Q&amp;A ",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-1-V3.docx"
+    },
+    {
+      "ref": "GM1:149",
+      "paragraph_index": 149,
+      "text": "Written rules in Game Manual 2",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-1-V3.docx"
+    },
+    {
+      "ref": "GM1:150",
+      "paragraph_index": 150,
+      "text": "Written rules in Game Manual 1",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-1-V3.docx"
+    },
+    {
+      "ref": "GM1:151",
+      "paragraph_index": 151,
+      "text": "Any images included in Game Manual 2",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-1-V3.docx"
+    },
+    {
+      "ref": "GM1:152",
+      "paragraph_index": 152,
+      "text": "Any images included in Game Manual 1 ",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-1-V3.docx"
+    },
+    {
+      "ref": "GM1:153",
+      "paragraph_index": 153,
+      "text": "Any other documents published by the GDC ",
+      "source_file": "sources/confirmation-2026-10-31/Game-Manual-2027-1-V3.docx"
+    }
+  ]
+}

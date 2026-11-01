@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="1040" viewBox="0 0 1320 1040"><title>Diagram A — clarification request, not legal route</title><desc>Actual stored empty-control route; 10 by 10 inch robot sampled footprints. Field geometry and internal boundaries are provisional. North and south are diagram labels only. Official finish line is not located by this model. No official obstacles drawn.</desc><defs><marker id="in" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#086fbd"/></marker><marker id="out" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#b34500"/></marker></defs><style>text{font:15px sans-serif;fill:#172b3a} .small{font-size:13px} .heading{font-size:23px;font-weight:bold}</style><rect width="1320" height="1040" fill="white"/>
+<text x="40" y="35" class="heading">Diagram A: original-region south-end access</text>
+<text x="40" y="63" >DRAFT FOR Q&amp;A — source-backed permission NOT established; not a three-lap mission or hardware test.</text>
+<text x="40" y="87" >Actual empty-control, variant-aware example to pit box 1; route choices and geometry are engineering assumptions.</text>
+<text x="40" y="111" >Local coordinates in inches: x → race end, y ↑ on this sheet. “North/south” are not official field names.</text>
+<rect x="48" y="240" width="960" height="480" fill="#f5f7f9" stroke="#172b3a" stroke-width="2"/>
+<polygon points="58.17,689.55 178.17,689.55 178.17,569.55 58.17,569.55" fill="#e3e9ed" stroke="#657684"/>
+<text x="61.17" y="682.55" class="small">pit box 1</text>
+<polygon points="58.17,539.55 178.17,539.55 178.17,419.55 58.17,419.55" fill="#e3e9ed" stroke="#657684"/>
+<text x="61.17" y="532.55" class="small">pit box 2</text>
+<polygon points="58.17,389.55 178.17,389.55 178.17,269.55 58.17,269.55" fill="#e3e9ed" stroke="#657684"/>
+<text x="61.17" y="382.54999999999995" class="small">pit box 3</text>
+<polygon points="191.78,390.82 311.78,390.82 311.78,270.82 191.78,270.82" fill="#e4d9f8" stroke="#657684"/>
+<text x="194.78" y="383.82" class="small">start box</text>
+<polygon points="928.12,541.63 928.12,416.92 848.24,356.01 483.70,356.01 406.73,416.92 406.73,541.63 483.70,603.99 848.24,603.99" fill="none" stroke="#91999f" stroke-dasharray="6 5" stroke-width="2"/>
+<polygon points="486.70,484.27 846.70,484.27 846.70,474.27 486.70,474.27" fill="#4b5560"/>
+<polygon points="323.00,559.27 333.00,559.27 333.00,399.27 323.00,399.27" fill="#4b5560"/>
+<text x="183" y="480" class="small">pit divider (traced x=28)</text>
+<text x="548" y="470" class="small">center divider</text>
+<polyline data-phase="Race construction" points="251.78,330.82 408.00,330.82 408.00,330.82 408.00,360.00 408.00,360.00 918.00,360.00 918.00,360.00 918.00,600.00 918.00,600.00 408.00,600.00 408.00,600.00 408.00,630.00 408.00,630.00" fill="none" stroke="#6a737c" stroke-width="2" />
+<polyline data-phase="Pit arrival" points="408.00,630.00 398.00,630.00 388.00,630.00 378.00,630.00 368.00,630.00 358.00,630.00 348.00,630.00 338.00,630.00 328.00,630.00 318.00,630.00 308.00,630.00 298.00,630.00 288.00,630.00 278.00,630.00 272.35,630.00 268.00,630.00 258.00,630.00 251.78,630.00 248.00,630.00 238.00,630.00 228.00,630.00 218.00,630.00 208.00,630.00 198.00,630.00 190.50,630.00 188.00,630.00 178.00,630.00 168.00,630.00 158.00,630.00 148.00,630.00 138.00,630.00 138.00,630.00 138.00,629.55 138.00,629.55 128.00,629.55 118.17,629.55" fill="none" stroke="#086fbd" stroke-width="4" />
+<line x1="348" y1="630" x2="338" y2="630" stroke="#086fbd" stroke-width="3" marker-end="url(#in)"/>
+<line x1="272.35" y1="630" x2="268" y2="630" stroke="#086fbd" stroke-width="3" marker-end="url(#in)"/>
+<line x1="208" y1="630" x2="198" y2="630" stroke="#086fbd" stroke-width="3" marker-end="url(#in)"/>
+<line x1="138" y1="629.55" x2="128" y2="629.55" stroke="#086fbd" stroke-width="3" marker-end="url(#in)"/>
+<polyline data-phase="Withdrawal" points="118.17,629.55 128.00,629.55 138.00,629.55 148.00,629.55 158.00,629.55 168.00,629.55 178.00,629.55 188.00,629.55 190.50,629.55 198.00,629.55 208.00,629.55 218.00,629.55 228.00,629.55 238.00,629.55 248.00,629.55 251.78,629.55 258.00,629.55 268.00,629.55 272.35,629.55 278.00,629.55 288.00,629.55 298.00,629.55 308.00,629.55 318.00,629.55 328.00,629.55 338.00,629.55 348.00,629.55 358.00,629.55 368.00,629.55 378.00,629.55 388.00,629.55 398.00,629.55 408.00,629.55 408.00,629.55 408.00,630.00 408.00,630.00" fill="none" stroke="#b34500" stroke-width="3" stroke-dasharray="8 5"/>
+<line x1="188" y1="629.55" x2="190.5" y2="629.55" stroke="#b34500" stroke-width="3" marker-end="url(#out)"/>
+<line x1="258" y1="629.55" x2="268" y2="629.55" stroke="#b34500" stroke-width="3" marker-end="url(#out)"/>
+<line x1="328" y1="629.55" x2="338" y2="629.55" stroke="#b34500" stroke-width="3" marker-end="url(#out)"/>
+<line x1="398" y1="629.55" x2="408" y2="629.55" stroke="#b34500" stroke-width="3" marker-end="url(#out)"/>
+<polyline data-phase="Race re-entry" points="408.00,630.00 408.00,630.00 408.00,629.55 408.00,620.00 408.00,610.00 408.00,600.00 408.00,597.13 408.00,590.00 408.00,580.00 408.00,570.00 408.00,560.00 408.00,550.00 408.00,540.00 408.00,530.00 408.00,520.00 408.00,510.00 408.00,500.00 408.00,490.00 408.00,480.00 408.00,470.00 408.00,460.00 408.00,450.00 408.00,440.00 408.00,430.00 408.00,420.00 408.00,410.00 408.00,400.00 408.00,390.00 408.00,380.00 408.00,370.00 408.00,362.13 408.00,360.00 408.00,360.00" fill="none" stroke="#68707c" stroke-width="2" />
+<polygon data-footprint-index="0" points="201.78,380.82 301.78,380.82 301.78,280.82 201.78,280.82" fill="none" stroke="#1a7b60" stroke-opacity="0.55" stroke-width="1"/>
+<line x1="251.78" y1="330.82" x2="281.78" y2="330.82" stroke="#1a7b60" stroke-width="1.5"/>
+<polygon data-footprint-index="12" points="458.00,580.00 358.00,580.00 358.00,680.00 458.00,680.00" fill="none" stroke="#1a7b60" stroke-opacity="0.55" stroke-width="1"/>
+<line x1="408" y1="630" x2="378" y2="630" stroke="#1a7b60" stroke-width="1.5"/>
+<polygon data-footprint-index="47" points="168.17,579.55 68.17,579.55 68.17,679.55 168.17,679.55" fill="none" stroke="#1a7b60" stroke-opacity="0.55" stroke-width="1"/>
+<line x1="118.16999999999999" y1="629.55" x2="88.16999999999999" y2="629.55" stroke="#1a7b60" stroke-width="1.5"/>
+<polygon data-footprint-index="82" points="358.00,680.00 458.00,680.00 458.00,580.00 358.00,580.00" fill="none" stroke="#1a7b60" stroke-opacity="0.55" stroke-width="1"/>
+<line x1="408" y1="630" x2="438" y2="630" stroke="#1a7b60" stroke-width="1.5"/>
+<polygon data-footprint-index="114" points="358.00,410.00 458.00,410.00 458.00,310.00 358.00,310.00" fill="none" stroke="#1a7b60" stroke-opacity="0.55" stroke-width="1"/>
+<line x1="408" y1="360" x2="438" y2="360" stroke="#1a7b60" stroke-width="1.5"/>
+<polygon data-footprint-index="43" points="88.00,580.00 88.00,680.00 188.00,680.00 188.00,580.00" fill="none" stroke="#1a7b60" stroke-opacity="0.55" stroke-width="1"/>
+<line x1="138" y1="630" x2="138" y2="660" stroke="#1a7b60" stroke-width="1.5"/>
+<polygon data-footprint-index="45" points="188.00,579.55 88.00,579.55 88.00,679.55 188.00,679.55" fill="none" stroke="#1a7b60" stroke-opacity="0.55" stroke-width="1"/>
+<line x1="138" y1="629.55" x2="108" y2="629.55" stroke="#1a7b60" stroke-width="1.5"/>
+<polygon data-footprint-index="80" points="358.00,579.55 358.00,679.55 458.00,679.55 458.00,579.55" fill="none" stroke="#1a7b60" stroke-opacity="0.55" stroke-width="1"/>
+<line x1="408" y1="629.55" x2="408" y2="659.55" stroke="#1a7b60" stroke-width="1.5"/>
+<circle cx="251.78" cy="330.82" r="8" fill="white" stroke="#172b3a"/>
+<text x="246.78" y="335.82" class="small">S</text>
+<circle cx="408" cy="630" r="8" fill="white" stroke="#172b3a"/>
+<text x="403" y="635" class="small">M</text>
+<circle cx="118.16999999999999" cy="629.55" r="8" fill="white" stroke="#172b3a"/>
+<text x="113.16999999999999" y="634.55" class="small">D</text>
+<circle cx="408" cy="360" r="8" fill="white" stroke="#172b3a"/>
+<text x="403" y="365" class="small">R</text>
+<text x="13" y="725" class="small">0</text>
+<text x="13" y="605" class="small">12</text>
+<text x="13" y="485" class="small">24</text>
+<text x="13" y="365" class="small">36</text>
+<text x="13" y="245" class="small">48</text>
+<text x="42" y="743" class="small">0</text>
+<text x="282" y="743" class="small">24</text>
+<text x="522" y="743" class="small">48</text>
+<text x="762" y="743" class="small">72</text>
+<text x="1002" y="743" class="small">96</text>
+<text x="1040" y="265" class="small">Q1: Which access end(s) allowed?</text>
+<text x="1040" y="290" class="small">Q2: Do dashed markings bound</text>
+<text x="1040" y="315" class="small">the full robot or guide motion?</text>
+<text x="1040" y="340" class="small">Q3: Official finish line and lap</text>
+<text x="1040" y="365" class="small">counting direction UNLOCATED.</text>
+<text x="1040" y="390" class="small">Q4–Q6: No official obstacle</text>
+<text x="1040" y="415" class="small">positions or shapes assumed.</text>
+<text x="1040" y="440" class="small">Q7: Is entering the box needed</text>
+<text x="1040" y="465" class="small">for exchange, or only parking?</text>
+<text x="50" y="165" font-weight="bold">NORTH END (local label)</text>
+<text x="50" y="760" font-weight="bold">SOUTH END (local label)</text>
+<text x="45" y="805" >Legend: blue solid = arrival; orange dashed = withdrawal (often overlaps arrival); grey = retained race/re-entry.</text>
+<text x="45" y="829" >Green polygons = selected 10×10-in chassis footprints; short green lines = body heading, not travel direction.</text>
+<text x="45" y="853" >S = start; M = retained mouth pose; D = unchanged dock; R = final race staging. Spins/reverse travel occur.</text>
+<text x="45" y="877" >Dashed grey track outline is a low-resolution trace, NOT an official legal boundary. No finish-line location inferred.</text>
+<text x="45" y="901" >No tire/mechanism extension or official vehicle envelope shown; those must be specified before qualification.</text>
+<text x="45" y="925" >Source geometry: archived GM2 V3 drawing + constrained-field-v3.json; wall scenario inside-nominal.</text>
+<text x="45" y="949" >Both illustrations deliberately use the empty control: no claim that a square pit blocker is an official placement.</text>
+<text x="45" y="973" >Agent-prepared clarification illustration — no organizer answer received or external message sent.</text>
+</svg>

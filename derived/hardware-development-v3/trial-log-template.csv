@@ -1,0 +1,1 @@
+experiment_id,run_id,date,operator,architecture_id,hardware_version,surface,tire_id,mass_kg,bus_v,pose_class,offset_mm,yaw_deg,command,outcome,time_s,current_peak_a,temp_max_c,notes

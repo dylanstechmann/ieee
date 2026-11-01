@@ -1,0 +1,17 @@
+{
+  "status": "agent-built-ideal-differential-drive-study-not-hardware-validation",
+  "wheel_track_in": 8,
+  "return_column_in": 36,
+  "far_turn_column_in": 87,
+  "lower_lane_y_in": 12,
+  "upper_lane_y_in": 36,
+  "pit_gate_y_in": 9,
+  "pit_staging_x_in": 18,
+  "notes": [
+    "Wheel track is a provisional calculation input, not a selected motor/wheel layout.",
+    "Axle midpoint is assumed to coincide with the center of the rectangular robot footprint.",
+    "Only straight forward/reverse and in-place spin primitives are used; no curved turns, slip, acceleration or actuator limits are modeled.",
+    "Each route connects assumed start pose, one illustrative divider circuit, assigned pit-box docking, reverse withdrawal, and return to race staging. It is not a complete legal competition mission.",
+    "Constant global position/heading perturbations in the inherited sweep are footprint-clearance stress tests, not integrated differential-drive odometry errors."
+  ]
+}

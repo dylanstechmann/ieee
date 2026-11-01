@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "date": "2026-10-31",
+  "node": "v24.18.1",
+  "full_suite": {
+    "command": "node --test tests/*.test.js",
+    "tests": 202,
+    "passed": 202,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "log": "derived/audits/2026-10-31-stopping-v6-prepair/full-tests.log",
+    "log_sha256": "db2353b5f0d17a59be8a1e207b54d2bfae62dfc1fffa4bd48db6234777d2e035"
+  },
+  "artifact_verifiers": {
+    "count": 14,
+    "all_passed": true,
+    "excluded": [
+      "verify-planner-diagnostics-v3.js (pre-existing stale-source mismatch)"
+    ],
+    "results": "derived/audits/2026-10-31-stopping-v6-prepair/verifier-results.json",
+    "results_sha256": "6eba65182da1e629179ab75e63ac0fac25581467578766a1606a3d6cc40e1ee4"
+  },
+  "stopping": {
+    "cases": 168,
+    "model_variants": 2,
+    "independently_recomputed_refinement_cases": 168,
+    "maximum_energy_residual_j": 0.0030892309111205662,
+    "refinement_summary": {
+      "case_count": 168,
+      "all_residuals_reduced": true,
+      "all_stop_statuses_unchanged": true,
+      "maximum_stop_time_delta_s": 0.00013020833333332593,
+      "maximum_stop_distance_delta_m": 0.0000048817298278804044,
+      "maximum_current_delta_a": 0.0034572827950506424
+    },
+    "report_sha256": "4c761a66a68b6ed9bfc392a9bba03e864f38828a4851ffcb7e653de45730af68"
+  },
+  "browser": {
+    "protocol": "file:",
+    "offline": true,
+    "mechanism_presentation": "stationary-tire-presentation-with-complete-robot-approach",
+    "mechanism_cases": 162,
+    "mechanism_sampled_frames": 486,
+    "stationary_tire_and_complete_robot_checks": 486,
+    "stopping_combinations": 56,
+    "stopping_sampled_frames": 168,
+    "javascript_errors": 0,
+    "warnings": 4,
+    "inspected_screenshots": 6,
+    "evidence_sha256": "dc6c4b1ab1da560b0912fe88cd510bd3d165fbbc7869189509cd0c87f7e2052b",
+    "standalone_sha256": "e4677f1cdb69fb8781d14c93b6caaf9b49fe35d49dc19946a257774e7d560a29"
+  },
+  "baseline": {
+    "files": 28,
+    "all_hashes_match": true,
+    "baseline_hashes_sha256": "ccfecfd231bbdb955e1e8ade07026ac0f24dc4c02531421485a75ffe0b8f7a64"
+  },
+  "physical_trials": 0,
+  "purchases": 0,
+  "fabrication": 0
+}

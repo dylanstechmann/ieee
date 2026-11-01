@@ -1,0 +1,51 @@
+{
+  "owner_review": {
+    "recorded_date": "2026-10-31",
+    "checked_at": null,
+    "status": "owner-reported-no-new-information",
+    "statement": "I just looked through the discord and there's nothing new; therefore, you can ignore.",
+    "provenance": "Owner message in this conversation; channel scope and exact check time not supplied; no message export or permalink supplied.",
+    "agent_reviewed_messages": false,
+    "legality_confirmed": false
+  },
+  "source_labels": {
+    "GM2:118": "GM2 §3.1 Introduction — race, pit stop and three obstacles",
+    "GM2:121": "GM2 §3.2 Game Description — nominal field size",
+    "GM2:139": "GM2 §3.2.2 Gameplay Overview — three laps",
+    "GM2:140": "GM2 §3.2.2 Gameplay Overview — pit-stop timing",
+    "GM2:143": "GM2 §3.2.2 Gameplay Overview — wall-contact scoring",
+    "GM2:144": "GM2 §3.2.2 Gameplay Overview — obstacle-contact scoring",
+    "GM2:148": "GM2 §3.3 Game Specific Definitions — Area",
+    "GM2:150": "GM2 §3.3 Game Specific Definitions — In / Completely In (>75%)",
+    "GM2:160": "GM2 §3.3 Game Specific Definitions — Robot’s Pit Stop Area",
+    "GM2:165": "GM2 §3.3 Game Specific Definitions — obstacle placement paragraph",
+    "GM2:184": "GM2 §3.5.1 S01 — Robot Action Envelope",
+    "GM2:192": "GM2 §3.5.2 G02 — Playing Field Tolerances",
+    "GM2:193": "GM2 §3.5.2 G02 — explanatory paragraph on dimensional/location variations",
+    "GM2:194": "GM2 §3.5.2 G03 — Starting Volume",
+    "GM2:307": "GM2 materials table — Toy Vehicle Obstacle Set",
+    "GM2:311": "GM2 materials table — Amazon Toy Vehicle Obstacle Set link",
+    "GM2:362": "GM2 Appendix E: Obstacle Placement Quadrants — dimensions",
+    "GM2:371": "GM2 Appendix G: Pit Stop Challenge — assignment, preload and exchange",
+    "GM2:373": "GM2 Appendix G: Pit Stop Challenge — chassis entry and tire retention",
+    "GM2:374": "GM2 Appendix G: Pit Stop Challenge — ordered sequence"
+  },
+  "geometry_evidence": [
+    {"id":"obstacle-count","category":"organizer-specified","source_refs":["GM2:118"],"fact":"Three randomly placed obstacles; text says different lanes.","dimensions_in":null,"unknown":"Exact allocation across lanes and quadrants.","question_ids":["Q4"]},
+    {"id":"placement-regions","category":"organizer-specified","source_refs":["GM2:165","GM2:362"],"fact":"Straightaway inner/outer lanes; Appendix E specifies 2-in offsets, 16-in spans and 4-in gap. These are placement regions, not toy footprints.","dimensions_in":null,"unknown":"Datum faces, containment reference, allocation and allowed orientation.","question_ids":["Q4","Q6"]},
+    {"id":"general-tolerance","category":"organizer-specified","source_refs":["GM2:192","GM2:193"],"fact":"G02 publishes +/-1-in positional tolerance and explains dimensional/location variation. This is not a measured distribution or a vehicle dimension.","dimensions_in":null,"unknown":"Application to placement boundaries, divider endpoints and specific installed vehicle envelopes.","question_ids":["Q5","Q6"]},
+    {"id":"vehicle-identity","category":"organizer-specified","source_refs":["GM2:307","GM2:311"],"fact":"Manual links a Toy Vehicle Obstacle Set; archived relationship identifies ASIN B00EX5K1GG.","dimensions_in":null,"unknown":"Which installed vehicles/substitutions and their full envelopes.","question_ids":["Q5"]},
+    {"id":"manufacturer-envelope","category":"manufacturer-documented","source_refs":[],"fact":null,"dimensions_in":null,"unknown":"No verified manufacturer vehicle-envelope document in this baseline; product identity and package size are insufficient.","question_ids":["Q5"]},
+    {"id":"physical-envelope","category":"physically-measured","source_refs":[],"fact":null,"dimensions_in":null,"unknown":"No approved specimen/field measurements supplied or performed.","question_ids":["Q5","Q6"]},
+    {"id":"square-probes","category":"engineering-assumption","source_refs":[],"fact":"Existing square obstacle probes and traced divider geometry remain diagnostic assumptions, not installed obstacle measurements.","dimensions_in":null,"unknown":"Official applicability; no probe is promoted by this packet.","question_ids":["Q1","Q4","Q5","Q6"]}
+  ],
+  "acceptance_cases": [
+    {"id":"A1","question_ids":["Q1"],"status":"specified-not-executed","required_evidence":"Official allowed/forbidden entry and exit ends, direction and start-area restrictions.","positive_case":"Complete arrival/task/withdrawal/reentry for every assigned box using explicitly allowed ends.","negative_case":"Reject prohibited end, wrong direction or forbidden start-area traversal even when collision-free.","affected_contract":"Pit entry/exit policy; historical north hypothesis retained separately."},
+    {"id":"A2","question_ids":["Q2"],"status":"specified-not-executed","required_evidence":"Authoritative boundary edges, projected envelope and permitted internal-line crossing.","positive_case":"Full specified chassis/tire/mechanism envelope stays in each required area.","negative_case":"Reject an envelope crossing a forbidden edge although its center remains inside; exercise boundary contact separately.","affected_contract":"Phase containment and swept envelope; no center-only substitution."},
+    {"id":"A3","question_ids":["Q3"],"status":"specified-not-executed","required_evidence":"Finish-line endpoints/direction, ordered lap progress and treatment of pit/reverse/repeated crossings.","positive_case":"Three valid laps with pit stop after lap 1 or 2; timing and final state evaluated independently.","negative_case":"No duplicate lap credit for reverse/repeated/pit crossings or incomplete circuit.","affected_contract":"Official lap state machine replacing provisional gates only after review."},
+    {"id":"A4","question_ids":["Q4"],"status":"specified-not-executed","required_evidence":"Three-vehicle lane/quadrant allocation, permitted rotations and full-footprint versus reference-point containment.","positive_case":"Validate admissible three-vehicle placements at region edges and allowed orientations.","negative_case":"Reject forbidden allocation, orientation or containment breach; do not equate independent single blockers with match coverage.","affected_contract":"Admissible obstacle scenario generator."},
+    {"id":"A5","question_ids":["Q5"],"status":"specified-not-executed","required_evidence":"Organizer-qualified model/substitution list and maximum length, width including wheels, height and uncertainty.","positive_case":"Use versioned conservative installed envelopes for every approved vehicle type.","negative_case":"Reject package dimensions, unidentified toy photos or missing protrusions as qualifying footprint evidence.","affected_contract":"Obstacle polygons/heights and substitution bounds."},
+    {"id":"A6","question_ids":["Q6"],"status":"specified-not-executed","required_evidence":"Dimensioned datum faces/endpoints and interpretation of G02 for built geometry and placement.","positive_case":"Check justified tolerance extremes, divider endpoints and tower projections without shrinking uncertainty.","negative_case":"Reject a nominal-only clearance claim or arbitrary correlated shifts as exhaustive G02 coverage.","affected_contract":"Field datums and explicit bounded uncertainty model."},
+    {"id":"A7","question_ids":["Q7"],"status":"specified-not-executed","required_evidence":"Official exchange completion, tire retention, final parking metric and scoring observation time.","positive_case":"Score authorized exchange independently of final parking; evaluate parking below, at and above 75% using confirmed metric.","negative_case":"Do not award >75% at exactly 75%; reject wrong tire/box/retention event as specified and late scoring.","affected_contract":"Task events, docking reach, final containment and finish timing."}
+  ]
+}

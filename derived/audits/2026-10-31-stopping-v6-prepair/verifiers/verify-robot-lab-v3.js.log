@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "assembly_parts": 30,
+  "routes": {
+    "south": {
+      "status": "completed",
+      "time_s": 54.06666666666424,
+      "commands": 23,
+      "collision": null
+    },
+    "north": {
+      "status": "completed",
+      "time_s": 81.65000000001105,
+      "commands": 31,
+      "collision": null
+    }
+  },
+  "standalone": "share/Robot-Lab-v3.html",
+  "browser_evidence": true
+}

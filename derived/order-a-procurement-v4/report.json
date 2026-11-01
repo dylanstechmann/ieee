@@ -1,0 +1,614 @@
+{
+  "version": "0.4.1",
+  "date": "2026-10-31",
+  "status": "selected-mule-baseline-not-ordered-not-hardware-validated",
+  "owner_assumptions": {
+    "facilities": "FAU tools and space, including 3D printing and soldering, are planning assumptions supplied by the owner; exact equipment, training, hours, storage, fees and supervision remain unverified.",
+    "supply_policy": "New component purchases are expected; existing or borrowable equipment is not a design constraint.",
+    "initial_budget_usd": {
+      "minimum": 500,
+      "working_target": 750,
+      "maximum": 1000
+    },
+    "purchase_authority": "Owner approved selection of the default mule baseline for continued design and simulation. No supplier checkout or order is recorded."
+  },
+  "recommendation": {
+    "motor_id": "M70",
+    "wheel_variant_mm": 80,
+    "reason": "Selected default for the digital mule because it balances maximum-efficiency speed/torque margin; #4753 is explicitly on backorder and #4755 has less speed margin. This is not an order record or physical validation."
+  },
+  "gates": {
+    "baseline_3in": {
+      "mass_kg": 4,
+      "wheel_radius_m": 0.0381,
+      "top_speed_m_s": 0.254,
+      "cruise_speed_m_s": 0.2032,
+      "top_wheel_rpm": 63.661977,
+      "cruise_wheel_rpm": 50.929582,
+      "required_loaded_rpm_with_margin": 76.394373,
+      "acceleration_force_n": 2.4384,
+      "rolling_force_n": 1.1772,
+      "total_tractive_force_n": 3.6156,
+      "nominal_per_side_torque_nm": 0.068877,
+      "design_per_side_torque_nm": 0.137754,
+      "conservative_mechanical_w_per_side_with_torque_margin": 0.918362,
+      "minimum_motor_mechanical_w_per_side_at_assumed_efficiency": 1.836725,
+      "required_friction_coefficient_at_driven_weight_fraction": 0.115176,
+      "encoder_counts_per_wheel_rev_min": 189
+    },
+    "mule_80mm": {
+      "mass_kg": 4,
+      "wheel_radius_m": 0.04,
+      "top_speed_m_s": 0.254,
+      "cruise_speed_m_s": 0.2032,
+      "top_wheel_rpm": 60.638033,
+      "cruise_wheel_rpm": 48.510427,
+      "required_loaded_rpm_with_margin": 72.76564,
+      "acceleration_force_n": 2.4384,
+      "rolling_force_n": 1.1772,
+      "total_tractive_force_n": 3.6156,
+      "nominal_per_side_torque_nm": 0.072312,
+      "design_per_side_torque_nm": 0.144624,
+      "conservative_mechanical_w_per_side_with_torque_margin": 0.918362,
+      "minimum_motor_mechanical_w_per_side_at_assumed_efficiency": 1.836725,
+      "required_friction_coefficient_at_driven_weight_fraction": 0.115176,
+      "encoder_counts_per_wheel_rev_min": 189
+    }
+  },
+  "candidates": [
+    {
+      "id": "M50",
+      "sku": "4753",
+      "name": "Pololu 50:1 Metal Gearmotor 37Dx70L mm 12V with 64 CPR Encoder (Helical Pinion)",
+      "role": "speed/efficiency alternative",
+      "unit_price_usd": 60.95,
+      "availability": "Backorder shown; backorders allowed; no ship date verified",
+      "gear_ratio": 50,
+      "no_load_rpm": 200,
+      "no_load_speed_margin": 2.617994,
+      "max_efficiency": {
+        "rpm": 180,
+        "torque_kgcm": 2.2,
+        "current_a": 0.66,
+        "efficiency_pct": 51,
+        "output_w": 4,
+        "torque_nm": 0.215746,
+        "speed_margin": 2.356194,
+        "torque_margin": 1.566171
+      },
+      "max_efficiency_point_exceeds_both_gates": true,
+      "output_cpr": 3200,
+      "encoder_quantum_in": 0.00294524,
+      "encoder_gate_pass": true,
+      "stall_current_a_extrapolated": 5.5,
+      "stall_torque_kgcm_extrapolated": 21,
+      "mass_g": 205,
+      "size_mm": "37D x 70L",
+      "shaft": "6 mm D, 16 mm long",
+      "product_url": "https://www.pololu.com/product/4753",
+      "source": "sources/hardware-2026-10-31/pololu/product-4753-specs.html",
+      "mule_80mm": {
+        "id": "M50",
+        "sku": "4753",
+        "name": "Pololu 50:1 Metal Gearmotor 37Dx70L mm 12V with 64 CPR Encoder (Helical Pinion)",
+        "role": "speed/efficiency alternative",
+        "unit_price_usd": 60.95,
+        "availability": "Backorder shown; backorders allowed; no ship date verified",
+        "gear_ratio": 50,
+        "no_load_rpm": 200,
+        "no_load_speed_margin": 2.74855,
+        "max_efficiency": {
+          "rpm": 180,
+          "torque_kgcm": 2.2,
+          "current_a": 0.66,
+          "efficiency_pct": 51,
+          "output_w": 4,
+          "torque_nm": 0.215746,
+          "speed_margin": 2.473695,
+          "torque_margin": 1.491774
+        },
+        "max_efficiency_point_exceeds_both_gates": true,
+        "output_cpr": 3200,
+        "encoder_quantum_in": 0.00309212,
+        "encoder_gate_pass": true,
+        "stall_current_a_extrapolated": 5.5,
+        "stall_torque_kgcm_extrapolated": 21,
+        "mass_g": 205,
+        "size_mm": "37D x 70L",
+        "shaft": "6 mm D, 16 mm long",
+        "product_url": "https://www.pololu.com/product/4753",
+        "source": "sources/hardware-2026-10-31/pololu/product-4753-specs.html"
+      }
+    },
+    {
+      "id": "M70",
+      "sku": "4754",
+      "name": "Pololu 70:1 Metal Gearmotor 37Dx70L mm 12V with 64 CPR Encoder (Helical Pinion)",
+      "role": "recommended balanced Order A candidate",
+      "unit_price_usd": 60.95,
+      "availability": "Add to cart shown; backorders allowed; stock quantity and ship date not verified",
+      "gear_ratio": 70,
+      "no_load_rpm": 150,
+      "no_load_speed_margin": 1.963495,
+      "max_efficiency": {
+        "rpm": 130,
+        "torque_kgcm": 3.2,
+        "current_a": 0.68,
+        "efficiency_pct": 52,
+        "output_w": 4.2,
+        "torque_nm": 0.313813,
+        "speed_margin": 1.701696,
+        "torque_margin": 2.278067
+      },
+      "max_efficiency_point_exceeds_both_gates": true,
+      "output_cpr": 4480,
+      "encoder_quantum_in": 0.00210375,
+      "encoder_gate_pass": true,
+      "stall_current_a_extrapolated": 5.5,
+      "stall_torque_kgcm_extrapolated": 27,
+      "mass_g": 205,
+      "size_mm": "37D x 70L",
+      "shaft": "6 mm D, 16 mm long",
+      "product_url": "https://www.pololu.com/product/4754",
+      "source": "sources/hardware-2026-10-31/pololu/product-4754-specs.html",
+      "mule_80mm": {
+        "id": "M70",
+        "sku": "4754",
+        "name": "Pololu 70:1 Metal Gearmotor 37Dx70L mm 12V with 64 CPR Encoder (Helical Pinion)",
+        "role": "recommended balanced Order A candidate",
+        "unit_price_usd": 60.95,
+        "availability": "Add to cart shown; backorders allowed; stock quantity and ship date not verified",
+        "gear_ratio": 70,
+        "no_load_rpm": 150,
+        "no_load_speed_margin": 2.061413,
+        "max_efficiency": {
+          "rpm": 130,
+          "torque_kgcm": 3.2,
+          "current_a": 0.68,
+          "efficiency_pct": 52,
+          "output_w": 4.2,
+          "torque_nm": 0.313813,
+          "speed_margin": 1.786558,
+          "torque_margin": 2.169853
+        },
+        "max_efficiency_point_exceeds_both_gates": true,
+        "output_cpr": 4480,
+        "encoder_quantum_in": 0.00220866,
+        "encoder_gate_pass": true,
+        "stall_current_a_extrapolated": 5.5,
+        "stall_torque_kgcm_extrapolated": 27,
+        "mass_g": 205,
+        "size_mm": "37D x 70L",
+        "shaft": "6 mm D, 16 mm long",
+        "product_url": "https://www.pololu.com/product/4754",
+        "source": "sources/hardware-2026-10-31/pololu/product-4754-specs.html"
+      }
+    },
+    {
+      "id": "M100",
+      "sku": "4755",
+      "name": "Pololu 100:1 Metal Gearmotor 37Dx73L mm 12V with 64 CPR Encoder (Helical Pinion)",
+      "role": "higher-torque/lower-speed alternative",
+      "unit_price_usd": 60.95,
+      "availability": "Add to cart shown; backorders allowed; stock quantity and ship date not verified",
+      "gear_ratio": 102.08,
+      "no_load_rpm": 100,
+      "no_load_speed_margin": 1.308997,
+      "max_efficiency": {
+        "rpm": 87,
+        "torque_kgcm": 4.2,
+        "current_a": 0.72,
+        "efficiency_pct": 44,
+        "output_w": 3.8,
+        "torque_nm": 0.411879,
+        "speed_margin": 1.138827,
+        "torque_margin": 2.989963
+      },
+      "max_efficiency_point_exceeds_both_gates": true,
+      "output_cpr": 6533,
+      "encoder_quantum_in": 0.00144264,
+      "encoder_gate_pass": true,
+      "stall_current_a_extrapolated": 5.5,
+      "stall_torque_kgcm_extrapolated": 34,
+      "mass_g": 210,
+      "size_mm": "37D x 72.5L (73L in product title)",
+      "shaft": "6 mm D, 16 mm long",
+      "product_url": "https://www.pololu.com/product/4755",
+      "source": "sources/hardware-2026-10-31/pololu/product-4755-specs.html",
+      "mule_80mm": {
+        "id": "M100",
+        "sku": "4755",
+        "name": "Pololu 100:1 Metal Gearmotor 37Dx73L mm 12V with 64 CPR Encoder (Helical Pinion)",
+        "role": "higher-torque/lower-speed alternative",
+        "unit_price_usd": 60.95,
+        "availability": "Add to cart shown; backorders allowed; stock quantity and ship date not verified",
+        "gear_ratio": 102.08,
+        "no_load_rpm": 100,
+        "no_load_speed_margin": 1.374275,
+        "max_efficiency": {
+          "rpm": 87,
+          "torque_kgcm": 4.2,
+          "current_a": 0.72,
+          "efficiency_pct": 44,
+          "output_w": 3.8,
+          "torque_nm": 0.411879,
+          "speed_margin": 1.195619,
+          "torque_margin": 2.847932
+        },
+        "max_efficiency_point_exceeds_both_gates": true,
+        "output_cpr": 6533,
+        "encoder_quantum_in": 0.00151458,
+        "encoder_gate_pass": true,
+        "stall_current_a_extrapolated": 5.5,
+        "stall_torque_kgcm_extrapolated": 34,
+        "mass_g": 210,
+        "size_mm": "37D x 72.5L (73L in product title)",
+        "shaft": "6 mm D, 16 mm long",
+        "product_url": "https://www.pololu.com/product/4755",
+        "source": "sources/hardware-2026-10-31/pololu/product-4755-specs.html"
+      }
+    }
+  ],
+  "bom": [
+    {
+      "id": "A-MOTOR",
+      "sku": "4754",
+      "qty": 2,
+      "unit": "each",
+      "unit_price_usd": 60.95,
+      "name": "70:1 37D 12V gearmotor with 64 CPR encoder",
+      "required": true,
+      "product_url": "https://www.pololu.com/product/4754",
+      "source": "sources/hardware-2026-10-31/pololu/product-4754-specs.html",
+      "extended_price_usd": 121.9
+    },
+    {
+      "id": "A-BRACKET",
+      "sku": "1995",
+      "qty": 2,
+      "unit": "each",
+      "unit_price_usd": 12.95,
+      "name": "Machined aluminum bracket for 37D gearmotors; includes nine M3 screws per bracket",
+      "required": true,
+      "product_url": "https://www.pololu.com/product/1995",
+      "source": "sources/hardware-2026-10-31/pololu/product-1995-specs.html",
+      "extended_price_usd": 25.9
+    },
+    {
+      "id": "A-HUB",
+      "sku": "1083",
+      "qty": 1,
+      "unit": "2-pack",
+      "unit_price_usd": 12.95,
+      "name": "Universal aluminum hubs for 6 mm shafts; two hubs, four set screws and 0.05-inch Allen wrench; wheel screws not included",
+      "required": true,
+      "product_url": "https://www.pololu.com/product/1083",
+      "source": "sources/hardware-2026-10-31/pololu/product-1083-overview.html",
+      "extended_price_usd": 12.95
+    },
+    {
+      "id": "A-WHEEL",
+      "sku": "1430",
+      "qty": 1,
+      "unit": "pair",
+      "unit_price_usd": 8.75,
+      "name": "80 x 10 mm black plastic wheels with silicone tires; mule geometry variant; hub-compatible mounting holes",
+      "required": true,
+      "product_url": "https://www.pololu.com/product/1430",
+      "source": "sources/hardware-2026-10-31/pololu/product-1430-overview.html",
+      "extended_price_usd": 8.75
+    },
+    {
+      "id": "A-CASTER",
+      "sku": "953",
+      "qty": 2,
+      "unit": "each",
+      "unit_price_usd": 2.95,
+      "name": "Ball caster with 1/2-inch metal ball, spacers, two #2 screws and nuts included per kit",
+      "required": true,
+      "product_url": "https://www.pololu.com/product/953",
+      "source": "sources/hardware-2026-10-31/pololu/product-953-overview.html",
+      "extended_price_usd": 5.9
+    },
+    {
+      "id": "A-WHEEL-SCREWS",
+      "sku": "1962",
+      "qty": 1,
+      "unit": "25-pack",
+      "unit_price_usd": 1.85,
+      "name": "#4-40 x 1/2-inch Phillips machine screws for wheel/hub mounting",
+      "required": true,
+      "product_url": "https://www.pololu.com/product/1962",
+      "source": "sources/hardware-2026-10-31/pololu/product-1962-specs.html",
+      "extended_price_usd": 1.85
+    },
+    {
+      "id": "A-FAU-FIXTURE",
+      "sku": "FAU-PRINT",
+      "qty": 1,
+      "unit": "fixture set",
+      "unit_price_usd": null,
+      "name": "Printed mule deck, ballast fixture and bench adapters using assumed FAU access",
+      "required": true,
+      "product_url": null,
+      "source": null,
+      "extended_price_usd": null
+    },
+    {
+      "id": "A-BENCH-CONSUMABLES",
+      "sku": "TBD",
+      "qty": 1,
+      "unit": "unpriced allowance",
+      "unit_price_usd": null,
+      "name": "Wire, bench connections, insulation and any unavailable measurement accessories; scope after FAU inventory",
+      "required": true,
+      "product_url": null,
+      "source": null,
+      "extended_price_usd": null
+    }
+  ],
+  "totals": {
+    "priced_order_a_subtotal_usd": 177.25,
+    "shipping_tax_landed_total_usd": null,
+    "shipping_snapshot": {
+      "advertised_policy": "Free shipping in USA over $100",
+      "quoted_shipping_usd": null,
+      "quoted_tax_usd": null,
+      "delivery_date": null,
+      "note": "Eligibility, destination, method, stock quantity and delivery date were not verified; no landed total is claimed."
+    },
+    "unpriced_lines": [
+      "A-FAU-FIXTURE",
+      "A-BENCH-CONSUMABLES"
+    ]
+  },
+  "alternatives": [
+    {
+      "id": "ALT-M50",
+      "change": "Substitute two #4753 motors for #4754; same unit price and mounting family; explicit Backorder status; prioritize speed/efficiency.",
+      "motor_id": "M50",
+      "price_delta_usd": 0,
+      "subtotal_usd": 177.25
+    },
+    {
+      "id": "ALT-M100",
+      "change": "Substitute two #4755 motors for #4754; same unit price and mounting family but 3 mm longer; prioritize torque and accept less speed margin.",
+      "motor_id": "M100",
+      "price_delta_usd": 0,
+      "subtotal_usd": 177.25
+    },
+    {
+      "id": "ALT-STAMPED",
+      "change": "Replace two #1995 machined brackets with one #1084 stamped L-bracket pair; chassis-side screws are not included.",
+      "unit_price_usd": 11.95,
+      "product_url": "https://www.pololu.com/product/1084",
+      "source": "sources/hardware-2026-10-31/pololu/product-1084-specs.html",
+      "price_delta_usd": -13.95,
+      "subtotal_usd": 163.3
+    },
+    {
+      "id": "ALT-3IN-PRINTED",
+      "change": "Remove #1430 80 mm wheels and use balanced custom 76.2 mm wheels with #1083 hubs to preserve the 3-inch scenario; printed material, tread and any additional fasteners remain unpriced and require E03 characterization.",
+      "remove_item_id": "A-WHEEL",
+      "price_delta_usd": -8.75,
+      "subtotal_usd": 168.5
+    }
+  ],
+  "budget": {
+    "working_target_usd": 750,
+    "hard_cap_usd": 1000,
+    "later_reserves_usd": {
+      "controller_and_sensors": 120,
+      "driver_distribution_protection": 100,
+      "battery_and_charger": 100,
+      "mechanism": 80,
+      "harness_and_consumables": 60
+    },
+    "later_reserve_total_usd": 460,
+    "contingency_within_working_target_usd": 112.75,
+    "additional_room_to_hard_cap_usd": 250
+  },
+  "encoder": {
+    "motor_shaft_cpr": 64,
+    "lead_length_cm": 20,
+    "termination": "1x6 female header, 0.1-inch pitch",
+    "vcc_range_v": [
+      3.5,
+      20
+    ],
+    "max_current_ma": 10,
+    "pins": {
+      "red": "motor power",
+      "black": "motor power",
+      "green": "encoder GND",
+      "blue": "encoder Vcc",
+      "yellow": "encoder A output",
+      "white": "encoder B output"
+    },
+    "source": "sources/hardware-2026-10-31/pololu/product-4750-encoder.html"
+  },
+  "source_manifest": {
+    "date": "2026-10-31",
+    "network_refresh": false,
+    "files": [
+      {
+        "path": "sources/hardware-2026-10-31/pololu/product-4753-specs.html",
+        "url": "https://www.pololu.com/product/4753/specs",
+        "kind": "motor-M50",
+        "bytes": 67700,
+        "sha256": "3301ff579c3b140e86c3967f208e1326bbd487efec380455d4a12ce49c9e9b40"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/product-4754-specs.html",
+        "url": "https://www.pololu.com/product/4754/specs",
+        "kind": "bom-A-MOTOR",
+        "bytes": 67857,
+        "sha256": "75e2d2b69b0277c45daabbb4f2ae617d3fbb14a9c89cf9fa43effba5f42afc71"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/product-4755-specs.html",
+        "url": "https://www.pololu.com/product/4755/specs",
+        "kind": "motor-M100",
+        "bytes": 67890,
+        "sha256": "672852a51a8fe04f778520f0be1ef3bca5356feb6cb59d92239a6ff74873412e"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/product-1995-specs.html",
+        "url": "https://www.pololu.com/product/1995/specs",
+        "kind": "bom-A-BRACKET",
+        "bytes": 43711,
+        "sha256": "ea2166a33dd94364672d799c0061f8f70e026e4fdd9eb5ec831c773cba78b9a5"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/product-1083-overview.html",
+        "url": "https://www.pololu.com/product/1083",
+        "kind": "hub-included-hardware",
+        "bytes": 54517,
+        "sha256": "a9763335465cb40165a81f8973dcac3904c2493984d374234a517b0fcf9d60fa"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/product-1430-overview.html",
+        "url": "https://www.pololu.com/product/1430",
+        "kind": "wheel-hub-compatibility",
+        "bytes": 76950,
+        "sha256": "7fa55d7d662c0ff9aade8bc0a00eeaeeabc2c3b04ceee8c26db5882df06d2393"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/product-953-overview.html",
+        "url": "https://www.pololu.com/product/953",
+        "kind": "caster-included-hardware",
+        "bytes": 47305,
+        "sha256": "e6a12c40cf1783ffc7ff1da2767a3275b34a611d27196c604d1b569af329d8d2"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/product-1962-specs.html",
+        "url": "https://www.pololu.com/product/1962/specs",
+        "kind": "bom-A-WHEEL-SCREWS",
+        "bytes": 38532,
+        "sha256": "ffc8d15ae7edce923314c3bb3f0d4cc796f49da42dfd2d3b7d9ce6f524cf52d0"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/product-1084-specs.html",
+        "url": "https://www.pololu.com/product/1084/specs",
+        "kind": "alternative-ALT-STAMPED",
+        "bytes": 41679,
+        "sha256": "331c21b2b36fa9157fd9a1547006fd56defe6ef8ded0874cf6e81e6ac8129d42"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/product-4750-encoder.html",
+        "url": "https://www.pololu.com/product/4750",
+        "kind": "encoder-documentation",
+        "bytes": 76807,
+        "sha256": "f3de3cf960c38f787e5051e14e839736f69a6b068bc9b48ec9066d8ddf551707"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/product-4754-resources.html",
+        "url": "https://www.pololu.com/product/4754/resources",
+        "kind": "resource-index",
+        "bytes": 66308,
+        "sha256": "f4f61ef280ee2060615723b7aa524da4a8cba55f795cc3c8acad7b3bf78b6a14"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/pololu-37d-metal-gearmotors-rev-1-2.pdf",
+        "url": "https://www.pololu.com/file/0J1736/pololu-37d-metal-gearmotors-rev-1-2.pdf",
+        "kind": "motor-datasheet",
+        "bytes": 1552955,
+        "sha256": "71172f074ecd6752d59863f04616bcd341d7bdca5588734de31d328a10735ba1"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/37d-metal-gearmotors-dimension-diagram.pdf",
+        "url": "https://www.pololu.com/file/0J1735/37d-metal-gearmotors-dimension-diagram.pdf",
+        "kind": "dimension-diagrams",
+        "bytes": 459255,
+        "sha256": "1628c15b18667a3aa5f699fb8f1806f7808a01c6de7ee87e38e963f173ae9e86"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/37d-gearmotor-3d-models.zip",
+        "url": "https://www.pololu.com/file/0J1868/37d-gearmotor-3d-models.zip",
+        "kind": "step-archive",
+        "bytes": 6688120,
+        "sha256": "a4baf9f61a7d4f461324d9b853996a0adde648408862630e3a6b047d8a29c455"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/step/37d-gearmotor-50-70-encoder.step",
+        "url": "https://www.pololu.com/file/0J1868/37d-gearmotor-3d-models.zip",
+        "zip_entry": "37d-gearmotor-50-70-encoder.step",
+        "kind": "extracted-step-shared-50-70",
+        "bytes": 3621312,
+        "sha256": "f7d729d723ed3bbb9f71bf8a4b54d055565f036df0ddfbd438e950eaed713c15"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/step/37d-gearmotor-100-131-150-encoder.step",
+        "url": "https://www.pololu.com/file/0J1868/37d-gearmotor-3d-models.zip",
+        "zip_entry": "37d-gearmotor-100-131-150-encoder.step",
+        "kind": "extracted-step-shared-100-131-150",
+        "bytes": 3621349,
+        "sha256": "a2450812d02c82cf362dfab5a6d0c4fbe801a90bee45602c5e8390ccb8cb8aef"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/product-1995-resources.html",
+        "url": "https://www.pololu.com/product/1995/resources",
+        "kind": "bracket-resource-index",
+        "bytes": 44358,
+        "sha256": "15ff7a0108ec93246f7200422247c05d86795cb5d3200f2ca7b91d706d60fc48"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/product-953-resources.html",
+        "url": "https://www.pololu.com/product/953/resources",
+        "kind": "caster-resource-index",
+        "bytes": 43067,
+        "sha256": "ff54c8ed1915249ea26b405f173ec554e2d692a4476461f1e46ca410be9968d8"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/1995-37D-machined-bracket.pdf",
+        "url": "https://www.pololu.com/file/0J653/1995-37D-machined-bracket.pdf",
+        "kind": "bracket-dimension-diagram",
+        "bytes": 48477,
+        "sha256": "6a854a8de72d3ed3ea24d58b24d8ffe5e2a02927bff9e0fc105a08bb12c0456d"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/step/1995-machined-bracket.step",
+        "url": "https://www.pololu.com/file/0J1130/pololu-machined-aluminum-bracket-for-37d-mm-metal-gearmotors.step",
+        "kind": "bracket-step",
+        "bytes": 1214245,
+        "sha256": "33c57cdf90fbc398fa9dfa3c0cd04346dbd7b5bb137774b74cb38b1a573b827a"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/953-ball-caster-dimension-diagram.pdf",
+        "url": "https://www.pololu.com/file/0J1638/pololu-ball-caster-with-0-500in-ball.pdf",
+        "kind": "caster-dimension-diagram",
+        "bytes": 161700,
+        "sha256": "055f4a44547108a5f3c1c5babdf2e931cdeb536cc92db1d36ce62a256fa58e9c"
+      },
+      {
+        "path": "sources/hardware-2026-10-31/pololu/step/953-ball-caster.step",
+        "url": "https://www.pololu.com/file/0J1639/pololu-ball-caster-with-0-500in-ball.step",
+        "kind": "caster-step",
+        "bytes": 2266652,
+        "sha256": "6299298cfb032ac64d025773c2ce15d49e3df4a6021ded1c2b3da4592b05620a"
+      }
+    ]
+  },
+  "exclusions": [
+    "shipping",
+    "sales tax",
+    "FAU material/machine charges",
+    "unpriced bench consumables",
+    "driver",
+    "battery",
+    "charger",
+    "controller",
+    "mechanism actuator",
+    "final production chassis",
+    "event/travel costs"
+  ],
+  "limitations": [
+    "Prices and page availability are a 2026-10-31 research snapshot. Recheck the live product page, quantity, shipping, tax and lead time immediately before any owner-approved order.",
+    "Maximum-efficiency points and no-load values are manufacturer data, not measured loaded robot performance. Stall values are theoretical extrapolations and must not be used as continuous ratings.",
+    "Passing the arithmetic speed, torque and encoder screens does not select a final motor or satisfy E02/E03.",
+    "The 80 mm wheel mule is an explicit geometry variant. Its calculated requirements differ from the existing 3-inch baseline and its silicone-tire traction must be measured.",
+    "The STEP files are shared ratio-family models, not proof of exact vendor dimensions for every unit. Check received hardware and current drawings before fabrication.",
+    "Driver, battery, charger, controller, fuse, wire gauge and mechanism actuator remain unselected. No complete robot or production harness is released.",
+    "FAU access is an owner-provided planning assumption; supervision, battery, charging, training, storage, test-space and fee details are not verified."
+  ]
+}

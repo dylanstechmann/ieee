@@ -1,0 +1,21 @@
+{
+  "status": "agent-built-geometric-study-not-hardware-validation",
+  "robot": {"length_in": 10, "width_in": 10},
+  "sampling": {"translation_step_in": 0.25, "rotation_step_deg": 2},
+  "uncertainty": {"element_shift_in": 1, "position_error_in": 0.5, "heading_error_deg": 3},
+  "wall_scenarios": [
+    {"id": "inside-nominal", "inset_in": 1},
+    {"id": "inside-three-quarter", "inset_in": 0.75},
+    {"id": "outside", "inset_in": 0}
+  ],
+  "divider_thickness_in": 1,
+  "obstacles": [],
+  "notes": [
+    "End walls assumed present. Divider thickness is an assumed collision footprint, not the verified installed stock size.",
+    "Markings are excluded from collision solids for this conditional study; this is not an organizer ruling.",
+    "Obstacle polygons may be added as {id, vertices_in}; an empty list does not represent a competition-ready field.",
+    "Element shifts test one divider or target box at a time, not all simultaneous field variations. Board and stock dimensions remain fixed.",
+    "Position and heading errors are deterministic constant offsets along a route, not a localization or control model.",
+    "Waypoint interpolation permits sideways translation and in-place rotation. No differential-drive or steering constraints are enforced. Routes are independent maneuvers, not a connected legal mission."
+  ]
+}

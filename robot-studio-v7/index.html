@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Robot Studio v7</title>
+<style>
+:root {
+  /* Layout: full-bleed 3D viewport with two floating panels and a bottom HUD strip. */
+  --panel: rgba(18, 21, 24, 0.82);
+  --panel-line: rgba(255, 255, 255, 0.12);
+  --ink: #eef1f2;
+  --ink-2: #a9b2b8;
+  --accent: #46c37b;
+  --warn: #ff7a59;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; background: #c9cfd4; overflow: hidden; font: 13px/1.45 var(--body); color: var(--ink); }
+canvas#view { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+.panel { position: fixed; background: var(--panel); border: 1px solid var(--panel-line); border-radius: 10px; padding: 12px 14px; backdrop-filter: blur(6px); }
+#left { top: 12px; left: 12px; width: 300px; max-height: calc(100% - 92px); overflow: auto; display: grid; gap: 10px; }
+#right { top: 12px; right: 12px; width: 320px; max-height: calc(100% - 92px); overflow: auto; display: grid; gap: 8px; }
+#hud { left: 12px; right: 12px; bottom: 12px; display: flex; gap: 22px; align-items: center; flex-wrap: wrap; padding: 9px 14px; }
+h1 { font-size: 15px; margin: 0; letter-spacing: 0.01em; }
+h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-2); margin: 4px 0 0; font-weight: 600; }
+p { margin: 0; color: var(--ink-2); }
+.row { display: flex; flex-wrap: wrap; gap: 6px; }
+button, select { font: inherit; color: var(--ink); background: rgba(255,255,255,0.07); border: 1px solid var(--panel-line); border-radius: 6px; padding: 5px 9px; cursor: pointer; }
+button:hover, select:hover { background: rgba(255,255,255,0.14); }
+button:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+button[aria-pressed="true"] { border-color: var(--accent); color: #fff; background: rgba(70,195,123,0.18); }
+select { width: 100%; }
+.status { border-left: 3px solid var(--accent); padding: 6px 8px; background: rgba(255,255,255,0.04); border-radius: 4px; color: var(--ink); }
+.status.bad { border-left-color: var(--warn); }
+.part { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; padding: 6px 8px; border-radius: 6px; cursor: pointer; border: 1px solid transparent; }
+.part:hover { background: rgba(255,255,255,0.06); }
+.part.sel { border-color: var(--accent); background: rgba(70,195,123,0.12); }
+.part .n { color: var(--ink); }
+.part .s { color: var(--ink-2); font-size: 11.5px; grid-column: 1 / -1; }
+.badge { font-size: 10.5px; padding: 1px 6px; border-radius: 999px; white-space: nowrap; align-self: start; }
+.b-cad { background: rgba(70,195,123,0.2); color: #9be3b9; }
+.b-dim { background: rgba(90,160,255,0.2); color: #a9cdff; }
+.b-approx { background: rgba(255,170,80,0.2); color: #ffcf9a; }
+#detail { font-size: 12px; color: var(--ink); display: grid; gap: 3px; }
+#detail code, .mono { font-family: var(--mono); font-size: 11.5px; color: var(--ink-2); }
+.hud-item { display: grid; }
+.hud-item b { font: 600 17px/1.1 var(--mono); color: #fff; font-variant-numeric: tabular-nums; }
+.hud-item span { font-size: 10.5px; color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.07em; }
+#note { margin-left: auto; color: var(--ink-2); font-size: 11.5px; max-width: 520px; }
+@media (max-width: 760px) { #right { display: none; } #left { width: calc(100% - 24px); max-height: 46%; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<canvas id="view" aria-label="3D view of the Order A drivetrain mule on the Stock Car Race field"></canvas>
+<section id="left" class="panel">
+  <div><h1>Robot Studio v7</h1><p>Order A mule built from Pololu's own CAD, on the GM2 V3 field.</p></div>
+  <div><h2>Assembly</h2>
+    <label class="sr" for="config"></label>
+    <select id="config" aria-label="Assembly configuration"></select>
+    <p id="config-status" class="status" style="margin-top:6px"></p>
+  </div>
+  <div><h2>View</h2><div class="row" id="views"></div></div>
+  <div><h2>Drive (illustrative path)</h2>
+    <div class="row"><button id="play" type="button">Start match</button><button id="reset" type="button">Reset</button>
+      <select id="speed" aria-label="Playback speed" style="width:auto"><option value="1">1×</option><option value="2">2×</option><option value="4" selected>4×</option></select></div>
+  </div>
+  <div><h2>AprilTag die roll</h2>
+    <select id="tag" aria-label="AprilTag ID"><option value="1">Tag 1 → pit box 1</option><option value="2" selected>Tag 2 → pit box 2</option><option value="3">Tag 3 → pit box 3</option></select>
+  </div>
+</section>
+<section id="right" class="panel">
+  <h2>Parts (click one, or click the model)</h2>
+  <div id="parts"></div>
+  <h2>Selected</h2>
+  <div id="detail"><p>Nothing selected.</p></div>
+</section>
+<section id="hud" class="panel">
+  <div class="hud-item"><b id="clock">0:00.0</b><span>Match clock</span></div>
+  <div class="hud-item"><b id="lap">0 / 3</b><span>Laps</span></div>
+  <div class="hud-item"><b id="phase">Waiting for flag</b><span>Phase</span></div>
+  <div class="hud-item"><b id="speedo">0.00</b><span>m/s</span></div>
+  <p id="note">Vendor CAD shapes with physically based materials chosen to match product photos. The path is kinematic and illustrative, not the v5 dynamics model or a legal-lap plan. Field items marked approximate are not dimensioned in GM2 V3.</p>
+</section>
+<script id="data-placeholder"></script>
+<script id="app-placeholder"></script>
+</body>
+</html>

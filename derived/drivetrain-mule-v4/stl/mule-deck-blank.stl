@@ -1,0 +1,86 @@
+solid mule_deck_blank
+  facet normal 0.00000000e+0 0.00000000e+0 -1.00000000e+0
+    outer loop
+      vertex 95.0000000 -80.0000000 0.0000000
+      vertex -95.0000000 -80.0000000 0.0000000
+      vertex -95.0000000 80.0000000 0.0000000
+    endloop
+  endfacet
+  facet normal 0.00000000e+0 0.00000000e+0 1.00000000e+0
+    outer loop
+      vertex -95.0000000 80.0000000 5.0000000
+      vertex -95.0000000 -80.0000000 5.0000000
+      vertex 95.0000000 -80.0000000 5.0000000
+    endloop
+  endfacet
+  facet normal 0.00000000e+0 0.00000000e+0 -1.00000000e+0
+    outer loop
+      vertex -95.0000000 80.0000000 0.0000000
+      vertex 95.0000000 80.0000000 0.0000000
+      vertex 95.0000000 -80.0000000 0.0000000
+    endloop
+  endfacet
+  facet normal 0.00000000e+0 0.00000000e+0 1.00000000e+0
+    outer loop
+      vertex 95.0000000 -80.0000000 5.0000000
+      vertex 95.0000000 80.0000000 5.0000000
+      vertex -95.0000000 80.0000000 5.0000000
+    endloop
+  endfacet
+  facet normal 0.00000000e+0 -1.00000000e+0 0.00000000e+0
+    outer loop
+      vertex -95.0000000 -80.0000000 0.0000000
+      vertex 95.0000000 -80.0000000 0.0000000
+      vertex -95.0000000 -80.0000000 5.0000000
+    endloop
+  endfacet
+  facet normal 0.00000000e+0 -1.00000000e+0 0.00000000e+0
+    outer loop
+      vertex 95.0000000 -80.0000000 0.0000000
+      vertex 95.0000000 -80.0000000 5.0000000
+      vertex -95.0000000 -80.0000000 5.0000000
+    endloop
+  endfacet
+  facet normal 1.00000000e+0 0.00000000e+0 0.00000000e+0
+    outer loop
+      vertex 95.0000000 -80.0000000 0.0000000
+      vertex 95.0000000 80.0000000 0.0000000
+      vertex 95.0000000 -80.0000000 5.0000000
+    endloop
+  endfacet
+  facet normal 1.00000000e+0 0.00000000e+0 0.00000000e+0
+    outer loop
+      vertex 95.0000000 80.0000000 0.0000000
+      vertex 95.0000000 80.0000000 5.0000000
+      vertex 95.0000000 -80.0000000 5.0000000
+    endloop
+  endfacet
+  facet normal 0.00000000e+0 1.00000000e+0 0.00000000e+0
+    outer loop
+      vertex 95.0000000 80.0000000 0.0000000
+      vertex -95.0000000 80.0000000 0.0000000
+      vertex 95.0000000 80.0000000 5.0000000
+    endloop
+  endfacet
+  facet normal 0.00000000e+0 1.00000000e+0 0.00000000e+0
+    outer loop
+      vertex -95.0000000 80.0000000 0.0000000
+      vertex -95.0000000 80.0000000 5.0000000
+      vertex 95.0000000 80.0000000 5.0000000
+    endloop
+  endfacet
+  facet normal -1.00000000e+0 0.00000000e+0 0.00000000e+0
+    outer loop
+      vertex -95.0000000 80.0000000 0.0000000
+      vertex -95.0000000 -80.0000000 0.0000000
+      vertex -95.0000000 80.0000000 5.0000000
+    endloop
+  endfacet
+  facet normal -1.00000000e+0 0.00000000e+0 0.00000000e+0
+    outer loop
+      vertex -95.0000000 -80.0000000 0.0000000
+      vertex -95.0000000 -80.0000000 5.0000000
+      vertex -95.0000000 80.0000000 5.0000000
+    endloop
+  endfacet
+endsolid mule_deck_blank

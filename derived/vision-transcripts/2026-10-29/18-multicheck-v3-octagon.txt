@@ -1,0 +1,38 @@
+
+===== MODEL: google/gemini-2.5-flash =====
+Here's the transcription of the labels from the drawing:
+
+(a) The horizontal top-segment dimension is **12 1/4in**. It is positioned above the top horizontal segment, centered.
+
+(b) The label along the slanted segment at the left is **9 3/4in**. It is positioned along the slanted segment on the left side.
+
+(c) There is a vertical **15in** label. It is positioned vertically on the right side of the drawing, indicating the height from the bottom of the octagonal shape to the horizontal line above.
+
+===== MODEL: qwen/qwen3-vl-235b-a22b-instruct =====
+(a) The horizontal top-segment dimension is exactly:  
+**12¼in**  
+Position: Centered above the top horizontal segment of the octagonal marking.
+
+(b) The label along the slanted segment at the left is exactly:  
+**9¾in**  
+Position: Aligned parallel to and along the left slanted segment, with dimension arrows pointing to its endpoints.
+
+(c) The vertical 15in label is exactly:  
+**15in**  
+Position: Along the right vertical edge, extending from the top horizontal line down to the lower corner of the octagon, with dimension arrows at top and bottom.
+
+===== MODEL: nvidia/nemotron-3.5-super-vl =====
+(a) 12 1/4in — centered above the top horizontal segment. (b) 9 3/4 — along the slanted segment at the left. (c) 15in — vertical dimension on the right side.
+
+===== MODEL: anthropic/claude-sonnet-5.5 =====
+Here is what I can read in the crop.
+
+**(a) Top horizontal dimension:** The label is **12 1/4 in**. It sits centered above the top segment, between the two vertical extension lines at about x≈335 and x≈675. The "1" over "4" fraction overlaps the "4" and the "12", so it looks like "124" at a glance. It is not plain 12 or 12 1/2.
+
+**(b) Slanted segment at the left:** The label is **9 3/4**, with a small "3" over "4" fraction. It is rotated to run along the slanted dimension line on the upper-left, at about x≈150, y≈340. The crop cuts off the lower end of that dimension line, and I can't see a "in" unit after it. The reading is 9 3/4, not 9 or something else.
+
+**(c) Vertical 15 in label:** The label is **15 in**. It is rotated 90° and reads bottom to top, at the right of the crop at about x≈740, y≈330. It is next to a tall vertical dimension line with an arrowhead at the top (x≈768, y≈130). That line runs up to the double horizontal line at the top of the drawing.
+
+**Other features:**
+- Two parallel horizontal lines run across the top of the crop at y≈98 and y≈126. They look like the arena wall or boundary.
+- The octagon's top edge is a double line (y≈318 and y≈341) spanning x≈335 to x≈675. The slanted edges go down-left and down-right from its ends.

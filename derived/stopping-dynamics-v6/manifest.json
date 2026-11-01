@@ -1,0 +1,32 @@
+{
+  "status": "synthetic-stopping-study-not-driver-or-hardware-qualification",
+  "input_hashes": {
+    "stopping-dynamics-v6.json": "97aaf0f0ce245f65190b6b68366096c498611369fce3e481fec8e6fb84e3323c",
+    "tools/stopping-dynamics-v6.js": "8b06822bc11d23a5f2ad8878f9a0724592d3a7c990ac419c3a20addcde4e139a",
+    "tools/build-stopping-dynamics-v6.js": "7aebdfa0e4e7a79093dc29e8fe64d77cfa22934325f1266c5f7c4059891ac31b",
+    "tools/build-mule-studio-v4.js": "c951e04b25f1c828735ac64ee9a76d9b893305b506832131f1bf669d8d8fc881",
+    "tools/order-a-procurement-v4.js": "257c1b2be0245a2ea54798e97cb6e23f3891feba83fd9c319e29c87ae986a557",
+    "tools/drivetrain-mule-v4.js": "29b9a941147a527e7a0180ff40a715adc09b9ed3a1f425f4cf0233a7657fa2bd",
+    "mule-studio/core.js": "6b245c631575f486aa233ca1442915bde00ec9240cb90a3b79044ae426abf450",
+    "robot-lab-v4/hardware.js": "0a5dfa14b91ea087c620959f14ac47db893d84204c4180d79e74923792a5712a",
+    "order-a-procurement-v4.json": "12fa6454864d0d21bc27464b5ab9072d90ffc18e0fe218134de871719353f2da",
+    "drivetrain-mule-v4.json": "342f2bb93eb7b9b47e333487a1fda019a819d7458f1e9385982ebf56161a2dec",
+    "hardware-development-v3.json": "0ed672009f04074aa95411fca9cea1071b7bbcdd7d79da2646b661e92c119549"
+  },
+  "output_hashes": {
+    "derived/stopping-dynamics-v6/README.md": "8f88b6e08ba4fdc07d243e9a7ed4ed189ef8bd0be2550387b6a43effd09a94be",
+    "derived/stopping-dynamics-v6/report.json": "4c761a66a68b6ed9bfc392a9bba03e864f38828a4851ffcb7e653de45730af68",
+    "derived/stopping-dynamics-v6/summary.csv": "614953b60dfa8bc55994c6e2d1cdb00d3f5e883ddc7a6f144167990be1a0e0d1",
+    "derived/stopping-dynamics-v6/nominal-simulations.json": "7fb5367f5394fc353a780872d6ae965042cf2f8c178cb0a7551e91a24f512aae"
+  },
+  "preserved_hashes": {
+    "share/Mule-Dynamics-Studio-v5.html": "090389221c51337d5b1346ce8d3c54e1eca5d7d551cc4729d0a39c3099a1907f",
+    "share/Mule-Studio-v4.html": "fd5687b5b7e57951c6a1c7811d4f34a3394800563848c4fb6c396a11b1df01e0",
+    "share/Robot-Lab-v4.html": "5ca14ec070047867cc9eea8a16f334c924203abad5c7b5408d3ee0e12623543f",
+    "share/Robot-Lab-v3.html": "78b593e56f5b1bc649028c85a415f19dfc31c347c1385556913315000a415674",
+    "derived/mechanism-envelope-v6/manifest.json": "f1f399c19279cda22f97cdb4f26f9a68950024b9169d520d44a3ca83a0ac010c",
+    "derived/mechanism-envelope-v6/review.html": "de77d9310b250e3491b9523e76acf2787e0453521399a73e7b1da60bea245169",
+    "derived/mechanism-envelope-v6/browser-validation.json": "0bb7f5f6223ed10050e2ef036cbb6c4910dd101e3fbee88a2b52d55ec865df50",
+    "derived/electrical-selection-v6/manifest.json": "13922b567edf8a6baba8fb174c445111356ca7bbb8166f13532544ecd10bf6d9"
+  }
+}

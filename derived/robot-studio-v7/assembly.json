@@ -1,0 +1,170 @@
+{
+ "schema": "robot-studio-v7-assembly/1",
+ "status": "agent-run CAD measurement; no physical parts measured",
+ "environment": {
+  "cascadio": "0.1.1",
+  "trimesh": "5.2.0",
+  "numpy": "2.5.4"
+ },
+ "measurements": {
+  "motor": {
+   "shaft_tip_z": 41.92,
+   "gearbox_face_z": 19.92,
+   "encoder_end_z": -50.17,
+   "body_length_face_to_encoder_end": 70.1,
+   "gearbox_diameter": 36.8,
+   "gearbox_center_xy": [
+    19.93,
+    0.0
+   ],
+   "shaft_axis_xy": [
+    19.93,
+    -7.0
+   ],
+   "shaft_offset": 7.0,
+   "shaft_diameter_and_flat": [
+    6.0,
+    5.4
+   ]
+  },
+  "bracket": {
+   "x_range": [
+    -15.15,
+    21.65
+   ],
+   "y_range": [
+    -18.4,
+    18.4
+   ],
+   "z_range": [
+    -21.65,
+    -15.15
+   ],
+   "nearest_vertex_to_bbox_corners": {
+    "-15.150000341236591,-18.400000408291817": 0.0,
+    "-15.150000341236591,18.400000408291817": 7.62,
+    "21.649999544024467,-18.400000408291817": 0.0,
+    "21.649999544024467,18.400000408291817": 7.62
+   },
+   "mount_face": "plane y = min (square corners present there; the arc is on +y)",
+   "gearbox_center_xy": [
+    3.25,
+    0.0
+   ],
+   "slot_x_range": [
+    -3.0,
+    9.5
+   ],
+   "slot_y_range": [
+    -13.25,
+    13.25
+   ],
+   "tapped_mount_holes": [
+    {
+     "x": -11.55,
+     "z_center": -18.4,
+     "diameter": 2.5
+    },
+    {
+     "x": 3.25,
+     "z_center": -18.4,
+     "diameter": 2.5
+    },
+    {
+     "x": 18.05,
+     "z_center": -18.4,
+     "diameter": 2.5
+    }
+   ],
+   "tapped_hole_depth_from_motor_side_face": 3.25,
+   "gearbox_center_above_mount_face": 18.4,
+   "slot_runs_perpendicular_to_mount_face": true
+  },
+  "hub": {
+   "z_range": [
+    -2.5,
+    6.7
+   ],
+   "flange_radius": 12.7,
+   "flange_thickness": 5.0,
+   "collar_radius": 6.0,
+   "bore_radius": 3.0
+  },
+  "wheel": {
+   "x_range": [
+    -6.75,
+    5.0
+   ],
+   "outer_diameter": 80.0,
+   "center_feature_max_radius_at_boss_end": 2.71
+  },
+  "caster": {
+   "height": 13.52,
+   "top_z": 11.42,
+   "ball_bottom_z": -2.1
+  }
+ },
+ "assembly": {
+  "lateral_stack_mm": {
+   "gearbox_face": 74,
+   "bracket_outer_face": 80.5,
+   "shaft_tip": 96.0,
+   "hub_collar_inner_end": 86.8,
+   "hub_flange_face": 96.0,
+   "wheel_center": 101.0,
+   "track": 202.0,
+   "overall_width": 212.0
+  },
+  "kit_nominal_mm": {
+   "wheel_center": 88,
+   "track": 176,
+   "deck_top": 21.6,
+   "drill_template_motor_hole_lateral": 74,
+   "bracket_tapped_hole_lateral_from_cad": 77.25
+  },
+  "configurations": [
+   {
+    "id": "kit-as-drawn",
+    "label": "Kit as drawn: deck top 21.6 mm, shaft up",
+    "shaft_direction": "up",
+    "deck_top_mm": 21.6,
+    "gearbox_center_height_mm": 40.0,
+    "axle_height_mm": 47.0,
+    "wheel_bottom_mm": 7.0,
+    "caster_ball_bottom_mm": -0.09,
+    "caster_mode": "under-deck-kit",
+    "caster_riser_mm": 0.0,
+    "caster_spacer_mm": 3.175,
+    "wheel_lift_above_casters_mm": 7.09
+   },
+   {
+    "id": "shaft-up",
+    "label": "Shaft up: deck top 14.6 mm, casters through the deck",
+    "shaft_direction": "up",
+    "deck_top_mm": 14.6,
+    "gearbox_center_height_mm": 33.0,
+    "axle_height_mm": 40.0,
+    "wheel_bottom_mm": 0.0,
+    "caster_ball_bottom_mm": 1.08,
+    "caster_mode": "through-deck",
+    "caster_riser_mm": 0.0,
+    "caster_spacer_mm": 0.0,
+    "wheel_lift_above_casters_mm": -1.08
+   },
+   {
+    "id": "shaft-down",
+    "label": "Shaft down: deck top 28.6 mm, printed caster risers",
+    "shaft_direction": "down",
+    "deck_top_mm": 28.6,
+    "gearbox_center_height_mm": 47.0,
+    "axle_height_mm": 40.0,
+    "wheel_bottom_mm": 0.0,
+    "caster_ball_bottom_mm": -0.0,
+    "caster_mode": "under-deck-riser",
+    "caster_riser_mm": 6.91,
+    "caster_spacer_mm": 3.175,
+    "wheel_lift_above_casters_mm": 0.0
+   }
+  ]
+ }
+}

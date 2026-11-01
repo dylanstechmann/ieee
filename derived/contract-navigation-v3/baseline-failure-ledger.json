@@ -1,0 +1,2124 @@
+{
+  "cases": 1125,
+  "failed_cases": 96,
+  "by_category": {
+    "center-divider": 24,
+    "obstacle": 39,
+    "pit-divider": 33
+  },
+  "entries": [
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 20,
+      "variant": "pose:-0.5,0.5,-3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 367,
+        "pose": [
+          45.25,
+          18.5,
+          177
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 17,
+      "variant": "pose:-0.5,0.5,3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 343,
+        "pose": [
+          39.25,
+          18.5,
+          183
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 20,
+      "variant": "pose:0,0.5,-3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 365,
+        "pose": [
+          45.25,
+          18.5,
+          177
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 17,
+      "variant": "pose:0,0.5,3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 341,
+        "pose": [
+          39.25,
+          18.5,
+          183
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 20,
+      "variant": "pose:0.5,0.5,-3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 363,
+        "pose": [
+          45.25,
+          18.5,
+          177
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 17,
+      "variant": "pose:0.5,0.5,3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 339,
+        "pose": [
+          39.25,
+          18.5,
+          183
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 9,
+      "variant": "shift:center_divider_axis:0:-1",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 244,
+        "pose": [
+          38,
+          29.5,
+          90
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 17,
+      "variant": "shift:center_divider_axis:1:-1",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 340,
+        "pose": [
+          39,
+          18,
+          180
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 20,
+      "variant": "pose:-0.5,0.5,-3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 367,
+        "pose": [
+          45.25,
+          18.5,
+          177
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 17,
+      "variant": "pose:-0.5,0.5,3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 343,
+        "pose": [
+          39.25,
+          18.5,
+          183
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 20,
+      "variant": "pose:0,0.5,-3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 365,
+        "pose": [
+          45.25,
+          18.5,
+          177
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 17,
+      "variant": "pose:0,0.5,3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 341,
+        "pose": [
+          39.25,
+          18.5,
+          183
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 20,
+      "variant": "pose:0.5,0.5,-3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 363,
+        "pose": [
+          45.25,
+          18.5,
+          177
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 17,
+      "variant": "pose:0.5,0.5,3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 339,
+        "pose": [
+          39.25,
+          18.5,
+          183
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 9,
+      "variant": "shift:center_divider_axis:0:-1",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 244,
+        "pose": [
+          38,
+          29.5,
+          90
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 17,
+      "variant": "shift:center_divider_axis:1:-1",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 340,
+        "pose": [
+          39,
+          18,
+          180
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 20,
+      "variant": "pose:-0.5,0.5,-3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 367,
+        "pose": [
+          45.25,
+          18.5,
+          177
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 17,
+      "variant": "pose:-0.5,0.5,3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 343,
+        "pose": [
+          39.25,
+          18.5,
+          183
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 20,
+      "variant": "pose:0,0.5,-3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 365,
+        "pose": [
+          45.25,
+          18.5,
+          177
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 17,
+      "variant": "pose:0,0.5,3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 341,
+        "pose": [
+          39.25,
+          18.5,
+          183
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 20,
+      "variant": "pose:0.5,0.5,-3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 363,
+        "pose": [
+          45.25,
+          18.5,
+          177
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 17,
+      "variant": "pose:0.5,0.5,3",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 339,
+        "pose": [
+          39.25,
+          18.5,
+          183
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 9,
+      "variant": "shift:center_divider_axis:0:-1",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 244,
+        "pose": [
+          38,
+          29.5,
+          90
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "upper-lane-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 17,
+      "variant": "shift:center_divider_axis:1:-1",
+      "categories": [
+        "center-divider"
+      ],
+      "first_collision": {
+        "sample": 340,
+        "pose": [
+          39,
+          18,
+          180
+        ],
+        "hits": [
+          "center_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-nominal",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 68,
+      "variant": "shift:gate-blocker-probe:0:-1",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1382,
+        "pose": [
+          18,
+          9,
+          180
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-nominal",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 68,
+      "variant": "shift:gate-blocker-probe:0:-1",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1382,
+        "pose": [
+          18,
+          9,
+          180
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-nominal",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 68,
+      "variant": "shift:gate-blocker-probe:0:-1",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1382,
+        "pose": [
+          18,
+          9,
+          180
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 65,
+      "variant": "pose:0.5,-0.5,-3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1337,
+        "pose": [
+          17.25,
+          8.5,
+          129
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 65,
+      "variant": "pose:0.5,-0.5,0",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1336,
+        "pose": [
+          17.25,
+          8.5,
+          130
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 65,
+      "variant": "pose:0.5,-0.5,3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1334,
+        "pose": [
+          17.25,
+          8.5,
+          129
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 65,
+      "variant": "pose:0.5,0,-3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1335,
+        "pose": [
+          17.25,
+          9,
+          125
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 65,
+      "variant": "pose:0.5,0,0",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1334,
+        "pose": [
+          17.25,
+          9,
+          126
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 65,
+      "variant": "pose:0.5,0,3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1332,
+        "pose": [
+          17.25,
+          9,
+          125
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 65,
+      "variant": "pose:0.5,0.5,-3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1334,
+        "pose": [
+          17.25,
+          9.5,
+          123
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 65,
+      "variant": "pose:0.5,0.5,0",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1332,
+        "pose": [
+          17.25,
+          9.5,
+          122
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 65,
+      "variant": "pose:0.5,0.5,3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1331,
+        "pose": [
+          17.25,
+          9.5,
+          123
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 65,
+      "variant": "shift:gate-blocker-probe:0:-1",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1331,
+        "pose": [
+          16.75,
+          9,
+          120
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 65,
+      "variant": "pose:0.5,-0.5,-3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1337,
+        "pose": [
+          17.25,
+          8.5,
+          129
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 65,
+      "variant": "pose:0.5,-0.5,0",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1336,
+        "pose": [
+          17.25,
+          8.5,
+          130
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 65,
+      "variant": "pose:0.5,-0.5,3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1334,
+        "pose": [
+          17.25,
+          8.5,
+          129
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 65,
+      "variant": "pose:0.5,0,-3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1335,
+        "pose": [
+          17.25,
+          9,
+          125
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 65,
+      "variant": "pose:0.5,0,0",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1334,
+        "pose": [
+          17.25,
+          9,
+          126
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 65,
+      "variant": "pose:0.5,0,3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1332,
+        "pose": [
+          17.25,
+          9,
+          125
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 65,
+      "variant": "pose:0.5,0.5,-3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1334,
+        "pose": [
+          17.25,
+          9.5,
+          123
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 65,
+      "variant": "pose:0.5,0.5,0",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1332,
+        "pose": [
+          17.25,
+          9.5,
+          122
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 65,
+      "variant": "pose:0.5,0.5,3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1331,
+        "pose": [
+          17.25,
+          9.5,
+          123
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 65,
+      "variant": "shift:gate-blocker-probe:0:-1",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1331,
+        "pose": [
+          16.75,
+          9,
+          120
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 65,
+      "variant": "pose:0.5,-0.5,-3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1337,
+        "pose": [
+          17.25,
+          8.5,
+          129
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 65,
+      "variant": "pose:0.5,-0.5,0",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1336,
+        "pose": [
+          17.25,
+          8.5,
+          130
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 65,
+      "variant": "pose:0.5,-0.5,3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1334,
+        "pose": [
+          17.25,
+          8.5,
+          129
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 65,
+      "variant": "pose:0.5,0,-3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1335,
+        "pose": [
+          17.25,
+          9,
+          125
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 65,
+      "variant": "pose:0.5,0,0",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1334,
+        "pose": [
+          17.25,
+          9,
+          126
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 65,
+      "variant": "pose:0.5,0,3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1332,
+        "pose": [
+          17.25,
+          9,
+          125
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 65,
+      "variant": "pose:0.5,0.5,-3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1334,
+        "pose": [
+          17.25,
+          9.5,
+          123
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 65,
+      "variant": "pose:0.5,0.5,0",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1332,
+        "pose": [
+          17.25,
+          9.5,
+          122
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 65,
+      "variant": "pose:0.5,0.5,3",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1331,
+        "pose": [
+          17.25,
+          9.5,
+          123
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "inside-three-quarter",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 65,
+      "variant": "shift:gate-blocker-probe:0:-1",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1331,
+        "pose": [
+          16.75,
+          9,
+          120
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 19,
+      "variant": "pose:-0.5,-0.5,-3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 945,
+        "pose": [
+          33.5,
+          16,
+          267
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 16,
+      "variant": "pose:-0.5,-0.5,0",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 926,
+        "pose": [
+          33.5,
+          11.25,
+          270
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 16,
+      "variant": "pose:-0.5,-0.5,3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 927,
+        "pose": [
+          33.5,
+          11.5,
+          273
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 18,
+      "variant": "pose:-0.5,0,-3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 943,
+        "pose": [
+          33.5,
+          16,
+          267
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 16,
+      "variant": "pose:-0.5,0,0",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 924,
+        "pose": [
+          33.5,
+          11.25,
+          270
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 16,
+      "variant": "pose:-0.5,0,3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 925,
+        "pose": [
+          33.5,
+          11.5,
+          273
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 18,
+      "variant": "pose:-0.5,0.5,-3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 941,
+        "pose": [
+          33.5,
+          16,
+          267
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 16,
+      "variant": "pose:-0.5,0.5,0",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 922,
+        "pose": [
+          33.5,
+          11.25,
+          270
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 16,
+      "variant": "pose:-0.5,0.5,3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 923,
+        "pose": [
+          33.5,
+          11.5,
+          273
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 16,
+      "variant": "shift:pit_divider_axis:0:1",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 924,
+        "pose": [
+          34,
+          11.25,
+          270
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 32,
+      "variant": "shift:pit_divider_axis:1:1",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 1079,
+        "pose": [
+          33.5,
+          38,
+          180
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 60,
+      "variant": "shift:gate-blocker-probe:0:-1",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1332,
+        "pose": [
+          16,
+          9,
+          128
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_1",
+      "segment": 13,
+      "variant": "shift:gate-blocker-probe:0:1",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 888,
+        "pose": [
+          34,
+          9,
+          218
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 19,
+      "variant": "pose:-0.5,-0.5,-3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 945,
+        "pose": [
+          33.5,
+          16,
+          267
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 16,
+      "variant": "pose:-0.5,-0.5,0",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 926,
+        "pose": [
+          33.5,
+          11.25,
+          270
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 16,
+      "variant": "pose:-0.5,-0.5,3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 927,
+        "pose": [
+          33.5,
+          11.5,
+          273
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 18,
+      "variant": "pose:-0.5,0,-3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 943,
+        "pose": [
+          33.5,
+          16,
+          267
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 16,
+      "variant": "pose:-0.5,0,0",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 924,
+        "pose": [
+          33.5,
+          11.25,
+          270
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 16,
+      "variant": "pose:-0.5,0,3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 925,
+        "pose": [
+          33.5,
+          11.5,
+          273
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 18,
+      "variant": "pose:-0.5,0.5,-3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 941,
+        "pose": [
+          33.5,
+          16,
+          267
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 16,
+      "variant": "pose:-0.5,0.5,0",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 922,
+        "pose": [
+          33.5,
+          11.25,
+          270
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 16,
+      "variant": "pose:-0.5,0.5,3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 923,
+        "pose": [
+          33.5,
+          11.5,
+          273
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 16,
+      "variant": "shift:pit_divider_axis:0:1",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 924,
+        "pose": [
+          34,
+          11.25,
+          270
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 32,
+      "variant": "shift:pit_divider_axis:1:1",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 1079,
+        "pose": [
+          33.5,
+          38,
+          180
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 60,
+      "variant": "shift:gate-blocker-probe:0:-1",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1332,
+        "pose": [
+          16,
+          9,
+          128
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_2",
+      "segment": 13,
+      "variant": "shift:gate-blocker-probe:0:1",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 888,
+        "pose": [
+          34,
+          9,
+          218
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 19,
+      "variant": "pose:-0.5,-0.5,-3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 945,
+        "pose": [
+          33.5,
+          16,
+          267
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 16,
+      "variant": "pose:-0.5,-0.5,0",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 926,
+        "pose": [
+          33.5,
+          11.25,
+          270
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 16,
+      "variant": "pose:-0.5,-0.5,3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 927,
+        "pose": [
+          33.5,
+          11.5,
+          273
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 18,
+      "variant": "pose:-0.5,0,-3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 943,
+        "pose": [
+          33.5,
+          16,
+          267
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 16,
+      "variant": "pose:-0.5,0,0",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 924,
+        "pose": [
+          33.5,
+          11.25,
+          270
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 16,
+      "variant": "pose:-0.5,0,3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 925,
+        "pose": [
+          33.5,
+          11.5,
+          273
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 18,
+      "variant": "pose:-0.5,0.5,-3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 941,
+        "pose": [
+          33.5,
+          16,
+          267
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 16,
+      "variant": "pose:-0.5,0.5,0",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 922,
+        "pose": [
+          33.5,
+          11.25,
+          270
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 16,
+      "variant": "pose:-0.5,0.5,3",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 923,
+        "pose": [
+          33.5,
+          11.5,
+          273
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 16,
+      "variant": "shift:pit_divider_axis:0:1",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 924,
+        "pose": [
+          34,
+          11.25,
+          270
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 32,
+      "variant": "shift:pit_divider_axis:1:1",
+      "categories": [
+        "pit-divider"
+      ],
+      "first_collision": {
+        "sample": 1079,
+        "pose": [
+          33.5,
+          38,
+          180
+        ],
+        "hits": [
+          "pit_divider_axis"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 60,
+      "variant": "shift:gate-blocker-probe:0:-1",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 1332,
+        "pose": [
+          16,
+          9,
+          128
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    },
+    {
+      "obstacle_case": "pit-gate-blocker",
+      "wall": "outside",
+      "route": "avoid-differential-pit_box_3",
+      "segment": 13,
+      "variant": "shift:gate-blocker-probe:0:1",
+      "categories": [
+        "obstacle"
+      ],
+      "first_collision": {
+        "sample": 888,
+        "pose": [
+          34,
+          9,
+          218
+        ],
+        "hits": [
+          "gate-blocker-probe"
+        ]
+      },
+      "docking_overlap_fraction": 1
+    }
+  ],
+  "scope": "Complete first-collision/docking record for every failed variant. Later contacts within the same variant are not enumerated. Interval checks not rerun for historical baseline ledger."
+}

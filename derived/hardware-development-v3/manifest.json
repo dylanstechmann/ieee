@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-31",
+  "status": "agent-built-requirements-and-experiment-plan-no-components-selected-no-hardware-tested",
+  "input_hashes": {
+    "hardware-development-v3.json": "0ed672009f04074aa95411fca9cea1071b7bbcdd7d79da2646b661e92c119549",
+    "tools/hardware-development-v3.js": "b6bb30ae0bcdb1cc1e5fba330f67b24f4be28086cdfb3c0de37c27cb92987263",
+    "robot-lab-v3/model.json": "d51ab563affff52b44d5ab4a41db18d1cc3dab7e32e86a6c3c84604f94c896a0",
+    "VERIFIED-FACTS.md": "874305c737866f73a06a0e3aefd64377b0dadcb831943de6d1ad804759c198e3",
+    "RULES-AND-SOURCES.md": "3638e194da4560acff83dbeb4a7dd48192a0b116586317b24202ca3f4fabf442",
+    "GEOMETRY-AND-CONCEPTS.md": "e9d530d74b72cb24701e52e609e46c78a3d70251ca72c7234a45e622b5c7083d",
+    "STRATEGY-AND-ARCHITECTURE.md": "24a86c9aa514eaa8409c36187575b9478e7db5eea82e83fd4c1a8f4dbbacc30f",
+    "RESOURCES-AND-BUDGET.md": "eed8f2ca4ddeef31a51a85c72f5e90d7a0ae3bb3dff883e06d67f2946b8dd538",
+    "confirmation-questions-v3.json": "173ecf0b3d12a8e7742f9a028bab640b96bd0cec660534cbd42aab52fc27c026"
+  },
+  "output_hashes": {
+    "report.json": "28f72871c1cf09d60c13d9def41f34ca57e6afb839558c1e66047d61dd103ce2",
+    "README.md": "0c593b95ebe08b50300673fee9dfdbd07b72e0083a58078852c79d98edcfe6cb",
+    "component-selection.md": "b58b107a4215b0da5596814e314ea487189293a145962e55e1e6581541706dce",
+    "experiment-plan.md": "0b27dec5285331b14ddc198da370c7ccae83cb958b9fb2c88d33b190e475586f",
+    "measurement-template.json": "4ec3b2032e439dfaa5f55d457901676d57830bd5bb35dbb47df2083dbd692342",
+    "owner-input.md": "e4754ba49bff4d1284e3ee6fc167ec7ff834247be524608df18761708830b7e7",
+    "trial-log-template.csv": "23370f285c8a7abc703420f61addd4605473544e5b73f10bd02a3b505cae62e3"
+  }
+}

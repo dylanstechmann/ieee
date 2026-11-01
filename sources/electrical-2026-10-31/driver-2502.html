@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<link rel="icon" type="image/png" href="https://a.pololu-files.com/assets/favicon_32x32-f40058cd34e1fec5906522ec0c9eb39b303192067c0e353a30796e859ce41106.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://a.pololu-files.com/assets/favicon_192x192-52532413e1c353491bfa0a2dd977aacf020e8ca4104064094121739bad21c4bf.png" sizes="192x192" />
+<link rel="icon" type="image/png" href="https://a.pololu-files.com/assets/favicon_96x96-fcf7f6d6568f76d479e5ae1822ded335e0bbd75ab7efd0de7e010bb41fd83e41.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="https://a.pololu-files.com/assets/favicon_16x16-13632635dc6dd0e11ba9a38071e8218d26d62e71f8ebafacd9929c3136117372.png" sizes="16x16" />
+<link rel="apple-touch-icon" type="image/png" href="https://a.pololu-files.com/assets/favicon_96x96-fcf7f6d6568f76d479e5ae1822ded335e0bbd75ab7efd0de7e010bb41fd83e41.png" />
+<link crossorigin='anonymous' href='https://a.pololu-files.com/mirror/maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' integrity='sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=' media='all' rel='stylesheet'>
+<link crossorigin='anonymous' href='https://a.pololu-files.com/mirror/cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css' integrity='sha256-2RdmDD1veq0y68SwASxtC7hKE+IBoBLjNLzKS59Ghsk=' media='all' rel='stylesheet'>
+<link crossorigin='anonymous' href='https://a.pololu-files.com/mirror/cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css' integrity='sha256-etrwgFLGpqD4oNAFW08ZH9Bzif5ByXK2lXNHKy7LQGo=' media='all' rel='stylesheet'>
+<link rel="stylesheet" crossorigin="anonymous" href="https://a.pololu-files.com/assets/application-6c47e7bbf8b1d7a9273536f8219c3ef577a02e79df7e2ff8ba23d96132a74463.css" media="all" integrity="sha256-BhRmp00yDGd0h0qY3chly5KMMh6pKFhr4dCg9F/+SnM=" />
+<script crossorigin='anonymous' integrity='sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=' src='https://a.pololu-files.com/mirror/code.jquery.com/jquery-1.12.4.min.js'></script>
+<script crossorigin='anonymous' integrity='sha256-4Cr335oZDYg4Di3OwgUOyqSTri0jUm2+7Gf2kH3zp1I=' src='https://a.pololu-files.com/mirror/cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
+<script crossorigin='anonymous' integrity='sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=' src='https://a.pololu-files.com/mirror/code.jquery.com/ui/1.12.1/jquery-ui.min.js'></script>
+<link crossorigin='anonymous' href='https://a.pololu-files.com/mirror/code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css' integrity='sha256-RPilbUJ5F7X6DdeTO6VFZ5vl5rO5MJnmSk4pwhWfV8A' media='all' rel='stylesheet'>
+<script class='braintree-gateway' src='https://js.braintreegateway.com/web/3.88.4/js/client.min.js'></script>
+<script class='braintree-gateway' src='https://js.braintreegateway.com/web/3.88.4/js/hosted-fields.min.js'></script>
+<script src="https://a.pololu-files.com/assets/application-e66fa754e0b8e9eae8aee5400dcc87c5ee1d32ff5bab89453abb5e6c323cf188.js" crossorigin="anonymous" integrity="sha256-cxg73x+CuJ9fbknOm5DiNGrnSQBhfh1wqgIN0YnEqoE="></script>
+<script type="importmap" data-turbo-track="reload">{
+  "integrity":
+{"https://a.pololu-files.com/assets/application_module-765f0f526c59caa9c9857c01889e68833710c17121ab6f9093f3a0a809af7bd4.js":"sha256-s+WZHcA06TsuXtPz2xeDSGgG6j+QSXvT2ghPYhJLLow=","https://a.pololu-files.com/assets/price_notification-e46ad505e4a01eb1a311cfc2e3e1bcc1fb6b1df47904cd3266d1c604e186aeef.js":"sha256-dMqQKgrJg+aoe44ZPYCTOrmXPQmzk+4dG1qmmdt6iSA=","https://a.pololu-files.com/assets/stock_notification-f27d00b99405c410cf3c23f1f151c5701276c2577449e2123ab34938e82d92d6.js":"sha256-TXG5Dvr05BAeQMNdQcyJS5Z5IQtw4aqM0HM1/m/QxoE=","https://a.pololu-files.com/assets/email_verification_send_handler-c06bf3ee7010809c6f7e62c9ae106d071a9373dce8c9e6c324c07aeacd069db2.js":"sha256-Rjuw+y6QuyfBGxpXeTICO2/PJRg4iMfzzleu7n7XUz8=","https://a.pololu-files.com/assets/payment_handler-49a20512068cb88565bc275464d6002af52baec06430fbdc9480f530a2c5b9a7.js":"sha256-PmVdEt5BorGjsZxOo7BfGw8aes3BCxnDQvw55paraHo="},
+  "imports": {
+    "application": "https://a.pololu-files.com/assets/application_module-765f0f526c59caa9c9857c01889e68833710c17121ab6f9093f3a0a809af7bd4.js",
+    "price_notification": "https://a.pololu-files.com/assets/price_notification-e46ad505e4a01eb1a311cfc2e3e1bcc1fb6b1df47904cd3266d1c604e186aeef.js",
+    "stock_notification": "https://a.pololu-files.com/assets/stock_notification-f27d00b99405c410cf3c23f1f151c5701276c2577449e2123ab34938e82d92d6.js",
+    "email_verification_send_handler": "https://a.pololu-files.com/assets/email_verification_send_handler-c06bf3ee7010809c6f7e62c9ae106d071a9373dce8c9e6c324c07aeacd069db2.js",
+    "payment_handler": "https://a.pololu-files.com/assets/payment_handler-49a20512068cb88565bc275464d6002af52baec06430fbdc9480f530a2c5b9a7.js",
+    "braintree": "https://js.braintreegateway.com/web/dropin/1.46.1/js/dropin.js"
+  }
+}</script>
+
+<script type="module">import "application"</script>
+<script>
+  if(document.domain.indexOf("pololu-files.com") == -1) {
+    $.ajax({
+    url: "https://www.googletagmanager.com/gtag/js?id=G-G4ENPJ5RV1",
+    dataType: "script"
+    });
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', "G-G4ENPJ5RV1");
+  }
+</script>
+
+<link rel="stylesheet" href="https://a.pololu-files.com/assets/print-ac5d562ac93a31ac3e5c942e261bf17032bf5da61b940dea46300fe83f1e72dc.css" media="print" />
+
+<title>Pololu Dual VNH5019 Motor Driver Shield for Arduino (ash02a)</title>
+
+<meta name="description" content="Get your Arduino moving!  This shield makes it easy to control two high-power DC motors with your Arduino or Arduino-compatible board.  Its dual robust VNH5019 motor drivers operate from 5.5 to 24 V and can deliver a continuous 12 A (30 A peak) per motor, or a continuous 24 A (60 A peak) to a single motor connected to both channels.  These great drivers also offer current-sense feedback and accept ultrasonic PWM frequencies for quieter operation.  The Arduino pin mappings can all be customized if the defaults are not convenient, and the motor driver control lines are broken out along the left side of the shield for general-purpose use without an Arduino." />
+<meta name="keywords" content="Pololu,robotics,robot electronics,robot kits,robot parts,ir beacon,servo controller,motor controller,robot sensors,robot chassis,robot gearboxes,robot tires, ball casters, tamiya parts,elenco kits" />
+<meta property="og:url" content="https://www.pololu.com/product/2502" />
+<meta property="og:title" content="Pololu Dual VNH5019 Motor Driver Shield for Arduino (ash02a)" />
+<meta property="og:description" content="Get your Arduino moving!  This shield makes it easy to control two high-power DC motors with your Arduino or Arduino-compatible board.  Its dual robust VNH5019 motor drivers operate from 5.5 to 24 V and can deliver a continuous 12 A (30 A peak) per motor, or a continuous 24 A (60 A peak) to a single motor connected to both channels.  These great drivers also offer current-sense feedback and accept ultrasonic PWM frequencies for quieter operation.  The Arduino pin mappings can all be customized if the defaults are not convenient, and the motor driver control lines are broken out along the left side of the shield for general-purpose use without an Arduino." />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="627" />
+<meta property="og:image" content="https://a.pololu-files.com/picture/0J3747.1200x627.jpg?c4b8922dc1a9b571b95eacb6eb43a616" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@Pololu" />
+<meta name="twitter:title" content="Pololu Dual VNH5019 Motor Driver Shield for Arduino (ash02a)" />
+<meta name="twitter:description" content="Get your Arduino moving!  This shield makes it easy to control two high-power DC motors with your Arduino or Arduino-compatible board.  Its dual robust VNH5019 motor drivers operate from 5.5 to 24 V and can deliver a continuous 12 A (30 A peak) per motor, or a continuous 24 A (60 A peak) to a single motor connected to both channels.  These great drivers also offer current-sense feedback and accept ultrasonic PWM frequencies for quieter operation.  The Arduino pin mappings can all be customized if the defaults are not convenient, and the motor driver control lines are broken out along the left side of the shield for general-purpose use without an Arduino." />
+<meta name="twitter:image" content="https://a.pololu-files.com/picture/0J3747.1200x627.jpg?c4b8922dc1a9b571b95eacb6eb43a616" />
+<script class='structured_data' type='application/ld+json'>
+{"@context":"https://schema.org","@type":"Product","image":"https://a.pololu-files.com/picture/0J3747.600x480.jpg?c4b8922dc1a9b571b95eacb6eb43a616","name":"Pololu Dual VNH5019 Motor Driver Shield for Arduino (ash02a)","description":"Get your Arduino moving!  This shield makes it easy to control two high-power DC motors with your Arduino or Arduino-compatible board.  Its dual robust VNH5019 motor drivers operate from 5.5 to 24 V and can deliver a continuous 12 A (30 A peak) per motor, or a continuous 24 A (60 A peak) to a single motor connected to both channels.  These great drivers also offer current-sense feedback and accept ultrasonic PWM frequencies for quieter operation.  The Arduino pin mappings can all be customized if the defaults are not convenient, and the motor driver control lines are broken out along the left side of the shield for general-purpose use without an Arduino.","sku":2502,"brand":"Pololu","offers":{"@type":"Offer","price":"49.95","priceCurrency":"USD","URL":"https://www.pololu.com/product/2502","availability":"OutOfStock"}}
+</script>
+
+<script src="https://a.pololu-files.com/assets/syntaxhighlight-91017fb9868118fd42306075e0164112dd3d3e16331dc462f55ad4497e7fca3d.js" defer="defer"></script>
+</head>
+
+<body class='math_ignore' onload='externalLinksNewWindow(); if(document.onLoadHandler){document.onLoadHandler();}  productInit(&#39;/product/2502&#39;);'>
+
+<div id='main'>
+
+<h1 id="page_title">Pololu Dual VNH5019 Motor Driver Shield for Arduino (ash02a)</h1>
+<div data-url='/product/2502' id='contents'>
+<!-- CONTENTS_BEGIN /product/2502 -->
+<div data-javascript-not-loaded-message='&lt;!-- javascript_not_loaded_message --&gt;&lt;strong&gt;Warning:&lt;/strong&gt; Your browser failed to load our JavaScript files, which are required for checkout.  Please check that you are not blocking or disabling our scripts and &lt;a href=&quot;/contact&quot;&gt;contact us&lt;/a&gt; if you are still unable to proceed.' id='javascript_not_loaded_message' style='display:none;'></div>
+<div data-braintree-not-loaded-message='&lt;!-- braintree_not_loaded_message --&gt;&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; Your browser failed to connect to our secure payment processor, Braintree Payments.  You will be unable to enter your credit card information at  the payment step of checkout unless this is fixed.&lt;/p&gt;
+&lt;p&gt;Some things to try:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Check for network problems or things like script blockers that could be blocking &lt;a href=&quot;https://js.braintreegateway.com/web/3.58.0/js/client.min.js&quot;&gt;this file&lt;/a&gt;.&lt;/li&gt;
+	&lt;li&gt;Try completing checkout on a device on a different network, such as a phone with Wi-Fi disabled.&lt;/li&gt;
+	&lt;li&gt;Select the option to pay with PayPal and enter your credit card on their site. (You don&amp;#8217;t need a PayPal account.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please &lt;a href=&quot;/contact&quot;&gt;contact us&lt;/a&gt; if you continue to have trouble with checkout!&lt;/p&gt;' id='braintree_not_loaded_message' style='display:none;'></div>
+
+<div class='product_top'><span class='product_top_pictures'>
+<div>
+<a class="noscript-fallback" href="https://a.pololu-files.com/picture/0J3747.1200.jpg?c4b8922dc1a9b571b95eacb6eb43a616"><img alt="" title="Click to zoom" id="main_picture_img" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J3747&quot;,&quot;caption&quot;:&quot;\u003cp\u003ePololu dual VNH5019 motor driver shield for Arduino (ash02a).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J3747.98x98.jpg?c4b8922dc1a9b571b95eacb6eb43a616&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J3747.600x480.jpg?c4b8922dc1a9b571b95eacb6eb43a616&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J3747.1200.jpg?c4b8922dc1a9b571b95eacb6eb43a616&quot;,&quot;longest_side&quot;:800},{&quot;id&quot;:&quot;0J3748&quot;,&quot;caption&quot;:&quot;\u003cp\u003ePololu dual VNH5019 motor driver shield for Arduino (ash02a).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J3748.98x98.jpg?58bd775dc6385705a58f9178c21c2d96&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J3748.600x480.jpg?58bd775dc6385705a58f9178c21c2d96&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J3748.1200.jpg?58bd775dc6385705a58f9178c21c2d96&quot;,&quot;longest_side&quot;:800},{&quot;id&quot;:&quot;0J3749&quot;,&quot;caption&quot;:&quot;\u003cp\u003ePololu dual VNH5019 motor driver shield for Arduino (ash02a) with included hardware.\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J3749.98x98.jpg?cce50746c95fdab88d24268dc73acb2f&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J3749.600x480.jpg?cce50746c95fdab88d24268dc73acb2f&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J3749.1200.jpg?cce50746c95fdab88d24268dc73acb2f&quot;,&quot;longest_side&quot;:800},{&quot;id&quot;:&quot;0J3750&quot;,&quot;caption&quot;:&quot;\u003cp\u003ePololu dual VNH5019 motor driver shield (ash02a), assembled and connected to an Arduino Uno.\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J3750.98x98.jpg?1d9039df991bd034fb3fc076f6a0e950&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J3750.600x480.jpg?1d9039df991bd034fb3fc076f6a0e950&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J3750.1200.jpg?1d9039df991bd034fb3fc076f6a0e950&quot;,&quot;longest_side&quot;:800},{&quot;id&quot;:&quot;0J3751&quot;,&quot;caption&quot;:&quot;\u003cp\u003ePololu dual VNH5019 motor driver shield for Arduino (ash02a), bottom view with board dimensions.\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J3751.98x98.jpg?63ca48c3e048ba91fbf7419f234be6b9&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J3751.600x480.jpg?63ca48c3e048ba91fbf7419f234be6b9&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J3751.1200.jpg?63ca48c3e048ba91fbf7419f234be6b9&quot;,&quot;longest_side&quot;:800},{&quot;id&quot;:&quot;0J3752&quot;,&quot;caption&quot;:&quot;\u003cp\u003eSchematic diagram of the Pololu dual VNH5019 motor driver shield for Arduino (ash02a).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J3752.98x98.jpg?1b4e0fd3f12cfb93d714d48644343450&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J3752.600x480.jpg?1b4e0fd3f12cfb93d714d48644343450&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J3752.1200.png?1b4e0fd3f12cfb93d714d48644343450&quot;,&quot;longest_side&quot;:840}]" data-picture-id="0J3747" data-picture-longest-side="800" data-gallery-id="main-pictures" src="https://a.pololu-files.com/picture/0J3747.600x480.jpg?c4b8922dc1a9b571b95eacb6eb43a616" /></a>
+<div id='related_pictures_gallery'></div>
+</div>
+
+</span><span class='order_form_section'>
+<div class='order_form_with_price_notification'>
+<form action='/cart/add' data-product-id='2502' data-product-ui='short_order_form' enctype='multipart/form-data' method='post'>
+<fieldset class='hidden'>
+<input type="hidden" name="session_id" value="61d0745f22337cb2cc2b6a05a9d94407" />
+<input name='product[id]' type='hidden' value='2502'>
+</fieldset>
+<div>
+<div>
+<span data-product-ui='short_order_form_on_sale' style='display: none'></span>
+<span class='message_positive' data-product-ui='short_order_form_new' style='display: none'>
+<!-- product_recently_added_to_website -->New!
+</span>
+</div>
+<table class='part_number_and_stock text_left'>
+<tr>
+<td class='part_number' style='white-space: nowrap'>
+<span class='label'>Pololu item #:</span>
+<span class='value'>2502</span>
+</td>
+
+</tr>
+<tr>
+<td style='white-space: nowrap'>
+<span class='label'>Brand:</span>
+<span class='value'><a href="/brands/pololu">Pololu</a></span>
+</td>
+<td class='td_right'>
+
+</td>
+</tr>
+<tr>
+<td colspan='2'>
+</td>
+</tr>
+<tr>
+<td>
+
+</td>
+<td class='td_right'></td>
+</tr>
+</table>
+
+
+</div>
+<hr>
+<p>
+<span class='message_negative'><!-- product_discontinued -->This product has been discontinued.</span>
+</p>
+<p>This product has been replaced by <a href="/product/2507"><strong>a new version</strong></a>.</p>
+</form>
+</div>
+<script type='module'>
+import {PriceNotification} from 'price_notification'
+new PriceNotification();
+import {StockNotification} from 'stock_notification'
+new StockNotification();
+</script>
+
+</span>
+<div id='short_description'>
+<p>Get your Arduino moving!  This shield makes it easy to control two high-power DC motors with your Arduino or Arduino-compatible board.  Its dual robust VNH5019 motor drivers operate from 5.5 to 24&nbsp;V and can deliver a continuous 12&nbsp;A (30&nbsp;A peak) per motor, or a continuous 24&nbsp;A (60&nbsp;A peak) to a single motor connected to both channels.  These great drivers also offer current-sense feedback and accept ultrasonic PWM frequencies for quieter operation.  The Arduino pin mappings can all be customized if the defaults are not convenient, and the motor driver control lines are broken out along the left side of the shield for general-purpose use without an Arduino.</p>
+
+</div>
+<p class='compare_link'>
+
+</p></div>
+
+<a name="tabs"></a><table class="tabs"><tr><td>&nbsp;</td><th class="selected "><span id="name">Description</span></th><td>&nbsp;</td><th class=""><a onclick="saveScrollPosition(&#39;/product/2502/specs&#39;);" href="/product/2502/specs"><span id="name">Specs</span> <span id="count">(11)</span></a></th><td>&nbsp;</td><th class=""><a onclick="saveScrollPosition(&#39;/product/2502/pictures&#39;);" href="/product/2502/pictures"><span id="name">Pictures</span> <span id="count">(5)</span></a></th><td>&nbsp;</td><th class=""><a onclick="saveScrollPosition(&#39;/product/2502/resources&#39;);" href="/product/2502/resources"><span id="name">Resources</span> <span id="count">(4)</span></a></th><td>&nbsp;</td><th class="empty"><span id="name">FAQs</span> <span id="count">(0)</span></th><td>&nbsp;</td><th class=""><a onclick="saveScrollPosition(&#39;/product/2502/blog&#39;);" href="/product/2502/blog"><span id="name">On the blog</span> <span id="count">(1)</span></a></th><td>&nbsp;</td><th class="empty"><span id="name">Distributors</span> <span id="count">(0)</span></th><td class="last">&nbsp;</td></tr></table><div class="tab_page"><p class="note"><strong>Discontinuation notice:</strong> this original version (ash02a) of our dual VNH5019 motor driver shield has been replaced by a <a href="/product/2507"><strong>newer version (ash02b)</strong></a> that adds pass-throughs for the four new pins on the Arduino Uno R3. Generally speaking, most users should not notice any other differences between the two shield versions; details can be found in <a href="/docs/0J49/9">this section</a> of the user&#8217;s guide. The easiest way to distinguish between the two versions is via the silkscreen in the top left corner, where the original version is labeled <strong>ash02a</strong> and the new version is labeled <strong>ash02b</strong>.</p>
+<h2>Overview</h2>
+<table class="picture_with_caption right"><tr><td style="max-width: 250px"><a href="https://a.pololu-files.com/picture/0J3748.1200.jpg?58bd775dc6385705a58f9178c21c2d96" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J3748&quot;,&quot;caption&quot;:&quot;\u003cp\u003ePololu dual VNH5019 motor driver shield for Arduino (ash02a).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J3748.98x98.jpg?58bd775dc6385705a58f9178c21c2d96&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J3748.600x480.jpg?58bd775dc6385705a58f9178c21c2d96&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J3748.1200.jpg?58bd775dc6385705a58f9178c21c2d96&quot;,&quot;longest_side&quot;:800}]" data-picture-id="0J3748" data-picture-longest_side="800" src="https://a.pololu-files.com/picture/0J3748.250.jpg?58bd775dc6385705a58f9178c21c2d96" /></a></td><p></tr><tr><th style="max-width: 250px"><p>Pololu dual VNH5019 motor driver shield for Arduino (ash02a).</p></th></tr></table></p>
+<p>This motor driver shield and its corresponding Arduino library make it easy to control two bidirectional, high-power, brushed DC motors with an <a href="/product/2191">Arduino</a> or Arduino clone.  The board features a pair of robust VNH5019 motor drivers from ST, which operate from 5.5 to 24&nbsp;V and can deliver a continuous 12&nbsp;A (30&nbsp;A peak) per channel, and incorporates most of the components of the typical application diagram on page 14 of the <a href="/file/0J504/vnh5019a-e.pdf">VNH5019 datasheet</a> (1MB pdf), including pull-up and protection resistors and FETs for reverse battery protection.  It ships fully populated with its SMD components, including the two VNH5019 ICs, as shown in the picture to the right; stackable Arduino headers and terminal blocks for connecting motors and motor power are included but are not soldered in (see the Included Hardware section below).</p>
+<p>This versatile motor driver is intended for a wide range of users, from beginners who just want a plug-and-play motor control solution for their Arduinos (and are okay with a little soldering) to experts who want to directly interface with ST&#8217;s great motor driver ICs.  The Arduino pin mappings can all be customized if the defaults are not convenient, and the VNH5019 control lines are broken out along the left side of the board for general-purpose use without an Arduino (see the right connection diagram below).  This versatility, along with an option to power the Arduino directly from the shield, sets this board apart from similar competing motor shields.</p>
+<table class="side_by_side_pics">
+	<tr>
+		<td><table class="picture_with_caption center"><tr><td style="max-width: 280px"><a href="https://a.pololu-files.com/picture/0J3753.1200.png?5877a2053bf73d6dbb43d10e7d268ce5" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J3753&quot;,&quot;caption&quot;:&quot;\u003cp\u003eDual VNH5019 motor driver shield with an Arduino (shield and Arduino powered separately).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J3753.98x98.jpg?5877a2053bf73d6dbb43d10e7d268ce5&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J3753.600x480.jpg?5877a2053bf73d6dbb43d10e7d268ce5&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J3753.1200.png?5877a2053bf73d6dbb43d10e7d268ce5&quot;,&quot;longest_side&quot;:899}]" data-picture-id="0J3753" data-picture-longest_side="899" src="https://a.pololu-files.com/picture/0J3753.280.jpg?5877a2053bf73d6dbb43d10e7d268ce5" /></a></td></tr><tr><th style="max-width: 280px"><p>Dual VNH5019 motor driver shield with an Arduino (shield and Arduino powered separately).</p></th></tr></table></td>
+		<td><table class="picture_with_caption center"><tr><td style="max-width: 290px"><a href="https://a.pololu-files.com/picture/0J3755.1200.png?b32b98db0247112e0d969c6fb98814da" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J3755&quot;,&quot;caption&quot;:&quot;\u003cp\u003eDual VNH5019 motor driver shield connected to a microcontroller (gray connections are optional).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J3755.98x98.jpg?b32b98db0247112e0d969c6fb98814da&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J3755.600x480.jpg?b32b98db0247112e0d969c6fb98814da&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J3755.1200.png?b32b98db0247112e0d969c6fb98814da&quot;,&quot;longest_side&quot;:900}]" data-picture-id="0J3755" data-picture-longest_side="900" src="https://a.pololu-files.com/picture/0J3755.290.jpg?b32b98db0247112e0d969c6fb98814da" /></a></td></tr><tr><th style="max-width: 290px"><p>Dual VNH5019 motor driver shield connected to a microcontroller (gray connections are optional).</p></th></tr></table></td>
+	</tr>
+</table>
+<p>For a lower-power, lower-cost alternative to this shield, please consider the <a href="/product/2503">Pololu dual MC33926 motor driver shield</a>, which has a very similar design and can deliver a continuous 3&nbsp;A per channel.</p>
+<h2>Features</h2>
+<table class="picture_with_caption right"><tr><td style="max-width: 250px"><a href="https://a.pololu-files.com/picture/0J3750.1200.jpg?1d9039df991bd034fb3fc076f6a0e950" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J3750&quot;,&quot;caption&quot;:&quot;\u003cp\u003ePololu dual VNH5019 motor driver shield (ash02a), assembled and connected to an Arduino Uno.\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J3750.98x98.jpg?1d9039df991bd034fb3fc076f6a0e950&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J3750.600x480.jpg?1d9039df991bd034fb3fc076f6a0e950&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J3750.1200.jpg?1d9039df991bd034fb3fc076f6a0e950&quot;,&quot;longest_side&quot;:800}]" data-picture-id="0J3750" data-picture-longest_side="800" src="https://a.pololu-files.com/picture/0J3750.250.jpg?1d9039df991bd034fb3fc076f6a0e950" /></a></td><p></tr><tr><th style="max-width: 250px"><p>Pololu dual VNH5019 motor driver shield (ash02a), assembled and connected to an Arduino Uno.</p></th></tr></table>
+<table class="picture_with_caption right"><tr><td style="max-width: 250px"><a href="https://a.pololu-files.com/picture/0J3751.1200.jpg?63ca48c3e048ba91fbf7419f234be6b9" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J3751&quot;,&quot;caption&quot;:&quot;\u003cp\u003ePololu dual VNH5019 motor driver shield for Arduino (ash02a), bottom view with board dimensions.\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J3751.98x98.jpg?63ca48c3e048ba91fbf7419f234be6b9&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J3751.600x480.jpg?63ca48c3e048ba91fbf7419f234be6b9&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J3751.1200.jpg?63ca48c3e048ba91fbf7419f234be6b9&quot;,&quot;longest_side&quot;:800}]" data-picture-id="0J3751" data-picture-longest_side="800" src="https://a.pololu-files.com/picture/0J3751.250.jpg?63ca48c3e048ba91fbf7419f234be6b9" /></a></td></tr><tr><th style="max-width: 250px"><p>Pololu dual VNH5019 motor driver shield for Arduino (ash02a), bottom view with board dimensions.</p></th></tr></table></p>
+<ul>
+	<li>Wide operating voltage range: 5.5 &#8211; 24&nbsp;V<sup>1</sup></li>
+	<li>High output current: up to 12&nbsp;A continuous (30&nbsp;maximum) per motor</li>
+	<li>Motor outputs can be combined to deliver up to 24&nbsp;A continuous (60&nbsp;A maximum) to a single motor</li>
+	<li>Inputs compatible with both 5V and 3.3V systems (logic high threshold is 2.1&nbsp;V)</li>
+	<li>PWM operation up to 20&nbsp;kHz, which is ultrasonic and allows for quieter motor operation</li>
+	<li>Current sense voltage output proportional to motor current (approx. 140 mV/A)</li>
+	<li>Motor indicator LEDs show what the outputs are doing even when no motor is connected</li>
+	<li>Can be used with an Arduino or Arduino clone (through shield headers) or other microcontroller boards (through 0.1″ header along the left side)</li>
+	<li>When used as a shield, the motor power supply can optionally be used to power the Arduino base as well</li>
+	<li>Arduino pin mappings can be customized if the default mappings are not convenient</li>
+	<li><a href="https://github.com/pololu/dual-vnh5019-motor-shield">Arduino library</a> makes it easy to get started using this board as a motor driver shield</li>
+	<li>Detailed <a href="/docs/0J49">user&#8217;s guide</a></li>
+	<li>Reverse-voltage protection</li>
+	<li>Robust drivers:
+	<ul>
+		<li>Can survive input voltages up to 41&nbsp;V</li>
+		<li>Undervoltage and overvoltage shutdown</li>
+		<li>High-side and low-side thermal shutdown</li>
+		<li>Short-to-ground and short-to-Vcc protection</li>
+	</ul></li>
+</ul>
+<p class="note"><sup>1</sup> While the overvoltage protection typically kicks in at 27&nbsp;V, it can trigger at voltages as low as 24&nbsp;V, so we do not recommend using this motor driver with 24&nbsp;V batteries, which significantly exceed 24&nbsp;V when fully charged.  If the shield is configured to power an Arduino or Arduino clone, the supply voltage must conform to that Arduino&#8217;s input voltage requirements.</p>
+<h2>Included Hardware</h2>
+<table class="picture_with_caption right"><tr><td style="max-width: 300px"><a href="https://a.pololu-files.com/picture/0J3749.1200.jpg?cce50746c95fdab88d24268dc73acb2f" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J3749&quot;,&quot;caption&quot;:&quot;\u003cp\u003ePololu dual VNH5019 motor driver shield for Arduino (ash02a) with included hardware.\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J3749.98x98.jpg?cce50746c95fdab88d24268dc73acb2f&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J3749.600x480.jpg?cce50746c95fdab88d24268dc73acb2f&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J3749.1200.jpg?cce50746c95fdab88d24268dc73acb2f&quot;,&quot;longest_side&quot;:800}]" data-picture-id="0J3749" data-picture-longest_side="800" src="https://a.pololu-files.com/picture/0J3749.300.jpg?cce50746c95fdab88d24268dc73acb2f" /></a></td><p></tr><tr><th style="max-width: 300px"><p>Pololu dual VNH5019 motor driver shield for Arduino (ash02a) with included hardware.</p></th></tr></table></p>
+<p>This motor driver board ships with all of the surface-mount parts populated.  However, soldering is required for assembly of the included through-hole parts.  The following through-hole parts are included:</p>
+<ul>
+	<li>two extended/stackable 1&#215;8 female headers (for Arduino shields)</li>
+	<li>two extended/stackable 1&#215;6 female headers (for Arduino shields)</li>
+	<li>three <a href="/product/2440">2-pin 5mm terminal blocks</a> (for board power and motor outputs)</li>
+	<li>40-pin <a href="/product/965">0.1″ straight breakaway male header</a> (may ship in several pieces, such as two 20-pin strips)</li>
+</ul>
+<p>A <a href="/product/968">0.1″ shorting block</a> (for optionally supplying shield power to Arduino) is also included.</p>
+<p>You can solder the terminal blocks to the six large through-holes to make your motor and motor power connections, or you can break off a 12&#215;1 section of the 0.1″ header strip and solder it into the smaller through-holes that border these larger holes.  Note, however, that the terminal blocks are only rated for 16&nbsp;A, and each header pin pair is only rated for a combined 6&nbsp;A, so for higher-power applications, thick wires should be soldered directly to the board.</p>
+<p>When not using this board as an Arduino shield, you can solder the 0.1″ headers to the logic connections along the left side of the board to enable use with <a href="/category/70/crimp-connector-housings">custom cables</a> or <a href="/category/28/solderless-breadboards">solderless breadboards</a>, or you can solder wires directly to the board for more compact installations.  Note that motor and motor power connections should not be made through a breadboard.</p>
+<p>The motor driver includes three 47&nbsp;uF electrolytic power capacitors, and there is room to add additional capacitors (e.g. to compensate for long power wires or increase stability of the power supply).  Additional power capacitors are usually not necessary, and no additional capacitors are included with this motor driver.</p>
+<p>The two mounting holes are intended for use with <a href="/category/101/nuts-and-screws">#4 screws</a> (not included).  They have a horizontal separation of 0.30″ and a vertical separation of 1.70″.</p>
+<p>An <a href="/product/2191">Arduino</a> is <strong>not included</strong>.</p>
+<h2>Schematic Diagram</h2>
+<table class="picture_with_caption center wide"><tr><td style="max-width: 600px"><a href="https://a.pololu-files.com/picture/0J3752.1200.png?1b4e0fd3f12cfb93d714d48644343450" class="noscript-fallback"><img alt="" class="wide zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J3752&quot;,&quot;caption&quot;:&quot;\u003cp\u003eSchematic diagram of the Pololu dual VNH5019 motor driver shield for Arduino (ash02a).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J3752.98x98.jpg?1b4e0fd3f12cfb93d714d48644343450&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J3752.600x480.jpg?1b4e0fd3f12cfb93d714d48644343450&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J3752.1200.png?1b4e0fd3f12cfb93d714d48644343450&quot;,&quot;longest_side&quot;:840}]" data-picture-id="0J3752" data-picture-longest_side="840" src="https://a.pololu-files.com/picture/0J3752.600.jpg?1b4e0fd3f12cfb93d714d48644343450" /></a></td><p></tr><tr><th style="max-width: 600px"><p>Schematic diagram of the Pololu dual VNH5019 motor driver shield for Arduino (ash02a).</p></th></tr></table></p>
+<p>This schematic is also available as a downloadable pdf: <a href="/file/0J513/dual_VNH5019_shield_ash02a_schematic.pdf">dual VNH5019 motor driver shield schematic</a> (87k pdf)</p>
+<h2>VNH3SP30, VNH2SP30, and VNH5019 Comparison</h2>
+<table class="picture_with_caption right"><tr><td style="max-width: 250px"><img alt="" class="" data-gallery-pictures="[{&quot;id&quot;:&quot;0J3759&quot;,&quot;caption&quot;:&quot;\u003cp\u003eThermal image of the top side of the dual VNH5019 motor driver shield during one of our current tests.\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J3759.98x98.jpg?bd4f5bed73b485585608f626efdcedf1&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J3759.600x480.jpg?bd4f5bed73b485585608f626efdcedf1&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J3759.1200.png?bd4f5bed73b485585608f626efdcedf1&quot;,&quot;longest_side&quot;:524}]" data-picture-id="0J3759" data-picture-longest_side="524" src="https://a.pololu-files.com/picture/0J3759.250.jpg?bd4f5bed73b485585608f626efdcedf1" /></td><p></tr><tr><th style="max-width: 250px"><p>Thermal image of the top side of the dual VNH5019 motor driver shield during one of our current tests.</p></th></tr></table></p>
+<p>In addition to this VNH5019 shield, we offer carrier boards for two similar, older motor drivers from ST: the <a href="/product/707">VNH3SP30</a> and the <a href="/product/708">VNH2SP30</a>.  The VNH5019 is the only one of the three with a practical operating voltage above 16&nbsp;V.  The VNH5019 is the only driver of the three available on a Pololu Arduino shield.</p>
+<p>The current-related values in the table below (i.e. the entries to which footnote 3 applies) are the results of tests on only one or two of each driver version, so they do not capture potential unit-to-unit variation, and they were performed using the <a href="/product/1451"><strong>single driver</strong> versions</a>, not the dual carriers.  As such, the values should be treated as rough estimates of performance, not as performance guarantees.  While these tests seem to indicate that the VNH2SP30 runs a bit cooler&mdash;and hence can deliver more continuous current&mdash;than the VNH5019, it is important to note that the three driver versions were tested at different times under potentially different conditions, so the results are not necessarily accurate indications of relative performance.</p>
+<p>In our tests, we noticed that the thermal protection on the VNH5019 was activating at a lower temperature (153°C) than on the VNH2SP30  (170°C), which could partially account for the shorter VNH5019 overheating times.  However, we also observed that the VNH5019 was reaching slightly higher temperatures than the VNH2SP30 when used under the same conditions: the VNH5019 reached a temperature of 85°C after 3 minutes at 10 A while the VNH2SP30 reached a temperature of 80°C.</p>
+<p>The following table offers a comparison of the single-carrier versions of all three drivers:</p>
+<table class="active_controller_comparison">
+	<tr>
+		<td></td>
+		<th><a href="/product/705">VNH3SP30</a></th>
+		<th><a href="/product/706">VNH2SP30</a></th>
+		<th><a href="/product/1451">VNH5019</a></th>
+	</tr>
+	<tr>
+		<th>Operating voltage: <sup>(1)</sup></th>
+		<td>5.5 &#8211; 16&nbsp;V <sup>(2)</sup></td>
+		<td>5.5 &#8211; 16&nbsp;V</td>
+		<td>5.5 &#8211; 24&nbsp;V</td>
+	</tr>
+	<tr>
+		<th>MOSFET on-resistance (per leg):</th>
+		<td>34&nbsp;m&Omega; typ.</td>
+		<td>19&nbsp;m&Omega; max.</td>
+		<td>18&nbsp;m&Omega; typ.</td>
+	</tr>
+	<tr>
+		<th>Max PWM frequency</th>
+		<td>10&nbsp;kHz</td>
+		<td>20&nbsp;kHz</td>
+		<td>20&nbsp;kHz</td>
+	</tr>
+	<tr>
+		<th>Current sense</th>
+		<td><em>n/a</em></td>
+		<td>0.13&nbsp;V/A typ.</td>
+		<td>0.14&nbsp;V/A typ.</td>
+	</tr>
+	<tr>
+		<th>Over-voltage shutoff</th>
+		<td>36&nbsp;V min. <sup>(2)</sup> / 43&nbsp;V typ.</td>
+		<td>16&nbsp;V min. / 19&nbsp;V typ.</td>
+		<td>24&nbsp;V min. / 27&nbsp;V typ.</td>
+	</tr>
+	<tr>
+		<th>Logic input high threshold</th>
+		<td>3.25&nbsp;V min.</td>
+		<td>3.25&nbsp;V min.</td>
+		<td>2.1&nbsp;V min.</td>
+	</tr>
+	<tr>
+		<th>Time to overheat at 20&nbsp;A <sup>(3)</sup></th>
+		<td>8&nbsp;s</td>
+		<td>35&nbsp;s</td>
+		<td>20&nbsp;s</td>
+	</tr>
+	<tr>
+		<th>Time to overheat at 15&nbsp;A <sup>(3)</sup></th>
+		<td>30&nbsp;s</td>
+		<td>150&nbsp;s</td>
+		<td>90&nbsp;s</td>
+	</tr>
+	<tr>
+		<th>Current for infinite run time <sup>(3)</sup></th>
+		<td>9&nbsp;A</td>
+		<td>14&nbsp;A</td>
+		<td>12&nbsp;A</td>
+	</tr>
+</table>
+<p><small><b><sup>1</sup></b> The VNH3SP30 can survive input voltages up to 40&nbsp;V, and the VNH2SP30 and VNH5019 can survive input voltages up to 41&nbsp;V, but the over-voltage shutoff will kick in at lower voltages.</small><br/>
+<small><b><sup>2</sup></b> While VNH3SP30&#8217;s over-voltage shutoff doesn&#8217;t activate until 36&nbsp;V, in our experience, shoot-through currents make PWM operation impractical above 16&nbsp;V.</small><br/>
+<small><b><sup>3</sup></b> Typical results using the Pololu motor driver carrier boards with 100% duty cycle at room temperature (with no forced airflow or heat sinking beyond the carrier PCB).</small><br/></p>
+<h2>Real-world power dissipation consideration</h2>
+<p>Each motor driver IC has a maximum continuous current rating of 30&nbsp;A. However, the chips by themselves will overheat at lower currents (see the table above for typical values).  The actual current you can deliver will depend on how well you can keep the motor drivers cool. The shield&#8217;s printed circuit board is designed to draw heat out of the motor driver chips, but performance can be improved by adding heat sinks. In our tests, we were able to deliver short durations (on the order of milliseconds) of 30&nbsp;A and several seconds of 20&nbsp;A without overheating.  At 6&nbsp;A, the chip gets just barely noticeably warm to the touch.  For high-current installations, the motor and power supply wires should also be soldered directly instead of going through the supplied terminal blocks, which are rated for up to 16&nbsp;A.</p>
+<p class="note_warning">This product can get <strong><span style="color:red;">hot</span></strong> enough to burn you long before the chip overheats. Take care when handling this product and other components connected to it.</p>
+<p>Many motor controllers or speed controllers can have peak current ratings that are substantially higher than the continuous current rating; this is not the case with these motor drivers, which have a 30&nbsp;A continuous rating and over-current protection that can kick in as low as 30&nbsp;A (50&nbsp;A typical).  Therefore, the stall current of your motor should not be more than 30&nbsp;A.  (Even if you expect to run at a much lower average current, the motor can still draw short bursts of high currents, such as when it is starting, if special steps are not taken.)</p>
+<p class="note"><strong>Note:</strong> The datasheet refers to the motor driver IC by the full part number <strong>VNH5019A-E</strong>, but the &#8220;A&#8221; seems to simply indicate that it was packaged in tubes.  It mentions <strong>VNH5019TR-E</strong> as another valid part number for this IC (indicating tape-and-reel packaging).</p>
+
+</div>
+
+
+<div id="small_related_items"><div><h2>Related products</h2>
+<div>
+<table class='linkable_item_list'>
+<tr>
+<td class='img'>
+<a href="/product/2507"><img alt="" src="https://a.pololu-files.com/picture/0J5209.50x40.jpg?837a27a9a09c8a862b076dcad40e4482" /></a>
+</td>
+<td><a href="/product/2507">Pololu Dual VNH5019 Motor Driver Shield for Arduino</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/2503"><img alt="" src="https://a.pololu-files.com/picture/0J3983.50x40.jpg?62a7a519bb7fc1658df25570eb38d3fc" /></a>
+</td>
+<td><a href="/product/2503">Pololu Dual MC33926 Motor Driver Shield for Arduino</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/708"><img alt="" src="https://a.pololu-files.com/picture/0J122.50x40.jpg?9b90daa7c974c135bcc2a65c1665d185" /></a>
+</td>
+<td><a href="/product/708">Dual VNH2SP30 Motor Driver Carrier MD03A</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/707"><img alt="" src="https://a.pololu-files.com/picture/0J122.50x40.jpg?9b90daa7c974c135bcc2a65c1665d185" /></a>
+</td>
+<td><a href="/product/707">Dual VNH3SP30 Motor Driver Carrier MD03A</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/1451"><img alt="" src="https://a.pololu-files.com/picture/0J10254.50x40.jpg?05e77416706b50bd1367d8d83e24ac58" /></a>
+</td>
+<td><a href="/product/1451">VNH5019 Motor Driver Carrier</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/755"><img alt="" src="https://a.pololu-files.com/picture/0J1024.50x40.jpg?84034ed65654389f06c15a5e5659b83a" /></a>
+</td>
+<td><a href="/product/755">Pololu High-Power Motor Driver 18v15</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/2187"><img alt="" src="https://a.pololu-files.com/picture/0J4622.50x40.jpg?5316b84a205c2f06dfb06ee5a2971576" /></a>
+</td>
+<td><a href="/product/2187">SparkFun Starter Kit for Arduino-Compatible RedBoard</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/2795"><img alt="" src="https://a.pololu-files.com/picture/0J6224.50x40.jpg?57424c65858e5994c7bb0269c6764496" /></a>
+</td>
+<td><a href="/product/2795">SparkFun Inventor&#39;s Kit (for Arduino Uno) - V3.3</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/1102"><img alt="" src="https://a.pololu-files.com/picture/0J901.50x40.jpg?7715ab68301097f0568e1d0c2904985b" /></a>
+</td>
+<td><a href="/product/1102">19:1 Metal Gearmotor 37Dx52L mm 12V (Spur Pinion)</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/925"><img alt="" src="https://a.pololu-files.com/picture/0J437.50x40.jpg?6cfd817fbbd7f28d688c50fe9da1ce99" /></a>
+</td>
+<td><a href="/product/925">T Connector Male-Female Pair</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/1573"><img alt="" src="https://a.pololu-files.com/picture/0J2644.50x40.jpg?d126a93259b960b5871ae3efea0c65de" /></a>
+</td>
+<td><a href="/product/1573">34:1 Metal Gearmotor 25Dx52L mm HP 6V</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/1035"><img alt="" src="https://a.pololu-files.com/picture/0J3962.50x40.jpg?00bb189978a5b7f9e5255db2e5e80a12" /></a>
+</td>
+<td><a href="/product/1035">Stackable 0.100&quot; Female Header Set for Arduino Shields</a></td>
+</tr>
+</table>
+</div>
+</div><div><h2>Related categories</h2>
+<div>
+<table class='linkable_item_list'>
+<tr>
+<td class='img'>
+<a href="/category/113/shields-for-arduino"><img alt="" src="https://a.pololu-files.com/picture/0J11718.50x40.jpg?ace83179a2111a9d92a46632669e5c5a" /></a>
+</td>
+<td><a href="/category/113/shields-for-arduino">Shields for Arduino</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/11/brushed-dc-motor-drivers"><img alt="" src="https://a.pololu-files.com/picture/0J5250.50x40.jpg?8243159a88f13b4a1b62b37b4868d19a" /></a>
+</td>
+<td><a href="/category/11/brushed-dc-motor-drivers">Brushed DC Motor Drivers</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/10/brushed-dc-motor-controllers"><img alt="" src="https://a.pololu-files.com/picture/0J9559.50x40.jpg?7c650f69e62ac409b246c961770971f4" /></a>
+</td>
+<td><a href="/category/10/brushed-dc-motor-controllers">Brushed DC Motor Controllers</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/82/pololu-high-power-motor-drivers"><img alt="" src="https://a.pololu-files.com/picture/0J8146.50x40.jpg?821a91830d3a6d646905b21e9d42bc23" /></a>
+</td>
+<td><a href="/category/82/pololu-high-power-motor-drivers">Pololu High-Power Motor Drivers</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/22/motors-and-gearboxes"><img alt="" src="https://a.pololu-files.com/picture/0J6845.50x40.jpg?9d6e5616801ee22d7f4b2835f33893d7" /></a>
+</td>
+<td><a href="/category/22/motors-and-gearboxes">Motors and Gearboxes</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/115/25d-metal-gearmotors"><img alt="" src="https://a.pololu-files.com/picture/0J9890.50x40.jpg?c6dfea6448bb8ef0cef701de2d59b4d6" /></a>
+</td>
+<td><a href="/category/115/25d-metal-gearmotors">25D Metal Gearmotors</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/116/37d-metal-gearmotors"><img alt="" src="https://a.pololu-files.com/picture/0J10683.50x40.jpg?fc49b84b3c9921b0a478ee18a69f6257" /></a>
+</td>
+<td><a href="/category/116/37d-metal-gearmotors">37D Metal Gearmotors</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/64/development-boards-programmable-controllers"><img alt="" src="https://a.pololu-files.com/picture/0J5603.50x40.jpg?43c1294b06891b860cc82068f8514779" /></a>
+</td>
+<td><a href="/category/64/development-boards-programmable-controllers">Development Boards (Programmable Controllers)</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/125/arduino-compatible"><img alt="" src="https://a.pololu-files.com/picture/0J3981.50x40.jpg?848021ba139d19a107d5b3e38d875ca9" /></a>
+</td>
+<td><a href="/category/125/arduino-compatible">Arduino-Compatible</a></td>
+</tr>
+</table>
+</div>
+</div></div>
+<script>
+product_ui.update();
+</script>
+
+
+<!-- CONTENTS_END -->
+<div id='footer'>
+<p class='share'>
+<span class="image_text_link"><a href="/product/2502?print=1"><img alt="" src="https://a.pololu-files.com/assets/printer-448cebb2a5016700db2565421ada6e98f90fabe5885d8cd3cca1a3854748e146.png" /></a><a href="/product/2502?print=1">Print</a></span>
+<span class="image_text_link"><a href="mailto:?body=https%3A%2F%2Fwww.pololu.com%2Fproduct%2F2502&amp;subject"><img alt="" src="https://a.pololu-files.com/assets/email-f2957b324fa09a7d81ed64679a6b9454647ad40514cd7b1ce501aefd946f5593.png" /></a><a href="mailto:?body=https%3A%2F%2Fwww.pololu.com%2Fproduct%2F2502&amp;subject">Email a friend</a></span>
+<span class="image_text_link"><a href="/feeds"><img alt="" src="https://a.pololu-files.com/assets/feed-icon-12x12-ad0e7f1965647f9414a76a1f32fb46dc73c1b2d295201b0abb56f2b2cf88bfb2.png" /></a><a href="/feeds">Feeds</a></span>
+</p>
+<p class='links'>
+<a href="/">Home</a>
+|
+<a href="https://forum.pololu.com/">Forum</a>
+|
+<a href="/blog">Blog</a>
+|
+<a href="/support">Support</a>
+|
+<a href="/ordering">Ordering Information</a>
+|
+<a href="/list">Lists</a>
+|
+<a href="/distributors">Distributors</a>
+|
+<a href="/catalog/bigorderform">BIG Order Form</a>
+|
+<a href="/about">About</a>
+|
+<a href="/contact">Contact</a>
+</p>
+<p id='copyright'>&copy; 2001<a rel="nofollow" style="text-decoration: none; color: inherit;" href="/pot/0?from=https%3A%2F%2Fwww.pololu.com%2Fproduct%2F2502">–</a>2026 Pololu Corporation</p>
+</div>
+</div>
+</div>
+<div id='right_col'>
+<div class='menu' data-my-quotes='1'></div>
+<script>quote.display_list()</script>
+<div class='menu' data-mini-cart='1'></div>
+<script>cart.display_mini_cart_content()</script>
+<div><h2>Related Products</h2>
+<div>
+<table class='linkable_item_list'>
+<tr>
+<td class='img'>
+<a href="/product/2507"><img alt="" src="https://a.pololu-files.com/picture/0J5209.50x40.jpg?837a27a9a09c8a862b076dcad40e4482" /></a>
+</td>
+<td><a href="/product/2507">Pololu Dual VNH5019 Motor Driver Shield for Arduino</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/2503"><img alt="" src="https://a.pololu-files.com/picture/0J3983.50x40.jpg?62a7a519bb7fc1658df25570eb38d3fc" /></a>
+</td>
+<td><a href="/product/2503">Pololu Dual MC33926 Motor Driver Shield for Arduino</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/708"><img alt="" src="https://a.pololu-files.com/picture/0J122.50x40.jpg?9b90daa7c974c135bcc2a65c1665d185" /></a>
+</td>
+<td><a href="/product/708">Dual VNH2SP30 Motor Driver Carrier MD03A</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/707"><img alt="" src="https://a.pololu-files.com/picture/0J122.50x40.jpg?9b90daa7c974c135bcc2a65c1665d185" /></a>
+</td>
+<td><a href="/product/707">Dual VNH3SP30 Motor Driver Carrier MD03A</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/1451"><img alt="" src="https://a.pololu-files.com/picture/0J10254.50x40.jpg?05e77416706b50bd1367d8d83e24ac58" /></a>
+</td>
+<td><a href="/product/1451">VNH5019 Motor Driver Carrier</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/755"><img alt="" src="https://a.pololu-files.com/picture/0J1024.50x40.jpg?84034ed65654389f06c15a5e5659b83a" /></a>
+</td>
+<td><a href="/product/755">Pololu High-Power Motor Driver 18v15</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/2187"><img alt="" src="https://a.pololu-files.com/picture/0J4622.50x40.jpg?5316b84a205c2f06dfb06ee5a2971576" /></a>
+</td>
+<td><a href="/product/2187">SparkFun Starter Kit for Arduino-Compatible RedBoard</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/2795"><img alt="" src="https://a.pololu-files.com/picture/0J6224.50x40.jpg?57424c65858e5994c7bb0269c6764496" /></a>
+</td>
+<td><a href="/product/2795">SparkFun Inventor&#39;s Kit (for Arduino Uno) - V3.3</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/1102"><img alt="" src="https://a.pololu-files.com/picture/0J901.50x40.jpg?7715ab68301097f0568e1d0c2904985b" /></a>
+</td>
+<td><a href="/product/1102">19:1 Metal Gearmotor 37Dx52L mm 12V (Spur Pinion)</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/925"><img alt="" src="https://a.pololu-files.com/picture/0J437.50x40.jpg?6cfd817fbbd7f28d688c50fe9da1ce99" /></a>
+</td>
+<td><a href="/product/925">T Connector Male-Female Pair</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/1573"><img alt="" src="https://a.pololu-files.com/picture/0J2644.50x40.jpg?d126a93259b960b5871ae3efea0c65de" /></a>
+</td>
+<td><a href="/product/1573">34:1 Metal Gearmotor 25Dx52L mm HP 6V</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/1035"><img alt="" src="https://a.pololu-files.com/picture/0J3962.50x40.jpg?00bb189978a5b7f9e5255db2e5e80a12" /></a>
+</td>
+<td><a href="/product/1035">Stackable 0.100&quot; Female Header Set for Arduino Shields</a></td>
+</tr>
+</table>
+</div>
+</div><div><h2>Related Categories</h2>
+<div>
+<table class='linkable_item_list'>
+<tr>
+<td class='img'>
+<a href="/category/113/shields-for-arduino"><img alt="" src="https://a.pololu-files.com/picture/0J11718.50x40.jpg?ace83179a2111a9d92a46632669e5c5a" /></a>
+</td>
+<td><a href="/category/113/shields-for-arduino">Shields for Arduino</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/11/brushed-dc-motor-drivers"><img alt="" src="https://a.pololu-files.com/picture/0J5250.50x40.jpg?8243159a88f13b4a1b62b37b4868d19a" /></a>
+</td>
+<td><a href="/category/11/brushed-dc-motor-drivers">Brushed DC Motor Drivers</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/10/brushed-dc-motor-controllers"><img alt="" src="https://a.pololu-files.com/picture/0J9559.50x40.jpg?7c650f69e62ac409b246c961770971f4" /></a>
+</td>
+<td><a href="/category/10/brushed-dc-motor-controllers">Brushed DC Motor Controllers</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/82/pololu-high-power-motor-drivers"><img alt="" src="https://a.pololu-files.com/picture/0J8146.50x40.jpg?821a91830d3a6d646905b21e9d42bc23" /></a>
+</td>
+<td><a href="/category/82/pololu-high-power-motor-drivers">Pololu High-Power Motor Drivers</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/22/motors-and-gearboxes"><img alt="" src="https://a.pololu-files.com/picture/0J6845.50x40.jpg?9d6e5616801ee22d7f4b2835f33893d7" /></a>
+</td>
+<td><a href="/category/22/motors-and-gearboxes">Motors and Gearboxes</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/115/25d-metal-gearmotors"><img alt="" src="https://a.pololu-files.com/picture/0J9890.50x40.jpg?c6dfea6448bb8ef0cef701de2d59b4d6" /></a>
+</td>
+<td><a href="/category/115/25d-metal-gearmotors">25D Metal Gearmotors</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/116/37d-metal-gearmotors"><img alt="" src="https://a.pololu-files.com/picture/0J10683.50x40.jpg?fc49b84b3c9921b0a478ee18a69f6257" /></a>
+</td>
+<td><a href="/category/116/37d-metal-gearmotors">37D Metal Gearmotors</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/64/development-boards-programmable-controllers"><img alt="" src="https://a.pololu-files.com/picture/0J5603.50x40.jpg?43c1294b06891b860cc82068f8514779" /></a>
+</td>
+<td><a href="/category/64/development-boards-programmable-controllers">Development Boards (Programmable Controllers)</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/125/arduino-compatible"><img alt="" src="https://a.pololu-files.com/picture/0J3981.50x40.jpg?848021ba139d19a107d5b3e38d875ca9" /></a>
+</td>
+<td><a href="/category/125/arduino-compatible">Arduino-Compatible</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div id='lightbox_holder'>
+<div id='lightbox_gray_screen'></div>
+<div id='lightbox'>
+<div id='lightbox_gallery'></div>
+<div id='lightbox_content'></div>
+<div id='lightbox_right'><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+<div id='lightbox_left'><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+<div id='lightbox_close'>
+<a href='#' title='Close'><i class="fa fa-times" aria-hidden="true"></i></a>
+</div>
+<div id='lightbox_full'>
+<a href='#' title='View image'><i class="fa fa-expand" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+
+<div id='header_small_top'>
+<!-- / this has to go first since it takes up 100% of the width and would block clicking on other parts -->
+<div id='header_center_right'>
+<span data-login-ui='login'>
+<a href="/account/login?account%5Burl%5D=https%3A%2F%2Fwww.pololu.com%2Fproduct%2F2502">Log In</a>
+</span>
+<span data-login-ui='my_account'>
+<a title="My account" data-login-ui="my_account_link" href="/account"></a>
+</span>
+
+</div>
+<div id='header_small_left'>
+<a href="/"><img width="118" height="30" alt="Pololu Robotics &amp; Electronics" class="logo_pololu_only" src="https://a.pololu-files.com/assets/header_pololu_only-fff6349c8769e6b2e59624d6dceacac4422156c5ac8b8b23532f0e93678bb981.png" /></a>
+</div>
+<div id='header_small_right'>
+<a href="/cart"><img width="30" height="30" alt="Shopping cart" src="https://a.pololu-files.com/assets/cart-bf4bf66669c9b9288e6e972718067855ecdcdfc80622cfea29ac04b29478f873.png" /></a>
+</div>
+</div>
+<div id='header_small_bottom'>
+<div id='header_small_right'>
+(702) 262-6648<br/>
+<a href="/ordering">Same-day shipping, worldwide</a>
+</div>
+<div id='header_small_left'>
+<a id="menu_button" onclick="return false;" href="/catalog/menu"><img width="30" height="30" alt="Menu" src="https://a.pololu-files.com/assets/menu-2023bba099d8fd2a25d8e1803c5bdf0aa0a024d9d585000ff9aec2c8a436b29a.png" /></a>
+</div>
+</div>
+<div id='header_small_menu'>
+<div class='header_small_menu_columns'>
+<a href="/catalog/menu">Shop</a>
+<a href="/blog">Blog</a>
+<a href="https://forum.pololu.com/">Forum</a>
+<a href="/support">Support</a>
+</div>
+<!-- / specify local variable id to set an id for the form, mainly for use with testing -->
+<form action='/search' id='header_small_search'>
+<div class='search'><input autocomplete='off' class='search_input mini_search_input' data-autocomplete-search='true' id='header_small_search_input' name='query' placeholder='Search' type='text'><input alt='' class='search_button' src='https://a.pololu-files.com/assets/magglass-d28c6b7b9d1f35858a702b71e13b678bfdee962d795c7ad2426ed9b19ccac5e8.png' type='image' value='go'>
+</div>
+</form>
+
+<a title="My account" href="/account">My account</a>
+<a data-feedback="true" href="/feedback/new?account%5Burl%5D=https%3A%2F%2Fwww.pololu.com%2Fproduct%2F2502">Comments or questions?</a>
+<a href="/about">About Pololu</a>
+<a href="/contact">Contact</a>
+<a href="/ordering">Ordering information</a>
+<a href="/distributors">Distributors</a>
+</div>
+<div id='gray_screen'></div>
+<script>
+menuInit();
+</script>
+
+<div id='header_holder'>
+<table id='header'>
+<tr id='header_top'>
+<td id='header_logo' rowspan='2'>
+<a href="/"><img width="219" height="69" alt="Pololu Robotics and Electronics" class="logo" style="max-width: 230px;" src="https://a.pololu-files.com/assets/header_pololu_no_padding-e37eb899d2ec2ded9153a53ad9e0e6e12861f762e2c3bafb4ca40e79a85d149e.png" /></a>
+</td>
+<td colspan='16' id='header_address'>
+<div id='header_account_links'>
+<span data-login-ui='login'>
+<a href="/account/login?account%5Burl%5D=https%3A%2F%2Fwww.pololu.com%2Fproduct%2F2502">Log In</a>
+</span>
+<span data-login-ui='my_account'>
+<a title="My account" data-login-ui="my_account_link" href="/account"></a>
+|
+<a href="/account">My Account</a>
+|
+</span>
+<div data-login-ui='logout'>
+<form data-login-ui="logout" action="https://www.pololu.com/account/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="session_id" value="**SESSION_ID_STUB**" /><button class="btn-link" name="log-out-button">Log Out</button></form>
+</div>
+
+|
+<a href="/cart">Shopping Cart <img width="16" height="16" alt="" src="https://a.pololu-files.com/assets/cart-bf4bf66669c9b9288e6e972718067855ecdcdfc80622cfea29ac04b29478f873.png" /></a>
+<script>dynamic_user_login.init()</script>
+</div>
+<p class='phone_number'>
+US toll free: 1-877-7-POLOLU ~
+(702) 262-6648<br/>
+<a href="/ordering">Same-day shipping, worldwide</a>
+</p>
+</td>
+</tr>
+<tr id='header_links'>
+<th class='selected'>
+<a href="/">Catalog</a>
+</th>
+<td>&nbsp;</td>
+<th>
+<a href="https://forum.pololu.com/">Forum</a>
+</th>
+<td>&nbsp;</td>
+<th class=''>
+<a href="/blog">Blog</a>
+</th>
+<td>&nbsp;</td>
+<th class=''>
+<a href="/support">Support</a>
+</th>
+<td>&nbsp;</td>
+<th class=''>
+<a href="/ordering">Ordering</a>
+</th>
+<td>&nbsp;</td>
+<th class=''>
+<a href="/distributors">Distributors</a>
+</th>
+<td>&nbsp;</td>
+<th class=''>
+<a href="/about">About</a>
+</th>
+<td>&nbsp;</td>
+<th class=''>
+<a href="/contact">Contact</a>
+</th>
+<td class='last'></td>
+</tr>
+</table>
+</div>
+<div id='left_col'>
+<div class='menu' id='menu_search'>
+<div>
+<!-- / specify local variable id to set an id for the form, mainly for use with testing -->
+<form action='/search' id='sidebar_search'>
+<div class='search'><input autocomplete='off' class='search_input mini_search_input' data-autocomplete-search='true' id='sidebar_search_input' name='query' placeholder='Search' type='text'><input alt='' class='search_button' src='https://a.pololu-files.com/assets/magglass-d28c6b7b9d1f35858a702b71e13b678bfdee962d795c7ad2426ed9b19ccac5e8.png' type='image' value='go'>
+</div>
+</form>
+
+</div>
+</div>
+<div class='menu'>
+<h2><a data-feedback="true" href="">Feedback</a></h2>
+<div>
+<a class="menu_visible_link" data-feedback="true" href="">Comments or questions?</a>
+</div>
+</div>
+<div class='menu'>
+<h2><a href="/category/31/services">Services</a></h2>
+<div>
+<ul>
+<li>
+<a href="/product/749">Custom Laser Cutting</a>
+</li>
+<li>
+<a href="/product/446">SMT Stencils</a>
+</li>
+</ul>
+</div>
+</div>
+<div class='menu'>
+<h2><a href="/">Products</a></h2>
+<div>
+<!-- sidebar_categories --><h3><a href="/category/42/new-products">New Products</a></h3>
+<h3><span class="specials_category"><a href="/specials">Specials!</a></span></h3>
+<hr />
+<h3><a href="/category/2/robot-kits">Robots</a></h3>
+<ul>
+	<li><a href="/category/76/3pi-robots-and-accessories">3pi</a></li>
+	<li><a href="/category/210/balboa-robot-and-accessories">Balboa</a></li>
+	<li><a href="/category/327/collaborative-robots">Cobot</a></li>
+	<li><a href="/category/202/romi-chassis-and-accessories">Romi</a></li>
+	<li><a href="/category/129/zumo-robots-and-accessories">Zumo</a></li>
+	<li><a href="/category/3/robot-kits-with-soldering">Kits, Soldering</a></li>
+	<li><a href="/category/4/robot-kits-without-soldering">Kits, No Soldering</a></li>
+</ul>
+<h3><a href="/category/6/electronics">Electronics</a></h3>
+<ul>
+	<li><a href="/category/125/arduino-compatible">Arduino</a></li>
+	<li><a href="/category/39/cables-and-wire">Cables and Wires</a></li>
+	<li><a href="/category/13/computer-interface">Computer Interface</a></li>
+	<li><a href="/category/19/connectors">Connectors</a></li>
+	<li><a href="/category/64/development-boards-programmable-controllers">Development Boards</a></li>
+	<li><a href="/category/334/isolation">Isolation</a></li>
+	<li><a href="/category/20/leds">LEDs</a></li>
+	<li><a href="/category/9/motion-control-modules">Motor Control</a></li>
+	<li><a href="/category/321/power">Power</a></li>
+	<li><a href="/category/14/electronics-prototyping">Prototyping</a></li>
+	<li><a href="/category/150/raspberry-pi">Raspberry Pi</a></li>
+	<li><a href="/category/135/relay-modules">Relays</a></li>
+	<li><a href="/category/7/sensors">Sensors</a></li>
+	<li><a href="/category/102/maestro-usb-servo-controllers">Servo Control</a></li>
+	<li><a href="/category/136/voltage-regulators">Voltage Regulators</a></li>
+</ul>
+<h3><a href="/category/21/mechanical-components">Mechanical</a></h3>
+<ul>
+	<li><a href="/category/231/ball-casters">Ball Casters</a></li>
+	<li><a href="/category/230/brackets">Brackets</a></li>
+	<li><a href="/category/26/chassis">Chassis</a></li>
+	<li><a href="/category/25/hardware">Hardware</a></li>
+	<li><a href="/category/127/linear-actuators">Linear Actuators</a></li>
+	<li><a href="/category/22/motors-and-gearboxes">Motors</a></li>
+	<li><a href="/category/179/motor-shaft-adapters">Motor Shaft Adapters</a></li>
+	<li><a href="/category/205/servos">Servos</a></li>
+	<li><a href="/category/87/stepper-motors">Stepper Motors</a></li>
+	<li><a href="/category/61/tamiya-products">Tamiya Products</a></li>
+	<li><a href="/category/5/tools">Tools</a></li>
+	<li><a href="/category/232/tracks">Tracks</a></li>
+	<li><a href="/category/234/wheels">Wheels</a></li>
+</ul>
+<h3><a href="/category/109/shirts">Shirts</a></h3>
+<ul>
+	<li><a href="/category/237/pololu-balboa-t-shirts">Balboa T-Shirts</a></li>
+	<li><a href="/category/194/pololu-zumo-t-shirts">Zumo T-Shirts</a></li>
+	<li><a href="/category/193/pololu-circuit-logo-t-shirts">Logo T-Shirts</a></li>
+</ul>
+</div>
+</div>
+
+<div class='menu'>
+<h2>Community</h2>
+<div>
+<ul>
+<li>
+<a data-lightbox-link="true" data-lightbox-height="34rem" data-lightbox-width="36rem" href="/account/communication-preferences">Mailing list</a>
+</li>
+<li>
+<a href="/blog">Pololu Blog</a>
+</li>
+<li>
+<a href="/blog/engage-your-brain">Engage Your Brain</a>
+</li>
+<li>
+<a href="/blog/community-projects">Community Projects</a>
+</li>
+<li>
+<span class="image_text_link"><a href="/feeds"><img alt="" src="https://a.pololu-files.com/assets/feed-icon-12x12-ad0e7f1965647f9414a76a1f32fb46dc73c1b2d295201b0abb56f2b2cf88bfb2.png" /></a><a href="/feeds">Feeds</a></span>
+</li>
+<li>
+<span class="image_text_link"><a href="mailto:?body=https%3A%2F%2Fwww.pololu.com%2Fproduct%2F2502&amp;subject"><img alt="" src="https://a.pololu-files.com/assets/email-f2957b324fa09a7d81ed64679a6b9454647ad40514cd7b1ce501aefd946f5593.png" /></a><a href="mailto:?body=https%3A%2F%2Fwww.pololu.com%2Fproduct%2F2502&amp;subject">Email a friend</a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id='mathjax'></div>
+</body>
+</html>

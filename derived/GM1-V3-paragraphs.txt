@@ -1,0 +1,393 @@
+Derived document.xml paragraphs; tables are flattened, images and headers omitted. Consult the original.
+Source: sources/organizer-2026-10-29/Game-Manual-2027-1-V3.docx
+
+
+
+SoutheastCon 2027
+Hardware Competition
+Stock Car Race
+
+
+
+
+
+
+
+Revision History
+Revision
+Date
+Description
+1.0
+3/15/2026
+Initial Release
+2.0
+6/15/2026
+Second Release
+2.0
+6/15/2026
+Added Rules For Religious Observance – Section 8
+2.0
+6/15/2026
+Moved Old Section 8 (Robot Design Challenge) to Section 9
+2.0
+6/15/2026
+Added Minimum Size Requirement 5.2.1
+2.0
+6/15/2026
+Specified No Robot Separation 5.2.1
+3.0
+9/18/2026
+Specified the Final Match will be Played at the Awards Banquet
+3.0
+9/18/2026
+Updated Table of Contents
+Contents
+Contents	2
+1.0 Introduction	5
+What is IEEE SoutheastCon Hardware Competition?	5
+2.0 Code of Conduct	6
+3.0 The Competition	7
+3.1 Overview	7
+3.2 Eligibility to Compete	7
+3.2.1 Main Teams	7
+3.2.2 Open Teams	7
+3.3 Competition Definitions	7
+3.3.1 Overview	7
+3.4 Competition Rules	9
+4.0 Competition Outline	12
+4.1 Competition Schedule	12
+4.2 Team Check-In	12
+4.2.1 Team Roster	12
+4.2.2 Team Check-In Packets	12
+4.3 Robot Inspection	12
+4.4 Design Interviews	13
+4.5 Technician Meeting	13
+4.6 Opening Ceremony	13
+4.7 Qualification Matches	13
+4.7.1 Calculating Scores and Ranking	13
+4.8 Rankings Released and Elimination Matches	14
+4.9 Establishing Seeding Using The NBA “Play-In” Format	14
+5.0 The Robot	16
+5.1 Overview	16
+5.2 Robot Rules	16
+5.2.1 Mechanical Robot Rules	16
+5.2.2 Electrical Robot Rules	19
+5.2.3 Computer Robot Rules	19
+5.2.4 Software Robot Rules	19
+6.0 Robot Inspection	21
+6.1 Overview	21
+7.0 Robot Sequestering	22
+7.1 Overview	22
+7.2 Match Pre-Staging	22
+8.0 Religious Observance Accommodation	23
+8.1 Overview	23
+8.2 Request For Consideration	23
+8.3 Evaluation Process	23
+8.4 Competition Rules	23
+9.0 Robot Design Challenge	24
+9.1 Overview	24
+9.1.1 Key Terms and Definitions	24
+9.2 Engineering Portfolio	24
+9.2.1 Engineering Portfolio Requirements	24
+9.2.2 Engineering Portfolio Recommendations	25
+9.3 Judging	25
+9.4 Award Criteria	25
+Appendix A - Robot Inspection Checklist	26
+
+
+
+1.0 Introduction
+
+What is IEEE SoutheastCon Hardware Competition?
+IEEE SoutheastCon Hardware Competition is a student-centered program focused on giving college students a unique and exciting learning opportunity with robotics. Each year, teams take on a new game where they design, build, test, and program a fully Autonomous Robot to perform a series of tasks. The competition will be held at the IEEE Region 3 SoutheastCon conference. To find out more about the conference visit https://ieeesoutheastcon.org/.
+
+
+2.0 Code of Conduct
+
+Before, during, and after the competition, participants are expected to conform to the IEEE Code of Conduct in any physical or digital space relating to the competition.
+The IEEE code of conduct can be summarized as:
+Be respectful of others
+Treat people fairly
+Avoid injuring others, their property, reputation, or employment
+Refrain from retaliation
+Comply with applicable laws in all countries where IEEE does business and with IEEE’s policies and procedures
+For more information check out the official document: IEEE CODE OF CONDUCT 
+
+
+3.0 The Competition
+ 
+3.1 Overview
+Team Members that engage in the IEEE SoutheastCon Hardware Competition develop Science, Technology, Engineering, and Math skills and practice engineering with hands-on projects. This section provides critical information that will help Teams have a fun and successful Competition Day.
+3.2 Eligibility to Compete
+Two types of Teams compete in the IEEE SoutheastCon Hardware Competition: Main Teams and Open Teams. The rest of this document and the Game Manual 2 will refer to both as simply “Teams”. Both types of Teams must register to compete. More registration information will be posted on the IEEE SoutheastCon website, and a notification will be sent out on the IEEE SoutheastCon Discord.
+3.2.1 Main Teams
+Main Teams come from universities in IEEE Region 3. Each university can only send one Main Team. For a Team to qualify to be a Main Team, all members of the Team must be undergraduate students at the university the Team represents. 
+3.2.2 Open Teams
+Open Teams have no limits or restrictions on where members can come from.
+3.3 Competition Definitions
+3.3.1 Overview
+The following definitions and terms are used for the IEEE SoutheastCon Hardware Competition. Defined terms begin with a capital letter and are italicized throughout the manual (for example, Robot). Competition rules mean exactly and only what they plainly say. If a word isn't given a game definition, you should use its common conversational meaning.
+Autonomous - Robots operate and react only to sensor inputs and commands pre-programmed by the Team into the onboard Robot control system. Human Control is not permitted.
+Competition Area - The Area where all the Fields, Scoring Tables, and other competition officials are located. Only the Technicians for Teams currently competing in a Match are allowed in the Competition Area.
+Elimination Match - A Match during the elimination bracket will used to determine the winning Team. Teams compete in a single elimination bracket of Elimination Matches to determine the tournament champion. A Team wins by scoring higher than the Team paired against them in the elimination bracket. Winning Teams continue along the elimination bracket to play other Teams that have won.
+Field - Physical Robot game-playing area that consists of the border walls and everything inside of them. Information on a Field for a specific year will be found in that year’s Game Manual 2.
+Field Damage - A physical change to a Game Element or Field that affects gameplay. 
+Game Elements - Game Elements are clearly specified in Game Manual 2, but in general, they are elements designed by the GDC and placed on the Field for a Team’s Robot to interact with to advance the game and score points.
+GDC - GDC or Game Design Committee is a group of people who volunteer to design the game for the IEEE SoutheastCon Hardware Competition. They will have a role indicating this on Discord, and will be able to help guide you to resources. Only the GDC are authorized to make changes to the game rules and only through official channels. See <C00> for specifics on official information hierarchy.
+Inspection - Inspection is a process to ensure that Team’s Robots follow all rules and safety regulations. See Section 6.0 for more information on Inspection.
+Launching - Propelling Game Elements through the air or water above the Field floor.
+Match - A 3-minute period where a Team’s Robot completes challenges and scores points.
+Pit Area - A space separated from the Competition Area where Teams can work on their Robot between Matches. The Team is provided a pit space which includes a table and a power source. Pit spaces will vary depending on the venue space. Closer to the competition, a Discord message will be sent outlining exactly what to expect in your Pit Area. Practice game boards are not permitted in the pit area.
+Practice Match - A Match scheduled by the tournament organizers for Teams to calibrate and test their Robot on a competition Field. Practice Matches will not be scored or count toward a Team’s placement in the competition.
+Qualification Match - A Match used to decide the Teams that qualify for Elimination Matches. Teams compete in three Qualifying Matches, only the best score of the three is counted towards advancement. Ties are broken using second and third-best scores.
+Red Card - A penalty applied to a Team because of gameplay penalties, failure to adhere to IEEE Code of Conduct, or egregious behavior at the competition.
+Referee - A Referee is a volunteer helping to oversee and score game Fields.
+Robot - Any mechanism (except for Team Game Element(s)) that have passed Inspection and a Team places on the Field before the start of a Match. To be legal, Robots must comply with the Robot build rules in Section 5.0 of this manual.
+Robot Unit - A portion of the overall Robot that has individual Autonomy or self-actuation. For example, if a Team's Robot releases a HEXBUG onto the Field, that is a separate Robot Unit. However, if a Team’s Robot releases a beam, that is not a Robot Unit since it cannot self-actuate.
+Team Member - A registered member of a Team.
+Team - A collection of Mentors, Supporters, and Team Members registered with the IEEE SoutheastCon Hardware Competition. All Teams are required to register via a form sent out prior to the conference (this will get changed to a link once it is available). See Section 3.2 of this document for more information about eligibility and different Team types.
+Team Game Element - Some games allow Teams to bring their own game element which must follow rules outlined by GM2.
+Technician - One Team Member representative from a Team that handles the Robot during a Match. This includes placing the Robot in the Landing Site, preloading any applicable items, powering on the Robot, stopping the Robot, and retrieving the Robot.
+Q&A - Official Q&A takes place over the course of the year on the official IEEE SoutheastCon Discord. Q&A answers are intended to clarify game manual rules or fix loopholes. Q&A answers supersede any game manual information. Q&A answers (from the #qna channel) or updates to the official game manuals are the only legitimate and enforceable changes to the game. See <C02> for more information on information hierarchy.
+Yellow Card - A warning assigned to a Team because of gameplay penalties, failure to adhere to IEEE Code of Conduct, or egregious behavior at the competition.
+3.4 Competition Rules
+<C00> Information Hierarchy - Official game rules, information, and changes, will only be communicated by the GDC. Information will be proliferated by the GDC in the following locations with the following order of precedence. Higher on the list has higher precedence.
+The chain of corrections is: 
+Head Referee Decision at Competition 
+???Official Q&A 
+Written rules in Game Manual 2
+Written rules in Game Manual 1
+Any images included in Game Manual 2
+Any images included in Game Manual 1 
+Any other documents published by the GDC 
+
+<C01> Egregious Behavior - Egregious Robot or Team member behavior is not in the spirit of the Code of Conduct and will not be tolerated at the IEEE SoutheastCon. Egregious behavior includes but is not limited to repeated and/or flagrant violation of rules, unsafe behavior or actions, and uncivil behavior towards competition personnel or event attendees. In most cases, as determined by the Referees, the offending Team will be issued a Yellow Card and/or Red Card. Subsequent violations may result in Team disqualification from the competition. 
+<C02> Referee Authority - Referees have final gameplay and scoring authority during the competition. Their rulings are final.
+The Referees may review any recorded official Match replays or photographs to render a correct decision.
+All questions about a Match or scoring for a Match must be brought forward to the Referees or head Referee's attention within 10 minutes of the end of your Match.
+The Head Referee has the final decision at the competition and is first on the chain of corrections. See <C00> for the complete chain of corrections.
+Referees will have sole discretion in assigning Yellow Cards or Red Cards.
+<C03> Yellow and Red Cards - Yellow Cards and Red Cards are used to manage Team and Robot behavior that does not align with safety standards or the IEEE Code of Conduct. Yellow and Red Cards are not just limited to the Competition Area. 
+
+Egregious or repeated Robot or Team behavior at the Competition can result in a Yellow Card and/or Red Card. A Team is issued a Red Card for any subsequent incident in which they receive an additional Yellow Card.
+A Red Card causes the score of the current Match to be set to 0 and causes an automatic loss during Elimination Matches. In the case that both Teams in an Elimination Match receive a Red Card, both teams lose the Match and no Team is advanced. This will cause a bye for the next stage of the bracket. 
+<C04> Competition Area Access - Only a Team’s singular Technician with an appropriate button is allowed in the Competition Area. Additional Team Members will be asked to leave the Competition Area immediately. Technician buttons are interchangeable within Team Members between Matches although only one member may be designated Technician at a time. 
+<C06> Safety Glasses - All Team members, mentors, and their guests must wear ANSI Z87.1 certified safety glasses while in the Pit or Competition Area. Prescription glasses with ANSI Z87.1 approved side shields are also allowed.
+<C07> Footwear Safety - Close-toed shoes are required for all personnel in the Pit Area or the Competition Area.
+<C08> Battery Safety - Batteries must be handled safely based on their chemistry, and charged in an open, well-ventilated area.
+<C09> General Safety - All personnel at the Competition must conduct themselves in a safe manner. Unsafe activities such as but not limited to running, skateboarding, roller skating, and/or flying drones are not allowed at any Competition unless allowed by game-specific rules. These and any other safety hazards that could affect Teams, spectators, or volunteers attending the Competition are not allowed at the Competition.
+<C10> Hazardous Materials - Painting or applying harmful products, sprays, glues, or aerosols are not allowed anywhere at the Competition. This includes the Pit Area. Teams that must apply harmful products should find a safe and well-ventilated area outside the Competition and take all necessary safety precautions when working with harmful products.
+
+<C11> Government and Venue Requirements - Teams must comply with government and venue-specific requirements (for example, wearing a mask, social distancing, tornado warning procedures, etc.)
+
+
+4.0 Competition Outline
+
+Competitions pack many activities across the days of the conference. The main activities for the Competition are as follows:
+ Team check-in
+ Robot inspection
+ Design Judging Interviews
+ Technician meeting
+ Opening Ceremony
+ Qualification Matches
+ Announcement of ranking and Teams competing in Elimination Matches
+ Elimination Matches
+ Awards Banquet
+4.1 Competition Schedule
+Competition schedules will be available through the website before or at the Competition. Qualification Match schedules are created on Competition Day from all Teams that have checked in. 
+4.2 Team Check-In
+The Team check-in process will take place Thursday - Friday of the week of the competition. (exact dates and times will be announced)
+4.2.1 Team Roster
+When checking in, a Team must provide a roster, which has the names of all the Team Members competing at the event, the status of their consent and release forms, and must clearly indicate a contact person for the Team, with their name and pronouns for Competition personnel.
+4.2.2 Team Check-In Packets
+Once checked in, the Team’s contact person will receive their Team packet. Team packets generally include a Technician badge, a judging schedule, a map of the venue, and other information that is important to the Teams. The Team should review the schedule, set up their Pit Area, and get familiar with the venue.  
+4.3 Robot Inspection
+Robots are required to pass Inspection before being allowed to compete. These Inspections ensure that all Robot rules are met. See Section 6.0 for more information on Inspection. Inspections will take place Thursday night and all-day Friday. Exact dates and times will be announced.
+4.4 Design Interviews
+More information about this competition can be found in Section 9.0 of this document. Alongside submitting a 5-page Engineering Portfolio, each Team will have a ten-minute interview with a panel of judges. At the start of the interview, Teams will have a maximum of 5 minutes to present their Robot design to the judges. After the Team's presentation, the judges get 5 minutes to ask any questions. These interviews will be scheduled per Team availability on Thursday and Friday. Exact dates and times will be announced
+4.5 Technician Meeting
+The Technicians’ meeting takes place before the start of Qualification Matches and is a time when all Team’s potential Technicians meet with the Referees. During this time, the head Referee gives a brief outline of what is expected of Teams and their Technicians. They will provide venue-specific information, such as queuing paths, and explain any signals and commands Referees will give during Matches.
+4.6 Opening Ceremony
+The opening ceremony is the official kickoff of the Competition for the Teams, volunteers, and spectators. During the opening ceremony, a Competition official or the emcee will welcome the Teams and introduce the judges and the referees. Then the game will be described (usually with a video) and immediately after, the Qualification Matches take place. Teams that are scheduled for the first several Qualification Matches will be asked by volunteers to line up before the opening ceremonies. The Qualification Match schedule will be available before the start of the opening ceremony. It is the Team’s responsibility to check the schedule and make sure they are on time for their Matches.
+4.7 Qualification Matches
+Teams are randomly assigned to Qualification Matches. The Qualification Match schedule is available before the opening ceremonies. This schedule shows the time and indicates which Field the Team will be competing on. During the Qualification Match timeslot, Teams compete in a series of rounds that will determine their ranking.
+4.7.1 Calculating Scores and Ranking
+Teams will play 3 Qualification Matches, only the highest scoring one will be used to determine placement in Elimination Matches. Ties will be broken by the second and third match scores. In the rare event that two Teams tie all three Matches, the final rankings will be determined by a cut-throat best-of-three rock-paper-scissors battle.
+EX:
+Team A scored: 130, 120, and 145 across their three Matches
+Team B scored: 145, 125, and 110 across their three Matches
+Team A and B have the same best score: 145, so looking at their second-best scores (130 and 125 respectively) and see that Team A is higher ranked.
+4.8 Rankings Released and Elimination Matches
+After the conclusion of all Qualification Matches, the emcee will announce the scores of Teams and announce which 8 Teams are competing in Elimination Matches. The Matches are played in a seeded format where the #1 seed plays against the #8 seed, the #2 plays #7, and so on. Winners from each round will continue in that fashion until a winner is determined. The Final Elimination Matches will be played at the IEEE SoutheastCon Awards Banquet.
+4.9 Establishing Seeding Using The NBA “Play-In” Format
+This year, the NBA’s Play-In format will be used to establish the initial seeding in the first elimination round. The top scoring 6 Teams will be seeded 1 to 6. Team 7 will play Team 8 and Team 9 will play Team 10. The winner of Team 7 vs. Team 8 will advance to the 7 seed position. The loser of Team 7 vs. Team 8 will play the winner of Team 9 vs. Team 10 match. The winner of the Team 9/10 winner vs. the loser of the Team 7/8 loser will take the 8 seed.
+
+
+Here is an example bracket:
+
+
+5.0 The Robot
+
+5.1 Overview
+The Robot is a culmination of a Team’s engineering efforts to build a system to solve challenges posed by an IEEE SoutheastCon Hardware Competition. This Robot should represent the efforts of the Team that submits it. The Robot must conform to a series of rules for safety, gameplay, and to encourage innovative designs. The Robot rules are described in section 5.2 of this document.
+5.2 Robot Rules
+Robot rules intend to describe the constraints for mechanical, electrical, computer, and software aspects of the Robot. The Robot rules do not specify any rules relating to the specific game or game interactions. The Robot rules specify constraints for the competition to be played safely, fairly, and effectively. Teams are required to follow all Robot rules and pass Inspection for their Robot to be allowed to compete. If your Team has questions about Robot rules or needs clarification you should ask in the official Q&A. 
+The Robot rules exist to enforce a safe, fair, and engaging engineering competition environment. Teams should consider whether their Robot satisfies these constraints when determining if their designs are legal to compete with. If a Team is unsure, they can get clarification from the official Q&A. General questions to answer for Robot legality are as follows:
+Could it injure a participant, volunteer, or spectator?
+Could it damage the Field?
+Could it delay the proceedings of the competition?
+If the answer to any of these questions is yes, it is illegal.
+5.2.1 Mechanical Robot Rules
+<R01> Robot Starting Size - The maximum size of a Robot when the Match starts is 12 inches (304.8 mm) by 12 inches (304.8 mm) by 12 inches (304.8 mm). Any Game Elements or Team Game Elements your Robot starts with may extend outside of the starting size constraint. Robots may expand beyond the starting size constraint after the Match has started.
+The Robot must have a minimum size of 10 inches long by 10 inches wide for 3 inches up from the surface. 
+Robot Starting Size will be tested during Inspection where the Robot must conform to the size constraint when resting on level ground without any external aides. Robots are allowed to apply power to actuators and move components to shrink and conform to the size constraint, however, the Robot must be static before the Match can begin. The game does not permit more than one Robot unit. All Robot configurations the Team intends to use must be tested for sizing constraints during Inspection.
+Once the Robot has been set up for a Match, if a Referee suspects that the Robot is not within the size constraint, the Referee will request the Technician to make sure the Robot is within the size constraint. If the Referee still does not believe the Robot conforms to the constraint, the Team will be asked to re-Inspect the Robot's starting size before being allowed to compete in any Matches.
+<R02> Robot Mass - Robot mass is constrained to 12 kilograms (~26.5 lb on Earth). This mass includes the Robot and all components in the Robot’s heaviest configuration.
+<R03> Start Button/Switch - If a Team intends to utilize a start button or switch to trigger their Robot to begin its Autonomous actions, the Team must follow the Start Button/Switch constraints. A start button or switch is not required if the game has rules that allow Robots to automatically start based on a Referee-controlled mechanism.
+A Team is only allowed to use a single simple electrical button or switch as a start command for their Robot. The input method must be clearly marked. When instructed by the Referee the Technician can actuate the button/switch. Following the start command, the Robot must remain static for at least 5 seconds to allow the Technician to move away from the Robot and Field. Robots utilizing a Referee-controlled mechanism such as a Start LED do not have to adhere to this waiting period. Following the 5-second wait, the Robot can begin physical movements wherever it decides to do so. Although no physical movement is allowed during the 5-second safety period, the Robot is allowed to begin acting on its programming. Examples of non-physical actions include turning on an LED to indicate to the Technician that the start button/switch was correctly pressed.
+Failure to adhere to the Start Button/Switch constraints will result in a Yellow Card unless the infringement compromises the competitive integrity of the Match, in which case a Red Card will be issued.
+<R04> Emergency Stop - All Robot Units must have a clearly marked emergency stop button/switch. A Referee or Technician must be able to quickly stop the Robot by actuating this system. The system must be able to halt all Robot actions safely and quickly. If a game allows for multiple independently acting Robot Units, each must have its own emergency stop.
+<R05> Illegal Materials - The following list of materials are not allowed to be used on any Robot for safety or delay of match schedule concerns.
+Sharp edges or corners that could pose a threat to humans interacting with the Robot.
+Explosive, pyrotechnic, toxic, corrosive, or biohazardous materials.
+Flammable gases.
+Materials that would delay Match schedule if released (for example, sand, loose ball bearings, a bag of coffee beans).
+Devices that electrically ground the Robot to the Field.
+Materials that are likely to damage the Field (for example, exposed abrasives).
+Uncontained Liquids or gels.
+Hydraulics.
+<R06> Lubricants and Greases - Lubricants, greases, and other mechanism-required liquids/gels are allowed if they are contained and do not pose a risk of leaking onto the Field. The intent is to allow for necessary functional lubricants/greases in reasonable quantities. Hydraulics and hydraulic fluid are not allowed.
+<R07> Pneumatics - Pneumatics are allowed provided Teams follow the following safety rules. Robots cannot contain gases compressed over 100 psi. All pneumatic parts must have been thoroughly tested and do not raise any unresolved concerns during Robot Inspection.
+<R08> Aerial Robots - Flying Robots, quadcopters, drones, balloons, or other aerial devices are not allowed unless specifically allowed by a rule in Game Manual 2.
+<R09> Prompt Removal - Following the end of a Match, the Robot must be able to be removed from the Field quickly without damaging the Field or Game Elements. Teams must remove their Robot by hand without requiring any additional tools. For example, adhesives that attach to the Field or Game Elements would not be allowed under this rule.
+<R10> Robot Identification - Each Robot must have some source of identification as to which Team is associated with the Robot. A volunteer must be able to determine which Team a Robot is associated with from 6 feet away when the Robot is in Match start configuration. There are no specific constraints to fulfill this Inspection requirement and is instead an opportunity to allow Teams to be creative in differentiating their Robots.
+<R11> Field Damage - Teams should seek to develop their Robots so they are unable to damage the Field. Damage to the Field following a Match will result in a Yellow Card or a Red Card at the discretion of the Referee. Repeated systemic Field damage will likely result in competition disqualification.
+<R12> Launching - Launching is not allowed.
+<R13> Robot Interference - Robots should be expected to handle some amount of background interference given that the real world is naturally noisy and some interference can be expected. Intentionally interfering with another Team is strictly illegal. Interfering with another Team’s ability to engage with the competition in a fair manner is not in the spirit of friendly competition and is diluting the learning opportunities of all Teams involved. Interference from any source in any format that impacts another Team’s ability for their Robot to succeed will result in a Red Card and likely competition disqualification and removal from the Competition Area. Engineering competitions are best when competitors can interact in good faith and engage in friendly, productive, and educational interactions. The tournament organizers will do all in their power to support friendly competition interactions and dissuade negative interaction and interference.
+5.2.2 Electrical Robot Rules
+<R14> Electrical Components - Few restrictions are placed on the types of electrical components Teams can use to solve competition challenges. Teams are encouraged to think creatively and utilize whatever best fits their design. The safety of the Robot and the Technicians interacting with it should be considered. From an electrical perspective, Teams may be required to show that electrical designs are safe and do not pose a risk to participants, volunteers, and spectators.
+<R15> Grounding - Robots are allowed to ground electronics to the Robot frame provided proper resistive grounding standards are followed. Robots are not allowed to ground the Robot to the Field, Game Elements, or any external components. No elements of the Robot structure are allowed to be electrically charged. All electrical charges should be conveyed through properly sized electrical components.
+<R16> Voltages and Currents - Flexibility is allowed in electrical power supplies, actuators, and components. However, limits are set to keep Robots reasonably safe. Power distribution systems must be 30V or less. All wire gauges must be sufficiently rated for the load being placed on them. 
+<R17> Light Sources - Light sources are allowed as long as they do not pose interference or safety issues. Lights must not be unnecessarily bright so much that they affect the ability to watch or score a Match. Strobe lights are not allowed. Visible light lasers are not allowed. Focused light must not pose safety risks.
+5.2.3 Computer Robot Rules
+<R18> Computer Devices - Any type of computational device is allowed on the Robot as long as the device is safely contained on the Robot, all processing is done on the Robot, and it poses no danger to other Teams, spectators, or Competition Personnel.
+5.2.4 Software Robot Rules
+<R19> Wireless Communication - Robots must act Autonomously which means that no outside help or human input can impact Robot decisions. Robots are not allowed to send or receive communication with any computers, devices, humans, or other resources that are not contained within the Robot when it is in starting configuration. Examples include but are not limited to, WiFi connection to a programmer’s laptop, cellular connection to a server that does off-board processing, Bluetooth connection to a wireless controller, RC controller and receiver pairs, microphones listening to commands from the Team, cameras watching a human do a Robot controlling interpretive dance.
+Robots are allowed to use wireless communication between components of the Robot itself or if required by the Game. If a game allows multiple independent Robot Units, each of the Robot Units can wirelessly communicate with each other. Robots can utilize any method to communicate between Units. It is recommended that accidental interference may make wireless communication less reliable than anticipated. Teams that utilize wireless devices will be required to turn them off when their Robot is not competing.
+Any Team that is found to be intentionally interfering with other Robots through wireless interference will be subject to <R13> Robot Interference.
+
+
+6.0 Robot Inspection
+
+6.1 Overview
+Inspection is a process for tournament organizers and Referees to systematically check that each Robot is in a legal state to compete. Inspection is required for Teams to be allowed to compete in Matches. Inspection will be done prior to Matches and will inspect the physical aspects of the Robot.
+
+Teams are required to pass Inspection to play in the competition. Teams that fail the Inspection will be given an opportunity to correct any failures and reinspect if there is enough time before Matches will begin. Teams are encouraged to conduct a mock Inspection prior to traveling to the competition and attend the official Inspection as soon as possible to allow for the most amount of time for corrections. Inspections will follow the checklist provided in Appendix A.
+For Inspection the Robot must be presented with all mechanisms, including all parts of each, configurations and decorations that will be used on the Robot during the Competition. Robots are allowed to play Matches with a subset of the mechanisms that were present during Inspection. Only mechanisms present during Inspection may be added, removed, or reconfigured between Matches.
+If Teams make significant changes to their Robot while at the competition, they should have their Robot re-inspected to ensure they continue to conform to Robot rules. Referees can require Teams to reinspect all or part of their Robot if the Referee believes they might be infringing on a Robot rule.
+
+
+7.0 Robot Sequestering
+
+7.1 Overview
+After each Robot has been inspected, before the start of each round of Matches, the judges will require that all Robots be sequestered in a special staging area. Once in the sequestered area, the Robots must remain turned off and cannot be touched by students until they are called for their Match to begin. The Robots cannot be charged during the sequestration period. All Teams are required to place their Robot and competition material to be used with the Robot during Competition in the sequestered area. The Robot and competition material shall remain in the sequestered area from pre-staging until the Team is called to the Field to set up for the Match. If Teams have any equipment of their own, it needs to be presented at the time the sequestering begins. This includes all items extraneous to the Robot which will be used in the Field.
+7.2 Match Pre-Staging
+For each Match, the judges will call the names of the Teams to run in that Match. Teams will have 2 minutes to retrieve their Robot from the sequestration area and move it to a pre-match staging area near the Fields. In this area, Teams can perform final checks to the Robot, make any last-minute adjustments, swap in a new set of batteries, and power it on. Batteries must be installed in the Robot at the entry to pre-stage. This time will overlap with the time another set of Teams are competing. Once the current set of Teams have completed their Matches and cleanup, the judge will call the Teams from the pre-match staging area to the Field to begin their setup.
+
+
+
+8.0 Religious Observance Accommodation
+
+
+8.1 Overview
+Some universities have requested an alternate method of competing due to religious restriction during the Hardware Competition.
+8.2 Request For Consideration
+To be eligible for the alternate competition, a university’s application must be received No Later Than 5 PM Eastern Time on Monday March 22nd. The application must contain the reason for requesting alternate competition consideration.
+8.3 Evaluation Process
+The student competition committee will evaluate the university’s application. If they agree, the university will be notified, and a start date and time will be given. If the committee does not agree, the application will be referred to the Region 3 Student Activities Chair for evaluation. If they agree with the request, the application will be accepted, and the university will be notified and given a start date/time. If the Region 3 Student Activities Chair feels the request is invalid the university will be notified of this fact.
+8.4 Competition Rules
+The university must have their Robot ready for inspection BY the date and time specified in the acceptance letter. On the assigned start date/time, the Robot will be inspected, and the first run will start. The run will be recorded and scored. The score of the run will not be revealed, but the team may ask the judges questions about the run. The team will have 30 minutes to adjust their Robot and the second run will take place. The 30-minute timer begins at the completion of the run NOT after any discussions with the judges. The same rules will apply, and the third run will take place. The team must make a 4th and 5th run to accommodate the need for “Play-In” runs. These runs will only be used if the team needs to compete in the “Play-In” If they are not in the “Play-In” these runs will not be used. After the final preliminary runs, the team will have 1 hour to adjust their Robot and the record 2 runs for the Semi-Final competition. The same rules as the preliminary round will apply. After the Semi-Final runs, the team will have 1 hour to adjustment their Robot and the record 2 runs for the Final competition. The same rules as the preliminary round will apply. The extra run in the Final competition will be used in the event a tie occurs in the semi-final or final competition rounds. The extra run may only be used once. If a 2nd tie occurs the university will forfeit the match.
+
+9.0 Robot Design Challenge
+
+9.1 Overview
+This section provides descriptions of
+Engineering Portfolio requirements and recommendations
+How Judging works
+Award Criteria
+Teams have spent a significant amount of time designing, building, and programming their Robot. For many Teams, the event is the reward for all their hard work throughout the season.
+The Robot Design Challenge awards allow Teams to be recognized for strong engineering designs. These judging guidelines are a part of the roadmap to success.
+All Teams are eligible to participate in the judging process. A Robot, a working Robot, or a Robot that has passed Inspection is not a requirement to participate in judging.
+9.1.1 Key Terms and Definitions
+Engineering Portfolio - The Engineering Portfolio is a printed document that summarizes the most important accomplishments of the Team in the Team’s opinion. Guidelines on what must, should, and could be included are listed in section 8.2
+Team Information - The Team name, a photograph of the Robot, a photograph of the Team, school or club information, Team city and state, etc.
+9.2 Engineering Portfolio
+9.2.1 Engineering Portfolio Requirements
+To be considered for Robot Design Challenge awards, a Team must submit an Engineering Portfolio
+The total number of pages for an Engineering Portfolio must not exceed 5 single-sided pages, plus a cover sheet for a total of 6 pages.
+Cover sheet may include Team Information and a table of contents.
+Cover sheet may not include other Engineering Portfolio content. Additional content on the cover sheet adds to the page count of the portfolio, meaning content on the last page of the portfolio will not be reviewed or considered.
+Pages must be the equivalent of standard A-sized paper (US 8.5” x 11” colloquially called “letter”)
+Fonts used must be legible and a minimum of 10 points.
+The Engineering Portfolio must not include links to other documents, videos, or any additional content.
+9.2.2 Engineering Portfolio Recommendations
+It is strongly encouraged that Team branding/name is at the top of each page
+The body could include:
+Summary of the engineering content that includes the Robot design process and design decisions
+Showing Science and Math to justify decisions is highly encouraged
+Summary of the Team Information
+Please note that the Engineering Portfolio is not a paper, nor should it be plain text. It is recommended to include images, graphics, and creativity from your Team.
+9.3 Judging
+During the IEEE SoutheastCon, Teams will take part in scheduled private interviews with a panel of judges.
+Teams are asked to bring their Robot (if applicable) to the judge interview. This is when Teams will explain and show their Robot design to the judges.
+The interview will last at most 10 minutes, during the first 5 minutes of the interview, the Team can present to the judges without interruption. During the last 5 minutes, the judges will ask the Team questions about their Robot and design choices.
+9.4 Award Criteria
+The first-place award will be given to the Team that reflects the best engineering design practice.
+The Team must be able to share or provide additional information that is helpful to the judges, this could include descriptions of the underlying scientific principles and mathematics of the Robot design and game strategies, the designs, redesigns, successes, and opportunities for improvement.
+
+
+Appendix A - Robot Inspection Checklist
+
+Team: _____________________________ 	Robot Inspection Status (circle): Ready/Not Ready
+Check
+Description
+Rule # reference
+
+Robot Inspection
+
+
+Robot is presented at inspection with all mechanisms, configurations, and decorations that will be used.
+6.1
+
+Test the Robot in its starting configuration. The Robot fits within the Sizing Tool without exerting undue force on the Sizing Tool sides and top.
+<R01>
+
+Test the Robot mass in its heaviest configuration, it must not exceed 12 kg.
+<R02>
+
+Is the Robot start button clearly marked? (Not required if there is a Referee-controlled mechanism).
+<R03>
+
+Is the Robot emergency stop clearly visible and accessible?
+<R04>
+
+Does the Robot contain any illegal materials or illegal storage options?
+<R05>, <R06>, <R07>
+
+Does the Robot contain anything that will prohibit a prompt removal from the Field?
+<R09>
+
+Does the Robot have proper identification?
+<R10>
+
+Will the Robot damage the Field?
+<R11>
+
+Does the Robot follow Launching rules? 
+<R12>
+
+Does the Robot follow all electrical rules?
+<R14> <R15> <R16> <R17>
+
+Does the Robot and/or Team Game Element(s) follow all game specific rules?
+See GM2

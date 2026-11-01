@@ -1,0 +1,64 @@
+{
+ "schema": "robot-studio-v7-browser/1",
+ "html": "share/Robot-Studio-v7.html",
+ "html_sha256": "d6dda02d416cab974b26c06a71d552ee779cd4f460ec05a3ee81add978283151",
+ "browser": "chrome-headless-shell 1247 (Playwright cache), --use-angle=swiftshader --enable-unsafe-swiftshader, file:// URL, 1400x860, virtual time 25 s",
+ "method": "page console and uncaught errors counted from --enable-logging=stderr; remaining stderr lines are D-Bus and GPU shared-image noise from the container",
+ "screenshots": [
+  {
+   "file": "hero.png",
+   "query": "view=hero",
+   "exit": 0,
+   "page_console_or_uncaught_lines": 0,
+   "sha256": "51fb21ceb887c9adb1f8a891534fa27d2f6ba5ff3b9954146ef0349be0299e69"
+  },
+  {
+   "file": "caster-riser.png",
+   "query": "view=caster&panels=0",
+   "exit": 0,
+   "page_console_or_uncaught_lines": 0,
+   "sha256": "8b1b7ba40720c245726820c23a08e2b1077bf4e408954c76a4f5681ade8f7b24"
+  },
+  {
+   "file": "motor.png",
+   "query": "view=motor&panels=0",
+   "exit": 0,
+   "page_console_or_uncaught_lines": 0,
+   "sha256": "e980a700e324735abb464e68582e1b096bd14cf05edfb4c67ea312ea4229cfb5"
+  },
+  {
+   "file": "field.png",
+   "query": "view=field&panels=0",
+   "exit": 0,
+   "page_console_or_uncaught_lines": 0,
+   "sha256": "ac27037121241788fa2c1f5b32f17d04f9314b80f0d3d8db3f259191a10888bb"
+  },
+  {
+   "file": "drive-follow-t22.png",
+   "query": "view=follow&t=22&panels=0",
+   "exit": 0,
+   "page_console_or_uncaught_lines": 0,
+   "sha256": "a9f8eef9eee644f00239a5eed823ad5a3c914f2a8373ebe780aad7730daec4cf"
+  },
+  {
+   "file": "kit-as-drawn-contact.png",
+   "query": "view=contact&config=kit-as-drawn&panels=0",
+   "exit": 0,
+   "page_console_or_uncaught_lines": 0,
+   "sha256": "a3be29b0c1b3a142a9d78a7cc12de6bbe08a09039dd660ed9c0101fbb6ea094a"
+  }
+ ],
+ "inspected_by_agent": [
+  "hero.png",
+  "motor.png",
+  "caster-riser.png",
+  "field.png",
+  "kit-as-drawn-contact.png",
+  "drive-follow-t22.png"
+ ],
+ "not_checked": [
+  "interactive clicks and keyboard focus (only URL-parameter states were rendered)",
+  "real GPU performance",
+  "mobile layout"
+ ]
+}

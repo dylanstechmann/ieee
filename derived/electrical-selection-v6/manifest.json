@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-31",
+  "status": "conditional-digital-shortlist-not-purchase-or-hardware-release",
+  "input_hashes": {
+    "electrical-selection-v6.json": "369e0cebf41d56f8178f21f310a5faf5f8b2d99bfc4585c8dfb3439db84f78dd",
+    "order-a-procurement-v4.json": "12fa6454864d0d21bc27464b5ab9072d90ffc18e0fe218134de871719353f2da",
+    "mule-dynamics-v5.json": "3eae775cdcc945198cb66f05b96e2c33d04d927785c653d935f8fd87119df95f",
+    "derived/mule-dynamics-v5/simulation-matrix.json": "625306ec888979a61cc8ba4c44da0d632e1a8937ee6ece2b9e3b95a0874a7ea9",
+    "tools/electrical-selection-v6.js": "81a8cb9f06487d825c15caf6997fcb5946b0b310b7cad868fdf551f68fb69f4f",
+    "sources/electrical-2026-10-31/index.json": "3c1173e40e856ffb004eadbde7485c561bc29e35f3f7c958e110380cf392e4e8",
+    "sources/electrical-2026-10-31/motor-4754.html": "cc29851104c35366fea44e1b96f80e3c4da80921e04594b6feb7c687424c0c53",
+    "sources/electrical-2026-10-31/driver-1213.html": "f51ce76360ffb334955e678a925723df1b1d6924c6d099cd6dde96eee33dd8ff",
+    "sources/electrical-2026-10-31/driver-2502.html": "fffcff0c09f9de9034532c7768f80d9298ededc929601a06d695668ddcf2450b",
+    "sources/electrical-2026-10-31/driver-2991.html": "a074d4832387354b012a97475851a032f4e0c24a8b06b08b6809bde42a74272d",
+    "sources/electrical-2026-10-31/driver-2130.html": "c8ef4bed1891fe5cd6e9b8da5f44f1a87282194ab428c484b0505f3005eb6b38",
+    "sources/electrical-2026-10-31/pico2-datasheet.pdf": "cbcfaf881018c686495a2e53c7bd281e7e0a8217d79447d73eda7c8f74b7f675",
+    "sources/electrical-2026-10-31/pico-quadrature.pio": "9ac6b687dff969261ede9cb5e815971a9206a980a81990bbceec28e91401dd62",
+    "sources/electrical-2026-10-31/pico-examples-LICENSE": "483f865953435b66c443dee7558debe3cc3cf8fcbb6a112fd9fc6a795d53f1f6",
+    "sources/electrical-2026-10-31/teensy41.html": "5387bd852ebe480ae742a77a8b08aa3ff5265adc6775ade56cb305fb1733f451",
+    "sources/electrical-2026-10-31/teensy-encoder.html": "2c594de4c2855f8acb91d9fc03bf2fdaae1d49aed29d111dc9988c45c1d28604",
+    "sources/electrical-2026-10-31/regulator-2858.html": "9fa2d73a67739016118c8b3f8c0d0199db3af9200ea88c3765bf2e7fc1903109",
+    "sources/electrical-2026-10-31/sn74lvc245a.html": "c5036ae8961c395b7ad77ffededb979c94ebe94968bb5aac5d4376501481378c",
+    "sources/electrical-2026-10-31/sn74lvc245a.pdf": "ad3e705aef834214404d6e1e38cb00f95fdb6f0d9807a784a6f58c4d060f13a3",
+    "sources/electrical-2026-10-31/bq24610.pdf": "2150eadcf8fe436b7a3e126c6227451ab6339f35b991d0c3eee4ccf17e4950bd",
+    "sources/electrical-2026-10-31/vnh5019-guide.pdf": "14d9eaec8f905295b09824d206b46b9c67b84e38af42cd081ee05ba7d45e4b68",
+    "sources/hardware-2026-10-31/pololu/product-4753-specs.html": "3301ff579c3b140e86c3967f208e1326bbd487efec380455d4a12ce49c9e9b40",
+    "sources/hardware-2026-10-31/pololu/product-4754-specs.html": "75e2d2b69b0277c45daabbb4f2ae617d3fbb14a9c89cf9fa43effba5f42afc71",
+    "sources/hardware-2026-10-31/pololu/product-4755-specs.html": "672852a51a8fe04f778520f0be1ef3bca5356feb6cb59d92239a6ff74873412e"
+  },
+  "output_hashes": {
+    "derived/electrical-selection-v6/README.md": "457a34c7c2db30786e5945bbed5d7357f1f72a33760ccf5b3bbf49de5e213023",
+    "derived/electrical-selection-v6/requirements.md": "86fb95067b68db1922751de715a7b8c0804ee0f682a97e9f69e3a551b9a6b9c5",
+    "derived/electrical-selection-v6/candidates.md": "04cc48f8b05110d7f3ce9bd80d5cc9f51a1c2c29ae259e0d4b6f145b06787c97",
+    "derived/electrical-selection-v6/report.json": "fc859f7fdaf31fa4589c3401dc63fd2ac394cb3980854cfb3ea2507941e74464"
+  },
+  "preserved_hashes": {
+    "share/Mule-Dynamics-Studio-v5.html": "090389221c51337d5b1346ce8d3c54e1eca5d7d551cc4729d0a39c3099a1907f",
+    "share/Mule-Studio-v4.html": "fd5687b5b7e57951c6a1c7811d4f34a3394800563848c4fb6c396a11b1df01e0",
+    "share/Robot-Lab-v4.html": "5ca14ec070047867cc9eea8a16f334c924203abad5c7b5408d3ee0e12623543f",
+    "share/Robot-Lab-v3.html": "78b593e56f5b1bc649028c85a415f19dfc31c347c1385556913315000a415674",
+    "derived/mule-dynamics-v5/browser-validation.json": "b3e4074d34f6bf9c3fab4337cecd056dd146a9ab49d9a2b289b4cb55c3a4bb98"
+  }
+}

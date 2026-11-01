@@ -1,0 +1,27 @@
+{
+  "status": "synthetic-geometric-comparison-not-capture-validation-or-production-cad",
+  "input_hashes": {
+    "mechanism-envelope-v6.json": "9b5d7301f90def35917f8d573b105b94348674dbc4c794aea3d29ebed072f906",
+    "mechanism-prototyping-v3.json": "a92f8e8e09358f2a6d8e158ded9f101c0304c9b696efed6e0c95c16356885da1",
+    "drivetrain-mule-v4.json": "342f2bb93eb7b9b47e333487a1fda019a819d7458f1e9385982ebf56161a2dec",
+    "electrical-selection-v6.json": "369e0cebf41d56f8178f21f310a5faf5f8b2d99bfc4585c8dfb3439db84f78dd",
+    "tools/mechanism-envelope-v6.js": "5e1faaea88ea5e0f0c16ed5e00810e56723d2023a49a98160d8520c40d33e4b4",
+    "tools/mechanism-prototyping-v3.js": "7527fbda1c4225d4ef1f629d7249b270af316c7b9ee15fafc493d1e6bfce487d",
+    "derived/organizer-cad/Spare Tire v2.stl": "e04ac6ac4874902f0aa7a4383f738e04d0f0b0b88f553b85f008d66de448e2df"
+  },
+  "output_hashes": {
+    "derived/mechanism-envelope-v6/README.md": "ccb5d56c313cfcd86d58f603a474528aa137efe504e50291f4e5c15d3ed9d0ea",
+    "derived/mechanism-envelope-v6/report.json": "c979575dfa710d2524745b5ac3a81acb8f9078120abd428a1e6baee3b9ab0ad2",
+    "derived/mechanism-envelope-v6/summary.csv": "3d4ac4f24c64fb2a642dad42d85962c9f9810ee3e44b9f3b7a562ed3e549a39a",
+    "derived/mechanism-envelope-v6/review.html": "de77d9310b250e3491b9523e76acf2787e0453521399a73e7b1da60bea245169"
+  },
+  "preserved_hashes": {
+    "share/Robot-Lab-v3.html": "78b593e56f5b1bc649028c85a415f19dfc31c347c1385556913315000a415674",
+    "share/Robot-Lab-v4.html": "5ca14ec070047867cc9eea8a16f334c924203abad5c7b5408d3ee0e12623543f",
+    "share/Mule-Studio-v4.html": "fd5687b5b7e57951c6a1c7811d4f34a3394800563848c4fb6c396a11b1df01e0",
+    "share/Mule-Dynamics-Studio-v5.html": "090389221c51337d5b1346ce8d3c54e1eca5d7d551cc4729d0a39c3099a1907f",
+    "derived/mule-dynamics-v5/browser-validation.json": "b3e4074d34f6bf9c3fab4337cecd056dd146a9ab49d9a2b289b4cb55c3a4bb98",
+    "derived/mechanism-prototyping-v3/manifest.json": "a98efdba6080c7c95b36cfc8a454d013fea384f2fde116f4eb266fedb6b3f749",
+    "derived/electrical-selection-v6/manifest.json": "13922b567edf8a6baba8fb174c445111356ca7bbb8166f13532544ecd10bf6d9"
+  }
+}

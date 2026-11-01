@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-30",
+  "node": "v24.18.1",
+  "tests": {
+    "passed": 56,
+    "failed": 0,
+    "skipped": 0
+  },
+  "files": {
+    "/workspace/ieee/ieee/tools/avoidance-v3.js": "6ef5553a28439136340f1e529d31d9973dc3110121011531086d8af9bcabbe60",
+    "/workspace/ieee/ieee/tools/contract-navigation-v3.js": "6bcd72ff586a6cb03ec9e705993007cc2824ecca5dfec88a1da5fd0436ab1adc",
+    "/workspace/ieee/ieee/route-contract-v3.json": "ff73ce45a70cade4a8093991bc0648383e5165dffbd9abe2d3107261bb9d5f42",
+    "/workspace/ieee/ieee/navigation-v3.json": "c38838349ceb915e0a7b2d00bc1fa9fdf02df89f024862a6404412dcedbfa326",
+    "/workspace/ieee/ieee/avoidance-v3.json": "67d36de9a57ba3c382942b1d840a1c6bd7e56696d6ff81baed758abbff78cc07",
+    "/workspace/ieee/ieee/derived/avoidance-v3/report.json": "86c864ca5bffea2437a4a640b639184cbbc51e3284e6c5ec7de7fc5c1aa8db9a",
+    "/workspace/ieee/ieee/derived/contract-navigation-v3/report.json": "cae6f2a27774b92ea23a8992c83c4f62d16e77598b852d401292297d12afbda3",
+    "/workspace/ieee/ieee/derived/contract-navigation-v3/summary.md": "8049b0007d6c6cb0e0c02b3698b581accb17b0cbb4160ae978b0de4e53b5f2a8"
+  }
+}

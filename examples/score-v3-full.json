@@ -1,0 +1,14 @@
+{
+  "enteredCourse": true,
+  "greenStart": true,
+  "earlyStart": false,
+  "finishedInAssignedBox": true,
+  "flagOnFinalLap": true,
+  "publicity": false,
+  "redCard": false,
+  "cleanWallLaps": [true, true, true],
+  "cleanObstacleLaps": [true, true, true],
+  "tireDrop": "assigned",
+  "tirePickup": "assigned",
+  "finishSeconds": 164.9
+}

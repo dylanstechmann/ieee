@@ -1,0 +1,12 @@
+capability,equipment_id,owned_or_borrowed,available,range_resolution,calibration_check_ref,procedure_ref,training_supervision_ref,reviewer,reviewed_at,notes
+dimensional measurement,,,,,,,,,,
+mass measurement,,,,,,,,,,
+electrical measurement,,,,,,,,,,
+encoder observation,,,,,,,,,,
+speed and duration measurement,,,,,,,,,,
+torque measurement fixture,,,,,,,,,,
+temperature measurement,,,,,,,,,,
+approved bench power and current limiting,,,,,,,,,,
+provisional bench driver,,,,,,,,,,
+disconnect and protection,,,,,,,,,,
+secured fixture and permitted test area,,,,,,,,,,

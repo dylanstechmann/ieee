@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-31",
+  "scope": "Manufacturer snapshots; copyright remains with original publishers; not purchase or hardware approval.",
+  "sources": [
+    {
+      "file": "motor-4754.html",
+      "url": "https://www.pololu.com/product/4754",
+      "retrieved_at_utc": "2026-10-31T18:13:36.187Z",
+      "bytes": 111110,
+      "sha256": "cc29851104c35366fea44e1b96f80e3c4da80921e04594b6feb7c687424c0c53",
+      "status": "archived"
+    },
+    {
+      "file": "driver-1213.html",
+      "url": "https://www.pololu.com/product/1213",
+      "retrieved_at_utc": "2026-10-31T18:13:36.039Z",
+      "bytes": 62821,
+      "sha256": "f51ce76360ffb334955e678a925723df1b1d6924c6d099cd6dde96eee33dd8ff",
+      "status": "archived"
+    },
+    {
+      "file": "driver-2502.html",
+      "url": "https://www.pololu.com/product/2502",
+      "retrieved_at_utc": "2026-10-31T18:13:36.118Z",
+      "bytes": 64789,
+      "sha256": "fffcff0c09f9de9034532c7768f80d9298ededc929601a06d695668ddcf2450b",
+      "status": "archived"
+    },
+    {
+      "file": "driver-2991.html",
+      "url": "https://www.pololu.com/product/2991",
+      "retrieved_at_utc": "2026-10-31T18:13:36.604Z",
+      "bytes": 93311,
+      "sha256": "a074d4832387354b012a97475851a032f4e0c24a8b06b08b6809bde42a74272d",
+      "status": "archived"
+    },
+    {
+      "file": "driver-2130.html",
+      "url": "https://www.pololu.com/product/2130",
+      "retrieved_at_utc": "2026-10-31T18:13:38.623Z",
+      "bytes": 68094,
+      "sha256": "c8ef4bed1891fe5cd6e9b8da5f44f1a87282194ab428c484b0505f3005eb6b38",
+      "status": "archived"
+    },
+    {
+      "file": "pico2.html",
+      "url": "https://www.raspberrypi.com/products/raspberry-pi-pico-2/",
+      "status": "failed",
+      "error": "Command failed: curl --fail --location --silent --show-error --max-time 50 --retry 1 https://www.raspberrypi.com/products/raspberry-pi-pico-2/ -o /workspace/ieee/ieee/sources/electrical-2026-10-31/pico2.html\ncurl: (22) The requested URL returned error: 403\n"
+    },
+    {
+      "file": "pico2-datasheet.pdf",
+      "url": "https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf",
+      "retrieved_at_utc": "2026-10-31T18:13:37.522Z",
+      "bytes": 3016817,
+      "sha256": "cbcfaf881018c686495a2e53c7bd281e7e0a8217d79447d73eda7c8f74b7f675",
+      "status": "archived"
+    },
+    {
+      "file": "pico-quadrature.pio",
+      "url": "https://raw.githubusercontent.com/raspberrypi/pico-examples/master/pio/quadrature_encoder/quadrature_encoder.pio",
+      "retrieved_at_utc": "2026-10-31T18:13:35.486Z",
+      "bytes": 4501,
+      "sha256": "9ac6b687dff969261ede9cb5e815971a9206a980a81990bbceec28e91401dd62",
+      "status": "archived"
+    },
+    {
+      "file": "pico-examples-LICENSE",
+      "url": "https://raw.githubusercontent.com/raspberrypi/pico-examples/master/LICENSE.TXT",
+      "retrieved_at_utc": "2026-10-31T18:13:35.502Z",
+      "bytes": 1489,
+      "sha256": "483f865953435b66c443dee7558debe3cc3cf8fcbb6a112fd9fc6a795d53f1f6",
+      "status": "archived"
+    },
+    {
+      "file": "teensy41.html",
+      "url": "https://www.pjrc.com/store/teensy41.html",
+      "retrieved_at_utc": "2026-10-31T18:13:35.538Z",
+      "bytes": 68988,
+      "sha256": "5387bd852ebe480ae742a77a8b08aa3ff5265adc6775ade56cb305fb1733f451",
+      "status": "archived"
+    },
+    {
+      "file": "teensy-encoder.html",
+      "url": "https://www.pjrc.com/teensy/td_libs_Encoder.html",
+      "retrieved_at_utc": "2026-10-31T18:13:35.500Z",
+      "bytes": 29990,
+      "sha256": "2c594de4c2855f8acb91d9fc03bf2fdaae1d49aed29d111dc9988c45c1d28604",
+      "status": "archived"
+    },
+    {
+      "file": "regulator-2858.html",
+      "url": "https://www.pololu.com/product/2858",
+      "retrieved_at_utc": "2026-10-31T18:13:38.243Z",
+      "bytes": 68864,
+      "sha256": "9fa2d73a67739016118c8b3f8c0d0199db3af9200ea88c3765bf2e7fc1903109",
+      "status": "archived"
+    },
+    {
+      "file": "sn74lvc245a.html",
+      "url": "https://www.ti.com/product/SN74LVC245A",
+      "retrieved_at_utc": "2026-10-31T18:13:36.601Z",
+      "bytes": 323997,
+      "sha256": "c5036ae8961c395b7ad77ffededb979c94ebe94968bb5aac5d4376501481378c",
+      "status": "archived"
+    },
+    {
+      "file": "sn74lvc245a.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc245a.pdf",
+      "retrieved_at_utc": "2026-10-31T18:13:35.966Z",
+      "bytes": 1687941,
+      "sha256": "ad3e705aef834214404d6e1e38cb00f95fdb6f0d9807a784a6f58c4d060f13a3",
+      "status": "archived"
+    },
+    {
+      "file": "bq24610.pdf",
+      "url": "https://www.ti.com/lit/gpn/bq24610",
+      "retrieved_at_utc": "2026-10-31T18:13:36.213Z",
+      "bytes": 3106389,
+      "sha256": "2150eadcf8fe436b7a3e126c6227451ab6339f35b991d0c3eee4ccf17e4950bd",
+      "status": "archived"
+    },
+    {
+      "file": "vnh5019-guide.pdf",
+      "url": "https://www.pololu.com/docs/pdf/0j49/dual_vnh5019_motor_driver_shield.pdf",
+      "retrieved_at_utc": "2026-10-31T18:13:36.194Z",
+      "bytes": 990493,
+      "sha256": "14d9eaec8f905295b09824d206b46b9c67b84e38af42cd081ee05ba7d45e4b68",
+      "status": "archived"
+    }
+  ]
+}

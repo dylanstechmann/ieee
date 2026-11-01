@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-31",
+  "status": "passed",
+  "record": "Agent-run Playwright interaction checks against the generated standalone HTML loaded directly through file://, with visual review of assembly, close-up wiring and field-power screenshots.",
+  "javascript_errors": 0,
+  "warnings": "Headless WebGL ReadPixels/GPU-stall performance warnings only. Two oversized combined test scripts reached the MCP 60-second response limit after completing their final actions; smaller repeated checks passed and are the recorded evidence.",
+  "checks": {
+    "play_pause": true,
+    "step_forward_back": true,
+    "assembly_complete": true,
+    "part_inspection": true,
+    "wire_inspection": true,
+    "layer_toggles": true,
+    "xray": true,
+    "south_route": true,
+    "north_route": true,
+    "fast_forward": true,
+    "deterministic_rewind": true,
+    "pause_freezes_physics": true,
+    "reset": true,
+    "estop": true,
+    "electrical_telemetry": true,
+    "visible_render": true,
+    "standalone_file_protocol": true
+  },
+  "observed": {
+    "assembly_final": {"time_s": 32, "systems": 30, "scene_meshes": 500, "triangles": 115328},
+    "field_scene": {"meshes": 649, "triangles": 144256, "pcf_shadows": true, "shadow_map": 1024},
+    "south_at_20_s": {"x_in": 86.99726240823607, "y_in": 12.28524545314417, "energy_wh": 0.02672020176073064, "bus_v": 11.098473113729355},
+    "south_complete": {"time_s": 54.06666666666424, "energy_wh": 0.069901641173089, "soc_pct": 99.71375249314869},
+    "north_complete": {"time_s": 81.65000000001105, "energy_wh": 0.10466841337449334, "soc_pct": 99.57138241861387},
+    "estop_bus_v": 0,
+    "fast_forward_setting": 4,
+    "rewind_pose_and_energy_exact": true
+  },
+  "screenshots": ["assembly-complete.png", "hardware-detail.png", "field-power.png", "field-detail.png"],
+  "visual_review": "Completed assembly, close-up hardware/wiring and field-power view inspected at 1440 × 1000. Robot geometry, cables, materials, shadows, field and telemetry are visible without overlapping critical controls.",
+  "scope": "Detailed candidate visualization, deterministic planar physics and an illustrative electrical observer only. No vendor-certified geometry, released BOM, wire sizing, calibrated electrical dynamics, hardware test or rules qualification."
+}

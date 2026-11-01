@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1422"><meta name="description" content="Offline high-fidelity 3D hardware, wiring and planar physics studio for a candidate IEEE Stock Car robot."><title>Stock Car Robot Lab · Hardware Studio v0.4</title><style>
+:root{--bg:#08111d;--panel:#101c2c;--panel2:#152438;--ink:#e8eef5;--muted:#9aacc0;--line:#2b3c50;--lime:#d5f249;--blue:#68c8ee;--orange:#f0a35e;font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}*{box-sizing:border-box}body{margin:0}button,select,textarea{font:inherit}button,select{color:var(--ink);background:#18283b;border:1px solid #38506a;border-radius:7px;padding:.48rem .7rem}button{cursor:pointer}button:hover{border-color:var(--blue);background:#20354c}button:focus-visible,select:focus-visible,textarea:focus-visible,input:focus-visible,canvas:focus-visible{outline:3px solid var(--lime);outline-offset:2px}button.active,.mode-tabs button[aria-selected=true]{background:var(--lime);border-color:var(--lime);color:#14202c;font-weight:750}button.primary{background:var(--blue);border-color:var(--blue);color:#092031;font-weight:750;min-width:105px}h1,h2,h3,p{margin-top:0}h1{font-size:1.65rem;letter-spacing:-.04em;margin-bottom:0}h2{font-size:1.5rem;line-height:1.2;letter-spacing:-.025em;margin-bottom:.65rem}h3{font-size:1rem;margin-bottom:.5rem}p{color:var(--muted)}code{color:var(--blue)}[hidden]{display:none!important}header{max-width:1540px;margin:auto;padding:24px 28px 12px;display:flex;align-items:end;justify-content:space-between;gap:20px}.eyebrow{font-size:.7rem;letter-spacing:.13em;font-weight:800;color:var(--blue);margin-bottom:5px}.header-badges{display:flex;gap:7px;flex-wrap:wrap}.header-badges span{border:1px solid var(--line);border-radius:99px;padding:5px 10px;font-size:.73rem;color:var(--muted)}.header-badges .warning{color:var(--orange);border-color:#705135}main{max-width:1540px;margin:auto;padding:0 28px 25px}.intro{display:flex;justify-content:space-between;align-items:center;gap:24px;margin:16px 0}.intro p{margin-bottom:0;max-width:760px}.mode-tabs{display:flex;gap:8px;white-space:nowrap}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 345px;gap:16px;align-items:start}.viewer-card,.sidebar>section,.evidence{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}.viewer-wrap{height:clamp(430px,62vh,690px);position:relative;background:#09101c}canvas{display:block;width:100%;height:100%;cursor:grab;touch-action:none}canvas:active{cursor:grabbing}.viewer-top{position:absolute;top:14px;left:14px;right:14px;display:flex;justify-content:space-between;pointer-events:none;font-size:.72rem;letter-spacing:.08em}.viewer-top span{background:#07101ddd;border:1px solid #32445a;padding:5px 9px;border-radius:5px}.camera-controls{position:absolute;right:12px;bottom:45px;display:flex;gap:5px;flex-wrap:wrap;justify-content:end}.camera-controls button{font-size:.72rem;padding:5px 8px;background:#0b1726dd}.viewer-legend{position:absolute;left:14px;bottom:13px;right:14px;color:#b6c4d3;font-size:.72rem;pointer-events:none}.viewer-error{position:absolute;inset:25%;padding:25px;background:#301d25;border:1px solid #d76c78;border-radius:10px;z-index:5}.transport{padding:14px 16px}.transport-buttons{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.transport-buttons label{margin-left:auto;color:var(--muted);font-size:.8rem}.scrub{display:grid;grid-template-columns:1fr 118px;gap:12px;align-items:center;margin-top:13px}.scrub output{font-variant-numeric:tabular-nums;color:var(--blue);font-size:.82rem;text-align:right}input[type=range]{width:100%;accent-color:var(--lime)}#transport-note{font-size:.74rem;margin:7px 0 0}.sidebar{display:flex;flex-direction:column;gap:12px}.sidebar>section{padding:18px}.sidebar h2{font-size:1.3rem}.step-count{font-size:.74rem;color:var(--lime);margin-bottom:7px}.stage-list{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:14px 0}.stage-list button{padding:6px 2px;font-size:.72rem}.part-browser{border-top:1px solid var(--line);padding-top:10px}.part-browser summary{cursor:pointer;font-weight:700}#part-list{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;max-height:125px;overflow:auto}#part-list button{font-size:.69rem;padding:4px 7px}.detail-card{background:var(--panel2);border-left:3px solid var(--blue);padding:12px;margin-top:14px}.detail-card p{font-size:.82rem;margin-bottom:0}.question-card{border-top:2px solid var(--lime)!important}.question-card h3{margin-bottom:6px}.question-card p{font-size:.8rem}textarea{width:100%;resize:vertical;background:#0a1523;color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:9px}#copy-status{font-size:.72rem;color:var(--lime);margin-left:8px}.route-label{display:grid;gap:6px;color:var(--muted);font-size:.78rem}.route-label select{width:100%}.telemetry{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:14px 0}.telemetry div{background:#0b1726;padding:8px;border-radius:6px}.telemetry span{display:block;color:var(--muted);font-size:.68rem}.telemetry strong{display:block;font-size:.82rem;font-variant-numeric:tabular-nums}.event-log{padding-left:20px;max-height:130px;overflow:auto;color:var(--muted);font-size:.75rem}.event-log li{margin-bottom:7px}.evidence{margin-top:16px;padding:0 18px}.evidence summary{cursor:pointer;padding:15px 0;font-weight:750}.evidence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;padding-bottom:15px}.evidence-grid p{font-size:.82rem}footer{max-width:1540px;margin:auto;padding:0 28px 25px;color:#71869c;font-size:.72rem;display:flex;justify-content:space-between}
+h1 span{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);margin-top:4px}.viewer-wrap{height:680px}.layer-controls{position:absolute;left:16px;top:52px;display:flex;gap:6px;z-index:5}.layer-controls button{padding:.34rem .58rem;font-size:.74rem;background:rgba(12,24,38,.88)}.layer-controls button.active{background:#28475b;border-color:var(--blue);color:#dff7ff}.part-labels{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:3}.part-label{position:absolute;transform:translate(-50%,-115%);padding:3px 7px;border:1px solid rgba(120,203,231,.5);border-radius:4px;background:rgba(5,14,23,.8);color:#dceef5;font-size:10px;letter-spacing:.03em;white-space:nowrap;box-shadow:0 2px 8px #0008}.part-label:after{content:"";position:absolute;left:50%;top:100%;height:13px;border-left:1px solid #7bc6df99}.render-stats{position:absolute;right:16px;bottom:16px;color:#8fa8b9;font:10px/1.3 ui-monospace,monospace;text-align:right;pointer-events:none}.wire-card select{width:100%;margin-top:5px}.wire-card label{font-size:.82rem;color:var(--muted)}.estop-button{width:100%;margin:8px 0 12px;background:#5b2024;border-color:#a83c42;color:#ffd9d9}.estop-button[aria-pressed=true]{background:#c9453e;border-color:#ff8a79;color:white}.telemetry strong{font-variant-numeric:tabular-nums}.telemetry div:nth-child(5),.telemetry div:nth-child(6),.telemetry div:nth-child(7),.telemetry div:nth-child(8){border-left:2px solid #315a70;padding-left:8px}.viewer-legend{max-width:65%}.evidence-grid{grid-template-columns:repeat(4,1fr)}
+
+@media(max-width:1050px){.workspace{grid-template-columns:minmax(0,1fr) 300px}.intro{align-items:flex-start;flex-direction:column}.viewer-wrap{height:560px}}@media(max-width:800px){header{align-items:flex-start;flex-direction:column;padding:18px}.workspace{grid-template-columns:1fr}main{padding:0 14px 20px}.intro{margin-top:8px}.viewer-wrap{height:520px}.sidebar{display:grid;grid-template-columns:1fr 1fr}.evidence-grid{grid-template-columns:1fr}.question-card{align-self:start}}@media(max-width:540px){.sidebar{display:flex}.mode-tabs{width:100%}.mode-tabs button{flex:1}.viewer-wrap{height:440px}.transport-buttons label{margin-left:0}.scrub{grid-template-columns:1fr}.scrub output{text-align:left}.camera-controls{bottom:50px}.header-badges{display:none}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+</style></head>
+<body>
+<header><div><p class="eyebrow">IEEE SOUTHEASTCON 2027 · HOBBY / LEARNING PROJECT</p><h1>Stock Car Robot Lab <span>Hardware Studio</span></h1></div><div class="header-badges"><span>Concept v0.4</span><span>Offline WebGL · detailed wiring</span><span class="warning">Not fabrication CAD</span></div></header>
+<main>
+<section class="intro"><div><h2>Inspect the machine. Trace every wire. Drive the model.</h2><p>A detailed candidate assembly with material-aware rendering, live electrical telemetry and deterministic planar physics. Components and connector locations remain unselected visualization proxies.</p></div><div class="mode-tabs" role="tablist" aria-label="Robot lab mode"><button id="tab-assembly" class="active" role="tab" aria-selected="true" data-mode="assembly">1 · Hardware assembly</button><button id="tab-simulation" role="tab" aria-selected="false" data-mode="simulation">2 · Field + power</button></div></section>
+<div class="workspace">
+<section class="viewer-card" aria-label="Interactive 3D viewer">
+<div class="viewer-wrap"><canvas id="view" tabindex="0" aria-label="Detailed 3D robot, wiring and field. Drag to orbit, scroll to zoom."></canvas><div id="webgl-error" class="viewer-error" hidden></div><div id="labels" class="part-labels" aria-hidden="true"></div><div class="viewer-top"><span id="view-badge">EXPLODED HARDWARE ASSEMBLY</span><span id="view-status">Paused</span></div><div class="camera-controls" aria-label="Camera presets"><button data-camera="reset">Orbit reset</button><button data-camera="detail">Detail</button><button data-camera="top">Top</button><button data-camera="follow">Follow</button><button id="fullscreen">Full screen</button></div><div class="layer-controls" aria-label="Visible layers"><button id="toggle-wiring" class="active" aria-pressed="true">Wiring</button><button id="toggle-labels" aria-pressed="false">Labels</button><button id="toggle-xray" aria-pressed="false">X-ray</button></div><div class="viewer-legend" id="viewer-legend">Detailed candidate proxies · not vendor-certified dimensions</div><div id="render-stats" class="render-stats"></div></div>
+<div class="transport"><div class="transport-buttons"><button id="reset" title="Reset (R)">|◀ <span>Reset</span></button><button id="back" title="Back one second">−1 s</button><button id="play" class="primary" title="Play or pause (Space)">▶ Play</button><button id="forward" title="Forward one second">+1 s</button><label>Speed <select id="speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div><div class="scrub"><input id="timeline" type="range" min="0" max="32" step="0.01" value="0" aria-label="Playback time"><output id="time">00:00.0 / 00:32.0</output></div><p id="transport-note">Assembly is deterministic: scrub to any point without losing component or cable state.</p></div>
+</section>
+<aside class="sidebar">
+<section id="assembly-panel"><p class="eyebrow">ASSEMBLY / 30 INSPECTABLE SYSTEMS</p><div class="step-count" id="step-count">Step 1 of 8</div><h2 id="stage-title"></h2><p id="stage-description"></p><div id="stage-list" class="stage-list" aria-label="Assembly stages"></div><details open class="part-browser"><summary>Inspect hardware</summary><div id="part-list"></div></details><article id="part-detail" class="detail-card"><h3>Candidate hardware, not a BOM</h3><p>Detailed geometry makes packaging and wiring questions visible. It does not certify vendor dimensions, fit, current capacity or structural adequacy.</p></article></section>
+<section id="simulation-panel" hidden><p class="eyebrow">120 Hz PLANAR PHYSICS + ELECTRICAL OBSERVER</p><h2>Conditional pit-route study</h2><label class="route-label">Guide route <select id="route"><option value="south">South approach · conditional</option><option value="north">North approach · experimental</option></select></label><button id="estop" class="estop-button" aria-pressed="false">● Engage modeled E-stop</button><div class="telemetry"><div><span>Status</span><strong id="sim-status">Ready</strong></div><div><span>Sim time</span><strong id="sim-time">0.0 s</strong></div><div><span>Position</span><strong id="sim-pose">—</strong></div><div><span>Body speed</span><strong id="sim-speed">0.0 in/s</strong></div><div><span>Bus voltage</span><strong id="sim-bus">—</strong></div><div><span>Total current</span><strong id="sim-current">—</strong></div><div><span>Electrical power</span><strong id="sim-power">—</strong></div><div><span>Scenario SOC</span><strong id="sim-soc">100%</strong></div><div><span>Motor RPM L / R</span><strong id="sim-rpm">—</strong></div><div><span>Torque L / R</span><strong id="sim-torque">—</strong></div><div><span>Distance</span><strong id="sim-distance">0.0 in</strong></div><div><span>Command</span><strong id="sim-command">—</strong></div><div><span>Carried tire</span><strong id="sim-tire">Red preload</strong></div><div><span>Route progress</span><strong id="sim-progress">0%</strong></div></div><article class="detail-card"><h3>Model boundary</h3><p>Planar motion remains the validated route solver. Electrical values use an illustrative 11.1 V / 100:1 / 4 kg scenario and do not feed back into traction, motor control or wire sizing. Saturation is a warning flag, not a component rating.</p></article><h3>Event log</h3><ol id="event-log" class="event-log"></ol></section>
+<section class="wire-card"><p class="eyebrow">CONNECTION INSPECTOR</p><label>Trace a wire <select id="wire-select"><option value="">Choose a net or wire</option></select></label><article id="wire-detail" class="detail-card"><h3>23 routed cables · 11 connectors</h3><p>Select a cable to highlight it and inspect its endpoints, net class and live modeled current. Pin locations are geometric candidates, not manufacturer footprints.</p></article></section>
+<section class="question-card"><p class="eyebrow">ASK ABOUT THIS VIEW</p><h3>Bring a focused question back to the chat</h3><p id="question-suggestion">Select hardware, a wire or a stage, then copy its context.</p><textarea id="question-input" rows="3" aria-label="Question to copy" placeholder="Which measurements are needed before this candidate wiring can become a build drawing?"></textarea><button id="copy-question">Copy question</button><span id="copy-status" role="status"></span></section>
+</aside>
+</div>
+<details class="evidence"><summary>Assumptions, controls and evidence boundary</summary><div class="evidence-grid"><div><h3>Controls</h3><p><b>Space</b> play/pause · <b>R</b> reset · <b>←/→</b> one second · drag orbit · wheel zoom. Toggle wiring, labels or X-ray. Field scrubbing deterministically re-simulates from the initial pose at 120 Hz.</p></div><div><h3>What the upgrade adds</h3><p>Beveled procedural hardware, metallic/roughness materials, soft shadow mapping, rotating wheels, detailed connectors and smooth cable meshes. Electrical telemetry and cable activity derive from the same fixed-step drive state.</p></div><div><h3>What remains unproven</h3><p>No vendor-certified models, released BOM, fabrication drawing, calibrated motor/battery model, wire or fuse sizing, 3D contacts, wheel slip, sensor simulation, mechanism validation, legal route or complete mission.</p></div><div><h3>Before ordering</h3><p>Complete E00 inventory/policy input, measure the actual tire and drivetrain loads, verify candidate datasheets and mechanical drawings, then review power isolation, grounding, connector ratings and wire sizes.</p></div></div></details>
+</main>
+<footer>Agent-built high-fidelity concept lab · local/offline · no purchases or hardware tests implied <span id="build-version">v0.4.0</span></footer>
+<script>
+/* Generated by tools/build-robot-lab-v4.js. */
+globalThis.ROBOT_LAB_DATA = {"generated":"2026-10-31","status":"agent-built-high-fidelity-candidate-lab-not-hardware-or-rules-validation","model":{"version":"0.4.0","title":"Stock Car Robot Lab — Hardware Studio","status":"high-fidelity-candidate-visualization-with-illustrative-electrical-observer-not-final-cad-not-hardware-validation","physics":{"fixed_step_s":0.008333333333333333,"max_forward_in_s":10,"max_reverse_in_s":7,"max_angular_deg_s":100,"linear_accel_in_s2":24,"angular_accel_deg_s2":300,"wheel_track_in":8,"dock_dwell_s":1.5,"position_tolerance_in":0.3,"heading_tolerance_deg":2},"electrical":{"status":"illustrative-observer-not-a-vendor-model-or-component-selection","nominal_bus_v":11.1,"battery_capacity_ah":2.2,"battery_internal_resistance_ohm":0.09,"motor_resistance_ohm":1.2,"motor_kv_rpm_v":900,"gear_ratio":100,"gear_efficiency":0.65,"driver_voltage_drop_v":0.35,"continuous_current_limit_a":3,"logic_idle_w":4.2,"scenario_mass_kg":4,"scenario_yaw_inertia_kg_m2":0.06,"rolling_resistance_coefficient":0.03,"gravity_m_s2":9.81},"stages":[{"id":"frame","title":"Build the lower frame","duration_s":4,"description":"A flat open frame establishes the 10 × 10-inch concept envelope. Dimensions and material are placeholders, not fabrication instructions.","question":"What material and fastening method should survive wheel impacts without adding unnecessary weight?"},{"id":"drive","title":"Add the differential drive","duration_s":4,"description":"Two powered wheels on a centered 8-inch track provide forward, reverse and in-place rotation. Small caster contacts are illustrative; real traction and scrub require testing.","question":"Should the concept use two drive wheels plus casters, or four driven wheels?"},{"id":"power","title":"Install power and emergency stop","duration_s":4,"description":"Battery, power distribution and a visible emergency-stop control occupy the rear deck. Battery chemistry, voltage, wiring and mounting are not selected.","question":"What battery and fuse architecture would meet the rules and the measured drivetrain load?"},{"id":"compute","title":"Add control electronics","duration_s":4,"description":"A controller and motor driver sit on the open middle deck for access. Board models, connectors and computing power remain conceptual.","question":"Which controller can handle odometry, range sensing and camera/tag processing with margin?"},{"id":"sensors","title":"Add navigation sensors","duration_s":4,"description":"A raised camera, front/side range sensors and a low line array represent complementary sensing. Their fields of view and actual placements need calibration and rules review.","question":"Which sensors are necessary for reliable tag, line and obstacle observations under venue lighting?"},{"id":"tires","title":"Add the tire-handling fork","duration_s":4,"description":"A short front fork illustrates a passive capture concept for the official-size tire. It is not a proven gripper and does not establish exchange or parking legality.","question":"Can a passive fork reliably acquire and retain the tire across its unknown initial poses and friction?"},{"id":"flag","title":"Add the final-lap flag","duration_s":4,"description":"A lightweight mast and flag fit beneath the conceptual 12-inch starting-height ceiling. Deployment timing and school artwork are not modeled.","question":"Should the flag be fixed, hinged or actively deployed after the second lap?"},{"id":"integration","title":"Protect wiring and inspect the envelope","duration_s":4,"description":"A cable cover completes the visual assembly. Real integration still needs strain relief, interference checks, fastener retention, mass measurement and emergency-stop testing.","question":"What physical inspection and low-speed tests should gate the first field run?"}],"parts":[{"id":"baseplate","name":"Lower deck","stage":1,"kind":"box","pos":[0,0,1.65],"size":[9,8,0.3],"color":"#66788a","exploded":[-7,-6,7],"description":"Conceptual structural deck; material and thickness are not selected."},{"id":"rail-left","name":"Left frame rail","stage":1,"kind":"box","pos":[0,4.25,2.1],"size":[9,0.5,0.8],"color":"#9aabba","exploded":[-6,-8,8]},{"id":"rail-right","name":"Right frame rail","stage":1,"kind":"box","pos":[0,-4.25,2.1],"size":[9,0.5,0.8],"color":"#9aabba","exploded":[6,-8,8]},{"id":"cross-front","name":"Front cross-member","stage":1,"kind":"box","pos":[4.25,0,2.1],"size":[0.5,8,0.8],"color":"#9aabba","exploded":[9,0,7]},{"id":"cross-rear","name":"Rear cross-member","stage":1,"kind":"box","pos":[-4.25,0,2.1],"size":[0.5,8,0.8],"color":"#9aabba","exploded":[-10,0,7]},{"id":"motor-left","name":"Left drive motor","stage":2,"kind":"box","pos":[0,3.55,1.65],"size":[2.5,1,1.2],"color":"#e0a24a","exploded":[-3,10,5]},{"id":"motor-right","name":"Right drive motor","stage":2,"kind":"box","pos":[0,-3.55,1.65],"size":[2.5,1,1.2],"color":"#e0a24a","exploded":[-3,-10,5]},{"id":"wheel-left","name":"Left drive wheel","stage":2,"kind":"cylinder","pos":[0,4.5,1.5],"size":[1.5,1.5,0.75],"rot":[1.5707963267948966,0,0],"color":"#202833","exploded":[0,11,3]},{"id":"wheel-right","name":"Right drive wheel","stage":2,"kind":"cylinder","pos":[0,-4.5,1.5],"size":[1.5,1.5,0.75],"rot":[1.5707963267948966,0,0],"color":"#202833","exploded":[0,-11,3]},{"id":"caster-front","name":"Front support contact","stage":2,"kind":"cylinder","pos":[3.5,0,0.55],"size":[0.55,0.55,0.5],"color":"#485563","exploded":[8,5,3]},{"id":"caster-rear","name":"Rear support contact","stage":2,"kind":"cylinder","pos":[-3.5,0,0.55],"size":[0.55,0.55,0.5],"color":"#485563","exploded":[-8,5,3]},{"id":"battery","name":"Battery placeholder","stage":3,"kind":"box","pos":[-2.2,0,2.65],"size":[3.8,4.2,1.4],"color":"#425d75","exploded":[-10,-5,9]},{"id":"power","name":"Power distribution","stage":3,"kind":"box","pos":[-2.2,-2.8,2.5],"size":[2.4,1.2,0.5],"color":"#e5c14f","exploded":[-8,-9,8]},{"id":"estop","name":"Emergency-stop control","stage":3,"kind":"cylinder","pos":[-3.4,2.7,3.15],"size":[0.5,0.5,0.5],"color":"#e45d5d","exploded":[-9,8,9]},{"id":"controller","name":"Controller placeholder","stage":4,"kind":"box","pos":[1.2,0,2.45],"size":[3.5,3,0.25],"color":"#37a884","exploded":[5,0,11]},{"id":"driver","name":"Motor driver placeholder","stage":4,"kind":"box","pos":[0,-2.5,2.45],"size":[2.2,1.3,0.25],"color":"#4a91c9","exploded":[2,-8,10]},{"id":"mast","name":"Camera mast","stage":5,"kind":"box","pos":[2.8,0,4.5],"size":[0.35,0.35,4],"color":"#a8b4c0","exploded":[7,4,12]},{"id":"camera","name":"AprilTag camera","stage":5,"kind":"box","pos":[3,0,6.3],"size":[0.8,1.5,0.8],"color":"#8b75d7","exploded":[10,3,12]},{"id":"range-front","name":"Front range sensor","stage":5,"kind":"box","pos":[4.4,0,2.8],"size":[0.25,1.4,0.6],"color":"#65c8e0","exploded":[11,0,8]},{"id":"range-left","name":"Left range sensor","stage":5,"kind":"box","pos":[0,4.3,2.8],"size":[1.2,0.25,0.6],"color":"#65c8e0","exploded":[3,10,8]},{"id":"range-right","name":"Right range sensor","stage":5,"kind":"box","pos":[0,-4.3,2.8],"size":[1.2,0.25,0.6],"color":"#65c8e0","exploded":[3,-10,8]},{"id":"line-array","name":"Low line-sensor array","stage":5,"kind":"box","pos":[3.6,0,1.1],"size":[0.5,4.5,0.25],"color":"#38444f","exploded":[8,-5,5]},{"id":"fork-left","name":"Left tire-fork rail","stage":6,"kind":"box","pos":[3.9,1.5,2.5],"size":[2.2,0.25,0.35],"color":"#e6874c","exploded":[10,7,6]},{"id":"fork-right","name":"Right tire-fork rail","stage":6,"kind":"box","pos":[3.9,-1.5,2.5],"size":[2.2,0.25,0.35],"color":"#e6874c","exploded":[10,-7,6]},{"id":"palm-left","name":"Left capture palm","stage":6,"kind":"box","pos":[4.8,1.5,2.8],"size":[0.3,0.4,1.2],"color":"#e6874c","exploded":[12,6,7]},{"id":"palm-right","name":"Right capture palm","stage":6,"kind":"box","pos":[4.8,-1.5,2.8],"size":[0.3,0.4,1.2],"color":"#e6874c","exploded":[12,-6,7]},{"id":"carried-tire","name":"Carried spare tire","stage":6,"kind":"torus","pos":[4,0,3.25],"size":[1.068,1.068,1.068],"color":"#d84f57","exploded":[12,0,5],"description":"Official tire proportions: approximately 68.18 mm OD and 40.30 mm bore. Red is the preload; the simulation substitutes blue after its conceptual dock event."},{"id":"flag-mast","name":"Flag mast","stage":7,"kind":"cylinder","pos":[-3.6,2.8,5],"size":[0.12,0.12,5],"color":"#d6dee5","exploded":[-10,8,12]},{"id":"flag","name":"School-flag placeholder","stage":7,"kind":"box","pos":[-3.55,2.8,7],"size":[0.08,2.5,1.4],"color":"#d5f249","exploded":[-11,10,13]},{"id":"cable-cover","name":"Central cable cover","stage":8,"kind":"box","pos":[-0.5,0,3.15],"size":[6,0.25,0.25],"color":"#f0c94d","exploded":[0,0,14]}],"limitations":["All robot part dimensions, placements and mechanisms are agent-authored visualization choices, not selected hardware or manufacturing CAD.","Physics is planar differential-drive motion with acceleration limits and discrete collision rejection, rendered in 3D. It omits suspension, tire slip, motor electrical dynamics, sensor noise, mechanism dynamics and 3D rigid-body contacts.","The stored south/north routes are conditional engineering examples to pit box 1 with an empty field, not complete three-lap missions or official legality determinations.","No obstacle vehicles, field tolerances, lap adjudication or scoring are simulated in this version.","Assembly playback is deterministic; field physics advances only while playing. Fast-forward changes simulated time rate, not solver fidelity."]},"wiring":{"version":"0.4.0","status":"agent-authored-candidate-routing-not-a-wire-gauge-or-safety-release","connectors":[{"id":"J_BATT","part":"battery","pins":{"+":[-2,-2.25,3.05],"-":[-2,-2.55,3.05]}},{"id":"J_FUSE","part":"power","pins":{"IN":[-2.3,-2.8,2.95],"OUT":[-1.9,-2.8,2.95]}},{"id":"J_ESTOP","part":"estop","pins":{"IN":[-3.4,2.55,3.2],"OUT":[-3.4,2.85,3.2]}},{"id":"J_PDB","part":"power","pins":{"P+":[-1.6,-2.5,2.85],"P-":[-1.6,-3.1,2.85],"D+":[-0.8,-2.5,2.85],"D-":[-0.8,-3.1,2.85],"L+":[-1.2,-2.5,2.85],"L-":[-1.2,-3.1,2.85]}},{"id":"J_DRIVER","part":"driver","pins":{"VM":[0.8,-2.9,2.75],"GND":[0.8,-2.6,2.75],"M1A":[0.9,-2.15,2.75],"M1B":[0.9,-1.95,2.75],"M2A":[0.65,-2.15,2.75],"M2B":[0.65,-1.95,2.75],"PWM1":[0,-1.9,2.75],"DIR1":[0.2,-1.9,2.75],"PWM2":[0.4,-1.9,2.75],"DIR2":[0.6,-1.9,2.75]}},{"id":"J_MOTOR_L","part":"motor-left","pins":{"+":[0,3.1,2.3],"-":[0.25,3.1,2.3]}},{"id":"J_MOTOR_R","part":"motor-right","pins":{"+":[0,-3.1,2.3],"-":[0.25,-3.1,2.3]}},{"id":"J_BUCK","part":"power","pins":{"IN+":[-1.3,-1.6,2.65],"IN-":[-1.3,-1.85,2.65],"OUT+":[-0.8,-1.6,2.65],"OUT-":[-0.8,-1.85,2.65]}},{"id":"J_CTRL","part":"controller","pins":{"5V":[0.4,-1.2,2.7],"GND":[0.4,-1,2.7],"PWM1":[1,-1.2,2.7],"DIR1":[1.2,-1.2,2.7],"PWM2":[1.4,-1.2,2.7],"DIR2":[1.6,-1.2,2.7],"CAM":[2.4,0.5,2.8],"SDA":[2.2,-1.2,2.7],"SCL":[2.4,-1.2,2.7]}},{"id":"J_CAMERA","part":"camera","pins":{"CSI":[2.7,0,6.25]}},{"id":"J_RANGE","part":"range-front","pins":{"SDA":[4.25,0.25,2.85],"SCL":[4.25,0,2.85],"VIN":[4.25,-0.25,2.85],"GND":[4.25,-0.5,2.85]}}],"wires":[{"id":"W01","net":"BATT+","kind":"power","from":["J_BATT","+"],"to":["J_FUSE","IN"],"color":"#d93832","diameter_in":0.11,"points":[[-2,-2.25,3.05],[-2.15,-2.35,3.25],[-2.3,-2.8,2.95]]},{"id":"W02","net":"FUSED+","kind":"power","from":["J_FUSE","OUT"],"to":["J_ESTOP","IN"],"color":"#ef5b45","diameter_in":0.11,"points":[[-1.9,-2.8,2.95],[-3.9,-2.4,3.35],[-4.05,1.9,3.4],[-3.4,2.55,3.2]]},{"id":"W03","net":"SWITCHED+","kind":"power","from":["J_ESTOP","OUT"],"to":["J_PDB","P+"],"color":"#e64b3c","diameter_in":0.11,"points":[[-3.4,2.85,3.2],[-3.8,3.25,3.4],[-2.6,1.2,3.25],[-2.2,-1.5,3.15],[-1.6,-2.5,2.85]]},{"id":"W04","net":"GND","kind":"ground","from":["J_BATT","-"],"to":["J_PDB","P-"],"color":"#171b20","diameter_in":0.11,"points":[[-2,-2.55,3.05],[-2.05,-3.35,3.15],[-1.6,-3.1,2.85]]},{"id":"W05","net":"DRIVE+","kind":"power","from":["J_PDB","D+"],"to":["J_DRIVER","VM"],"color":"#d93832","diameter_in":0.1,"points":[[-0.8,-2.5,2.85],[-0.3,-3.25,3.05],[0.8,-2.9,2.75]]},{"id":"W06","net":"GND","kind":"ground","from":["J_PDB","D-"],"to":["J_DRIVER","GND"],"color":"#20252b","diameter_in":0.1,"points":[[-0.8,-3.1,2.85],[-0.15,-3.45,3],[0.8,-2.6,2.75]]},{"id":"W07","net":"MOTOR_L_A","kind":"motor","from":["J_DRIVER","M1A"],"to":["J_MOTOR_L","+"],"color":"#f0c641","diameter_in":0.09,"points":[[0.9,-2.15,2.75],[1.15,-0.8,3.15],[0.65,2.3,3.1],[0,3.1,2.3]]},{"id":"W08","net":"MOTOR_L_B","kind":"motor","from":["J_DRIVER","M1B"],"to":["J_MOTOR_L","-"],"color":"#f5f1df","diameter_in":0.09,"points":[[0.9,-1.95,2.75],[1.4,-0.6,3.3],[0.85,2.5,3.25],[0.25,3.1,2.3]]},{"id":"W09","net":"MOTOR_R_A","kind":"motor","from":["J_DRIVER","M2A"],"to":["J_MOTOR_R","+"],"color":"#f0c641","diameter_in":0.09,"points":[[0.65,-2.15,2.75],[0.55,-2.75,3.15],[0,-3.1,2.3]]},{"id":"W10","net":"MOTOR_R_B","kind":"motor","from":["J_DRIVER","M2B"],"to":["J_MOTOR_R","-"],"color":"#f5f1df","diameter_in":0.09,"points":[[0.65,-1.95,2.75],[0.95,-2.95,3.25],[0.25,-3.1,2.3]]},{"id":"W11","net":"LOGIC_IN+","kind":"power","from":["J_PDB","L+"],"to":["J_BUCK","IN+"],"color":"#e64b3c","diameter_in":0.075,"points":[[-1.2,-2.5,2.85],[-1.65,-2.1,3],[-1.3,-1.6,2.65]]},{"id":"W12","net":"GND","kind":"ground","from":["J_PDB","L-"],"to":["J_BUCK","IN-"],"color":"#20252b","diameter_in":0.075,"points":[[-1.2,-3.1,2.85],[-1.75,-2.25,3.1],[-1.3,-1.85,2.65]]},{"id":"W13","net":"5V","kind":"power","from":["J_BUCK","OUT+"],"to":["J_CTRL","5V"],"color":"#e64b3c","diameter_in":0.065,"points":[[-0.8,-1.6,2.65],[-0.25,-1.65,3.05],[0.4,-1.2,2.7]]},{"id":"W14","net":"GND","kind":"ground","from":["J_BUCK","OUT-"],"to":["J_CTRL","GND"],"color":"#20252b","diameter_in":0.065,"points":[[-0.8,-1.85,2.65],[-0.2,-1.8,3.15],[0.4,-1,2.7]]},{"id":"W15","net":"PWM_L","kind":"signal","from":["J_CTRL","PWM1"],"to":["J_DRIVER","PWM1"],"color":"#3d86e8","diameter_in":0.05,"points":[[1,-1.2,2.7],[0.75,-1.45,3.05],[0,-1.9,2.75]]},{"id":"W16","net":"DIR_L","kind":"signal","from":["J_CTRL","DIR1"],"to":["J_DRIVER","DIR1"],"color":"#f5f1df","diameter_in":0.05,"points":[[1.2,-1.2,2.7],[0.95,-1.55,3.12],[0.2,-1.9,2.75]]},{"id":"W17","net":"PWM_R","kind":"signal","from":["J_CTRL","PWM2"],"to":["J_DRIVER","PWM2"],"color":"#45b97c","diameter_in":0.05,"points":[[1.4,-1.2,2.7],[1.2,-1.6,3.18],[0.4,-1.9,2.75]]},{"id":"W18","net":"DIR_R","kind":"signal","from":["J_CTRL","DIR2"],"to":["J_DRIVER","DIR2"],"color":"#e9a23b","diameter_in":0.05,"points":[[1.6,-1.2,2.7],[1.4,-1.7,3.24],[0.6,-1.9,2.75]]},{"id":"W19","net":"CAMERA","kind":"data","from":["J_CTRL","CAM"],"to":["J_CAMERA","CSI"],"color":"#3c8ca8","diameter_in":0.12,"points":[[2.4,0.5,2.8],[2.1,0.8,3.35],[2.65,0.45,4.4],[2.7,0,6.25]]},{"id":"W20","net":"I2C_SDA","kind":"signal","from":["J_CTRL","SDA"],"to":["J_RANGE","SDA"],"color":"#3d86e8","diameter_in":0.05,"points":[[2.2,-1.2,2.7],[3.25,-0.8,3.15],[3.7,0.35,3.15],[4.25,0.25,2.85]]},{"id":"W21","net":"I2C_SCL","kind":"signal","from":["J_CTRL","SCL"],"to":["J_RANGE","SCL"],"color":"#e9a23b","diameter_in":0.05,"points":[[2.4,-1.2,2.7],[3.4,-0.65,3.25],[3.85,0.1,3.2],[4.25,0,2.85]]},{"id":"W22","net":"5V","kind":"power","from":["J_CTRL","5V"],"to":["J_RANGE","VIN"],"color":"#e64b3c","diameter_in":0.05,"points":[[0.4,-1.2,2.7],[2.5,-1.5,3.3],[3.65,-0.55,3.25],[4.25,-0.25,2.85]]},{"id":"W23","net":"GND","kind":"ground","from":["J_CTRL","GND"],"to":["J_RANGE","GND"],"color":"#20252b","diameter_in":0.05,"points":[[0.4,-1,2.7],[2.65,-1.35,3.4],[3.8,-0.75,3.3],[4.25,-0.5,2.85]]}],"limitations":["Connector positions and cable routes are visualization candidates, not vendor footprints or a fabrication drawing.","Wire gauge, fuse rating, connector current rating, grounding topology and emergency-stop architecture require selected hardware and supervised review.","Signal wires are not a complete interface definition; encoder, additional sensor and mechanism connections remain to be designed.","Animated current is an illustrative electrical observer driven by planar motion, not a calibrated motor, battery or wiring simulation."]},"field":{"units":"inches","bounds":{"min_x":1,"max_x":95,"min_y":1,"max_y":47},"features":[{"id":"pit_box_1","kind":"marking","vertices_in":[[1.017,3.045],[13.017,3.045],[13.017,15.045],[1.017,15.045]],"provenance":"12-inch width and 3-inch gap: V3 drawing; depth and origin assumed"},{"id":"pit_box_2","kind":"marking","vertices_in":[[1.017,18.045],[13.017,18.045],[13.017,30.045],[1.017,30.045]],"provenance":"12-inch width and 3-inch gap: V3 drawing; depth and origin assumed"},{"id":"pit_box_3","kind":"marking","vertices_in":[[1.017,33.045],[13.017,33.045],[13.017,45.045],[1.017,45.045]],"provenance":"12-inch width and 3-inch gap: V3 drawing; depth and origin assumed"},{"id":"start_box","kind":"marking","vertices_in":[[14.378,32.918],[26.378,32.918],[26.378,44.918],[14.378,44.918]],"provenance":"trace origin and 12-inch square assumed"},{"id":"center_divider_axis","kind":"divider_axis","vertices_in":[[43.87,24.073],[79.87,24.073]],"provenance":"36-inch length: V3 drawing; axis center trace-derived"},{"id":"pit_divider_axis","kind":"divider_axis","vertices_in":[[28,16.073],[28,32.073]],"provenance":"16-inch length and 28-inch division: V3 drawing; alignment and axis center assumed"},{"id":"track_marking_trace","kind":"trace","vertices_in":[[88.012,17.837],[88.012,30.308],[80.024,36.399],[43.57,36.399],[35.873,30.308],[35.873,17.837],[43.57,11.601],[80.024,11.601]],"provenance":"unconstrained image trace; not dimensioned"}],"solids":[{"id":"center_divider_axis","vertices_in":[[43.87,23.573],[79.87,23.573],[79.87,24.573],[43.87,24.573]]},{"id":"pit_divider_axis","vertices_in":[[27.5,16.073],[28.5,16.073],[28.5,32.073],[27.5,32.073]]}],"board":{"length":96,"width":48,"thickness":0.719},"wallScenario":"inside-nominal","obstacleCase":"empty-control"},"routes":{"south":{"id":"south","label":"South-end approach · conditional","policy":"selectable-original-regions","target_id":"pit_box_1","waypoints":[[20.378,38.918,0],[36,38.918,0],[36,38.918,270],[36,36,270],[36,36,0],[87,36,0],[87,36,270],[87,12,270],[87,12,180],[36,12,180],[36,12,270],[36,9,270],[36,9,180],[35,9,180],[34,9,180],[33,9,180],[32,9,180],[31,9,180],[30,9,180],[29,9,180],[28,9,180],[27,9,180],[26,9,180],[25,9,180],[24,9,180],[23,9,180],[22.435,9,180],[22,9,180],[21,9,180],[20.378,9,180],[20,9,180],[19,9,180],[18,9,180],[17,9,180],[16,9,180],[15,9,180],[14.25,9,180],[14,9,180],[13,9,180],[12,9,180],[11,9,180],[10,9,180],[9,9,180],[9,9,270],[9,9.045,270],[9,9.045,180],[8,9.045,180],[7.0169999999999995,9.045,180],[8,9.045,180],[9,9.045,180],[10,9.045,180],[11,9.045,180],[12,9.045,180],[13,9.045,180],[14,9.045,180],[14.25,9.045,180],[15,9.045,180],[16,9.045,180],[17,9.045,180],[18,9.045,180],[19,9.045,180],[20,9.045,180],[20.378,9.045,180],[21,9.045,180],[22,9.045,180],[22.435,9.045,180],[23,9.045,180],[24,9.045,180],[25,9.045,180],[26,9.045,180],[27,9.045,180],[28,9.045,180],[29,9.045,180],[30,9.045,180],[31,9.045,180],[32,9.045,180],[33,9.045,180],[34,9.045,180],[35,9.045,180],[36,9.045,180],[36,9.045,270],[36,9,270],[36,9,0],[36,9,270],[36,9.045,270],[36,10,270],[36,11,270],[36,12,270],[36,12.2865,270],[36,13,270],[36,14,270],[36,15,270],[36,16,270],[36,17,270],[36,18,270],[36,19,270],[36,20,270],[36,21,270],[36,22,270],[36,23,270],[36,24,270],[36,25,270],[36,26,270],[36,27,270],[36,28,270],[36,29,270],[36,30,270],[36,31,270],[36,32,270],[36,33,270],[36,34,270],[36,35,270],[36,35.786500000000004,270],[36,36,270],[36,36,0]],"docking_waypoint_index":47,"segment_indices":[0,1,2,3,4,5,6,7,8,9,10,11,12,47,82,114],"status":"stored-empty-control-route-not-a-legal-or-complete-mission"},"north":{"id":"north","label":"North-end approach · experimental","policy":"experimental-north-pit-access","target_id":"pit_box_1","waypoints":[[20.378,38.918,0],[36,38.918,0],[36,38.918,270],[36,36,270],[36,36,0],[87,36,0],[87,36,270],[87,12,270],[87,12,180],[36,12,180],[36,12,270],[36,9,270],[36,9,180],[35,9,180],[35,9,90],[35,9.045,90],[35,10,90],[35,11,90],[35,12,90],[35,12.2865,90],[35,13,90],[35,14,90],[35,15,90],[35,16,90],[35,17,90],[35,18,90],[35,19,90],[35,20,90],[35,21,90],[35,22,90],[35,23,90],[35,24,90],[35,25,90],[35,26,90],[35,27,90],[35,28,90],[35,29,90],[35,30,90],[35,31,90],[35,32,90],[35,33,90],[35,34,90],[35,35,90],[35,35.786500000000004,90],[35,36,90],[35,37,90],[35,38,90],[35,38.918,90],[35,38.918,180],[34,38.918,180],[33,38.918,180],[32,38.918,180],[31,38.918,180],[30,38.918,180],[29,38.918,180],[28,38.918,180],[27,38.918,180],[26,38.918,180],[25,38.918,180],[24,38.918,180],[23,38.918,180],[22.435,38.918,180],[22,38.918,180],[21,38.918,180],[20.378,38.918,180],[20,38.918,180],[19,38.918,180],[18,38.918,180],[17,38.918,180],[16,38.918,180],[15,38.918,180],[14.25,38.918,180],[14,38.918,180],[13,38.918,180],[12,38.918,180],[11,38.918,180],[10,38.918,180],[9,38.918,180],[9,38.918,90],[9,38,90],[9,37,90],[9,36,90],[9,35.786500000000004,90],[9,35,90],[9,34,90],[9,33,90],[9,32,90],[9,31,90],[9,30,90],[9,29,90],[9,28,90],[9,27,90],[9,26,90],[9,25,90],[9,24,90],[9,23,90],[9,22,90],[9,21,90],[9,20,90],[9,19,90],[9,18,90],[9,17,90],[9,16,90],[9,15,90],[9,14,90],[9,13,90],[9,12.2865,90],[9,12,90],[9,11,90],[9,10,90],[9,9.045,90],[9,9.045,180],[8,9.045,180],[7.0169999999999995,9.045,180],[8,9.045,180],[9,9.045,180],[10,9.045,180],[11,9.045,180],[12,9.045,180],[13,9.045,180],[14,9.045,180],[14.25,9.045,180],[15,9.045,180],[16,9.045,180],[17,9.045,180],[18,9.045,180],[19,9.045,180],[20,9.045,180],[20.378,9.045,180],[21,9.045,180],[21,9.045,270],[21,10,270],[21,11,270],[21,12,270],[21,12.2865,270],[21,13,270],[21,14,270],[21,15,270],[21,16,270],[21,17,270],[21,18,270],[21,19,270],[21,20,270],[21,21,270],[21,22,270],[21,23,270],[21,24,270],[21,25,270],[21,26,270],[21,27,270],[21,28,270],[21,29,270],[21,30,270],[21,31,270],[21,32,270],[21,33,270],[21,34,270],[21,35,270],[21,35.786500000000004,270],[21,36,270],[21,37,270],[21,38,270],[21,38.918,270],[21,38.918,180],[22,38.918,180],[22.435,38.918,180],[23,38.918,180],[24,38.918,180],[25,38.918,180],[26,38.918,180],[27,38.918,180],[28,38.918,180],[29,38.918,180],[30,38.918,180],[31,38.918,180],[32,38.918,180],[33,38.918,180],[34,38.918,180],[35,38.918,180],[36,38.918,180],[36,38.918,270],[36,38,270],[36,37,270],[36,36,270],[36,35.786500000000004,270],[36,35,270],[36,34,270],[36,33,270],[36,32,270],[36,31,270],[36,30,270],[36,29,270],[36,28,270],[36,27,270],[36,26,270],[36,25,270],[36,24,270],[36,23,270],[36,22,270],[36,21,270],[36,20,270],[36,19,270],[36,18,270],[36,17,270],[36,16,270],[36,15,270],[36,14,270],[36,13,270],[36,12.2865,270],[36,12,270],[36,11,270],[36,10,270],[36,9.045,270],[36,9,270],[36,9,0],[36,9,270],[36,9.045,270],[36,10,270],[36,11,270],[36,12,270],[36,12.2865,270],[36,13,270],[36,14,270],[36,15,270],[36,16,270],[36,17,270],[36,18,270],[36,19,270],[36,20,270],[36,21,270],[36,22,270],[36,23,270],[36,24,270],[36,25,270],[36,26,270],[36,27,270],[36,28,270],[36,29,270],[36,30,270],[36,31,270],[36,32,270],[36,33,270],[36,34,270],[36,35,270],[36,35.786500000000004,270],[36,36,270],[36,36,0]],"docking_waypoint_index":113,"segment_indices":[0,1,2,3,4,5,6,7,8,9,10,11,12,113,214,246],"status":"stored-empty-control-route-not-a-legal-or-complete-mission"}},"sources":["robot-lab-v4/model.json","robot-lab-v4/wiring.json","constrained-field-v3.json","derived/drawing-layout-v3/layout.json","derived/connected-navigation-v3/report.json","VERIFIED-FACTS.md","confirmation-questions-v3.json"],"questionPacket":"derived/confirmation-packet-v3/questions-to-organizer.md"};
+
+</script><script>
+/* Stock Car Robot Lab: dependency-free deterministic assembly and planar drive core. */
+(function (root, factory) {
+  const api = factory();
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  root.RobotLabCore = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
+  const EPS = 1e-8;
+  const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+  const wrap = a => Math.atan2(Math.sin(a), Math.cos(a));
+  const rad = d => d * Math.PI / 180;
+  const deg = r => r * 180 / Math.PI;
+  const smooth = t => { t = clamp(t, 0, 1); return t * t * (3 - 2 * t); };
+  const finite = (v, name) => { if (!Number.isFinite(v)) throw new Error(`${name} must be finite`); return v; };
+
+  function validateModel(model) {
+    if (!model || !Array.isArray(model.stages) || !model.stages.length || !Array.isArray(model.parts)) throw new Error('assembly stages and parts required');
+    const ids = new Set();
+    for (const p of model.parts) {
+      if (!p.id || ids.has(p.id) || !Number.isInteger(p.stage) || !model.stages[p.stage - 1]) throw new Error('valid unique part stage required');
+      if (!['box', 'cylinder', 'torus'].includes(p.kind) || p.pos.length !== 3 || p.size.length !== 3 || p.exploded.length !== 3) throw new Error(`invalid part ${p.id}`);
+      [...p.pos, ...p.size, ...p.exploded].forEach((n, i) => finite(n, `${p.id}[${i}]`));
+      if (p.size.some(n => n <= 0)) throw new Error(`positive part size required: ${p.id}`);
+      ids.add(p.id);
+    }
+    let total = 0;
+    for (const s of model.stages) { finite(s.duration_s, 'stage duration'); if (s.duration_s <= 0) throw new Error('positive stage duration required'); total += s.duration_s; }
+    return total;
+  }
+
+  function assemblyFrame(model, time) {
+    const total = validateModel(model), t = clamp(finite(time, 'assembly time'), 0, total);
+    let elapsed = 0, stageIndex = model.stages.length - 1;
+    const starts = model.stages.map(s => { const start = elapsed; elapsed += s.duration_s; return start; });
+    if (t < total) stageIndex = model.stages.findIndex((s, i) => t < starts[i] + s.duration_s);
+    const parts = model.parts.map(p => {
+      const stage = model.stages[p.stage - 1], start = starts[p.stage - 1];
+      const progress = smooth((t - start) / stage.duration_s);
+      const position = progress === 1 ? [...p.pos] : progress === 0 ? [...p.exploded] : p.exploded.map((v, i) => v + (p.pos[i] - v) * progress);
+      return {...p, progress, position};
+    });
+    return {time:t, total, stageIndex, stage:model.stages[stageIndex], starts,
+      assembledCount:parts.filter(p => p.progress === 1).length, parts};
+  }
+
+  function compileRoute(route) {
+    if (!route || !Array.isArray(route.waypoints) || route.waypoints.length < 2) throw new Error('route waypoints required');
+    const commands = [], dock = route.docking_waypoint_index;
+    for (let i = 1; i < route.waypoints.length; i++) {
+      const a = route.waypoints[i - 1], b = route.waypoints[i];
+      if (a.length !== 3 || b.length !== 3 || [...a, ...b].some(n => !Number.isFinite(n))) throw new Error('finite route poses required');
+      const dx = b[0] - a[0], dy = b[1] - a[1], length = Math.hypot(dx, dy), angle = wrap(rad(b[2] - a[2]));
+      const prev = commands[commands.length - 1];
+      if (length > EPS) {
+        const h = rad(a[2]), along = dx * Math.cos(h) + dy * Math.sin(h), lateral = -dx * Math.sin(h) + dy * Math.cos(h);
+        if (Math.abs(lateral) > 1e-5 || Math.abs(along) < EPS) throw new Error(`non-drive-compatible segment ${i}`);
+        const direction = Math.sign(along), heading = Math.atan2(dy, dx);
+        if (prev && prev.kind === 'translate' && prev.direction === direction && prev.toWaypoint !== dock && Math.abs(wrap(prev.pathHeading - heading)) < 1e-5) {
+          prev.to = [...b]; prev.length += length; prev.toWaypoint = i;
+        } else commands.push({kind:'translate', from:[...a], to:[...b], direction, length, pathHeading:heading, toWaypoint:i});
+      } else if (Math.abs(angle) > EPS) {
+        if (prev && prev.kind === 'spin' && prev.toWaypoint !== dock && Math.hypot(prev.to[0] - a[0], prev.to[1] - a[1]) < EPS) {
+          prev.to = [...b]; prev.angle = wrap(rad(b[2] - prev.from[2])); prev.toWaypoint = i;
+        } else commands.push({kind:'spin', from:[...a], to:[...b], angle, toWaypoint:i});
+      }
+    }
+    if (!commands.length) throw new Error('route contains no motion');
+    const dockCommandIndex = commands.findIndex(c => c.toWaypoint === dock);
+    if (!Number.isInteger(dock) || dockCommandIndex < 0) throw new Error('dock must terminate a motion command');
+    return {commands, dockCommandIndex};
+  }
+
+  function robotPolygon(x, y, theta, length = 10, width = 10) {
+    const c = Math.cos(theta), s = Math.sin(theta);
+    return [[-length / 2, -width / 2], [length / 2, -width / 2], [length / 2, width / 2], [-length / 2, width / 2]]
+      .map(([a, b]) => [x + a * c - b * s, y + a * s + b * c]);
+  }
+
+  function intersects(a, b) {
+    for (const poly of [a, b]) for (let i = 0; i < poly.length; i++) {
+      const p = poly[i], q = poly[(i + 1) % poly.length], nx = p[1] - q[1], ny = q[0] - p[0];
+      const pa = a.map(v => v[0] * nx + v[1] * ny), pb = b.map(v => v[0] * nx + v[1] * ny);
+      if (Math.max(...pa) <= Math.min(...pb) + EPS || Math.max(...pb) <= Math.min(...pa) + EPS) return false;
+    }
+    return true;
+  }
+
+  function collisionAt(data, x, y, theta) {
+    const poly = robotPolygon(x, y, theta), b = data.field.bounds;
+    if (poly.some(p => p[0] <= b.min_x + EPS || p[0] >= b.max_x - EPS || p[1] <= b.min_y + EPS || p[1] >= b.max_y - EPS)) return 'outer-wall';
+    for (const solid of data.field.solids) if (intersects(poly, solid.vertices_in)) return solid.id;
+    return null;
+  }
+
+  function validateWiring(wiring, model) {
+    if (!wiring || !Array.isArray(wiring.connectors) || !Array.isArray(wiring.wires) || !wiring.wires.length) throw new Error('wiring connectors and wires required');
+    const partIds = new Set(model.parts.map(p => p.id)), connectors = new Map(), wireIds = new Set();
+    for (const c of wiring.connectors) {
+      if (!c.id || connectors.has(c.id) || !partIds.has(c.part) || !c.pins || !Object.keys(c.pins).length) throw new Error(`invalid connector ${c.id}`);
+      for (const [pin, pos] of Object.entries(c.pins)) {
+        if (!pin || pos.length !== 3 || pos.some(n => !Number.isFinite(n))) throw new Error(`invalid pin ${c.id}.${pin}`);
+      }
+      connectors.set(c.id, c);
+    }
+    const endpoint = ref => {
+      if (!Array.isArray(ref) || ref.length !== 2) throw new Error('invalid wire endpoint reference');
+      const c = connectors.get(ref[0]);
+      if (!c || !c.pins[ref[1]]) throw new Error(`unknown pin ${ref.join('.')}`);
+      return c.pins[ref[1]];
+    };
+    for (const w of wiring.wires) {
+      if (!w.id || wireIds.has(w.id) || !w.net || !['power','ground','motor','signal','data'].includes(w.kind)) throw new Error(`invalid wire ${w.id}`);
+      if (!(w.diameter_in > 0) || !Array.isArray(w.points) || w.points.length < 2) throw new Error(`invalid wire geometry ${w.id}`);
+      for (const p of w.points) if (p.length !== 3 || p.some(n => !Number.isFinite(n))) throw new Error(`non-finite wire point ${w.id}`);
+      const a = endpoint(w.from), b = endpoint(w.to);
+      for (const [p,q,label] of [[w.points[0],a,'start'],[w.points[w.points.length-1],b,'end']]) {
+        if (Math.hypot(...p.map((v,i) => v-q[i])) > 1e-7) throw new Error(`${w.id} ${label} does not meet its connector pin`);
+      }
+      wireIds.add(w.id);
+    }
+    return {connectors:connectors.size,wires:wireIds.size,pins:[...connectors.values()].reduce((n,c) => n+Object.keys(c.pins).length,0)};
+  }
+
+  function electricalObserver(cfg, state, h, previousV, previousOmega) {
+    if (!cfg) throw new Error('electrical scenario configuration required');
+    if (state.estop) return {bus_v:0,left_current_a:0,right_current_a:0,total_current_a:0,power_w:0,left_rpm:0,right_rpm:0,left_torque_nm:0,right_torque_nm:0,left_duty:0,right_duty:0,saturated:false,soc_pct:state.energyWh ? Math.max(0,100*(1-state.energyWh/(cfg.nominal_bus_v*cfg.battery_capacity_ah))) : 100};
+    const radiusIn = 1.5, radiusM = radiusIn*0.0254, trackM = 8*0.0254;
+    const leftLinear = state.v-state.omega*4, rightLinear = state.v+state.omega*4;
+    const leftRpm = leftLinear/(2*Math.PI*radiusIn)*60*cfg.gear_ratio;
+    const rightRpm = rightLinear/(2*Math.PI*radiusIn)*60*cfg.gear_ratio;
+    const a = h > 0 ? (state.v-previousV)*0.0254/h : 0;
+    const alpha = h > 0 ? (state.omega-previousOmega)/h : 0;
+    const rolling = Math.abs(state.v) > 1e-5 ? cfg.scenario_mass_kg*cfg.rolling_resistance_coefficient*cfg.gravity_m_s2*Math.sign(state.v) : 0;
+    const baseForce = cfg.scenario_mass_kg*a+rolling;
+    const yawForce = cfg.scenario_yaw_inertia_kg_m2*alpha/trackM;
+    const leftTorque = (baseForce/2-yawForce)*radiusM, rightTorque = (baseForce/2+yawForce)*radiusM;
+    const kt = 60/(2*Math.PI*cfg.motor_kv_rpm_v), outputPerAmp = kt*cfg.gear_ratio*cfg.gear_efficiency;
+    const leftCurrent = leftTorque/outputPerAmp, rightCurrent = rightTorque/outputPerAmp;
+    const motorDraw = Math.max(0,leftCurrent)+Math.max(0,rightCurrent);
+    const bus = Math.max(0,cfg.nominal_bus_v-cfg.battery_internal_resistance_ohm*motorDraw);
+    const duty = (rpm,current) => clamp((Math.abs(rpm/cfg.motor_kv_rpm_v+current*cfg.motor_resistance_ohm)+cfg.driver_voltage_drop_v)/Math.max(bus,0.01),0,1.5);
+    const leftDuty = duty(leftRpm,leftCurrent), rightDuty = duty(rightRpm,rightCurrent);
+    const totalCurrent = motorDraw+cfg.logic_idle_w/Math.max(bus,0.01), power = bus*totalCurrent;
+    state.energyWh += power*Math.max(0,h)/3600;
+    return {bus_v:bus,left_current_a:leftCurrent,right_current_a:rightCurrent,total_current_a:totalCurrent,power_w:power,
+      left_rpm:leftRpm,right_rpm:rightRpm,left_torque_nm:leftTorque,right_torque_nm:rightTorque,
+      left_duty:leftDuty,right_duty:rightDuty,saturated:leftDuty>1||rightDuty>1||Math.abs(leftCurrent)>cfg.continuous_current_limit_a||Math.abs(rightCurrent)>cfg.continuous_current_limit_a,
+      soc_pct:Math.max(0,100*(1-state.energyWh/(cfg.nominal_bus_v*cfg.battery_capacity_ah)))};
+  }
+
+  function netCurrent(net, state) {
+    const e = state.electrical;
+    if (!e || state.estop) return 0;
+    if (/MOTOR_L/.test(net)) return e.left_current_a;
+    if (/MOTOR_R/.test(net)) return e.right_current_a;
+    if (/^(BATT|FUSED|SWITCHED|DRIVE)/.test(net) || net === 'GND') return e.total_current_a;
+    if (/^(LOGIC|5V)/.test(net)) return 4.2/Math.max(e.bus_v,0.01);
+    return 0;
+  }
+
+  function createSimulation(data, routeId = 'south') {
+    const route = data.routes[routeId];
+    if (!route) throw new Error(`unknown route ${routeId}`);
+    const compiled = compileRoute(route), commands = compiled.commands, cfg = data.model.physics;
+    const initial = collisionAt(data, route.waypoints[0][0], route.waypoints[0][1], rad(route.waypoints[0][2]));
+    if (initial) throw new Error(`initial route collision: ${initial}`);
+    const state = {};
+    function reset() {
+      const p = route.waypoints[0];
+      Object.assign(state, {x:p[0], y:p[1], theta:rad(p[2]), v:0, omega:0, time:0, distance:0,
+        commandIndex:0, status:'ready', tire:'red', dwell:0, collision:null, wheelLeft:0, wheelRight:0,
+        estop:false, energyWh:0, electrical:null,
+        events:[{time:0, type:'reset', message:`${route.label} loaded; no lap or scoring claim.`}]});
+      state.electrical = electricalObserver(data.model.electrical,state,0,0,0);
+    }
+    reset();
+    function finishCommand() {
+      const command = commands[state.commandIndex];
+      state.commandIndex++;
+      if (command.toWaypoint === route.docking_waypoint_index) {
+        state.dwell = cfg.dock_dwell_s; state.tire = 'blue';
+        state.events.push({time:state.time, type:'exchange', message:'Conceptual dock reached: red drop / blue pickup event. Task legality is unresolved.'});
+      }
+      if (state.commandIndex >= commands.length) {
+        state.status = 'completed'; state.v = state.omega = 0;
+        state.electrical = electricalObserver(data.model.electrical,state,0,0,0);
+        state.events.push({time:state.time, type:'complete', message:'Stored route complete; this is not a complete three-lap mission.'});
+      }
+    }
+    function substep(h) {
+      if (state.status === 'ready' || state.status === 'estop' && !state.estop) state.status = 'running';
+      if (state.status === 'completed' || state.status === 'collision') return;
+      state.time += h;
+      if (state.estop) {
+        state.status = 'estop'; state.v = state.omega = 0;
+        state.electrical = electricalObserver(data.model.electrical,state,h,0,0); return;
+      }
+      const previousV = state.v, previousOmega = state.omega;
+      if (state.dwell > 0) {
+        state.dwell = Math.max(0, state.dwell - h); state.v = state.omega = 0;
+        state.electrical = electricalObserver(data.model.electrical,state,h,previousV,previousOmega); return;
+      }
+      if (state.commandIndex >= commands.length) return;
+      const c = commands[state.commandIndex], maxOmega = rad(cfg.max_angular_deg_s);
+      let targetV = 0, targetOmega = 0;
+      if (c.kind === 'spin') {
+        const error = wrap(rad(c.to[2]) - state.theta);
+        if (Math.abs(error) <= rad(cfg.heading_tolerance_deg)) { finishCommand(); return; }
+        targetOmega = clamp(error * 3, -maxOmega, maxOmega);
+      } else {
+        const dx = c.to[0] - state.x, dy = c.to[1] - state.y, remaining = Math.hypot(dx, dy);
+        const finalError = wrap(rad(c.to[2]) - state.theta);
+        if (remaining <= cfg.position_tolerance_in) {
+          if (Math.abs(finalError) <= rad(cfg.heading_tolerance_deg)) { finishCommand(); return; }
+          targetOmega = clamp(finalError * 3, -maxOmega, maxOmega);
+        } else {
+          const path = Math.atan2(dy, dx), desired = c.direction > 0 ? path : wrap(path + Math.PI);
+          const error = wrap(desired - state.theta), maxV = c.direction > 0 ? cfg.max_forward_in_s : cfg.max_reverse_in_s;
+          targetV = c.direction * Math.min(maxV, Math.max(0.8, remaining * 2.2)) * clamp(1 - Math.abs(error) / 1.2, 0.12, 1);
+          targetOmega = clamp(error * 3.2, -maxOmega, maxOmega);
+        }
+      }
+      const approach = (value, target, amount) => value + clamp(target - value, -amount, amount);
+      state.v = approach(state.v, targetV, cfg.linear_accel_in_s2 * h);
+      state.omega = approach(state.omega, targetOmega, rad(cfg.angular_accel_deg_s2) * h);
+      const nextTheta = wrap(state.theta + state.omega * h);
+      let nextX, nextY;
+      if (Math.abs(state.omega) > EPS) {
+        nextX = state.x + state.v / state.omega * (Math.sin(nextTheta) - Math.sin(state.theta));
+        nextY = state.y - state.v / state.omega * (Math.cos(nextTheta) - Math.cos(state.theta));
+      } else {
+        nextX = state.x + state.v * Math.cos(state.theta) * h;
+        nextY = state.y + state.v * Math.sin(state.theta) * h;
+      }
+      const hit = collisionAt(data, nextX, nextY, nextTheta);
+      if (hit) {
+        state.status = 'collision'; state.v = state.omega = 0;
+        state.collision = {collider:hit, commandIndex:state.commandIndex, time:state.time, x:nextX, y:nextY, theta:nextTheta};
+        state.events.push({time:state.time, type:'collision', message:`Physics stopped on ${hit}; candidate pose rejected.`});
+        state.electrical = electricalObserver(data.model.electrical,state,h,previousV,previousOmega);
+        return;
+      }
+      state.distance += Math.hypot(nextX - state.x, nextY - state.y);
+      state.x = nextX; state.y = nextY; state.theta = nextTheta;
+      state.wheelLeft += (state.v - state.omega * cfg.wheel_track_in / 2) * h / 1.5;
+      state.wheelRight += (state.v + state.omega * cfg.wheel_track_in / 2) * h / 1.5;
+      state.electrical = electricalObserver(data.model.electrical,state,h,previousV,previousOmega);
+    }
+    function setEstop(active) {
+      active = Boolean(active);
+      if (state.estop === active) return;
+      state.estop = active;
+      if (active) { state.status = 'estop'; state.v = state.omega = 0; }
+      else if (state.status === 'estop') state.status = 'ready';
+      state.events.push({time:state.time,type:'estop',message:active ? 'Emergency power removal engaged: modeled drive and logic bus de-energized.' : 'Emergency stop reset; route remains paused until commanded.'});
+      state.electrical = electricalObserver(data.model.electrical,state,0,0,0);
+    }
+    function step(dt) {
+      finite(dt, 'simulation dt');
+      if (dt < 0 || dt > 120) throw new Error('simulation dt must be between 0 and 120 seconds');
+      const count = Math.ceil(dt / cfg.fixed_step_s);
+      for (let i = 0; i < count; i++) substep(Math.min(cfg.fixed_step_s, dt - i * cfg.fixed_step_s));
+      return state;
+    }
+    return {state, route, commands, reset, step, setEstop,
+      get progress() { return state.commandIndex / commands.length; }};
+  }
+
+  function formatTime(seconds) {
+    seconds = Math.max(0, finite(seconds, 'time'));
+    const m = Math.floor(seconds / 60), s = seconds - m * 60;
+    return `${String(m).padStart(2, '0')}:${s.toFixed(1).padStart(4, '0')}`;
+  }
+
+  return {clamp, wrap, rad, deg, smooth, validateModel, validateWiring, assemblyFrame, compileRoute,
+    robotPolygon, intersects, collisionAt, electricalObserver, netCurrent, createSimulation, formatTime};
+});
+
+</script><script>
+/* Detailed procedural hardware and routed wiring; no external models or dependencies. */
+(function (root, factory) {
+  const api = factory();
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  root.RobotLabHardware = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
+  const TAU = Math.PI*2, geometryCache = new Map();
+  const add = (a,b) => a.map((v,i) => v+b[i]);
+  const norm = a => { const n=Math.hypot(...a)||1; return a.map(v=>v/n); };
+  const cross = (a,b) => [a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+  const item = (mesh,pos,scale,material,extra={}) => ({mesh,pos,scale,material,rot:[0,0,0],...extra});
+  function context(p, selectedPart) {
+    const base = p.position || p.pos, selected = selectedPart === p.id, items = [];
+    const make = (mesh,offset,scale,material,extra={}) => { const value=item(mesh,add(base,offset),scale,material,{id:p.id,selected,...extra}); items.push(value); return value; };
+    return {p,make,items,
+      box:(o,s,m,e)=>make('bevelBox',o,s,m,e),
+      cyl:(o,s,m,e)=>make('cylinder',o,s,m,e),
+      ring:(o,s,m,e)=>make('ring',o,s,m,e),
+      sphere:(o,s,m,e)=>make('sphere',o,s,m,e)};
+  }
+  function screw(c, offset, radius=0.09) {
+    c.cyl(offset,[radius*2,radius*2,0.07],'steel');
+    c.box([offset[0],offset[1],offset[2]+0.04],[radius*1.25,0.025,0.012],'blackMetal');
+  }
+  function pcb(c, offset, size) {
+    c.box(offset,[size[0],size[1],0.09],'pcb');
+    for (const x of [-1,1]) for (const y of [-1,1]) screw(c,[offset[0]+x*(size[0]/2-0.14),offset[1]+y*(size[1]/2-0.14),offset[2]+0.08],0.055);
+  }
+  function chip(c, offset, size=[0.55,0.55,0.12]) {
+    c.box(offset,size,'ic');
+    c.box([offset[0],offset[1],offset[2]+size[2]/2+0.006],[size[0]*0.55,0.025,0.008],'silkscreen');
+  }
+  function header(c, offset, count=10, axis='x') {
+    const size=axis==='x'?[count*0.1+0.08,0.22,0.16]:[0.22,count*0.1+0.08,0.16];
+    c.box(offset,size,'blackPlastic');
+    for(let i=0;i<count;i++) {
+      const d=(i-(count-1)/2)*0.1, pos=[offset[0]+(axis==='x'?d:0),offset[1]+(axis==='y'?d:0),offset[2]+0.12];
+      c.box(pos,[0.035,0.035,0.16],'gold');
+    }
+  }
+  function capacitor(c, offset, radius=0.12, height=0.35) {
+    c.cyl(offset,[radius*2,radius*2,height],'capacitor');
+    c.cyl([offset[0],offset[1],offset[2]+height/2+0.006],[radius*1.75,radius*1.75,0.018],'aluminum');
+    c.box([offset[0],offset[1],offset[2]+height/2+0.018],[radius*1.1,0.018,0.008],'blackMetal');
+  }
+  function catmull(points, samples=8) {
+    const out=[];
+    for(let i=0;i<points.length-1;i++) {
+      const p0=points[Math.max(0,i-1)],p1=points[i],p2=points[i+1],p3=points[Math.min(points.length-1,i+2)];
+      for(let j=0;j<samples;j++) {
+        const t=j/samples,t2=t*t,t3=t2*t;
+        out.push([0,1,2].map(k=>0.5*((2*p1[k])+(-p0[k]+p2[k])*t+(2*p0[k]-5*p1[k]+4*p2[k]-p3[k])*t2+(-p0[k]+3*p1[k]-3*p2[k]+p3[k])*t3)));
+      }
+    }
+    out.push([...points[points.length-1]]); return out;
+  }
+  function tubeGeometry(wire) {
+    if(geometryCache.has(wire.id)) return geometryCache.get(wire.id);
+    const centers=catmull(wire.points,8),positions=[],normals=[],indices=[],sides=10,r=wire.diameter_in/2;
+    for(let i=0;i<centers.length;i++) {
+      const tangent=norm(centers[Math.min(i+1,centers.length-1)].map((v,k)=>v-centers[Math.max(0,i-1)][k]));
+      const ref=Math.abs(tangent[2])<0.9?[0,0,1]:[0,1,0],n=norm(cross(tangent,ref)),b=norm(cross(tangent,n));
+      for(let j=0;j<sides;j++) {
+        const a=j/sides*TAU,radial=n.map((v,k)=>v*Math.cos(a)+b[k]*Math.sin(a));
+        positions.push(...centers[i].map((v,k)=>v+radial[k]*r)); normals.push(...radial);
+      }
+    }
+    for(let i=0;i<centers.length-1;i++) for(let j=0;j<sides;j++) {
+      const a=i*sides+j,b=i*sides+(j+1)%sides,c=(i+1)*sides+j,d=(i+1)*sides+(j+1)%sides;
+      indices.push(a,c,b,b,c,d);
+    }
+    const geometry={positions,normals,indices}; geometryCache.set(wire.id,geometry); return geometry;
+  }
+
+  function detailPart(p,options={}) {
+    const c=context(p,options.selectedPart),s=options.state||{};
+    switch(p.id) {
+      case 'baseplate': {
+        c.box([0,0,0],[9,8,0.24],'aluminum');
+        for(const x of [-4.15,-2.8,0,2.8,4.15]) for(const y of [-3.65,3.65]) screw(c,[x,y,0.16]);
+        for(const x of [-2.8,0,2.8]) c.box([x,0,0.128],[1.3,4.8,0.016],'blackMetal');
+        break;
+      }
+      case 'rail-left': case 'rail-right': case 'cross-front': case 'cross-rear': {
+        c.box([0,0,0],p.size,'aluminum');
+        const alongX=p.size[0]>p.size[1];
+        c.box([0,0,p.size[2]/2+0.008],alongX?[p.size[0]*0.8,0.11,0.018]:[0.11,p.size[1]*0.8,0.018],'blackMetal');
+        const ends=alongX?[[-p.size[0]/2+0.25,0,p.size[2]/2+0.04],[p.size[0]/2-0.25,0,p.size[2]/2+0.04]]:[[0,-p.size[1]/2+0.25,p.size[2]/2+0.04],[0,p.size[1]/2-0.25,p.size[2]/2+0.04]];
+        ends.forEach(o=>screw(c,o)); break;
+      }
+      case 'motor-left': case 'motor-right': {
+        const sign=p.id.endsWith('left')?1:-1;
+        c.cyl([0,-sign*0.35,0],[1.25,1.25,1.65],'motorSteel',{rot:[Math.PI/2,0,0]});
+        c.cyl([0,-sign*1.15,0],[1.3,1.3,0.22],'blackMetal',{rot:[Math.PI/2,0,0]});
+        c.cyl([0,sign*0.62,0],[1.4,1.4,0.58],'gearbox',{rot:[Math.PI/2,0,0]});
+        c.cyl([0,sign*1.0,0],[0.24,0.24,0.55],'steel',{rot:[Math.PI/2,0,0]});
+        c.box([0,0,-0.68],[1.65,1.8,0.12],'blackMetal');
+        for(const x of [-0.55,0.55]) for(const y of [-0.55,0.55]) screw(c,[x,y,-0.59],0.07);
+        c.box([0.35,-sign*1.18,0.35],[0.48,0.16,0.4],'pcb');
+        for(let i=-3;i<=3;i++) c.box([i*0.16,-sign*0.35,0.63],[0.045,1.1,0.025],'blackMetal');
+        break;
+      }
+      case 'wheel-left': case 'wheel-right': {
+        const left=p.id.endsWith('left'),spin=(left?s.wheelLeft:s.wheelRight)||0;
+        c.ring([0,0,0],[3,3,0.82],'rubber',{rot:[Math.PI/2,spin,0]});
+        c.cyl([0,0,0],[1.55,1.55,0.86],'wheelHub',{rot:[Math.PI/2,spin,0]});
+        c.cyl([0,left?0.45:-0.45,0],[0.48,0.48,0.12],'steel',{rot:[Math.PI/2,0,0]});
+        for(let i=0;i<6;i++) {
+          const a=i/6*TAU+spin,x=Math.cos(a)*0.57,z=Math.sin(a)*0.57;
+          c.cyl([x,left?0.46:-0.46,z],[0.13,0.13,0.08],'steel',{rot:[Math.PI/2,0,0]});
+        }
+        for(const side of [-1,1]) c.ring([0,side*0.37,0],[2.72,2.72,0.055],'rubberSidewall',{rot:[Math.PI/2,0,0]});
+        break;
+      }
+      case 'caster-front': case 'caster-rear': {
+        c.sphere([0,0,-0.1],[0.75,0.75,0.75],'steel');
+        c.box([0,0,0.32],[1.0,0.85,0.12],'blackMetal');
+        for(const x of [-0.43,0.43]) c.box([x,0,0.02],[0.09,0.8,0.65],'zinc');
+        screw(c,[0,0,0.42]); break;
+      }
+      case 'battery': {
+        c.box([0,0,0],[3.2,1.8,1.35],'batteryWrap');
+        for(const x of [-0.8,0,0.8]) c.box([x,0,0.68],[0.035,1.65,0.02],'batterySeam');
+        c.box([0,0,0.69],[1.85,1.05,0.025],'batteryLabel');
+        c.box([0,0.12,0.71],[1.35,0.09,0.012],'silkscreen');
+        c.box([0,-0.12,0.71],[0.95,0.06,0.012],'silkscreen');
+        c.box([1.1,-0.15,0.12],[0.5,0.8,0.55],'connectorYellow');
+        for(const y of [-0.2,0.2]) c.box([1.36,y-0.15,0.12],[0.08,0.22,0.25],'gold');
+        for(const x of [-1.25,1.25]) c.box([x,0,0.75],[0.18,2.0,0.08],'strap');
+        break;
+      }
+      case 'power': {
+        pcb(c,[0,0,0],[2.4,1.2]);
+        for(let i=0;i<4;i++) {
+          c.box([-0.78+i*0.5,-0.38,0.18],[0.38,0.32,0.28],'terminalBlue');
+          screw(c,[-0.78+i*0.5,-0.38,0.35],0.06);
+        }
+        c.box([-0.1,0.25,0.24],[0.5,0.22,0.42],'fuseAmber');
+        c.box([1.2,1.1,0.15],[1.0,0.65,0.12],'pcb');
+        chip(c,[1.2,1.1,0.28],[0.42,0.35,0.15]);
+        capacitor(c,[1.48,1.1,0.38],0.1,0.32);
+        break;
+      }
+      case 'estop': {
+        c.cyl([0,0,-0.18],[1.25,1.25,0.18],'estopYellow');
+        c.cyl([0,0,0],[0.72,0.72,0.38],'blackPlastic');
+        c.cyl([0,0,0.28],[1.0,1.0,0.38],'estopRed');
+        c.cyl([0,0,0.49],[0.72,0.72,0.06],'estopRedTop');
+        c.box([0,0,-0.07],[1.5,0.18,0.03],'blackPlastic');
+        break;
+      }
+      case 'controller': {
+        pcb(c,[0,0,0],[3.5,3]);
+        chip(c,[0.25,0.25,0.15],[0.85,0.85,0.18]);
+        c.box([-1.45,0.65,0.25],[0.65,1.25,0.48],'connectorMetal');
+        for(const y of [-0.7,-0.05]) c.box([-1.55,y,0.2],[0.7,0.48,0.35],'connectorMetal');
+        for(const y of [-0.7,-0.05]) c.box([-1.91,y,0.2],[0.025,0.3,0.18],'blackPlastic');
+        header(c,[0.35,1.25,0.14],20,'x');
+        c.box([1.45,0.25,0.16],[0.35,1.1,0.24],'connectorWhite');
+        c.box([1.45,-0.9,0.13],[0.32,0.55,0.18],'connectorWhite');
+        for(let i=0;i<6;i++) capacitor(c,[-0.7+i*0.25,-1.1,0.18],0.055,0.18);
+        c.cyl([1.25,1.05,0.16],[0.15,0.15,0.08],'ledGreen');
+        break;
+      }
+      case 'driver': {
+        pcb(c,[0,0,0],[2.2,1.3]);
+        c.box([0,0.12,0.2],[1.25,0.75,0.16],'blackMetal');
+        for(let i=0;i<8;i++) c.box([-0.54+i*0.155,0.12,0.48],[0.055,0.8,0.55],'heatsink');
+        capacitor(c,[-0.8,0.35,0.35],0.13,0.45); capacitor(c,[0.82,0.35,0.35],0.13,0.45);
+        for(const x of [-0.75,-0.25,0.25,0.75]) {
+          c.box([x,-0.48,0.17],[0.36,0.3,0.26],'terminalBlue'); screw(c,[x,-0.48,0.33],0.055);
+        }
+        chip(c,[0.65,-0.05,0.14],[0.35,0.35,0.12]); break;
+      }
+      case 'mast': {
+        c.box([0,0,0],p.size,'aluminum');
+        c.box([0,-0.18,0],[0.12,0.025,p.size[2]*0.86],'blackMetal');
+        c.box([0,0,-p.size[2]/2+0.1],[1.1,1.1,0.16],'blackMetal');
+        for(const x of [-0.4,0.4]) for(const y of [-0.4,0.4]) screw(c,[x,y,-p.size[2]/2+0.2]);
+        break;
+      }
+      case 'camera': {
+        c.box([0,0,0],[0.85,1.5,0.8],'cameraBody');
+        c.box([-0.44,0,0],[0.08,1.35,0.68],'pcb');
+        c.cyl([0.52,0,0],[0.62,0.62,0.5],'lensBarrel',{rot:[0,Math.PI/2,0]});
+        c.cyl([0.79,0,0],[0.48,0.48,0.06],'lensGlass',{rot:[0,Math.PI/2,0]});
+        c.cyl([0.83,0,0],[0.22,0.22,0.025],'lensCoating',{rot:[0,Math.PI/2,0]});
+        for(const y of [-0.55,0.55]) screw(c,[0.44,y,0.25],0.055); break;
+      }
+      case 'range-front': case 'range-left': case 'range-right': {
+        pcb(c,[0,0,0],p.size);
+        const front=p.id==='range-front',rot=front?[0,Math.PI/2,0]:[Math.PI/2,0,0];
+        for(const d of [-0.32,0.32]) {
+          const o=front?[0.18,d,0.12]:[d,0,0.12];
+          c.cyl(o,[0.36,0.36,0.18],'lensBarrel',{rot});
+          const g=front?[0.28,d,0.12]:[d,front?0:0.1,0.12];
+          c.cyl(g,[0.25,0.25,0.03],'lensGlass',{rot});
+        }
+        chip(c,[0,0,0.12],[0.28,0.25,0.1]); break;
+      }
+      case 'line-array': {
+        pcb(c,[0,0,0],[0.5,4.5]);
+        for(let i=0;i<8;i++) {
+          const y=-1.85+i*0.53;
+          c.box([0,y,0.1],[0.32,0.28,0.15],'ic');
+          c.box([0.17,y,0.1],[0.035,0.12,0.08],'ledRed');
+        }
+        header(c,[0,2.0,0.13],5,'y'); break;
+      }
+      case 'fork-left': case 'fork-right': {
+        c.box([0,0,0],p.size,'forkOrange');
+        c.box([0.35,0,0.22],[1.1,0.3,0.12],'forkOrange');
+        for(const x of [-0.75,0.65]) screw(c,[x,0,0.23],0.07);
+        c.box([0.7,0,-0.2],[0.75,0.32,0.08],'rubberPad'); break;
+      }
+      case 'palm-left': case 'palm-right': {
+        c.box([0,0,0],p.size,'forkOrange');
+        c.box([0.18,0,0],[0.12,0.46,0.85],'rubberPad');
+        for(const z of [-0.35,0.35]) c.cyl([0.22,0,z],[0.12,0.12,0.08],'steel',{rot:[0,Math.PI/2,0]}); break;
+      }
+      case 'carried-tire': {
+        const blue=s.tire==='blue';
+        c.ring([0,0,0],[2.684,2.684,1.087],blue?'tireBlue':'tireRed');
+        for(const z of [-0.48,0.48]) c.ring([0,0,z],[2.56,2.56,0.07],blue?'tireBlue':'tireRed');
+        break;
+      }
+      case 'flag-mast': {
+        c.cyl([0,0,0],p.size,'steel');
+        c.cyl([0,0,-2.25],[0.5,0.5,0.35],'blackMetal');
+        c.cyl([0,0,2.48],[0.22,0.22,0.12],'gold'); break;
+      }
+      case 'flag': {
+        c.box([0,0,0],p.size,'flagFabric');
+        for(const y of [-1.05,1.05]) c.box([0,y,0],[0.12,0.12,1.42],'flagHem');
+        c.box([0.055,0,0.25],[0.02,1.3,0.18],'silkscreen'); break;
+      }
+      case 'cable-cover': {
+        c.cyl([0,0,0],[0.34,0.34,6],'conduit',{rot:[0,Math.PI/2,0]});
+        for(let x=-2.8;x<=2.8;x+=0.28) c.cyl([x,0,0],[0.39,0.39,0.055],'conduitRib',{rot:[0,Math.PI/2,0]});
+        break;
+      }
+      default: c.box([0,0,0],p.size,'plastic',{color:p.color});
+    }
+    return c.items;
+  }
+
+  function buildWires(wiring,options={}) {
+    if(!options.showWiring) return [];
+    const items=[],progress=options.progress===undefined?1:options.progress,lift=(1-progress)*9,state=options.state||{};
+    for(const w of wiring.wires) {
+      const current=options.Core?options.Core.netCurrent(w.net,state):0;
+      items.push(item('custom',[0,0,lift],[1,1,1],w.kind==='ground'?'wireBlack':'wire',{
+        id:w.id,wireId:w.id,geometry:tubeGeometry(w),color:w.color,activity:Math.min(1,Math.abs(current)/3),
+        current,selected:options.selectedWire===w.id,roughness:0.46
+      }));
+    }
+    for(const c of wiring.connectors) for(const [pin,pos] of Object.entries(c.pins)) {
+      items.push(item('bevelBox',[pos[0],pos[1],pos[2]+lift],[0.11,0.11,0.11],'gold',{id:c.part,connector:`${c.id}.${pin}`}));
+    }
+    return items;
+  }
+
+  function buildRobot(parts,wiring,options={}) {
+    const items=[];
+    for(const p of parts) {
+      const detail=detailPart(p,options);
+      if(options.xray && ['baseplate','rail-left','rail-right','cross-front','cross-rear','cable-cover'].includes(p.id)) for(const o of detail) o.alpha=0.2;
+      items.push(...detail);
+    }
+    const integration=parts.find(p=>p.id==='cable-cover');
+    items.push(...buildWires(wiring,{...options,progress:integration?integration.progress:1}));
+    return items;
+  }
+
+  function transformRobot(items,state) {
+    const c=Math.cos(state.theta),s=Math.sin(state.theta);
+    return items.map(o=>({...o,pos:[state.x+o.pos[0]*c-o.pos[1]*s,state.y+o.pos[0]*s+o.pos[1]*c,o.pos[2]],
+      rot:[o.rot[0],o.rot[1],o.rot[2]+state.theta]}));
+  }
+
+  return {buildRobot,buildWires,transformRobot,tubeGeometry,catmull,detailPart};
+});
+
+</script><script>
+/* Offline WebGL hardware renderer: beveled meshes, PBR-style materials and PCF shadows. */
+(function (root) {
+  'use strict';
+  const TAU=Math.PI*2;
+  const add=(a,b)=>a.map((v,i)=>v+b[i]),sub=(a,b)=>a.map((v,i)=>v-b[i]),mul=(a,s)=>a.map(v=>v*s);
+  const dot=(a,b)=>a.reduce((s,v,i)=>s+v*b[i],0),cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+  const norm=a=>mul(a,1/(Math.hypot(...a)||1));
+  function multiply(a,b){const o=new Array(16).fill(0);for(let c=0;c<4;c++)for(let r=0;r<4;r++)for(let k=0;k<4;k++)o[c*4+r]+=a[k*4+r]*b[c*4+k];return o;}
+  const translation=p=>[1,0,0,0,0,1,0,0,0,0,1,0,p[0],p[1],p[2],1],scaling=s=>[s[0],0,0,0,0,s[1],0,0,0,0,s[2],0,0,0,0,1];
+  const rotationX=a=>[1,0,0,0,0,Math.cos(a),Math.sin(a),0,0,-Math.sin(a),Math.cos(a),0,0,0,0,1];
+  const rotationY=a=>[Math.cos(a),0,-Math.sin(a),0,0,1,0,0,Math.sin(a),0,Math.cos(a),0,0,0,0,1];
+  const rotationZ=a=>[Math.cos(a),Math.sin(a),0,0,-Math.sin(a),Math.cos(a),0,0,0,0,1,0,0,0,0,1];
+  function modelMatrix(o){const r=o.rot||[0,0,0];let m=translation(o.pos);m=multiply(m,rotationZ(r[2]||0));m=multiply(m,rotationY(r[1]||0));m=multiply(m,rotationX(r[0]||0));return multiply(m,scaling(o.scale));}
+  function perspective(fov,aspect,near,far){const f=1/Math.tan(fov/2),nf=1/(near-far);return[f/aspect,0,0,0,0,f,0,0,0,0,(far+near)*nf,-1,0,0,2*far*near*nf,0];}
+  function ortho(l,r,b,t,n,f){return[2/(r-l),0,0,0,0,2/(t-b),0,0,0,0,-2/(f-n),0,-(r+l)/(r-l),-(t+b)/(t-b),-(f+n)/(f-n),1];}
+  function lookAt(eye,target){const z=norm(sub(eye,target)),x=norm(cross([0,0,1],z)),y=cross(z,x);return[x[0],y[0],z[0],0,x[1],y[1],z[1],0,x[2],y[2],z[2],0,-dot(x,eye),-dot(y,eye),-dot(z,eye),1];}
+  function cameraEye(camera){const cp=Math.cos(camera.pitch);return add(camera.target,[camera.distance*cp*Math.cos(camera.yaw),camera.distance*cp*Math.sin(camera.yaw),camera.distance*Math.sin(camera.pitch)]);}
+  function cameraMatrix(camera,aspect){return multiply(perspective(Math.PI/4,aspect,0.1,600),lookAt(cameraEye(camera),camera.target));}
+  function color(hex){const n=parseInt((hex||'#ffffff').replace('#',''),16);return[(n>>16&255)/255,(n>>8&255)/255,(n&255)/255];}
+  const materials={
+    aluminum:['#a9b2b8',0.86,0.3,1],steel:['#c2cbd0',0.92,0.22,1],zinc:['#8e9aa2',0.82,0.36,1],blackMetal:['#252d33',0.78,0.34,0],motorSteel:['#aeb8bd',0.9,0.26,1],gearbox:['#b29b68',0.8,0.3,1],gold:['#caa854',0.84,0.24,0],heatsink:['#4c5960',0.88,0.27,1],connectorMetal:['#a8b0b5',0.86,0.24,0],
+    rubber:['#202326',0.02,0.82,2],rubberSidewall:['#292d30',0.01,0.74,2],rubberPad:['#242729',0,0.9,2],tireRed:['#b82e35',0,0.78,2],tireBlue:['#246aa4',0,0.78,2],wheelHub:['#d4d7d5',0.65,0.32,0],
+    pcb:['#17674d',0.12,0.48,3],ic:['#171b1e',0.05,0.58,0],blackPlastic:['#20262b',0,0.5,0],plastic:['#76828c',0,0.52,0],cameraBody:['#24292d',0.05,0.38,0],lensBarrel:['#161b20',0.5,0.25,0],lensGlass:['#152d3c',0.65,0.08,0],lensCoating:['#304a71',0.72,0.06,0],silkscreen:['#e6e9df',0,0.6,0],capacitor:['#252d35',0.35,0.38,0],terminalBlue:['#236e9e',0,0.48,0],connectorWhite:['#dedfd6',0,0.52,0],connectorYellow:['#e2ad27',0,0.5,0],fuseAmber:['#cc791c',0.05,0.32,0],
+    batteryWrap:['#245681',0.05,0.42,0],batterySeam:['#183c5d',0,0.55,0],batteryLabel:['#d7d9d2',0,0.62,0],strap:['#25292b',0,0.86,0],estopYellow:['#e5b928',0,0.45,0],estopRed:['#b92727',0,0.34,0],estopRedTop:['#d13b35',0,0.3,0],forkOrange:['#d87332',0,0.58,0],flagFabric:['#b8d943',0,0.88,0],flagHem:['#78942b',0,0.86,0],conduit:['#b78c28',0,0.62,0],conduitRib:['#d2a93c',0,0.55,0],wire:['#ffffff',0,0.48,0],wireBlack:['#252a2e',0,0.58,0],field:['#52575a',0,0.88,0],wall:['#a4a6a2',0,0.78,0],path:['#54b6d4',0.1,0.42,0],
+    ledGreen:['#4cf58a',0,0.25,0,1.8],ledRed:['#ef4b42',0,0.25,0,1.2]
+  };
+  function bevelBox(segments=4,radius=0.075){const p=[],n=[],idx=[];const faces=[[[1,0,0],[0,1,0],[0,0,1]],[[-1,0,0],[0,-1,0],[0,0,1]],[[0,1,0],[0,0,1],[1,0,0]],[[0,-1,0],[0,0,-1],[1,0,0]],[[0,0,1],[1,0,0],[0,1,0]],[[0,0,-1],[-1,0,0],[0,1,0]]];
+    for(const [normal,u,v] of faces){const base=p.length/3;for(let j=0;j<=segments;j++)for(let i=0;i<=segments;i++){const point=[0,1,2].map(k=>normal[k]*0.5+u[k]*(i/segments-0.5)+v[k]*(j/segments-0.5));const inner=point.map(x=>Math.max(-0.5+radius,Math.min(0.5-radius,x))),d=norm(point.map((x,k)=>x-inner[k]));p.push(...point.map((x,k)=>inner[k]+d[k]*radius));n.push(...d);}for(let j=0;j<segments;j++)for(let i=0;i<segments;i++){const a=base+j*(segments+1)+i,b=a+1,c=a+segments+1,d=c+1;idx.push(a,b,c,b,d,c);}}
+    return{positions:p,normals:n,indices:idx};
+  }
+  function cylinder(segments=64){const p=[],n=[],idx=[];for(let i=0;i<=segments;i++){const a=i/segments*TAU,x=Math.cos(a),y=Math.sin(a);p.push(x,y,-.5,x,y,.5);n.push(x,y,0,x,y,0);}for(let i=0;i<segments;i++){const a=i*2;idx.push(a,a+2,a+1,a+1,a+2,a+3);}for(const z of[-.5,.5]){const center=p.length/3;p.push(0,0,z);n.push(0,0,Math.sign(z));for(let i=0;i<=segments;i++){const a=i/segments*TAU;p.push(Math.cos(a),Math.sin(a),z);n.push(0,0,Math.sign(z));}for(let i=0;i<segments;i++){if(z>0)idx.push(center,center+i+1,center+i+2);else idx.push(center,center+i+2,center+i+1);}}return{positions:p,normals:n,indices:idx};}
+  function ring(segments=64){const p=[],n=[],idx=[];const quad=(verts,normals)=>{const base=p.length/3;verts.forEach((v,i)=>{p.push(...v);n.push(...(Array.isArray(normals[0])?normals[i]:normals));});idx.push(base,base+1,base+2,base,base+2,base+3);};const r=.5,ri=.295;
+    for(let i=0;i<segments;i++){const a=i/segments*TAU,b=(i+1)/segments*TAU,ca=Math.cos(a),sa=Math.sin(a),cb=Math.cos(b),sb=Math.sin(b);
+      quad([[ca*r,sa*r,-.5],[cb*r,sb*r,-.5],[cb*r,sb*r,.5],[ca*r,sa*r,.5]],[[ca,sa,0],[cb,sb,0],[cb,sb,0],[ca,sa,0]]);
+      quad([[ca*ri,sa*ri,.5],[cb*ri,sb*ri,.5],[cb*ri,sb*ri,-.5],[ca*ri,sa*ri,-.5]],[[-ca,-sa,0],[-cb,-sb,0],[-cb,-sb,0],[-ca,-sa,0]]);
+      quad([[ca*r,sa*r,.5],[cb*r,sb*r,.5],[cb*ri,sb*ri,.5],[ca*ri,sa*ri,.5]],[0,0,1]);
+      quad([[ca*r,sa*r,-.5],[ca*ri,sa*ri,-.5],[cb*ri,sb*ri,-.5],[cb*r,sb*r,-.5]],[0,0,-1]);
+    }return{positions:p,normals:n,indices:idx};
+  }
+  function sphere(lat=16,lon=28){const p=[],n=[],idx=[];for(let y=0;y<=lat;y++)for(let x=0;x<=lon;x++){const t=y/lat*Math.PI,a=x/lon*TAU,v=[Math.sin(t)*Math.cos(a),Math.sin(t)*Math.sin(a),Math.cos(t)];p.push(...v);n.push(...v);}for(let y=0;y<lat;y++)for(let x=0;x<lon;x++){const a=y*(lon+1)+x,b=a+1,c=a+lon+1,d=c+1;idx.push(a,c,b,b,c,d);}return{positions:p,normals:n,indices:idx};}
+  function createRenderer(canvas){const gl=canvas.getContext('webgl',{antialias:true,alpha:false,powerPreference:'high-performance'});if(!gl)throw new Error('WebGL is unavailable. Enable browser graphics acceleration to open Hardware Studio.');
+    const vertex=`attribute vec3 aPosition;attribute vec3 aNormal;uniform mat4 uModel,uViewProjection,uLightVP;uniform vec3 uScale;varying vec3 vWorld,vNormal,vLocal;varying vec4 vShadow;void main(){vec4 world=uModel*vec4(aPosition,1.0);vWorld=world.xyz;vLocal=aPosition;vNormal=normalize(mat3(uModel)*(aNormal/max(uScale,vec3(0.0001))));vShadow=uLightVP*world;gl_Position=uViewProjection*world;}`;
+    const fragment=`precision highp float;varying vec3 vWorld,vNormal,vLocal;varying vec4 vShadow;uniform vec3 uColor,uEye;uniform float uMetal,uRough,uSelected,uAlpha,uActivity,uTime,uTexture,uEmissive,uShadowEnabled;uniform sampler2D uShadowMap;
+      float hash(vec3 p){return fract(sin(dot(p,vec3(17.13,91.71,43.77)))*43758.5453);}
+      float shadow(vec3 n,vec3 l){if(uShadowEnabled<0.5)return 1.0;vec3 s=vShadow.xyz/vShadow.w*0.5+0.5;if(s.x<0.0||s.x>1.0||s.y<0.0||s.y>1.0||s.z>1.0)return 1.0;float bias=max(0.00035*(1.0-dot(n,l)),0.00012),sum=0.0;for(int x=-1;x<=1;x++)for(int y=-1;y<=1;y++){float d=texture2D(uShadowMap,s.xy+vec2(float(x),float(y))/1024.0).r;sum+=s.z-bias<=d?1.0:0.45;}return sum/9.0;}
+      void main(){vec3 N=normalize(vNormal),V=normalize(uEye-vWorld),base=pow(uColor,vec3(2.2));float rough=uRough;
+        if(uTexture>0.5&&uTexture<1.5){float brush=hash(vec3(vLocal.x*4.0,vLocal.y*180.0,vLocal.z*180.0));rough=clamp(rough+(brush-0.5)*0.12,0.08,1.0);base*=0.92+brush*0.12;}
+        if(uTexture>1.5&&uTexture<2.5){float angle=atan(vLocal.y,vLocal.x)/6.2831853;float tread=smoothstep(0.72,0.82,fract(angle*24.0+vLocal.z*2.0));base*=1.0-tread*0.32;rough=clamp(rough+hash(vLocal*90.0)*0.08,0.0,1.0);}
+        if(uTexture>2.5){base*=0.95+hash(vLocal*65.0)*0.1;}
+        vec3 L=normalize(vec3(-0.48,-0.62,0.9)),H=normalize(V+L);float NdotL=max(dot(N,L),0.0),NdotV=max(dot(N,V),0.001),NdotH=max(dot(N,H),0.0),VdotH=max(dot(V,H),0.0);float a=rough*rough,a2=a*a,den=NdotH*NdotH*(a2-1.0)+1.0,D=a2/(3.14159265*den*den+0.0001);float k=(rough+1.0)*(rough+1.0)/8.0,G=NdotV/(NdotV*(1.0-k)+k)*NdotL/(NdotL*(1.0-k)+k);vec3 F0=mix(vec3(0.04),base,uMetal),F=F0+(1.0-F0)*pow(1.0-VdotH,5.0);vec3 spec=D*G*F/max(0.001,4.0*NdotV*NdotL);vec3 diff=(1.0-F)*(1.0-uMetal)*base/3.14159265;float sh=shadow(N,L);vec3 lit=(diff+spec)*vec3(1.0,0.94,0.84)*NdotL*sh*3.2;
+        vec3 fillDir=normalize(vec3(0.65,0.3,0.55));float fill=max(dot(N,fillDir),0.0);lit+=base*(0.12+0.16*max(N.z,0.0))+base*fill*vec3(0.18,0.25,0.34);lit+=F0*pow(1.0-NdotV,3.0)*0.22;
+        float pulse=0.5+0.5*sin((vWorld.x+vWorld.y)*4.0-uTime*8.0);lit+=base*uActivity*pulse*0.3;lit+=uColor*uEmissive;lit+=vec3(0.55,0.9,0.15)*uSelected*(0.18+0.35*pow(1.0-NdotV,2.0));lit=lit/(lit+vec3(1.0));lit=pow(lit,vec3(1.0/2.2));gl_FragColor=vec4(lit,uAlpha);}`;
+    const depthVertex=`attribute vec3 aPosition;uniform mat4 uModel,uViewProjection;void main(){gl_Position=uViewProjection*uModel*vec4(aPosition,1.0);}`,depthFragment=`precision mediump float;void main(){gl_FragColor=vec4(1.0);}`;
+    function program(vs,fs){const shader=(type,source)=>{const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(s));return s;};const p=gl.createProgram();gl.attachShader(p,shader(gl.VERTEX_SHADER,vs));gl.attachShader(p,shader(gl.FRAGMENT_SHADER,fs));gl.linkProgram(p);if(!gl.getProgramParameter(p,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(p));return p;}
+    const main=program(vertex,fragment),depth=program(depthVertex,depthFragment),uniforms=(p,names)=>Object.fromEntries(names.map(n=>[n,gl.getUniformLocation(p,n)]));
+    const loc={position:gl.getAttribLocation(main,'aPosition'),normal:gl.getAttribLocation(main,'aNormal'),...uniforms(main,['uModel','uViewProjection','uLightVP','uScale','uColor','uEye','uMetal','uRough','uSelected','uAlpha','uActivity','uTime','uTexture','uEmissive','uShadowEnabled','uShadowMap'])};
+    const depthLoc={position:gl.getAttribLocation(depth,'aPosition'),...uniforms(depth,['uModel','uViewProjection'])};
+    function upload(g){const m={count:g.indices.length};for(const key of['positions','normals']){const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(g[key]),gl.STATIC_DRAW);m[key]=buffer;}m.index=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,m.index);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint16Array(g.indices),gl.STATIC_DRAW);return m;}
+    const meshes={box:upload(bevelBox(1,0.02)),bevelBox:upload(bevelBox()),cylinder:upload(cylinder()),ring:upload(ring()),sphere:upload(sphere())},custom=new WeakMap();
+    function bind(m,l){gl.bindBuffer(gl.ARRAY_BUFFER,m.positions);gl.enableVertexAttribArray(l.position);gl.vertexAttribPointer(l.position,3,gl.FLOAT,false,0,0);if(l.normal!==undefined&&l.normal>=0){gl.bindBuffer(gl.ARRAY_BUFFER,m.normals);gl.enableVertexAttribArray(l.normal);gl.vertexAttribPointer(l.normal,3,gl.FLOAT,false,0,0);}gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,m.index);}
+    function meshFor(o){if(o.geometry){if(!custom.has(o.geometry))custom.set(o.geometry,upload(o.geometry));return custom.get(o.geometry);}return meshes[o.mesh||'bevelBox']||meshes.bevelBox;}
+    let shadow=null;const depthExtension=gl.getExtension('WEBGL_depth_texture');
+    if(depthExtension){const texture=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,texture);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.NEAREST);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.NEAREST);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.texImage2D(gl.TEXTURE_2D,0,gl.DEPTH_COMPONENT,1024,1024,0,gl.DEPTH_COMPONENT,gl.UNSIGNED_INT,null);const framebuffer=gl.createFramebuffer();gl.bindFramebuffer(gl.FRAMEBUFFER,framebuffer);gl.framebufferTexture2D(gl.FRAMEBUFFER,gl.DEPTH_ATTACHMENT,gl.TEXTURE_2D,texture,0);if(gl.checkFramebufferStatus(gl.FRAMEBUFFER)===gl.FRAMEBUFFER_COMPLETE)shadow={texture,framebuffer};gl.bindFramebuffer(gl.FRAMEBUFFER,null);}
+    let latestVP=null,stats={instances:0,triangles:0,drawCalls:0,shadows:Boolean(shadow)};
+    function resize(){const ratio=Math.min(2,globalThis.devicePixelRatio||1),w=Math.max(1,Math.round(canvas.clientWidth*ratio)),h=Math.max(1,Math.round(canvas.clientHeight*ratio));if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}return canvas.width/canvas.height;}
+    function lightMatrix(items){const min=[Infinity,Infinity,Infinity],max=[-Infinity,-Infinity,-Infinity];for(const o of items){if(o.mesh==='custom')continue;for(let k=0;k<3;k++){min[k]=Math.min(min[k],o.pos[k]);max[k]=Math.max(max[k],o.pos[k]);}}if(!Number.isFinite(min[0]))return multiply(ortho(-30,30,-30,30,1,150),lookAt([-30,-40,70],[0,0,0]));const center=min.map((v,k)=>(v+max[k])/2),extent=Math.max(max[0]-min[0],max[1]-min[1])*0.72+12,eye=add(center,[-extent*0.7,-extent*0.9,extent*1.65]);return multiply(ortho(-extent,extent,-extent,extent,0.5,extent*5),lookAt(eye,center));}
+    function render(instances,camera,options={}){const aspect=resize(),lightVP=lightMatrix(instances);stats={instances:instances.length,triangles:0,drawCalls:0,shadows:Boolean(shadow)};
+      if(shadow){gl.bindFramebuffer(gl.FRAMEBUFFER,shadow.framebuffer);gl.viewport(0,0,1024,1024);gl.clear(gl.DEPTH_BUFFER_BIT);gl.enable(gl.DEPTH_TEST);gl.enable(gl.CULL_FACE);gl.cullFace(gl.BACK);gl.useProgram(depth);gl.uniformMatrix4fv(depthLoc.uViewProjection,false,new Float32Array(lightVP));for(const o of instances){if(o.castShadow===false)continue;const m=meshFor(o);bind(m,depthLoc);gl.uniformMatrix4fv(depthLoc.uModel,false,new Float32Array(modelMatrix(o)));gl.drawElements(gl.TRIANGLES,m.count,gl.UNSIGNED_SHORT,0);}gl.bindFramebuffer(gl.FRAMEBUFFER,null);}
+      gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(0.025,0.038,0.055,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.enable(gl.DEPTH_TEST);gl.enable(gl.CULL_FACE);gl.cullFace(gl.BACK);gl.useProgram(main);latestVP=cameraMatrix(camera,aspect);gl.uniformMatrix4fv(loc.uViewProjection,false,new Float32Array(latestVP));gl.uniformMatrix4fv(loc.uLightVP,false,new Float32Array(lightVP));gl.uniform3fv(loc.uEye,cameraEye(camera));gl.uniform1f(loc.uTime,options.time||0);gl.uniform1f(loc.uShadowEnabled,shadow?1:0);gl.uniform1i(loc.uShadowMap,0);gl.activeTexture(gl.TEXTURE0);if(shadow)gl.bindTexture(gl.TEXTURE_2D,shadow.texture);
+      const ordered=[...instances].sort((a,b)=>(a.alpha===undefined?1:a.alpha)-(b.alpha===undefined?1:b.alpha));
+      for(const o of ordered){const mat=materials[o.material]||materials.plastic,m=meshFor(o),alpha=o.alpha===undefined?1:o.alpha;if(alpha<1){gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);gl.depthMask(false);}else{gl.disable(gl.BLEND);gl.depthMask(true);}bind(m,loc);gl.uniformMatrix4fv(loc.uModel,false,new Float32Array(modelMatrix(o)));gl.uniform3fv(loc.uScale,o.scale);gl.uniform3fv(loc.uColor,color(o.color||mat[0]));gl.uniform1f(loc.uMetal,o.metalness===undefined?mat[1]:o.metalness);gl.uniform1f(loc.uRough,o.roughness===undefined?mat[2]:o.roughness);gl.uniform1f(loc.uTexture,mat[3]||0);gl.uniform1f(loc.uEmissive,mat[4]||0);gl.uniform1f(loc.uSelected,o.selected?1:0);gl.uniform1f(loc.uAlpha,alpha);gl.uniform1f(loc.uActivity,o.activity||0);gl.drawElements(gl.TRIANGLES,m.count,gl.UNSIGNED_SHORT,0);stats.drawCalls++;stats.triangles+=m.count/3;}gl.depthMask(true);gl.disable(gl.BLEND);
+    }
+    function project(point){if(!latestVP)return null;const m=latestVP,x=m[0]*point[0]+m[4]*point[1]+m[8]*point[2]+m[12],y=m[1]*point[0]+m[5]*point[1]+m[9]*point[2]+m[13],w=m[3]*point[0]+m[7]*point[1]+m[11]*point[2]+m[15];if(w<=0)return null;return{x:(x/w*.5+.5)*canvas.clientWidth,y:(.5-y/w*.5)*canvas.clientHeight};}
+    return{render,project,resize,getStats:()=>({...stats}),meshCounts:()=>Object.fromEntries(Object.entries(meshes).map(([k,v])=>[k,v.count/3]))};
+  }
+  root.RobotLabRenderer={createRenderer,multiply,modelMatrix,cameraMatrix,materials};
+})(typeof globalThis!=='undefined'?globalThis:this);
+
+</script><script>
+/* Hardware Studio browser application; all geometry and simulation remain offline. */
+(function(){
+  'use strict';
+  const data=globalThis.ROBOT_LAB_DATA,Core=globalThis.RobotLabCore,Hardware=globalThis.RobotLabHardware,$=id=>document.getElementById(id),canvas=$('view');
+  if(!data||!Core||!Hardware||!globalThis.RobotLabRenderer)throw new Error('Hardware Studio scripts did not load in the required order.');
+  Core.validateWiring(data.wiring,data.model);
+  let renderer;try{renderer=globalThis.RobotLabRenderer.createRenderer(canvas);}catch(error){$('webgl-error').hidden=false;$('webgl-error').textContent=error.message;console.error(error);}
+  let mode='assembly',playing=false,speed=1,assemblyTime=0,selectedPart=null,selectedWire=null,follow=false,showWiring=true,showLabels=false,xray=false;
+  let sim=Core.createSimulation(data,'south'),lastStage=-1,lastEventCount=0,lastStats=0;
+  const cameras={assembly:{target:[0,0,2.5],distance:29,yaw:-0.85,pitch:0.78},simulation:{target:[48,24,0],distance:128,yaw:-1.12,pitch:1.0}};
+  const box=(pos,scale,color,material='plastic',rot=[0,0,0])=>({mesh:'bevelBox',pos,scale,color,material,rot});
+  function lineBox(a,b,width,color,z=.06){const dx=b[0]-a[0],dy=b[1]-a[1],length=Math.hypot(dx,dy);if(length<1e-7)return null;return box([(a[0]+b[0])/2,(a[1]+b[1])/2,z],[length,width,.045],color,'path',[0,0,Math.atan2(dy,dx)]);}
+  function outline(vertices,color,width=.18,z=.06){return vertices.map((p,i)=>lineBox(p,vertices[(i+1)%vertices.length],width,color,z)).filter(Boolean);}
+  function hardwareOptions(state){return{showWiring,selectedPart,selectedWire,xray,state,Core};}
+  function assemblyScene(){const frame=Core.assemblyFrame(data.model,assemblyTime),items=[box([0,0,-.35],[36,34,.5],'#202c36','plastic')];
+    for(let x=-16;x<=16;x+=4)items.push(box([x,0,-.07],[.035,32,.025],'#425362','blackMetal'));
+    for(let y=-16;y<=16;y+=4)items.push(box([0,y,-.07],[32,.035,.025],'#425362','blackMetal'));
+    items.push(...Hardware.buildRobot(frame.parts,data.wiring,hardwareOptions({time:assemblyTime,tire:'red',wheelLeft:0,wheelRight:0})));
+    return{items,frame};
+  }
+  function robotItems(state){const parts=data.model.parts.map(p=>({...p,position:[...p.pos],progress:1}));return Hardware.transformRobot(Hardware.buildRobot(parts,data.wiring,hardwareOptions(state)),state);}
+  function fieldScene(){const items=[box([48,24,-.36],[96,48,.719],'#565b5d','field')];
+    items.push(box([48,.5,2],[96,1,4],'#a4a6a2','wall'),box([48,47.5,2],[96,1,4],'#a4a6a2','wall'),box([.5,24,2],[1,48,4],'#a4a6a2','wall'),box([95.5,24,2],[1,48,4],'#a4a6a2','wall'));
+    for(let x=5;x<96;x+=5)items.push(box([x,24,.012],[.025,46,.02],'#697174','field'));
+    for(let y=4;y<48;y+=4)items.push(box([48,y,.012],[94,.025,.02],'#697174','field'));
+    for(const solid of data.field.solids){const xs=solid.vertices_in.map(p=>p[0]),ys=solid.vertices_in.map(p=>p[1]),minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys),center=solid.id.includes('center');items.push(box([(minX+maxX)/2,(minY+maxY)/2,center?1:.75],[maxX-minX,maxY-minY,center?2:1.5],'#7e8587','wall'));}
+    for(const f of data.field.features.filter(f=>f.kind==='marking'))items.push(...outline(f.vertices_in,f.id==='start_box'?'#ab8cdb':'#e5e9e8',.22));
+    const trace=data.field.features.find(f=>f.id==='track_marking_trace');items.push(...outline(trace.vertices_in,'#bfc3bf',.45));
+    const route=data.routes[$('route').value];for(let i=1;i<route.waypoints.length;i++){const line=lineBox(route.waypoints[i-1],route.waypoints[i],.22,route.id==='north'?'#e69b55':'#48c3b1',.09);if(line)items.push(line);}
+    const target=data.field.features.find(f=>f.id===route.target_id),cx=(target.vertices_in[0][0]+target.vertices_in[2][0])/2,cy=(target.vertices_in[0][1]+target.vertices_in[2][1])/2;
+    items.push({mesh:'ring',pos:sim.state.tire==='red'?[cx,cy,.55]:[cx+2,cy,.55],scale:[2.684,2.684,1.087],rot:[0,0,0],material:sim.state.tire==='red'?'tireBlue':'tireRed'});
+    items.push(...robotItems(sim.state));items.push(...outline(Core.robotPolygon(sim.state.x,sim.state.y,sim.state.theta),'#d5f249',.14,.11));
+    if(sim.state.collision){const p=sim.state.collision;items.push(...outline(Core.robotPolygon(p.x,p.y,p.theta),'#ff5964',.3,.15));}
+    return{items};
+  }
+  const labelIds=['battery','controller','driver','camera','motor-left','wheel-right','carried-tire','estop'],labelNodes=new Map();
+  for(const id of labelIds){const el=document.createElement('div');el.className='part-label';el.textContent=data.model.parts.find(p=>p.id===id).name.replace(' placeholder','');$('labels').appendChild(el);labelNodes.set(id,el);}
+  function updateLabels(frame){const ids=selectedPart&&!labelIds.includes(selectedPart)?[...labelIds,selectedPart]:labelIds;if(selectedPart&&!labelNodes.has(selectedPart)){const el=document.createElement('div');el.className='part-label';el.textContent=data.model.parts.find(p=>p.id===selectedPart).name;$('labels').appendChild(el);labelNodes.set(selectedPart,el);}
+    for(const [id,el]of labelNodes){const p=frame?frame.parts.find(p=>p.id===id):data.model.parts.find(p=>p.id===id);if(!showLabels||!ids.includes(id)||!p||frame&&p.progress<.65){el.style.display='none';continue;}let pos=p.position||p.pos;if(!frame){const c=Math.cos(sim.state.theta),s=Math.sin(sim.state.theta);pos=[sim.state.x+p.pos[0]*c-p.pos[1]*s,sim.state.y+p.pos[0]*s+p.pos[1]*c,p.pos[2]+.5];}const screen=renderer&&renderer.project(pos);if(!screen||screen.x<20||screen.x>canvas.clientWidth-20||screen.y<20||screen.y>canvas.clientHeight-20){el.style.display='none';continue;}el.style.display='block';el.style.left=`${screen.x}px`;el.style.top=`${screen.y}px`;}
+  }
+  data.model.stages.forEach((stage,i)=>{const button=document.createElement('button');button.textContent=`${i+1} · ${stage.id}`;button.dataset.stage=i;button.title=stage.title;button.addEventListener('click',()=>{setPlaying(false);assemblyTime=Core.assemblyFrame(data.model,0).starts[i];});$('stage-list').appendChild(button);});
+  for(const p of data.model.parts){const button=document.createElement('button');button.textContent=p.name;button.dataset.part=p.id;button.addEventListener('click',()=>selectPart(p.id));$('part-list').appendChild(button);}
+  for(const w of data.wiring.wires){const option=document.createElement('option');option.value=w.id;option.textContent=`${w.id} · ${w.net} · ${w.from.join('.')} → ${w.to.join('.')}`;$('wire-select').appendChild(option);}
+  function selectPart(id){selectedPart=selectedPart===id?null:id;for(const b of document.querySelectorAll('[data-part]'))b.classList.toggle('active',b.dataset.part===selectedPart);const p=data.model.parts.find(p=>p.id===selectedPart),detail=$('part-detail');detail.replaceChildren();const title=document.createElement('h3'),text=document.createElement('p'),meta=document.createElement('p');
+    if(p){title.textContent=p.name;text.textContent=p.description||`${data.model.stages[p.stage-1].description} Detailed subgeometry is an agent-authored visualization proxy with assumed placement and dimensions.`;meta.textContent=`Assembly stage ${p.stage} · high-level ${p.kind} envelope · vendor model and dimensions not verified`;meta.className='fine-print';$('question-suggestion').textContent=`Ask about ${p.name}, its packaging, wiring or measurement gates.`;$('question-input').value=`In Hardware Studio, inspect ${p.name}: what is assumed, which connections matter, and what must be measured before selecting or ordering a real part?`;}
+    else{title.textContent='Candidate hardware, not a BOM';text.textContent='Detailed geometry makes packaging and wiring questions visible. It does not certify vendor dimensions, fit, current capacity or structural adequacy.';meta.textContent='';const stage=Core.assemblyFrame(data.model,assemblyTime).stage;$('question-suggestion').textContent='Select hardware, a wire or a stage, then copy its context.';$('question-input').value=`During “${stage.title}” in Hardware Studio: ${stage.question}`;}
+    detail.append(title,text,meta);
+  }
+  function selectWire(id){selectedWire=id||null;$('wire-select').value=selectedWire||'';const w=data.wiring.wires.find(w=>w.id===selectedWire),detail=$('wire-detail');detail.replaceChildren();const title=document.createElement('h3'),text=document.createElement('p'),live=document.createElement('p');live.className='wire-live';
+    if(w){title.textContent=`${w.id} · ${w.net}`;text.textContent=`${w.kind.toUpperCase()} · ${w.from.join('.')} → ${w.to.join('.')} · ${w.points.length} route control points · ${w.diameter_in.toFixed(3)} in visual diameter (not a wire gauge).`;live.textContent=`Modeled current: ${Core.netCurrent(w.net,sim.state).toFixed(3)} A`;$('question-suggestion').textContent=`Ask about ${w.net}, its endpoints or electrical evidence needs.`;$('question-input').value=`Inspect wire ${w.id} (${w.net}) from ${w.from.join('.')} to ${w.to.join('.')}: what needs verification before this becomes a safe build connection?`;}
+    else{title.textContent='23 routed cables · 11 connectors';text.textContent='Select a cable to highlight it and inspect its endpoints, net class and live modeled current. Pin locations are geometric candidates, not manufacturer footprints.';live.textContent='';}
+    detail.append(title,text,live);
+  }
+  function setPlaying(value){if(value&&mode==='simulation'&&(sim.state.status==='completed'||sim.state.status==='collision'))sim.reset();if(value&&mode==='simulation'&&sim.state.estop){$('view-status').textContent='E-stop engaged';return;}playing=value;$('play').textContent=playing?'❚❚ Pause':'▶ Play';$('view-status').textContent=playing?`Running · ${speed}×`:'Paused';}
+  function resetCamera(){follow=false;const c=mode==='assembly'?cameras.assembly:cameras.simulation;Object.assign(c,mode==='assembly'?{target:[0,0,2.5],distance:29,yaw:-.85,pitch:.78}:{target:[48,24,0],distance:128,yaw:-1.12,pitch:1});}
+  function setMode(next){setPlaying(false);mode=next;selectedPart=null;selectPart(null);resetCamera();for(const name of['assembly','simulation']){$(`tab-${name}`).classList.toggle('active',name===mode);$(`tab-${name}`).setAttribute('aria-selected',String(name===mode));$(`${name}-panel`).hidden=name!==mode;}
+    $('timeline').max=mode==='assembly'?Core.assemblyFrame(data.model,0).total:120;$('view-badge').textContent=mode==='assembly'?'DETAILED HARDWARE ASSEMBLY':'EMPTY-FIELD PHYSICS · NOT A LEGAL MISSION';$('viewer-legend').textContent=mode==='assembly'?'30 systems · detailed candidate proxies · 23 exact-endpoint cables':'Live wheel/electrical state · green full footprint · conditional empty-field route';$('transport-note').textContent=mode==='assembly'?'Assembly is deterministic: scrub to any point without losing component or cable state.':'Live physics while playing. Scrub/rewind resets and deterministically re-simulates all drive and energy state.';$('question-suggestion').textContent=mode==='assembly'?'Select hardware, a wire or a stage, then copy its context.':'Ask about the drive solver, electrical observer, wiring or route assumptions.';if(mode==='simulation')$('question-input').value='In Hardware Studio field simulation, which physics, electrical and route assumptions most limit what this run proves?';
+  }
+  function seekSimulation(time){const target=Core.clamp(time,0,120);sim.reset();if(target>0)sim.step(target);lastEventCount=0;}
+  function reset(){setPlaying(false);lastEventCount=0;if(mode==='assembly')assemblyTime=0;else sim.reset();}
+  function stepBy(delta){setPlaying(false);if(mode==='assembly')assemblyTime=Core.clamp(assemblyTime+delta,0,Core.assemblyFrame(data.model,0).total);else if(delta<0)seekSimulation(sim.state.time+delta);else if(!sim.state.estop)sim.step(delta);}
+  for(const button of document.querySelectorAll('[data-mode]'))button.addEventListener('click',()=>setMode(button.dataset.mode));
+  $('play').addEventListener('click',()=>setPlaying(!playing));$('reset').addEventListener('click',reset);$('back').addEventListener('click',()=>stepBy(-1));$('forward').addEventListener('click',()=>stepBy(1));
+  $('speed').addEventListener('change',()=>{speed=Number($('speed').value);if(playing)$('view-status').textContent=`Running · ${speed}×`;});
+  $('timeline').addEventListener('input',()=>{setPlaying(false);const t=Number($('timeline').value);if(mode==='assembly')assemblyTime=t;else seekSimulation(t);});
+  $('route').addEventListener('change',()=>{setPlaying(false);sim=Core.createSimulation(data,$('route').value);lastEventCount=0;resetCamera();});
+  for(const button of document.querySelectorAll('[data-camera]'))button.addEventListener('click',()=>{const c=cameras[mode],action=button.dataset.camera;if(action==='reset')resetCamera();if(action==='detail'){follow=mode==='simulation';c.target=mode==='assembly'?[0,0,2.7]:[sim.state.x,sim.state.y,2];c.distance=mode==='assembly'?18:22;c.pitch=.65;c.yaw=-.7;}if(action==='top'){follow=false;c.pitch=1.52;c.yaw=-Math.PI/2;c.distance=mode==='assembly'?43:128;c.target=mode==='assembly'?[0,0,2]:[48,24,0];}if(action==='follow'){follow=mode==='simulation';if(follow){c.distance=30;c.pitch=.82;}}});
+  let drag=null;canvas.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,lastX:e.clientX,lastY:e.clientY,moved:0};canvas.setPointerCapture(e.pointerId);});
+  canvas.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.lastX,dy=e.clientY-drag.lastY;drag.moved+=Math.abs(dx)+Math.abs(dy);drag.lastX=e.clientX;drag.lastY=e.clientY;const c=cameras[mode];c.yaw-=dx*.008;c.pitch=Core.clamp(c.pitch+dy*.008,.12,1.53);follow=false;});
+  canvas.addEventListener('pointerup',e=>{if(drag&&drag.moved<6&&renderer&&mode==='assembly'){const rect=canvas.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top;let best=null;for(const p of Core.assemblyFrame(data.model,assemblyTime).parts){const screen=renderer.project(p.position);if(!screen)continue;const distance=Math.hypot(screen.x-x,screen.y-y);if(distance<42&&(!best||distance<best.distance))best={id:p.id,distance};}if(best)selectPart(best.id);}drag=null;});
+  canvas.addEventListener('pointercancel',()=>{drag=null;});canvas.addEventListener('wheel',e=>{e.preventDefault();const c=cameras[mode];c.distance=Core.clamp(c.distance*Math.exp(e.deltaY*.001),8,240);},{passive:false});
+  $('fullscreen').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.querySelector('.viewer-card').requestFullscreen();}catch{$('view-status').textContent='Fullscreen unavailable';}});
+  $('copy-question').addEventListener('click',async()=>{const text=$('question-input').value.trim()||$('question-suggestion').textContent;let copied=false;try{await navigator.clipboard.writeText(text);copied=true;}catch{$('question-input').value=text;$('question-input').select();copied=document.execCommand('copy');}$('copy-status').textContent=copied?'Copied':'Select and copy manually';});
+  document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName))return;if(e.code==='Space'){e.preventDefault();setPlaying(!playing);}if(e.key.toLowerCase()==='r')reset();if(e.key==='ArrowLeft'){e.preventDefault();stepBy(-1);}if(e.key==='ArrowRight'){e.preventDefault();stepBy(1);}});
+  function updateAssembly(frame){$('timeline').value=frame.time;$('time').textContent=`${Core.formatTime(frame.time)} / ${Core.formatTime(frame.total)}`;$('step-count').textContent=`Step ${frame.stageIndex+1} of ${data.model.stages.length} · ${frame.assembledCount}/${frame.parts.length} systems seated`;if(lastStage!==frame.stageIndex){lastStage=frame.stageIndex;$('stage-title').textContent=frame.stage.title;$('stage-description').textContent=frame.stage.description;for(const b of document.querySelectorAll('[data-stage]'))b.classList.toggle('active',Number(b.dataset.stage)===lastStage);if(!selectedPart){$('question-suggestion').textContent=frame.stage.question;$('question-input').value=`During “${frame.stage.title}” in Hardware Studio: ${frame.stage.question}`;}}}
+  function updateSimulation(){const s=sim.state,e=s.electrical,command=sim.commands[Math.min(s.commandIndex,sim.commands.length-1)];$('timeline').value=s.time;$('time').textContent=`${Core.formatTime(s.time)} / 02:00.0`;$('sim-status').textContent=(s.dwell>0?`Dock dwell ${s.dwell.toFixed(1)} s`:s.status)+(e.saturated?' · demand > scenario':'');$('sim-time').textContent=`${s.time.toFixed(1)} s`;$('sim-pose').textContent=`${s.x.toFixed(1)}, ${s.y.toFixed(1)} in · ${Core.deg(s.theta).toFixed(0)}°`;$('sim-speed').textContent=`${s.v.toFixed(1)} in/s`;$('sim-distance').textContent=`${s.distance.toFixed(1)} in`;$('sim-command').textContent=`${Math.min(s.commandIndex+1,sim.commands.length)}/${sim.commands.length} · ${command?command.kind:'done'}`;$('sim-tire').textContent=s.tire==='blue'?'Blue · conceptual pickup':'Red preload';$('sim-progress').textContent=`${Math.round(sim.progress*100)}%`;
+    $('sim-bus').textContent=`${e.bus_v.toFixed(2)} V`;$('sim-current').textContent=`${e.total_current_a.toFixed(2)} A`;$('sim-power').textContent=`${e.power_w.toFixed(1)} W`;$('sim-soc').textContent=`${e.soc_pct.toFixed(2)}% · ${s.energyWh.toFixed(2)} Wh`;$('sim-rpm').textContent=`${e.left_rpm.toFixed(0)} / ${e.right_rpm.toFixed(0)}`;$('sim-torque').textContent=`${e.left_torque_nm.toFixed(3)} / ${e.right_torque_nm.toFixed(3)} N·m`;$('estop').setAttribute('aria-pressed',String(s.estop));$('estop').textContent=s.estop?'● Reset modeled E-stop':'● Engage modeled E-stop';
+    const live=document.querySelector('.wire-live');if(live&&selectedWire){const w=data.wiring.wires.find(w=>w.id===selectedWire);live.textContent=`Modeled current: ${Core.netCurrent(w.net,s).toFixed(3)} A · activity is illustrative`;}
+    if(lastEventCount!==s.events.length){lastEventCount=s.events.length;$('event-log').replaceChildren();for(const event of s.events){const li=document.createElement('li');li.textContent=`${event.time.toFixed(1)} s — ${event.message}`;$('event-log').appendChild(li);}$('event-log').scrollTop=$('event-log').scrollHeight;}
+  }
+
+  $('wire-select').addEventListener('change',()=>selectWire($('wire-select').value));
+  $('estop').addEventListener('click',()=>{setPlaying(false);sim.setEstop(!sim.state.estop);lastEventCount=0;});
+  for(const [id,key]of[['toggle-wiring','wiring'],['toggle-labels','labels'],['toggle-xray','xray']])$(id).addEventListener('click',()=>{if(key==='wiring')showWiring=!showWiring;if(key==='labels')showLabels=!showLabels;if(key==='xray')xray=!xray;const active=key==='wiring'?showWiring:key==='labels'?showLabels:xray;$(id).classList.toggle('active',active);$(id).setAttribute('aria-pressed',String(active));});
+
+  let previous=performance.now();function tick(now){const dt=Math.min(.05,Math.max(0,(now-previous)/1000));previous=now;if(playing){if(mode==='assembly'){const total=Core.assemblyFrame(data.model,0).total;assemblyTime=Math.min(total,assemblyTime+dt*speed);if(assemblyTime>=total)setPlaying(false);}else{sim.step(dt*speed);if(sim.state.status==='completed'||sim.state.status==='collision')setPlaying(false);}}
+    if(mode==='simulation'&&follow)cameras.simulation.target=[sim.state.x,sim.state.y,1.8];const scene=mode==='assembly'?assemblyScene():fieldScene();if(renderer)renderer.render(scene.items,cameras[mode],{time:mode==='assembly'?assemblyTime:sim.state.time});updateLabels(scene.frame||null);if(mode==='assembly')updateAssembly(scene.frame);else updateSimulation();if(now-lastStats>500){lastStats=now;const stats=renderer?renderer.getStats():{instances:0,drawCalls:0,triangles:0,shadows:false};$('render-stats').textContent=`${stats.instances} meshes · ${Math.round(stats.triangles/1000)}k triangles\n${stats.shadows?'PCF shadows':'no shadow extension'} · WebGL`;}requestAnimationFrame(tick);
+  }
+  globalThis.robotLab={getDiagnostics:()=>({version:data.model.version,mode,playing,speed,assemblyTime,selectedPart,selectedWire,layers:{wiring:showWiring,labels:showLabels,xray},stage:Core.assemblyFrame(data.model,assemblyTime).stageIndex,assembled:Core.assemblyFrame(data.model,assemblyTime).assembledCount,wiring:Core.validateWiring(data.wiring,data.model),simulation:{time:sim.state.time,status:sim.state.status,x:sim.state.x,y:sim.state.y,theta:sim.state.theta,tire:sim.state.tire,commandIndex:sim.state.commandIndex,commands:sim.commands.length,events:sim.state.events.length,estop:sim.state.estop,energy_wh:sim.state.energyWh,electrical:{...sim.state.electrical}},canvas:{width:canvas.width,height:canvas.height},webgl:Boolean(renderer),render:renderer?renderer.getStats():null})};
+  setMode('assembly');requestAnimationFrame(tick);
+})();
+
+
+</script>
+</body></html>

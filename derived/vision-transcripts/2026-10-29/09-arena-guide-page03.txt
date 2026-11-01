@@ -1,0 +1,42 @@
+Here is the transcription of every dimension label and text callout from the provided drawing:
+
+**Arena Dimensions and Labels (starting from top left, moving clockwise then inwards):**
+
+*   **Left Vertical (Outer):** 48in
+*   **Bottom Horizontal (Outer, left section):** 68in
+*   **Bottom Horizontal (Outer, right section):** 28in
+*   **Top Right (small vertical):** 1 in
+*   **Top Right (small vertical):** 17in
+*   **Top Right (small horizontal):** 62in
+*   **Right Side (middle vertical):** 12in
+*   **Right Side (bottom vertical):** 12in
+*   **Right Side (bottom horizontal):** 65in
+*   **Right Side (top horizontal):** 18in
+*   **Middle Horizontal (inner section):** 36in
+*   **Middle Vertical (inner section):** 15in
+*   **Middle Horizontal (inner section):** 18in
+*   **Inner Left (vertical):** 12in
+*   **Inner Left (horizontal):** 16in
+*   **Inner Left (diagonal):** 76
+*   **Left Side (inner section):** 12in
+*   **Left Side (inner section):** 9in
+
+**Callouts and Arrows:**
+
+*   **Left Side (horizontal beam):** 1"x4"x96"
+*   **Bottom Left (Paint callout):** Paint Gray
+*   **Middle Left (Paint callout):** Paint Black
+*   **Middle Right (beam callout):** 1"x1"x16"
+*   **Top Right (beam callout):** 1"x1"x36"
+*   **Inner Diagonal (beam callout):** 1"x1"x36"
+
+**"Apriltag" Labels (These are repeated, indicating a specific type of marker or tag):**
+
+*   **Top Right (above small square box):** Apriltag
+*   **Bottom Right (below series of small square boxes):** Apriltags
+
+**Drawing Title Block (Bottom Right):**
+
+*   **Drawn by:** D. Jhan Cooper 6/12/2026
+*   **Title:** 207 EEE SouthEast-Coin Field Assembly
+*   **Sheet:** 1/2

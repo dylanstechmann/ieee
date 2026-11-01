@@ -1,0 +1,27 @@
+{
+  "status": "provisional-engineering-route-contract-not-official-lap-definition",
+  "sources": ["CURRENT-RULES-2026-10-29.md", "STRATEGY-AND-ARCHITECTURE.md", "constrained-field-v3.json"],
+  "notes": [
+    "Center-coordinate phase regions prevent wrong-side shortcuts; they are engineering restrictions, not legal paint boundaries or full-footprint lane containment.",
+    "One illustrative circuit only. No three-lap mission, official lap-counting, tire/flag/dwell/final-parking validation.",
+    "Directional gates count spatial travel, including reverse driving in the intended spatial direction. Spin and gate oscillation cannot award extra progress.",
+    "Gate direction and locations are provisional; confirm against official Q&A before claiming legal laps."
+  ],
+  "phase_regions": {
+    "west": [0, 0, 43.87, 48],
+    "upper": [0, 24.073, 96, 48],
+    "far": [79.87, 0, 96, 48],
+    "lower": [0, 0, 96, 24.073],
+    "pit-mouth": [0, 0, 43.87, 16],
+    "pit": [0, 0, 28, 48]
+  },
+  "leg_phases": ["west", "west", "west", "west", "upper", "far", "far", "far", "lower", "west", "west", "west", "pit-mouth", "pit", "pit", "pit", "pit", "pit", "pit", "pit", "pit", "pit-mouth", "west", "west", "west"],
+  "gates": [
+    {"id": "upper-outbound", "axis": 0, "value": 60, "span": [24.073, 48], "direction": 1},
+    {"id": "far-transition", "axis": 1, "value": 24.073, "span": [79.87, 96], "direction": -1},
+    {"id": "lower-inbound", "axis": 0, "value": 60, "span": [0, 24.073], "direction": -1}
+  ],
+  "checkpoint_roles": {"start": "fixed", "dock": "fixed", "race-checkpoints": "fixed-order", "pit-staging": "bounded-engineering-choice"},
+  "pit_staging_x_candidates_in": [18, 16, 15],
+  "planning_modes": ["constrained-nominal", "constrained-variants"]
+}

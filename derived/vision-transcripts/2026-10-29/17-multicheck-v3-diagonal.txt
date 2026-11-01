@@ -1,0 +1,66 @@
+
+===== MODEL: google/gemini-2.5-flash =====
+Here's the transcription of the visible dimension label:
+
+**9.5**
+
+There are no other visible digits or text besides the dimension label itself.
+
+**Confidence:** High confidence (95%) on "9.5". The first character is clearly a "9". The dot is clearly a decimal point. The last character appears to be a "5". While slightly less crisp than the "9", its shape strongly suggests a "5".
+
+===== MODEL: qwen/qwen3-vl-235b-a22b-instruct =====
+Transcription of the dimension label, character by character:
+
+“9 3/4”
+
+Breakdown:
+
+- First character: “9” — clear, unambiguous. Confidence: 100%
+- Second character: space — visible gap between “9” and “3”. Confidence: 100%
+- Third character: “3” — clear, top horizontal bar and diagonal stroke visible. Confidence: 100%
+- Fourth character: “/” — diagonal slash, standard fraction separator. Confidence: 100%
+- Fifth character: “4” — clear, open-top form typical in engineering drawings. Confidence: 100%
+
+No “in” or other unit label is visible in this zoomed view.
+
+Other visible text/digits:
+- None. The only legible text is the dimension “9 3/4”.
+
+Note: The image is low resolution and slightly blurry, but the characters are distinct enough for high-confidence identification. No ambiguous characters.
+
+Final transcription: 9 3/4
+
+===== MODEL: nvidia/nemotron-3.5-super-vl =====
+Based on the visual evidence, the dimension label on the diagonal line reads:
+
+**R15**
+
+**Character-by-character breakdown:**
+1.  **R**: Clearly visible as the radius symbol.
+2.  **1**: A vertical stroke.
+3.  **5**: A digit with a horizontal top and curved bottom.
+
+**Ambiguities & Possibilities:**
+*   **R1.5**: It is possible there is a faint decimal point between the 1 and 5, making it a 1.5 radius, but no dot is clearly visible. Given the scale of typical engineering drawings for structures like a robot arena, a whole number like 15 (inches) is more likely for a corner radius than 1.5 inches, though both are physically possible.
+*   **R16**: The bottom of the last digit is slightly obscured by blur, so a '6' is a remote possibility, but '5' fits the visible top bar and curve better.
+
+**Confidence:** High (approx. 90%) that it is "R15".
+
+**Other visible text/digits:**
+*   There is a horizontal dimension line to the right with extension lines, but the text associated with it is cut off and not visible.
+*   No other text (like "in" or fractions) is visible on this specific label.
+
+===== MODEL: anthropic/claude-sonnet-5.5 =====
+**Best reading: 9 3/4** (a whole number 9 followed by a stacked fraction 3 over 4).
+
+- **Orientation:** The label is rotated about 55° counter-clockwise, so it reads along the dimension line from lower-left to upper-right.
+- **"9":** This is the leftmost glyph, at the lower-left of the label, and is fairly clear.
+- **Fraction:** The "3" sits above the "4", which in the rotated frame puts the 3 toward the upper-left and the 4 toward the lower-right. The 3 is fairly clear. The 4 is the blurriest glyph.
+- **"in":** I can see no "in" or other text, so the label looks like a bare number.
+
+**Confidence:**
+- 9: about 85%
+- 3 (numerator): about 80%
+- 4 (denominator): about 70%. The alternatives are 8 or 2, which would give 3/8 or 3/2, but 3/2 isn't a normal drawing fraction. 4 is the best fit.
+
+The only other things visible are the dimension line, its arrowheads and extension lines, and part of another dimension arrow at the top right. They carry no readable text.

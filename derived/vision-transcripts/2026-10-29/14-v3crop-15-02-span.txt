@@ -1,0 +1,9 @@
+Here are the dimension labels read exactly from the provided image:
+
+1.  **Label:** "15"
+    *   **What it dimensions:** It appears to dimension a vertical distance from an implied baseline (possibly the top edge of the board or a reference point) down to a horizontal line. The dimension line has an arrow pointing downwards from the "15" and an arrow pointing to the horizontal line at the bottom of the dimension.
+    *   **Position:** In the upper left portion of the crop, oriented vertically, with the '1' above the '5'.
+
+2.  **Label:** "15.02in"
+    *   **What it dimensions:** It dimensions a horizontal distance between two vertical lines. The left vertical line is defined by an extension line coming up from a notched feature, and the right vertical line is an edge on the right side of the image.
+    *   **Position:** In the middle-left of the crop, positioned horizontally above a series of notched features.

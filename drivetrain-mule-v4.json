@@ -1,0 +1,36 @@
+{
+  "version":"0.4.0",
+  "date":"2026-10-31",
+  "status":"selected-prototype-baseline-not-ordered-not-fabricated-not-hardware-validated",
+  "units":"mm, kg, V, A, N m",
+  "procurement_config":"order-a-procurement-v4.json",
+  "hardware_config":"hardware-development-v3.json",
+  "selected":{"motor_id":"M70","wheel_diameter_mm":80,"bracket_sku":"1995","hub_sku":"1083","wheel_sku":"1430","caster_sku":"953","support_configuration":"dual-front-rear"},
+  "deck":{"length_mm":190,"width_mm":160,"thickness_mm":5,"material":"FAU-printed prototype blank; material and process not selected","motor_hole_diameter_mm":3.4,"caster_hole_diameter_mm":2.5},
+  "drive":{"motor_body_diameter_mm":37,"motor_body_length_mm":70,"gearbox_face_y_mm":74,"shaft_length_mm":16,"wheel_width_mm":10,"wheel_center_y_mm":88,"wheel_radius_mm":40,"axle_center_x_mm":0},
+  "bracket":{"shaft_center_above_mount_face_mm":18.4,"bottom_tapped_hole_spacing_mm":14.8,"bottom_tapped_hole_count":3,"overall_face_mm":36.8,"base_thickness_mm":6.5,"drawing":"sources/hardware-2026-10-31/pololu/1995-37D-machined-bracket.pdf"},
+  "caster":{"body_height_mm":13.5,"selected_spacer_mm":3.175,"available_spacers_mm":[1.5875,3.175],"mount_hole_spacing_mm":14.7,"mount_hole_diameter_mm":2.3,"body_width_mm":20.3,"ball_diameter_mm":12.7,"positions_x_mm":[-75,75],"drawing":"sources/hardware-2026-10-31/pololu/953-ball-caster-dimension-diagram.pdf"},
+  "support_configurations":[
+    {"id":"dual-front-rear","caster_positions":["rear","front"],"purpose":"stable initial bench configuration; check four-contact wheel unloading"},
+    {"id":"front-only","caster_positions":["front"],"purpose":"three-contact comparison; check rear tipping and turning"},
+    {"id":"rear-only","caster_positions":["rear"],"purpose":"three-contact comparison; check front approach and mechanism load"}
+  ],
+  "wheel_variants_mm":[80,76.2],
+  "mass_cases_kg":[2,4,6],
+  "sources":{
+    "motor_step":"sources/hardware-2026-10-31/pololu/step/37d-gearmotor-50-70-encoder.step",
+    "bracket_step":"sources/hardware-2026-10-31/pololu/step/1995-machined-bracket.step",
+    "caster_step":"sources/hardware-2026-10-31/pololu/step/953-ball-caster.step",
+    "wheel_page":"sources/hardware-2026-10-31/pololu/product-1430-overview.html"
+  },
+  "gates":{"caster_contact_tolerance_mm":0.25,"minimum_wheel_deck_lateral_clearance_mm":3,"minimum_motor_body_gap_mm":8,"minimum_motor_hole_edge_ligament_mm":4,"e03_mass_kg":4,"straight_runs_per_cell":10,"spin_runs_per_direction_per_cell":20,"straight_length_m":1,"maximum_straight_drift_mm":25,"minimum_straight_passes":9,"cruise_speed_in_s":8,"median_spin_error_deg":5},
+  "limitations":[
+    "Selected for continued digital prototyping only; no supplier order, print, fabrication or energized test is recorded.",
+    "Deck and drilling geometry are nominal candidates. Inspect received parts and verify bracket orientation, screw engagement, hub stack-up and tolerances before fabrication.",
+    "The deck STL is an undrilled blank. The true-scale SVG is the proposed drill template; optional ballast marks are not released mounting holes.",
+    "The caster preload calculation is rigid nominal arithmetic, not a suspension, flatness, traction or wheel-loading guarantee.",
+    "Dual and single-caster configurations require E03 comparison. Metal-ball caster load and scrub limits remain relevant.",
+    "Motor maximum-efficiency data and ideal motor curves are not loaded or thermal validation. Driver, battery and controller remain unselected.",
+    "The 80 mm mule is separate from the 3-inch route-simulation baseline."
+  ]
+}

@@ -1,0 +1,860 @@
+{
+  "status": "synthetic-timestep-refinement-not-physical-validation",
+  "coarse_dt_s": 0.00013020833333333333,
+  "fine_dt_s": 0.00006510416666666667,
+  "unchanged_control_dt_s": 0.004166666666666667,
+  "input_hashes": {
+    "tools/refine-stopping-dynamics-v6.js": "de6c4e89d824cad6b6faaad87b9d9a952e8555b6861b621822655400ba2e2a20",
+    "tools/stopping-dynamics-v6.js": "8fd620bbcb8b8cb737f0680edbbe19783be3dddc744855e112b9daa14d37a45f",
+    "stopping-dynamics-v6.json": "c61196b0c31286ead9f242707eac33b732c4f560e81dfebdefb2435d56f66019",
+    "derived/stopping-dynamics-v6/report.json": "c521ef6ab91ddef7c972ca0cd3c2b8782274bdc9fee9289fd3086674062f2222"
+  },
+  "summary": {
+    "case_count": 84,
+    "all_residuals_reduced": true,
+    "all_stop_statuses_unchanged": true,
+    "maximum_stop_distance_delta_m": 0.0000048817298278804044
+  },
+  "cases": [
+    {
+      "motor_sku": "4753",
+      "scenario_id": "straight",
+      "mode": "driven",
+      "coarse_residual_j": 0.0008275395176706724,
+      "fine_residual_j": 0.0004137020909258382,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 3.7213673725888796e-8
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "straight",
+      "mode": "coast",
+      "coarse_residual_j": 0.0004734080207611157,
+      "fine_residual_j": 0.00023659627673818662,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000043910276262895676,
+      "final_speed_delta_m_s": 1.1091512368722477e-79
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "straight",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0011634398785924684,
+      "fine_residual_j": 0.0005813076873010976,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000018480255698036935,
+      "final_speed_delta_m_s": 4.938194191537229e-105
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "straight",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0017580365307569013,
+      "fine_residual_j": 0.0008757450103525077,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 3.2431126161316937e-8,
+      "final_speed_delta_m_s": 2.6150688485937924e-7
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "turning",
+      "mode": "driven",
+      "coarse_residual_j": 0.0010581446734416744,
+      "fine_residual_j": 0.0005289956055758438,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 1.165967383753852e-8
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "turning",
+      "mode": "coast",
+      "coarse_residual_j": 0.0005671771944601269,
+      "fine_residual_j": 0.00028346699664622606,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000048817298278804044,
+      "final_speed_delta_m_s": 9.843694297677597e-80
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "turning",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.001259489989581971,
+      "fine_residual_j": 0.0006292100433038482,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.000002639908009402503,
+      "final_speed_delta_m_s": 3.602511348809653e-98
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "turning",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0019957132190815824,
+      "fine_residual_j": 0.0009939292201240901,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 6.758287519493394e-7,
+      "final_speed_delta_m_s": 2.653752732674833e-7
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "asymmetric-traction",
+      "mode": "driven",
+      "coarse_residual_j": 0.000803775069751822,
+      "fine_residual_j": 0.00040179039809729034,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 3.711167129161197e-8
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "asymmetric-traction",
+      "mode": "coast",
+      "coarse_residual_j": 0.0003566044401915238,
+      "fine_residual_j": 0.0001782151998703744,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000027788567296301026,
+      "final_speed_delta_m_s": 2.9627202030512923e-78
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "asymmetric-traction",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0008430043713790296,
+      "fine_residual_j": 0.0004209392336951036,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000018465948804832072,
+      "final_speed_delta_m_s": 4.455078977188795e-94
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "asymmetric-traction",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0014130806074016677,
+      "fine_residual_j": 0.0007023299846479619,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 1.511082172549194e-7,
+      "final_speed_delta_m_s": 2.5798628260184815e-7
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "drive-loss",
+      "mode": "driven",
+      "coarse_residual_j": 0.0004780855639316961,
+      "fine_residual_j": 0.00023889275706145963,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.00000413980997431701,
+      "final_speed_delta_m_s": 2.6023861378975942e-73
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "drive-loss",
+      "mode": "coast",
+      "coarse_residual_j": 0.0004734080207611157,
+      "fine_residual_j": 0.00023659627673818662,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000043910276262895676,
+      "final_speed_delta_m_s": 1.1091512368722477e-79
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "drive-loss",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0011634398785924302,
+      "fine_residual_j": 0.0005813076873010178,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000018480255698036935,
+      "final_speed_delta_m_s": 1.798305022335111e-83
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "drive-loss",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0017327592709194262,
+      "fine_residual_j": 0.0008630863514037107,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 3.2431126161316937e-8,
+      "final_speed_delta_m_s": 6.549617707173405e-79
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "low-voltage",
+      "mode": "driven",
+      "coarse_residual_j": 0.0008270643108510001,
+      "fine_residual_j": 0.000413457240396653,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 2.0261570199409107e-15
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "low-voltage",
+      "mode": "coast",
+      "coarse_residual_j": 0.0004734080207611157,
+      "fine_residual_j": 0.00023659627673818662,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000043910276262895676,
+      "final_speed_delta_m_s": 1.1091512368722477e-79
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "low-voltage",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0011634398785924684,
+      "fine_residual_j": 0.0005813076873010976,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000018480255698036935,
+      "final_speed_delta_m_s": 4.938194191537229e-105
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "low-voltage",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0015907824309720972,
+      "fine_residual_j": 0.0007936230848427234,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 4.132389913764911e-7,
+      "final_speed_delta_m_s": 3.5672530532846e-7
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "high-voltage",
+      "mode": "driven",
+      "coarse_residual_j": 0.0008246522653738708,
+      "fine_residual_j": 0.0004122596893747499,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 3.458155872770874e-8
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "high-voltage",
+      "mode": "coast",
+      "coarse_residual_j": 0.0004734080207611157,
+      "fine_residual_j": 0.00023659627673818662,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000043910276262895676,
+      "final_speed_delta_m_s": 1.1091512368722477e-79
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "high-voltage",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0011634398785924684,
+      "fine_residual_j": 0.0005813076873010976,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000018480255698036935,
+      "final_speed_delta_m_s": 4.938194191537229e-105
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "high-voltage",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.001799627285261618,
+      "fine_residual_j": 0.0008960707121716677,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 2.709365164790811e-7,
+      "final_speed_delta_m_s": 2.4564581456264353e-7
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "low-current-limit",
+      "mode": "driven",
+      "coarse_residual_j": 0.0008114215344861009,
+      "fine_residual_j": 0.000405643058451588,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 2.6617597015388128e-14
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "low-current-limit",
+      "mode": "coast",
+      "coarse_residual_j": 0.0004734080207611157,
+      "fine_residual_j": 0.00023659627673818662,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000043910276262895676,
+      "final_speed_delta_m_s": 1.1091512368722477e-79
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "low-current-limit",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0011634398785924684,
+      "fine_residual_j": 0.0005813076873010976,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000018480255698036935,
+      "final_speed_delta_m_s": 4.938194191537229e-105
+    },
+    {
+      "motor_sku": "4753",
+      "scenario_id": "low-current-limit",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0014435697412772813,
+      "fine_residual_j": 0.0007217155891655128,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 9.565441484466614e-8,
+      "final_speed_delta_m_s": 4.6423769127853934e-7
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "straight",
+      "mode": "driven",
+      "coarse_residual_j": 0.0009347755660336077,
+      "fine_residual_j": 0.0004672871136293111,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 1.5543122344752192e-15
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "straight",
+      "mode": "coast",
+      "coarse_residual_j": 0.0008983683063533837,
+      "fine_residual_j": 0.00044896802376642253,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000033260252763015613,
+      "final_speed_delta_m_s": 2.2983399114042785e-91
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "straight",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0014318162447470306,
+      "fine_residual_j": 0.0007144538812600548,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.000001278766669408904,
+      "final_speed_delta_m_s": 7.506800017819391e-130
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "straight",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0022004032123720124,
+      "fine_residual_j": 0.0010897538629575237,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 1.306254930853734e-7,
+      "final_speed_delta_m_s": 2.5280318648586387e-7
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "turning",
+      "mode": "driven",
+      "coarse_residual_j": 0.0011679192969094032,
+      "fine_residual_j": 0.0005837487010147413,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 1.608630548211032e-8
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "turning",
+      "mode": "coast",
+      "coarse_residual_j": 0.0009633583928945703,
+      "fine_residual_j": 0.0004814438675581085,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000036478676212047673,
+      "final_speed_delta_m_s": 4.624047812962249e-89
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "turning",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0015873478479747835,
+      "fine_residual_j": 0.000791895811313871,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.000001696592847872172,
+      "final_speed_delta_m_s": 1.5703817272980742e-110
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "turning",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0025105457891058114,
+      "fine_residual_j": 0.0012437575823033842,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 5.92198463076482e-7,
+      "final_speed_delta_m_s": 2.502774421409633e-7
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "asymmetric-traction",
+      "mode": "driven",
+      "coarse_residual_j": 0.0008817862630419171,
+      "fine_residual_j": 0.000440556199716724,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 1.5543122344752192e-15
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "asymmetric-traction",
+      "mode": "coast",
+      "coarse_residual_j": 0.000647960382052443,
+      "fine_residual_j": 0.00032374435882073435,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000026631189248595144,
+      "final_speed_delta_m_s": 1.4473428265058503e-88
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "asymmetric-traction",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0010655883189250454,
+      "fine_residual_j": 0.0005309600129131745,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000010786557674228453,
+      "final_speed_delta_m_s": 7.486007276376891e-107
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "asymmetric-traction",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0018649734760478182,
+      "fine_residual_j": 0.0009202952349065471,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 1.253289997876078e-7,
+      "final_speed_delta_m_s": 2.450765566000437e-7
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "drive-loss",
+      "mode": "driven",
+      "coarse_residual_j": 0.000877843283066837,
+      "fine_residual_j": 0.0004385955006922515,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.000004015478089862412,
+      "final_speed_delta_m_s": 4.429118411170382e-84
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "drive-loss",
+      "mode": "coast",
+      "coarse_residual_j": 0.0008983683063533837,
+      "fine_residual_j": 0.00044896802376642253,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000033260252763015613,
+      "final_speed_delta_m_s": 2.2983399114042785e-91
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "drive-loss",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0014318162447470306,
+      "fine_residual_j": 0.0007144538812600548,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.000001278766669408904,
+      "final_speed_delta_m_s": 4.080478841785122e-95
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "drive-loss",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.002186908363219449,
+      "fine_residual_j": 0.0010829917349171395,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 1.306254930853734e-7,
+      "final_speed_delta_m_s": 1.5900929466012788e-88
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "low-voltage",
+      "mode": "driven",
+      "coarse_residual_j": 0.0009464154004579228,
+      "fine_residual_j": 0.0004730815119025067,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 1.6653345369377348e-15
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "low-voltage",
+      "mode": "coast",
+      "coarse_residual_j": 0.0008983683063533837,
+      "fine_residual_j": 0.00044896802376642253,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000033260252763015613,
+      "final_speed_delta_m_s": 2.2983399114042785e-91
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "low-voltage",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0014318162447470306,
+      "fine_residual_j": 0.0007144538812600548,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.000001278766669408904,
+      "final_speed_delta_m_s": 7.506800017819391e-130
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "low-voltage",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0019113030876253823,
+      "fine_residual_j": 0.0009498825025267832,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 5.7283551440495684e-8,
+      "final_speed_delta_m_s": 3.4115519176878065e-7
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "high-voltage",
+      "mode": "driven",
+      "coarse_residual_j": 0.0009327726882926157,
+      "fine_residual_j": 0.0004662906104435649,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 1.27675647831893e-15
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "high-voltage",
+      "mode": "coast",
+      "coarse_residual_j": 0.0008983683063533837,
+      "fine_residual_j": 0.00044896802376642253,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000033260252763015613,
+      "final_speed_delta_m_s": 2.2983399114042785e-91
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "high-voltage",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0014318162447470306,
+      "fine_residual_j": 0.0007144538812600548,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.000001278766669408904,
+      "final_speed_delta_m_s": 7.506800017819391e-130
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "high-voltage",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0022789572465920227,
+      "fine_residual_j": 0.0011275200585637302,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 4.983993076223756e-7,
+      "final_speed_delta_m_s": 2.379268088616355e-7
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "low-current-limit",
+      "mode": "driven",
+      "coarse_residual_j": 0.000862213606614759,
+      "fine_residual_j": 0.00043100550042041164,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 5.745404152435185e-15
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "low-current-limit",
+      "mode": "coast",
+      "coarse_residual_j": 0.0008983683063533837,
+      "fine_residual_j": 0.00044896802376642253,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000033260252763015613,
+      "final_speed_delta_m_s": 2.2983399114042785e-91
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "low-current-limit",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0014318162447470306,
+      "fine_residual_j": 0.0007144538812600548,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.000001278766669408904,
+      "final_speed_delta_m_s": 7.506800017819391e-130
+    },
+    {
+      "motor_sku": "4754",
+      "scenario_id": "low-current-limit",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0015344135185187055,
+      "fine_residual_j": 0.0007668102323318271,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 1.4835388350859652e-7,
+      "final_speed_delta_m_s": 3.169437671862968e-7
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "straight",
+      "mode": "driven",
+      "coarse_residual_j": 0.0011998732902966935,
+      "fine_residual_j": 0.0005984950392843302,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 9.71445146547012e-16
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "straight",
+      "mode": "coast",
+      "coarse_residual_j": 0.0013737155471790913,
+      "fine_residual_j": 0.0006857613496425372,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000014358066566643596,
+      "final_speed_delta_m_s": 4.9500943964568425e-124
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "straight",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0018002224668176928,
+      "fine_residual_j": 0.0008934671033781691,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 7.12894389614388e-7,
+      "final_speed_delta_m_s": 7.214291596202192e-159
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "straight",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.002696855593917906,
+      "fine_residual_j": 0.0013267559405429202,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 4.2233243167065504e-7,
+      "final_speed_delta_m_s": 1.6561003607487362e-7
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "turning",
+      "mode": "driven",
+      "coarse_residual_j": 0.0014672551089134345,
+      "fine_residual_j": 0.0007318207974265079,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 5.551115123125783e-16
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "turning",
+      "mode": "coast",
+      "coarse_residual_j": 0.0015151398527569054,
+      "fine_residual_j": 0.0007562151476216208,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000018525225468218887,
+      "final_speed_delta_m_s": 4.996564742510363e-107
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "turning",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0020410715668754964,
+      "fine_residual_j": 0.00101277995249556,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000010321162989251204,
+      "final_speed_delta_m_s": 8.277581648623371e-140
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "turning",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0030502411552800826,
+      "fine_residual_j": 0.0015037891818029045,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 3.0925339948063846e-7,
+      "final_speed_delta_m_s": 1.6750961665982578e-7
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "asymmetric-traction",
+      "mode": "driven",
+      "coarse_residual_j": 0.0010889700406693237,
+      "fine_residual_j": 0.0005424917687797404,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 6.106226635438361e-16
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "asymmetric-traction",
+      "mode": "coast",
+      "coarse_residual_j": 0.0010151787734602943,
+      "fine_residual_j": 0.0005061748837623531,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000012256674294802705,
+      "final_speed_delta_m_s": 3.639036282303491e-103
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "asymmetric-traction",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0014060360227507729,
+      "fine_residual_j": 0.0006954802880011976,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 4.450131138797331e-7,
+      "final_speed_delta_m_s": 3.52627751951089e-134
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "asymmetric-traction",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0023376288597586684,
+      "fine_residual_j": 0.0011451375602431618,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 7.054680402698854e-8,
+      "final_speed_delta_m_s": 1.5552842836139913e-7
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "drive-loss",
+      "mode": "driven",
+      "coarse_residual_j": 0.001426871999902879,
+      "fine_residual_j": 0.0007114708942441705,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000010546905599359557,
+      "final_speed_delta_m_s": 1.817530764025549e-114
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "drive-loss",
+      "mode": "coast",
+      "coarse_residual_j": 0.0013737155471790913,
+      "fine_residual_j": 0.0006857613496425372,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000014358066566643596,
+      "final_speed_delta_m_s": 4.9500943964568425e-124
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "drive-loss",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0018002224668176928,
+      "fine_residual_j": 0.0008934671033781691,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 7.12894389614388e-7,
+      "final_speed_delta_m_s": 1.4762796764969997e-127
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "drive-loss",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.002690452181673998,
+      "fine_residual_j": 0.0013235482923055208,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 4.2233243167065504e-7,
+      "final_speed_delta_m_s": 3.6722812607529463e-118
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "low-voltage",
+      "mode": "driven",
+      "coarse_residual_j": 0.0012242772249813072,
+      "fine_residual_j": 0.0006108272912044299,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 6.938893903907228e-16
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "low-voltage",
+      "mode": "coast",
+      "coarse_residual_j": 0.0013737155471790913,
+      "fine_residual_j": 0.0006857613496425372,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000014358066566643596,
+      "final_speed_delta_m_s": 4.9500943964568425e-124
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "low-voltage",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0018002224668176928,
+      "fine_residual_j": 0.0008934671033781691,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 7.12894389614388e-7,
+      "final_speed_delta_m_s": 7.214291596202192e-159
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "low-voltage",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0023682454576099757,
+      "fine_residual_j": 0.0011686060826543825,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 1.371787378369113e-7,
+      "final_speed_delta_m_s": 2.1179694005172634e-7
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "high-voltage",
+      "mode": "driven",
+      "coarse_residual_j": 0.0011961414952708083,
+      "fine_residual_j": 0.0005965958235982782,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 6.661338147750939e-16
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "high-voltage",
+      "mode": "coast",
+      "coarse_residual_j": 0.0013737155471790913,
+      "fine_residual_j": 0.0006857613496425372,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000014358066566643596,
+      "final_speed_delta_m_s": 4.9500943964568425e-124
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "high-voltage",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0018002224668176928,
+      "fine_residual_j": 0.0008934671033781691,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 7.12894389614388e-7,
+      "final_speed_delta_m_s": 7.214291596202192e-159
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "high-voltage",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0027791146344593246,
+      "fine_residual_j": 0.001366253977255795,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 9.436193351176902e-8,
+      "final_speed_delta_m_s": 1.5740379781005454e-7
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "low-current-limit",
+      "mode": "driven",
+      "coarse_residual_j": 0.0013744910387396558,
+      "fine_residual_j": 0.0006860852346290969,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": null,
+      "final_speed_delta_m_s": 3.4139358007223564e-15
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "low-current-limit",
+      "mode": "coast",
+      "coarse_residual_j": 0.0013737155471790913,
+      "fine_residual_j": 0.0006857613496425372,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 0.0000014358066566643596,
+      "final_speed_delta_m_s": 4.9500943964568425e-124
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "low-current-limit",
+      "mode": "dynamic-brake",
+      "coarse_residual_j": 0.0018002224668176928,
+      "fine_residual_j": 0.0008934671033781691,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 7.12894389614388e-7,
+      "final_speed_delta_m_s": 7.214291596202192e-159
+    },
+    {
+      "motor_sku": "4755",
+      "scenario_id": "low-current-limit",
+      "mode": "active-stop",
+      "coarse_residual_j": 0.0017536436913465087,
+      "fine_residual_j": 0.00087416417685055,
+      "stop_status_unchanged": true,
+      "stop_distance_delta_m": 2.246136830887785e-7,
+      "final_speed_delta_m_s": 3.011529423746354e-7
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+Here are the dimension labels read exactly from the image:
+
+1.  **Label:** 12 1/4 in
+    *   **Appears to dimension:** The horizontal length of the top edge of the trapezoidal shape.
+    *   **Position:** Centered horizontally above the top edge of the trapezoid, below the top horizontal line of the drawing.
+
+2.  **Label:** 15in
+    *   **Appears to dimension:** The vertical height from the top horizontal line of the drawing down to the level of the top edge of the trapezoidal shape.
+    *   **Position:** To the right of the trapezoidal shape, oriented vertically.
+
+3.  **Label:** ?in (Ambiguous)
+    *   **Appears to dimension:** The slanted length of the left side of the trapezoidal shape.
+    *   **Position:** Along the left slanted side of the trapezoid, oriented diagonally.
+    *   **Ambiguity:** The first character is unclear. It could be a '3' or a '5', but is very blurry. The second character appears to be '8'. So, possibilities include "38in" or "58in".

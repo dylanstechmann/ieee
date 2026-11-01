@@ -1,0 +1,17 @@
+
+===== MODEL: nvidia/nemotron-3.5-super-vl =====
+Ø40.30, INNER, Ø
+
+===== MODEL: qwen/qwen3-vl-235b-a22b-instruct =====
+The dimension callout text is: **Ø40.30**
+
+This dimension points to the **INNER** circle.
+
+There is no other transcribed text (e.g., no R2, no explicit units shown in the callout, though CAD defaults often imply mm or inches depending on context — none is visible here). The grid and axis lines (labeled “X” and “Y”) are present but not part of the dimension text.
+
+===== MODEL: google/gemini-2.5-flash =====
+The dimension callout text is: **Ø40.30**
+
+The dimension points to the **INNER** circle.
+
+There is another text string visible, which appears to be a label for an axis or plane: **SK**

@@ -1,0 +1,22 @@
+{
+  "status": "illustrative-pixel-trace-not-verified-cad",
+  "source": "derived/GM2-V3.1/media/image4.JPG, GM2 V3 section 3.2.1",
+  "source_pixels": {"width": 564, "height": 764, "board_left": 110, "board_right": 441, "board_top": 79, "board_bottom": 740},
+  "board_inches": {"length_x": 96, "width_y": 48},
+  "frame": "x increases from pit-end board edge toward racecourse end; y increases from left to right in the source image; z is up",
+  "trace_method": "Approximate visual pixel picks on low-resolution drawing; affine scaling from outer board edges. Each chosen feature is illustrative, not measured or authoritative. No pixel error bound has been established.",
+  "features": [
+    {"id":"pit_box_left", "kind":"marking", "shape":"polygon", "pixels":[[131,650],[213,650],[213,733],[131,733]]},
+    {"id":"pit_box_middle", "kind":"marking", "shape":"polygon", "pixels":[[234,650],[317,650],[317,733],[234,733]]},
+    {"id":"pit_box_right", "kind":"marking", "shape":"polygon", "pixels":[[337,650],[420,650],[420,733],[337,733]]},
+    {"id":"start_box", "kind":"marking", "shape":"polygon", "pixels":[[337,558],[420,558],[420,641],[337,641]]},
+    {"id":"track_marking_outer_edge", "kind":"marking", "shape":"polygon", "pixels":[[233,134],[319,134],[361,189],[361,440],[319,493],[233,493],[190,440],[190,189]]},
+    {"id":"center_divider_axis", "kind":"physical_centerline", "shape":"line", "pixels":[[276,189],[276,439]]},
+    {"id":"pit_divider_axis", "kind":"physical_centerline", "shape":"line", "pixels":[[221,545],[331,545]]},
+    {"id":"checkered_left_extent", "kind":"marking", "shape":"line", "pixels":[[117,545],[221,545]]},
+    {"id":"checkered_right_extent", "kind":"marking", "shape":"line", "pixels":[[331,545],[434,545]]}
+  ],
+  "omissions": ["wall thickness and height", "physical divider thickness and height", "line width", "checkered individual squares", "AprilTag poses", "obstacles", "start flag", "verified pit box numbering"],
+  "drawing_callouts_in": {"board_width":48,"race_end_to_transition":68,"pit_end_to_transition":28,"center_divider_length":36,"pit_divider_length":16,"pit_box_width":12,"pit_box_gap":3,"checkered_opening_left":15,"checkered_opening_right":15.02},
+  "note": "Rendering is orientation-preserving schematic geometry only. Neither markings nor 15-inch drawing callouts are assumed collision-free passage boundaries."
+}

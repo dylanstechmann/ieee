@@ -1,0 +1,26 @@
+{
+  "requested_at": "2026-10-13",
+  "provider": "Alibaba Cloud",
+  "purpose": "Public hosting of Road to Daytona for IEEE members, preserving the interactive website interface",
+  "new_server_requested": true,
+  "monthly_budget": {"currency": "USD", "maximum": 5, "includes": ["server", "bandwidth"]},
+  "user_has_account": true,
+  "account_connection_verified": false,
+  "server_provisioned": false,
+  "public_url": null,
+  "existing_sites_audience_changed": false,
+  "preferred_purchase": {
+    "product": "Simple Application Server",
+    "quantity": 1,
+    "term": "1 month",
+    "os": "Ubuntu or Debian Linux",
+    "preferred_region": "Virginia, if a plan within budget is offered",
+    "traffic": "Unlimited/no excess traffic charges, if available within budget",
+    "price_condition": "Console payable total and regular monthly renewal including mandatory charges stay at or below USD 5",
+    "addons": "None"
+  },
+  "standalone_site": "share/Road-to-Daytona.html",
+  "deployment_zip": "share/Road-to-Daytona-Alibaba.zip",
+  "remaining_information": ["Actual console plan and total", "Public server IP", "SSH username and usable authentication method"],
+  "blocker": "No Alibaba connector, configured CLI profile, or controllable browser is available in the current session"
+}

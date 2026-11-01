@@ -1,0 +1,83 @@
+{
+  "status": "specified-not-executed",
+  "scope": "Future source-backed regression requirements; no planner qualification or policy change",
+  "cases": [
+    {
+      "id": "A1",
+      "question_ids": [
+        "Q1"
+      ],
+      "status": "specified-not-executed",
+      "required_evidence": "Official allowed/forbidden entry and exit ends, direction and start-area restrictions.",
+      "positive_case": "Complete arrival/task/withdrawal/reentry for every assigned box using explicitly allowed ends.",
+      "negative_case": "Reject prohibited end, wrong direction or forbidden start-area traversal even when collision-free.",
+      "affected_contract": "Pit entry/exit policy; historical north hypothesis retained separately."
+    },
+    {
+      "id": "A2",
+      "question_ids": [
+        "Q2"
+      ],
+      "status": "specified-not-executed",
+      "required_evidence": "Authoritative boundary edges, projected envelope and permitted internal-line crossing.",
+      "positive_case": "Full specified chassis/tire/mechanism envelope stays in each required area.",
+      "negative_case": "Reject an envelope crossing a forbidden edge although its center remains inside; exercise boundary contact separately.",
+      "affected_contract": "Phase containment and swept envelope; no center-only substitution."
+    },
+    {
+      "id": "A3",
+      "question_ids": [
+        "Q3"
+      ],
+      "status": "specified-not-executed",
+      "required_evidence": "Finish-line endpoints/direction, ordered lap progress and treatment of pit/reverse/repeated crossings.",
+      "positive_case": "Three valid laps with pit stop after lap 1 or 2; timing and final state evaluated independently.",
+      "negative_case": "No duplicate lap credit for reverse/repeated/pit crossings or incomplete circuit.",
+      "affected_contract": "Official lap state machine replacing provisional gates only after review."
+    },
+    {
+      "id": "A4",
+      "question_ids": [
+        "Q4"
+      ],
+      "status": "specified-not-executed",
+      "required_evidence": "Three-vehicle lane/quadrant allocation, permitted rotations and full-footprint versus reference-point containment.",
+      "positive_case": "Validate admissible three-vehicle placements at region edges and allowed orientations.",
+      "negative_case": "Reject forbidden allocation, orientation or containment breach; do not equate independent single blockers with match coverage.",
+      "affected_contract": "Admissible obstacle scenario generator."
+    },
+    {
+      "id": "A5",
+      "question_ids": [
+        "Q5"
+      ],
+      "status": "specified-not-executed",
+      "required_evidence": "Organizer-qualified model/substitution list and maximum length, width including wheels, height and uncertainty.",
+      "positive_case": "Use versioned conservative installed envelopes for every approved vehicle type.",
+      "negative_case": "Reject package dimensions, unidentified toy photos or missing protrusions as qualifying footprint evidence.",
+      "affected_contract": "Obstacle polygons/heights and substitution bounds."
+    },
+    {
+      "id": "A6",
+      "question_ids": [
+        "Q6"
+      ],
+      "status": "specified-not-executed",
+      "required_evidence": "Dimensioned datum faces/endpoints and interpretation of G02 for built geometry and placement.",
+      "positive_case": "Check justified tolerance extremes, divider endpoints and tower projections without shrinking uncertainty.",
+      "negative_case": "Reject a nominal-only clearance claim or arbitrary correlated shifts as exhaustive G02 coverage.",
+      "affected_contract": "Field datums and explicit bounded uncertainty model."
+    },
+    {
+      "id": "A7",
+      "question_ids": [
+        "Q7"
+      ],
+      "status": "specified-not-executed",
+      "required_evidence": "Official exchange completion, tire retention, final parking metric and scoring observation time.",
+      "positive_case": "Score authorized exchange independently of final parking; evaluate parking below, at and above 75% using confirmed metric.",
+      "negative_case": "Do not award >75% at exactly 75%; reject wrong tire/box/retention event as specified and late scoring.",
+      "affected_contract": "Task events, docking reach, final containment and finish timing."
+    }
+  ]
+}

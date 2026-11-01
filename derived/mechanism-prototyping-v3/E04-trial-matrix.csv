@@ -1,0 +1,10 @@
+case_id,lateral_offset_mm,yaw_deg,required_attempts,pose_class,architecture_id,trial_log_reference
+offset-m12p7_yaw-m10,-12.7,-10,5,,,
+offset-m12p7_yaw-0,-12.7,0,5,,,
+offset-m12p7_yaw-10,-12.7,10,5,,,
+offset-0_yaw-m10,0,-10,5,,,
+offset-0_yaw-0,0,0,5,,,
+offset-0_yaw-10,0,10,5,,,
+offset-12p7_yaw-m10,12.7,-10,5,,,
+offset-12p7_yaw-0,12.7,0,5,,,
+offset-12p7_yaw-10,12.7,10,5,,,
