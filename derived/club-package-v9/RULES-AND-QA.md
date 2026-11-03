@@ -26,7 +26,7 @@ Do not restore V2's separate pit-entry, correct-pit and two-second dwell awards.
 | Topic | Working engineering choice | Required confirmation |
 |---|---|---|
 | Robot envelope | Conservative 10 × 10 in rectangular lower body; 12 in starting cube | Minimum-envelope application throughout match; whether a round 10 in base qualifies |
-| Pit access | Reuse conditional south access in simulation | Legal entry/exit openings, same-end use, start-box traversal |
+| Pit access | Shortened upper-lane approach and conditional box-2 north-divider parking route in simulation | Legal entry/exit openings, same-end use, start-box traversal and whether these shortcuts preserve lap/finish eligibility |
 | Laps | Explicit route progress and encoder-distance guard | Direction, lane requirements, finish endpoints, repeated crossings during pit detour |
 | Exchange | Pit after lap 2; retain blue tire; bail out on failure | Whether chassis must enter box for exchange; completion and retention interpretation |
 | Parking | Calculate >75% rectangular footprint overlap | What is measured and finish-line versus final-parking timing |

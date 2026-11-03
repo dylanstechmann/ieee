@@ -1,10 +1,10 @@
 {
   "status": "synthetic-classical-baseline-not-legal-route-or-hardware-validation",
-  "controller": "forward/reverse/spin path follower; no obstacle avoidance",
+  "controller": "forward/reverse/spin path follower with shortened conditional pit/parking routes; blocked obstacle routes stop safely",
   "training": {
     "trained_policy": false,
     "training_episodes": 0,
-    "reason": "Complete all-box parking and obstacle handling must be fixed before RL comparison.",
+    "reason": "Obstacle handling, official Q&A and realistic sensing must be resolved before RL comparison.",
     "interface": "MissionEnv reset/step; 18 observations and two normalized actions",
     "optional_dependencies_installed": false
   },
@@ -40,101 +40,27 @@
   },
   "summary": {
     "episodes": 20,
-    "completed_and_parked": 6,
+    "completed_and_parked": 20,
     "three_laps": 20,
     "clean_three_laps": 20,
     "exchange_success": 20,
-    "auto_stop": 14,
+    "auto_stop": 0,
     "collisions": 0,
-    "obstacle_probe_collisions": 3
+    "obstacle_probe_episodes": 9,
+    "obstacle_probe_collisions": 0,
+    "obstacle_safe_stops": 6,
+    "obstacle_detours_completed": 0,
+    "finish_before_165_s": 20
   },
   "nominal_results": [
     {
       "seed": 100,
-      "phase": "STOPPED",
-      "time_s": 178.0,
+      "phase": "DONE",
+      "time_s": 161.5,
       "laps_completed": 3,
       "assigned_box": 2,
       "entered": true,
-      "finish_seconds": 163.30000000000288,
-      "parked": false,
-      "parking_overlap": 0.0,
-      "exchange_result": "done",
-      "blue_retained": true,
-      "collisions": 0,
-      "wall_contacts": [
-        0,
-        0,
-        0
-      ],
-      "obstacle_contacts": [
-        0,
-        0,
-        0
-      ],
-      "score_like_total": 375,
-      "score_status": "synthetic event arithmetic, not referee adjudication",
-      "pose": [
-        0.4542769650417456,
-        0.5106555421600575,
-        1.5641081335911378
-      ],
-      "target": [
-        0.4572,
-        0.610743,
-        1.5707963267948966
-      ],
-      "stop_reason": "auto_stop",
-      "route_name": "join-to-park",
-      "route_index": 5
-    },
-    {
-      "seed": 101,
-      "phase": "STOPPED",
-      "time_s": 178.0,
-      "laps_completed": 3,
-      "assigned_box": 3,
-      "entered": true,
-      "finish_seconds": 167.15000000000376,
-      "parked": false,
-      "parking_overlap": 0.0,
-      "exchange_result": "done",
-      "blue_retained": true,
-      "collisions": 0,
-      "wall_contacts": [
-        0,
-        0,
-        0
-      ],
-      "obstacle_contacts": [
-        0,
-        0,
-        0
-      ],
-      "score_like_total": 345,
-      "score_status": "synthetic event arithmetic, not referee adjudication",
-      "pose": [
-        0.45240056536603074,
-        0.22665240138203438,
-        3.1373764111907896
-      ],
-      "target": [
-        0.4572,
-        0.2286,
-        -3.141592653589793
-      ],
-      "stop_reason": "auto_stop",
-      "route_name": "join-to-park",
-      "route_index": 3
-    },
-    {
-      "seed": 102,
-      "phase": "DONE",
-      "time_s": 176.65,
-      "laps_completed": 3,
-      "assigned_box": 1,
-      "entered": true,
-      "finish_seconds": 158.9500000000019,
+      "finish_seconds": 141.799999999998,
       "parked": true,
       "parking_overlap": 1,
       "exchange_result": "done",
@@ -153,9 +79,89 @@
       "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.17332005437860332,
-        0.23049884438814938,
-        -3.140033008986139
+        0.17439608918761784,
+        0.614963339581048,
+        -3.1330458128793035
+      ],
+      "target": [
+        0.17823179999999997,
+        0.610743,
+        3.141592653589793
+      ],
+      "stop_reason": null,
+      "route_name": "join-to-park",
+      "route_index": 8,
+      "avoidance_status": "not_needed"
+    },
+    {
+      "seed": 101,
+      "phase": "DONE",
+      "time_s": 150.95,
+      "laps_completed": 3,
+      "assigned_box": 3,
+      "entered": true,
+      "finish_seconds": 141.49999999999793,
+      "parked": true,
+      "parking_overlap": 1,
+      "exchange_result": "done",
+      "blue_retained": true,
+      "collisions": 0,
+      "wall_contacts": [
+        0,
+        0,
+        0
+      ],
+      "obstacle_contacts": [
+        0,
+        0,
+        0
+      ],
+      "score_like_total": 390,
+      "score_status": "synthetic event arithmetic, not referee adjudication",
+      "pose": [
+        0.17321994998456397,
+        0.992619662303469,
+        -3.1397733209749084
+      ],
+      "target": [
+        0.17823179999999997,
+        0.991743,
+        3.141592653589793
+      ],
+      "stop_reason": null,
+      "route_name": "join-to-park",
+      "route_index": 4,
+      "avoidance_status": "not_needed"
+    },
+    {
+      "seed": 102,
+      "phase": "DONE",
+      "time_s": 153.85,
+      "laps_completed": 3,
+      "assigned_box": 1,
+      "entered": true,
+      "finish_seconds": 141.3999999999979,
+      "parked": true,
+      "parking_overlap": 1,
+      "exchange_result": "done",
+      "blue_retained": true,
+      "collisions": 0,
+      "wall_contacts": [
+        0,
+        0,
+        0
+      ],
+      "obstacle_contacts": [
+        0,
+        0,
+        0
+      ],
+      "score_like_total": 390,
+      "score_status": "synthetic event arithmetic, not referee adjudication",
+      "pose": [
+        0.17319920358907123,
+        0.22885090960414878,
+        3.1397394413750734
       ],
       "target": [
         0.17823179999999997,
@@ -164,18 +170,19 @@
       ],
       "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 8
+      "route_index": 4,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 103,
-      "phase": "STOPPED",
-      "time_s": 178.0,
+      "phase": "DONE",
+      "time_s": 161.5,
       "laps_completed": 3,
       "assigned_box": 2,
       "entered": true,
-      "finish_seconds": 163.30000000000288,
-      "parked": false,
-      "parking_overlap": 0.0,
+      "finish_seconds": 141.799999999998,
+      "parked": true,
+      "parking_overlap": 1,
       "exchange_result": "done",
       "blue_retained": true,
       "collisions": 0,
@@ -189,32 +196,33 @@
         0,
         0
       ],
-      "score_like_total": 375,
+      "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.4542769650417456,
-        0.5106555421600575,
-        1.5641081335911378
+        0.17439608918761784,
+        0.614963339581048,
+        -3.1330458128793035
       ],
       "target": [
-        0.4572,
+        0.17823179999999997,
         0.610743,
-        1.5707963267948966
+        3.141592653589793
       ],
-      "stop_reason": "auto_stop",
+      "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 5
+      "route_index": 8,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 104,
-      "phase": "STOPPED",
-      "time_s": 178.0,
+      "phase": "DONE",
+      "time_s": 150.95,
       "laps_completed": 3,
       "assigned_box": 3,
       "entered": true,
-      "finish_seconds": 167.15000000000376,
-      "parked": false,
-      "parking_overlap": 0.0,
+      "finish_seconds": 141.49999999999793,
+      "parked": true,
+      "parking_overlap": 1,
       "exchange_result": "done",
       "blue_retained": true,
       "collisions": 0,
@@ -228,30 +236,31 @@
         0,
         0
       ],
-      "score_like_total": 345,
+      "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.45240056536603074,
-        0.22665240138203438,
-        3.1373764111907896
+        0.17321994998456397,
+        0.992619662303469,
+        -3.1397733209749084
       ],
       "target": [
-        0.4572,
-        0.2286,
-        -3.141592653589793
+        0.17823179999999997,
+        0.991743,
+        3.141592653589793
       ],
-      "stop_reason": "auto_stop",
+      "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 3
+      "route_index": 4,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 105,
       "phase": "DONE",
-      "time_s": 176.65,
+      "time_s": 153.85,
       "laps_completed": 3,
       "assigned_box": 1,
       "entered": true,
-      "finish_seconds": 158.9500000000019,
+      "finish_seconds": 141.3999999999979,
       "parked": true,
       "parking_overlap": 1,
       "exchange_result": "done",
@@ -270,9 +279,9 @@
       "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.17332005437860332,
-        0.23049884438814938,
-        -3.140033008986139
+        0.17319920358907123,
+        0.22885090960414878,
+        3.1397394413750734
       ],
       "target": [
         0.17823179999999997,
@@ -281,18 +290,19 @@
       ],
       "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 8
+      "route_index": 4,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 106,
-      "phase": "STOPPED",
-      "time_s": 178.0,
+      "phase": "DONE",
+      "time_s": 161.5,
       "laps_completed": 3,
       "assigned_box": 2,
       "entered": true,
-      "finish_seconds": 163.30000000000288,
-      "parked": false,
-      "parking_overlap": 0.0,
+      "finish_seconds": 141.799999999998,
+      "parked": true,
+      "parking_overlap": 1,
       "exchange_result": "done",
       "blue_retained": true,
       "collisions": 0,
@@ -306,32 +316,33 @@
         0,
         0
       ],
-      "score_like_total": 375,
+      "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.4542769650417456,
-        0.5106555421600575,
-        1.5641081335911378
+        0.17439608918761784,
+        0.614963339581048,
+        -3.1330458128793035
       ],
       "target": [
-        0.4572,
+        0.17823179999999997,
         0.610743,
-        1.5707963267948966
+        3.141592653589793
       ],
-      "stop_reason": "auto_stop",
+      "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 5
+      "route_index": 8,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 107,
-      "phase": "STOPPED",
-      "time_s": 178.0,
+      "phase": "DONE",
+      "time_s": 150.95,
       "laps_completed": 3,
       "assigned_box": 3,
       "entered": true,
-      "finish_seconds": 167.15000000000376,
-      "parked": false,
-      "parking_overlap": 0.0,
+      "finish_seconds": 141.49999999999793,
+      "parked": true,
+      "parking_overlap": 1,
       "exchange_result": "done",
       "blue_retained": true,
       "collisions": 0,
@@ -345,30 +356,31 @@
         0,
         0
       ],
-      "score_like_total": 345,
+      "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.45240056536603074,
-        0.22665240138203438,
-        3.1373764111907896
+        0.17321994998456397,
+        0.992619662303469,
+        -3.1397733209749084
       ],
       "target": [
-        0.4572,
-        0.2286,
-        -3.141592653589793
+        0.17823179999999997,
+        0.991743,
+        3.141592653589793
       ],
-      "stop_reason": "auto_stop",
+      "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 3
+      "route_index": 4,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 108,
       "phase": "DONE",
-      "time_s": 176.65,
+      "time_s": 153.85,
       "laps_completed": 3,
       "assigned_box": 1,
       "entered": true,
-      "finish_seconds": 158.9500000000019,
+      "finish_seconds": 141.3999999999979,
       "parked": true,
       "parking_overlap": 1,
       "exchange_result": "done",
@@ -387,9 +399,9 @@
       "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.17332005437860332,
-        0.23049884438814938,
-        -3.140033008986139
+        0.17319920358907123,
+        0.22885090960414878,
+        3.1397394413750734
       ],
       "target": [
         0.17823179999999997,
@@ -398,18 +410,19 @@
       ],
       "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 8
+      "route_index": 4,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 109,
-      "phase": "STOPPED",
-      "time_s": 178.0,
+      "phase": "DONE",
+      "time_s": 161.5,
       "laps_completed": 3,
       "assigned_box": 2,
       "entered": true,
-      "finish_seconds": 163.30000000000288,
-      "parked": false,
-      "parking_overlap": 0.0,
+      "finish_seconds": 141.799999999998,
+      "parked": true,
+      "parking_overlap": 1,
       "exchange_result": "done",
       "blue_retained": true,
       "collisions": 0,
@@ -423,32 +436,33 @@
         0,
         0
       ],
-      "score_like_total": 375,
+      "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.4542769650417456,
-        0.5106555421600575,
-        1.5641081335911378
+        0.17439608918761784,
+        0.614963339581048,
+        -3.1330458128793035
       ],
       "target": [
-        0.4572,
+        0.17823179999999997,
         0.610743,
-        1.5707963267948966
+        3.141592653589793
       ],
-      "stop_reason": "auto_stop",
+      "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 5
+      "route_index": 8,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 110,
-      "phase": "STOPPED",
-      "time_s": 178.0,
+      "phase": "DONE",
+      "time_s": 150.95,
       "laps_completed": 3,
       "assigned_box": 3,
       "entered": true,
-      "finish_seconds": 167.15000000000376,
-      "parked": false,
-      "parking_overlap": 0.0,
+      "finish_seconds": 141.49999999999793,
+      "parked": true,
+      "parking_overlap": 1,
       "exchange_result": "done",
       "blue_retained": true,
       "collisions": 0,
@@ -462,30 +476,31 @@
         0,
         0
       ],
-      "score_like_total": 345,
+      "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.45240056536603074,
-        0.22665240138203438,
-        3.1373764111907896
+        0.17321994998456397,
+        0.992619662303469,
+        -3.1397733209749084
       ],
       "target": [
-        0.4572,
-        0.2286,
-        -3.141592653589793
+        0.17823179999999997,
+        0.991743,
+        3.141592653589793
       ],
-      "stop_reason": "auto_stop",
+      "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 3
+      "route_index": 4,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 111,
       "phase": "DONE",
-      "time_s": 176.65,
+      "time_s": 153.85,
       "laps_completed": 3,
       "assigned_box": 1,
       "entered": true,
-      "finish_seconds": 158.9500000000019,
+      "finish_seconds": 141.3999999999979,
       "parked": true,
       "parking_overlap": 1,
       "exchange_result": "done",
@@ -504,9 +519,9 @@
       "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.17332005437860332,
-        0.23049884438814938,
-        -3.140033008986139
+        0.17319920358907123,
+        0.22885090960414878,
+        3.1397394413750734
       ],
       "target": [
         0.17823179999999997,
@@ -515,18 +530,19 @@
       ],
       "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 8
+      "route_index": 4,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 112,
-      "phase": "STOPPED",
-      "time_s": 178.0,
+      "phase": "DONE",
+      "time_s": 161.5,
       "laps_completed": 3,
       "assigned_box": 2,
       "entered": true,
-      "finish_seconds": 163.30000000000288,
-      "parked": false,
-      "parking_overlap": 0.0,
+      "finish_seconds": 141.799999999998,
+      "parked": true,
+      "parking_overlap": 1,
       "exchange_result": "done",
       "blue_retained": true,
       "collisions": 0,
@@ -540,32 +556,33 @@
         0,
         0
       ],
-      "score_like_total": 375,
+      "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.4542769650417456,
-        0.5106555421600575,
-        1.5641081335911378
+        0.17439608918761784,
+        0.614963339581048,
+        -3.1330458128793035
       ],
       "target": [
-        0.4572,
+        0.17823179999999997,
         0.610743,
-        1.5707963267948966
+        3.141592653589793
       ],
-      "stop_reason": "auto_stop",
+      "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 5
+      "route_index": 8,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 113,
-      "phase": "STOPPED",
-      "time_s": 178.0,
+      "phase": "DONE",
+      "time_s": 150.95,
       "laps_completed": 3,
       "assigned_box": 3,
       "entered": true,
-      "finish_seconds": 167.15000000000376,
-      "parked": false,
-      "parking_overlap": 0.0,
+      "finish_seconds": 141.49999999999793,
+      "parked": true,
+      "parking_overlap": 1,
       "exchange_result": "done",
       "blue_retained": true,
       "collisions": 0,
@@ -579,30 +596,31 @@
         0,
         0
       ],
-      "score_like_total": 345,
+      "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.45240056536603074,
-        0.22665240138203438,
-        3.1373764111907896
+        0.17321994998456397,
+        0.992619662303469,
+        -3.1397733209749084
       ],
       "target": [
-        0.4572,
-        0.2286,
-        -3.141592653589793
+        0.17823179999999997,
+        0.991743,
+        3.141592653589793
       ],
-      "stop_reason": "auto_stop",
+      "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 3
+      "route_index": 4,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 114,
       "phase": "DONE",
-      "time_s": 176.65,
+      "time_s": 153.85,
       "laps_completed": 3,
       "assigned_box": 1,
       "entered": true,
-      "finish_seconds": 158.9500000000019,
+      "finish_seconds": 141.3999999999979,
       "parked": true,
       "parking_overlap": 1,
       "exchange_result": "done",
@@ -621,9 +639,9 @@
       "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.17332005437860332,
-        0.23049884438814938,
-        -3.140033008986139
+        0.17319920358907123,
+        0.22885090960414878,
+        3.1397394413750734
       ],
       "target": [
         0.17823179999999997,
@@ -632,18 +650,19 @@
       ],
       "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 8
+      "route_index": 4,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 115,
-      "phase": "STOPPED",
-      "time_s": 178.0,
+      "phase": "DONE",
+      "time_s": 161.5,
       "laps_completed": 3,
       "assigned_box": 2,
       "entered": true,
-      "finish_seconds": 163.30000000000288,
-      "parked": false,
-      "parking_overlap": 0.0,
+      "finish_seconds": 141.799999999998,
+      "parked": true,
+      "parking_overlap": 1,
       "exchange_result": "done",
       "blue_retained": true,
       "collisions": 0,
@@ -657,32 +676,33 @@
         0,
         0
       ],
-      "score_like_total": 375,
+      "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.4542769650417456,
-        0.5106555421600575,
-        1.5641081335911378
+        0.17439608918761784,
+        0.614963339581048,
+        -3.1330458128793035
       ],
       "target": [
-        0.4572,
+        0.17823179999999997,
         0.610743,
-        1.5707963267948966
+        3.141592653589793
       ],
-      "stop_reason": "auto_stop",
+      "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 5
+      "route_index": 8,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 116,
-      "phase": "STOPPED",
-      "time_s": 178.0,
+      "phase": "DONE",
+      "time_s": 150.95,
       "laps_completed": 3,
       "assigned_box": 3,
       "entered": true,
-      "finish_seconds": 167.15000000000376,
-      "parked": false,
-      "parking_overlap": 0.0,
+      "finish_seconds": 141.49999999999793,
+      "parked": true,
+      "parking_overlap": 1,
       "exchange_result": "done",
       "blue_retained": true,
       "collisions": 0,
@@ -696,30 +716,31 @@
         0,
         0
       ],
-      "score_like_total": 345,
+      "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.45240056536603074,
-        0.22665240138203438,
-        3.1373764111907896
+        0.17321994998456397,
+        0.992619662303469,
+        -3.1397733209749084
       ],
       "target": [
-        0.4572,
-        0.2286,
-        -3.141592653589793
+        0.17823179999999997,
+        0.991743,
+        3.141592653589793
       ],
-      "stop_reason": "auto_stop",
+      "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 3
+      "route_index": 4,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 117,
       "phase": "DONE",
-      "time_s": 176.65,
+      "time_s": 153.85,
       "laps_completed": 3,
       "assigned_box": 1,
       "entered": true,
-      "finish_seconds": 158.9500000000019,
+      "finish_seconds": 141.3999999999979,
       "parked": true,
       "parking_overlap": 1,
       "exchange_result": "done",
@@ -738,9 +759,9 @@
       "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.17332005437860332,
-        0.23049884438814938,
-        -3.140033008986139
+        0.17319920358907123,
+        0.22885090960414878,
+        3.1397394413750734
       ],
       "target": [
         0.17823179999999997,
@@ -749,18 +770,19 @@
       ],
       "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 8
+      "route_index": 4,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 118,
-      "phase": "STOPPED",
-      "time_s": 178.0,
+      "phase": "DONE",
+      "time_s": 161.5,
       "laps_completed": 3,
       "assigned_box": 2,
       "entered": true,
-      "finish_seconds": 163.30000000000288,
-      "parked": false,
-      "parking_overlap": 0.0,
+      "finish_seconds": 141.799999999998,
+      "parked": true,
+      "parking_overlap": 1,
       "exchange_result": "done",
       "blue_retained": true,
       "collisions": 0,
@@ -774,32 +796,33 @@
         0,
         0
       ],
-      "score_like_total": 375,
+      "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.4542769650417456,
-        0.5106555421600575,
-        1.5641081335911378
+        0.17439608918761784,
+        0.614963339581048,
+        -3.1330458128793035
       ],
       "target": [
-        0.4572,
+        0.17823179999999997,
         0.610743,
-        1.5707963267948966
+        3.141592653589793
       ],
-      "stop_reason": "auto_stop",
+      "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 5
+      "route_index": 8,
+      "avoidance_status": "not_needed"
     },
     {
       "seed": 119,
-      "phase": "STOPPED",
-      "time_s": 178.0,
+      "phase": "DONE",
+      "time_s": 150.95,
       "laps_completed": 3,
       "assigned_box": 3,
       "entered": true,
-      "finish_seconds": 167.15000000000376,
-      "parked": false,
-      "parking_overlap": 0.0,
+      "finish_seconds": 141.49999999999793,
+      "parked": true,
+      "parking_overlap": 1,
       "exchange_result": "done",
       "blue_retained": true,
       "collisions": 0,
@@ -813,28 +836,30 @@
         0,
         0
       ],
-      "score_like_total": 345,
+      "score_like_total": 390,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.45240056536603074,
-        0.22665240138203438,
-        3.1373764111907896
+        0.17321994998456397,
+        0.992619662303469,
+        -3.1397733209749084
       ],
       "target": [
-        0.4572,
-        0.2286,
-        -3.141592653589793
+        0.17823179999999997,
+        0.991743,
+        3.141592653589793
       ],
-      "stop_reason": "auto_stop",
+      "stop_reason": null,
       "route_name": "join-to-park",
-      "route_index": 3
+      "route_index": 4,
+      "avoidance_status": "not_needed"
     }
   ],
   "obstacle_probe_results": [
     {
+      "case_id": "entry-blocker",
       "seed": 100,
       "phase": "STOPPED",
-      "time_s": 1.4,
+      "time_s": 0.15,
       "laps_completed": 0,
       "assigned_box": 2,
       "entered": false,
@@ -843,37 +868,39 @@
       "parking_overlap": 0.0,
       "exchange_result": null,
       "blue_retained": false,
-      "collisions": 1,
+      "collisions": 0,
       "wall_contacts": [
         0,
         0,
         0
       ],
       "obstacle_contacts": [
-        1,
+        0,
         0,
         0
       ],
-      "score_like_total": 105,
+      "score_like_total": 130,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.7206261999999992,
+        0.5176012,
         0.9885172,
         0.0
       ],
       "target": [
-        0.9144,
+        0.5176012,
         0.9885172,
         0.0
       ],
-      "stop_reason": "collision",
+      "stop_reason": "obstacle_no_safe_route",
       "route_name": "start-to-join",
-      "route_index": 0
+      "route_index": null,
+      "avoidance_status": "no_route"
     },
     {
+      "case_id": "entry-blocker",
       "seed": 101,
       "phase": "STOPPED",
-      "time_s": 1.4,
+      "time_s": 0.15,
       "laps_completed": 0,
       "assigned_box": 3,
       "entered": false,
@@ -882,37 +909,39 @@
       "parking_overlap": 0.0,
       "exchange_result": null,
       "blue_retained": false,
-      "collisions": 1,
+      "collisions": 0,
       "wall_contacts": [
         0,
         0,
         0
       ],
       "obstacle_contacts": [
-        1,
+        0,
         0,
         0
       ],
-      "score_like_total": 105,
+      "score_like_total": 130,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.7206261999999992,
+        0.5176012,
         0.9885172,
         0.0
       ],
       "target": [
-        0.9144,
+        0.5176012,
         0.9885172,
         0.0
       ],
-      "stop_reason": "collision",
+      "stop_reason": "obstacle_no_safe_route",
       "route_name": "start-to-join",
-      "route_index": 0
+      "route_index": null,
+      "avoidance_status": "no_route"
     },
     {
+      "case_id": "entry-blocker",
       "seed": 102,
       "phase": "STOPPED",
-      "time_s": 1.4,
+      "time_s": 0.15,
       "laps_completed": 0,
       "assigned_box": 1,
       "entered": false,
@@ -921,47 +950,297 @@
       "parking_overlap": 0.0,
       "exchange_result": null,
       "blue_retained": false,
-      "collisions": 1,
+      "collisions": 0,
       "wall_contacts": [
         0,
         0,
         0
       ],
       "obstacle_contacts": [
-        1,
+        0,
         0,
         0
       ],
-      "score_like_total": 105,
+      "score_like_total": 130,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.7206261999999992,
+        0.5176012,
         0.9885172,
         0.0
       ],
       "target": [
-        0.9144,
+        0.5176012,
         0.9885172,
         0.0
       ],
-      "stop_reason": "collision",
+      "stop_reason": "obstacle_no_safe_route",
       "route_name": "start-to-join",
-      "route_index": 0
+      "route_index": null,
+      "avoidance_status": "no_route"
+    },
+    {
+      "case_id": "upper-lane-blocker",
+      "seed": 100,
+      "phase": "STOPPED",
+      "time_s": 7.85,
+      "laps_completed": 0,
+      "assigned_box": 2,
+      "entered": true,
+      "finish_seconds": null,
+      "parked": false,
+      "parking_overlap": 0.0,
+      "exchange_result": null,
+      "blue_retained": false,
+      "collisions": 0,
+      "wall_contacts": [
+        0,
+        0,
+        0
+      ],
+      "obstacle_contacts": [
+        0,
+        0,
+        0
+      ],
+      "score_like_total": 155,
+      "score_status": "synthetic event arithmetic, not referee adjudication",
+      "pose": [
+        0.9190204738144149,
+        0.9103194878191436,
+        -0.008654511752095558
+      ],
+      "target": [
+        0.9190204738144149,
+        0.9103194878191436,
+        -0.008654511752095558
+      ],
+      "stop_reason": "obstacle_no_safe_route",
+      "route_name": "join-to-join",
+      "route_index": null,
+      "avoidance_status": "no_route"
+    },
+    {
+      "case_id": "upper-lane-blocker",
+      "seed": 101,
+      "phase": "STOPPED",
+      "time_s": 7.85,
+      "laps_completed": 0,
+      "assigned_box": 3,
+      "entered": true,
+      "finish_seconds": null,
+      "parked": false,
+      "parking_overlap": 0.0,
+      "exchange_result": null,
+      "blue_retained": false,
+      "collisions": 0,
+      "wall_contacts": [
+        0,
+        0,
+        0
+      ],
+      "obstacle_contacts": [
+        0,
+        0,
+        0
+      ],
+      "score_like_total": 155,
+      "score_status": "synthetic event arithmetic, not referee adjudication",
+      "pose": [
+        0.9190204738144149,
+        0.9103194878191436,
+        -0.008654511752095558
+      ],
+      "target": [
+        0.9190204738144149,
+        0.9103194878191436,
+        -0.008654511752095558
+      ],
+      "stop_reason": "obstacle_no_safe_route",
+      "route_name": "join-to-join",
+      "route_index": null,
+      "avoidance_status": "no_route"
+    },
+    {
+      "case_id": "upper-lane-blocker",
+      "seed": 102,
+      "phase": "STOPPED",
+      "time_s": 7.85,
+      "laps_completed": 0,
+      "assigned_box": 1,
+      "entered": true,
+      "finish_seconds": null,
+      "parked": false,
+      "parking_overlap": 0.0,
+      "exchange_result": null,
+      "blue_retained": false,
+      "collisions": 0,
+      "wall_contacts": [
+        0,
+        0,
+        0
+      ],
+      "obstacle_contacts": [
+        0,
+        0,
+        0
+      ],
+      "score_like_total": 155,
+      "score_status": "synthetic event arithmetic, not referee adjudication",
+      "pose": [
+        0.9190204738144149,
+        0.9103194878191436,
+        -0.008654511752095558
+      ],
+      "target": [
+        0.9190204738144149,
+        0.9103194878191436,
+        -0.008654511752095558
+      ],
+      "stop_reason": "obstacle_no_safe_route",
+      "route_name": "join-to-join",
+      "route_index": null,
+      "avoidance_status": "no_route"
+    },
+    {
+      "case_id": "off-route-control",
+      "seed": 100,
+      "phase": "DONE",
+      "time_s": 161.5,
+      "laps_completed": 3,
+      "assigned_box": 2,
+      "entered": true,
+      "finish_seconds": 141.799999999998,
+      "parked": true,
+      "parking_overlap": 1,
+      "exchange_result": "done",
+      "blue_retained": true,
+      "collisions": 0,
+      "wall_contacts": [
+        0,
+        0,
+        0
+      ],
+      "obstacle_contacts": [
+        0,
+        0,
+        0
+      ],
+      "score_like_total": 390,
+      "score_status": "synthetic event arithmetic, not referee adjudication",
+      "pose": [
+        0.17439608918761784,
+        0.614963339581048,
+        -3.1330458128793035
+      ],
+      "target": [
+        0.17823179999999997,
+        0.610743,
+        3.141592653589793
+      ],
+      "stop_reason": null,
+      "route_name": "join-to-park",
+      "route_index": 8,
+      "avoidance_status": "not_needed"
+    },
+    {
+      "case_id": "off-route-control",
+      "seed": 101,
+      "phase": "DONE",
+      "time_s": 150.95,
+      "laps_completed": 3,
+      "assigned_box": 3,
+      "entered": true,
+      "finish_seconds": 141.49999999999793,
+      "parked": true,
+      "parking_overlap": 1,
+      "exchange_result": "done",
+      "blue_retained": true,
+      "collisions": 0,
+      "wall_contacts": [
+        0,
+        0,
+        0
+      ],
+      "obstacle_contacts": [
+        0,
+        0,
+        0
+      ],
+      "score_like_total": 390,
+      "score_status": "synthetic event arithmetic, not referee adjudication",
+      "pose": [
+        0.17321994998456397,
+        0.992619662303469,
+        -3.1397733209749084
+      ],
+      "target": [
+        0.17823179999999997,
+        0.991743,
+        3.141592653589793
+      ],
+      "stop_reason": null,
+      "route_name": "join-to-park",
+      "route_index": 4,
+      "avoidance_status": "not_needed"
+    },
+    {
+      "case_id": "off-route-control",
+      "seed": 102,
+      "phase": "DONE",
+      "time_s": 153.85,
+      "laps_completed": 3,
+      "assigned_box": 1,
+      "entered": true,
+      "finish_seconds": 141.3999999999979,
+      "parked": true,
+      "parking_overlap": 1,
+      "exchange_result": "done",
+      "blue_retained": true,
+      "collisions": 0,
+      "wall_contacts": [
+        0,
+        0,
+        0
+      ],
+      "obstacle_contacts": [
+        0,
+        0,
+        0
+      ],
+      "score_like_total": 390,
+      "score_status": "synthetic event arithmetic, not referee adjudication",
+      "pose": [
+        0.17319920358907123,
+        0.22885090960414878,
+        3.1397394413750734
+      ],
+      "target": [
+        0.17823179999999997,
+        0.22974299999999998,
+        3.141592653589793
+      ],
+      "stop_reason": null,
+      "route_name": "join-to-park",
+      "route_index": 4,
+      "avoidance_status": "not_needed"
     }
   ],
   "limitations": [
     "Synthetic kinematics and ideal route knowledge; no calibrated motor, traction, sensor or mechanism model.",
     "Pit access, lap counting, finish-line timing and parking interpretation require official Q&A.",
     "A timed exchange event is not tire acquisition, retention or physical mechanism validation.",
-    "Nominal boxes 2 and 3 do not park before the conservative 178-second auto-stop.",
-    "The obstacle probe deliberately shows the baseline is not an obstacle avoider.",
+    "Shortened pit and parking routes are conditional on official access and lap interpretations; no legal route is claimed.",
+    "Blocked entry and upper-lane probes stop safely without avoidance; an offline upper-lane detour is not connected or qualified.",
+    "The off-route control completes without a detour; this is not coverage of real obstacle placements or sensing.",
     "No PPO training, held-out trained-policy evaluation or real-robot transfer has occurred."
   ],
   "input_hashes": {
-    "mission-v9.json": "c1351bb430a2a11d58ae6c29dc1b689cc12cd5fad8f689ed2e4aa961322bb16c",
+    "mission-v9.json": "8155745068768503a51497326d1cf36fe4d4cffb7f2d5f156dafb9841fc96083",
     "robot-baseline-v9.json": "16259ffa0c87dc0aed7ee5232b17a321898265477f4a8c2e2aefe3bc9e5b2afc",
-    "software/mission_v9.py": "775dda06ff3f21c59ea429b5bd2bf7c7f2c4137c87e2dbe395f2dbe5c39ff27d",
+    "software/mission_v9.py": "793db36c905861891d9a37c8f88e1936f6a5b31fcc4fe5f339980392b23d1d20",
     "derived/differential-drive-v3/report.json": "738bb6456e5866e31c4205f5fa0424b77f602c783e76328ca5315ebaca4997f9",
-    "derived/constrained-field-v3/layout.json": "1f0bf9e446109884673b2dcda376e9e3db6e2ce5cb47d0bcb90d8f727da26447"
+    "derived/constrained-field-v3/layout.json": "1f0bf9e446109884673b2dcda376e9e3db6e2ce5cb47d0bcb90d8f727da26447",
+    "derived/mission-v9/avoidance-scenarios.json": "05d07574da63b0cd478f32f21438529a4feb386c8a1fca64c2958c2ee9322a52",
+    "tools/plan-mission-v9-avoidance.js": "890ba88e8e5f8786da62164f9f648f2536da4dc7edd8c276ecd3c1be04ae4e9b"
   }
 }

@@ -22,11 +22,11 @@ Twenty seeded **obstacle-free, perfect-knowledge synthetic** episodes:
 |---|---:|---|
 | Three laps with zero contacts | 20/20 | Software route-following result only |
 | Timed exchange event succeeds | 20/20 | Not a physical tire pickup |
-| Parks before 178 s auto-stop | 6/20 | All box-1 cases; boxes 2/3 time out |
-| Finish before strict 2:45 bonus | 13/20 | Box 3 misses this optional bonus |
-| Obstacle probe avoids collision | 0/3 | Baseline deliberately has no avoidance |
+| Parks before 178 s auto-stop | 20/20 | All three assignments; synthetic conditional routes |
+| Finish before strict 2:45 bonus | 20/20 | Software timing only; not referee adjudication |
+| Obstacle probes: safe stop / off-route completion | 6 / 3 | Zero contacts; no avoidance qualified |
 
-The conservative model stops for each sharp turn. Its repeated turn/settle time is the main parking limitation. We have not hidden this by shrinking the robot, removing walls or extending the deadline.
+Shortened pit and parking approaches removed the nominal timeout without shrinking the robot, removing walls or extending the deadline. They remain conditional on official pit-access and lap interpretations. The upper-lane offline detour is retained as investigation evidence, but blocked routes currently stop safely rather than avoid the obstacle.
 
 **No RL policy has been trained.** `MissionEnv` supplies an 18-value observation and two normalized actions with Gymnasium-compatible reset/step when Gymnasium is installed. The standard-library simulator and tests need no ML packages. Training is premature until the classical task, obstacle handling and sensing assumptions are coherent.
 
@@ -47,7 +47,7 @@ The conservative model stops for each sharp turn. Its repeated turn/settle time 
 | Mechanical lead | Measure any received parts; review shaft-down mule and full-footprint mockup | Dimensioned fit record; no fabrication release before review |
 | Bench/electrical lead | Inventory facility, supervision, instruments and battery policy | Approved bounded setup; measured voltage/current/speed/temperature |
 | Tire-mechanism lead | Print/machine small test coupons and build a repeatable tire fixture | Acquisition, retention, release and bail-out logs, including failures |
-| Software lead | Replace perfect pose with sensor inputs; fix all-box parking; add route-aware avoidance | Replayable tests and field logs, not just a viewer |
+| Software lead | Connect the retained detour with explicit route state; replace perfect pose with sensor inputs | Replayable all-box and obstacle tests, including safe-stop failures and field logs |
 | Portfolio lead | Preserve decisions, raw trials and photographs | Material for the five-page portfolio and ten-minute interview |
 
 ## 5. Purchase decision
@@ -64,8 +64,8 @@ Purchase gates:
 
 ## 6. RL plan after the baseline gate
 
-1. Fix final parking for every assignment under a declared, physically testable control model.
-2. Obtain obstacle dimensions/placement rules; implement persistent route-aware avoidance and test failure cases.
+1. Preserve the all-box parking baseline; validate its conditional pit/access assumptions and measured actuator capability.
+2. Obtain obstacle dimensions/placement rules; connect the retained detour with explicit route state and test failure cases.
 3. Add realistic sensor observations, dropout and calibration data. Keep mission logic independent of the learned controller.
 4. Train PPO or another baseline only in the documented training seed range; save code, configuration, seeds and model artifacts.
 5. Evaluate untouched seeds against the classical controller: completion, contacts, time, exchange and parking separately.
@@ -73,4 +73,4 @@ Purchase gates:
 
 ## Bottom line
 
-We have a useful consolidated engineering baseline and a real software test harness, not a finished competition robot. The next highest-value work is **Q&A + measured mule + full-footprint/tire experiments**, while software fixes parking and obstacle handling. Spend to retire those risks, not to make the rendering more impressive.
+We have a useful consolidated engineering baseline and a real software test harness, not a finished competition robot. The next highest-value work is **Q&A + measured mule + full-footprint/tire experiments**, while software connects obstacle detours and replaces perfect knowledge with sensing. Spend to retire those risks, not to make the rendering more impressive.

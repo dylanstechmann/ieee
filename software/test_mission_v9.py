@@ -95,7 +95,7 @@ class MissionTests(unittest.TestCase):
         info = run_until(sim, {'TO_PIT'})
         self.assertEqual((info['laps_completed'], info['collisions']), (2, 0))
 
-    def test_clean_laps_all_boxes_and_conservative_parking_limit(self):
+    def test_clean_laps_and_parking_all_boxes(self):
         for box in (1, 2, 3):
             sim = m.MissionSim()
             sim.reset(0, {'assigned_box': box})
@@ -103,15 +103,11 @@ class MissionTests(unittest.TestCase):
             self.assertEqual(info['laps_completed'], 3)
             self.assertEqual(info['collisions'], 0, info)
             self.assertEqual(info['exchange_result'], 'done')
-            self.assertLess(info['finish_seconds'], 180)
-            self.assertEqual(info['finish_seconds'] < 165, box != 3)
-            if box == 1:
-                self.assertEqual(info['phase'], 'DONE', info)
-                self.assertTrue(info['parked'])
-                self.assertGreater(info['parking_overlap'], 0.75)
-            else:
-                self.assertEqual(info['stop_reason'], 'auto_stop', info)
-                self.assertFalse(info['parked'])
+            self.assertLess(info['finish_seconds'], 165)
+            self.assertEqual(info['phase'], 'DONE', info)
+            self.assertTrue(info['parked'])
+            self.assertGreater(info['parking_overlap'], 0.75)
+            self.assertLess(info['time_s'], sim.config['auto_stop_s'])
 
     def test_failed_exchange_bails_out_and_finishes(self):
         sim = m.MissionSim()
@@ -168,12 +164,30 @@ class EnvironmentTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             env.step([float('nan'), 0])
 
-    def test_obstacle_baseline_is_not_claimed_as_avoidance(self):
+    def test_blocked_entry_stops_without_collision(self):
         sim = m.MissionSim()
         sim.reset(0, {'obstacle_enabled': True, 'obstacle': (36 * m.IN, 36 * m.IN)})
         info = run_until(sim, {'DONE', 'STOPPED'})
-        self.assertEqual(info['stop_reason'], 'collision')
-        self.assertGreater(info['collisions'], 0)
+        self.assertEqual(info['stop_reason'], 'obstacle_no_safe_route')
+        self.assertEqual(info['avoidance_status'], 'no_route')
+        self.assertEqual(info['collisions'], 0)
+
+    def test_upper_lane_probe_stops_before_blocked_lap(self):
+        sim = m.MissionSim()
+        sim.reset(0, {'obstacle_enabled': True, 'obstacle': (60 * m.IN, 36 * m.IN)})
+        info = run_until(sim, {'DONE', 'STOPPED'})
+        self.assertEqual(info['avoidance_status'], 'no_route')
+        self.assertEqual(info['stop_reason'], 'obstacle_no_safe_route')
+        self.assertEqual(info['collisions'], 0, info)
+        self.assertEqual(info['laps_completed'], 0)
+
+    def test_off_route_probe_does_not_add_detour(self):
+        sim = m.MissionSim()
+        sim.reset(0, {'obstacle_enabled': True, 'obstacle': (60 * m.IN, 45 * m.IN)})
+        info = run_until(sim, {'DONE', 'STOPPED'})
+        self.assertEqual(info['avoidance_status'], 'not_needed')
+        self.assertEqual(info['collisions'], 0)
+        self.assertTrue(info['parked'])
 
 
 if __name__ == '__main__':

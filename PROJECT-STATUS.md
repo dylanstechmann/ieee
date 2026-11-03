@@ -2,7 +2,7 @@
 
 Updated November 3, 2026. Personal hobby/learning project with AI-assisted research and software. No purchases, fabrication, physical robot trials or organizer contact are recorded.
 
-**Club package:** `derived/club-package-v9/CLUB-PRESENTATION.md`, with the rule/Q&A ledger and conditional parts list. The new synthetic mission baseline completes three clean obstacle-free laps in 20/20 episodes but parks in only 6/20; obstacle probes fail. No RL policy has been trained. See `derived/mission-v9/README.md`.
+**Club package:** `derived/club-package-v9/CLUB-PRESENTATION.md`, with the rule/Q&A ledger and conditional parts list. The updated synthetic mission completes three clean obstacle-free laps and parks in 20/20 episodes; all finish before 165 s. Nine obstacle probes yield six safe stops and three off-route completions with zero collisions, but no avoidance is qualified. No RL policy has been trained. See `derived/mission-v9/README.md`.
 
 ## Start here
 
@@ -46,7 +46,7 @@ No private IEEE GitHub repository was found when the account was checked. Local 
 
 ## Next work in priority order
 
-1. Fix all-box final parking and add route-aware obstacle handling in the synthetic mission; do not hide failures by extending time or shrinking the footprint.
+1. Connect the retained offline detour with explicit route state and bounded collision-checked transitions; blocked routes currently stop safely, so avoidance is not qualified.
 2. Resolve official Q&A and measure a built field, actual obstacles and printed tags.
 3. Physically verify the proposed mule geometry through the documented bench gates; dynamics-v9 is corrected-track but uncalibrated.
 4. Build a legal-envelope competition mockup and real tire fixture; compare acquisition, retention, release and bail-out behavior.

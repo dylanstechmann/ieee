@@ -1,7 +1,7 @@
 {
   "schema": "robot-studio-v8-browser/1",
   "html": "share/Robot-Studio-v8.html",
-  "html_sha256": "646d2c9540d32247f019235f395918267e373cf46b4fc1f477c3a2cf4caa0e26",
+  "html_sha256": "9bad6df4b909bcd8d15aa973183136ce5c33a7a3b9cb1b1a75deef3d90ab280a",
   "browser": "Playwright Chromium headless shell, SwiftShader WebGL, direct file URL, offline context",
   "errors": [],
   "warnings": [],
@@ -20,7 +20,7 @@
     "trackMm": 202,
     "historicalTrackMm": 176,
     "meshes": {
-      "frame": 378,
+      "frame": 73,
       "calls": 1,
       "triangles": 2,
       "points": 0,
@@ -42,7 +42,7 @@
     "trackMm": 202,
     "historicalTrackMm": 176,
     "meshes": {
-      "frame": 862,
+      "frame": 205,
       "calls": 15,
       "triangles": 5514,
       "points": 0,

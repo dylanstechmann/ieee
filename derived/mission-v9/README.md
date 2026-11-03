@@ -13,9 +13,11 @@ The controller tracks one primitive at a time using along-track projection and c
 `evaluation.json` is generated from 20 reserved nominal evaluation seeds (100–119), with no obstacles or observation noise:
 
 - 20/20 complete three laps and the synthetic exchange with zero contacts.
-- 6/20 park before the 178 s auto-stop: all box-1 episodes. Boxes 2 and 3 time out during final parking.
-- 13/20 cross before the strict 165 s bonus threshold; box 3 is later but within 180 s.
-- Three explicit obstacle probes all collide. This baseline has no obstacle avoidance.
+- 20/20 park before the 178 s auto-stop; all three assignments pass with zero contacts.
+- 20/20 cross before the strict 165 s bonus threshold. Per-assignment completion times are 153.85 s (box 1), 161.50 s (box 2), and 150.95 s (box 3).
+- Nine obstacle probes produce six safe stops (entry and upper-lane blockers) and three off-route completions, with zero collisions. No obstacle avoidance is qualified.
+
+The shortened pit approach uses the upper approach lane and a 35-inch turn column; box 2 parking goes around the north side of the pit divider. These are conditional geometric choices, not organizer-approved access or lap rulings. `avoidance-scenarios.json` retains an offline upper-lane detour found by the existing JavaScript planner. The mission does not connect that detour reliably, so blocked routes intentionally stop with `obstacle_no_safe_route` rather than collide or claim success.
 
 `trace-box-1.json` records the actual state/pose sequence for seed 100 with box 1 explicitly assigned. These are synthetic perfect-knowledge results, not reliability estimates or official score predictions.
 
@@ -25,6 +27,7 @@ From `/workspace/ieee/ieee`:
 
 ```sh
 uv run --no-project --python 3.12 python -I -m unittest discover -s software -v
+node tools/plan-mission-v9-avoidance.js
 uv run --no-project --python 3.12 python -I tools/evaluate-mission-v9.py
 ```
 
@@ -34,7 +37,7 @@ Seeds 0–99 are reserved for future training; 100–119 are nominal evaluation.
 
 ## Next engineering gates
 
-1. Reduce repeated turn/settle cost or redesign the pit/finish maneuver using valid differential-drive geometry and measured actuator capability. All three assignments must park before auto-stop; do not simply extend the deadline.
+1. Connect the retained offline detour with explicit route state and bounded, collision-checked transitions; retain safe-stop failures and do not claim avoidance yet.
 2. Resolve official pit/lap/finish/envelope questions and measure the installed field.
 3. Add route-aware persistent obstacle avoidance using published/measured obstacle envelopes. Retain failure cases.
 4. Replace perfect pose/target knowledge with real sensing, calibration, noise and dropout models.

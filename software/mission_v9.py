@@ -85,6 +85,7 @@ def route_primitives(waypoints):
         length = math.hypot(dx, dy)
         angle = wrap(b[2] - a[2])
         if length > 1e-8 and abs(angle) < 1e-8:
+            b = (b[0], b[1], a[2])
             angle = 0.0
         if length > 1e-8 and abs(angle) > 1e-8:
             raise ValueError('simultaneous translation and rotation unsupported')
@@ -141,6 +142,10 @@ class PathFollower:
                 desired_v = -desired_v
             desired_w = clamp(c['heading_gain'] * error, -c['max_yaw_rate_rad_s'], c['max_yaw_rate_rad_s'])
             arrived = at_endpoint and abs(pose[3]) <= 0.04
+            if abs(error) > 0.8:
+                desired_v = 0.0
+                desired_w = math.copysign(min(abs(desired_w), math.sqrt(
+                    2 * c['max_yaw_acceleration_rad_s2'] * abs(error))), error)
             command = (desired_v / c['max_speed_m_s'], desired_w / c['max_yaw_rate_rad_s'])
         if arrived:
             self.settled += dt
@@ -184,11 +189,31 @@ class MissionSim:
         elif begin == 'pit' and end == 'join':
             points = points[17:]
         elif begin == 'join' and end == 'pit':
-            points = points[4:18]
+            join, dock = points[4], points[17]
+            turn = (35 * IN, join[1], 0)
+            staging = (9 * IN, points[1][1], math.pi)
+            points = [join, turn, (turn[0], turn[1], math.pi / 2),
+                      (turn[0], staging[1], math.pi / 2),
+                      (turn[0], staging[1], math.pi), staging,
+                      (staging[0], staging[1], math.pi / 2),
+                      (staging[0], dock[1], math.pi / 2),
+                      (staging[0], dock[1], math.pi), dock]
         elif begin == 'join' and end == 'join':
             points = points[4:10] + [(points[9][0], points[9][1], -math.pi / 2), points[3], points[4]]
         elif begin == 'join' and end == 'park':
-            points = points[9:18]
+            start, dock = points[9], points[17]
+            if self.assigned_box == 2:
+                gate = (points[9][0], points[11][1], math.pi / 2)
+                staging = (9 * IN, points[11][1], math.pi / 2)
+                points = [start, (start[0], start[1], math.pi / 2), gate,
+                          (gate[0], gate[1], 0), (staging[0], staging[1], 0),
+                          (staging[0], staging[1], -math.pi / 2),
+                          (staging[0], dock[1], -math.pi / 2),
+                          (staging[0], dock[1], math.pi), dock]
+            else:
+                points = [start, (start[0], start[1], math.pi / 2),
+                          (start[0], dock[1], math.pi / 2),
+                          (start[0], dock[1], math.pi), dock]
         else:
             raise ValueError(f'unknown route {begin} to {end}')
         if final_lap:
@@ -198,8 +223,39 @@ class MissionSim:
     def _set_route(self, phase, begin, end, final_lap=False):
         self.state['phase'] = phase
         self.state['phase_t'] = 0.0
-        self.follower = PathFollower(self._route(begin, end, final_lap), self.config['control'])
+        points = self._route(begin, end, final_lap)
         self.state['route_name'] = f'{begin}-to-{end}'
+        self.state['avoidance_status'] = 'not_needed'
+        if self.obstacle_enabled and self.obstacle:
+            scenario = self._obstacle_scenario()
+            if scenario is None:
+                self.state['avoidance_status'] = 'no_route'
+                self.state['stop_reason'] = 'obstacle_no_safe_route'
+                self.state['phase'] = 'STOPPED'
+                self.follower = None
+                self._event('obstacle_safe_stop')
+                return
+            if not all(self._edge_clear(a, b) for a, b in zip(points, points[1:])):
+                self.state['avoidance_status'] = 'no_route'
+                self.state['stop_reason'] = 'obstacle_no_safe_route'
+                self.state['phase'] = 'STOPPED'
+                self.follower = None
+                self._event('obstacle_safe_stop')
+                return
+        self.follower = PathFollower(points, self.config['control'])
+
+    def _obstacle_scenario(self):
+        scenarios = json.loads((ROOT / self.config['avoidance']['scenario_source']).read_text())['scenarios']
+        for scenario in scenarios:
+            center = scenario['center_in']
+            if dist(self.obstacle, (center[0] * IN, center[1] * IN)) <= 1e-8:
+                return scenario
+        return None
+
+    def _edge_clear(self, a, b):
+        sampling = self.config['control']['route_sampling']
+        return not any(self.contact(p) for p in sample_route(
+            [a, b], sampling['translation_step_m'], sampling['rotation_step_rad']))
 
     def reset(self, seed=0, options=None):
         options = options or {}
@@ -227,7 +283,7 @@ class MissionSim:
                       'tire_pickup': 'none', 'blue_retained': False, 'flag_up': False,
                       'finish_seconds': None, 'parked': False, 'parking_overlap': 0.0,
                       'stop_reason': None, 'collisions': 0, 'collision_log': [],
-                      'reward_events': [], 'route_name': None}
+                      'reward_events': [], 'route_name': None, 'avoidance_status': 'not_needed'}
         self.follower = None
         return self.observation()
 
@@ -392,7 +448,7 @@ class MissionSim:
                 'score_like_total': score, 'score_status': 'synthetic event arithmetic, not referee adjudication',
                 'pose': [s['x'], s['y'], s['yaw']], 'target': self._target(), 'stop_reason': s['stop_reason'],
                 'route_name': s['route_name'], 'route_index': self.follower.index if self.follower else None,
-                'events': s['reward_events']}
+                'avoidance_status': s['avoidance_status'], 'events': s['reward_events']}
 
 
 class MissionEnv:
