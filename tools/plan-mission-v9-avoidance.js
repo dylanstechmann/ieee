@@ -31,7 +31,7 @@ for (const scenario of scenarios) {
   nav.obstacles.push({ id: scenario.id, vertices_in: [[59,35],[61,35],[61,37],[59,37]] });
   const field = makeField(model, nav, nav.wall_scenarios[0]);
   const planner = createPlanner(nav.robot, field, nav.sampling, config, anchors);
-  const legs = [[route.waypoints[4], route.waypoints[5]], [route.waypoints[5], route.waypoints[7]], [route.waypoints[7], route.waypoints[9]]];
+  const legs = [[route.waypoints[4], route.waypoints[5]]];
   const points = [route.waypoints[4]];
   const searches = [];
   for (const [start, goal] of legs) {
@@ -46,7 +46,7 @@ for (const scenario of scenarios) {
 }
 const output = {
   status: 'agent-planned-hypothetical-probes-not-hardware-or-legal-route-validation',
-  planner: 'Existing bounded cardinal A* with positive nominal interval clearance. Offline geometry only; the Python mission currently stops on blocked routes and does not replay this detour.',
+  planner: 'Existing bounded cardinal A* with positive nominal interval clearance. The local upper-lane bypass rejoins the original corner; Python validates every transition before connecting this hypothetical detour.',
   scenarios,
   input_hashes: Object.fromEntries(['constrained-field-v3.json', 'navigation-v3.json', 'differential-drive-v3.json', 'avoidance-v3.json', 'tools/avoidance-v3.js'].map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex')])),
 };

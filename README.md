@@ -1,6 +1,6 @@
 # IEEE 2027 hardware competition
 
-> **November 3 club package:** `derived/club-package-v9/CLUB-PRESENTATION.md` summarizes verified progress, next assignments and the conditional parts list. The updated synthetic baseline achieves three clean laps, parking and sub-165-s finishes in 20/20 obstacle-free episodes. Obstacle probes now stop safely or complete off-route controls without contacts; avoidance is still unfinished. RL interface exists; no policy has been trained. See `derived/mission-v9/README.md`.
+> **November 3 club package:** `derived/club-package-v9/CLUB-PRESENTATION.md` summarizes verified progress, next assignments and the conditional parts list. The updated synthetic baseline achieves three clean laps, parking and sub-165-s finishes in 20/20 obstacle-free episodes. Obstacle probes now include a collision-checked local detour, but its three upper-lane runs time out at 178 s; entry blockers stop safely and avoidance is unfinished. RL interface exists; no policy has been trained. See `derived/mission-v9/README.md`.
 
 > **Start with [PROJECT-STATUS.md](PROJECT-STATUS.md). Open `share/Robot-Studio-v8.html` for the consolidated offline studio.** It combines the earlier source review and engineering datasets with v7's vendor-CAD renderer: assembly/field, 56 stopping trajectories, all 162 mechanism cases / 2,970 frames, and an evidence/next-steps workspace. Guide: `derived/robot-studio-v8/README.md`.
 >

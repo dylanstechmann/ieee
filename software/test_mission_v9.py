@@ -172,14 +172,28 @@ class EnvironmentTests(unittest.TestCase):
         self.assertEqual(info['avoidance_status'], 'no_route')
         self.assertEqual(info['collisions'], 0)
 
-    def test_upper_lane_probe_stops_before_blocked_lap(self):
+    def test_upper_lane_detour_connects_but_times_out_without_collision(self):
         sim = m.MissionSim()
         sim.reset(0, {'obstacle_enabled': True, 'obstacle': (60 * m.IN, 36 * m.IN)})
         info = run_until(sim, {'DONE', 'STOPPED'})
-        self.assertEqual(info['avoidance_status'], 'no_route')
-        self.assertEqual(info['stop_reason'], 'obstacle_no_safe_route')
+        self.assertEqual(info['avoidance_status'], 'detoured')
+        self.assertEqual(info['stop_reason'], 'auto_stop')
         self.assertEqual(info['collisions'], 0, info)
-        self.assertEqual(info['laps_completed'], 0)
+        self.assertEqual(info['laps_completed'], 2)
+        self.assertFalse(info['parked'])
+        self.assertEqual(sum(e['event'] == 'obstacle_detour_connected' for e in info['events']), 3)
+
+    def test_detour_requires_matching_rejoin_and_clear_transitions(self):
+        sim = m.MissionSim()
+        sim.reset(0, {'obstacle_enabled': True, 'obstacle': (60 * m.IN, 36 * m.IN)})
+        nominal = sim._route('join', 'join')
+        scenario = sim._obstacle_scenario()
+        detour = sim._lap_detour(scenario, nominal)
+        self.assertIsNotNone(detour)
+        self.assertEqual(detour[-1], nominal[-1])
+        self.assertTrue(all(sim._edge_clear(a, b) for a, b in zip(detour, detour[1:])))
+        bad = dict(scenario, lap_waypoints=scenario['lap_waypoints'][:-1])
+        self.assertIsNone(sim._lap_detour(bad, nominal))
 
     def test_off_route_probe_does_not_add_detour(self):
         sim = m.MissionSim()

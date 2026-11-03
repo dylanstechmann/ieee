@@ -1,6 +1,6 @@
 {
   "status": "synthetic-classical-baseline-not-legal-route-or-hardware-validation",
-  "controller": "forward/reverse/spin path follower with shortened conditional pit/parking routes; blocked obstacle routes stop safely",
+  "controller": "forward/reverse/spin path follower with shortened conditional pit/parking routes; validated local detour connection retains timeout failures",
   "training": {
     "trained_policy": false,
     "training_episodes": 0,
@@ -48,7 +48,8 @@
     "collisions": 0,
     "obstacle_probe_episodes": 9,
     "obstacle_probe_collisions": 0,
-    "obstacle_safe_stops": 6,
+    "obstacle_safe_stops": 3,
+    "obstacle_detour_timeouts": 3,
     "obstacle_detours_completed": 0,
     "finish_before_165_s": 20
   },
@@ -982,15 +983,15 @@
       "case_id": "upper-lane-blocker",
       "seed": 100,
       "phase": "STOPPED",
-      "time_s": 7.85,
-      "laps_completed": 0,
+      "time_s": 178.0,
+      "laps_completed": 2,
       "assigned_box": 2,
       "entered": true,
       "finish_seconds": null,
       "parked": false,
       "parking_overlap": 0.0,
-      "exchange_result": null,
-      "blue_retained": false,
+      "exchange_result": "done",
+      "blue_retained": true,
       "collisions": 0,
       "wall_contacts": [
         0,
@@ -1002,36 +1003,36 @@
         0,
         0
       ],
-      "score_like_total": 155,
+      "score_like_total": 245,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.9190204738144149,
-        0.9103194878191436,
-        -0.008654511752095558
+        0.9266465501113234,
+        0.3045109282972101,
+        3.1409246506432806
       ],
       "target": [
-        0.9190204738144149,
-        0.9103194878191436,
-        -0.008654511752095558
+        0.9144,
+        0.30479999999999996,
+        -3.141592653589793
       ],
-      "stop_reason": "obstacle_no_safe_route",
-      "route_name": "join-to-join",
-      "route_index": null,
-      "avoidance_status": "no_route"
+      "stop_reason": "auto_stop",
+      "route_name": "join-to-join-detour",
+      "route_index": 11,
+      "avoidance_status": "detoured"
     },
     {
       "case_id": "upper-lane-blocker",
       "seed": 101,
       "phase": "STOPPED",
-      "time_s": 7.85,
-      "laps_completed": 0,
+      "time_s": 178.0,
+      "laps_completed": 2,
       "assigned_box": 3,
       "entered": true,
       "finish_seconds": null,
       "parked": false,
       "parking_overlap": 0.0,
-      "exchange_result": null,
-      "blue_retained": false,
+      "exchange_result": "done",
+      "blue_retained": true,
       "collisions": 0,
       "wall_contacts": [
         0,
@@ -1043,36 +1044,36 @@
         0,
         0
       ],
-      "score_like_total": 155,
+      "score_like_total": 245,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.9190204738144149,
-        0.9103194878191436,
-        -0.008654511752095558
+        0.9095697807825583,
+        0.30452191537787066,
+        3.1409930652183773
       ],
       "target": [
-        0.9190204738144149,
-        0.9103194878191436,
-        -0.008654511752095558
+        0.9144,
+        0.30479999999999996,
+        -3.141592653589793
       ],
-      "stop_reason": "obstacle_no_safe_route",
-      "route_name": "join-to-join",
-      "route_index": null,
-      "avoidance_status": "no_route"
+      "stop_reason": "auto_stop",
+      "route_name": "join-to-join-detour",
+      "route_index": 11,
+      "avoidance_status": "detoured"
     },
     {
       "case_id": "upper-lane-blocker",
       "seed": 102,
       "phase": "STOPPED",
-      "time_s": 7.85,
-      "laps_completed": 0,
+      "time_s": 178.0,
+      "laps_completed": 2,
       "assigned_box": 1,
       "entered": true,
       "finish_seconds": null,
       "parked": false,
       "parking_overlap": 0.0,
-      "exchange_result": null,
-      "blue_retained": false,
+      "exchange_result": "done",
+      "blue_retained": true,
       "collisions": 0,
       "wall_contacts": [
         0,
@@ -1084,22 +1085,22 @@
         0,
         0
       ],
-      "score_like_total": 155,
+      "score_like_total": 245,
       "score_status": "synthetic event arithmetic, not referee adjudication",
       "pose": [
-        0.9190204738144149,
-        0.9103194878191436,
-        -0.008654511752095558
+        0.9095697617452195,
+        0.30452191564433695,
+        3.141005848371691
       ],
       "target": [
-        0.9190204738144149,
-        0.9103194878191436,
-        -0.008654511752095558
+        0.9144,
+        0.30479999999999996,
+        -3.141592653589793
       ],
-      "stop_reason": "obstacle_no_safe_route",
-      "route_name": "join-to-join",
-      "route_index": null,
-      "avoidance_status": "no_route"
+      "stop_reason": "auto_stop",
+      "route_name": "join-to-join-detour",
+      "route_index": 11,
+      "avoidance_status": "detoured"
     },
     {
       "case_id": "off-route-control",
@@ -1230,17 +1231,17 @@
     "Pit access, lap counting, finish-line timing and parking interpretation require official Q&A.",
     "A timed exchange event is not tire acquisition, retention or physical mechanism validation.",
     "Shortened pit and parking routes are conditional on official access and lap interpretations; no legal route is claimed.",
-    "Blocked entry and upper-lane probes stop safely without avoidance; an offline upper-lane detour is not connected or qualified.",
+    "Entry blockers stop safely. The upper-lane local detour connects and completes two laps without contacts, but all three probes auto-stop at 178 s before completing the mission; no avoidance is qualified.",
     "The off-route control completes without a detour; this is not coverage of real obstacle placements or sensing.",
     "No PPO training, held-out trained-policy evaluation or real-robot transfer has occurred."
   ],
   "input_hashes": {
-    "mission-v9.json": "8155745068768503a51497326d1cf36fe4d4cffb7f2d5f156dafb9841fc96083",
+    "mission-v9.json": "3398ed3c1d4affd2016f9c62849a45579fd3f5ea2c3af1f16622ea5baa7cc628",
     "robot-baseline-v9.json": "16259ffa0c87dc0aed7ee5232b17a321898265477f4a8c2e2aefe3bc9e5b2afc",
-    "software/mission_v9.py": "793db36c905861891d9a37c8f88e1936f6a5b31fcc4fe5f339980392b23d1d20",
+    "software/mission_v9.py": "d112d37ce898d9bcddfc189553146969b376377518425dd39fab4f2683f285e3",
     "derived/differential-drive-v3/report.json": "738bb6456e5866e31c4205f5fa0424b77f602c783e76328ca5315ebaca4997f9",
     "derived/constrained-field-v3/layout.json": "1f0bf9e446109884673b2dcda376e9e3db6e2ce5cb47d0bcb90d8f727da26447",
-    "derived/mission-v9/avoidance-scenarios.json": "05d07574da63b0cd478f32f21438529a4feb386c8a1fca64c2958c2ee9322a52",
-    "tools/plan-mission-v9-avoidance.js": "890ba88e8e5f8786da62164f9f648f2536da4dc7edd8c276ecd3c1be04ae4e9b"
+    "derived/mission-v9/avoidance-scenarios.json": "0576140a7bc91b4d03acd7acf996df939b2d8a03b17acd4ccfa377ae9db71adc",
+    "tools/plan-mission-v9-avoidance.js": "07e1a18a9128a343e57e7c41d3e5af98b4cd7a50a50ac3beb5ec55860497499b"
   }
 }

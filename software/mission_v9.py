@@ -228,14 +228,16 @@ class MissionSim:
         self.state['avoidance_status'] = 'not_needed'
         if self.obstacle_enabled and self.obstacle:
             scenario = self._obstacle_scenario()
-            if scenario is None:
-                self.state['avoidance_status'] = 'no_route'
-                self.state['stop_reason'] = 'obstacle_no_safe_route'
-                self.state['phase'] = 'STOPPED'
-                self.follower = None
-                self._event('obstacle_safe_stop')
-                return
-            if not all(self._edge_clear(a, b) for a, b in zip(points, points[1:])):
+            blocked = not all(self._edge_clear(a, b) for a, b in zip(points, points[1:]))
+            detour = None
+            if blocked and begin == end == 'join' and scenario:
+                detour = self._lap_detour(scenario, points)
+            if detour is not None:
+                points = detour
+                self.state['route_name'] = 'join-to-join-detour'
+                self.state['avoidance_status'] = 'detoured'
+                self._event('obstacle_detour_connected')
+            elif blocked:
                 self.state['avoidance_status'] = 'no_route'
                 self.state['stop_reason'] = 'obstacle_no_safe_route'
                 self.state['phase'] = 'STOPPED'
@@ -243,6 +245,37 @@ class MissionSim:
                 self._event('obstacle_safe_stop')
                 return
         self.follower = PathFollower(points, self.config['control'])
+
+    def _lap_detour(self, scenario, nominal):
+        waypoints = scenario.get('lap_waypoints')
+        if not waypoints:
+            return None
+        points = [(x * IN, y * IN, math.radians(h)) for x, y, h in waypoints]
+        if dist(points[0], nominal[0]) > 1e-8 or dist(points[-1], nominal[1]) > 1e-8:
+            return None
+        if abs(wrap(points[-1][2] - nominal[1][2])) > 1e-8:
+            return None
+        points.extend(nominal[2:])
+        simplified = [points[0]]
+        for point in points[1:]:
+            previous = simplified[-1]
+            if dist(previous, point) <= 1e-8:
+                simplified.append(point)
+                continue
+            if len(simplified) >= 2 and dist(simplified[-2], simplified[-1]) > 1e-8:
+                before = simplified[-2]
+                old_dx, old_dy = previous[0] - before[0], previous[1] - before[1]
+                new_dx, new_dy = point[0] - previous[0], point[1] - previous[1]
+                if (abs(old_dx * new_dy - old_dy * new_dx) < 1e-8 and
+                        old_dx * new_dx + old_dy * new_dy > 0 and
+                        abs(wrap(point[2] - previous[2])) < 1e-8):
+                    simplified[-1] = point
+                    continue
+            simplified.append(point)
+        points = simplified
+        if not all(self._edge_clear(a, b) for a, b in zip(points, points[1:])):
+            return None
+        return points
 
     def _obstacle_scenario(self):
         scenarios = json.loads((ROOT / self.config['avoidance']['scenario_source']).read_text())['scenarios']

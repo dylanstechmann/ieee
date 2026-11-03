@@ -15,9 +15,9 @@ The controller tracks one primitive at a time using along-track projection and c
 - 20/20 complete three laps and the synthetic exchange with zero contacts.
 - 20/20 park before the 178 s auto-stop; all three assignments pass with zero contacts.
 - 20/20 cross before the strict 165 s bonus threshold. Per-assignment completion times are 153.85 s (box 1), 161.50 s (box 2), and 150.95 s (box 3).
-- Nine obstacle probes produce six safe stops (entry and upper-lane blockers) and three off-route completions, with zero collisions. No obstacle avoidance is qualified.
+- Nine obstacle probes produce three entry-blocker safe stops, three upper-lane detour attempts that auto-stop at 178 s, and three off-route completions, with zero collisions. No obstacle avoidance mission is qualified.
 
-The shortened pit approach uses the upper approach lane and a 35-inch turn column; box 2 parking goes around the north side of the pit divider. These are conditional geometric choices, not organizer-approved access or lap rulings. `avoidance-scenarios.json` retains an offline upper-lane detour found by the existing JavaScript planner. The mission does not connect that detour reliably, so blocked routes intentionally stop with `obstacle_no_safe_route` rather than collide or claim success.
+The shortened pit approach uses the upper approach lane and a 35-inch turn column; box 2 parking goes around the north side of the pit divider. These are conditional geometric choices, not organizer-approved access or lap rulings. `avoidance-scenarios.json` retains a local upper-lane bypass found by the existing JavaScript planner. Python checks its entry/rejoin poses and every sampled transition, merges collinear grid steps, and rejoins the original lap. It completes two laps and the exchange without contacts, but the third lap exceeds the unchanged 178 s auto-stop. This is a connected detour with a retained timeout failure, not a successful avoidance claim.
 
 `trace-box-1.json` records the actual state/pose sequence for seed 100 with box 1 explicitly assigned. These are synthetic perfect-knowledge results, not reliability estimates or official score predictions.
 
@@ -37,7 +37,7 @@ Seeds 0–99 are reserved for future training; 100–119 are nominal evaluation.
 
 ## Next engineering gates
 
-1. Connect the retained offline detour with explicit route state and bounded, collision-checked transitions; retain safe-stop failures and do not claim avoidance yet.
+1. Diagnose the retained detour timeout from its phase trace; do not extend the deadline or repeatedly tune the same route. Preserve the nominal regression gate.
 2. Resolve official pit/lap/finish/envelope questions and measure the installed field.
 3. Add route-aware persistent obstacle avoidance using published/measured obstacle envelopes. Retain failure cases.
 4. Replace perfect pose/target knowledge with real sensing, calibration, noise and dropout models.

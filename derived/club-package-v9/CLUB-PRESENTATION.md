@@ -24,9 +24,9 @@ Twenty seeded **obstacle-free, perfect-knowledge synthetic** episodes:
 | Timed exchange event succeeds | 20/20 | Not a physical tire pickup |
 | Parks before 178 s auto-stop | 20/20 | All three assignments; synthetic conditional routes |
 | Finish before strict 2:45 bonus | 20/20 | Software timing only; not referee adjudication |
-| Obstacle probes: safe stop / off-route completion | 6 / 3 | Zero contacts; no avoidance qualified |
+| Obstacle probes: entry safe stop / detour timeout / off-route completion | 3 / 3 / 3 | Zero contacts; no avoidance mission qualified |
 
-Shortened pit and parking approaches removed the nominal timeout without shrinking the robot, removing walls or extending the deadline. They remain conditional on official pit-access and lap interpretations. The upper-lane offline detour is retained as investigation evidence, but blocked routes currently stop safely rather than avoid the obstacle.
+Shortened pit and parking approaches removed the nominal timeout without shrinking the robot, removing walls or extending the deadline. They remain conditional on official pit-access and lap interpretations. The local upper-lane detour now connects with checked endpoints and transitions, completes two laps and the exchange without contacts, but times out on the final lap at the unchanged 178 s limit. This is useful failure evidence, not a completed avoidance run.
 
 **No RL policy has been trained.** `MissionEnv` supplies an 18-value observation and two normalized actions with Gymnasium-compatible reset/step when Gymnasium is installed. The standard-library simulator and tests need no ML packages. Training is premature until the classical task, obstacle handling and sensing assumptions are coherent.
 
@@ -47,7 +47,7 @@ Shortened pit and parking approaches removed the nominal timeout without shrinki
 | Mechanical lead | Measure any received parts; review shaft-down mule and full-footprint mockup | Dimensioned fit record; no fabrication release before review |
 | Bench/electrical lead | Inventory facility, supervision, instruments and battery policy | Approved bounded setup; measured voltage/current/speed/temperature |
 | Tire-mechanism lead | Print/machine small test coupons and build a repeatable tire fixture | Acquisition, retention, release and bail-out logs, including failures |
-| Software lead | Connect the retained detour with explicit route state; replace perfect pose with sensor inputs | Replayable all-box and obstacle tests, including safe-stop failures and field logs |
+| Software lead | Diagnose the connected detour's final-lap timeout; replace perfect pose with sensor inputs | Replayable all-box and obstacle tests, including timeout/safe-stop failures and field logs |
 | Portfolio lead | Preserve decisions, raw trials and photographs | Material for the five-page portfolio and ten-minute interview |
 
 ## 5. Purchase decision
@@ -65,7 +65,7 @@ Purchase gates:
 ## 6. RL plan after the baseline gate
 
 1. Preserve the all-box parking baseline; validate its conditional pit/access assumptions and measured actuator capability.
-2. Obtain obstacle dimensions/placement rules; connect the retained detour with explicit route state and test failure cases.
+2. Obtain obstacle dimensions/placement rules; diagnose the connected detour timeout and retain failure cases.
 3. Add realistic sensor observations, dropout and calibration data. Keep mission logic independent of the learned controller.
 4. Train PPO or another baseline only in the documented training seed range; save code, configuration, seeds and model artifacts.
 5. Evaluate untouched seeds against the classical controller: completion, contacts, time, exchange and parking separately.

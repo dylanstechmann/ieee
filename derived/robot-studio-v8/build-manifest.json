@@ -7,7 +7,7 @@
   },
   "input_hashes": {
     "robot-studio-v8/index.html": "485b5b922583d8b55df9e87c12b5492943ab9816c5c124fcd1d7cc80200fb24c",
-    "robot-studio-v8/app.js": "96610c675d164db676269f52bd11c3e8e7aa5d1482b0b85d95a1e9da0078337e",
+    "robot-studio-v8/app.js": "99a62f0b5e3e3590d96bc665e99a7093c70917d553b13ee71fc1dcaa2383f9ac",
     "robot-studio-v8/study-core.js": "1617925ddb2effd4bfe1797790ea314636c030f5aba645a05a219cea1bf9e455",
     "tools/build-robot-studio-v8.js": "7207a411068cca6d0a5801b3c6b7921ddfc0e0e6a2144fa9ac5b74fb60892b55",
     "derived/robot-studio-v7/parts.json": "bcd14f7e684c2559a16aa45c3c95aba4e2da362a78600412ab2f4a3442a3bc86",
@@ -19,7 +19,7 @@
     "stopping-dynamics-v6.json": "97aaf0f0ce245f65190b6b68366096c498611369fce3e481fec8e6fb84e3323c",
     "derived/stopping-dynamics-v6/nominal-simulations.json": "7fb5367f5394fc353a780872d6ae965042cf2f8c178cb0a7551e91a24f512aae",
     "derived/mechanism-envelope-v6/report.json": "c979575dfa710d2524745b5ac3a81acb8f9078120abd428a1e6baee3b9ab0ad2",
-    "derived/mission-v9/evaluation.json": "da71c110eb1089564b203f6c6ad0de281b0a46aeb21ef40c39b4c6dc8549b7d5",
+    "derived/mission-v9/evaluation.json": "d9fb5980b87cddec3eb1e1b561312a978c87ffeac5d5f2020775f68639a8f2e0",
     "derived/dynamics-v9/report.json": "790eac7433e398315ff1552fe776d0bfffafced994faeb52843a979b776c4ed4",
     "derived/robot-studio-v7/parts/motor.glb": "60ea63613a1e06f17a9055146b63d8bedd709676b431ad77e945b8ee247f99df",
     "derived/robot-studio-v7/parts/bracket.glb": "7e1e5412203be7cd462ea25e9e66c1ddfb575f7717f8b3579ed696f485442676",
@@ -29,8 +29,8 @@
   },
   "output": {
     "file": "share/Robot-Studio-v8.html",
-    "bytes": 13311166,
-    "sha256": "9bad6df4b909bcd8d15aa973183136ce5c33a7a3b9cb1b1a75deef3d90ab280a",
-    "bundle_bytes": 652438
+    "bytes": 13311345,
+    "sha256": "9af809fdb706cd818facd9d6424c3776e31351a40b6a86d35115d33558002e71",
+    "bundle_bytes": 652562
   }
 }

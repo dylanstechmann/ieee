@@ -28,7 +28,7 @@
   },
   "avoidance": {
     "scenario_source": "derived/mission-v9/avoidance-scenarios.json",
-    "status": "Perfect-knowledge hypothetical probes; blocked routes stop safely. Offline detour geometry is retained for investigation, not qualified avoidance."
+    "status": "Perfect-knowledge hypothetical probes; the local upper-lane detour connects without contacts but times out. Entry blockers stop safely; no avoidance is qualified."
   },
   "mission": {
     "pit_after_lap": 2,

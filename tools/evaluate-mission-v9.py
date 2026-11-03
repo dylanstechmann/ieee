@@ -41,7 +41,7 @@ def main():
     (out / 'trace-box-1.json').write_text(json.dumps(trace, indent=2) + '\n')
     report = {
         'status': 'synthetic-classical-baseline-not-legal-route-or-hardware-validation',
-        'controller': 'forward/reverse/spin path follower with shortened conditional pit/parking routes; blocked obstacle routes stop safely',
+        'controller': 'forward/reverse/spin path follower with shortened conditional pit/parking routes; validated local detour connection retains timeout failures',
         'training': {'trained_policy': False, 'training_episodes': 0,
                      'reason': 'Obstacle handling, official Q&A and realistic sensing must be resolved before RL comparison.',
                      'interface': 'MissionEnv reset/step; 18 observations and two normalized actions',
@@ -60,6 +60,7 @@ def main():
             'obstacle_probe_episodes': len(obstacle),
             'obstacle_probe_collisions': sum(r['collisions'] for r in obstacle),
             'obstacle_safe_stops': sum(r['stop_reason'] == 'obstacle_no_safe_route' and not r['collisions'] for r in obstacle),
+            'obstacle_detour_timeouts': sum(r['avoidance_status'] == 'detoured' and r['stop_reason'] == 'auto_stop' and not r['collisions'] for r in obstacle),
             'obstacle_detours_completed': sum(r['avoidance_status'] == 'detoured' and r['parked'] for r in obstacle),
             'finish_before_165_s': sum(r['finish_seconds'] is not None and r['finish_seconds'] < 165 for r in nominal),
         },
@@ -70,7 +71,7 @@ def main():
             'Pit access, lap counting, finish-line timing and parking interpretation require official Q&A.',
             'A timed exchange event is not tire acquisition, retention or physical mechanism validation.',
             'Shortened pit and parking routes are conditional on official access and lap interpretations; no legal route is claimed.',
-            'Blocked entry and upper-lane probes stop safely without avoidance; an offline upper-lane detour is not connected or qualified.',
+            'Entry blockers stop safely. The upper-lane local detour connects and completes two laps without contacts, but all three probes auto-stop at 178 s before completing the mission; no avoidance is qualified.',
             'The off-route control completes without a detour; this is not coverage of real obstacle placements or sensing.',
             'No PPO training, held-out trained-policy evaluation or real-robot transfer has occurred.',
         ],
