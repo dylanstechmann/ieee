@@ -1,0 +1,67 @@
+{
+  "version": "0.9.0",
+  "date": "2026-11-01",
+  "status": "synthetic-mission-training-environment-not-legal-route-or-hardware-validation",
+  "source_layout": "derived/constrained-field-v3/layout.json",
+  "canonical_robot": "robot-baseline-v9.json",
+  "dt_s": 0.05,
+  "max_time_s": 180,
+  "auto_stop_s": 178,
+  "control": {
+    "max_speed_m_s": 0.3,
+    "max_acceleration_m_s2": 0.45,
+    "max_yaw_rate_rad_s": 1.8,
+    "max_yaw_acceleration_rad_s2": 4,
+    "track_m": 0.202,
+    "wheel_radius_m": 0.04,
+    "footprint_m": [0.254, 0.254],
+    "footprint_shape": "rectangle",
+    "cruise_speed_m_s": 0.2032,
+    "approach_speed_m_s": 0.1,
+    "heading_gain": 3.2,
+    "cross_track_gain": 2.0,
+    "position_tolerance_m": 0.006,
+    "heading_tolerance_rad": 0.025,
+    "settle_time_s": 0.3,
+    "route_source": "derived/differential-drive-v3/report.json",
+    "route_sampling": {"translation_step_m": 0.003, "rotation_step_rad": 0.01}
+  },
+  "mission": {
+    "pit_after_lap": 2,
+    "exchange_duration_s": 8,
+    "exchange_time_budget_s": 20,
+    "exchange_attempts": 2,
+    "flag_confirm_frames": 3,
+    "lap_length_tolerance": 0.15,
+    "pit_box_center_tolerance_m": 0.055,
+    "observation_noise_m": 0.003,
+    "observation_noise_rad": 0.008
+  },
+  "field": {
+    "wall_inset_m": 0.0254,
+    "center_divider_width_m": 0.0254,
+    "pit_divider_width_m": 0.0254,
+    "wall_height_m": 0.0889,
+    "center_divider_height_m": 0.0381,
+    "obstacle_radius_m": 0.058,
+    "obstacle_quadrant_size_m": 0.4064,
+    "status": "Obstacle stand-ins, mounting heights and exact placement are assumptions; official Q&A and measurement required."
+  },
+  "training": {
+    "action_space": "Box(2): normalized forward speed and yaw-rate targets [-1,1]",
+    "observation_space": "Box(18): pose/velocity, relative route target, lap/phase, tag/box, exchange, flag, timing and sensor summaries",
+    "reward": "Dense progress and heading shaping plus task events; collision, timeout and unnecessary pit dwell penalties. Not an official score predictor.",
+    "randomization": "Seeded assigned tag and explicit scenario options for start pose, obstacle, sensor noise, traction and exchange outcome; nominal evaluation disables noise and obstacles",
+    "evaluation": "Held-out seeds not used for training; report task completion, contacts, time and score-like events separately",
+    "classical_baseline": "Sampled forward/reverse/spin path follower with explicit mission phases and pit bail-out; no obstacle avoidance qualified",
+    "integration": "Gymnasium-compatible Python environment; stable-baselines3 PPO optional, not a project dependency"
+  },
+  "limitations": [
+    "Kinematic differential-drive plant with bounded acceleration; not the calibrated v9 motor/traction model.",
+    "Lap counting follows explicit route progress, not a referee ruling about pit-detour lap definitions.",
+    "Tire exchange is a timed stochastic event, not contact mechanics or a validated mechanism.",
+    "Tag and flag observations are synthetic; no camera or detector runs in this environment.",
+    "No trained policy or real-robot transfer is claimed until training and held-out evaluation artifacts exist.",
+    "Official Q&A may change legal corridors, flag behavior, parking and minimum-envelope interpretation."
+  ]
+}

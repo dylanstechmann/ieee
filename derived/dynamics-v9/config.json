@@ -1,0 +1,169 @@
+{
+  "version": "0.9.0",
+  "date": "2026-11-01",
+  "status": "agent-selected-digital-candidates-synthetic-planar-study-not-hardware-validated",
+  "sources": {
+    "canonical": "robot-baseline-v9.json",
+    "inherited_model": "tools/mule-dynamics-v5.js",
+    "vendor_assembly": "derived/robot-studio-v7/assembly.json"
+  },
+  "numerics": {
+    "dt_s": 0.004166666666666667,
+    "sample_dt_s": 0.03333333333333333,
+    "bus_iterations": 6,
+    "convergence_relative_tolerance": 0.02
+  },
+  "vehicle": {
+    "mass_kg": 4,
+    "yaw_inertia_kg_m2": 0.06,
+    "wheel_inertia_kg_m2": 0.00035,
+    "driven_weight_fraction": 0.8,
+    "rolling_resistance_coefficient": 0.03,
+    "friction_coefficient": 0.35,
+    "caster_scrub_nm": 0.06,
+    "center_of_gravity_height_m": 0.04,
+    "track_m": 0.202,
+    "wheel_radius_m": 0.04,
+    "source_voltage_v": 12,
+    "source_resistance_ohm": 0.25,
+    "driver_current_limit_a": 3,
+    "status": "synthetic scenario values, not measured component ratings"
+  },
+  "electrical": {
+    "source_voltage_v": 12,
+    "source_resistance_ohm": 0.25,
+    "driver_current_limit_a": 3,
+    "minimum_modeled_bus_v": 0,
+    "energy_regeneration": false
+  },
+  "control": {
+    "speed_kp": 0.045,
+    "speed_ki": 0.12,
+    "integral_limit": 0.8,
+    "heading_kp": 2.5,
+    "heading_kd": 0.6,
+    "feedforward": true,
+    "encoder_delay_steps": 4
+  },
+  "support_scrub_nm": {
+    "dual-front-rear": 0.06,
+    "front-only": 0.035,
+    "rear-only": 0.04
+  },
+  "scenarios": [
+    {
+      "id": "cruise",
+      "label": "Cruise and heading hold",
+      "duration_s": 6,
+      "target_speed_m_s": 0.2032,
+      "acceleration_m_s2": 0.35
+    },
+    {
+      "id": "spin",
+      "label": "Controlled 180 degree spin",
+      "duration_s": 6,
+      "spin_duration_s": 4
+    },
+    {
+      "id": "low-voltage",
+      "label": "Low-voltage sensitivity",
+      "duration_s": 6,
+      "target_speed_m_s": 0.2032,
+      "acceleration_m_s2": 0.35,
+      "source_voltage_v": 10
+    },
+    {
+      "id": "asymmetric-traction",
+      "label": "Asymmetric traction",
+      "duration_s": 6,
+      "target_speed_m_s": 0.2032,
+      "acceleration_m_s2": 1.5,
+      "friction_left": 0.16,
+      "friction_right": 0.35
+    },
+    {
+      "id": "encoder-dropout",
+      "label": "Left encoder dropout",
+      "duration_s": 6,
+      "target_speed_m_s": 0.2032,
+      "acceleration_m_s2": 0.35,
+      "dropout_start_s": 0.35,
+      "dropout_end_s": 1.4
+    },
+    {
+      "id": "brake-hold",
+      "label": "Acceleration and active stop",
+      "duration_s": 6,
+      "target_speed_m_s": 0.2032,
+      "acceleration_m_s2": 0.35,
+      "stop_at_s": 3
+    }
+  ],
+  "sweep": {
+    "mass_cases_kg": [
+      2,
+      4,
+      6
+    ],
+    "ensemble_seed": 731,
+    "ensemble_runs": 48,
+    "ensemble_ranges": {
+      "mass_kg": [
+        2,
+        6
+      ],
+      "friction_coefficient": [
+        0.15,
+        0.5
+      ],
+      "source_voltage_v": [
+        9,
+        12
+      ],
+      "motor_scale": [
+        0.9,
+        1.1
+      ],
+      "caster_scrub_nm": [
+        0.03,
+        0.15
+      ],
+      "encoder_delay_steps": [
+        0,
+        8
+      ]
+    }
+  },
+  "requirements": {
+    "controller": {
+      "bidirectional_drive_channels": 2,
+      "quadrature_encoder_inputs": 2,
+      "encoder_pullup_and_voltage": "unselected; verify motor encoder datasheet and controller IO",
+      "control_rate_hz": 240,
+      "control_rate_basis": "digital model rate, not a hardware requirement or validated scheduler"
+    },
+    "driver": {
+      "topology": "two independent bidirectional channels",
+      "current_limit_model_a": 3,
+      "selection_status": "unselected synthetic model parameter; continuous, peak, thermal, braking and supply compatibility unresolved"
+    },
+    "power": {
+      "modeled_source_voltage_v": 12,
+      "selection_status": "unselected arithmetic bus; battery chemistry, charger, fuse, wiring, switch and policy unresolved"
+    },
+    "mechanism": {
+      "baseline": "passive geometry first",
+      "actuator": "unselected; actuator requirements remain conditional on capture concept and measured loads"
+    }
+  },
+  "limitations": [
+    "Planar longitudinal/yaw dynamics with a switching no-slip/traction-cap approximation; no 3D suspension, lateral tire model, flexible carcass, impact or rigid-body contact solver.",
+    "Linear motor approximation uses archived no-load and extrapolated stall values; it is not a calibrated motor, gearbox, driver, thermal or battery model.",
+    "Mass, inertia, wheel inertia, driven load, friction, scrub, resistance, current limit and control gains are synthetic assumptions.",
+    "Encoder delay/dropout and saturation are software fault scenarios, not safety certification.",
+    "Sensitivity ensembles are deterministic scenario coverage, not measured distributions, probabilities or reliability evidence.",
+    "Digital candidate selection and simulation do not release purchases, fabrication, energization or competition legality.",
+    "Only the track and canonical shared parameters are updated from v5. The old mechanism envelopes and stopping datasets are not regenerated or declared compatible with a competition chassis."
+  ],
+  "geometry_status": "202 mm vendor-CAD track; proposed shaft-down mule; received parts not measured"
+}

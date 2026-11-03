@@ -1,0 +1,49 @@
+{
+  "version": "0.9.0",
+  "date": "2026-11-01",
+  "status": "proposed-digital-baseline-not-fabricated-or-hardware-validated",
+  "mule": {
+    "purpose": "Order A drivetrain experiment, not the competition chassis",
+    "assembly_id": "shaft-down",
+    "source": "derived/robot-studio-v7/assembly.json",
+    "deck_mm": [190, 172, 5],
+    "deck_top_mm": 28.6,
+    "track_m": 0.202,
+    "overall_width_mm": 212,
+    "wheel_radius_m": 0.04,
+    "caster_riser_mm": 6.91,
+    "caster_spacer_mm": 3.175,
+    "motor_sku": "4754",
+    "release_gate": "Measure received motor, bracket, hub, wheel and caster; verify fit, screw engagement and support before fabrication."
+  },
+  "competition_concept": {
+    "purpose": "Legal-envelope mockup and integrated mission architecture",
+    "lower_body_envelope_mm": [254, 254, 76.2],
+    "starting_cube_limit_mm": [304.8, 304.8, 304.8],
+    "shape": "rectangular conservative baseline; round alternative requires official Q&A",
+    "drive": "two encoder gearmotors with supports; exact wheel locations and mechanism packaging unresolved",
+    "mechanism": "passive fork first experiment; guided bore and OD gripper retained for common E04 comparison",
+    "sensing": ["downward reflectance array", "wheel encoders", "AprilTag 3 compatible camera", "low obstacle/wall ranging", "IMU optional"],
+    "release_gate": "Confirm envelope interpretation and field clearances; test full-footprint mockup before production CAD."
+  },
+  "shared_parameters": {
+    "mass_kg": 4,
+    "yaw_inertia_kg_m2": 0.06,
+    "wheel_inertia_kg_m2": 0.00035,
+    "driven_weight_fraction": 0.8,
+    "rolling_resistance_coefficient": 0.03,
+    "friction_coefficient": 0.35,
+    "caster_scrub_nm": 0.06,
+    "source_voltage_v": 12,
+    "source_resistance_ohm": 0.25,
+    "driver_current_limit_a": 3,
+    "status": "synthetic scenario values, not measured component ratings"
+  },
+  "canonical_outputs": ["dynamics-v9", "mission-v9", "studio-v8-evidence-update", "club-package-v9"],
+  "limitations": [
+    "The shaft-down mule is a CAD-derived proposal, not a measured or selected fabrication revision.",
+    "The competition envelope is a conservative concept, not final CAD or proof of legal lap/pit access.",
+    "No mass, inertia, friction, current, thermal or battery parameter is physically calibrated.",
+    "No mechanism, actuator, driver, battery, charger or final production BOM is released."
+  ]
+}

@@ -1,6 +1,8 @@
 # IEEE project status and lineage
 
-Updated November 1, 2026. Personal hobby/learning project with AI-assisted research and software. No purchases, fabrication, physical robot trials or organizer contact are recorded.
+Updated November 3, 2026. Personal hobby/learning project with AI-assisted research and software. No purchases, fabrication, physical robot trials or organizer contact are recorded.
+
+**Club package:** `derived/club-package-v9/CLUB-PRESENTATION.md`, with the rule/Q&A ledger and conditional parts list. The new synthetic mission baseline completes three clean obstacle-free laps in 20/20 episodes but parks in only 6/20; obstacle probes fail. No RL policy has been trained. See `derived/mission-v9/README.md`.
 
 ## Start here
 
@@ -44,10 +46,10 @@ No private IEEE GitHub repository was found when the account was checked. Local 
 
 ## Next work in priority order
 
-1. Select and physically verify the mule geometry; then regenerate dynamics and mechanism interfaces from one canonical assembly.
-2. Build a legal-envelope competition mockup and a real tire test fixture; compare acquisition, retention, release and bail-out behavior.
-3. Resolve official Q&A and measure a built field, actual obstacles and printed tags.
-4. Integrate the existing mission logic with real sensing and a basic legal robot; test complete missions before adding speed or visual detail.
-5. Keep dated evidence for the five-page Engineering Portfolio and team interview.
+1. Fix all-box final parking and add route-aware obstacle handling in the synthetic mission; do not hide failures by extending time or shrinking the footprint.
+2. Resolve official Q&A and measure a built field, actual obstacles and printed tags.
+3. Physically verify the proposed mule geometry through the documented bench gates; dynamics-v9 is corrected-track but uncalibrated.
+4. Build a legal-envelope competition mockup and real tire fixture; compare acquisition, retention, release and bail-out behavior.
+5. Replace perfect simulated knowledge with real sensing, then train/evaluate RL only against a coherent classical baseline. Keep dated portfolio evidence.
 
 The detailed handoffs remain in `SESSION-STATE-2026-10-29.md`, `SESSION-STATE-2026-10-30.md`, `SESSION-STATE-2026-10-31.md` and `SESSION-STATE-2026-11-01.md`. Older plans and V2 references are historical, not current status.

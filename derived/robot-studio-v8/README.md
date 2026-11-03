@@ -7,7 +7,7 @@ Open `share/Robot-Studio-v8.html` directly in a WebGL-capable browser. It is a s
 - **Assembly + field:** Robot Studio v7's three.js renderer and Pololu vendor CAD for the Order A motor, bracket, hub, wheel and caster; organizer tire STL; decoded tagStandard41h12 bits; dimensioned and explicitly approximate field elements.
 - **Stopping:** the unchanged v6.1 selected-#4754 dataset: 56 trajectories, seven scenarios, four generic output modes and two motor-loss assumptions. Both assumptions conflict with some manufacturer data; their spread is not a confidence interval.
 - **Mechanism:** the unchanged v6 dataset: 162 cases and 2,970 frames for passive fork, guided-bore and OD-gripper concepts. The stationary-tire presentation retains the source-relative contacts. No acquisition, retention or mechanism selection is claimed.
-- **Evidence:** the earlier multi-model document review, navigation limitations, AprilTag findings and unresolved physical/Q&A gates are summarized in the application.
+- **Evidence:** the earlier multi-model document review, navigation limitations, AprilTag findings and unresolved physical/Q&A gates are summarized in the application. The November 3 update adds the actual v9 mission counts, RL-not-trained status, corrected-but-uncalibrated dynamics summary and club-package location; it does not turn the assembly illustration into the mission controller.
 
 The original v3–v7 viewers and sealed packages are preserved. v8 does not overwrite them or silently rewrite their inputs.
 

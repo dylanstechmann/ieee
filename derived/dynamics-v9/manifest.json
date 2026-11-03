@@ -1,0 +1,19 @@
+{
+  "status": "agent-selected-digital-candidates-synthetic-planar-study-not-hardware-validated",
+  "input_hashes": {
+    "robot-baseline-v9.json": "16259ffa0c87dc0aed7ee5232b17a321898265477f4a8c2e2aefe3bc9e5b2afc",
+    "mule-dynamics-v5.json": "3eae775cdcc945198cb66f05b96e2c33d04d927785c653d935f8fd87119df95f",
+    "tools/dynamics-v9.js": "bc68c1b95a65f798770ca983c9ef9742f33b3b3e4fd7e84f7e5b13af371ef8ba",
+    "tools/mule-dynamics-v5.js": "9144325006f7ba050fef7dff7b0a4f509dd4cb5f6be4b174779804d85a7d27d6",
+    "tools/build-mule-studio-v4.js": "c951e04b25f1c828735ac64ee9a76d9b893305b506832131f1bf669d8d8fc881",
+    "drivetrain-mule-v4.json": "342f2bb93eb7b9b47e333487a1fda019a819d7458f1e9385982ebf56161a2dec",
+    "order-a-procurement-v4.json": "12fa6454864d0d21bc27464b5ab9072d90ffc18e0fe218134de871719353f2da",
+    "hardware-development-v3.json": "0ed672009f04074aa95411fca9cea1071b7bbcdd7d79da2646b661e92c119549",
+    "derived/robot-studio-v7/assembly.json": "2e2d68cb0890bbec1a7622174f31d45ec27034ea9babf13bc54c657721be1646"
+  },
+  "output_hashes": {
+    "derived/dynamics-v9/config.json": "e4225a2e633de9f07e0f7747f30df2849926731d13ceb659189784d69e802d69",
+    "derived/dynamics-v9/nominal-simulations.json": "67a1d1e7e341d6b836ddfc04e7434b564db52d93f59377dc6983aa605a99b835",
+    "derived/dynamics-v9/report.json": "790eac7433e398315ff1552fe776d0bfffafced994faeb52843a979b776c4ed4"
+  }
+}

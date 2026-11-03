@@ -20,6 +20,7 @@ const INPUTS = [
   'derived/constrained-field-v3/layout.json', 'derived/apriltag-41h12-v7/report.json',
   'derived/organizer-cad/Spare Tire v2.stl', 'stopping-dynamics-v6.json',
   'derived/stopping-dynamics-v6/nominal-simulations.json', 'derived/mechanism-envelope-v6/report.json',
+  'derived/mission-v9/evaluation.json', 'derived/dynamics-v9/report.json',
   ...PARTS.map((p) => `derived/robot-studio-v7/parts/${p}.glb`),
 ];
 
@@ -52,6 +53,8 @@ function data() {
     stoppingConfig: json('stopping-dynamics-v6.json'),
     stopping: json('derived/stopping-dynamics-v6/nominal-simulations.json'),
     mechanism: json('derived/mechanism-envelope-v6/report.json'),
+    mission: json('derived/mission-v9/evaluation.json'),
+    dynamics: json('derived/dynamics-v9/report.json'),
   };
 }
 
