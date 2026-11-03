@@ -46,8 +46,8 @@ No private IEEE GitHub repository was found when the account was checked. Local 
 
 ## Next work in priority order
 
-1. Diagnose the connected detour's final-lap timeout from its phase trace; retain the 178 s limit and nominal regression gate. Avoidance is not qualified.
-2. Resolve official Q&A and measure a built field, actual obstacles and printed tags.
+1. **Timeout diagnosed; no shortcut qualified.** The detoured lap takes 44.40 s versus 32.35 s nominal, adding 38 inches and four spins. The final lap starts at 141.80 s and auto-stops at 178 s with two laps complete. Reverse-entry/rejoin candidates intersect the divider; the existing end-gap bypass remains the only checked local route. See `derived/mission-v9/README.md`. Retain the timeout; do not tune the same fixed bypass repeatedly.
+2. Resolve official Q&A and measure a built field, actual obstacles and printed tags. Use those measurements for a broader route/maneuver study rather than assuming this hypothetical blocker.
 3. Physically verify the proposed mule geometry through the documented bench gates; dynamics-v9 is corrected-track but uncalibrated.
 4. Build a legal-envelope competition mockup and real tire fixture; compare acquisition, retention, release and bail-out behavior.
 5. Replace perfect simulated knowledge with real sensing, then train/evaluate RL only against a coherent classical baseline. Keep dated portfolio evidence.

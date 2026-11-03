@@ -19,6 +19,12 @@ The controller tracks one primitive at a time using along-track projection and c
 
 The shortened pit approach uses the upper approach lane and a 35-inch turn column; box 2 parking goes around the north side of the pit divider. These are conditional geometric choices, not organizer-approved access or lap rulings. `avoidance-scenarios.json` retains a local upper-lane bypass found by the existing JavaScript planner. Python checks its entry/rejoin poses and every sampled transition, merges collinear grid steps, and rejoins the original lap. It completes two laps and the exchange without contacts, but the third lap exceeds the unchanged 178 s auto-stop. This is a connected detour with a retained timeout failure, not a successful avoidance claim.
 
+### Timeout diagnosis (November 3)
+
+The phase trace for seed 100 (box 2) shows the first two detoured laps completing at 52.25 s and 96.75 s, the exchange at 122.00 s, and the final lap starting at 141.80 s. The final lap reaches its lower-lane return at 171.40 s and auto-stops at 178.00 s with two laps complete. The nominal lap is 32.35 s; the detoured lap is 44.40 s. The detour adds 38 inches of translation and four 90-degree spins (188 inches and 720 degrees total, versus 150 inches and 360 degrees nominally).
+
+The existing planner's wheel-travel objective and a time-weighted candidate comparison select the same four-turn local bypass. Candidate reverse-entry and reverse-rejoin shortcuts were checked with the unchanged 10 × 10-inch footprint and sampled transitions: they intersect the center divider except at the existing end gaps. The divider spans x=43.87–79.87 inches at y=24.073 inches; the upper-lane obstacle blocks the direct straight. Thus this investigation found no valid shorter local route, not evidence that no route exists. No deadline, speed, footprint, obstacle or divider constraint was relaxed. The next route study must use measured obstacle/field geometry and a broader route/maneuver model, not repeated tuning of this fixed bypass.
+
 `trace-box-1.json` records the actual state/pose sequence for seed 100 with box 1 explicitly assigned. These are synthetic perfect-knowledge results, not reliability estimates or official score predictions.
 
 ## Run

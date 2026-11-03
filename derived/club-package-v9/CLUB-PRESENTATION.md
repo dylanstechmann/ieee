@@ -28,6 +28,8 @@ Twenty seeded **obstacle-free, perfect-knowledge synthetic** episodes:
 
 Shortened pit and parking approaches removed the nominal timeout without shrinking the robot, removing walls or extending the deadline. They remain conditional on official pit-access and lap interpretations. The local upper-lane detour now connects with checked endpoints and transitions, completes two laps and the exchange without contacts, but times out on the final lap at the unchanged 178 s limit. This is useful failure evidence, not a completed avoidance run.
 
+**Timeout diagnosis:** the detoured lap takes 44.40 s versus 32.35 s nominal, adding 38 inches and four 90° spins. The final lap starts at 141.80 s and stops at 178 s with two laps complete. Reverse-entry/rejoin shortcuts were checked and rejected because they intersect the divider; the existing end-gap bypass remains the only checked local route. No constraint was relaxed. The next software study needs measured field/obstacle geometry and a broader maneuver model, not more tuning of this fixed bypass.
+
 **No RL policy has been trained.** `MissionEnv` supplies an 18-value observation and two normalized actions with Gymnasium-compatible reset/step when Gymnasium is installed. The standard-library simulator and tests need no ML packages. Training is premature until the classical task, obstacle handling and sensing assumptions are coherent.
 
 ## 3. Recommended architecture to prototype
@@ -47,7 +49,7 @@ Shortened pit and parking approaches removed the nominal timeout without shrinki
 | Mechanical lead | Measure any received parts; review shaft-down mule and full-footprint mockup | Dimensioned fit record; no fabrication release before review |
 | Bench/electrical lead | Inventory facility, supervision, instruments and battery policy | Approved bounded setup; measured voltage/current/speed/temperature |
 | Tire-mechanism lead | Print/machine small test coupons and build a repeatable tire fixture | Acquisition, retention, release and bail-out logs, including failures |
-| Software lead | Diagnose the connected detour's final-lap timeout; replace perfect pose with sensor inputs | Replayable all-box and obstacle tests, including timeout/safe-stop failures and field logs |
+| Software lead | Use measured field/obstacle geometry for a broader maneuver study; replace perfect pose with sensor inputs | Replayable all-box and obstacle tests, including timeout/safe-stop failures and field logs |
 | Portfolio lead | Preserve decisions, raw trials and photographs | Material for the five-page portfolio and ten-minute interview |
 
 ## 5. Purchase decision
@@ -65,7 +67,7 @@ Purchase gates:
 ## 6. RL plan after the baseline gate
 
 1. Preserve the all-box parking baseline; validate its conditional pit/access assumptions and measured actuator capability.
-2. Obtain obstacle dimensions/placement rules; diagnose the connected detour timeout and retain failure cases.
+2. Obtain obstacle dimensions/placement rules; use the diagnosed detour timeout and retained failure cases to guide a broader maneuver study.
 3. Add realistic sensor observations, dropout and calibration data. Keep mission logic independent of the learned controller.
 4. Train PPO or another baseline only in the documented training seed range; save code, configuration, seeds and model artifacts.
 5. Evaluate untouched seeds against the classical controller: completion, contacts, time, exchange and parking separately.
