@@ -46,7 +46,7 @@ No private IEEE GitHub repository was found when the account was checked. Local 
 
 ## Next work in priority order
 
-1. **Timeout diagnosed; no shortcut qualified.** The detoured lap takes 44.40 s versus 32.35 s nominal, adding 38 inches and four spins. The final lap starts at 141.80 s and auto-stops at 178 s with two laps complete. Reverse-entry/rejoin candidates intersect the divider; the existing end-gap bypass remains the only checked local route. See `derived/mission-v9/README.md`. Retain the timeout; do not tune the same fixed bypass repeatedly.
+1. **Timeout diagnosed; broader maneuver study remains unqualified.** The detoured lap takes 44.40 s versus 32.35 s nominal, adding 38 inches and four spins. The final lap starts at 141.80 s and auto-stops at 178 s with two laps complete. Reverse-entry/rejoin candidates intersect the divider; a bounded reverse-first lower-lane study was geometrically clear but still timed out during parking, even with reduced settling or a direct parking approach. See `derived/mission-v9/README.md`. The production baseline and three detour timeouts are unchanged; do not tune the same hypothetical bypass repeatedly.
 2. Resolve official Q&A and measure a built field, actual obstacles and printed tags. Use those measurements for a broader route/maneuver study rather than assuming this hypothetical blocker.
 3. Physically verify the proposed mule geometry through the documented bench gates; dynamics-v9 is corrected-track but uncalibrated.
 4. Build a legal-envelope competition mockup and real tire fixture; compare acquisition, retention, release and bail-out behavior.

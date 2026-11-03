@@ -25,6 +25,12 @@ The phase trace for seed 100 (box 2) shows the first two detoured laps completin
 
 The existing planner's wheel-travel objective and a time-weighted candidate comparison select the same four-turn local bypass. Candidate reverse-entry and reverse-rejoin shortcuts were checked with the unchanged 10 × 10-inch footprint and sampled transitions: they intersect the center divider except at the existing end gaps. The divider spans x=43.87–79.87 inches at y=24.073 inches; the upper-lane obstacle blocks the direct straight. Thus this investigation found no valid shorter local route, not evidence that no route exists. No deadline, speed, footprint, obstacle or divider constraint was relaxed. The next route study must use measured obstacle/field geometry and a broader route/maneuver model, not repeated tuning of this fixed bypass.
 
+### Bounded broader-maneuver study (November 3)
+
+A follow-up study tested a reverse-first bypass from the upper join into the lower lane, crossing below the hypothetical blocker and rejoining at the far end. With the unchanged 10 × 10-inch footprint and sampled collision checks, lower-lane crossing heights from 9–17 inches were geometrically clear for the tested entry column. This removes the extra entry translation and can remove one redundant far-end spin, but it does not produce a complete parked mission under the unchanged 178 s auto-stop. The best tested controller/route combinations reached three laps and the exchange but still timed out during parking; reducing the settle interval alone did not fix that result. A direct lower-lane parking approach was also tested and timed out. These are negative synthetic results, not proof of physical infeasibility or a legal-route ruling.
+
+The production follower, fixed local bypass, nominal 20/20 parking baseline and retained three detour timeouts are unchanged. Do not repeatedly tune this hypothetical obstacle. The next useful gate is measured field/obstacle geometry and a time-aware maneuver/controller model validated against a real or more faithful robot, followed by realistic sensing.
+
 `trace-box-1.json` records the actual state/pose sequence for seed 100 with box 1 explicitly assigned. These are synthetic perfect-knowledge results, not reliability estimates or official score predictions.
 
 ## Run
