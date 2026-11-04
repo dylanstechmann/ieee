@@ -29,6 +29,12 @@ The follow-up lap study (`derived/lap-study-v10/`) adds three points:
 
 The priorities that follow: reliable laps and parking first, then the exchange, and treat the obstacle bonus as a bonus.
 
+The drivetrain study (`derived/envelope-v10/`, synthetic) adds three more:
+
+- **Turns set the speed:** top speed is about 21–24 in/s, but in a 7.5 in U-turn the outer wheel runs 1.5 times faster than the robot's center. That makes 12 in/s workable and 16 in/s not.
+- **Measure friction:** grip, not the motors, limits acceleration and braking, so friction from the E03 floor trials is the number the design most needs.
+- **Plan for peak current:** a mission's drive energy is tiny, but peak drive current can reach about 6 A.
+
 ## Next two weeks
 
 | When | Who | What |

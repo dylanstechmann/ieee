@@ -1,0 +1,506 @@
+{
+ "source": "tools/mule-dynamics-v5.js with tools/dynamics-v9.js buildConfig()",
+ "model": {
+  "numerics": {
+   "dt_s": 0.004166666666666667,
+   "sample_dt_s": 0.03333333333333333,
+   "bus_iterations": 6,
+   "convergence_relative_tolerance": 0.02
+  },
+  "vehicle": {
+   "mass_kg": 4,
+   "yaw_inertia_kg_m2": 0.06,
+   "wheel_inertia_kg_m2": 0.00035,
+   "driven_weight_fraction": 0.8,
+   "rolling_resistance_coefficient": 0.03,
+   "friction_coefficient": 0.35,
+   "caster_scrub_nm": 0.06,
+   "center_of_gravity_height_m": 0.04,
+   "track_m": 0.202,
+   "wheel_radius_m": 0.04,
+   "source_voltage_v": 12,
+   "source_resistance_ohm": 0.25,
+   "driver_current_limit_a": 3,
+   "status": "synthetic scenario values, not measured component ratings"
+  },
+  "electrical": {
+   "source_voltage_v": 12,
+   "source_resistance_ohm": 0.25,
+   "driver_current_limit_a": 3,
+   "minimum_modeled_bus_v": 0,
+   "energy_regeneration": false
+  },
+  "control": {
+   "speed_kp": 0.045,
+   "speed_ki": 0.12,
+   "integral_limit": 0.8,
+   "heading_kp": 2.5,
+   "heading_kd": 0.6,
+   "feedforward": true,
+   "encoder_delay_steps": 4
+  }
+ },
+ "cases": [
+  {
+   "scenario": {
+    "id": "cruise",
+    "label": "Cruise and heading hold",
+    "duration_s": 6,
+    "target_speed_m_s": 0.2032,
+    "acceleration_m_s2": 0.35
+   },
+   "motor": {
+    "sku": "4754",
+    "no_load_omega": 15.707963267948966,
+    "stall_current": 5.5,
+    "stall_torque": 2.6477955,
+    "torque_constant": 0.4814173636363636,
+    "output_cpr": 4480
+   },
+   "mass": 4,
+   "overrides": {
+    "wheel_radius_m": 0.04,
+    "caster_scrub_nm": 0.06
+   },
+   "metrics": {
+    "duration_s": 6,
+    "distance_m": 1.160843,
+    "final_speed_m_s": 0.20322,
+    "final_yaw_rad": 0,
+    "final_yaw_error_rad": 0,
+    "maximum_abs_current_a": 0.11617,
+    "maximum_abs_slip_m_s": 0,
+    "maximum_steady_speed_error_m_s": 0.000391,
+    "saturation_samples": 0,
+    "energy_wh": 0.002193
+   },
+   "final_sample": {
+    "t": 6,
+    "x_m": 1.160843,
+    "y_m": 0,
+    "yaw_rad": 0,
+    "speed_m_s": 0.20322,
+    "yaw_rate_rad_s": 0,
+    "wheel_omega_rad_s": [
+     5.080508,
+     5.080508
+    ],
+    "wheel_angle_rad": [
+     29.021087,
+     29.021087
+    ],
+    "duty": [
+     0.333007,
+     0.333007
+    ],
+    "current_a": [
+     0.048914,
+     0.048914
+    ],
+    "torque_nm": [
+     0.023548,
+     0.023548
+    ],
+    "bus_v": 11.975543,
+    "energy_wh": 0.002193,
+    "slip_m_s": [
+     0,
+     0
+    ],
+    "saturated": [
+     false,
+     false
+    ],
+    "encoder_rad_s": [
+     5.079843,
+     5.079843
+    ]
+   }
+  },
+  {
+   "scenario": {
+    "id": "spin",
+    "label": "Controlled 180 degree spin",
+    "duration_s": 6,
+    "spin_duration_s": 4
+   },
+   "motor": {
+    "sku": "4754",
+    "no_load_omega": 15.707963267948966,
+    "stall_current": 5.5,
+    "stall_torque": 2.6477955,
+    "torque_constant": 0.4814173636363636,
+    "output_cpr": 4480
+   },
+   "mass": 4,
+   "overrides": {
+    "wheel_radius_m": 0.04,
+    "caster_scrub_nm": 0.06
+   },
+   "metrics": {
+    "duration_s": 6,
+    "distance_m": 0,
+    "final_speed_m_s": 0,
+    "final_yaw_rad": 3.135156,
+    "final_yaw_error_rad": 0.006437,
+    "maximum_abs_current_a": 0.050481,
+    "maximum_abs_slip_m_s": 0,
+    "maximum_steady_speed_error_m_s": 0,
+    "saturation_samples": 0,
+    "energy_wh": 0.000473
+   },
+   "final_sample": {
+    "t": 6,
+    "x_m": 0,
+    "y_m": 0,
+    "yaw_rad": 3.135156,
+    "speed_m_s": 0,
+    "yaw_rate_rad_s": 0.011417,
+    "wheel_omega_rad_s": [
+     -0.028827,
+     0.028827
+    ],
+    "wheel_angle_rad": [
+     -7.916269,
+     7.916269
+    ],
+    "duty": [
+     -0.004099,
+     0.004099
+    ],
+    "current_a": [
+     -0.012391,
+     0.012391
+    ],
+    "torque_nm": [
+     -0.005965,
+     0.005965
+    ],
+    "bus_v": 11.996902,
+    "energy_wh": 0.000473,
+    "slip_m_s": [
+     0,
+     0
+    ],
+    "saturated": [
+     false,
+     false
+    ],
+    "encoder_rad_s": [
+     -0.029452,
+     0.029452
+    ]
+   }
+  },
+  {
+   "scenario": {
+    "id": "low-voltage",
+    "label": "Low-voltage sensitivity",
+    "duration_s": 6,
+    "target_speed_m_s": 0.2032,
+    "acceleration_m_s2": 0.35,
+    "source_voltage_v": 10
+   },
+   "motor": {
+    "sku": "4754",
+    "no_load_omega": 15.707963267948966,
+    "stall_current": 5.5,
+    "stall_torque": 2.6477955,
+    "torque_constant": 0.4814173636363636,
+    "output_cpr": 4480
+   },
+   "mass": 4,
+   "overrides": {
+    "wheel_radius_m": 0.04,
+    "caster_scrub_nm": 0.06
+   },
+   "metrics": {
+    "duration_s": 6,
+    "distance_m": 1.160796,
+    "final_speed_m_s": 0.20322,
+    "final_yaw_rad": 0,
+    "final_yaw_error_rad": 0,
+    "maximum_abs_current_a": 0.116032,
+    "maximum_abs_slip_m_s": 0,
+    "maximum_steady_speed_error_m_s": 0.000385,
+    "saturation_samples": 0,
+    "energy_wh": 0.001827
+   },
+   "final_sample": {
+    "t": 6,
+    "x_m": 1.160796,
+    "y_m": 0,
+    "yaw_rad": 0,
+    "speed_m_s": 0.20322,
+    "yaw_rate_rad_s": 0,
+    "wheel_omega_rad_s": [
+     5.080507,
+     5.080507
+    ],
+    "wheel_angle_rad": [
+     29.019898,
+     29.019898
+    ],
+    "duty": [
+     0.333143,
+     0.333143
+    ],
+    "current_a": [
+     0.048914,
+     0.048914
+    ],
+    "torque_nm": [
+     0.023548,
+     0.023548
+    ],
+    "bus_v": 9.975543,
+    "energy_wh": 0.001827,
+    "slip_m_s": [
+     0,
+     0
+    ],
+    "saturated": [
+     false,
+     false
+    ],
+    "encoder_rad_s": [
+     5.079843,
+     5.079843
+    ]
+   }
+  },
+  {
+   "scenario": {
+    "id": "asymmetric-traction",
+    "label": "Asymmetric traction",
+    "duration_s": 6,
+    "target_speed_m_s": 0.2032,
+    "acceleration_m_s2": 1.5,
+    "friction_left": 0.16,
+    "friction_right": 0.35
+   },
+   "motor": {
+    "sku": "4754",
+    "no_load_omega": 15.707963267948966,
+    "stall_current": 5.5,
+    "stall_torque": 2.6477955,
+    "torque_constant": 0.4814173636363636,
+    "output_cpr": 4480
+   },
+   "mass": 4,
+   "overrides": {
+    "wheel_radius_m": 0.04,
+    "caster_scrub_nm": 0.06
+   },
+   "metrics": {
+    "duration_s": 6,
+    "distance_m": 1.232474,
+    "final_speed_m_s": 0.208358,
+    "final_yaw_rad": 0.38854,
+    "final_yaw_error_rad": 0.38854,
+    "maximum_abs_current_a": 0.500706,
+    "maximum_abs_slip_m_s": 0.1031,
+    "maximum_steady_speed_error_m_s": 0.005365,
+    "saturation_samples": 0,
+    "energy_wh": 0.002201
+   },
+   "final_sample": {
+    "t": 6,
+    "x_m": 1.159892,
+    "y_m": 0.416704,
+    "yaw_rad": 0.38854,
+    "speed_m_s": 0.208358,
+    "yaw_rate_rad_s": -0.000422,
+    "wheel_omega_rad_s": [
+     7.530084,
+     2.630389
+    ],
+    "wheel_angle_rad": [
+     43.688417,
+     16.61409
+    ],
+    "duty": [
+     0.489366,
+     0.176615
+    ],
+    "current_a": [
+     0.049437,
+     0.0484
+    ],
+    "torque_nm": [
+     0.0238,
+     0.023301
+    ],
+    "bus_v": 11.975541,
+    "energy_wh": 0.002201,
+    "slip_m_s": [
+     0.092802,
+     -0.1031
+    ],
+    "saturated": [
+     false,
+     false
+    ],
+    "encoder_rad_s": [
+     7.530005,
+     2.629681
+    ]
+   }
+  },
+  {
+   "scenario": {
+    "id": "encoder-dropout",
+    "label": "Left encoder dropout",
+    "duration_s": 6,
+    "target_speed_m_s": 0.2032,
+    "acceleration_m_s2": 0.35,
+    "dropout_start_s": 0.35,
+    "dropout_end_s": 1.4
+   },
+   "motor": {
+    "sku": "4754",
+    "no_load_omega": 15.707963267948966,
+    "stall_current": 5.5,
+    "stall_torque": 2.6477955,
+    "torque_constant": 0.4814173636363636,
+    "output_cpr": 4480
+   },
+   "mass": 4,
+   "overrides": {
+    "wheel_radius_m": 0.04,
+    "caster_scrub_nm": 0.06
+   },
+   "metrics": {
+    "duration_s": 6,
+    "distance_m": 1.339263,
+    "final_speed_m_s": 0.231472,
+    "final_yaw_rad": -0.119744,
+    "final_yaw_error_rad": 0.119744,
+    "maximum_abs_current_a": 0.333303,
+    "maximum_abs_slip_m_s": 0.058288,
+    "maximum_steady_speed_error_m_s": 0.036191,
+    "saturation_samples": 0,
+    "energy_wh": 0.002239
+   },
+   "final_sample": {
+    "t": 6,
+    "x_m": 1.330068,
+    "y_m": -0.156668,
+    "yaw_rad": -0.119744,
+    "speed_m_s": 0.231472,
+    "yaw_rate_rad_s": 0.001407,
+    "wheel_omega_rad_s": [
+     4.326042,
+     5.837774
+    ],
+    "wheel_angle_rad": [
+     27.107639,
+     33.417942
+    ],
+    "duty": [
+     0.284562,
+     0.381616
+    ],
+    "current_a": [
+     0.047183,
+     0.050554
+    ],
+    "torque_nm": [
+     0.022715,
+     0.024337
+    ],
+    "bus_v": 11.975566,
+    "energy_wh": 0.002239,
+    "slip_m_s": [
+     -0.058288,
+     0.001897
+    ],
+    "saturated": [
+     false,
+     false
+    ],
+    "encoder_rad_s": [
+     4.326702,
+     5.838594
+    ]
+   }
+  },
+  {
+   "scenario": {
+    "id": "brake-hold",
+    "label": "Acceleration and active stop",
+    "duration_s": 6,
+    "target_speed_m_s": 0.2032,
+    "acceleration_m_s2": 0.35,
+    "stop_at_s": 3
+   },
+   "motor": {
+    "sku": "4754",
+    "no_load_omega": 15.707963267948966,
+    "stall_current": 5.5,
+    "stall_torque": 2.6477955,
+    "torque_constant": 0.4814173636363636,
+    "output_cpr": 4480
+   },
+   "mass": 4,
+   "overrides": {
+    "wheel_radius_m": 0.04,
+    "caster_scrub_nm": 0.06
+   },
+   "metrics": {
+    "duration_s": 6,
+    "distance_m": 0.630791,
+    "final_speed_m_s": 0.006242,
+    "final_yaw_rad": 0,
+    "final_yaw_error_rad": 0,
+    "maximum_abs_current_a": 3,
+    "maximum_abs_slip_m_s": 0.270418,
+    "maximum_steady_speed_error_m_s": 0.000391,
+    "saturation_samples": 89,
+    "energy_wh": 0.027328
+   },
+   "final_sample": {
+    "t": 6,
+    "x_m": 0.630791,
+    "y_m": 0,
+    "yaw_rad": 0,
+    "speed_m_s": 0.006242,
+    "yaw_rate_rad_s": 0,
+    "wheel_omega_rad_s": [
+     6.916514,
+     6.916514
+    ],
+    "wheel_angle_rad": [
+     12.661012,
+     12.661012
+    ],
+    "duty": [
+     0.44072,
+     0.44072
+    ],
+    "current_a": [
+     3,
+     3
+    ],
+    "torque_nm": [
+     1.444252,
+     1.444252
+    ],
+    "bus_v": 10.5,
+    "energy_wh": 0.027328,
+    "slip_m_s": [
+     0.270418,
+     0.270418
+    ],
+    "saturated": [
+     true,
+     true
+    ],
+    "encoder_rad_s": [
+     -7.660437,
+     -7.660437
+    ]
+   }
+  }
+ ]
+}

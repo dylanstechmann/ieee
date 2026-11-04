@@ -1,6 +1,7 @@
 # Fixed-rate control loop shared by the bench script and, later, the mission. Hardware-independent:
 # it talks to any object with the PicoHal methods, so host tests run it against a simulated motor.
 import config
+from drive import DriveShaper
 from motor import WheelSpeedController, rpm_from_counts
 from safety import SafetyMonitor
 from telemetry import Telemetry
@@ -13,6 +14,8 @@ class Runner:
         self.safety = SafetyMonitor(config.AUTO_STOP_MS, config.COMMAND_TIMEOUT_MS)
         self.left = WheelSpeedController(max_rpm=config.MAX_OUTPUT_RPM)
         self.right = WheelSpeedController(max_rpm=config.MAX_OUTPUT_RPM)
+        self.shaper = DriveShaper(config.MAX_WHEEL_RPM, config.MAX_ACCEL_M_S2, config.MAX_BRAKE_M_S2, config.MAX_YAW_ACCEL_RAD_S2,
+                                  config.WHEEL_RADIUS_M, config.HALF_TRACK_M)
         self.log = Telemetry(telemetry_capacity)
         self.period_us = 1000000 // config.CONTROL_HZ
         self.tick = 0
@@ -30,6 +33,10 @@ class Runner:
         self.safety.latch("command_watchdog" if not self.safety.stopped else self.safety.stop_reason)
         self.hal.set_duty(0.0, 0.0)
         self.hal.set_enabled(False)
+
+    def drive(self, speed_m_s, yaw_rate_rad_s):
+        # One tick of body-motion control; the bench script calls step() directly for raw wheel commands.
+        return self.step(self.shaper.step(speed_m_s, yaw_rate_rad_s, self.period_us / 1000000), True)
 
     def step(self, command, closed_loop):
         # command: (left, right) as duty (-1..1) when closed_loop is False, else target output rpm.
@@ -52,6 +59,7 @@ class Runner:
             self.hal.set_enabled(False)
             self.left.reset()
             self.right.reset()
+            self.shaper.reset()
         loop_us = self.hal.ticks_diff(self.hal.ticks_us(), start)
         if loop_us > self.period_us:
             self.safety.note_overrun()

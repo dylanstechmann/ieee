@@ -28,6 +28,7 @@ Most planning, simulation and software here were developed with AI assistance ac
 | Build the drivetrain mule | `derived/drivetrain-mule-v10/` (shaft-down deck, risers, fit report, inspection templates) |
 | Prepare the first bench session | `firmware/README.md` (Pico 2 MicroPython skeleton, not yet flashed) and `firmware/ORDER-B-BENCH-KIT.md` |
 | See which sensors keep the robot localized (simulation) | `derived/estimation-v10/README.md` |
+| See what the drivetrain can do, and what limits it (simulation) | `derived/envelope-v10/README.md` (agent-run, synthetic) |
 | Know whether obstacles can be passed | `derived/passability-atlas-v10/README.md` (agent-run geometry; vehicle size decides it) |
 | See lap times, contact rates and expected score over random layouts | `derived/lap-study-v10/README.md` (agent-run, synthetic) |
 | Build a full-size mockup and sizing box | `derived/competition-mockup-v10/README.md` |

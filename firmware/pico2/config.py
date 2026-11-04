@@ -28,6 +28,15 @@ AUTO_STOP_MS = 178000            # project choice, 2 s before the 3:00 match end
 COMMAND_TIMEOUT_MS = 250
 START_STATIC_MS = 5000           # GM1 R03: stay static 5 s after a switch start
 
+# Motion limits: the conservative envelope of derived/envelope-v10, rounded down. They rest on synthetic
+# friction and mass values, so replace them after the E03 floor trials.
+WHEEL_RADIUS_M = 0.040
+HALF_TRACK_M = 0.101
+MAX_WHEEL_RPM = 100.0            # 80% of the modeled top speed at 10.5 V
+MAX_ACCEL_M_S2 = 0.6
+MAX_BRAKE_M_S2 = 1.0
+MAX_YAW_ACCEL_RAD_S2 = 4.5
+
 # Sign conventions: +1 drives the robot forward on that side. Check on the bench and flip if needed.
 LEFT_MOTOR_SIGN = 1
 RIGHT_MOTOR_SIGN = -1

@@ -21,12 +21,15 @@
 | `pico2/hal.py` | The only file that touches `machine` (PWM, direction, enable, fault, e-stop sense, start switch, ADC) |
 | `pico2/encoder.py` | PIO edge counter, see below. Also a pure-Python x4 decoder for simulation and hand checks. |
 | `pico2/motor.py` | Wheel-speed PI with feed-forward, anti-windup and slew limit |
+| `pico2/drive.py` | Turns speed and yaw-rate requests into wheel targets. Speed and yaw changes share one grip budget, and the robot slows down rather than change the turn radius when the faster wheel runs out of speed. |
 | `pico2/safety.py` | Latching safety supervisor; every motor command passes through it |
 | `pico2/telemetry.py` | RAM ring buffer of fixed-width records (about 165 KB for 3000); JSON Lines on dump, schema `../schemas/telemetry-v1.json` |
 | `pico2/runner.py` | 200 Hz fixed-rate loop using wrapping `ticks_us` arithmetic |
 | `pico2/bench_e02.py` | E02 open-loop duty steps |
 | `pico2/main.py` | Boot to IDLE; `main.bench()` from the REPL |
-| `host_tests/` | 26 CPython tests: safety latch, auto-stop, watchdog, controller, all 16 encoder transitions, ring buffer, a full simulated bench run, MicroPython lint, bench tools |
+| `host_tests/` | 38 CPython tests: safety latch, auto-stop, watchdog, controller, drive shaping, all 16 encoder transitions, ring buffer, a full simulated bench run, MicroPython lint, bench tools, and the real control loop against the corrected drivetrain model (`plant_hal.py`) |
+
+The plant-backed tests catch control bugs, but their friction, mass and inertia values are placeholders, so passing them does not show that the gains suit a real robot. The motion limits in `config.py` come from the conservative envelope in `../derived/envelope-v10/`. Replace them after the E03 floor trials.
 
 ## Encoder decoding
 

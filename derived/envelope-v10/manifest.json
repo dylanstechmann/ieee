@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-04",
+  "status": "agent-run synthetic study; placeholder parameters; not hardware-validated",
+  "input_hashes": {
+    "tools/envelope-v10.py": "196b9b8b6acc4e75d92bcfc30e39fb62518bb4fc09c5929fba392ed67c6e0829",
+    "tools/dynamics-golden-v10.js": "2f93dd338c25efc0cf0eca3f7e5666eabad20ce8c41fcf0799facc683e789185",
+    "software/stockcar/dynamics.py": "b4b4dcc583e4549923eabb013774735b9a8e6be2b05100b9987754a69f17a793",
+    "software/stockcar/envelope.py": "8da62a488f226326a23606f09faad5ef8f18e51a60f904ef37d35a29c70acf81",
+    "software/stockcar/lapmodel.py": "943296d5f461cfef67d29934ce4129d06ad5c59762b1ebdfd21b18c098ff14a6",
+    "software/stockcar/mission.py": "346fb5c977fddaaad7d790afcb466beacb3f2beeebe01803befb9da004032678",
+    "software/stockcar/supervisor.py": "15bf5e68a33428ac4db1a94e54b2c5fc44ff0280ccfc1fb6b4a54b37c3b701ec",
+    "software/stockcar/passage.py": "adda10e8ca96830a8df0438d9e07c56ba976d54c01e9bae3ad8bb49332ad9e3d",
+    "software/stockcar/field.py": "67516673e3eee0ee5decb2186eacffce21723abc0bbf4f43db0a9b8e08029b68",
+    "software/stockcar/obstacles.py": "9caa806ed4a555df08721ca3cb9e74c7aeb65f9dbdadbc265fd20a74cf8776b1",
+    "software/stockcar/geometry.py": "424a5f211dff9afa22c4f366ba13b122ecd5960b803ac97b3538c2bf1ac35491",
+    "software/stockcar/tests/fixtures/dynamics-golden-v10.json": "290b17bb523d5c4b36c3bf911b156690245fb41a1c1be2278733c74834904973",
+    "derived/organizer-cad-v10/field-v10.json": "d3d7de9e9f7d257d6f4f095cb06836a6bb484861aeffca45cb96990dba4afdca"
+  },
+  "output_hashes": {
+    "report.json": "483914d936bfe83c80df3ac3a047a6273819d081cbc61763b6144345643f9e55",
+    "summary.md": "51afb4a07d208244e78b3737fe7077a7c024e9a98f54ca3dfeda5655393ce187"
+  }
+}

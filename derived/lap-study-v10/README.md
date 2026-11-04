@@ -29,6 +29,7 @@ See `summary.md` for the tables.
 
 1. **Contact-free laps are rare with guide-size vehicles:** 0–2.5% of layouts, depending on the reading. Most straights force a contact. Unless the official vehicles are smaller, the 75 obstacle points are a bonus, not a plan. Measuring the official set comes first.
 2. **Time is not binding once laps use arcs.** Median missions take about 108 s at 8 in/s, 81 s at 12 in/s and 67 s at 16 in/s, all under the 165 s bonus threshold. The v9 timeouts came from its stop-spin-settle route.
+   - **November 4 note:** the 16 in/s row cannot be driven as modeled. In a 7.5 in U-turn the outer wheel would need 24.5 in/s, more than the motors deliver (`../envelope-v10/README.md`). Slowing the U-turns to fit adds about 5 s, so the conclusion stands.
 3. **The exchange is worth about 45 expected points** at an assumed 70% success: about 296 points against 250 for driving only. Reliable laps and parking come first, then the exchange.
 
 ## Run
