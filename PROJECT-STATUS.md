@@ -36,7 +36,7 @@ v8 combines rather than replaces the earlier work:
 - Pololu CAD supports a **7 mm motor-shaft offset**, **202 mm stock wheel track**, and a **7.09 mm support mismatch** in the original mule kit. These are CAD measurements, not received-part measurements.
 - AprilTag 3 decodes the organizer sheet as **tagStandard41h12 IDs 1–3**. OpenCV ArUco has no 41h12 dictionary. Pose uses the inner **5/9** edge; the physical print scale is unmeasured.
 - The Node suite and artifact verifiers check software and reproducibility, not physical robot success.
-- All 30 artifact verifiers pass as of November 4 (`node tools/check-all.js`).
+- All artifact verifiers pass as of November 4 (`node tools/check-all.js`).
 - `verify-planner-diagnostics-v3.js` passes again through a recorded input supersession. `tools/avoidance-v3.js` changed after that package was sealed; `--reproduce` regenerates the report, summary and 48 SVGs byte-identically. No sealed bytes changed. See `derived/audits/2026-11-03-planner-diagnostics-v3-input-supersession/`.
 
 ## What is not established
