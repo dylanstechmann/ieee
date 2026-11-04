@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/mission-log-v1.json",
+  "title": "Mission log, version 1",
+  "description": "JSON Lines: one header, then one record per control tick. It holds what the robot's software receives, so software/stockcar/replay.py can rerun the estimator and supervisor from it. The simulator writes it today; the robot should write the same fields once its sensors are chosen.",
+  "oneOf": [{"$ref": "#/$defs/header"}, {"$ref": "#/$defs/record"}],
+  "$defs": {
+    "header": {
+      "type": "object",
+      "required": ["v", "log", "start_pose", "dt_s", "preset", "lap_length_m", "stop_at_s", "sensing"],
+      "additionalProperties": false,
+      "properties": {
+        "v": {"const": 1},
+        "log": {"const": "mission"},
+        "start_pose": {"$ref": "#/$defs/pose", "description": "x in, y in, heading rad on the organizer CAD field"},
+        "dt_s": {"type": "number", "exclusiveMinimum": 0},
+        "preset": {"type": "string", "description": "supervisor preset"},
+        "lap_length_m": {"type": "number", "exclusiveMinimum": 0},
+        "stop_at_s": {"type": "number", "exclusiveMinimum": 0},
+        "sensing": {"enum": ["full", "lines_only", "ranges_only", "odometry_only"]}
+      }
+    },
+    "record": {
+      "type": "object",
+      "required": ["v", "seq", "t_s", "enc", "gyro", "white", "changes", "tof", "obs", "state", "pose"],
+      "additionalProperties": false,
+      "properties": {
+        "v": {"const": 1},
+        "seq": {"type": "integer", "minimum": 0},
+        "t_s": {"type": "number"},
+        "enc": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2, "description": "left, right encoder counts since the previous tick"},
+        "gyro": {"type": "number", "description": "yaw rate reading, rad/s"},
+        "white": {"type": "array", "items": {"type": "boolean"}, "description": "reflectance sensors seeing white, in array order"},
+        "changes": {"type": "array", "items": {"type": "integer", "minimum": 0}, "description": "reflectance sensors that changed this tick"},
+        "tof": {"type": "array", "items": {"type": ["number", "null"]}, "description": "range readings in inches, null for no return"},
+        "obs": {"type": "object", "description": "observations given to the supervisor this tick"},
+        "state": {"type": ["string", "null"], "description": "supervisor state the robot reached, if logged"},
+        "pose": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/pose"}], "description": "the robot's own estimate, if logged"}
+      }
+    },
+    "pose": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3}
+  }
+}

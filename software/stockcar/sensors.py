@@ -32,6 +32,21 @@ def segment_distance(p, a, b):
     return math.hypot(p[0] - (a[0] + t * dx), p[1] - (a[1] + t * dy))
 
 
+def ring_distance(p, ring):
+    return min(segment_distance(p, ring[i], ring[(i + 1) % len(ring)]) for i in range(len(ring)))
+
+
+def outward_normal(p, ring):
+    """Unit normal, pointing away from the ring's center, of the ring edge nearest to p."""
+    i = min(range(len(ring)), key=lambda k: segment_distance(p, ring[k], ring[(k + 1) % len(ring)]))
+    a, b = ring[i], ring[(i + 1) % len(ring)]
+    nx, ny = b[1] - a[1], a[0] - b[0]
+    length = math.hypot(nx, ny)
+    cx, cy = sum(q[0] for q in ring) / len(ring), sum(q[1] for q in ring) / len(ring)
+    away = 1 if nx * (a[0] - cx) + ny * (a[1] - cy) > 0 else -1
+    return away * nx / length, away * ny / length
+
+
 class Band:
     """The white octagonal marking band between the outer and inner rings of the CAD field."""
 
@@ -102,6 +117,7 @@ class SensorSuite:
         self.counts = new_counts
         out["gyro"] = w * self.gyro_scale + self.gyro_bias + self.rng.gauss(0.0, self.gyro_noise)
         white = [self.band.white(to_world(pose, o)) for o in REFLECTANCE_OFFSETS]
+        out["white"] = white
         out["line_changes"] = [k for k in range(len(white)) if self.last_white is not None and white[k] != self.last_white[k]]
         self.last_white = white
         ranges = []

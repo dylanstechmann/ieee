@@ -35,6 +35,11 @@ The drivetrain study (`derived/envelope-v10/`, synthetic) adds three more:
 - **Measure friction:** grip, not the motors, limits acceleration and braking, so friction from the E03 floor trials is the number the design most needs.
 - **Plan for peak current:** a mission's drive energy is tiny, but peak drive current can reach about 6 A.
 
+The estimation study (`derived/estimation-v10/`, synthetic) adds two more:
+
+- **Low range sensors carry localization:** with them the simulated robot stays within about an inch of the truth. Reflectance alone can also finish, which gives a fallback if range sensing disappoints on real paint.
+- **Calibrate the gyro:** its bias and its scale both matter. Measure the scale once on the bench with ten full turns against a floor mark, and hold still during the 5 s start wait to measure the bias.
+
 ## Next two weeks
 
 | When | Who | What |

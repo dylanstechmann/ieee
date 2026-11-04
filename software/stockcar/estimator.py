@@ -1,16 +1,22 @@
 """Extended Kalman filter for (x, y, heading, gyro bias), standard library only.
 
 Prediction uses wheel odometry for distance and the gyro for heading. Corrections:
-- line edges: when a reflectance sensor changes state, that sensor sits on a known edge of the white
-  marking band, so its distance to the nearest band edge is measured as zero;
+- line crossings: when a reflectance sensor changes state, it has just crossed one ring of the white
+  marking band. Whether it turned white, and which way it was moving, say which ring, so a drifted
+  estimate cannot match the wrong side of the 0.9 in band. Crossings too shallow to read are skipped.
 - ranges: time-of-flight readings are compared with ray casts against the mapped walls and dividers.
   Readings that disagree by more than a gate (for example a vehicle, which is not in the map) are
   ignored.
+- stillness: when neither wheel moved, the gyro reading is its bias plus noise.
 A synthetic design check, not a tuned on-robot filter.
 """
 import math
 
-from stockcar.sensors import COUNTS_PER_REV, REFLECTANCE_OFFSETS, TOF_SENSORS, WHEEL_RADIUS_IN, ray_cast, to_world
+from stockcar.sensors import COUNTS_PER_REV, REFLECTANCE_OFFSETS, TOF_SENSORS, WHEEL_RADIUS_IN, outward_normal, ray_cast, ring_distance, to_world
+
+GYRO_NOISE_RAD_S = 0.02
+LINE_NOISE_IN = 0.1
+SHALLOWEST_CROSSING = 0.15    # sine of the crossing angle; below this the direction is unreliable
 
 
 def _mat(n, m, v=0.0):
@@ -37,7 +43,12 @@ class Estimator:
             self.P[i][i] = s * s
         self.band = band
         self.barriers = barriers
+        self.matching = "ring"      # "nearest" keeps the earlier nearest-edge matching, for comparison
+        self.use_stillness = True
+        self.before = self.after = tuple(pose)
         self.line_updates = 0
+        self.line_skipped = 0
+        self.bias_updates = 0
         self.range_updates = 0
         self.range_rejected = 0
 
@@ -51,6 +62,7 @@ class Estimator:
         dth = (gyro - b) * dt
         mid = th + dth / 2
         self.x = [x + ds * math.cos(mid), y + ds * math.sin(mid), math.remainder(th + dth, 2 * math.pi), b]
+        self.before, self.after = (x, y, th), tuple(self.x[:3])
         F = [[1, 0, -ds * math.sin(mid), ds * math.sin(mid) * dt / 2],
              [0, 1, ds * math.cos(mid), -ds * math.cos(mid) * dt / 2],
              [0, 0, 1, -dt],
@@ -83,11 +95,40 @@ class Estimator:
         self.P = _mul(I_KH, self.P)
         return True
 
+    def _crossing(self, offset, turned_white):
+        """The ring just crossed, the sensor's step back to mid-tick, and that step's timing noise."""
+        start, end = to_world(self.before, offset), to_world(self.after, offset)
+        mx, my = end[0] - start[0], end[1] - start[1]
+        length = math.hypot(mx, my)
+        if length < 1e-6:
+            return None
+        nx, ny = outward_normal(end, self.band.outer)
+        along = (mx * nx + my * ny) / length
+        if abs(along) < SHALLOWEST_CROSSING:
+            return None
+        # Moving outward, a sensor turns white at the inner ring and black at the outer ring.
+        ring = self.band.inner if (along > 0) == turned_white else self.band.outer
+        return ring, (-mx / 2, -my / 2), LINE_NOISE_IN ** 2 + length * length / 12
+
+    def _line_update(self, offset, turned_white):
+        if self.matching == "nearest":
+            return self._update(lambda s: self.band.edge_distance(to_world((s[0], s[1], s[2]), offset)), 0.0, 0.15 ** 2, gate=3.0)
+        crossing = self._crossing(offset, turned_white)
+        if crossing is None:
+            self.line_skipped += 1
+            return False
+        ring, (bx, by), r_var = crossing
+
+        def h(s):
+            px, py = to_world((s[0], s[1], s[2]), offset)
+            return ring_distance((px + bx, py + by), ring)
+        return self._update(h, 0.0, r_var, gate=3.0)
+
     def correct(self, meas, use_lines=True, use_ranges=True):
+        if self.use_stillness and tuple(meas.get("encoder_delta", (1, 1))) == (0, 0):
+            self.bias_updates += self._update(lambda s: s[3], meas["gyro"], GYRO_NOISE_RAD_S ** 2, gate=4.0)
         for k in (meas.get("line_changes", []) if use_lines else []):
-            offset = REFLECTANCE_OFFSETS[k]
-            ok = self._update(lambda s: self.band.edge_distance(to_world((s[0], s[1], s[2]), offset)), 0.0, 0.15 ** 2, gate=3.0)
-            self.line_updates += ok
+            self.line_updates += self._line_update(REFLECTANCE_OFFSETS[k], meas["white"][k])
         for (fx, fy, a), r in zip(TOF_SENSORS, meas.get("tof", []) if use_ranges else []):
             if r is None:
                 continue

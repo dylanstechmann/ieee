@@ -2,10 +2,10 @@
   "date": "2026-11-04",
   "status": "agent-run synthetic evaluation; not on-robot accuracy",
   "input_hashes": {
-    "tools/evaluate-estimation-v10.py": "0c55a91b874caac5ecd3111b202698e46b52f3097b6acd60d50cadc1926851ba",
+    "tools/evaluate-estimation-v10.py": "fd9bf358f22b9be742ff2c8a0dd0d9cbca9b9324673f7e915580a845001e8a5a",
     "software/stockcar/mission.py": "346fb5c977fddaaad7d790afcb466beacb3f2beeebe01803befb9da004032678",
-    "software/stockcar/sensors.py": "2b1e016acf972bc396253db5b8893960ae977f759493c7ac6f5388c8f5334642",
-    "software/stockcar/estimator.py": "b4f3827a6ad44a2c4c2e51fc26d404d8aa8db2c4dcb0ef6f82a019857d07e4cc",
+    "software/stockcar/sensors.py": "14146c15d7102e9f96bd056cff3370810c2f58f6f245b84e819f5e696b340fac",
+    "software/stockcar/estimator.py": "ae66e769229862e9f5e052a5740b9c2d95fdf5cb06f1f90fe0b1592905b8951f",
     "software/stockcar/supervisor.py": "15bf5e68a33428ac4db1a94e54b2c5fc44ff0280ccfc1fb6b4a54b37c3b701ec",
     "software/stockcar/passage.py": "adda10e8ca96830a8df0438d9e07c56ba976d54c01e9bae3ad8bb49332ad9e3d",
     "software/stockcar/field.py": "67516673e3eee0ee5decb2186eacffce21723abc0bbf4f43db0a9b8e08029b68",
@@ -15,7 +15,7 @@
     "derived/organizer-cad-v10/field-v10.json": "d3d7de9e9f7d257d6f4f095cb06836a6bb484861aeffca45cb96990dba4afdca"
   },
   "output_hashes": {
-    "evaluation.json": "dd63e373dcc8edfc4642006e1a1759b31e6badf1179250c85cdd7609e2473289",
-    "summary.md": "3e2384572a12c47b69e1c35dfb34fc32cb32278bdc520453cbf5e26507f4be39"
+    "evaluation.json": "d0c0320cca3d04749d02075f251f7509e9d438ab26d45a365f11f97ce1eaad3b",
+    "summary.md": "ceeed90799e4e3825618eec636e54cbe3d4503e4666178d1a4019aaa1d98eb7c"
   }
 }
