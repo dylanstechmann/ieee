@@ -1,0 +1,197 @@
+{
+  "tool": "tools/check-all.js",
+  "started": "2026-11-03T22:35:34.901Z",
+  "seconds": 288.5,
+  "verdict": "FAIL",
+  "full": false,
+  "node": "v24.18.1",
+  "python": "3.12.16",
+  "tree": {
+    "before_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "after_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "unchanged": true,
+    "new_untracked": []
+  },
+  "steps": [
+    {
+      "name": "node --test (32 files)",
+      "seconds": 68.6,
+      "stage": "node",
+      "status": "PASS",
+      "counts": {
+        "tests": 221,
+        "pass": 221,
+        "fail": 0,
+        "skipped": 0,
+        "todo": 0,
+        "cancelled": 0
+      },
+      "detail": "221 pass, 0 fail, 0 skipped, 0 todo, 0 cancelled",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-apriltag-41h12-v7",
+      "seconds": 0.2,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "}",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-confirmation-packet-v3",
+      "seconds": 0.8,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "Verified archived download/page hashes, archive comparisons, 7 unresolved questions, readable references, owner-report separation, geometry ledger, 7 unexecuted acceptance specifications, exact excerpts, 2 route-derived diagrams and freshness. No new online check or legality promoted.",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-connected-navigation-v3",
+      "seconds": 212.9,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "Verified input/reference hashes, 24 alignment records, 36 SVGs and comparison rows, 72 complete routes with fixed task poses, wheel commands, contract audits and recomputed perturbation evaluations.",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-drivetrain-mule-v4",
+      "seconds": 1,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "}",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-electrical-selection-v6",
+      "seconds": 0.8,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "}",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-hardware-development-v3",
+      "seconds": 0.2,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "}",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-integration-studio-v6",
+      "seconds": 3.6,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "}",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-mechanism-envelope-v6",
+      "seconds": 1.4,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "}",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-mechanism-prototyping-v3",
+      "seconds": 0.3,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "}",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-mule-dynamics-v5",
+      "seconds": 3.5,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "}",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-mule-studio-v4",
+      "seconds": 0.7,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "}",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-order-a-procurement-v4",
+      "seconds": 2.4,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "}",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-planner-diagnostics-v3",
+      "seconds": 0.3,
+      "stage": "verifier",
+      "status": "FAIL",
+      "detail": "Node.js v24.18.1",
+      "exit_code": 1
+    },
+    {
+      "name": "verify-robot-lab-v3",
+      "seconds": 0.7,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "}",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-robot-lab-v4",
+      "seconds": 0.8,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "}",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-robot-studio-v7",
+      "seconds": 0.7,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "}",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-robot-studio-v8",
+      "seconds": 3.7,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "}",
+      "exit_code": 0
+    },
+    {
+      "name": "verify-stopping-dynamics-v6",
+      "seconds": 137.5,
+      "stage": "verifier",
+      "status": "PASS",
+      "detail": "}",
+      "exit_code": 0
+    },
+    {
+      "name": "python: software",
+      "seconds": 3.5,
+      "stage": "python",
+      "status": "PASS",
+      "counts": {
+        "tests": 33,
+        "skipped": 0
+      },
+      "detail": "33 tests, OK",
+      "exit_code": 0
+    },
+    {
+      "name": "working tree unchanged by the run",
+      "stage": "tree",
+      "seconds": 0,
+      "status": "PASS",
+      "detail": "tracked diff and untracked file list identical before and after",
+      "exit_code": null
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "ieee-southeastcon-2027-stock-car",
+  "version": "0.10.0",
+  "private": true,
+  "description": "Personal hobby/learning project: AI-assisted planning, simulation and build packages for the IEEE SoutheastCon 2027 Stock Car Race. Not a validated competition robot.",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node tools/check-all.js",
+    "check:full": "node tools/check-all.js --full"
+  }
+}

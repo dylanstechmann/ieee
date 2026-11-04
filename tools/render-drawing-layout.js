@@ -10,7 +10,9 @@ function rounded(n) { return Math.round(n*1000)/1000; }
 const features = input.features.map(f => ({id:f.id, kind:f.kind, shape:f.shape, vertices_in:f.pixels.map(pt=>convert(pt).map(rounded))}));
 for (const f of features) for (const [x,y] of f.vertices_in) if (x<0||x>b.length_x||y<0||y>b.width_y) throw new Error(`Feature outside board: ${f.id}`);
 const model = {status:input.status, source:input.source, frame:input.frame, trace_method:input.trace_method, board_inches:b, features, omissions:input.omissions, drawing_callouts_in:input.drawing_callouts_in};
-const dest = path.join(root, 'derived/drawing-layout-v3'); fs.mkdirSync(dest,{recursive:true});
+// --out DIR writes elsewhere (tests use a temporary directory); the default is the sealed package location.
+const outIndex = process.argv.indexOf('--out');
+const dest = outIndex >= 0 && process.argv[outIndex + 1] ? path.resolve(process.argv[outIndex + 1]) : path.join(root, 'derived/drawing-layout-v3'); fs.mkdirSync(dest,{recursive:true});
 fs.writeFileSync(path.join(dest,'layout.json'), JSON.stringify(model,null,2)+'\n');
 const colors = {marking:'#dddddd', physical_centerline:'#ff963c'};
 const points = f => f.vertices_in.map(([x,y])=>`${x},${48-y}`).join(' ');

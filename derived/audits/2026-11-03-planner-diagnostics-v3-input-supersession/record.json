@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-03",
+  "status": "input-supersession record; the sealed planner-diagnostics-v3 package bytes are unchanged",
+  "package": "derived/planner-diagnostics-v3",
+  "verifier": "tools/verify-planner-diagnostics-v3.js",
+  "superseded_inputs": [
+    {
+      "file": "tools/avoidance-v3.js",
+      "sealed_sha256": "239992278bf2488c0ccdce9ad473baa0a03c92430857a4c3f3235c317ac8f70b",
+      "current_sha256": "299014f3a808b81e52f2a72ac908762d746edf0d603c8ba7ad81c85e6c19a9e4",
+      "earlier_baseline_manifest_sha256": "6ef5553a28439136340f1e529d31d9973dc3110121011531086d8af9bcabbe60",
+      "report_mtime_utc": "2026-10-30T23:12:14Z",
+      "input_mtime_utc": "2026-10-30T23:28:55Z",
+      "pre_change_source_available": false,
+      "reason": "tools/avoidance-v3.js was edited about 16 minutes after the planner-diagnostics report was written. The pre-edit source is not preserved anywhere (git history starts 2026-11-01), so this record can establish equal outputs, not a code diff.",
+      "also_recorded_by": [
+        "derived/connected-navigation-v3/report.json input_hashes",
+        "derived/mission-v9/avoidance-scenarios.json"
+      ]
+    }
+  ],
+  "acceptance_rule": "The verifier accepts this one input only when the sealed report still records sealed_sha256 and the current file hashes to current_sha256. Every other input stays strict, and any further edit to tools/avoidance-v3.js fails again.",
+  "reproduction": {
+    "command": "node tools/verify-planner-diagnostics-v3.js --reproduce",
+    "checks": "Re-runs runDiagnostics with the current sources and requires byte-identical report.json (apart from the sealed input_hashes field, re-attached last), summary.md and all 48 SVGs.",
+    "evidence": "README.md in this folder records the run made on 2026-11-03.",
+    "prior_evidence": "SESSION-STATE-2026-11-01.md reports the same byte-for-byte reproduction."
+  },
+  "why_not_reseal": "derived/connected-navigation-v3/baseline-manifest.json pins the planner-diagnostics report, so resealing would cascade into another sealed package without changing any result."
+}
