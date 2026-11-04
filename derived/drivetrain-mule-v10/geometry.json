@@ -1,0 +1,147 @@
+{
+  "layout": "shaft-down",
+  "basis": "vendor-CAD nominal values (no parts measured)",
+  "inputs": {
+    "wheel_diameter_mm": 80,
+    "wheel_width_mm": 10,
+    "wheel_center_from_hub_flange_mm": 5,
+    "gearbox_center_above_mount_face_mm": 18.4,
+    "shaft_offset_mm": 7,
+    "shaft_length_mm": 22,
+    "gearbox_face_lateral_mm": 74,
+    "bracket_hole_from_motor_face_mm": 3.25,
+    "bracket_hole_pitch_mm": 14.8,
+    "motor_body_length_mm": 70.1,
+    "caster_height_mm": 13.52,
+    "caster_spacer_mm": 3.175,
+    "caster_positions_x_mm": [
+      -75,
+      75
+    ],
+    "caster_hole_spacing_mm": 14.7
+  },
+  "deck": {
+    "length_mm": 190,
+    "width_mm": 172,
+    "thickness_mm": 5,
+    "corner_radius_mm": 3,
+    "top_above_floor_mm": 28.6,
+    "bottom_above_floor_mm": 23.6
+  },
+  "stack": {
+    "wheel_radius_mm": 40,
+    "shaft_above_mount_face_mm": 11.4,
+    "axle_height_mm": 40
+  },
+  "riser": {
+    "height_mm": 6.91,
+    "exact_mm": 6.905,
+    "footprint_mm": [
+      24,
+      24
+    ],
+    "hole_diameter_mm": 2.5,
+    "hole_spacing_mm": 14.7
+  },
+  "holes": {
+    "motor": [
+      {
+        "x": -14.8,
+        "y": -77.25,
+        "diameter": 3.4
+      },
+      {
+        "x": 0,
+        "y": -77.25,
+        "diameter": 3.4
+      },
+      {
+        "x": 14.8,
+        "y": -77.25,
+        "diameter": 3.4
+      },
+      {
+        "x": -14.8,
+        "y": 77.25,
+        "diameter": 3.4
+      },
+      {
+        "x": 0,
+        "y": 77.25,
+        "diameter": 3.4
+      },
+      {
+        "x": 14.8,
+        "y": 77.25,
+        "diameter": 3.4
+      }
+    ],
+    "caster": [
+      {
+        "x": -75,
+        "y": -7.35,
+        "diameter": 2.5
+      },
+      {
+        "x": -75,
+        "y": 7.35,
+        "diameter": 2.5
+      },
+      {
+        "x": 75,
+        "y": -7.35,
+        "diameter": 2.5
+      },
+      {
+        "x": 75,
+        "y": 7.35,
+        "diameter": 2.5
+      }
+    ]
+  },
+  "lateral": {
+    "motor_hole_mm": 77.25,
+    "wheel_center_mm": 101,
+    "track_mm": 202,
+    "overall_width_mm": 212
+  },
+  "checks": [
+    {
+      "id": "wheel-contact",
+      "value_mm": 0,
+      "limit": "axle at wheel radius",
+      "pass": true
+    },
+    {
+      "id": "caster-contact",
+      "value_mm": -0.005,
+      "limit": "|value| <= 0.25",
+      "pass": true
+    },
+    {
+      "id": "riser-positive",
+      "value_mm": 6.91,
+      "limit": "> 0",
+      "pass": true
+    },
+    {
+      "id": "motor-hole-ligament",
+      "value_mm": 7.05,
+      "limit": ">= 4",
+      "pass": true
+    },
+    {
+      "id": "wheel-deck-lateral-clearance",
+      "value_mm": 10,
+      "limit": ">= 3",
+      "pass": true
+    },
+    {
+      "id": "motor-body-gap",
+      "value_mm": 7.8,
+      "limit": ">= 8 (project rule)",
+      "pass": false
+    }
+  ],
+  "all_checks_pass": false
+}

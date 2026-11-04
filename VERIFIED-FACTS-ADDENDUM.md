@@ -47,3 +47,20 @@ Kept separate because `VERIFIED-FACTS.md` is a pinned input of sealed packages (
   * the 2 in offsets and the 16 in width do not add up to the rail spacing, so the reference faces are open (QA03).
 * **AprilTag location is stated two ways:** on the wall separating the pit area from the racecourse (GM2 line 170), and by the starting area (lines 174 and 390). Open: QA02.
 * **Organizer `.f3d` files** are ZIP archives whose compressed members use method 93 (Zstandard). Confirmed by listing them with Python `zipfile` on 2026-11-03.
+
+## Added 2026-11-03 (organizer arena CAD, `derived/organizer-cad-v10/`)
+
+Nominal CAD geometry from the organizer's Fusion file. Its B-rep is dated June 14, 2026, before the V3 manuals. Agent-extracted; not measurements of a built field. Project frame: x from the pit end (0–96 in), y across (0–48 in), pit box 1 at low y.
+
+* **Walls:** 1 in thick and 4 in tall in CAD, inside the board. Inner faces are at x = 1 and 95 and y = 1 and 47.
+* **Center divider:** x 44–80, y 23.5–24.5, 1 in tall (1 x 1 x 36). The V3 drawing callout is 1 x 2 x 36.
+* **Pit divider:** x 26.48–28.00, y 16.03–31.98, 1 in tall. Pit openings beside it are 15.03 and 15.02 in.
+* **Pit boxes:** x 1–13 at y 3–15, 18–30 and 33–45. **Start box:** x 13.48–25.48, y 33–45. **Checkered band:** x 25–29, thirty 1.333 x 1.5 in squares.
+* **Track marking:** a 0.9 in band. The outer ring spans x 35.84–88.005 and y 11.53–36.47. Its chamfers are not 45°.
+* **Clearances:**
+  * wall face to divider face, 22.5 in;
+  * wall face to marking outer edge, 10.53 in;
+  * race-end strip (marking to end wall), 6.995 in;
+  * pit-end strip (pit divider face to marking), 7.841 in;
+  * divider end to race-end wall, 15.0 in;
+  * pit divider face to divider end, 16.0 in.

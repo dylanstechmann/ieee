@@ -1,0 +1,61 @@
+feature,point,x_in,y_in,note
+wall_inner_faces,corner_low_x_low_y,1,1,CAD nominal 1 in walls inside the board edge
+wall_inner_faces,corner_high_x_low_y,95,1,
+wall_inner_faces,corner_high_x_high_y,95,47,
+wall_inner_faces,corner_low_x_high_y,1,47,
+center_divider,corner_low_x_low_y,44,23.5,CAD 1 x 1 x 36; V3 drawing says 1 x 2 x 36
+center_divider,corner_high_x_low_y,80,23.5,
+center_divider,corner_high_x_high_y,80,24.5,
+center_divider,corner_low_x_high_y,44,24.5,
+pit_divider,corner_low_x_low_y,26.479,16.026,CAD footprint
+pit_divider,corner_high_x_low_y,27.999,16.026,
+pit_divider,corner_high_x_high_y,27.999,31.979,
+pit_divider,corner_low_x_high_y,26.479,31.979,
+pit_box_1,corner_low_x_low_y,1,3,white 12 in square
+pit_box_1,corner_high_x_low_y,13,3,
+pit_box_1,corner_high_x_high_y,13,15,
+pit_box_1,corner_low_x_high_y,1,15,
+pit_box_2,corner_low_x_low_y,1,18,white 12 in square
+pit_box_2,corner_high_x_low_y,13,18,
+pit_box_2,corner_high_x_high_y,13,30,
+pit_box_2,corner_low_x_high_y,1,30,
+pit_box_3,corner_low_x_low_y,1,33,white 12 in square
+pit_box_3,corner_high_x_low_y,13,33,
+pit_box_3,corner_high_x_high_y,13,45,
+pit_box_3,corner_low_x_high_y,1,45,
+start_box,corner_low_x_low_y,13.479,33,white 12 in square
+start_box,corner_high_x_low_y,25.479,33,
+start_box,corner_high_x_high_y,25.479,45,
+start_box,corner_low_x_high_y,13.479,45,
+checker_band_low_y,corner_low_x_low_y,25,1,checker strip across the low-y pit opening
+checker_band_low_y,corner_high_x_low_y,29,1,
+checker_band_low_y,corner_high_x_high_y,29,16,
+checker_band_low_y,corner_low_x_high_y,25,16,
+checker_band_high_y,corner_low_x_low_y,25,32,checker strip across the high-y pit opening
+checker_band_high_y,corner_high_x_low_y,29,32,
+checker_band_high_y,corner_high_x_high_y,29,47,
+checker_band_high_y,corner_low_x_high_y,25,47,
+marking_outer_edge,v1,35.84,17.484,outer edge of the white band
+marking_outer_edge,v2,43.6,11.53,
+marking_outer_edge,v3,80.246,11.53,
+marking_outer_edge,v4,88.005,17.484,
+marking_outer_edge,v5,88.005,30.516,
+marking_outer_edge,v6,80.245,36.47,
+marking_outer_edge,v7,43.6,36.47,
+marking_outer_edge,v8,35.84,30.515,
+marking_inner_edge,v1,36.74,17.864,inner edge of the white band
+marking_inner_edge,v2,43.6,12.429,
+marking_inner_edge,v3,80.246,12.429,
+marking_inner_edge,v4,87.105,17.864,
+marking_inner_edge,v5,87.105,30.136,
+marking_inner_edge,v6,80.245,35.57,
+marking_inner_edge,v7,43.6,35.57,
+marking_inner_edge,v8,36.74,30.135,
+marking_tape_centerline,v1,36.29,17.674,centerline for the 1 in masking-tape method
+marking_tape_centerline,v2,43.6,11.98,
+marking_tape_centerline,v3,80.246,11.98,
+marking_tape_centerline,v4,87.555,17.674,
+marking_tape_centerline,v5,87.555,30.326,
+marking_tape_centerline,v6,80.245,36.02,
+marking_tape_centerline,v7,43.6,36.02,
+marking_tape_centerline,v8,36.29,30.325,

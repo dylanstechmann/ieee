@@ -1,0 +1,1534 @@
+{
+  "file": "derived/organizer-cad/2027 IEEE SoutheastCon Arena_Fusion360.f3d",
+  "frame": {
+    "units": "in",
+    "origin": "pit-end edge of the board, at the low-y side",
+    "x": "along the board toward the race end, 0-96",
+    "y": "across the board, 0-48; pit box 1 is at low y",
+    "z": "up from the underside of the CAD floor plate",
+    "cad_mapping": "x = y_cad + 48, y = x_cad + 24 (CAD origin at the board center, units cm)"
+  },
+  "brep_timestamp": "Sun Jun 14 16:53:34 2026",
+  "bodies": [
+    {
+      "index": 1,
+      "vertices": 8,
+      "lo": [
+        1,
+        33,
+        0.079
+      ],
+      "hi": [
+        13,
+        45,
+        0.083
+      ],
+      "size": [
+        12,
+        12,
+        0.004
+      ],
+      "classification": "pit_box_3"
+    },
+    {
+      "index": 2,
+      "vertices": 8,
+      "lo": [
+        1,
+        3,
+        0.079
+      ],
+      "hi": [
+        13,
+        15,
+        0.083
+      ],
+      "size": [
+        12,
+        12,
+        0.004
+      ],
+      "classification": "pit_box_1"
+    },
+    {
+      "index": 3,
+      "vertices": 8,
+      "lo": [
+        1,
+        18,
+        0.079
+      ],
+      "hi": [
+        13,
+        30,
+        0.083
+      ],
+      "size": [
+        12,
+        12,
+        0.004
+      ],
+      "classification": "pit_box_2"
+    },
+    {
+      "index": 4,
+      "vertices": 12,
+      "lo": [
+        1,
+        3,
+        0.079
+      ],
+      "hi": [
+        13,
+        45,
+        0.079
+      ],
+      "size": [
+        12,
+        42,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 5,
+      "vertices": 8,
+      "lo": [
+        44,
+        23.5,
+        1.118
+      ],
+      "hi": [
+        80,
+        24.5,
+        1.122
+      ],
+      "size": [
+        36,
+        1,
+        0.004
+      ],
+      "classification": "center_divider_top_layer"
+    },
+    {
+      "index": 6,
+      "vertices": 32,
+      "lo": [
+        35.84,
+        11.53,
+        0.079
+      ],
+      "hi": [
+        88.005,
+        36.47,
+        0.083
+      ],
+      "size": [
+        52.165,
+        24.94,
+        0.004
+      ],
+      "classification": "track_marking"
+    },
+    {
+      "index": 7,
+      "vertices": 22,
+      "lo": [
+        35.84,
+        11.53,
+        0.079
+      ],
+      "hi": [
+        88.005,
+        36.47,
+        0.079
+      ],
+      "size": [
+        52.165,
+        24.94,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 8,
+      "vertices": 8,
+      "lo": [
+        0,
+        47,
+        0.079
+      ],
+      "hi": [
+        28,
+        48,
+        4.079
+      ],
+      "size": [
+        28,
+        1,
+        4
+      ],
+      "classification": "pit_walls_b"
+    },
+    {
+      "index": 9,
+      "vertices": 12,
+      "lo": [
+        0,
+        0,
+        0.079
+      ],
+      "hi": [
+        28,
+        46.995,
+        4.079
+      ],
+      "size": [
+        28,
+        46.995,
+        4
+      ],
+      "classification": "pit_walls_a"
+    },
+    {
+      "index": 10,
+      "vertices": 11,
+      "lo": [
+        0,
+        0,
+        0.079
+      ],
+      "hi": [
+        28,
+        48,
+        0.079
+      ],
+      "size": [
+        28,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 11,
+      "vertices": 22,
+      "lo": [
+        1,
+        0,
+        0
+      ],
+      "hi": [
+        96,
+        48,
+        0
+      ],
+      "size": [
+        95,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 29,
+      "vertices": 4,
+      "lo": [
+        70.521,
+        3,
+        0
+      ],
+      "hi": [
+        82.521,
+        15,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 35,
+      "vertices": 8,
+      "lo": [
+        26.479,
+        16.026,
+        0.083
+      ],
+      "hi": [
+        27.999,
+        31.979,
+        1.083
+      ],
+      "size": [
+        1.52,
+        15.953,
+        1
+      ],
+      "classification": "pit_divider"
+    },
+    {
+      "index": 37,
+      "vertices": 8,
+      "lo": [
+        44,
+        23.5,
+        0.118
+      ],
+      "hi": [
+        80,
+        24.5,
+        1.118
+      ],
+      "size": [
+        36,
+        1,
+        1
+      ],
+      "classification": "center_divider"
+    },
+    {
+      "index": 38,
+      "vertices": 16,
+      "lo": [
+        28,
+        0,
+        0.118
+      ],
+      "hi": [
+        96,
+        48,
+        4.118
+      ],
+      "size": [
+        68,
+        48,
+        4
+      ],
+      "classification": "race_walls"
+    },
+    {
+      "index": 40,
+      "vertices": 8,
+      "lo": [
+        13.479,
+        33,
+        0.079
+      ],
+      "hi": [
+        25.479,
+        45,
+        0.091
+      ],
+      "size": [
+        12,
+        12,
+        0.012
+      ],
+      "classification": "start_box"
+    },
+    {
+      "index": 41,
+      "vertices": 4,
+      "lo": [
+        13.479,
+        33,
+        0.079
+      ],
+      "hi": [
+        25.479,
+        45,
+        0.079
+      ],
+      "size": [
+        12,
+        12,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 42,
+      "vertices": 20,
+      "lo": [
+        1,
+        0,
+        0
+      ],
+      "hi": [
+        96,
+        48,
+        0
+      ],
+      "size": [
+        95,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 60,
+      "vertices": 8,
+      "lo": [
+        1,
+        33,
+        0.079
+      ],
+      "hi": [
+        13,
+        45,
+        0.083
+      ],
+      "size": [
+        12,
+        12,
+        0.004
+      ],
+      "classification": "pit_box_3_copy"
+    },
+    {
+      "index": 61,
+      "vertices": 8,
+      "lo": [
+        1,
+        3,
+        0.079
+      ],
+      "hi": [
+        13,
+        15,
+        0.083
+      ],
+      "size": [
+        12,
+        12,
+        0.004
+      ],
+      "classification": "pit_box_1_copy"
+    },
+    {
+      "index": 62,
+      "vertices": 8,
+      "lo": [
+        1,
+        18,
+        0.079
+      ],
+      "hi": [
+        13,
+        30,
+        0.083
+      ],
+      "size": [
+        12,
+        12,
+        0.004
+      ],
+      "classification": "pit_box_2_copy"
+    },
+    {
+      "index": 63,
+      "vertices": 12,
+      "lo": [
+        1,
+        3,
+        0.079
+      ],
+      "hi": [
+        13,
+        45,
+        0.079
+      ],
+      "size": [
+        12,
+        42,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 64,
+      "vertices": 32,
+      "lo": [
+        1,
+        0,
+        0
+      ],
+      "hi": [
+        96,
+        48,
+        0
+      ],
+      "size": [
+        95,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 82,
+      "vertices": 20,
+      "lo": [
+        1,
+        0,
+        0
+      ],
+      "hi": [
+        96,
+        48,
+        0
+      ],
+      "size": [
+        95,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 100,
+      "vertices": 8,
+      "lo": [
+        25,
+        33.5,
+        0.079
+      ],
+      "hi": [
+        26.333,
+        35,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 101,
+      "vertices": 8,
+      "lo": [
+        26.333,
+        35,
+        0.079
+      ],
+      "hi": [
+        27.667,
+        36.5,
+        0.087
+      ],
+      "size": [
+        1.334,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 102,
+      "vertices": 8,
+      "lo": [
+        25,
+        36.5,
+        0.079
+      ],
+      "hi": [
+        26.333,
+        38,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 103,
+      "vertices": 8,
+      "lo": [
+        27.667,
+        36.5,
+        0.079
+      ],
+      "hi": [
+        29,
+        38,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 104,
+      "vertices": 8,
+      "lo": [
+        26.333,
+        32,
+        0.079
+      ],
+      "hi": [
+        27.667,
+        33.5,
+        0.087
+      ],
+      "size": [
+        1.334,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 105,
+      "vertices": 8,
+      "lo": [
+        27.667,
+        33.5,
+        0.079
+      ],
+      "hi": [
+        29,
+        35,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 106,
+      "vertices": 8,
+      "lo": [
+        27.667,
+        39.5,
+        0.079
+      ],
+      "hi": [
+        29,
+        41,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 107,
+      "vertices": 8,
+      "lo": [
+        25,
+        39.5,
+        0.079
+      ],
+      "hi": [
+        26.333,
+        41,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 108,
+      "vertices": 8,
+      "lo": [
+        27.667,
+        42.5,
+        0.079
+      ],
+      "hi": [
+        29,
+        44,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 109,
+      "vertices": 8,
+      "lo": [
+        25,
+        45.5,
+        0.079
+      ],
+      "hi": [
+        26.333,
+        47,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 110,
+      "vertices": 8,
+      "lo": [
+        27.667,
+        45.5,
+        0.079
+      ],
+      "hi": [
+        29,
+        47,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 111,
+      "vertices": 8,
+      "lo": [
+        25,
+        42.5,
+        0.079
+      ],
+      "hi": [
+        26.333,
+        44,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 112,
+      "vertices": 8,
+      "lo": [
+        26.333,
+        44,
+        0.079
+      ],
+      "hi": [
+        27.667,
+        45.5,
+        0.087
+      ],
+      "size": [
+        1.334,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 113,
+      "vertices": 8,
+      "lo": [
+        26.333,
+        41,
+        0.079
+      ],
+      "hi": [
+        27.667,
+        42.5,
+        0.087
+      ],
+      "size": [
+        1.334,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 114,
+      "vertices": 8,
+      "lo": [
+        26.333,
+        38,
+        0.079
+      ],
+      "hi": [
+        27.667,
+        39.5,
+        0.087
+      ],
+      "size": [
+        1.334,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 115,
+      "vertices": 8,
+      "lo": [
+        27.667,
+        2.5,
+        0.079
+      ],
+      "hi": [
+        29,
+        4,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 116,
+      "vertices": 8,
+      "lo": [
+        27.667,
+        5.5,
+        0.079
+      ],
+      "hi": [
+        29,
+        7,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 117,
+      "vertices": 8,
+      "lo": [
+        26.333,
+        4,
+        0.079
+      ],
+      "hi": [
+        27.667,
+        5.5,
+        0.087
+      ],
+      "size": [
+        1.334,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 118,
+      "vertices": 8,
+      "lo": [
+        26.333,
+        1,
+        0.079
+      ],
+      "hi": [
+        27.667,
+        2.5,
+        0.087
+      ],
+      "size": [
+        1.334,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 119,
+      "vertices": 8,
+      "lo": [
+        25,
+        2.5,
+        0.079
+      ],
+      "hi": [
+        26.333,
+        4,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 120,
+      "vertices": 8,
+      "lo": [
+        27.667,
+        8.5,
+        0.079
+      ],
+      "hi": [
+        29,
+        10,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 121,
+      "vertices": 8,
+      "lo": [
+        27.667,
+        11.5,
+        0.079
+      ],
+      "hi": [
+        29,
+        13,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 122,
+      "vertices": 8,
+      "lo": [
+        26.333,
+        13,
+        0.079
+      ],
+      "hi": [
+        27.667,
+        14.5,
+        0.087
+      ],
+      "size": [
+        1.334,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 123,
+      "vertices": 8,
+      "lo": [
+        26.333,
+        10,
+        0.079
+      ],
+      "hi": [
+        27.667,
+        11.5,
+        0.087
+      ],
+      "size": [
+        1.334,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 124,
+      "vertices": 8,
+      "lo": [
+        26.333,
+        7,
+        0.079
+      ],
+      "hi": [
+        27.667,
+        8.5,
+        0.087
+      ],
+      "size": [
+        1.334,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 125,
+      "vertices": 8,
+      "lo": [
+        27.667,
+        14.5,
+        0.079
+      ],
+      "hi": [
+        29,
+        16,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 126,
+      "vertices": 8,
+      "lo": [
+        25,
+        8.5,
+        0.079
+      ],
+      "hi": [
+        26.333,
+        10,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 127,
+      "vertices": 8,
+      "lo": [
+        25,
+        11.5,
+        0.079
+      ],
+      "hi": [
+        26.333,
+        13,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 128,
+      "vertices": 8,
+      "lo": [
+        25,
+        5.5,
+        0.079
+      ],
+      "hi": [
+        26.333,
+        7,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 129,
+      "vertices": 8,
+      "lo": [
+        25,
+        14.5,
+        0.079
+      ],
+      "hi": [
+        26.333,
+        16,
+        0.087
+      ],
+      "size": [
+        1.333,
+        1.5,
+        0.008
+      ],
+      "classification": "checker_square"
+    },
+    {
+      "index": 130,
+      "vertices": 85,
+      "lo": [
+        25,
+        1,
+        0.079
+      ],
+      "hi": [
+        29,
+        47,
+        0.079
+      ],
+      "size": [
+        4,
+        46,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 131,
+      "vertices": 106,
+      "lo": [
+        1,
+        0,
+        0
+      ],
+      "hi": [
+        96,
+        48,
+        0
+      ],
+      "size": [
+        95,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 150,
+      "vertices": 16,
+      "lo": [
+        28,
+        0,
+        0.079
+      ],
+      "hi": [
+        96,
+        48,
+        0.118
+      ],
+      "size": [
+        68,
+        48,
+        0.039
+      ],
+      "classification": "racecourse_floor_layer"
+    },
+    {
+      "index": 151,
+      "vertices": 8,
+      "lo": [
+        87.105,
+        17.864,
+        0.079
+      ],
+      "hi": [
+        88.005,
+        30.136,
+        0.118
+      ],
+      "size": [
+        0.9,
+        12.272,
+        0.039
+      ],
+      "classification": "track_marking_race_end_flat"
+    },
+    {
+      "index": 152,
+      "vertices": 8,
+      "lo": [
+        44,
+        23.5,
+        0.079
+      ],
+      "hi": [
+        80,
+        24.5,
+        0.118
+      ],
+      "size": [
+        36,
+        1,
+        0.039
+      ],
+      "classification": "center_divider_floor_layer"
+    },
+    {
+      "index": 153,
+      "vertices": 23,
+      "lo": [
+        28,
+        0,
+        0.079
+      ],
+      "hi": [
+        96,
+        48,
+        0.079
+      ],
+      "size": [
+        68,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 154,
+      "vertices": 43,
+      "lo": [
+        0,
+        0,
+        0
+      ],
+      "hi": [
+        96,
+        48,
+        0
+      ],
+      "size": [
+        96,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 161,
+      "vertices": 8,
+      "lo": [
+        0,
+        0,
+        0
+      ],
+      "hi": [
+        96,
+        48,
+        0.079
+      ],
+      "size": [
+        96,
+        48,
+        0.079
+      ],
+      "classification": "board"
+    },
+    {
+      "index": 162,
+      "vertices": 4,
+      "lo": [
+        0,
+        0,
+        0
+      ],
+      "hi": [
+        96,
+        48,
+        0
+      ],
+      "size": [
+        96,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 163,
+      "vertices": 4,
+      "lo": [
+        0,
+        0,
+        0
+      ],
+      "hi": [
+        96,
+        48,
+        0
+      ],
+      "size": [
+        96,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 164,
+      "vertices": 8,
+      "lo": [
+        48,
+        24,
+        0
+      ],
+      "hi": [
+        48.442,
+        25.015,
+        11
+      ],
+      "size": [
+        0.442,
+        1.015,
+        11
+      ],
+      "classification": "unplaced_post"
+    },
+    {
+      "index": 851,
+      "vertices": 16,
+      "lo": [
+        0,
+        0,
+        0.079
+      ],
+      "hi": [
+        95,
+        48,
+        0.079
+      ],
+      "size": [
+        95,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 856,
+      "vertices": 4,
+      "lo": [
+        13.479,
+        33,
+        0.091
+      ],
+      "hi": [
+        25.479,
+        45,
+        0.091
+      ],
+      "size": [
+        12,
+        12,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 861,
+      "vertices": 4,
+      "lo": [
+        44,
+        23.5,
+        1.118
+      ],
+      "hi": [
+        80,
+        24.5,
+        1.118
+      ],
+      "size": [
+        36,
+        1,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 867,
+      "vertices": 8,
+      "lo": [
+        28,
+        0,
+        0.118
+      ],
+      "hi": [
+        96,
+        48,
+        0.118
+      ],
+      "size": [
+        68,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 876,
+      "vertices": 16,
+      "lo": [
+        0,
+        0,
+        0.079
+      ],
+      "hi": [
+        95,
+        48,
+        0.079
+      ],
+      "size": [
+        95,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 889,
+      "vertices": 16,
+      "lo": [
+        0,
+        0,
+        0.079
+      ],
+      "hi": [
+        95,
+        48,
+        0.079
+      ],
+      "size": [
+        95,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 896,
+      "vertices": 16,
+      "lo": [
+        0,
+        0,
+        0.079
+      ],
+      "hi": [
+        95,
+        48,
+        0.079
+      ],
+      "size": [
+        95,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 935,
+      "vertices": 16,
+      "lo": [
+        0,
+        0,
+        0.079
+      ],
+      "hi": [
+        95,
+        48,
+        0.079
+      ],
+      "size": [
+        95,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 939,
+      "vertices": 4,
+      "lo": [
+        44,
+        23.5,
+        0.118
+      ],
+      "hi": [
+        80,
+        24.5,
+        0.118
+      ],
+      "size": [
+        36,
+        1,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 950,
+      "vertices": 4,
+      "lo": [
+        26.479,
+        16.026,
+        0.083
+      ],
+      "hi": [
+        27.999,
+        31.979,
+        0.083
+      ],
+      "size": [
+        1.52,
+        15.953,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    },
+    {
+      "index": 954,
+      "vertices": 4,
+      "lo": [
+        0,
+        0,
+        0.079
+      ],
+      "hi": [
+        96,
+        48,
+        0.079
+      ],
+      "size": [
+        96,
+        48,
+        0
+      ],
+      "classification": "sketch-or-construction"
+    }
+  ]
+}

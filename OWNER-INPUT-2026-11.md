@@ -26,8 +26,8 @@ The owner or club fills this in; agents only record what the owner states. It co
 | Item | Approved by / date | Ordered / date | Received / date | Notes |
 |---|---|---|---|---|
 | Order A drivetrain parts ($177.25 researched) | | | | |
-| Official obstacle set (GM2 Appendix B, $35.95) | | | | |
-| Practice-field materials (GM2 Appendix B, $182.39 + paint) | | | | |
+| Practice-field materials, organizer list (GM2 Appendix B, $182.39; includes paint, the start flag and the $35.95 obstacle set) | | | | |
+| Brushes, rollers, trays, double-sided tape (organizer estimate under $35) | | | | |
 | Bench kit (Pico 2, motor driver, level shifting, fuse, e-stop) | | | | |
 
 ## Decisions recorded

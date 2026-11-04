@@ -1,0 +1,7 @@
+part_id,sku,quantity_expected,serial_or_lot,measured_dimensions,mass_g,inspection_status,notes
+A-MOTOR,4754,2,,,,,
+A-BRACKET,1995,2,,,,,
+A-HUB,1083,1 2-pack,,,,,
+A-WHEEL,1430,1 pair,,,,,
+A-CASTER,953,2,,,,,
+A-WHEEL-SCREWS,1962,1 25-pack,,,,,

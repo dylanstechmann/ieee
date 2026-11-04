@@ -1,0 +1,234 @@
+[
+  {
+    "file": "derived/organizer-cad/2027 IEEE SoutheastCon Arena_Fusion360.f3d",
+    "members": [
+      {
+        "name": "Manifest.dat",
+        "method": 93,
+        "size": 571,
+        "sha256": "1a4a8acb00504b4d5561696fc3a659a635f816a1a2841e6dfe9af539efa56199"
+      },
+      {
+        "name": "Properties.dat",
+        "method": 93,
+        "size": 104,
+        "sha256": "aad190a27a54d2e9a8e86dfe85e025bbeede4a795fbd02921d59800847f67adb"
+      },
+      {
+        "name": "FusionAssetName[Active]/Manifest.dat",
+        "method": 93,
+        "size": 589,
+        "sha256": "b0604a2a989f22e2636eb0b6dea3137ca35daf66564e1cf9ba76fe6a37a9b6ec"
+      },
+      {
+        "name": "FusionAssetName[Active]/ProteinAssets.BlobParts/ProteinAsset.cc252e20-7c53-400d-824b-c89611d36c45.protein",
+        "method": 93,
+        "size": 22356,
+        "sha256": "00b4da1f2e05fd33fef3c8d243c4c35e6398e884e6e0770afc2ecfeac68a1ad1"
+      },
+      {
+        "name": "FusionAssetName[Active]/Previews/small.png",
+        "method": 93,
+        "size": 10882,
+        "sha256": "b5946bd8eb0edc1bc151e9f665f7eefd951a922664e641c07160dd5d4dbcec4d"
+      },
+      {
+        "name": "FusionAssetName[Active]/FusionDesignSegmentType1/BulkStream.dat",
+        "method": 93,
+        "size": 1147041,
+        "sha256": "cdaddf7bf16f609f1d66ac413c6ed11c7d028ddea55b6333812c73b244db8c30"
+      },
+      {
+        "name": "FusionAssetName[Active]/FusionDesignSegmentType1/MetaStream.dat",
+        "method": 93,
+        "size": 112266,
+        "sha256": "31690425686ed0094c73cda41dbfe9808d5668263419bc629db40a4fd6d28ad7"
+      },
+      {
+        "name": "FusionAssetName[Active]/FusionBrowserSegmentType1/BulkStream.dat",
+        "method": 93,
+        "size": 13023,
+        "sha256": "01e1420d655da26c3b2b24c66445c3e209a9843d35b92ea6afbedf53321c8de0"
+      },
+      {
+        "name": "FusionAssetName[Active]/FusionBrowserSegmentType1/MetaStream.dat",
+        "method": 93,
+        "size": 6353,
+        "sha256": "aeef7da04b8636255c6171d9bf51e236353f1f8581d047e6144407e4a112665c"
+      },
+      {
+        "name": "FusionAssetName[Active]/FusionACTSegmentType1/BulkStream.dat",
+        "method": 93,
+        "size": 24188,
+        "sha256": "02096655143b32c669fb400d035676307f2dcc354561488e837b7cf407cc77de"
+      },
+      {
+        "name": "FusionAssetName[Active]/FusionACTSegmentType1/MetaStream.dat",
+        "method": 93,
+        "size": 2877,
+        "sha256": "73ef0233cb781bf2c08a451d43d5a255d440d268a95936b3f7e2898698cd315c"
+      },
+      {
+        "name": "FusionAssetName[Active]/DesignConfigurationTable.BlobParts/DesignConfigurationRule.624d2d69-aeaf-4660-b6b6-daa393f74f7e.dsgcfgrule",
+        "method": 0,
+        "size": 2,
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      },
+      {
+        "name": "FusionAssetName[Active]/DesignConfigurationTable.BlobParts/DesignConfigurationTable.48b8b600-4185-4eda-bce9-9fc950910d80.dsgcfg",
+        "method": 0,
+        "size": 2,
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      },
+      {
+        "name": "FusionAssetName[Active]/Breps.BlobParts/BREP.d372d8f7-7935-4f4c-98ae-cd10c684115a.smbh",
+        "method": 93,
+        "size": 504841,
+        "sha256": "5c88b20a2af1b7064528196535b996fd12073390ba24cfa2d5839fdee2f4776e"
+      },
+      {
+        "name": "FusionAssetName[Active]/Breps.BlobParts/BREP.41f52a24-92ef-4883-8371-4c423abfaac1.smb",
+        "method": 93,
+        "size": 821106,
+        "sha256": "3047a79b284852832c47c593b8ed4eb3c56298485fe0063f24838fa032b212ff"
+      },
+      {
+        "name": "FusionAssetName[Active]/OGS.BlobFolder/OGS/DefaultScene/world",
+        "method": 93,
+        "size": 1514108,
+        "sha256": "6422df40f9e8dfa4a151688f0f65160b067b9fbcbe8964df5ac1743b634b2d45"
+      },
+      {
+        "name": "FusionAssetName[Active]/OGS.BlobFolder/OGS/DefaultScene/stream_mesh_000",
+        "method": 93,
+        "size": 76260,
+        "sha256": "10bccf61aec512d4f1dc3b112b797a91af976f5d5718ebee6de949ce4fb6333c"
+      },
+      {
+        "name": "FusionAssetName[Active]/OGS.BlobFolder/OGS/DefaultScene/Fusion_mesh_000",
+        "method": 93,
+        "size": 67592,
+        "sha256": "0018d92996a7106f02138e91bbb397f7414b7b94ab4565615b6d952e519f9aed"
+      }
+    ]
+  },
+  {
+    "file": "derived/organizer-cad/Spare Tire v2.f3d",
+    "members": [
+      {
+        "name": "Manifest.dat",
+        "method": 93,
+        "size": 571,
+        "sha256": "b99ba7a59b863d9a5acb4c3725c5f09c654c724a38944d86cc54292df3ac1d11"
+      },
+      {
+        "name": "Properties.dat",
+        "method": 93,
+        "size": 100,
+        "sha256": "a368d3462bb157f8aa9be4668b8ddc8bd966750cdb4e95c7c45fd6a556c72808"
+      },
+      {
+        "name": "FusionAssetName[Active]/Manifest.dat",
+        "method": 93,
+        "size": 589,
+        "sha256": "ce3e5ea542c03381c6cee2cce2995730d9fef1f8191eff701e9330fb2c09c013"
+      },
+      {
+        "name": "FusionAssetName[Active]/ProteinAssets.BlobParts/ProteinAsset.4d918958-6748-419a-aedb-190d3a60bfb7.protein",
+        "method": 93,
+        "size": 16431,
+        "sha256": "700dd9b79c004d0ec894d65bf1390b4bac3000c99da19b565dfff8f55a7104a9"
+      },
+      {
+        "name": "FusionAssetName[Active]/Previews/small.png",
+        "method": 93,
+        "size": 17391,
+        "sha256": "2235777b59aed9cc46ad373ec69fb89700c62327adeaa7b3daaf8f8fb3816bca"
+      },
+      {
+        "name": "FusionAssetName[Active]/Images.BlobParts/Image.9a14a56a-0703-44da-8a7f-8127dfb3bce1.jpg",
+        "method": 93,
+        "size": 33603,
+        "sha256": "a454e5b26ffd63bfbc26e927583ea2bb183ba318d6b2ca4c0ae24cd797cc08cc"
+      },
+      {
+        "name": "FusionAssetName[Active]/FusionDesignSegmentType1/BulkStream.dat",
+        "method": 93,
+        "size": 268838,
+        "sha256": "15d636d8f88c88fd0694f7b05d56860775c095a9e6b9016fe5e47514a463f7ea"
+      },
+      {
+        "name": "FusionAssetName[Active]/FusionDesignSegmentType1/MetaStream.dat",
+        "method": 93,
+        "size": 58633,
+        "sha256": "534b9f137c85b0455a734fab29d6324ed69800b45eab8c17c662f471be7fb069"
+      },
+      {
+        "name": "FusionAssetName[Active]/FusionBrowserSegmentType1/BulkStream.dat",
+        "method": 93,
+        "size": 5583,
+        "sha256": "381bb94f25947fe61acaf061242091a94ee974be5399bdf30a8783021d13eab0"
+      },
+      {
+        "name": "FusionAssetName[Active]/FusionBrowserSegmentType1/MetaStream.dat",
+        "method": 93,
+        "size": 5571,
+        "sha256": "ccd69aaff250a5945d9f0e30db72bc6c47fccb8f43fe73805e84650e0bd6a9b1"
+      },
+      {
+        "name": "FusionAssetName[Active]/FusionACTSegmentType1/BulkStream.dat",
+        "method": 93,
+        "size": 4004,
+        "sha256": "c2d0c7aa28742ae6a363d6c6211ef5e9c3ed230d5e4bfe80e408b200fdcab2ff"
+      },
+      {
+        "name": "FusionAssetName[Active]/FusionACTSegmentType1/MetaStream.dat",
+        "method": 93,
+        "size": 2469,
+        "sha256": "8f32e72523f854451df59636aaf07c0caffa8b754427aae326aaace6944b4054"
+      },
+      {
+        "name": "FusionAssetName[Active]/DesignConfigurationTable.BlobParts/DesignConfigurationRule.7d0ec675-696d-4f0f-8f6f-be5fd162a5fb.dsgcfgrule",
+        "method": 0,
+        "size": 2,
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      },
+      {
+        "name": "FusionAssetName[Active]/DesignConfigurationTable.BlobParts/DesignConfigurationTable.8974e8a9-4629-4d98-b36f-33c0acda979d.dsgcfg",
+        "method": 0,
+        "size": 2,
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      },
+      {
+        "name": "FusionAssetName[Active]/Breps.BlobParts/BREP.bd7e84fa-63de-4904-bcee-e2c3a6dcc446.smbh",
+        "method": 93,
+        "size": 260281,
+        "sha256": "347c15659ee71a404aa271e30e68ece5fd14c999b7d71d7a3721d3eccc537395"
+      },
+      {
+        "name": "FusionAssetName[Active]/Breps.BlobParts/BREP.5df55af9-6c4c-460b-abd8-10497aa9efc9.smb",
+        "method": 93,
+        "size": 353277,
+        "sha256": "f9fa4475c834161f989c1061297a88745a476e367ced09c732868cc301d156dd"
+      },
+      {
+        "name": "FusionAssetName[Active]/OGS.BlobFolder/OGS/DefaultScene/world",
+        "method": 93,
+        "size": 316815,
+        "sha256": "9d8b9c7c263a5bb975d4430e5642a11d30a1b16f2b0776fec5480f9223899405"
+      },
+      {
+        "name": "FusionAssetName[Active]/OGS.BlobFolder/OGS/DefaultScene/stream_mesh_000",
+        "method": 93,
+        "size": 23440,
+        "sha256": "6c0bac569e6ee51a20a299dd931b8f73bd708b6034d4818049132a1269d66073"
+      },
+      {
+        "name": "FusionAssetName[Active]/OGS.BlobFolder/OGS/DefaultScene/Fusion_mesh_000",
+        "method": 93,
+        "size": 211696,
+        "sha256": "b7f3b242fd1142b2b71b0bd8701fe8668bc4d7bcb2225e1748bc15b88b996629"
+      }
+    ]
+  }
+]

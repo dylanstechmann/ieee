@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-03",
+  "status": "agent-prepared mule revision; not ordered, printed or tested",
+  "input_hashes": {
+    "drivetrain-mule-v10.json": "d970172aacbfd798618e0015256613088f64dff7bed6ee3707aa828d65bcf1ae",
+    "derived/robot-studio-v7/assembly.json": "2e2d68cb0890bbec1a7622174f31d45ec27034ea9babf13bc54c657721be1646",
+    "tools/drivetrain-mule-v10.js": "c3f41983ac0e0a76a1e098a22749d91401259b80be641f4029835980c17effbb",
+    "tools/mule-deck-v10-cad.py": "f4d7de39009cc502fd2fbae2d491b90b5de88cc94c84853b9e90c2a7dd8b548b",
+    "derived/drivetrain-mule-v4/E02-characterization.csv": "4953a603ca918389f8c86c5da4c7e603ae31453ba144eaee47dc0e41558696a2",
+    "derived/drivetrain-mule-v4/E03-trials.csv": "da772fedc085cd9ab1b10d798ffec0967c07a271538792e892d0ca7c227c4288"
+  },
+  "output_hashes": {
+    "geometry.json": "5a26e8e315c898d5c7217f1f8386ecc8b416b9456d4bebbb9756980ba17a492a",
+    "fit-report.md": "815e0b690848217f54c087103fbff365a42fedfa6fb9e6c69121aa0688848dea",
+    "deck-drill-template.svg": "9edada46876f77ad78dc5b4181e8ef7d544a12e5072b668c5552678f543136c0",
+    "templates/received-parts.csv": "1e4a4e9b8d089036407d686926200d9dcd8d0954d017b5f41129a770b225f3c5",
+    "templates/E02A-inspection.csv": "f871474211e31f47df3e9221c6450a8af56b0843f9920bbd6516592cec23125d",
+    "templates/e02a-measurements.json": "d44b280bae13d2e73ad410c0fb1256b6119fbad680c2739d364c3eafe4cb5f2d",
+    "templates/fit-review.csv": "d04404c0bdb82f414086f06c31151d84dab720f410e161e6a89e50bb40b0d0dd",
+    "templates/E02-characterization.csv": "4953a603ca918389f8c86c5da4c7e603ae31453ba144eaee47dc0e41558696a2",
+    "templates/E03-trials.csv": "da772fedc085cd9ab1b10d798ffec0967c07a271538792e892d0ca7c227c4288",
+    "README.md": "b2bc0d261474cf7c63ac635f74767598116b033ecffc805317b63b3b2733aa12",
+    "cad/mule-deck-v10.step": "5368b194e77a362a8c64a993b510381656bb3ffc9b4b7e9de2366a8809b303e7",
+    "cad/mule-deck-v10.stl": "a3d542816ba244f302160941ee2fa8a22c28b497a02fb98daa0277f4b8c50498",
+    "cad/caster-riser-v10.step": "afad25761552e5b955d0c1f63b32b5e80f31d6abe6ab49374ef09cf9e1b9135f",
+    "cad/caster-riser-v10.stl": "c692340f71a6d1e50fd5bbd674784234891601feff5faceb3114b679329f03c6"
+  }
+}

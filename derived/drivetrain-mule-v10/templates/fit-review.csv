@@ -1,0 +1,11 @@
+check_id,requirement,nominal_mm,measured_mm,pass,notes
+wheel-contact,"axle at wheel radius",0,,,
+caster-contact,"|value| <= 0.25",-0.005,,,
+riser-positive,"> 0",6.91,,,
+motor-hole-ligament,">= 4",7.05,,,
+wheel-deck-lateral-clearance,">= 3",10,,,
+motor-body-gap,">= 8 (project rule)",7.8,,,
+screw-length-motor,"M3 through the 5 mm deck into the bracket; at least 3 threads engaged, no contact with the gearbox",,,,
+screw-length-caster,"#2 screw through deck 5 + riser 6.91 + spacer 3.175 + caster flange + nut",,,,
+free-rotation,"no binding; no wheel, hub or bracket contact with the deck",,,,
+four-point-contact,"all four contacts loaded on a flat surface; note any rocking",,,,

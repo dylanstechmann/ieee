@@ -1,0 +1,5 @@
+part,stock,quantity,cad_length_in,note
+side wall,1 x 4 x 8 ft,2,96,"full board length, on edge, flush with the long board edges"
+end wall,1 x 4 x 8 ft (one strip gives both),2,46,between the side walls; with actual 3/4 in lumber cut 46 1/2 in so the walls stay flush with the board edges
+center divider,1 x 2 x 8 ft,1,36,V3 drawing 1 x 2 x 36; the June CAD shows a 1 x 1 section
+pit divider,1 x 2 x 8 ft (same strip),1,15.953,"V3 drawing 1 x 1 x 16; CAD footprint 1.52 x 15.95 in, 1 in tall"

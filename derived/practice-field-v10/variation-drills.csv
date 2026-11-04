@@ -1,0 +1,8 @@
+drill,element,change_in,purpose
+D1,center divider,+1 in toward high y,narrow the high-y corridor by 1 in (G02)
+D2,center divider,-1 in toward low y,narrow the low-y corridor by 1 in
+D3,center divider,+1 in toward the race end,shorten the race-end turn gap to 14 in
+D4,pit divider,+1 in toward the race end,shorten the pit-end turn gap to 15 in
+D5,center divider + pit divider,D3 and D4 together,worst-case end gaps at both ends
+D6,obstacles,each vehicle moved 1 in within its quadrant,obstacle passes with placement error
+D7,AprilTag and start flag,mount +/-1 in,tag reading and start detection with placement error

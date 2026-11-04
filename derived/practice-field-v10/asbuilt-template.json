@@ -1,0 +1,505 @@
+{
+  "schema": "practice-field-asbuilt/v1",
+  "status": "template; copy to measurements/field-asbuilt-<date>.json and fill in",
+  "datum": "pit-end edge of the board at the low-y side (x = 0, y = 0); measure along the board edges",
+  "items": [
+    {
+      "id": "board_length",
+      "what": "board length along x",
+      "nominal_in": 96,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "board_width",
+      "what": "board width along y",
+      "nominal_in": 48,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "wall_actual_thickness",
+      "what": "actual wall lumber thickness",
+      "nominal_in": 0.75,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "wall_actual_height",
+      "what": "actual wall lumber height",
+      "nominal_in": 3.5,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "wall_face_y_low",
+      "what": "low-y wall inner face, measured at x = 48",
+      "nominal_in": 1,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "wall_face_y_high",
+      "what": "high-y wall inner face, measured at x = 48",
+      "nominal_in": 47,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "wall_face_x_race_end",
+      "what": "race-end wall inner face, measured at y = 24",
+      "nominal_in": 95,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "wall_face_x_pit_end",
+      "what": "pit-end wall inner face, measured at y = 24",
+      "nominal_in": 1,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "center_divider_x_start",
+      "what": "center divider west end x",
+      "nominal_in": 44,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "center_divider_x_end",
+      "what": "center divider east end x",
+      "nominal_in": 80,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "center_divider_low_face_y",
+      "what": "center divider low-y face",
+      "nominal_in": 23.5,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "center_divider_actual_width",
+      "what": "divider actual width",
+      "nominal_in": null,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "center_divider_actual_height",
+      "what": "divider actual height",
+      "nominal_in": null,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "pit_divider_race_face_x",
+      "what": "pit divider race-side face x",
+      "nominal_in": 27.999,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "pit_divider_y_start",
+      "what": "pit divider low-y end",
+      "nominal_in": 16.026,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "pit_divider_y_end",
+      "what": "pit divider high-y end",
+      "nominal_in": 31.979,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "pit_box_1_low_corner",
+      "what": "pit box 1 low-x low-y corner (x then y)",
+      "nominal_in": [
+        1,
+        3
+      ],
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "pit_box_2_low_corner",
+      "what": "pit box 2 low-x low-y corner (x then y)",
+      "nominal_in": [
+        1,
+        18
+      ],
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "pit_box_3_low_corner",
+      "what": "pit box 3 low-x low-y corner (x then y)",
+      "nominal_in": [
+        1,
+        33
+      ],
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "start_box_low_corner",
+      "what": "start box low-x low-y corner (x then y)",
+      "nominal_in": [
+        13.479,
+        33
+      ],
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "marking_outer_v1",
+      "what": "marking outer edge vertex 1 (x then y)",
+      "nominal_in": [
+        35.84,
+        17.484
+      ],
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "marking_outer_v2",
+      "what": "marking outer edge vertex 2 (x then y)",
+      "nominal_in": [
+        43.6,
+        11.53
+      ],
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "marking_outer_v3",
+      "what": "marking outer edge vertex 3 (x then y)",
+      "nominal_in": [
+        80.246,
+        11.53
+      ],
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "marking_outer_v4",
+      "what": "marking outer edge vertex 4 (x then y)",
+      "nominal_in": [
+        88.005,
+        17.484
+      ],
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "marking_outer_v5",
+      "what": "marking outer edge vertex 5 (x then y)",
+      "nominal_in": [
+        88.005,
+        30.516
+      ],
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "marking_outer_v6",
+      "what": "marking outer edge vertex 6 (x then y)",
+      "nominal_in": [
+        80.245,
+        36.47
+      ],
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "marking_outer_v7",
+      "what": "marking outer edge vertex 7 (x then y)",
+      "nominal_in": [
+        43.6,
+        36.47
+      ],
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "marking_outer_v8",
+      "what": "marking outer edge vertex 8 (x then y)",
+      "nominal_in": [
+        35.84,
+        30.515
+      ],
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "marking_band_width",
+      "what": "white band width",
+      "nominal_in": 0.899,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "apriltag_printed_size",
+      "what": "printed tag outer black square, mm (68 mm nominal; pose uses the inner 5/9)",
+      "nominal_in": null,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "obstacle_car_1",
+      "what": "official obstacle vehicle 1: length, width, height",
+      "nominal_in": null,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "obstacle_car_2",
+      "what": "official obstacle vehicle 2: length, width, height",
+      "nominal_in": null,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    },
+    {
+      "id": "obstacle_car_3",
+      "what": "official obstacle vehicle 3: length, width, height",
+      "nominal_in": null,
+      "measured_in": [
+        null,
+        null,
+        null
+      ],
+      "instrument": null,
+      "measured_by": null,
+      "date": null,
+      "notes": null
+    }
+  ]
+}

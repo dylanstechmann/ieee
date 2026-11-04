@@ -1,0 +1,169 @@
+{
+  "file": "derived/organizer-cad/Spare Tire v2.f3d",
+  "brep_timestamp": "Thu Jun 25 12:08:20 2026",
+  "note": "Vertex bounding boxes in mm. Curved solids keep few vertices, so these do not measure the tire OD or bore; most bodies are sketches and profiles.",
+  "bodies": [
+    {
+      "index": 1,
+      "vertices": 26,
+      "size_mm": [
+        0.508,
+        1.676,
+        5.563
+      ]
+    },
+    {
+      "index": 2,
+      "vertices": 4,
+      "size_mm": [
+        0.508,
+        0.051,
+        1.219
+      ]
+    },
+    {
+      "index": 3,
+      "vertices": 15,
+      "size_mm": [
+        0,
+        1.676,
+        7.036
+      ]
+    },
+    {
+      "index": 4,
+      "vertices": 57,
+      "size_mm": [
+        60.173,
+        44.145,
+        0
+      ]
+    },
+    {
+      "index": 58,
+      "vertices": 80,
+      "size_mm": [
+        0.508,
+        24.816,
+        9.423
+      ]
+    },
+    {
+      "index": 59,
+      "vertices": 40,
+      "size_mm": [
+        0,
+        24.79,
+        9.398
+      ]
+    },
+    {
+      "index": 60,
+      "vertices": 2,
+      "size_mm": [
+        0,
+        11.455,
+        0
+      ]
+    },
+    {
+      "index": 69,
+      "vertices": 4,
+      "size_mm": [
+        27.102,
+        13.97,
+        0
+      ]
+    },
+    {
+      "index": 70,
+      "vertices": 2,
+      "size_mm": [
+        0,
+        13.97,
+        0
+      ]
+    },
+    {
+      "index": 71,
+      "vertices": 1,
+      "size_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 72,
+      "vertices": 2,
+      "size_mm": [
+        0,
+        13.97,
+        0
+      ]
+    },
+    {
+      "index": 422,
+      "vertices": 42,
+      "size_mm": [
+        0,
+        43.866,
+        29.007
+      ]
+    },
+    {
+      "index": 432,
+      "vertices": 2,
+      "size_mm": [
+        0,
+        11.455,
+        0
+      ]
+    },
+    {
+      "index": 435,
+      "vertices": 2,
+      "size_mm": [
+        22.123,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 438,
+      "vertices": 2,
+      "size_mm": [
+        2.489,
+        2.515,
+        0
+      ]
+    },
+    {
+      "index": 441,
+      "vertices": 2,
+      "size_mm": [
+        0,
+        11.455,
+        0
+      ]
+    },
+    {
+      "index": 444,
+      "vertices": 2,
+      "size_mm": [
+        0,
+        11.455,
+        0
+      ]
+    },
+    {
+      "index": 447,
+      "vertices": 2,
+      "size_mm": [
+        2.489,
+        2.515,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-03",
+  "status": "agent-derived CAD geometry; not a measured field",
+  "input_hashes": {
+    "derived/organizer-cad/2027 IEEE SoutheastCon Arena_Fusion360.f3d": "0e22c3607d27e597114640a480b2a7688934ffaf910801c9994390ce698e6e1b",
+    "derived/organizer-cad/Spare Tire v2.f3d": "b239ddc6714dce9ca627472dce036217c42be67127466184e820b9cef5df66d6",
+    "derived/constrained-field-v3/layout.json": "1f0bf9e446109884673b2dcda376e9e3db6e2ce5cb47d0bcb90d8f727da26447",
+    "tools/f3d-reader.js": "92aca16660f41172af396cf01ccb2b11d457e5c9a5544202b4171b34b68d1358",
+    "tools/organizer-cad-v10.js": "be36e40af6595fc6de8cceab277b8232febf39ee482d2968ab8afce435fa5328"
+  },
+  "output_hashes": {
+    "members.json": "a86448376ca3e85198520e5122b5825ac8975f508f3ba00b491c8628336fedff",
+    "bodies.json": "8d888e1990ecd48e27af1aae40873c6142e500c56dcd0feac49ab887b53fce60",
+    "tire-bodies.json": "e3068f5cf78a8fbaf9f4ddf3492d2bd3ae18e97f59c28894d519234db5b4ca59",
+    "field-v10.json": "d3d7de9e9f7d257d6f4f095cb06836a6bb484861aeffca45cb96990dba4afdca",
+    "field-plan.svg": "47f2aef11424b78202e6719ee56f518494119688354abc44f69953b63c16e466",
+    "comparison.md": "d0461b3852b7994b404baf4bc46a90fc50cbaa368a5da7107ebaf3b5a3e00bdc",
+    "preview.png": "b5946bd8eb0edc1bc151e9f665f7eefd951a922664e641c07160dd5d4dbcec4d"
+  }
+}

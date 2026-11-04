@@ -1,0 +1,20 @@
+{
+  "schema": "mule-e02a-measurements/v1",
+  "date": null,
+  "measured_by": null,
+  "instruments": null,
+  "note": "Copy to measurements/mule/<date>/e02a.json. Enter the mean of three caliper readings in mm, or leave null to keep the vendor-CAD value. Then run: node tools/drivetrain-mule-v10.js --from-measurements <file> --cad",
+  "values": {
+    "wheel_diameter_mm": null,
+    "wheel_width_mm": null,
+    "wheel_center_from_hub_flange_mm": null,
+    "gearbox_center_above_mount_face_mm": null,
+    "shaft_offset_mm": null,
+    "shaft_length_mm": null,
+    "bracket_hole_from_motor_face_mm": null,
+    "bracket_hole_pitch_mm": null,
+    "motor_body_length_mm": null,
+    "caster_height_mm": null,
+    "caster_spacer_mm": null
+  }
+}

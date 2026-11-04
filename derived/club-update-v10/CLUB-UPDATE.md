@@ -17,9 +17,9 @@ The review also found that the reinforcement-learning interface cannot yet be dr
 | When | Who | What |
 |---|---|---|
 | Nov 4–7 | Rules lead | Search the official Discord Q&A, then post the open questions from `derived/qa-pack-v10/PASTE.md` (batch 1 first). Record everything in `qa/answers-ledger.json`. |
-| Nov 5–7 | Owner / club | Decide purchases: Order A drivetrain parts ($177.25 archived price), the official obstacle set ($35.95) and practice-field materials (organizer list $182.39 plus paint). Ask FAU about space, printers, supervision and battery policy. |
-| Nov 9–15 | Mechanical lead + volunteers | Build the 4 x 8 ft practice field from the field packet (coming next), then measure it as built. |
-| On arrival | Mechanical + bench leads | Caliper-check the motors, brackets, hubs, wheels and casters before printing the corrected mule deck. |
+| Nov 5–7 | Owner / club | Decide purchases: Order A drivetrain parts ($177.25 archived price) and the practice-field materials from the organizer list ($182.39, which already includes the paint, the start flag and the official obstacle set; brushes and tape are extra, under $35). Ask FAU about space, printers, supervision and battery policy. |
+| Nov 9–15 | Mechanical lead + volunteers | Build the 4 x 8 ft practice field from `derived/practice-field-v10/`, then measure it as built. |
+| On arrival | Mechanical + bench leads | Caliper-check the motors, brackets, hubs, wheels and casters with `derived/drivetrain-mule-v10/templates/` before printing the corrected mule deck. |
 | From Nov 16 | Tire lead | Print tire replicas and test the three pickup concepts on a repeatable fixture. |
 
 ## Dates that cannot move

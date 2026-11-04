@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -40 1000 580" width="1000" height="580" font-family="sans-serif" font-size="11">
+<rect x="0" y="0" width="960" height="480" fill="#1d2127" stroke="#888"/>
+<rect x="0" y="470" width="960" height="10" fill="#9aa0a6"/>
+<rect x="0" y="0" width="960" height="10" fill="#9aa0a6"/>
+<rect x="0" y="0" width="10" height="480" fill="#9aa0a6"/>
+<rect x="950" y="0" width="10" height="480" fill="#9aa0a6"/>
+<polygon points="358.4,305.16 436,364.7 802.46,364.7 880.05,305.16 880.05,174.84 802.45,115.3 436,115.3 358.4,174.85" fill="#e8e8e8"/>
+<polygon points="367.4,301.36 436,355.71 802.46,355.71 871.05,301.36 871.05,178.64 802.45,124.3 436,124.3 367.4,178.65" fill="#1d2127"/>
+<rect x="250" y="320" width="40" height="150" fill="url(#chk)"/>
+<rect x="250" y="10" width="40" height="150" fill="url(#chk)"/>
+<rect x="10" y="330" width="120" height="120" fill="none" stroke="#fff" stroke-width="2"/>
+<rect x="10" y="180" width="120" height="120" fill="none" stroke="#fff" stroke-width="2"/>
+<rect x="10" y="30" width="120" height="120" fill="none" stroke="#fff" stroke-width="2"/>
+<rect x="134.79" y="30" width="120" height="120" fill="none" stroke="#7fd37f" stroke-width="2"/>
+<rect x="440" y="235" width="360" height="10" fill="#ff963c"/>
+<rect x="264.79" y="160.21" width="15.2" height="159.53" fill="#ff963c"/>
+<rect x="440" y="265" width="160" height="185" fill="none" stroke="#e05555" stroke-dasharray="6 4"/>
+<rect x="440" y="30" width="160" height="185" fill="none" stroke="#e05555" stroke-dasharray="6 4"/>
+<rect x="640" y="265" width="160" height="185" fill="none" stroke="#e05555" stroke-dasharray="6 4"/>
+<rect x="640" y="30" width="160" height="185" fill="none" stroke="#e05555" stroke-dasharray="6 4"/>
+<defs><pattern id="chk" width="13.33" height="15" patternUnits="userSpaceOnUse"><rect width="13.33" height="15" fill="#fff"/><rect width="6.67" height="7.5" fill="#000"/><rect x="6.67" y="7.5" width="6.67" height="7.5" fill="#000"/></pattern></defs>
+<text x="0" y="-24">Organizer CAD (June 2026) in the project frame, inches. Agent-derived; not a measured field.</text>
+<text x="0" y="-8">Orange: dividers. White: marking and pit boxes. Green: start box. Dashed red: obstacle quadrants (offset reading).</text>
+<text x="0" y="500">x = 0 (pit end)</text><text x="860" y="500">x = 96 (race end)</text>
+<line x1="0" y1="510" x2="120" y2="510" stroke="#000"/><text x="0" y="525">12 in</text>
+</svg>

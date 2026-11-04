@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-03",
+  "status": "agent-prepared build packet; not built or measured",
+  "input_hashes": {
+    "derived/organizer-cad-v10/field-v10.json": "d3d7de9e9f7d257d6f4f095cb06836a6bb484861aeffca45cb96990dba4afdca",
+    "tools/practice-field-v10.js": "3a022b7b401631675877894b60a086439ebe645b8a15d8825318ab0d6350da4c"
+  },
+  "output_hashes": {
+    "materials.csv": "b9db9a4698428a5e2f74f990a67ececbfc34b50101cc77d088aeaefeafc8a8d3",
+    "cut-list.csv": "9989042e8eece71d98935db2c73357c6deaaf7aaf640f6b23c42ef8ba68e5b23",
+    "coordinates.csv": "ebf89db52082444debc90e9f41ec9f91c7f61f4edd3f54bc01458567b72baf55",
+    "layout-plan.svg": "ca21d4c10c935bd7b4194f60c75c743df60dfe261b97d518ae9467278bc62ed5",
+    "asbuilt-template.json": "f35da2194fa9b2e75065def0326b6953895b76d698bcfb078764260518fb7c5b",
+    "variation-drills.csv": "05238f01ea025a6e8469a4be3bf230aafa4ea42d748f0931043f09cbf1eaa901",
+    "README.md": "68d2f0b5bbcca15e1f720b9545c69306aca2d1c291e22e82f6966e1e0cdd2f13"
+  }
+}

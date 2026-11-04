@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="230mm" height="252mm" viewBox="-20 -60 230 252" font-family="sans-serif" font-size="3.2">
+<text x="0" y="-48">Mule deck v10, shaft-down, 190 x 172 x 5 mm. TRUE SCALE: print at 100%, no fit-to-page.</text>
+<text x="0" y="-43">Proposal, not a fabrication release. Check the 100 mm bar with calipers, and measure parts (E02A) first.</text>
+<g stroke="#000" stroke-width="0.3">
+<line x1="0" y1="-33" x2="0" y2="-29"/>
+<line x1="10" y1="-33" x2="10" y2="-31"/>
+<line x1="20" y1="-33" x2="20" y2="-31"/>
+<line x1="30" y1="-33" x2="30" y2="-31"/>
+<line x1="40" y1="-33" x2="40" y2="-31"/>
+<line x1="50" y1="-33" x2="50" y2="-29"/>
+<line x1="60" y1="-33" x2="60" y2="-31"/>
+<line x1="70" y1="-33" x2="70" y2="-31"/>
+<line x1="80" y1="-33" x2="80" y2="-31"/>
+<line x1="90" y1="-33" x2="90" y2="-31"/>
+<line x1="100" y1="-33" x2="100" y2="-29"/>
+<line x1="0" y1="-33" x2="100" y2="-33"/>
+</g>
+<text x="0" y="-36">0</text><text x="96" y="-36">100 mm</text>
+<rect x="0" y="0" width="190" height="172" rx="3" fill="none" stroke="#000" stroke-width="0.35"/>
+<line x1="95" y1="-3" x2="95" y2="175" stroke="#888" stroke-width="0.2" stroke-dasharray="2 1.5"/>
+<line x1="-3" y1="86" x2="193" y2="86" stroke="#888" stroke-width="0.2" stroke-dasharray="2 1.5"/>
+<text x="96" y="182">axle line (x = 0)</text>
+<rect x="76.6" y="160" width="36.8" height="6.5" fill="none" stroke="#2a6" stroke-width="0.25" stroke-dasharray="1.5 1"/>
+<rect x="76.6" y="5.5" width="36.8" height="6.5" fill="none" stroke="#2a6" stroke-width="0.25" stroke-dasharray="1.5 1"/>
+<circle cx="80.2" cy="163.25" r="1.7" fill="none" stroke="#c00" stroke-width="0.25"/><line x1="77.7" y1="163.25" x2="82.7" y2="163.25" stroke="#c00" stroke-width="0.15"/><line x1="80.2" y1="160.75" x2="80.2" y2="165.75" stroke="#c00" stroke-width="0.15"/>
+<circle cx="95" cy="163.25" r="1.7" fill="none" stroke="#c00" stroke-width="0.25"/><line x1="92.5" y1="163.25" x2="97.5" y2="163.25" stroke="#c00" stroke-width="0.15"/><line x1="95" y1="160.75" x2="95" y2="165.75" stroke="#c00" stroke-width="0.15"/>
+<circle cx="109.8" cy="163.25" r="1.7" fill="none" stroke="#c00" stroke-width="0.25"/><line x1="107.3" y1="163.25" x2="112.3" y2="163.25" stroke="#c00" stroke-width="0.15"/><line x1="109.8" y1="160.75" x2="109.8" y2="165.75" stroke="#c00" stroke-width="0.15"/>
+<circle cx="80.2" cy="8.75" r="1.7" fill="none" stroke="#c00" stroke-width="0.25"/><line x1="77.7" y1="8.75" x2="82.7" y2="8.75" stroke="#c00" stroke-width="0.15"/><line x1="80.2" y1="6.25" x2="80.2" y2="11.25" stroke="#c00" stroke-width="0.15"/>
+<circle cx="95" cy="8.75" r="1.7" fill="none" stroke="#c00" stroke-width="0.25"/><line x1="92.5" y1="8.75" x2="97.5" y2="8.75" stroke="#c00" stroke-width="0.15"/><line x1="95" y1="6.25" x2="95" y2="11.25" stroke="#c00" stroke-width="0.15"/>
+<circle cx="109.8" cy="8.75" r="1.7" fill="none" stroke="#c00" stroke-width="0.25"/><line x1="107.3" y1="8.75" x2="112.3" y2="8.75" stroke="#c00" stroke-width="0.15"/><line x1="109.8" y1="6.25" x2="109.8" y2="11.25" stroke="#c00" stroke-width="0.15"/>
+<circle cx="20" cy="93.35" r="1.25" fill="none" stroke="#00c" stroke-width="0.25"/><line x1="17.5" y1="93.35" x2="22.5" y2="93.35" stroke="#00c" stroke-width="0.15"/><line x1="20" y1="90.85" x2="20" y2="95.85" stroke="#00c" stroke-width="0.15"/>
+<circle cx="20" cy="78.65" r="1.25" fill="none" stroke="#00c" stroke-width="0.25"/><line x1="17.5" y1="78.65" x2="22.5" y2="78.65" stroke="#00c" stroke-width="0.15"/><line x1="20" y1="76.15" x2="20" y2="81.15" stroke="#00c" stroke-width="0.15"/>
+<circle cx="170" cy="93.35" r="1.25" fill="none" stroke="#00c" stroke-width="0.25"/><line x1="167.5" y1="93.35" x2="172.5" y2="93.35" stroke="#00c" stroke-width="0.15"/><line x1="170" y1="90.85" x2="170" y2="95.85" stroke="#00c" stroke-width="0.15"/>
+<circle cx="170" cy="78.65" r="1.25" fill="none" stroke="#00c" stroke-width="0.25"/><line x1="167.5" y1="78.65" x2="172.5" y2="78.65" stroke="#00c" stroke-width="0.15"/><line x1="170" y1="76.15" x2="170" y2="81.15" stroke="#00c" stroke-width="0.15"/>
+<text x="78.2" y="-2.5" fill="#c00">3 x Ø3.4 at x = -14.8 / 0 / +14.8, y = +77.25</text>
+<text x="78.2" y="177" fill="#c00">3 x Ø3.4 at y = -77.25 (bracket M3 clearance)</text>
+<text x="23" y="76" fill="#00c" text-anchor="start">caster: 2 x Ø2.5, 14.7 mm apart, x = -75</text>
+<text x="167" y="76" fill="#00c" text-anchor="end">caster: 2 x Ø2.5, 14.7 mm apart, x = 75</text>
+<text x="0" y="188">Green dashed: bracket footprints (gearbox face at y = ±74 mm). Origin: deck center. +x toward the front caster.</text>
+</svg>

@@ -8,7 +8,7 @@ Most planning, simulation and software here were developed with AI assistance ac
 
 - **Physical work: none yet.** No parts are ordered, no practice field is built, no organizer Q&A has been posted and no robot has been tested.
 - **Rules:** the V3.0 manuals are reviewed. The score model is 390 robot points + 10 publicity. V3.1 (start-flag details) is announced but not posted.
-- **Hardware:** a drivetrain test mule (Order A, $177.25 researched) has been checked against Pololu's own CAD. That check found a 7 mm motor-shaft offset that the original mule kit missed. The corrected shaft-down mule deck is being redrawn. No competition chassis exists yet.
+- **Hardware:** a drivetrain test mule (Order A, $177.25 researched) has been checked against Pololu's own CAD. That check found a 7 mm motor-shaft offset that the original mule kit missed. The corrected shaft-down mule deck is drawn in `derived/drivetrain-mule-v10/`, with a drill template, STEP/STL and caliper-driven regeneration; it is not yet printed. No competition chassis exists yet.
 - **Software:** a synthetic mission simulator (`software/mission_v9.py`) and I/O-free match logic (`software/match_logic.py`) exist.
 
   **Known limits of the simulator** (found in the November 3 review):
@@ -24,6 +24,8 @@ Most planning, simulation and software here were developed with AI assistance ac
 | To... | Open |
 |---|---|
 | See the plan, gates and dates to April | `BACKCAST-2026-11.md` |
+| Build the practice field | `derived/practice-field-v10/` (materials, layout coordinates, as-built template), from the organizer CAD in `derived/organizer-cad-v10/` |
+| Build the drivetrain mule | `derived/drivetrain-mule-v10/` (shaft-down deck, risers, fit report, inspection templates) |
 | Post the official Q&A questions | `derived/qa-pack-v10/QUESTIONS.md` and `PASTE.md`; record answers in `qa/answers-ledger.json` |
 | Read the short club summary | `derived/club-update-v10/CLUB-UPDATE.md` (corrections and next two weeks) and `derived/club-package-v9/CLUB-PRESENTATION.md` |
 | Understand status and lineage | `PROJECT-STATUS.md` |

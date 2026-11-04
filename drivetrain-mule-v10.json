@@ -1,0 +1,41 @@
+{
+  "version": "0.10.0",
+  "date": "2026-11-03",
+  "status": "proposed-shaft-down-revision-not-ordered-not-fabricated-not-hardware-validated",
+  "supersedes": "deck geometry of drivetrain-mule-v4.json; the v4 package stays sealed and unchanged",
+  "decision": "Shaft-down layout chosen 2026-11-03 under the owner's delegation ('whatever seems optimal'): exact caster contact in vendor CAD, reprintable risers. Caliper checks (E02A) come before any print.",
+  "geometry_source": "derived/robot-studio-v7/assembly.json (Pololu STEP measurements, not received parts)",
+  "units": "mm, kg, V, A, N m",
+  "selected": {"motor_id": "M70", "motor_sku": "4754", "wheel_diameter_mm": 80, "bracket_sku": "1995", "hub_sku": "1083", "wheel_sku": "1430", "caster_sku": "953", "layout": "shaft-down", "support_configuration": "dual-front-rear"},
+  "deck": {"length_mm": 190, "width_mm": 172, "thickness_mm": 5, "corner_radius_mm": 3, "motor_hole_diameter_mm": 3.4, "caster_hole_diameter_mm": 2.5, "material": "printed prototype; material and process not selected"},
+  "nominal": {
+    "wheel_diameter_mm": 80,
+    "wheel_width_mm": 10,
+    "wheel_center_from_hub_flange_mm": 5,
+    "gearbox_center_above_mount_face_mm": 18.4,
+    "shaft_offset_mm": 7.0,
+    "shaft_length_mm": 22,
+    "gearbox_face_lateral_mm": 74,
+    "bracket_hole_from_motor_face_mm": 3.25,
+    "bracket_hole_pitch_mm": 14.8,
+    "motor_body_length_mm": 70.1,
+    "caster_height_mm": 13.52,
+    "caster_spacer_mm": 3.175,
+    "caster_positions_x_mm": [-75, 75],
+    "caster_hole_spacing_mm": 14.7
+  },
+  "riser": {"footprint_mm": [24, 24], "hole_diameter_mm": 2.5, "print_resolution_mm": 0.01},
+  "support_configurations": [
+    {"id": "dual-front-rear", "caster_positions": ["rear", "front"], "purpose": "stable initial bench configuration; check four-contact wheel unloading"},
+    {"id": "front-only", "caster_positions": ["front"], "purpose": "three-contact comparison; check rear tipping and turning"},
+    {"id": "rear-only", "caster_positions": ["rear"], "purpose": "three-contact comparison; check front approach and mechanism load"}
+  ],
+  "mass_cases_kg": [2, 4, 6],
+  "gates": {"caster_contact_tolerance_mm": 0.25, "minimum_wheel_deck_lateral_clearance_mm": 3, "minimum_motor_body_gap_mm": 8, "minimum_motor_hole_edge_ligament_mm": 4, "e03_mass_kg": 4, "straight_runs_per_cell": 10, "spin_runs_per_direction_per_cell": 20, "straight_length_m": 1, "maximum_straight_drift_mm": 25, "minimum_straight_passes": 9, "cruise_speed_in_s": 8, "median_spin_error_deg": 5},
+  "limitations": [
+    "Nominal geometry from vendor CAD; measure received parts (E02A) and regenerate with --from-measurements before printing.",
+    "The deck and risers are proposals, not a fabrication release; review screw lengths, engagement and print orientation first.",
+    "The motor body gap is 7.8 mm against the project's 8 mm rule; the encoder ends do not touch, but the mechanical lead decides whether to accept it.",
+    "Mule only: not the competition chassis, whose lower body must be at least 10 x 10 in."
+  ]
+}
