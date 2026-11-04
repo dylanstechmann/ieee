@@ -49,4 +49,4 @@ Standard-library Python for the next simulator generation, built against the org
 | `planner.py` | Hybrid-A* along one straightaway for a square 10 x 10 in or round 10 in footprint (swept checks, so rotation costs the square its diagonal) |
 | `supervisor.py` | `match_logic.py` plus pre-match presets (aggressive / safe / drive-only) and a no-progress watchdog; matches `match_logic` on shared outputs and passes the MicroPython lint |
 
-The passability atlas built from these modules is in `../derived/passability-atlas-v10/`. The full v10 mission simulator (follower and RL-environment fixes, realistic obstacles, real randomization) is the next step. `mission_v9.py` stays frozen.
+The passability atlas built from these modules is in `../derived/passability-atlas-v10/`. `mission.py` is the v10 closed-loop mission simulator and RL environment, with results in `../derived/mission-v10/`. `passage.py` holds the exact lane tests, and `lapmodel.py` the lap-study time and score assumptions. `mission_v9.py` stays frozen.

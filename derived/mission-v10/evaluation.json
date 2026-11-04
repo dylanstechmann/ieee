@@ -1,0 +1,8657 @@
+{
+ "version": "0.10.0",
+ "date": "2026-11-04",
+ "status": "agent-run synthetic evaluation; not hardware, not legality",
+ "seeds": [
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  108,
+  109,
+  110,
+  111,
+  112,
+  113,
+  114,
+  115,
+  116,
+  117,
+  118,
+  119
+ ],
+ "results": [
+  {
+   "condition": "empty",
+   "preset": "aggressive",
+   "envelope": "v9",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "parked": 20,
+    "exchange_done": 13,
+    "finish_s_median": 76.72,
+    "finish_s_max": 85.65,
+    "under_165_s": 20,
+    "vehicle_contact_free_runs": 20,
+    "laps_with_wall_contact": 0,
+    "mean_score_like": 367.25
+   },
+   "runs": [
+    {
+     "state": "DONE",
+     "time_s": 81.45,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 75.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 75.9,
+      "parked": 81.45
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 94.85,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 83.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 83.95,
+      "parked": 94.85
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 81.45,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 75.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 75.9,
+      "parked": 81.45
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 86.75,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 75.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 75.85,
+      "parked": 86.75
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 89.55,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 84.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 84.0,
+      "parked": 89.55
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 86.75,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 75.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 75.85,
+      "parked": 86.75
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 94.85,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 83.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 83.95,
+      "parked": 94.85
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 81.45,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 75.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 75.9,
+      "parked": 81.45
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 89.55,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 84.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 84.0,
+      "parked": 89.55
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 86.75,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 77.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 77.55,
+      "parked": 86.75
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 94.85,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 85.65,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 85.65,
+      "parked": 94.85
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 89.55,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 84.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 84.0,
+      "parked": 89.55
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 94.85,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 85.65,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 85.65,
+      "parked": 94.85
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 81.45,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 75.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 75.9,
+      "parked": 81.45
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 81.45,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 75.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 75.9,
+      "parked": 81.45
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 86.75,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 77.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 77.55,
+      "parked": 86.75
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 86.75,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 75.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 75.85,
+      "parked": 86.75
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 81.45,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 75.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 75.9,
+      "parked": 81.45
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 86.75,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 75.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 75.85,
+      "parked": 86.75
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 86.75,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 77.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 19.8,
+      "lap_2": 34.9,
+      "lap_3": 77.55,
+      "parked": 86.75
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    }
+   ]
+  },
+  {
+   "condition": "empty",
+   "preset": "aggressive",
+   "envelope": "nominal",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "parked": 20,
+    "exchange_done": 13,
+    "finish_s_median": 54.85,
+    "finish_s_max": 63.4,
+    "under_165_s": 20,
+    "vehicle_contact_free_runs": 20,
+    "laps_with_wall_contact": 0,
+    "mean_score_like": 367.25
+   },
+   "runs": [
+    {
+     "state": "DONE",
+     "time_s": 58.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.4,
+      "parked": 58.15
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.6,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 62.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 62.35,
+      "parked": 69.6
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 58.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.4,
+      "parked": 58.15
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.5,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.25,
+      "parked": 61.5
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 66.25,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 62.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 62.5,
+      "parked": 66.25
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.5,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.25,
+      "parked": 61.5
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.6,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 62.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 62.35,
+      "parked": 69.6
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 58.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.4,
+      "parked": 58.15
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 66.25,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 62.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 62.5,
+      "parked": 66.25
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.3,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 55.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 55.3,
+      "parked": 61.3
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.4,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 63.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 63.4,
+      "parked": 69.4
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 66.25,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 62.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 62.5,
+      "parked": 66.25
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.4,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 63.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 63.4,
+      "parked": 69.4
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 58.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.4,
+      "parked": 58.15
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 58.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.4,
+      "parked": 58.15
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.3,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 55.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 55.3,
+      "parked": 61.3
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.5,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.25,
+      "parked": 61.5
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 58.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.4,
+      "parked": 58.15
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.5,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.25,
+      "parked": 61.5
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.3,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 55.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 55.3,
+      "parked": 61.3
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    }
+   ]
+  },
+  {
+   "condition": "empty",
+   "preset": "safe",
+   "envelope": "v9",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "parked": 20,
+    "exchange_done": 13,
+    "finish_s_median": 86.7,
+    "finish_s_max": 88.15,
+    "under_165_s": 20,
+    "vehicle_contact_free_runs": 20,
+    "laps_with_wall_contact": 0,
+    "mean_score_like": 367.25
+   },
+   "runs": [
+    {
+     "state": "DONE",
+     "time_s": 93.05,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 86.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 86.6,
+      "parked": 93.05
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 99.05,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 86.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 86.7,
+      "parked": 99.05
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 93.05,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 86.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 86.6,
+      "parked": 93.05
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 99.05,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 86.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 86.7,
+      "parked": 99.05
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 93.05,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 86.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 86.6,
+      "parked": 93.05
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 99.05,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 86.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 86.7,
+      "parked": 99.05
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 99.05,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 86.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 86.7,
+      "parked": 99.05
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 93.05,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 86.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 86.6,
+      "parked": 93.05
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 93.05,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 86.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 86.6,
+      "parked": 93.05
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 98.2,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 88.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 88.15,
+      "parked": 98.2
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 98.2,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 88.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 88.15,
+      "parked": 98.2
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 93.05,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 86.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 86.6,
+      "parked": 93.05
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 98.2,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 88.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 88.15,
+      "parked": 98.2
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 93.05,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 86.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 86.6,
+      "parked": 93.05
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 93.05,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 86.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 86.6,
+      "parked": 93.05
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 98.2,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 88.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 88.15,
+      "parked": 98.2
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 99.05,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 86.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 86.7,
+      "parked": 99.05
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 93.05,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 86.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 86.6,
+      "parked": 93.05
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 99.05,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 86.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 86.7,
+      "parked": 99.05
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 98.2,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 88.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 23.15,
+      "lap_2": 40.9,
+      "lap_3": 88.15,
+      "parked": 98.2
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    }
+   ]
+  },
+  {
+   "condition": "empty",
+   "preset": "safe",
+   "envelope": "nominal",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "parked": 20,
+    "exchange_done": 13,
+    "finish_s_median": 61.0,
+    "finish_s_max": 61.9,
+    "under_165_s": 20,
+    "vehicle_contact_free_runs": 20,
+    "laps_with_wall_contact": 0,
+    "mean_score_like": 367.25
+   },
+   "runs": [
+    {
+     "state": "DONE",
+     "time_s": 65.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 60.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 60.95,
+      "parked": 65.15
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.05,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 61.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 61.0,
+      "parked": 69.05
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 65.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 60.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 60.95,
+      "parked": 65.15
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.05,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 61.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 61.0,
+      "parked": 69.05
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 65.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 60.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 60.95,
+      "parked": 65.15
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.05,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 61.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 61.0,
+      "parked": 69.05
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.05,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 61.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 61.0,
+      "parked": 69.05
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 65.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 60.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 60.95,
+      "parked": 65.15
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 65.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 60.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 60.95,
+      "parked": 65.15
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 68.5,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 61.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 61.9,
+      "parked": 68.5
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 68.5,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 61.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 61.9,
+      "parked": 68.5
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 65.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 60.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 60.95,
+      "parked": 65.15
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 68.5,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 61.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 61.9,
+      "parked": 68.5
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 65.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 60.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 60.95,
+      "parked": 65.15
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 65.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 60.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 60.95,
+      "parked": 65.15
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 68.5,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 61.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 61.9,
+      "parked": 68.5
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.05,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 61.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 61.0,
+      "parked": 69.05
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 65.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 60.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 60.95,
+      "parked": 65.15
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.05,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 61.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 61.0,
+      "parked": 69.05
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 68.5,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 61.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 15.8,
+      "lap_2": 27.65,
+      "lap_3": 61.9,
+      "parked": 68.5
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    }
+   ]
+  },
+  {
+   "condition": "aligned_vehicles",
+   "preset": "aggressive",
+   "envelope": "v9",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "parked": 20,
+    "exchange_done": 11,
+    "finish_s_median": 109.58,
+    "finish_s_max": 116.3,
+    "under_165_s": 20,
+    "vehicle_contact_free_runs": 0,
+    "laps_with_wall_contact": 24,
+    "mean_score_like": 267.75
+   },
+   "runs": [
+    {
+     "state": "DONE",
+     "time_s": 121.2,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      272,
+      271,
+      272
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 110.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.55,
+      "lap_2": 52.4,
+      "lap_3": 110.25,
+      "parked": 121.2
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 121.95,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "lane_change"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      67,
+      67,
+      67
+     ],
+     "vehicle_contact_steps": [
+      353,
+      352,
+      352
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 116.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 33.3,
+      "lap_2": 61.8,
+      "lap_3": 116.3,
+      "parked": 121.95
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 129.15
+    },
+    {
+     "state": "DONE",
+     "time_s": 114.5,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      75,
+      76,
+      75
+     ],
+     "vehicle_contact_steps": [
+      290,
+      290,
+      292
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 108.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 30.8,
+      "lap_2": 56.85,
+      "lap_3": 108.9,
+      "parked": 114.5
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.62
+    },
+    {
+     "state": "DONE",
+     "time_s": 117.0,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      341,
+      341,
+      342
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 111.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 31.65,
+      "lap_2": 58.5,
+      "lap_3": 111.35,
+      "parked": 117.0
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 126.58
+    },
+    {
+     "state": "DONE",
+     "time_s": 103.5,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      148,
+      146,
+      148
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 94.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 25.45,
+      "lap_2": 46.05,
+      "lap_3": 94.3,
+      "parked": 103.5
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.27
+    },
+    {
+     "state": "DONE",
+     "time_s": 114.25,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      270,
+      271,
+      272
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 108.75,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.05,
+      "lap_2": 51.45,
+      "lap_3": 108.75,
+      "parked": 114.25
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 121.65,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      62,
+      63,
+      62
+     ],
+     "vehicle_contact_steps": [
+      276,
+      277,
+      276
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 116.05,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 30.5,
+      "lap_2": 56.25,
+      "lap_3": 116.05,
+      "parked": 121.65
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 127.64
+    },
+    {
+     "state": "DONE",
+     "time_s": 119.25,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      282,
+      283,
+      285
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 113.65,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 29.7,
+      "lap_2": 54.65,
+      "lap_3": 113.65,
+      "parked": 119.25
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 126.02
+    },
+    {
+     "state": "DONE",
+     "time_s": 126.75,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      288,
+      288,
+      290
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 115.8,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 30.45,
+      "lap_2": 56.05,
+      "lap_3": 115.8,
+      "parked": 126.75
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 125.85
+    },
+    {
+     "state": "DONE",
+     "time_s": 110.65,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      233,
+      232,
+      233
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 99.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 27.8,
+      "lap_2": 50.85,
+      "lap_3": 99.7,
+      "parked": 110.65
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.15
+    },
+    {
+     "state": "DONE",
+     "time_s": 119.7,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      13,
+      12,
+      13
+     ],
+     "vehicle_contact_steps": [
+      241,
+      242,
+      242
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 108.75,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.05,
+      "lap_2": 51.4,
+      "lap_3": 108.75,
+      "parked": 119.7
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 119.4
+    },
+    {
+     "state": "DONE",
+     "time_s": 111.85,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      280,
+      279,
+      282
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 102.8,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.25,
+      "lap_2": 51.75,
+      "lap_3": 102.8,
+      "parked": 111.85
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 120.9,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      62,
+      61,
+      62
+     ],
+     "vehicle_contact_steps": [
+      312,
+      311,
+      313
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 111.75,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 31.25,
+      "lap_2": 57.6,
+      "lap_3": 111.75,
+      "parked": 120.9
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.4
+    },
+    {
+     "state": "DONE",
+     "time_s": 123.3,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      51,
+      52,
+      52
+     ],
+     "vehicle_contact_steps": [
+      331,
+      331,
+      334
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 114.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 32.0,
+      "lap_2": 59.25,
+      "lap_3": 114.25,
+      "parked": 123.3
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.35
+    },
+    {
+     "state": "DONE",
+     "time_s": 110.0,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      245,
+      243,
+      244
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 100.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 27.6,
+      "lap_2": 50.45,
+      "lap_3": 100.85,
+      "parked": 110.0
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.35
+    },
+    {
+     "state": "DONE",
+     "time_s": 111.65,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      14,
+      14,
+      15
+     ],
+     "vehicle_contact_steps": [
+      205,
+      205,
+      204
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 106.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 27.2,
+      "lap_2": 49.6,
+      "lap_3": 106.0,
+      "parked": 111.65
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 119.44
+    },
+    {
+     "state": "DONE",
+     "time_s": 126.05,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      48,
+      47,
+      47
+     ],
+     "vehicle_contact_steps": [
+      332,
+      334,
+      327
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 115.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 32.9,
+      "lap_2": 61.15,
+      "lap_3": 115.0,
+      "parked": 126.05
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 134.41
+    },
+    {
+     "state": "DONE",
+     "time_s": 114.45,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      274,
+      273,
+      274
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 108.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.1,
+      "lap_2": 51.5,
+      "lap_3": 108.9,
+      "parked": 114.45
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 113.5,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      278,
+      278,
+      280
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 102.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.65,
+      "lap_2": 52.65,
+      "lap_3": 102.55,
+      "parked": 113.5
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 120.5,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      270,
+      270,
+      270
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 111.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.35,
+      "lap_2": 52.05,
+      "lap_3": 111.35,
+      "parked": 120.5
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    }
+   ]
+  },
+  {
+   "condition": "aligned_vehicles",
+   "preset": "aggressive",
+   "envelope": "nominal",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "parked": 20,
+    "exchange_done": 11,
+    "finish_s_median": 80.18,
+    "finish_s_max": 84.8,
+    "under_165_s": 20,
+    "vehicle_contact_free_runs": 0,
+    "laps_with_wall_contact": 24,
+    "mean_score_like": 267.75
+   },
+   "runs": [
+    {
+     "state": "DONE",
+     "time_s": 88.25,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      178,
+      178,
+      178
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 81.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.95,
+      "lap_2": 36.4,
+      "lap_3": 81.0,
+      "parked": 88.25
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 85.9,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "lane_change"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      42,
+      43,
+      44
+     ],
+     "vehicle_contact_steps": [
+      228,
+      229,
+      230
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 82.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 22.95,
+      "lap_2": 42.4,
+      "lap_3": 82.15,
+      "parked": 85.9
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 129.15
+    },
+    {
+     "state": "DONE",
+     "time_s": 80.8,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      55,
+      55,
+      53
+     ],
+     "vehicle_contact_steps": [
+      187,
+      187,
+      186
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 77.05,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.3,
+      "lap_2": 39.05,
+      "lap_3": 77.05,
+      "parked": 80.8
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.62
+    },
+    {
+     "state": "DONE",
+     "time_s": 82.45,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      224,
+      224,
+      224
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 78.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.85,
+      "lap_2": 40.15,
+      "lap_3": 78.7,
+      "parked": 82.45
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 126.58
+    },
+    {
+     "state": "DONE",
+     "time_s": 73.7,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      98,
+      96,
+      98
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 67.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 17.9,
+      "lap_2": 32.25,
+      "lap_3": 67.7,
+      "parked": 73.7
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.27
+    },
+    {
+     "state": "DONE",
+     "time_s": 83.9,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      176,
+      177,
+      178
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 80.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.6,
+      "lap_2": 35.7,
+      "lap_3": 80.15,
+      "parked": 83.9
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 88.35,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      36,
+      37,
+      37
+     ],
+     "vehicle_contact_steps": [
+      179,
+      180,
+      179
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 84.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.1,
+      "lap_2": 38.7,
+      "lap_3": 84.6,
+      "parked": 88.35
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 127.64
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.25,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      187,
+      186,
+      187
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 83.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 20.75,
+      "lap_2": 37.95,
+      "lap_3": 83.5,
+      "parked": 87.25
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 126.02
+    },
+    {
+     "state": "DONE",
+     "time_s": 92.05,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      189,
+      190,
+      190
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 84.8,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.25,
+      "lap_2": 38.95,
+      "lap_3": 84.8,
+      "parked": 92.05
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 125.85
+    },
+    {
+     "state": "DONE",
+     "time_s": 79.35,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      152,
+      152,
+      152
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 72.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.7,
+      "lap_2": 35.85,
+      "lap_3": 72.1,
+      "parked": 79.35
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.15
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.45,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      9,
+      9,
+      9
+     ],
+     "vehicle_contact_steps": [
+      159,
+      158,
+      158
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 80.2,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.7,
+      "lap_2": 35.85,
+      "lap_3": 80.2,
+      "parked": 87.45
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 119.4
+    },
+    {
+     "state": "DONE",
+     "time_s": 79.4,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      185,
+      183,
+      185
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 73.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.8,
+      "lap_2": 36.0,
+      "lap_3": 73.4,
+      "parked": 79.4
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 84.45,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      39,
+      40,
+      40
+     ],
+     "vehicle_contact_steps": [
+      204,
+      205,
+      202
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 78.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.65,
+      "lap_2": 39.65,
+      "lap_3": 78.5,
+      "parked": 84.45
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.4
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.85,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      37,
+      38,
+      38
+     ],
+     "vehicle_contact_steps": [
+      221,
+      220,
+      221
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 81.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 22.65,
+      "lap_2": 41.65,
+      "lap_3": 81.85,
+      "parked": 87.85
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.35
+    },
+    {
+     "state": "DONE",
+     "time_s": 78.0,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      159,
+      158,
+      159
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 72.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.3,
+      "lap_2": 35.1,
+      "lap_3": 72.0,
+      "parked": 78.0
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.35
+    },
+    {
+     "state": "DONE",
+     "time_s": 82.7,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      10,
+      10,
+      10
+     ],
+     "vehicle_contact_steps": [
+      134,
+      135,
+      136
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 78.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.2,
+      "lap_2": 34.9,
+      "lap_3": 78.95,
+      "parked": 82.7
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 119.44
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.6,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      34,
+      34,
+      34
+     ],
+     "vehicle_contact_steps": [
+      209,
+      208,
+      211
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 80.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 22.45,
+      "lap_2": 41.3,
+      "lap_3": 80.35,
+      "parked": 87.6
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 134.41
+    },
+    {
+     "state": "DONE",
+     "time_s": 84.0,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      179,
+      180,
+      179
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 80.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.65,
+      "lap_2": 35.8,
+      "lap_3": 80.25,
+      "parked": 84.0
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 80.4,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      182,
+      183,
+      182
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 73.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 20.05,
+      "lap_2": 36.55,
+      "lap_3": 73.15,
+      "parked": 80.4
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.75,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      180,
+      175,
+      180
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 81.75,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.9,
+      "lap_2": 36.15,
+      "lap_3": 81.75,
+      "parked": 87.75
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    }
+   ]
+  },
+  {
+   "condition": "aligned_vehicles",
+   "preset": "safe",
+   "envelope": "v9",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "parked": 20,
+    "exchange_done": 11,
+    "finish_s_median": 117.42,
+    "finish_s_max": 131.5,
+    "under_165_s": 20,
+    "vehicle_contact_free_runs": 0,
+    "laps_with_wall_contact": 24,
+    "mean_score_like": 267.75
+   },
+   "runs": [
+    {
+     "state": "DONE",
+     "time_s": 129.2,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      323,
+      322,
+      319
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 116.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 33.25,
+      "lap_2": 61.05,
+      "lap_3": 116.85,
+      "parked": 129.2
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 137.95,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "lane_change"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      74,
+      75,
+      75
+     ],
+     "vehicle_contact_steps": [
+      407,
+      405,
+      405
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 131.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 38.15,
+      "lap_2": 70.8,
+      "lap_3": 131.5,
+      "parked": 137.95
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 129.15
+    },
+    {
+     "state": "DONE",
+     "time_s": 130.7,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      84,
+      85,
+      84
+     ],
+     "vehicle_contact_steps": [
+      341,
+      341,
+      342
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 124.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 35.7,
+      "lap_2": 65.95,
+      "lap_3": 124.3,
+      "parked": 130.7
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.62
+    },
+    {
+     "state": "DONE",
+     "time_s": 132.85,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      396,
+      395,
+      399
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 126.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 36.4,
+      "lap_2": 67.35,
+      "lap_3": 126.45,
+      "parked": 132.85
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 126.58
+    },
+    {
+     "state": "DONE",
+     "time_s": 117.15,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      174,
+      173,
+      173
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 107.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 29.45,
+      "lap_2": 53.5,
+      "lap_3": 107.0,
+      "parked": 117.15
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.27
+    },
+    {
+     "state": "DONE",
+     "time_s": 121.6,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      321,
+      320,
+      318
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 115.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 32.7,
+      "lap_2": 59.95,
+      "lap_3": 115.15,
+      "parked": 121.6
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 129.7,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      72,
+      73,
+      74
+     ],
+     "vehicle_contact_steps": [
+      327,
+      327,
+      329
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 123.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 35.35,
+      "lap_2": 65.35,
+      "lap_3": 123.3,
+      "parked": 129.7
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 127.64
+    },
+    {
+     "state": "DONE",
+     "time_s": 126.65,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      332,
+      331,
+      332
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 120.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 34.35,
+      "lap_2": 63.25,
+      "lap_3": 120.25,
+      "parked": 126.65
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 126.02
+    },
+    {
+     "state": "DONE",
+     "time_s": 134.3,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      337,
+      337,
+      337
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 122.05,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 34.95,
+      "lap_2": 64.5,
+      "lap_3": 122.05,
+      "parked": 134.3
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 125.85
+    },
+    {
+     "state": "DONE",
+     "time_s": 126.2,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      275,
+      274,
+      275
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 113.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 32.2,
+      "lap_2": 58.95,
+      "lap_3": 113.85,
+      "parked": 126.2
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.15
+    },
+    {
+     "state": "DONE",
+     "time_s": 126.85,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      15,
+      12,
+      15
+     ],
+     "vehicle_contact_steps": [
+      285,
+      284,
+      285
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 114.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 32.5,
+      "lap_2": 59.5,
+      "lap_3": 114.6,
+      "parked": 126.85
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 119.4
+    },
+    {
+     "state": "DONE",
+     "time_s": 127.35,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      332,
+      329,
+      332
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 117.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 32.9,
+      "lap_2": 60.3,
+      "lap_3": 117.25,
+      "parked": 127.35
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 136.2,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      69,
+      69,
+      69
+     ],
+     "vehicle_contact_steps": [
+      359,
+      361,
+      360
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 126.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 35.8,
+      "lap_2": 66.3,
+      "lap_3": 126.15,
+      "parked": 136.2
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.4
+    },
+    {
+     "state": "DONE",
+     "time_s": 139.0,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      61,
+      62,
+      61
+     ],
+     "vehicle_contact_steps": [
+      386,
+      385,
+      387
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 128.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 36.75,
+      "lap_2": 68.1,
+      "lap_3": 128.95,
+      "parked": 139.0
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.35
+    },
+    {
+     "state": "DONE",
+     "time_s": 124.75,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      289,
+      288,
+      287
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 114.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 32.1,
+      "lap_2": 58.7,
+      "lap_3": 114.7,
+      "parked": 124.75
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.35
+    },
+    {
+     "state": "DONE",
+     "time_s": 117.85,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      18,
+      18,
+      18
+     ],
+     "vehicle_contact_steps": [
+      242,
+      242,
+      242
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 111.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 31.4,
+      "lap_2": 57.4,
+      "lap_3": 111.45,
+      "parked": 117.85
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 119.44
+    },
+    {
+     "state": "DONE",
+     "time_s": 143.15,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      56,
+      56,
+      55
+     ],
+     "vehicle_contact_steps": [
+      382,
+      383,
+      382
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 130.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 37.85,
+      "lap_2": 70.4,
+      "lap_3": 130.9,
+      "parked": 143.15
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 134.41
+    },
+    {
+     "state": "DONE",
+     "time_s": 121.6,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      322,
+      323,
+      323
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 115.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 32.65,
+      "lap_2": 59.9,
+      "lap_3": 115.15,
+      "parked": 121.6
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 129.7,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      330,
+      329,
+      327
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 117.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 33.4,
+      "lap_2": 61.35,
+      "lap_3": 117.35,
+      "parked": 129.7
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 127.55,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      318,
+      318,
+      319
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 117.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 32.95,
+      "lap_2": 60.5,
+      "lap_3": 117.5,
+      "parked": 127.55
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    }
+   ]
+  },
+  {
+   "condition": "aligned_vehicles",
+   "preset": "safe",
+   "envelope": "nominal",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "parked": 20,
+    "exchange_done": 11,
+    "finish_s_median": 82.75,
+    "finish_s_max": 91.75,
+    "under_165_s": 20,
+    "vehicle_contact_free_runs": 0,
+    "laps_with_wall_contact": 24,
+    "mean_score_like": 267.75
+   },
+   "runs": [
+    {
+     "state": "DONE",
+     "time_s": 90.4,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      210,
+      212,
+      211
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 82.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.9,
+      "lap_2": 41.9,
+      "lap_3": 82.35,
+      "parked": 90.4
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 96.05,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "lane_change"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      49,
+      50,
+      49
+     ],
+     "vehicle_contact_steps": [
+      269,
+      265,
+      267
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 91.75,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 26.1,
+      "lap_2": 48.2,
+      "lap_3": 91.75,
+      "parked": 96.05
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 129.15
+    },
+    {
+     "state": "DONE",
+     "time_s": 91.3,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      60,
+      58,
+      58
+     ],
+     "vehicle_contact_steps": [
+      222,
+      220,
+      223
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 87.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 24.5,
+      "lap_2": 45.0,
+      "lap_3": 87.1,
+      "parked": 91.3
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.62
+    },
+    {
+     "state": "DONE",
+     "time_s": 92.95,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      262,
+      263,
+      262
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 88.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 25.05,
+      "lap_2": 46.15,
+      "lap_3": 88.7,
+      "parked": 92.95
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 126.58
+    },
+    {
+     "state": "DONE",
+     "time_s": 82.4,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      116,
+      114,
+      116
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 75.75,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 20.5,
+      "lap_2": 37.0,
+      "lap_3": 75.75,
+      "parked": 82.4
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.27
+    },
+    {
+     "state": "DONE",
+     "time_s": 85.55,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      212,
+      211,
+      212
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 81.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.55,
+      "lap_2": 41.2,
+      "lap_3": 81.3,
+      "parked": 85.55
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 90.5,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      41,
+      42,
+      41
+     ],
+     "vehicle_contact_steps": [
+      212,
+      212,
+      212
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 86.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 24.25,
+      "lap_2": 44.5,
+      "lap_3": 86.3,
+      "parked": 90.5
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 127.64
+    },
+    {
+     "state": "DONE",
+     "time_s": 88.9,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      219,
+      219,
+      219
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 84.65,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 23.7,
+      "lap_2": 43.4,
+      "lap_3": 84.65,
+      "parked": 88.9
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 126.02
+    },
+    {
+     "state": "DONE",
+     "time_s": 94.7,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      223,
+      222,
+      224
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 86.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 24.4,
+      "lap_2": 44.75,
+      "lap_3": 86.6,
+      "parked": 94.7
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 125.85
+    },
+    {
+     "state": "DONE",
+     "time_s": 89.1,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      180,
+      180,
+      180
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 81.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.5,
+      "lap_2": 41.05,
+      "lap_3": 81.0,
+      "parked": 89.1
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.15
+    },
+    {
+     "state": "DONE",
+     "time_s": 89.55,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      9,
+      9,
+      8
+     ],
+     "vehicle_contact_steps": [
+      189,
+      190,
+      189
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 81.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.6,
+      "lap_2": 41.3,
+      "lap_3": 81.45,
+      "parked": 89.55
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 119.4
+    },
+    {
+     "state": "DONE",
+     "time_s": 89.2,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      219,
+      216,
+      219
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 82.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.75,
+      "lap_2": 41.45,
+      "lap_3": 82.6,
+      "parked": 89.2
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 94.9,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      44,
+      46,
+      46
+     ],
+     "vehicle_contact_steps": [
+      236,
+      237,
+      237
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 88.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 24.6,
+      "lap_2": 45.25,
+      "lap_3": 88.3,
+      "parked": 94.9
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.4
+    },
+    {
+     "state": "DONE",
+     "time_s": 97.15,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      37,
+      39,
+      39
+     ],
+     "vehicle_contact_steps": [
+      250,
+      251,
+      250
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 90.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 25.35,
+      "lap_2": 46.8,
+      "lap_3": 90.55,
+      "parked": 97.15
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.35
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.75,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      191,
+      189,
+      190
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 81.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.2,
+      "lap_2": 40.45,
+      "lap_3": 81.1,
+      "parked": 87.75
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.35
+    },
+    {
+     "state": "DONE",
+     "time_s": 83.95,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      10,
+      10,
+      11
+     ],
+     "vehicle_contact_steps": [
+      160,
+      160,
+      159
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 79.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.05,
+      "lap_2": 40.15,
+      "lap_3": 79.7,
+      "parked": 83.95
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 119.44
+    },
+    {
+     "state": "DONE",
+     "time_s": 98.85,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      39,
+      39,
+      39
+     ],
+     "vehicle_contact_steps": [
+      247,
+      245,
+      246
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 90.75,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 25.75,
+      "lap_2": 47.5,
+      "lap_3": 90.75,
+      "parked": 98.85
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 134.41
+    },
+    {
+     "state": "DONE",
+     "time_s": 85.55,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      214,
+      212,
+      211
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 81.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.6,
+      "lap_2": 41.2,
+      "lap_3": 81.3,
+      "parked": 85.55
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 90.75,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      217,
+      217,
+      215
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 82.65,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 23.05,
+      "lap_2": 42.15,
+      "lap_3": 82.65,
+      "parked": 90.75
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 89.45,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      211,
+      209,
+      210
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 82.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.8,
+      "lap_2": 41.6,
+      "lap_3": 82.85,
+      "parked": 89.45
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    }
+   ]
+  },
+  {
+   "condition": "random_yaw_vehicles",
+   "preset": "aggressive",
+   "envelope": "v9",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "parked": 20,
+    "exchange_done": 12,
+    "finish_s_median": 103.68,
+    "finish_s_max": 122.05,
+    "under_165_s": 20,
+    "vehicle_contact_free_runs": 0,
+    "laps_with_wall_contact": 9,
+    "mean_score_like": 282.25
+   },
+   "runs": [
+    {
+     "state": "DONE",
+     "time_s": 120.0,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      277,
+      278,
+      277
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 109.05,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.2,
+      "lap_2": 51.7,
+      "lap_3": 109.05,
+      "parked": 120.0
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 116.75,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      70,
+      69,
+      70
+     ],
+     "vehicle_contact_steps": [
+      313,
+      310,
+      312
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 111.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 31.55,
+      "lap_2": 58.35,
+      "lap_3": 111.1,
+      "parked": 116.75
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.51
+    },
+    {
+     "state": "DONE",
+     "time_s": 108.7,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      305,
+      304,
+      305
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 103.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.9,
+      "lap_2": 53.1,
+      "lap_3": 103.1,
+      "parked": 108.7
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 106.65,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      279,
+      277,
+      279
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 101.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.25,
+      "lap_2": 51.7,
+      "lap_3": 101.15,
+      "parked": 106.65
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 113.9,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      285,
+      284,
+      284
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 102.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.85,
+      "lap_2": 52.95,
+      "lap_3": 102.95,
+      "parked": 113.9
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 112.95,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      283,
+      282,
+      283
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 103.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.6,
+      "lap_2": 52.45,
+      "lap_3": 103.9,
+      "parked": 112.95
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 115.55,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      289,
+      290,
+      289
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 110.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.5,
+      "lap_2": 52.25,
+      "lap_3": 110.0,
+      "parked": 115.55
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 114.6,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      278,
+      276,
+      277
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 109.05,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.2,
+      "lap_2": 51.65,
+      "lap_3": 109.05,
+      "parked": 114.6
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 112.6,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      287,
+      288,
+      287
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 103.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.45,
+      "lap_2": 52.2,
+      "lap_3": 103.45,
+      "parked": 112.6
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 114.65,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      36,
+      36,
+      37
+     ],
+     "vehicle_contact_steps": [
+      246,
+      245,
+      246
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 109.05,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.15,
+      "lap_2": 51.55,
+      "lap_3": 109.05,
+      "parked": 114.65
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 119.42
+    },
+    {
+     "state": "DONE",
+     "time_s": 112.2,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      278,
+      279,
+      280
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 101.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.25,
+      "lap_2": 51.8,
+      "lap_3": 101.25,
+      "parked": 112.2
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 112.25,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      284,
+      283,
+      284
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 103.2,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.35,
+      "lap_2": 52.0,
+      "lap_3": 103.2,
+      "parked": 112.25
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 115.75,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      291,
+      290,
+      289
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 110.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.55,
+      "lap_2": 52.3,
+      "lap_3": 110.1,
+      "parked": 115.75
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 107.0,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      279,
+      279,
+      279
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 101.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.35,
+      "lap_2": 51.95,
+      "lap_3": 101.5,
+      "parked": 107.0
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 112.15,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      281,
+      282,
+      283
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 103.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.3,
+      "lap_2": 51.9,
+      "lap_3": 103.1,
+      "parked": 112.15
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 122.05,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      305,
+      302,
+      303
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 112.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.9,
+      "lap_2": 53.05,
+      "lap_3": 112.85,
+      "parked": 122.05
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 131.1,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      64,
+      64,
+      64
+     ],
+     "vehicle_contact_steps": [
+      329,
+      331,
+      328
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 122.05,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 31.95,
+      "lap_2": 59.25,
+      "lap_3": 122.05,
+      "parked": 131.1
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 127.48
+    },
+    {
+     "state": "DONE",
+     "time_s": 112.65,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      287,
+      288,
+      286
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 103.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 28.45,
+      "lap_2": 52.2,
+      "lap_3": 103.45,
+      "parked": 112.65
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 123.65,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      311,
+      312,
+      310
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 112.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 29.35,
+      "lap_2": 54.0,
+      "lap_3": 112.7,
+      "parked": 123.65
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 105.05,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      255,
+      254,
+      255
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 99.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 4.75,
+      "lap_1": 27.7,
+      "lap_2": 50.6,
+      "lap_3": 99.4,
+      "parked": 105.05
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.25
+    }
+   ]
+  },
+  {
+   "condition": "random_yaw_vehicles",
+   "preset": "aggressive",
+   "envelope": "nominal",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "parked": 20,
+    "exchange_done": 12,
+    "finish_s_median": 73.88,
+    "finish_s_max": 88.35,
+    "under_165_s": 20,
+    "vehicle_contact_free_runs": 0,
+    "laps_with_wall_contact": 9,
+    "mean_score_like": 282.25
+   },
+   "runs": [
+    {
+     "state": "DONE",
+     "time_s": 87.5,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      183,
+      182,
+      183
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 80.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.75,
+      "lap_2": 35.95,
+      "lap_3": 80.35,
+      "parked": 87.5
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 82.4,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      46,
+      46,
+      47
+     ],
+     "vehicle_contact_steps": [
+      203,
+      206,
+      202
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 78.65,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.8,
+      "lap_2": 40.15,
+      "lap_3": 78.65,
+      "parked": 82.4
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.51
+    },
+    {
+     "state": "DONE",
+     "time_s": 77.4,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      199,
+      200,
+      199
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 73.65,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 20.15,
+      "lap_2": 36.8,
+      "lap_3": 73.65,
+      "parked": 77.4
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 76.2,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      183,
+      184,
+      183
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 72.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.75,
+      "lap_2": 36.0,
+      "lap_3": 72.45,
+      "parked": 76.2
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 80.6,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      186,
+      188,
+      186
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 73.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 20.1,
+      "lap_2": 36.7,
+      "lap_3": 73.35,
+      "parked": 80.6
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 79.9,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      184,
+      185,
+      184
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 73.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.95,
+      "lap_2": 36.35,
+      "lap_3": 73.9,
+      "parked": 79.9
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 84.85,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      190,
+      191,
+      190
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 81.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.9,
+      "lap_2": 36.35,
+      "lap_3": 81.1,
+      "parked": 84.85
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 84.2,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      183,
+      183,
+      182
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 80.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.75,
+      "lap_2": 35.95,
+      "lap_3": 80.45,
+      "parked": 84.2
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 79.8,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      189,
+      190,
+      189
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 73.8,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.9,
+      "lap_2": 36.3,
+      "lap_3": 73.8,
+      "parked": 79.8
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 84.7,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      25,
+      25,
+      25
+     ],
+     "vehicle_contact_steps": [
+      164,
+      161,
+      162
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 80.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.95,
+      "lap_2": 36.3,
+      "lap_3": 80.95,
+      "parked": 84.7
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 119.42
+    },
+    {
+     "state": "DONE",
+     "time_s": 79.4,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      184,
+      182,
+      184
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 72.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.75,
+      "lap_2": 35.95,
+      "lap_3": 72.25,
+      "parked": 79.4
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 79.55,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      187,
+      185,
+      187
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 73.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.85,
+      "lap_2": 36.1,
+      "lap_3": 73.55,
+      "parked": 79.55
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 84.9,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      191,
+      192,
+      191
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 81.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.95,
+      "lap_2": 36.4,
+      "lap_3": 81.15,
+      "parked": 84.9
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 76.45,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      184,
+      183,
+      184
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 72.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.85,
+      "lap_2": 36.15,
+      "lap_3": 72.7,
+      "parked": 76.45
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 79.45,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      185,
+      186,
+      185
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 73.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.8,
+      "lap_2": 36.1,
+      "lap_3": 73.5,
+      "parked": 79.45
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 88.75,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      201,
+      200,
+      201
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 82.75,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 20.2,
+      "lap_2": 36.85,
+      "lap_3": 82.75,
+      "parked": 88.75
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 94.35,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      45,
+      46,
+      45
+     ],
+     "vehicle_contact_steps": [
+      213,
+      214,
+      215
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 88.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 22.1,
+      "lap_2": 40.7,
+      "lap_3": 88.35,
+      "parked": 94.35
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 127.48
+    },
+    {
+     "state": "DONE",
+     "time_s": 79.85,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      190,
+      188,
+      190
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 73.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.95,
+      "lap_2": 36.3,
+      "lap_3": 73.85,
+      "parked": 79.85
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 89.8,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      204,
+      204,
+      206
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 82.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 20.45,
+      "lap_2": 37.4,
+      "lap_3": 82.55,
+      "parked": 89.8
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 74.85,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      165,
+      166,
+      165
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 71.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.3,
+      "lap_2": 35.1,
+      "lap_3": 71.1,
+      "parked": 74.85
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.25
+    }
+   ]
+  },
+  {
+   "condition": "random_yaw_vehicles",
+   "preset": "safe",
+   "envelope": "v9",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "parked": 20,
+    "exchange_done": 12,
+    "finish_s_median": 117.25,
+    "finish_s_max": 128.85,
+    "under_165_s": 20,
+    "vehicle_contact_free_runs": 0,
+    "laps_with_wall_contact": 9,
+    "mean_score_like": 282.25
+   },
+   "runs": [
+    {
+     "state": "DONE",
+     "time_s": 127.6,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      325,
+      325,
+      326
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 115.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 32.7,
+      "lap_2": 60.0,
+      "lap_3": 115.3,
+      "parked": 127.6
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 132.4,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      78,
+      78,
+      80
+     ],
+     "vehicle_contact_steps": [
+      359,
+      359,
+      363
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 125.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 36.2,
+      "lap_2": 67.0,
+      "lap_3": 125.95,
+      "parked": 132.4
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.51
+    },
+    {
+     "state": "DONE",
+     "time_s": 124.35,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      360,
+      359,
+      360
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 117.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 33.6,
+      "lap_2": 61.75,
+      "lap_3": 117.9,
+      "parked": 124.35
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 122.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      329,
+      329,
+      329
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 115.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 32.8,
+      "lap_2": 60.2,
+      "lap_3": 115.7,
+      "parked": 122.15
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 129.55,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      334,
+      333,
+      336
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 117.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 33.35,
+      "lap_2": 61.3,
+      "lap_3": 117.3,
+      "parked": 129.55
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 128.35,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      334,
+      333,
+      333
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 118.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 33.2,
+      "lap_2": 61.0,
+      "lap_3": 118.25,
+      "parked": 128.35
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 123.1,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      344,
+      342,
+      344
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 116.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 33.15,
+      "lap_2": 60.85,
+      "lap_3": 116.7,
+      "parked": 123.1
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 121.9,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      326,
+      326,
+      329
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 115.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 32.7,
+      "lap_2": 60.0,
+      "lap_3": 115.45,
+      "parked": 121.9
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 128.05,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      342,
+      342,
+      342
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 117.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 33.1,
+      "lap_2": 60.8,
+      "lap_3": 117.95,
+      "parked": 128.05
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 121.55,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      42,
+      44,
+      43
+     ],
+     "vehicle_contact_steps": [
+      288,
+      292,
+      290
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 115.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 32.55,
+      "lap_2": 59.8,
+      "lap_3": 115.15,
+      "parked": 121.55
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 119.42
+    },
+    {
+     "state": "DONE",
+     "time_s": 127.85,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      329,
+      329,
+      329
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 115.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 32.8,
+      "lap_2": 60.2,
+      "lap_3": 115.6,
+      "parked": 127.85
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 127.65,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      336,
+      335,
+      334
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 117.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 33.0,
+      "lap_2": 60.55,
+      "lap_3": 117.55,
+      "parked": 127.65
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 123.2,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      343,
+      345,
+      343
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 116.8,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 33.15,
+      "lap_2": 60.95,
+      "lap_3": 116.8,
+      "parked": 123.2
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 122.55,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      330,
+      330,
+      330
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 116.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 32.95,
+      "lap_2": 60.5,
+      "lap_3": 116.15,
+      "parked": 122.55
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 127.3,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      332,
+      332,
+      332
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 117.2,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 32.85,
+      "lap_2": 60.3,
+      "lap_3": 117.2,
+      "parked": 127.3
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 129.3,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      357,
+      357,
+      358
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 119.2,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 33.5,
+      "lap_2": 61.6,
+      "lap_3": 119.2,
+      "parked": 129.3
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 138.9,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      72,
+      72,
+      72
+     ],
+     "vehicle_contact_steps": [
+      384,
+      382,
+      383
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 128.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 36.8,
+      "lap_2": 68.1,
+      "lap_3": 128.85,
+      "parked": 138.9
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 127.48
+    },
+    {
+     "state": "DONE",
+     "time_s": 128.0,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      340,
+      339,
+      341
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 117.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 33.1,
+      "lap_2": 60.75,
+      "lap_3": 117.95,
+      "parked": 128.0
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 131.8,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      367,
+      367,
+      367
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 119.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 34.1,
+      "lap_2": 62.8,
+      "lap_3": 119.55,
+      "parked": 131.8
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 120.0,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      300,
+      300,
+      300
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 113.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 5.45,
+      "lap_1": 32.1,
+      "lap_2": 58.8,
+      "lap_3": 113.6,
+      "parked": 120.0
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.25
+    }
+   ]
+  },
+  {
+   "condition": "random_yaw_vehicles",
+   "preset": "safe",
+   "envelope": "nominal",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "parked": 20,
+    "exchange_done": 12,
+    "finish_s_median": 82.72,
+    "finish_s_max": 90.3,
+    "under_165_s": 20,
+    "vehicle_contact_free_runs": 0,
+    "laps_with_wall_contact": 9,
+    "mean_score_like": 282.25
+   },
+   "runs": [
+    {
+     "state": "DONE",
+     "time_s": 89.5,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      216,
+      214,
+      216
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 81.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.65,
+      "lap_2": 41.3,
+      "lap_3": 81.4,
+      "parked": 89.5
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 92.65,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      53,
+      52,
+      53
+     ],
+     "vehicle_contact_steps": [
+      240,
+      238,
+      239
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 88.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 25.0,
+      "lap_2": 45.95,
+      "lap_3": 88.45,
+      "parked": 92.65
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.51
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.45,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      237,
+      237,
+      237
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 83.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 23.2,
+      "lap_2": 42.45,
+      "lap_3": 83.15,
+      "parked": 87.45
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 85.85,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      217,
+      217,
+      215
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 81.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.7,
+      "lap_2": 41.45,
+      "lap_3": 81.6,
+      "parked": 85.85
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 90.95,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      222,
+      221,
+      222
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 82.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 23.1,
+      "lap_2": 42.25,
+      "lap_3": 82.85,
+      "parked": 90.95
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 90.1,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      221,
+      221,
+      221
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 83.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 23.0,
+      "lap_2": 42.05,
+      "lap_3": 83.45,
+      "parked": 90.1
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 86.55,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      226,
+      226,
+      226
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 82.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.9,
+      "lap_2": 41.85,
+      "lap_3": 82.25,
+      "parked": 86.55
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 85.8,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      216,
+      216,
+      216
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 81.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.65,
+      "lap_2": 41.35,
+      "lap_3": 81.55,
+      "parked": 85.8
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 89.8,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      225,
+      226,
+      225
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 83.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.9,
+      "lap_2": 41.85,
+      "lap_3": 83.15,
+      "parked": 89.8
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 86.3,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      28,
+      28,
+      29
+     ],
+     "vehicle_contact_steps": [
+      193,
+      193,
+      191
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 82.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.85,
+      "lap_2": 41.75,
+      "lap_3": 82.1,
+      "parked": 86.3
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 119.42
+    },
+    {
+     "state": "DONE",
+     "time_s": 89.65,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      217,
+      218,
+      218
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 81.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.65,
+      "lap_2": 41.4,
+      "lap_3": 81.6,
+      "parked": 89.65
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 89.4,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      222,
+      220,
+      221
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 82.8,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.8,
+      "lap_2": 41.6,
+      "lap_3": 82.8,
+      "parked": 89.4
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 86.5,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      225,
+      225,
+      225
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 82.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.9,
+      "lap_2": 41.85,
+      "lap_3": 82.3,
+      "parked": 86.5
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 86.1,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      217,
+      217,
+      217
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 81.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.75,
+      "lap_2": 41.6,
+      "lap_3": 81.85,
+      "parked": 86.1
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 89.3,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      219,
+      220,
+      219
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 82.65,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.75,
+      "lap_2": 41.55,
+      "lap_3": 82.65,
+      "parked": 89.3
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 90.65,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      236,
+      236,
+      237
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 84.05,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 23.2,
+      "lap_2": 42.45,
+      "lap_3": 84.05,
+      "parked": 90.65
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 96.9,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      50,
+      49,
+      50
+     ],
+     "vehicle_contact_steps": [
+      250,
+      251,
+      250
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 90.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 25.25,
+      "lap_2": 46.6,
+      "lap_3": 90.3,
+      "parked": 96.9
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 127.48
+    },
+    {
+     "state": "DONE",
+     "time_s": 89.7,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      225,
+      224,
+      225
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 83.05,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.85,
+      "lap_2": 41.75,
+      "lap_3": 83.05,
+      "parked": 89.7
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 92.25,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      243,
+      243,
+      241
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 84.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 23.55,
+      "lap_2": 43.15,
+      "lap_3": 84.15,
+      "parked": 92.25
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11
+    },
+    {
+     "state": "DONE",
+     "time_s": 84.45,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      198,
+      199,
+      198
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 80.2,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.95,
+      "lap_1": 22.2,
+      "lap_2": 40.5,
+      "lap_3": 80.2,
+      "parked": 84.45
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.25
+    }
+   ]
+  }
+ ]
+}
