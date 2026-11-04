@@ -47,7 +47,7 @@
           "section": "R01 (V2)"
         }
       ],
-      "design_impact": "Chassis shape and every route: a square 10 x 10 in body sweeps a 14.1 in circle when it spins in place, a round 10 in body sweeps 10 in. Also decides whether obstacle passes need the full 10 in gap.",
+      "design_impact": "Chassis shape and every route: a square 10 x 10 in body sweeps a 14.1 in circle when it spins in place, a round 10 in body sweeps 10 in. The passability atlas finds that a round base needs only 0.5-1 in less free length for a lane change between vehicles, so its main benefit is turning room.",
       "interim_assumption": "Square 10 x 10 in lower body that never contracts.",
       "supersedes": [
         "TB6"
@@ -129,7 +129,7 @@
           "section": "Appendix E"
         }
       ],
-      "design_impact": "Every lap passes all three vehicles. The organizer guide shows a plush vehicle of about 8.55 x 8.2 in; if a vehicle can sit near the middle of a roughly 22 in corridor, a 10 in robot may have no contact-free gap.",
+      "design_impact": "Every lap passes all three vehicles. With the organizer guide's plush vehicle (about 8.55 x 8.2 in), the agent-run passability atlas (derived/passability-atlas-v10) finds a contact-free gap for a 10 in robot in only 0-47% of placements, and in none when a vehicle is turned 45 degrees. Vehicle size and placement rules therefore decide whether the 25-point obstacle bonus is achievable at all.",
       "interim_assumption": "Vehicles about 8.55 x 8.2 in, wholly inside a quadrant, any orientation; contact-free passes are not guaranteed.",
       "supersedes": [
         "Q4",

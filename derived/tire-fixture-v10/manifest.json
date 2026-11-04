@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-03",
+  "status": "agent-prepared test kit; no mechanism tested",
+  "input_hashes": {
+    "tools/tire-fixture-v10.js": "0f36aa3166ecd30c748e60149e10c5eed4f08ad2b1c9c2c6f26a5089723626bd",
+    "derived/organizer-cad/Spare Tire v2.stl": "e04ac6ac4874902f0aa7a4383f738e04d0f0b0b88f553b85f008d66de448e2df"
+  },
+  "output_hashes": {
+    "pit-box-corner-1to1.svg": "606e013dc89155db849e040e4e0b0ecd0ede4ea3ba1c58c9c8437021290cbb03",
+    "doe-round1.csv": "f305b199c31eb9217d2fb80c913a3b1ec0ec30491a9c40c0d1f70834e255b030",
+    "doe-round2-template.csv": "f6759512344575ee669757b7ba84cc590586b62995f16898ff9cb445b33f0c2f",
+    "print-notes.md": "a610166ab77519eebae834ea7ae10222bae98caa776ef06555044c65645d0435",
+    "README.md": "2412b320a82fae9d207e86c2cb6042b65b1efb3197389804f1f64f54ec78abb1"
+  }
+}

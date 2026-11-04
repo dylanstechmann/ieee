@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-03",
+  "status": "agent-run perfect-knowledge geometry; not a measured field, not legality, not hardware",
+  "input_hashes": {
+    "tools/atlas-v10.py": "df5c387683dfb25d54823206a4f3301e4aa5b967f81ef9af020205367c9f799b",
+    "software/stockcar/geometry.py": "424a5f211dff9afa22c4f366ba13b122ecd5960b803ac97b3538c2bf1ac35491",
+    "software/stockcar/field.py": "67516673e3eee0ee5decb2186eacffce21723abc0bbf4f43db0a9b8e08029b68",
+    "software/stockcar/obstacles.py": "9caa806ed4a555df08721ca3cb9e74c7aeb65f9dbdadbc265fd20a74cf8776b1",
+    "software/stockcar/planner.py": "d369cd33120103fe0f0062f87aea998c029e65985cf16f13f677bb0e563809bd",
+    "derived/organizer-cad-v10/field-v10.json": "d3d7de9e9f7d257d6f4f095cb06836a6bb484861aeffca45cb96990dba4afdca"
+  },
+  "output_hashes": {
+    "atlas.json": "2cbeeb339af209daa4a91a0253a965c16088fdaa78d9888ae1a4cc75897e5d9c",
+    "summary.md": "3638b022a005c41b63b348882ea4d5162484346457c99be16a7c533f6b97b794"
+  }
+}

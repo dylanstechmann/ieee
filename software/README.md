@@ -36,3 +36,17 @@ The hardware e-stop must still cut power on its own (GM1 R04); the `estop` input
 ## Open questions that change this logic
 
 How the referee counts laps around the pit detour, when the final lap begins if the stop follows lap 2, and which openings are legal for entering and leaving the pit. These are questions 3 and 5 in `../derived/team-brief-v7/TEAM-BRIEF.md`. Every number in `DEFAULTS` is a starting point to tune on a practice field.
+
+## `stockcar/` package (v10, November 3)
+
+Standard-library Python for the next simulator generation, built against the organizer CAD field (`../derived/organizer-cad-v10/field-v10.json`). Agent-written; synthetic results only.
+
+| Module | Contents |
+|---|---|
+| `geometry.py` | Convex polygons, separating-axis distances, circle–polygon distance |
+| `field.py` | Wall faces, dividers (CAD 1 x 1 or V3 1 x 2 variants), corridors, and the obstacle quadrants under three Appendix E readings |
+| `obstacles.py` | Guide plush vehicle (about 8.55 x 8.2 in) and the old v9 circle, lane-constrained placements, straight-pass gap |
+| `planner.py` | Hybrid-A* along one straightaway for a square 10 x 10 in or round 10 in footprint (swept checks, so rotation costs the square its diagonal) |
+| `supervisor.py` | `match_logic.py` plus pre-match presets (aggressive / safe / drive-only) and a no-progress watchdog; matches `match_logic` on shared outputs and passes the MicroPython lint |
+
+The passability atlas built from these modules is in `../derived/passability-atlas-v10/`. The full v10 mission simulator (follower and RL-environment fixes, realistic obstacles, real randomization) is the next step. `mission_v9.py` stays frozen.

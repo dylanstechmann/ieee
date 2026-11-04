@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240mm" height="290mm" viewBox="-10 -40 240 290" font-family="sans-serif" font-size="3.2">
+<text x="0" y="-30">Pit-box tire target, TRUE SCALE (print at 100%). Check the 100 mm bar with calipers.</text>
+<text x="0" y="-25">Grey: tire outline at the nominal center. Crosses: the 3 x 3 offset grid (±12.7 mm). Agent-prepared; not an organizer drawing.</text>
+<line x1="0" y1="-15" x2="100" y2="-15" stroke="#000" stroke-width="0.4"/><text x="102" y="-14">100 mm</text>
+<rect x="0" y="0" width="220" height="220" fill="none" stroke="#888" stroke-width="0.3" stroke-dasharray="3 2"/>
+<text x="2" y="226">Dashed: 220 mm square inside the 304.8 mm (12 in) pit box; align it to the box corner nearest the robot's approach.</text>
+<circle cx="110" cy="110" r="34.09" fill="#ddd" stroke="#555" stroke-width="0.4"/>
+<circle cx="110" cy="110" r="20.15" fill="#fff" stroke="#555" stroke-width="0.4"/>
+<line x1="94.3" y1="122.7" x2="100.3" y2="122.7" stroke="#c00" stroke-width="0.3"/><line x1="97.3" y1="119.7" x2="97.3" y2="125.7" stroke="#c00" stroke-width="0.3"/>
+<line x1="94.3" y1="110" x2="100.3" y2="110" stroke="#c00" stroke-width="0.3"/><line x1="97.3" y1="107" x2="97.3" y2="113" stroke="#c00" stroke-width="0.3"/>
+<line x1="94.3" y1="97.3" x2="100.3" y2="97.3" stroke="#c00" stroke-width="0.3"/><line x1="97.3" y1="94.3" x2="97.3" y2="100.3" stroke="#c00" stroke-width="0.3"/>
+<line x1="107" y1="122.7" x2="113" y2="122.7" stroke="#c00" stroke-width="0.3"/><line x1="110" y1="119.7" x2="110" y2="125.7" stroke="#c00" stroke-width="0.3"/>
+<line x1="107" y1="110" x2="113" y2="110" stroke="#c00" stroke-width="0.3"/><line x1="110" y1="107" x2="110" y2="113" stroke="#c00" stroke-width="0.3"/>
+<line x1="107" y1="97.3" x2="113" y2="97.3" stroke="#c00" stroke-width="0.3"/><line x1="110" y1="94.3" x2="110" y2="100.3" stroke="#c00" stroke-width="0.3"/>
+<line x1="119.7" y1="122.7" x2="125.7" y2="122.7" stroke="#c00" stroke-width="0.3"/><line x1="122.7" y1="119.7" x2="122.7" y2="125.7" stroke="#c00" stroke-width="0.3"/>
+<line x1="119.7" y1="110" x2="125.7" y2="110" stroke="#c00" stroke-width="0.3"/><line x1="122.7" y1="107" x2="122.7" y2="113" stroke="#c00" stroke-width="0.3"/>
+<line x1="119.7" y1="97.3" x2="125.7" y2="97.3" stroke="#c00" stroke-width="0.3"/><line x1="122.7" y1="94.3" x2="122.7" y2="100.3" stroke="#c00" stroke-width="0.3"/>
+<line x1="110" y1="110" x2="127.36" y2="208.48" stroke="#06c" stroke-width="0.3" stroke-dasharray="2 1"/>
+<text x="128.36" y="207.48" fill="#06c">-10°</text>
+<line x1="110" y1="110" x2="110.00" y2="210.00" stroke="#06c" stroke-width="0.3" stroke-dasharray="2 1"/>
+<text x="111.00" y="209.00" fill="#06c">0°</text>
+<line x1="110" y1="110" x2="92.64" y2="208.48" stroke="#06c" stroke-width="0.3" stroke-dasharray="2 1"/>
+<text x="93.64" y="207.48" fill="#06c">10°</text>
+<text x="2" y="232">Blue: robot approach lines at -10, 0 and +10 degrees. The tire lies flat (bore vertical), as assumed until the field confirms it.</text>
+</svg>

@@ -12,6 +12,15 @@ This updates the November 3 club package (`derived/club-package-v9/CLUB-PRESENTA
 
 The review also found that the reinforcement-learning interface cannot yet be driven by a policy, and that the simulator does not use the motor model. Both are fixed in the next software version; no learning is planned before real sensor data exists.
 
+## New finding: obstacle size decides the 75 obstacle points
+
+The agent-run passability atlas (`derived/passability-atlas-v10/`) uses the organizer CAD field and the guide's 8.55 x 8.2 in plush vehicle.
+
+- **Contact-free passes are rare.** A 10 in robot can pass a vehicle without contact in only 0–47% of its possible placements. With both quadrants of one straight occupied, almost no sampled layout is passable.
+- **The round base helps little here.** It needs only 0.5–1 in less room for a lane change.
+
+Buying and measuring the official vehicle set (it is on the organizer's list) and asking QA03 are therefore the most valuable next steps. If some contact is unavoidable, the robot needs a policy for touching gently instead of stopping.
+
 ## Next two weeks
 
 | When | Who | What |

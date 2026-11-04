@@ -25,7 +25,7 @@ Manual revision: GM1 V3.0 (Game-Manual-2027-1-V3.docx) and GM2 V3.0 with October
 - GM1 V3 R01 (extracted paragraph line 242): "The Robot must have a minimum size of 10 inches long by 10 inches wide for 3 inches up from the surface."
 - GM1 V2 (historical) R01 (V2) (extracted paragraph line 234): "The Robot may not contract this portion at any time."
 
-**Why it matters.** Chassis shape and every route: a square 10 x 10 in body sweeps a 14.1 in circle when it spins in place, a round 10 in body sweeps 10 in. Also decides whether obstacle passes need the full 10 in gap.
+**Why it matters.** Chassis shape and every route: a square 10 x 10 in body sweeps a 14.1 in circle when it spins in place, a round 10 in body sweeps 10 in. The passability atlas finds that a round base needs only 0.5-1 in less free length for a lane change between vehicles, so its main benefit is turning room.
 
 **Working assumption until answered.** Square 10 x 10 in lower body that never contracts.
 
@@ -60,7 +60,7 @@ Manual revision: GM1 V3.0 (Game-Manual-2027-1-V3.docx) and GM2 V3.0 with October
 - GM2 V3 Appendix B (extracted paragraph line 321): "Toy Vehicle Obstacle Set"
 - GM2 V3 Appendix E (extracted paragraph line 379): "The Quadrants will start 2 inches from the side rail and stop 2 inches from the center rail with a total width of 16 inches."
 
-**Why it matters.** Every lap passes all three vehicles. The organizer guide shows a plush vehicle of about 8.55 x 8.2 in; if a vehicle can sit near the middle of a roughly 22 in corridor, a 10 in robot may have no contact-free gap.
+**Why it matters.** Every lap passes all three vehicles. With the organizer guide's plush vehicle (about 8.55 x 8.2 in), the agent-run passability atlas (derived/passability-atlas-v10) finds a contact-free gap for a 10 in robot in only 0-47% of placements, and in none when a vehicle is turned 45 degrees. Vehicle size and placement rules therefore decide whether the 25-point obstacle bonus is achievable at all.
 
 **Working assumption until answered.** Vehicles about 8.55 x 8.2 in, wholly inside a quadrant, any orientation; contact-free passes are not guaranteed.
 
