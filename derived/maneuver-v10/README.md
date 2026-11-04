@@ -24,7 +24,7 @@
 See `summary.md` for every table.
 
 1. **The firmware loop can follow a lap.** It finished on all 27 plant conditions at all three envelopes, with a worst cross-track error of 0.32–0.43 in and at least 1.6 in of clearance. With the EKF steering, clearance stayed at 1.43–1.64 in at every speed cap from 8 in/s up, so speed barely changes tracking.
-2. **Laps are quick and time is not binding.** A conservative lap takes about 9.1 s. A clean mission takes about 60–63 s, including the 8 s exchange and the slower pit legs below, against the 165 s bonus.
+2. **Laps are quick and time is not binding.** A conservative lap takes about 9.1 s, against 29.6 s for the v9 stop-and-spin lap and about 19.4 s for the lap study's 8 in/s row. A clean mission takes about 60–63 s, including the 8 s exchange and the slower pit legs below, against the 165 s bonus.
 3. **Keep the conservative envelope until friction is measured.** At friction 0.15 the nominal envelope slipped 4.9–6.9 in/s, against at most 0.7 in/s for conservative. Tracking looks fine anyway, but the plant has no sideways skid, so that says little about real cornering.
 4. **The pit routes as drawn could not be driven.** Their sharp corners gave about 3 in of cross-track error on four of seven legs, and two legs hit a wall (−0.95 and −0.07 in), though their planned clearance looked fine. The kinematic mission simulator hid this, because its follower cuts corners and spins in place. Rounding the corners over 4 in and capping pit speed at 8 in/s fixed it: 42 of 42 runs finished, with at worst 0.56 in of cross-track error and at least 1.07 in of clearance.
 5. **With guide-size vehicles, no line avoids contact, so stay off the walls.** At most 0.1% of laps cleared every vehicle under any policy. Plain lanes scored best, at 15 points per lap, because far-side lines bring wall contact for nothing:
@@ -64,7 +64,7 @@ See `summary.md` for every table.
 
 ## Limits
 
-- **Vehicle lanes are assumed known.** Finding vehicles with the robot's own sensors is not yet modeled.
+- **Far-side lines assume vehicle lanes are known.** Finding vehicles with the robot's own sensors is not yet modeled. The lanes policy needs no vehicle knowledge, so those laps have no perfect knowledge in the control path.
 - **No sideways skid in the plant,** and encoders see body motion, so wheel slip never reaches the estimator.
 - **Pushing or jamming vehicles is not modeled.**
 - Placeholder friction, mass, motor and sensor values, and a perfect nominal CAD map.

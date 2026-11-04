@@ -55,7 +55,7 @@ Twenty seeds cannot separate small differences. Reflectance only finished 15/20 
 
 ## Limits
 
-- **True vehicle positions in the lane plan.** Finding vehicles with the same sensors is not yet modeled.
+- **True vehicle positions in the lane plan.** Finding vehicles with the same sensors is not yet modeled. The plain-lanes laps in `../maneuver-v10/` need no vehicle knowledge at all.
 - A perfect map with nominal CAD geometry.
 - Idealized ToF beams with no multipath or surface effects.
 - No latency.
