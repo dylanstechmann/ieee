@@ -30,6 +30,7 @@ This project is separate from the FAU team's own work. Roles, gates and dates in
 | See what the drivetrain can do, and what limits it (simulation) | `derived/envelope-v10/README.md` (agent-run, synthetic) |
 | See how the firmware follows routes, and which line to take past vehicles (simulation) | `derived/maneuver-v10/README.md` (agent-run, synthetic), with route tables in `route-library.json` |
 | See whole simulated missions, from the route files the board would use | `derived/full-mission-v10/README.md` (agent-run, synthetic) |
+| Watch one simulated mission | `share/Mission-Replay-v10.html` (offline; `tools/demo-mission-v10.py` runs another in seconds) |
 | Know whether obstacles can be passed | `derived/passability-atlas-v10/README.md` (agent-run geometry; vehicle size decides it) |
 | See lap times, contact rates and expected score over random layouts | `derived/lap-study-v10/README.md` (agent-run, synthetic) |
 | Build a full-size mockup and sizing box | `derived/competition-mockup-v10/README.md` |
@@ -37,6 +38,7 @@ This project is separate from the FAU team's own work. Roles, gates and dates in
 | Post the official Q&A questions | `derived/qa-pack-v10/QUESTIONS.md` and `PASTE.md`; record answers in `qa/answers-ledger.json` |
 | Prepare the Dec 13 concept review | `derived/club-update-v10/CDR-PREP.md` |
 | Read the short club summary | `derived/club-update-v10/CLUB-UPDATE.md` (corrections and next two weeks) and `derived/club-package-v9/CLUB-PRESENTATION.md` |
+| See the FAU concept table updated to V3 | `derived/club-update-v10/SECTION-4.1-UPDATE.md` (PDF beside it) |
 | Understand status and lineage | `PROJECT-STATUS.md` |
 | Check rules and numbers | `CURRENT-RULES-2026-10-29.md`, `VERIFIED-FACTS.md` + `VERIFIED-FACTS-ADDENDUM.md`, `ERRATA-2026-11.md` |
 | View the robot and field in 3D, offline | `share/Robot-Studio-v8.html` (guide: `derived/robot-studio-v8/README.md`) |
@@ -67,7 +69,7 @@ It was tested with Node v24.18.1, uv 0.13 and CPython 3.12.16. It checks softwar
 | `software/` | Python simulators, estimator, route tools and match logic, with tests |
 | `firmware/` | Pico 2 MicroPython skeleton (bench, safety and mission driver) with CPython host tests; not flashed |
 | `schemas/` | Shared data formats (telemetry v1, mission log v1) |
-| `share/` | Offline HTML studios (v4–v8) |
+| `share/` | Offline HTML studios (v4–v8) and mission replays (v10) |
 | `sources/` | Archived organizer and vendor files with hashes |
 | `derived/audits/` | Dated audits, including the November 3 baseline |
 | `*-vN.json` (root) | Inputs to the matching packages |
