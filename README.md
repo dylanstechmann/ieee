@@ -31,6 +31,7 @@ Most planning, simulation and software here were developed with AI assistance ac
 | Rerun a mission log through the estimator | `tools/replay-log.py`, with the format in `schemas/mission-log-v1.json` |
 | See what the drivetrain can do, and what limits it (simulation) | `derived/envelope-v10/README.md` (agent-run, synthetic) |
 | See how the firmware follows routes, and which line to take past vehicles (simulation) | `derived/maneuver-v10/README.md` (agent-run, synthetic), with route tables in `route-library.json` |
+| See whole simulated missions, from the route files the board would use | `derived/full-mission-v10/README.md` (agent-run, synthetic) |
 | Know whether obstacles can be passed | `derived/passability-atlas-v10/README.md` (agent-run geometry; vehicle size decides it) |
 | See lap times, contact rates and expected score over random layouts | `derived/lap-study-v10/README.md` (agent-run, synthetic) |
 | Build a full-size mockup and sizing box | `derived/competition-mockup-v10/README.md` |

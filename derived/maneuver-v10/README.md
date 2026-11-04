@@ -60,7 +60,7 @@ See `summary.md` for every table.
 
 `route-library.json` (141 KB) holds tables for the robot at the conservative envelope: the plain lap, a lap for each of the 32 configurations at a 3.0 in margin, the entry, and pit legs for each box. 3.0 in is the closest margin with no wall contact in the 96 driven laps. Keys list `low_west, low_east, high_west, high_east`, with `o` outer, `i` inner and `-` empty.
 
-**The firmware does not load these yet**, and `tracker.py` has passed the MicroPython lint but has not run on MicroPython.
+`tools/build_pico_bundle.py` packs these into small binary files for the board, and `../full-mission-v10/` drives whole missions from them in simulation. `tracker.py` has passed the MicroPython lint but has not run on MicroPython.
 
 ## Limits
 
@@ -70,7 +70,7 @@ See `summary.md` for every table.
 - Placeholder friction, mass, motor and sensor values, and a perfect nominal CAD map.
 - Vehicle sizes are scaled copies of the guide's plush vehicle, not measurements.
 - Three seeds and 16 placements per configuration, so treat contact rates as rough.
-- Routes were driven one at a time, not chained into a mission. The spin inside the pit box was not driven; its time is added from the envelope study.
+- Routes were driven one at a time here, and the spin inside the pit box was not driven; its time is added from the envelope study. `../full-mission-v10/` chains them.
 - Clean-mission times assume the simulator's route, which depends on open questions QA05 and QA06.
 
 ## Run

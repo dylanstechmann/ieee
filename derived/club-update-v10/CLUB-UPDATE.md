@@ -46,6 +46,8 @@ The maneuver study (`derived/maneuver-v10/`, synthetic) adds three more:
 - **Stay off the walls:** with guide-size vehicles no line avoids contact, so plain lanes score best. Dodging starts to pay only if the official vehicles are about half that size or smaller, which is one more reason to measure them. The study does not model pushing a vehicle, so try that on the practice field.
 - **Round the pit corners:** the pit routes as first drawn could not be driven at speed. Rounded corners at 8 in/s fixed that in simulation.
 
+The full-mission study (`derived/full-mission-v10/`, synthetic) then ran all the software together: 91 of 91 simulated missions finished and parked, at about 58 s. Two cautions: the simulated robot passes straight through vehicles, so contact trials with the real ones matter, and its tightest moment is spinning in the pit box.
+
 ## Next two weeks
 
 | When | Who | What |

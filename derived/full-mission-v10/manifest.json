@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-04",
+  "status": "agent-run synthetic study; not a robot test",
+  "input_hashes": {
+    "tools/evaluate-full-mission-v10.py": "a2554b0bbf7be534d0fefb91b7d25374f9eb85ebcaecdb99d49b7348b87b7461",
+    "tools/build_pico_bundle.py": "37ff970de323cd2d11039866b077ae8159c7ebc15b51d77ffef75e19357da4aa",
+    "firmware/host_tests/full_mission.py": "c34ff87682f8b50fc3a998ec33fb8a3aef9bc2473ee068f39b4085d4f84b8053",
+    "firmware/host_tests/route_follow.py": "c7410c4228211060806b338d1010e5c6b0195ad7ba83e23fc72966acf8b9ac49",
+    "firmware/host_tests/plant_hal.py": "6bce20def53f8e364afa1befde791571cdc370db87e1f6bd5ed7d3972bb6dbd0",
+    "firmware/host_tests/fakes.py": "c5f963eaf2402b90f8bd731f16af3cd0924b52534a49e92fc473e894c3c47ab3",
+    "firmware/pico2/mission_driver.py": "d6a22478f4fa72b35a6745e20b7e6c6aeaa541a0794a30559bac6bd30cd825ee",
+    "firmware/pico2/route_store.py": "66bd86a405e9ea37a158c16bf5e23de4ceb5f16694744780e844e270aa8fe0df",
+    "firmware/pico2/runner.py": "eb612624a596481b9bb3884408df98ccd50ad5412ed7685dbd987e0621e24393",
+    "firmware/pico2/drive.py": "5db7d9652dadc8fed3c83767fb90ef4a813ca29dc21903f6948bf392330bfd7b",
+    "firmware/pico2/motor.py": "688e956aa0615aff0868730270f076434bb320560068dc5f7582c8fc7f2816c3",
+    "firmware/pico2/safety.py": "fb2aea7a60961f11e6f755eef84b2d08f1c19bed688dc5755ff03f0be4ecad70",
+    "firmware/pico2/telemetry.py": "4c2fb6afd7ae430d68495144e866205ea62f19c82aaa00fd8937a44c050ceb16",
+    "firmware/pico2/config.py": "c4c853ae2335dde1863b5250f9aba3f699ece31ac60e6ed41a99dfa18aac1e38",
+    "software/stockcar/tracker.py": "6bfc169968d971136e17d62134773cb11379df32b3f200b94270c34739a6ca14",
+    "software/stockcar/supervisor.py": "15bf5e68a33428ac4db1a94e54b2c5fc44ff0280ccfc1fb6b4a54b37c3b701ec",
+    "software/stockcar/estimator.py": "ae66e769229862e9f5e052a5740b9c2d95fdf5cb06f1f90fe0b1592905b8951f",
+    "software/stockcar/sensors.py": "14146c15d7102e9f96bd056cff3370810c2f58f6f245b84e819f5e696b340fac",
+    "software/stockcar/dynamics.py": "b4b4dcc583e4549923eabb013774735b9a8e6be2b05100b9987754a69f17a793",
+    "software/stockcar/envelope.py": "8da62a488f226326a23606f09faad5ef8f18e51a60f904ef37d35a29c70acf81",
+    "software/stockcar/mission.py": "346fb5c977fddaaad7d790afcb466beacb3f2beeebe01803befb9da004032678",
+    "software/stockcar/routes.py": "a8ea9b641d44e204250d5fb8c98c0a1b638320f46f32ea7f0adb7302154c567f",
+    "software/stockcar/lapmodel.py": "943296d5f461cfef67d29934ce4129d06ad5c59762b1ebdfd21b18c098ff14a6",
+    "software/stockcar/field.py": "67516673e3eee0ee5decb2186eacffce21723abc0bbf4f43db0a9b8e08029b68",
+    "software/stockcar/geometry.py": "424a5f211dff9afa22c4f366ba13b122ecd5960b803ac97b3538c2bf1ac35491",
+    "software/stockcar/obstacles.py": "9caa806ed4a555df08721ca3cb9e74c7aeb65f9dbdadbc265fd20a74cf8776b1",
+    "software/stockcar/passage.py": "adda10e8ca96830a8df0438d9e07c56ba976d54c01e9bae3ad8bb49332ad9e3d",
+    "software/stockcar/tests/fixtures/dynamics-golden-v10.json": "290b17bb523d5c4b36c3bf911b156690245fb41a1c1be2278733c74834904973",
+    "derived/maneuver-v10/route-library.json": "2781c259268ac9b448c567194b86d98d9cdccb496ef82becc7ca4599540583b4",
+    "derived/envelope-v10/report.json": "483914d936bfe83c80df3ac3a047a6273819d081cbc61763b6144345643f9e55",
+    "derived/organizer-cad-v10/field-v10.json": "d3d7de9e9f7d257d6f4f095cb06836a6bb484861aeffca45cb96990dba4afdca"
+  },
+  "output_hashes": {
+    "report.json": "19cfe02b7b039b77aeceb7981dcc56b4afb94c444448c3cbba1a09e63da8e807",
+    "summary.md": "e50c565e28d5a1822ee989c9dfadb9f80da2867fae1196ab0c3dd552863eb0ab"
+  }
+}
