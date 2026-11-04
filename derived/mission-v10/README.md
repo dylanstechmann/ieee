@@ -16,6 +16,8 @@
 
 `software/mission_v9.py` and `derived/mission-v9/` stay frozen, because Robot Studio v8 pins them.
 
+**November 4 note:** the pit routes in this simulator have sharp corners. Its kinematic follower cuts them and spins in place, but the firmware loop on the drivetrain model cannot follow them at speed, and two of seven legs hit a wall. Use the rounded, slower pit legs in `../maneuver-v10/` for anything beyond this simulator.
+
 ## Assumptions to replace with answers and measurements
 
 - **Route:** a counterclockwise lap with the lap gate at the west U-turn apex. The pit is reached through the low opening and left through the high opening (QA05, QA06).

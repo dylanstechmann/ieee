@@ -40,6 +40,12 @@ The estimation study (`derived/estimation-v10/`, synthetic) adds two more:
 - **Low range sensors carry localization:** with them the simulated robot stays within about an inch of the truth. Reflectance alone can also finish, which gives a fallback if range sensing disappoints on real paint.
 - **Calibrate the gyro:** its bias and its scale both matter. Measure the scale once on the bench with ten full turns against a floor mark, and hold still during the 5 s start wait to measure the bias.
 
+The maneuver study (`derived/maneuver-v10/`, synthetic) adds three more:
+
+- **The firmware can follow a lap:** its real control loop stayed within about half an inch of the route on every simulated drivetrain condition, at about 9 s per lap.
+- **Stay off the walls:** with guide-size vehicles no line avoids contact, so plain lanes score best. Dodging starts to pay only if the official vehicles are about half that size or smaller, which is one more reason to measure them. The study does not model pushing a vehicle, so try that on the practice field.
+- **Round the pit corners:** the pit routes as first drawn could not be driven at speed. Rounded corners at 8 in/s fixed that in simulation.
+
 ## Next two weeks
 
 | When | Who | What |
@@ -68,6 +74,7 @@ These are digital; each is labeled agent-run and is not hardware validation:
 - a corrected simulator with realistic obstacles;
 - a passability study for square and round robots;
 - a faster arc-based lap planner;
+- a route library and path tracker for the robot;
 - tire-fixture and full-size mockup drawings.
 
 The agent does not buy parts or contact the organizers.

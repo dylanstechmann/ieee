@@ -13,6 +13,9 @@ class LintTests(unittest.TestCase):
     def test_firmware_is_clean(self):
         self.assertEqual(micropython_lint.lint(ROOT / "firmware" / "pico2"), [])
 
+    def test_path_tracker_can_move_to_the_robot(self):
+        self.assertEqual(micropython_lint.lint(ROOT / "software" / "stockcar" / "tracker.py"), [])
+
     def test_lint_catches_unsupported_code(self):
         with tempfile.TemporaryDirectory() as tmp:
             bad = pathlib.Path(tmp) / "bad.py"
