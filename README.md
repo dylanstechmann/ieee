@@ -4,20 +4,18 @@ A personal hobby and learning project for the IEEE SoutheastCon 2027 hardware co
 
 Most planning, simulation and software here were developed with AI assistance across many sessions. Analyses run by an AI agent are labeled as agent-run; physical work is only claimed when the owner records it. **Nothing in this repository is a validated competition robot.**
 
-## Status — November 3, 2026
+This project is separate from the FAU team's own work. Roles, gates and dates in these documents are planning suggestions, not team decisions.
+
+## Status — November 4, 2026
 
 - **Physical work: none yet.** No parts are ordered, no practice field is built, no organizer Q&A has been posted and no robot has been tested.
 - **Rules:** the V3.0 manuals are reviewed. The score model is 390 robot points + 10 publicity. V3.1 (start-flag details) is announced but not posted.
 - **Hardware:** a drivetrain test mule (Order A, $177.25 researched) has been checked against Pololu's own CAD. That check found a 7 mm motor-shaft offset that the original mule kit missed. The corrected shaft-down mule deck is drawn in `derived/drivetrain-mule-v10/`, with a drill template, STEP/STL and caliper-driven regeneration; it is not yet printed. No competition chassis exists yet.
-- **Software:** a synthetic mission simulator (`software/mission_v9.py`) and I/O-free match logic (`software/match_logic.py`) exist.
+- **Software (all simulated):** the v10 work runs on the organizer's CAD field. Whole missions chain the supervisor, mission driver, route files, path tracker, pose estimator and the firmware's control loop on a corrected drivetrain model, and all 91 evaluation missions finished and parked (`derived/full-mission-v10/`).
 
-  **Known limits of the simulator** (found in the November 3 review):
-  - Its "nominal" runs have no obstacles, but every real match has three.
-  - Its obstacle stand-in is about half the size of the organizer's vehicle.
-  - Its 20 evaluation seeds are 3 deterministic runs.
-  - Its RL interface cannot yet be driven by a policy.
+  **Known limits:** the simulated robot passes straight through vehicles, the camera, start flag and lap line are not modeled, and nothing has run on a board. Parameters are placeholders until bench and field measurements replace them.
 
-  The v10 simulator (`derived/mission-v10/`) fixes these.
+  The older v9 simulator (`software/mission_v9.py`) stays frozen. Its nominal runs have no obstacles, its obstacle stand-in is about half size, and its 20 seeds are 3 deterministic runs.
 
 ## Start here
 
@@ -66,9 +64,9 @@ It was tested with Node v24.18.1, uv 0.13 and CPython 3.12.16. It checks softwar
 | `derived/<name>-vN/` | Versioned packages. Most are sealed by a `manifest.json` of input and output hashes and checked by `tools/verify-<name>-vN.js`. To change one, add a new version. |
 | `tools/` | Generators, verifiers, `check-all.js` |
 | `tests/` | Node tests |
-| `software/` | Python mission simulator and match logic, with tests |
-| `firmware/` | Pico 2 MicroPython skeleton (bench and safety layer) with CPython host tests; not flashed |
-| `schemas/` | Shared data formats (telemetry v1) |
+| `software/` | Python simulators, estimator, route tools and match logic, with tests |
+| `firmware/` | Pico 2 MicroPython skeleton (bench, safety and mission driver) with CPython host tests; not flashed |
+| `schemas/` | Shared data formats (telemetry v1, mission log v1) |
 | `share/` | Offline HTML studios (v4–v8) |
 | `sources/` | Archived organizer and vendor files with hashes |
 | `derived/audits/` | Dated audits, including the November 3 baseline |
