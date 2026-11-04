@@ -59,7 +59,7 @@ A private GitHub remote now exists (`github.com/dylanstechmann/ieee`). `main` wa
 
 **Superseded on November 3 by `BACKCAST-2026-11.md`.** The order there is:
 - **Physical (owner and club):** post the Q&A; decide Order A, the obstacle set and field materials; build and measure the practice field; caliper-check parts and build the mule; run the tire-mechanism DOE.
-- **Agent:** done so far: a one-command check (`node tools/check-all.js`); the Q&A pack and corrections; the organizer CAD extraction (`derived/organizer-cad-v10/`); the practice-field packet (`derived/practice-field-v10/`); and the shaft-down mule deck (`derived/drivetrain-mule-v10/`). Next: tire-fixture and mockup packets; bench firmware; the v10 simulator with realistic obstacles; a passability study and a faster arc-based lap planner.
+- **Agent:** done so far: a one-command check (`node tools/check-all.js`); the Q&A pack and corrections; the organizer CAD extraction (`derived/organizer-cad-v10/`); the practice-field packet (`derived/practice-field-v10/`); the shaft-down mule deck (`derived/drivetrain-mule-v10/`); and the Pico 2 firmware skeleton with bench tools (`firmware/`, not flashed). Next: tire-fixture and mockup packets; bench firmware; the v10 simulator with realistic obstacles; a passability study and a faster arc-based lap planner.
 
 The list below is the earlier plan, kept for reference.
 

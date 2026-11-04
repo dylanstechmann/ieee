@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/telemetry-v1.json",
+  "title": "Robot and simulator telemetry record, version 1",
+  "description": "One JSON object per line (JSON Lines). Written by firmware/pico2/telemetry.py; read by tools/bench/*.py and, later, the simulator replay. tools/telemetry_schema.py implements these rules without third-party packages.",
+  "type": "object",
+  "required": ["v", "seq", "t_ms", "mode", "enc", "cmd", "pwm", "rpm", "i_a", "vbat", "estop", "stop_reason", "loop_us"],
+  "additionalProperties": false,
+  "properties": {
+    "v": {"const": 1},
+    "seq": {"type": "integer", "minimum": 0, "description": "record number since boot; gaps mean dropped records"},
+    "t_ms": {"type": "integer", "description": "board milliseconds (time.ticks_ms); compare with differences only"},
+    "mode": {"enum": ["IDLE", "BENCH", "DRIVE"]},
+    "enc": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2, "description": "left, right encoder counts (x1 decoding, 1120 per output revolution)"},
+    "cmd": {"$ref": "#/$defs/pair", "description": "commanded duty (-1..1) or target rpm, as the mode defines"},
+    "pwm": {"$ref": "#/$defs/pair", "description": "duty actually applied after the safety filter"},
+    "rpm": {"$ref": "#/$defs/pair", "description": "measured output-shaft rpm"},
+    "i_a": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/pair"}], "description": "motor currents in A, null until current sensing is wired"},
+    "vbat": {"type": ["number", "null"]},
+    "estop": {"type": "boolean"},
+    "stop_reason": {"enum": [null, "not_armed", "estop", "auto_stop", "command_watchdog", "loop_overrun", "driver_fault"]},
+    "loop_us": {"type": "integer", "minimum": 0}
+  },
+  "$defs": {
+    "pair": {"type": "array", "items": {"type": ["number", "null"]}, "minItems": 2, "maxItems": 2}
+  }
+}
