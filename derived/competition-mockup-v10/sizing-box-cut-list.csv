@@ -1,0 +1,5 @@
+part,quantity,length_mm,width_mm,note
+side wall,2,304.8,304.8,6 mm sheet; inside dimension 304.8 mm
+end wall,2,316.8,304.8,overlaps the side walls
+top (optional),1,316.8,316.8,leave off to lower the box over the robot
+minimum-size template,1,254,254,the lower 3 in of the body must cover this square (or the round reading, if QA01 allows)

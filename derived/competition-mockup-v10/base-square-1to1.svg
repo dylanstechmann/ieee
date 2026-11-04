@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="294mm" height="324mm" viewBox="-20 -50 294 324" font-family="sans-serif" font-size="3.4">
+<text x="0" y="-38">Competition mockup base, square, 254 mm (10 in). TRUE SCALE: print at 100% (tile if needed); check the 100 mm bar.</text>
+<text x="0" y="-33">Mockup for fit and turning tests, not competition CAD. A round base meeting R01 is open question QA01.</text>
+<line x1="0" y1="-25" x2="100" y2="-25" stroke="#000" stroke-width="0.4"/><text x="102" y="-24">100 mm</text>
+<rect x="0" y="0" width="254" height="254" fill="none" stroke="#000" stroke-width="0.4"/>
+<rect x="84" y="220" width="86" height="16" fill="none" stroke="#c60" stroke-width="0.35"/>
+<rect x="84" y="18" width="86" height="16" fill="none" stroke="#c60" stroke-width="0.35"/>
+<text x="84" y="16" fill="#c60">wheel slot 86 x 16 mm (80 mm wheel + 3 mm clearance)</text>
+<circle cx="112.2" cy="204.25" r="1.7" fill="none" stroke="#c00" stroke-width="0.3"/>
+<circle cx="127" cy="204.25" r="1.7" fill="none" stroke="#c00" stroke-width="0.3"/>
+<circle cx="141.8" cy="204.25" r="1.7" fill="none" stroke="#c00" stroke-width="0.3"/>
+<circle cx="112.2" cy="49.75" r="1.7" fill="none" stroke="#c00" stroke-width="0.3"/>
+<circle cx="127" cy="49.75" r="1.7" fill="none" stroke="#c00" stroke-width="0.3"/>
+<circle cx="141.8" cy="49.75" r="1.7" fill="none" stroke="#c00" stroke-width="0.3"/>
+<text x="112.2" y="55.75" fill="#c00">bracket holes as mule v10 (±77.25 mm)</text>
+<circle cx="27" cy="134.35" r="1.25" fill="none" stroke="#00c" stroke-width="0.3"/>
+<circle cx="27" cy="119.65" r="1.25" fill="none" stroke="#00c" stroke-width="0.3"/>
+<circle cx="227" cy="134.35" r="1.25" fill="none" stroke="#00c" stroke-width="0.3"/>
+<circle cx="227" cy="119.65" r="1.25" fill="none" stroke="#00c" stroke-width="0.3"/>
+<text x="30" y="117" fill="#00c">caster ±100 mm, riser 6.91 mm as mule</text>
+<line x1="127" y1="-4" x2="127" y2="258" stroke="#888" stroke-width="0.2" stroke-dasharray="2 1.5"/>
+<text x="0" y="262">Axle line at x = 0; +x toward the front (mechanism side). Origin at the plate center.</text>
+</svg>

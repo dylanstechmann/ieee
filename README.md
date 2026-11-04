@@ -28,6 +28,8 @@ Most planning, simulation and software here were developed with AI assistance ac
 | Build the drivetrain mule | `derived/drivetrain-mule-v10/` (shaft-down deck, risers, fit report, inspection templates) |
 | Prepare the first bench session | `firmware/README.md` (Pico 2 MicroPython skeleton, not yet flashed) and `firmware/ORDER-B-BENCH-KIT.md` |
 | Know whether obstacles can be passed | `derived/passability-atlas-v10/README.md` (agent-run geometry; vehicle size decides it) |
+| See lap times, contact rates and expected score over random layouts | `derived/lap-study-v10/README.md` (agent-run, synthetic) |
+| Build a full-size mockup and sizing box | `derived/competition-mockup-v10/README.md` |
 | Test tire pickup concepts | `derived/tire-fixture-v10/` (1:1 target, DOE sheets, `tools/analyze_e04_v10.py`) |
 | Post the official Q&A questions | `derived/qa-pack-v10/QUESTIONS.md` and `PASTE.md`; record answers in `qa/answers-ledger.json` |
 | Read the short club summary | `derived/club-update-v10/CLUB-UPDATE.md` (corrections and next two weeks) and `derived/club-package-v9/CLUB-PRESENTATION.md` |

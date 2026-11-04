@@ -21,6 +21,14 @@ The agent-run passability atlas (`derived/passability-atlas-v10/`) uses the orga
 
 Buying and measuring the official vehicle set (it is on the organizer's list) and asking QA03 are therefore the most valuable next steps. If some contact is unavoidable, the robot needs a policy for touching gently instead of stopping.
 
+The follow-up lap study (`derived/lap-study-v10/`) adds three points:
+
+- **Contact-free laps:** with guide-size vehicles, all three can be passed cleanly in only 0–2.5% of random layouts.
+- **Mission time:** with arc turns instead of stop-and-spin, a full mission takes about 81 s at 12 in/s, so time is not the problem.
+- **The exchange:** attempting it is worth about 45 expected points, at an assumed 70% success.
+
+The priorities that follow: reliable laps and parking first, then the exchange, and treat the obstacle bonus as a bonus.
+
 ## Next two weeks
 
 | When | Who | What |

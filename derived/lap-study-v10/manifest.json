@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-03",
+  "status": "agent-run synthetic study; not hardware, not legality",
+  "input_hashes": {
+    "tools/lap-study-v10.py": "ed0e5c56baaf091f729cb50a9e919c4fc655371e3e2c0b67e71e8bbde3f8f045",
+    "software/stockcar/lapmodel.py": "943296d5f461cfef67d29934ce4129d06ad5c59762b1ebdfd21b18c098ff14a6",
+    "software/stockcar/passage.py": "adda10e8ca96830a8df0438d9e07c56ba976d54c01e9bae3ad8bb49332ad9e3d",
+    "software/stockcar/field.py": "67516673e3eee0ee5decb2186eacffce21723abc0bbf4f43db0a9b8e08029b68",
+    "software/stockcar/obstacles.py": "9caa806ed4a555df08721ca3cb9e74c7aeb65f9dbdadbc265fd20a74cf8776b1",
+    "software/stockcar/planner.py": "d369cd33120103fe0f0062f87aea998c029e65985cf16f13f677bb0e563809bd",
+    "software/stockcar/geometry.py": "424a5f211dff9afa22c4f366ba13b122ecd5960b803ac97b3538c2bf1ac35491",
+    "derived/organizer-cad-v10/field-v10.json": "d3d7de9e9f7d257d6f4f095cb06836a6bb484861aeffca45cb96990dba4afdca"
+  },
+  "output_hashes": {
+    "study.json": "e6f226f5360b4bbad3cf636bc076bef7d21dcab783d896ac2b9fd26ce3c27dd9",
+    "summary.md": "435c4b4eb959cd461cef368c3086ac951d811e8d4261428b2eb22e1f940657cd"
+  }
+}

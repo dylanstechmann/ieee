@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-03",
+  "status": "agent-prepared mockup drawings; not competition CAD, not fabricated",
+  "checks": {
+    "overall_width_mm": 212,
+    "wheels_inside_square_base": true,
+    "wheel_slot_outer_ligament_square_mm": 18,
+    "wheels_inside_round_base": true,
+    "wheel_slot_corner_radius_mm": 117.175,
+    "plate_height_band_mm": [
+      23.6,
+      28.6
+    ],
+    "plate_inside_min_size_band": true
+  },
+  "input_hashes": {
+    "tools/competition-mockup-v10.js": "7d0541dd0b00f55e6accef0da36dbb00910084590524c5346faf988e8c3197b3",
+    "derived/drivetrain-mule-v10/geometry.json": "5a26e8e315c898d5c7217f1f8386ecc8b416b9456d4bebbb9756980ba17a492a"
+  },
+  "output_hashes": {
+    "base-square-1to1.svg": "f4b89d613b140e4e55c6626f72969ae418c222c85369688627e49ebf15c49e06",
+    "base-round-1to1.svg": "1649c35b674edd5e29e6bec208b084803007de93ba4e715d1e47ed0f6973aeef",
+    "side-envelope.svg": "e4055048bd10da3ed0d5d5c19cd5cbec82075cbe5c786965102567687d359b31",
+    "sizing-box-cut-list.csv": "65f2b2d2c40d308765daf6b90a24e1e9e2e8ad8fe543217347aca75104fb3081",
+    "swept-turn-procedure.md": "84a4eaeca8142cfa9171c225d7a74cde46d8b064e8ff2c8bf4862279b55075d8",
+    "README.md": "801355ca5b3b83a20e6ff6d88394e161620a508bc7243e9974039b7627fe5f6c"
+  }
+}
