@@ -75,7 +75,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -110,7 +111,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -145,7 +147,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -180,7 +183,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -215,7 +219,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -250,7 +255,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -285,7 +291,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -320,7 +327,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -355,7 +363,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -390,7 +399,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -425,7 +435,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -460,7 +471,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -495,7 +507,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -530,7 +543,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -565,7 +579,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -600,7 +615,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -635,7 +651,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -670,7 +687,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -705,7 +723,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -740,7 +759,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     }
    ]
   },
@@ -794,7 +814,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -829,7 +850,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -864,7 +886,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -899,7 +922,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -934,7 +958,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -969,7 +994,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1004,7 +1030,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1039,7 +1066,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1074,7 +1102,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1109,7 +1138,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1144,7 +1174,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1179,7 +1210,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1214,7 +1246,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1249,7 +1282,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1284,7 +1318,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1319,7 +1354,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1354,7 +1390,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1389,7 +1426,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1424,7 +1462,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1459,7 +1498,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     }
    ]
   },
@@ -1513,7 +1553,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1548,7 +1589,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1583,7 +1625,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1618,7 +1661,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1653,7 +1697,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1688,7 +1733,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1723,7 +1769,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1758,7 +1805,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1793,7 +1841,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1828,7 +1877,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1863,7 +1913,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1898,7 +1949,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1933,7 +1985,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -1968,7 +2021,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2003,7 +2057,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2038,7 +2093,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2073,7 +2129,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2108,7 +2165,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2143,7 +2201,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2178,7 +2237,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     }
    ]
   },
@@ -2232,7 +2292,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2267,7 +2328,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2302,7 +2364,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2337,7 +2400,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2372,7 +2436,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2407,7 +2472,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2442,7 +2508,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2477,7 +2544,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2512,7 +2580,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2547,7 +2616,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2582,7 +2652,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2617,7 +2688,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2652,7 +2724,8 @@
      },
      "score_like": 325,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2687,7 +2760,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2722,7 +2796,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2757,7 +2832,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2792,7 +2868,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2827,7 +2904,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2862,7 +2940,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2897,7 +2976,8 @@
      },
      "score_like": 390,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     }
    ]
   },
@@ -2951,7 +3031,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -2986,7 +3067,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 129.15
+     "lap_length_in": 129.15,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3021,7 +3103,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 127.62
+     "lap_length_in": 127.62,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3056,7 +3139,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 126.58
+     "lap_length_in": 126.58,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3091,7 +3175,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.27
+     "lap_length_in": 119.27,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3126,7 +3211,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3161,7 +3247,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 127.64
+     "lap_length_in": 127.64,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3196,7 +3283,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 126.02
+     "lap_length_in": 126.02,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3231,7 +3319,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 125.85
+     "lap_length_in": 125.85,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3266,7 +3355,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.15
+     "lap_length_in": 119.15,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3301,7 +3391,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 119.4
+     "lap_length_in": 119.4,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3336,7 +3427,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3371,7 +3463,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 127.4
+     "lap_length_in": 127.4,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3406,7 +3499,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 127.35
+     "lap_length_in": 127.35,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3441,7 +3535,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.35
+     "lap_length_in": 119.35,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3476,7 +3571,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 119.44
+     "lap_length_in": 119.44,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3511,7 +3607,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 134.41
+     "lap_length_in": 134.41,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3546,7 +3643,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3581,7 +3679,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3616,7 +3715,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     }
    ]
   },
@@ -3670,7 +3770,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3705,7 +3806,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 129.15
+     "lap_length_in": 129.15,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3740,7 +3842,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 127.62
+     "lap_length_in": 127.62,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3775,7 +3878,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 126.58
+     "lap_length_in": 126.58,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3810,7 +3914,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.27
+     "lap_length_in": 119.27,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3845,7 +3950,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3880,7 +3986,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 127.64
+     "lap_length_in": 127.64,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3915,7 +4022,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 126.02
+     "lap_length_in": 126.02,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3950,7 +4058,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 125.85
+     "lap_length_in": 125.85,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -3985,7 +4094,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.15
+     "lap_length_in": 119.15,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4020,7 +4130,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 119.4
+     "lap_length_in": 119.4,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4055,7 +4166,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4090,7 +4202,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 127.4
+     "lap_length_in": 127.4,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4125,7 +4238,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 127.35
+     "lap_length_in": 127.35,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4160,7 +4274,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.35
+     "lap_length_in": 119.35,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4195,7 +4310,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 119.44
+     "lap_length_in": 119.44,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4230,7 +4346,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 134.41
+     "lap_length_in": 134.41,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4265,7 +4382,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4300,7 +4418,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4335,7 +4454,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     }
    ]
   },
@@ -4389,7 +4509,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4424,7 +4545,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 129.15
+     "lap_length_in": 129.15,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4459,7 +4581,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 127.62
+     "lap_length_in": 127.62,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4494,7 +4617,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 126.58
+     "lap_length_in": 126.58,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4529,7 +4653,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.27
+     "lap_length_in": 119.27,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4564,7 +4689,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4599,7 +4725,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 127.64
+     "lap_length_in": 127.64,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4634,7 +4761,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 126.02
+     "lap_length_in": 126.02,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4669,7 +4797,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 125.85
+     "lap_length_in": 125.85,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4704,7 +4833,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.15
+     "lap_length_in": 119.15,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4739,7 +4869,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 119.4
+     "lap_length_in": 119.4,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4774,7 +4905,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4809,7 +4941,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 127.4
+     "lap_length_in": 127.4,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4844,7 +4977,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 127.35
+     "lap_length_in": 127.35,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4879,7 +5013,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.35
+     "lap_length_in": 119.35,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4914,7 +5049,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 119.44
+     "lap_length_in": 119.44,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4949,7 +5085,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 134.41
+     "lap_length_in": 134.41,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -4984,7 +5121,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5019,7 +5157,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5054,7 +5193,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     }
    ]
   },
@@ -5108,7 +5248,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5143,7 +5284,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 129.15
+     "lap_length_in": 129.15,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5178,7 +5320,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 127.62
+     "lap_length_in": 127.62,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5213,7 +5356,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 126.58
+     "lap_length_in": 126.58,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5248,7 +5392,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.27
+     "lap_length_in": 119.27,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5283,7 +5428,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5318,7 +5464,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 127.64
+     "lap_length_in": 127.64,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5353,7 +5500,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 126.02
+     "lap_length_in": 126.02,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5388,7 +5536,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 125.85
+     "lap_length_in": 125.85,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5423,7 +5572,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.15
+     "lap_length_in": 119.15,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5458,7 +5608,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 119.4
+     "lap_length_in": 119.4,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5493,7 +5644,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5528,7 +5680,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 127.4
+     "lap_length_in": 127.4,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5563,7 +5716,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 127.35
+     "lap_length_in": 127.35,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5598,7 +5752,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.35
+     "lap_length_in": 119.35,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5633,7 +5788,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 119.44
+     "lap_length_in": 119.44,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5668,7 +5824,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 134.41
+     "lap_length_in": 134.41,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5703,7 +5860,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5738,7 +5896,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5773,7 +5932,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     }
    ]
   },
@@ -5827,7 +5987,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5862,7 +6023,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 127.51
+     "lap_length_in": 127.51,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5897,7 +6059,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5932,7 +6095,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -5967,7 +6131,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6002,7 +6167,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6037,7 +6203,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6072,7 +6239,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6107,7 +6275,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6142,7 +6311,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 119.42
+     "lap_length_in": 119.42,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6177,7 +6347,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6212,7 +6383,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6247,7 +6419,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6282,7 +6455,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6317,7 +6491,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6352,7 +6527,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6387,7 +6563,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 127.48
+     "lap_length_in": 127.48,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6422,7 +6599,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6457,7 +6635,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6492,7 +6671,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.25
+     "lap_length_in": 119.25,
+     "estimation": null
     }
    ]
   },
@@ -6546,7 +6726,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6581,7 +6762,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 127.51
+     "lap_length_in": 127.51,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6616,7 +6798,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6651,7 +6834,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6686,7 +6870,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6721,7 +6906,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6756,7 +6942,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6791,7 +6978,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6826,7 +7014,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6861,7 +7050,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 119.42
+     "lap_length_in": 119.42,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6896,7 +7086,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6931,7 +7122,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -6966,7 +7158,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7001,7 +7194,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7036,7 +7230,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7071,7 +7266,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7106,7 +7302,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 127.48
+     "lap_length_in": 127.48,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7141,7 +7338,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7176,7 +7374,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7211,7 +7410,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.25
+     "lap_length_in": 119.25,
+     "estimation": null
     }
    ]
   },
@@ -7265,7 +7465,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7300,7 +7501,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 127.51
+     "lap_length_in": 127.51,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7335,7 +7537,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7370,7 +7573,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7405,7 +7609,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7440,7 +7645,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7475,7 +7681,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7510,7 +7717,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7545,7 +7753,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7580,7 +7789,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 119.42
+     "lap_length_in": 119.42,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7615,7 +7825,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7650,7 +7861,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7685,7 +7897,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7720,7 +7933,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7755,7 +7969,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7790,7 +8005,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7825,7 +8041,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 127.48
+     "lap_length_in": 127.48,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7860,7 +8077,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7895,7 +8113,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -7930,7 +8149,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.25
+     "lap_length_in": 119.25,
+     "estimation": null
     }
    ]
   },
@@ -7984,7 +8204,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8019,7 +8240,8 @@
      },
      "score_like": 270,
      "stop_reason": null,
-     "lap_length_in": 127.51
+     "lap_length_in": 127.51,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8054,7 +8276,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8089,7 +8312,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8124,7 +8348,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8159,7 +8384,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8194,7 +8420,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8229,7 +8456,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8264,7 +8492,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8299,7 +8528,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 119.42
+     "lap_length_in": 119.42,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8334,7 +8564,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8369,7 +8600,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8404,7 +8636,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8439,7 +8672,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8474,7 +8708,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8509,7 +8744,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8544,7 +8780,8 @@
      },
      "score_like": 205,
      "stop_reason": null,
-     "lap_length_in": 127.48
+     "lap_length_in": 127.48,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8579,7 +8816,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8614,7 +8852,8 @@
      },
      "score_like": 250,
      "stop_reason": null,
-     "lap_length_in": 119.11
+     "lap_length_in": 119.11,
+     "estimation": null
     },
     {
      "state": "DONE",
@@ -8649,7 +8888,8 @@
      },
      "score_like": 315,
      "stop_reason": null,
-     "lap_length_in": 119.25
+     "lap_length_in": 119.25,
+     "estimation": null
     }
    ]
   }

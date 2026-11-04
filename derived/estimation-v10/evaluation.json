@@ -1,0 +1,6959 @@
+{
+ "version": "0.10.0",
+ "date": "2026-11-04",
+ "status": "agent-run synthetic evaluation; not on-robot accuracy",
+ "seeds": [
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  108,
+  109,
+  110,
+  111,
+  112,
+  113,
+  114,
+  115,
+  116,
+  117,
+  118,
+  119
+ ],
+ "results": [
+  {
+   "condition": "empty",
+   "sensing": "full",
+   "summary": {
+    "completed": 20,
+    "parked": 20,
+    "laps_with_wall_contact": 0,
+    "rms_position_error_in_median": 0.114,
+    "max_position_error_in_worst": 0.701,
+    "max_heading_error_deg_worst": 1.59,
+    "mean_score_like": 367.25
+   },
+   "runs": [
+    {
+     "state": "DONE",
+     "time_s": 58.05,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 24.0,
+      "lap_3": 54.3,
+      "parked": 58.05
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.177,
+      "max_position_error_in": 0.507,
+      "max_heading_error_deg": 0.75,
+      "line_updates": 222,
+      "range_updates": 4181,
+      "range_rejected": 52
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.55,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 62.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 62.35,
+      "parked": 69.55
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.133,
+      "max_position_error_in": 0.443,
+      "max_heading_error_deg": 0.82,
+      "line_updates": 204,
+      "range_updates": 5037,
+      "range_rejected": 51
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 58.1,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.75,
+      "lap_2": 23.9,
+      "lap_3": 54.35,
+      "parked": 58.1
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.218,
+      "max_position_error_in": 0.677,
+      "max_heading_error_deg": 1.14,
+      "line_updates": 201,
+      "range_updates": 4181,
+      "range_rejected": 40
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.65,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 24.0,
+      "lap_3": 54.35,
+      "parked": 61.65
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.228,
+      "max_position_error_in": 0.701,
+      "max_heading_error_deg": 0.74,
+      "line_updates": 214,
+      "range_updates": 4443,
+      "range_rejected": 68
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 66.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 62.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 62.4,
+      "parked": 66.15
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.109,
+      "max_position_error_in": 0.305,
+      "max_heading_error_deg": 1.08,
+      "line_updates": 220,
+      "range_updates": 4828,
+      "range_rejected": 28
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.6,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.8,
+      "lap_2": 24.05,
+      "lap_3": 54.35,
+      "parked": 61.6
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.223,
+      "max_position_error_in": 0.608,
+      "max_heading_error_deg": 0.89,
+      "line_updates": 216,
+      "range_updates": 4436,
+      "range_rejected": 63
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.55,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 62.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.9,
+      "lap_3": 62.3,
+      "parked": 69.55
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.201,
+      "max_position_error_in": 0.672,
+      "max_heading_error_deg": 1.59,
+      "line_updates": 193,
+      "range_updates": 4961,
+      "range_rejected": 118
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 58.25,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.8,
+      "lap_2": 24.0,
+      "lap_3": 54.5,
+      "parked": 58.25
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.116,
+      "max_position_error_in": 0.375,
+      "max_heading_error_deg": 1.27,
+      "line_updates": 206,
+      "range_updates": 4218,
+      "range_rejected": 33
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 66.3,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 62.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 62.55,
+      "parked": 66.3
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.07,
+      "max_position_error_in": 0.193,
+      "max_heading_error_deg": 1.18,
+      "line_updates": 219,
+      "range_updates": 4809,
+      "range_rejected": 54
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.15,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 55.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 55.25,
+      "parked": 61.15
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.085,
+      "max_position_error_in": 0.235,
+      "max_heading_error_deg": 0.82,
+      "line_updates": 212,
+      "range_updates": 4425,
+      "range_rejected": 35
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.35,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 63.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 63.4,
+      "parked": 69.35
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.076,
+      "max_position_error_in": 0.215,
+      "max_heading_error_deg": 1.01,
+      "line_updates": 210,
+      "range_updates": 5028,
+      "range_rejected": 37
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 66.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 62.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 62.35,
+      "parked": 66.15
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.073,
+      "max_position_error_in": 0.355,
+      "max_heading_error_deg": 1.3,
+      "line_updates": 199,
+      "range_updates": 4788,
+      "range_rejected": 40
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.45,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 63.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 24.0,
+      "lap_3": 63.45,
+      "parked": 69.45
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.213,
+      "max_position_error_in": 0.697,
+      "max_heading_error_deg": 0.77,
+      "line_updates": 222,
+      "range_updates": 5075,
+      "range_rejected": 53
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 58.1,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.35,
+      "parked": 58.1
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.07,
+      "max_position_error_in": 0.192,
+      "max_heading_error_deg": 1.19,
+      "line_updates": 210,
+      "range_updates": 4192,
+      "range_rejected": 34
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 57.95,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.2,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.2,
+      "parked": 57.95
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.128,
+      "max_position_error_in": 0.411,
+      "max_heading_error_deg": 1.02,
+      "line_updates": 220,
+      "range_updates": 4193,
+      "range_rejected": 36
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.4,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 55.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 55.35,
+      "parked": 61.4
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.082,
+      "max_position_error_in": 0.331,
+      "max_heading_error_deg": 0.83,
+      "line_updates": 206,
+      "range_updates": 4474,
+      "range_rejected": 28
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.5,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.3,
+      "parked": 61.5
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.079,
+      "max_position_error_in": 0.181,
+      "max_heading_error_deg": 1.1,
+      "line_updates": 206,
+      "range_updates": 4432,
+      "range_rejected": 48
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 58.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.35,
+      "parked": 58.15
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.076,
+      "max_position_error_in": 0.234,
+      "max_heading_error_deg": 1.1,
+      "line_updates": 208,
+      "range_updates": 4235,
+      "range_rejected": 24
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.25,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.75,
+      "lap_2": 23.9,
+      "lap_3": 54.1,
+      "parked": 61.25
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.111,
+      "max_position_error_in": 0.393,
+      "max_heading_error_deg": 0.91,
+      "line_updates": 203,
+      "range_updates": 4445,
+      "range_rejected": 34
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.3,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 55.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 24.0,
+      "lap_3": 55.3,
+      "parked": 61.3
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.146,
+      "max_position_error_in": 0.464,
+      "max_heading_error_deg": 0.61,
+      "line_updates": 214,
+      "range_updates": 4439,
+      "range_rejected": 38
+     }
+    }
+   ]
+  },
+  {
+   "condition": "empty",
+   "sensing": "ranges_only",
+   "summary": {
+    "completed": 20,
+    "parked": 20,
+    "laps_with_wall_contact": 0,
+    "rms_position_error_in_median": 0.117,
+    "max_position_error_in_worst": 0.689,
+    "max_heading_error_deg_worst": 1.71,
+    "mean_score_like": 367.25
+   },
+   "runs": [
+    {
+     "state": "DONE",
+     "time_s": 58.05,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.3,
+      "parked": 58.05
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.153,
+      "max_position_error_in": 0.477,
+      "max_heading_error_deg": 0.92,
+      "line_updates": 0,
+      "range_updates": 4182,
+      "range_rejected": 42
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.45,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 62.2,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.7,
+      "lap_2": 23.85,
+      "lap_3": 62.2,
+      "parked": 69.45
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.14,
+      "max_position_error_in": 0.493,
+      "max_heading_error_deg": 0.68,
+      "line_updates": 0,
+      "range_updates": 5043,
+      "range_rejected": 32
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 58.1,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.75,
+      "lap_2": 23.9,
+      "lap_3": 54.35,
+      "parked": 58.1
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.235,
+      "max_position_error_in": 0.689,
+      "max_heading_error_deg": 1.06,
+      "line_updates": 0,
+      "range_updates": 4191,
+      "range_rejected": 39
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.75,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.8,
+      "lap_2": 24.0,
+      "lap_3": 54.4,
+      "parked": 61.75
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.211,
+      "max_position_error_in": 0.661,
+      "max_heading_error_deg": 0.76,
+      "line_updates": 0,
+      "range_updates": 4464,
+      "range_rejected": 51
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 66.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 62.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 62.4,
+      "parked": 66.15
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.098,
+      "max_position_error_in": 0.27,
+      "max_heading_error_deg": 1.11,
+      "line_updates": 0,
+      "range_updates": 4824,
+      "range_rejected": 23
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.65,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.8,
+      "lap_2": 24.05,
+      "lap_3": 54.35,
+      "parked": 61.65
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.2,
+      "max_position_error_in": 0.564,
+      "max_heading_error_deg": 0.88,
+      "line_updates": 0,
+      "range_updates": 4450,
+      "range_rejected": 53
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.4,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 62.2,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.7,
+      "lap_2": 23.85,
+      "lap_3": 62.2,
+      "parked": 69.4
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.204,
+      "max_position_error_in": 0.683,
+      "max_heading_error_deg": 1.65,
+      "line_updates": 0,
+      "range_updates": 4990,
+      "range_rejected": 96
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 58.0,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.8,
+      "lap_2": 23.95,
+      "lap_3": 54.25,
+      "parked": 58.0
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.126,
+      "max_position_error_in": 0.362,
+      "max_heading_error_deg": 1.18,
+      "line_updates": 0,
+      "range_updates": 4184,
+      "range_rejected": 39
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 66.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 62.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 62.4,
+      "parked": 66.15
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.068,
+      "max_position_error_in": 0.191,
+      "max_heading_error_deg": 1.71,
+      "line_updates": 0,
+      "range_updates": 4794,
+      "range_rejected": 48
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.2,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 55.2,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 55.2,
+      "parked": 61.2
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.071,
+      "max_position_error_in": 0.22,
+      "max_heading_error_deg": 0.92,
+      "line_updates": 0,
+      "range_updates": 4431,
+      "range_rejected": 32
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.4,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 63.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 63.4,
+      "parked": 69.4
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.062,
+      "max_position_error_in": 0.173,
+      "max_heading_error_deg": 1.01,
+      "line_updates": 0,
+      "range_updates": 5028,
+      "range_rejected": 32
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 66.3,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 62.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.75,
+      "lap_2": 24.0,
+      "lap_3": 62.5,
+      "parked": 66.3
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.068,
+      "max_position_error_in": 0.228,
+      "max_heading_error_deg": 1.35,
+      "line_updates": 0,
+      "range_updates": 4810,
+      "range_rejected": 29
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 69.4,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 63.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.8,
+      "lap_2": 24.0,
+      "lap_3": 63.35,
+      "parked": 69.4
+     },
+     "score_like": 325,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.19,
+      "max_position_error_in": 0.653,
+      "max_heading_error_deg": 0.71,
+      "line_updates": 0,
+      "range_updates": 5071,
+      "range_rejected": 44
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 58.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.7,
+      "lap_2": 23.9,
+      "lap_3": 54.4,
+      "parked": 58.15
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.061,
+      "max_position_error_in": 0.185,
+      "max_heading_error_deg": 1.28,
+      "line_updates": 0,
+      "range_updates": 4220,
+      "range_rejected": 19
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 58.3,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 24.0,
+      "lap_3": 54.55,
+      "parked": 58.3
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.122,
+      "max_position_error_in": 0.365,
+      "max_heading_error_deg": 1.06,
+      "line_updates": 0,
+      "range_updates": 4227,
+      "range_rejected": 30
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.35,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 55.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 55.3,
+      "parked": 61.35
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.084,
+      "max_position_error_in": 0.313,
+      "max_heading_error_deg": 0.83,
+      "line_updates": 0,
+      "range_updates": 4476,
+      "range_rejected": 27
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.7,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.8,
+      "lap_2": 24.0,
+      "lap_3": 54.4,
+      "parked": 61.7
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.075,
+      "max_position_error_in": 0.193,
+      "max_heading_error_deg": 0.99,
+      "line_updates": 0,
+      "range_updates": 4466,
+      "range_rejected": 34
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 58.2,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.45,
+      "parked": 58.2
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.06,
+      "max_position_error_in": 0.234,
+      "max_heading_error_deg": 1.09,
+      "line_updates": 0,
+      "range_updates": 4248,
+      "range_rejected": 15
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.45,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.15,
+      "parked": 61.45
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.131,
+      "max_position_error_in": 0.484,
+      "max_heading_error_deg": 0.82,
+      "line_updates": 0,
+      "range_updates": 4462,
+      "range_rejected": 31
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 61.3,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 55.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 55.25,
+      "parked": 61.3
+     },
+     "score_like": 390,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.113,
+      "max_position_error_in": 0.335,
+      "max_heading_error_deg": 0.79,
+      "line_updates": 0,
+      "range_updates": 4414,
+      "range_rejected": 29
+     }
+    }
+   ]
+  },
+  {
+   "condition": "empty",
+   "sensing": "lines_only",
+   "summary": {
+    "completed": 0,
+    "parked": 0,
+    "laps_with_wall_contact": 52,
+    "rms_position_error_in_median": 7.412,
+    "max_position_error_in_worst": 51.577,
+    "max_heading_error_deg_worst": 123.26,
+    "mean_score_like": 313.25
+   },
+   "runs": [
+    {
+     "state": "STOPPED",
+     "time_s": 85.65,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      44,
+      56,
+      1009
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 55.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.65,
+      "lap_1": 13.95,
+      "lap_2": 24.2,
+      "lap_3": 55.45
+     },
+     "score_like": 330,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 10.429,
+      "max_position_error_in": 22.054,
+      "max_heading_error_deg": 42.61,
+      "line_updates": 126,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 95.3,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      46,
+      81,
+      595
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 61.75,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 13.55,
+      "lap_2": 23.6,
+      "lap_3": 61.75
+     },
+     "score_like": 265,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 19.993,
+      "max_position_error_in": 49.423,
+      "max_heading_error_deg": 84.99,
+      "line_updates": 84,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 83.9,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      20,
+      0,
+      249
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 53.8,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.35,
+      "lap_2": 23.35,
+      "lap_3": 53.8
+     },
+     "score_like": 345,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 2.512,
+      "max_position_error_in": 4.429,
+      "max_heading_error_deg": 14.34,
+      "line_updates": 120,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 88.8,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      59,
+      82,
+      477
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 55.05,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.85,
+      "lap_2": 24.15,
+      "lap_3": 55.05
+     },
+     "score_like": 330,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 19.813,
+      "max_position_error_in": 29.778,
+      "max_heading_error_deg": 62.64,
+      "line_updates": 130,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 93.2,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      38,
+      67,
+      1111
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 63.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.8,
+      "lap_2": 24.0,
+      "lap_3": 63.1
+     },
+     "score_like": 265,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 7.326,
+      "max_position_error_in": 10.183,
+      "max_heading_error_deg": 18.19,
+      "line_updates": 162,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 88.9,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      57,
+      83,
+      1046
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 55.2,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.65,
+      "lap_1": 14.1,
+      "lap_2": 24.5,
+      "lap_3": 55.2
+     },
+     "score_like": 330,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 30.442,
+      "max_position_error_in": 48.623,
+      "max_heading_error_deg": 123.26,
+      "line_updates": 103,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 94.7,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      69,
+      10,
+      73
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 61.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.45,
+      "lap_1": 13.7,
+      "lap_2": 23.65,
+      "lap_3": 61.25
+     },
+     "score_like": 265,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 3.241,
+      "max_position_error_in": 5.739,
+      "max_heading_error_deg": 9.15,
+      "line_updates": 152,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 84.45,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      886
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 54.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.6,
+      "lap_2": 23.65,
+      "lap_3": 54.25
+     },
+     "score_like": 360,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 4.022,
+      "max_position_error_in": 7.989,
+      "max_heading_error_deg": 20.21,
+      "line_updates": 142,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 93.05,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      17,
+      1129
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 62.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.8,
+      "lap_2": 23.95,
+      "lap_3": 62.9
+     },
+     "score_like": 280,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 7.499,
+      "max_position_error_in": 19.668,
+      "max_heading_error_deg": 37.62,
+      "line_updates": 143,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 88.2,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      19,
+      62,
+      837
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 55.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.65,
+      "lap_1": 13.9,
+      "lap_2": 24.1,
+      "lap_3": 55.9
+     },
+     "score_like": 330,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 15.465,
+      "max_position_error_in": 33.735,
+      "max_heading_error_deg": 77.85,
+      "line_updates": 99,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 96.3,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      41,
+      27,
+      145
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 63.8,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.9,
+      "lap_2": 24.05,
+      "lap_3": 63.8
+     },
+     "score_like": 265,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 4.625,
+      "max_position_error_in": 6.065,
+      "max_heading_error_deg": 9.13,
+      "line_updates": 104,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 92.55,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      42,
+      76,
+      1133
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 62.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.7,
+      "lap_2": 23.85,
+      "lap_3": 62.45
+     },
+     "score_like": 265,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 9.931,
+      "max_position_error_in": 13.588,
+      "max_heading_error_deg": 20.56,
+      "line_updates": 137,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 96.65,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      29,
+      44,
+      532
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 64.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.65,
+      "lap_1": 14.0,
+      "lap_2": 24.35,
+      "lap_3": 64.15
+     },
+     "score_like": 265,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 8.449,
+      "max_position_error_in": 12.859,
+      "max_heading_error_deg": 29.49,
+      "line_updates": 139,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 84.85,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      8,
+      45,
+      897
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 54.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.75,
+      "lap_2": 23.9,
+      "lap_3": 54.6
+     },
+     "score_like": 330,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 3.934,
+      "max_position_error_in": 6.998,
+      "max_heading_error_deg": 15.24,
+      "line_updates": 183,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 85.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      46,
+      86,
+      290
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 55.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.65,
+      "lap_1": 13.9,
+      "lap_2": 24.15,
+      "lap_3": 55.0
+     },
+     "score_like": 330,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 25.276,
+      "max_position_error_in": 51.577,
+      "max_heading_error_deg": 114.59,
+      "line_updates": 97,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 87.2,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      39,
+      49,
+      165
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 54.8,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.55,
+      "lap_2": 23.65,
+      "lap_3": 54.8
+     },
+     "score_like": 330,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 4.988,
+      "max_position_error_in": 6.851,
+      "max_heading_error_deg": 14.12,
+      "line_updates": 143,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 87.75,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      60,
+      30,
+      182
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 54.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 14.0,
+      "lap_2": 24.15,
+      "lap_3": 54.1
+     },
+     "score_like": 330,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 5.168,
+      "max_position_error_in": 7.685,
+      "max_heading_error_deg": 11.22,
+      "line_updates": 163,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 84.85,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      285
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 54.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.6
+     },
+     "score_like": 360,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 2.352,
+      "max_position_error_in": 4.978,
+      "max_heading_error_deg": 12.39,
+      "line_updates": 185,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 87.0,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      53
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 53.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.55,
+      "lap_2": 23.6,
+      "lap_3": 53.5
+     },
+     "score_like": 360,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 1.903,
+      "max_position_error_in": 3.24,
+      "max_heading_error_deg": 9.85,
+      "line_updates": 156,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 87.85,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      54,
+      72,
+      783
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 55.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 55.45
+     },
+     "score_like": 330,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 11.512,
+      "max_position_error_in": 16.579,
+      "max_heading_error_deg": 30.09,
+      "line_updates": 138,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    }
+   ]
+  },
+  {
+   "condition": "empty",
+   "sensing": "odometry_only",
+   "summary": {
+    "completed": 2,
+    "parked": 2,
+    "laps_with_wall_contact": 44,
+    "rms_position_error_in_median": 8.253,
+    "max_position_error_in_worst": 52.417,
+    "max_heading_error_deg_worst": 97.73,
+    "mean_score_like": 320.75
+   },
+   "runs": [
+    {
+     "state": "STOPPED",
+     "time_s": 85.0,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      33,
+      402
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 54.8,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.9,
+      "lap_2": 24.25,
+      "lap_3": 54.8
+     },
+     "score_like": 345,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 14.251,
+      "max_position_error_in": 21.517,
+      "max_heading_error_deg": 40.7,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 95.25,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      8,
+      55,
+      1107
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 61.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 13.55,
+      "lap_2": 23.65,
+      "lap_3": 61.7
+     },
+     "score_like": 265,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 9.983,
+      "max_position_error_in": 20.111,
+      "max_heading_error_deg": 37.08,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 83.4,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      25,
+      43,
+      404
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 53.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 13.45,
+      "lap_2": 23.45,
+      "lap_3": 53.3
+     },
+     "score_like": 330,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 16.813,
+      "max_position_error_in": 25.121,
+      "max_heading_error_deg": 50.09,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 88.8,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      37,
+      46,
+      496
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 55.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 14.0,
+      "lap_2": 24.4,
+      "lap_3": 55.1
+     },
+     "score_like": 330,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 14.955,
+      "max_position_error_in": 23.92,
+      "max_heading_error_deg": 53.23,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 92.75,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      46,
+      46,
+      587
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 62.65,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.8,
+      "lap_2": 24.1,
+      "lap_3": 62.65
+     },
+     "score_like": 265,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 21.929,
+      "max_position_error_in": 52.417,
+      "max_heading_error_deg": 94.49,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 88.75,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      15,
+      866
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 55.05,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 14.0,
+      "lap_2": 24.45,
+      "lap_3": 55.05
+     },
+     "score_like": 345,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 5.744,
+      "max_position_error_in": 11.453,
+      "max_heading_error_deg": 25.67,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 94.9,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      38,
+      91,
+      612
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 61.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 13.5,
+      "lap_2": 23.5,
+      "lap_3": 61.45
+     },
+     "score_like": 265,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 16.5,
+      "max_position_error_in": 23.478,
+      "max_heading_error_deg": 44.02,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 84.0,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      130
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 53.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 13.6,
+      "lap_2": 23.7,
+      "lap_3": 53.85
+     },
+     "score_like": 360,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 6.523,
+      "max_position_error_in": 9.807,
+      "max_heading_error_deg": 11.85,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 92.4,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      25,
+      61,
+      1125
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 62.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 13.8,
+      "lap_2": 24.0,
+      "lap_3": 62.3
+     },
+     "score_like": 265,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 23.507,
+      "max_position_error_in": 41.801,
+      "max_heading_error_deg": 77.7,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 87.7,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      55
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 55.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.8,
+      "lap_2": 24.05,
+      "lap_3": 55.4
+     },
+     "score_like": 360,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 2.663,
+      "max_position_error_in": 3.839,
+      "max_heading_error_deg": 4.66,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 95.9,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      7,
+      28,
+      227
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 63.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.8,
+      "lap_2": 24.05,
+      "lap_3": 63.5
+     },
+     "score_like": 265,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 11.11,
+      "max_position_error_in": 25.371,
+      "max_heading_error_deg": 46.45,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 65.85,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      80
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 62.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 13.65,
+      "lap_2": 23.8,
+      "lap_3": 62.15,
+      "parked": 65.85
+     },
+     "score_like": 310,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 2.362,
+      "max_position_error_in": 7.956,
+      "max_heading_error_deg": 7.91,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 96.8,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      69,
+      83,
+      1186
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 64.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.65,
+      "lap_1": 14.05,
+      "lap_2": 24.45,
+      "lap_3": 64.4
+     },
+     "score_like": 265,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 19.897,
+      "max_position_error_in": 42.716,
+      "max_heading_error_deg": 81.5,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 84.5,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      51,
+      43,
+      972
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 54.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.25
+     },
+     "score_like": 330,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 26.491,
+      "max_position_error_in": 46.146,
+      "max_heading_error_deg": 97.73,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 58.55,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      17
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 54.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.85,
+      "lap_2": 24.15,
+      "lap_3": 54.6,
+      "parked": 58.55
+     },
+     "score_like": 375,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 1.668,
+      "max_position_error_in": 3.332,
+      "max_heading_error_deg": 5.24,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 87.3,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      5,
+      26,
+      175
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 54.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 13.6,
+      "lap_2": 23.75,
+      "lap_3": 54.85
+     },
+     "score_like": 330,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 6.244,
+      "max_position_error_in": 12.31,
+      "max_heading_error_deg": 23.81,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 87.85,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      98
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 54.2,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.75,
+      "lap_2": 23.95,
+      "lap_3": 54.2
+     },
+     "score_like": 360,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 3.685,
+      "max_position_error_in": 12.017,
+      "max_heading_error_deg": 21.84,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 84.55,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      0,
+      83
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 54.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.7,
+      "lap_2": 23.9,
+      "lap_3": 54.3
+     },
+     "score_like": 360,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 3.385,
+      "max_position_error_in": 4.867,
+      "max_heading_error_deg": 7.7,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 87.2,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      26,
+      173
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 53.7,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 13.55,
+      "lap_2": 23.65,
+      "lap_3": 53.7
+     },
+     "score_like": 345,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 6.121,
+      "max_position_error_in": 9.199,
+      "max_heading_error_deg": 15.51,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 87.8,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clear",
+      "clear"
+     ],
+     "planned_contact_vehicles": 0,
+     "wall_contact_steps": [
+      0,
+      29,
+      145
+     ],
+     "vehicle_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 55.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 13.85,
+      "lap_2": 24.15,
+      "lap_3": 55.5
+     },
+     "score_like": 345,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 5.663,
+      "max_position_error_in": 11.299,
+      "max_heading_error_deg": 27.75,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    }
+   ]
+  },
+  {
+   "condition": "aligned_vehicles",
+   "sensing": "full",
+   "summary": {
+    "completed": 20,
+    "parked": 20,
+    "laps_with_wall_contact": 26,
+    "rms_position_error_in_median": 0.126,
+    "max_position_error_in_worst": 0.774,
+    "max_heading_error_deg_worst": 1.98,
+    "mean_score_like": 266.25
+   },
+   "runs": [
+    {
+     "state": "DONE",
+     "time_s": 88.3,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      178,
+      179,
+      179
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 81.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 20.0,
+      "lap_2": 36.5,
+      "lap_3": 81.15,
+      "parked": 88.3
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.187,
+      "max_position_error_in": 0.554,
+      "max_heading_error_deg": 0.74,
+      "line_updates": 220,
+      "range_updates": 5805,
+      "range_rejected": 813
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 85.85,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "lane_change"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      40,
+      40,
+      40
+     ],
+     "vehicle_contact_steps": [
+      234,
+      232,
+      233
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 82.2,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 23.1,
+      "lap_2": 42.5,
+      "lap_3": 82.2,
+      "parked": 85.85
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 129.15,
+     "estimation": {
+      "rms_position_error_in": 0.153,
+      "max_position_error_in": 0.402,
+      "max_heading_error_deg": 0.96,
+      "line_updates": 295,
+      "range_updates": 5183,
+      "range_rejected": 1233
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 80.9,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      47,
+      52,
+      51
+     ],
+     "vehicle_contact_steps": [
+      187,
+      185,
+      186
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 77.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.3,
+      "lap_2": 39.05,
+      "lap_3": 77.1,
+      "parked": 80.9
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.62,
+     "estimation": {
+      "rms_position_error_in": 0.215,
+      "max_position_error_in": 0.679,
+      "max_heading_error_deg": 0.87,
+      "line_updates": 296,
+      "range_updates": 5132,
+      "range_rejected": 914
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 82.4,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      5,
+      6
+     ],
+     "vehicle_contact_steps": [
+      221,
+      223,
+      222
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 78.65,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.8,
+      "lap_2": 40.15,
+      "lap_3": 78.65,
+      "parked": 82.4
+     },
+     "score_like": 285,
+     "stop_reason": null,
+     "lap_length_in": 126.58,
+     "estimation": {
+      "rms_position_error_in": 0.217,
+      "max_position_error_in": 0.68,
+      "max_heading_error_deg": 1.11,
+      "line_updates": 304,
+      "range_updates": 5109,
+      "range_rejected": 1089
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 73.0,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      98,
+      95,
+      96
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 66.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 17.85,
+      "lap_2": 32.2,
+      "lap_3": 66.95,
+      "parked": 73.0
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.27,
+     "estimation": {
+      "rms_position_error_in": 0.112,
+      "max_position_error_in": 0.294,
+      "max_heading_error_deg": 1.16,
+      "line_updates": 210,
+      "range_updates": 4755,
+      "range_rejected": 685
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 83.9,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      177,
+      178,
+      177
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 80.2,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.65,
+      "lap_2": 35.8,
+      "lap_3": 80.2,
+      "parked": 83.9
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.249,
+      "max_position_error_in": 0.654,
+      "max_heading_error_deg": 0.94,
+      "line_updates": 218,
+      "range_updates": 5492,
+      "range_rejected": 809
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 88.25,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      36,
+      32,
+      33
+     ],
+     "vehicle_contact_steps": [
+      180,
+      179,
+      180
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 84.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.15,
+      "lap_2": 38.7,
+      "lap_3": 84.45,
+      "parked": 88.25
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 127.64,
+     "estimation": {
+      "rms_position_error_in": 0.211,
+      "max_position_error_in": 0.69,
+      "max_heading_error_deg": 1.98,
+      "line_updates": 296,
+      "range_updates": 5461,
+      "range_rejected": 1121
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.1,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      185,
+      187,
+      184
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 83.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 20.75,
+      "lap_2": 38.0,
+      "lap_3": 83.4,
+      "parked": 87.1
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 126.02,
+     "estimation": {
+      "rms_position_error_in": 0.126,
+      "max_position_error_in": 0.371,
+      "max_heading_error_deg": 1.13,
+      "line_updates": 302,
+      "range_updates": 5697,
+      "range_rejected": 845
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 92.0,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      190,
+      189,
+      189
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 84.8,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.3,
+      "lap_2": 39.0,
+      "lap_3": 84.8,
+      "parked": 92.0
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 125.85,
+     "estimation": {
+      "rms_position_error_in": 0.071,
+      "max_position_error_in": 0.235,
+      "max_heading_error_deg": 0.95,
+      "line_updates": 310,
+      "range_updates": 5943,
+      "range_rejected": 897
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 79.3,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      152,
+      152,
+      150
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 72.05,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 19.7,
+      "lap_2": 35.9,
+      "lap_3": 72.05,
+      "parked": 79.3
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.15,
+     "estimation": {
+      "rms_position_error_in": 0.096,
+      "max_position_error_in": 0.23,
+      "max_heading_error_deg": 0.87,
+      "line_updates": 210,
+      "range_updates": 5058,
+      "range_rejected": 819
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.35,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      5,
+      11,
+      11
+     ],
+     "vehicle_contact_steps": [
+      161,
+      158,
+      158
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 80.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.7,
+      "lap_2": 35.85,
+      "lap_3": 80.1,
+      "parked": 87.35
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 119.4,
+     "estimation": {
+      "rms_position_error_in": 0.089,
+      "max_position_error_in": 0.268,
+      "max_heading_error_deg": 0.71,
+      "line_updates": 210,
+      "range_updates": 5633,
+      "range_rejected": 881
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 79.3,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      184,
+      183,
+      185
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 73.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 19.8,
+      "lap_2": 36.0,
+      "lap_3": 73.3,
+      "parked": 79.3
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.07,
+      "max_position_error_in": 0.189,
+      "max_heading_error_deg": 1.14,
+      "line_updates": 204,
+      "range_updates": 5052,
+      "range_rejected": 858
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 84.95,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      49,
+      43,
+      42
+     ],
+     "vehicle_contact_steps": [
+      203,
+      202,
+      207
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 78.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.55,
+      "lap_2": 39.55,
+      "lap_3": 78.9,
+      "parked": 84.95
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.4,
+     "estimation": {
+      "rms_position_error_in": 0.286,
+      "max_position_error_in": 0.774,
+      "max_heading_error_deg": 0.89,
+      "line_updates": 310,
+      "range_updates": 5418,
+      "range_rejected": 1004
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 88.05,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      38,
+      40,
+      39
+     ],
+     "vehicle_contact_steps": [
+      220,
+      222,
+      223
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 82.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 22.55,
+      "lap_2": 41.7,
+      "lap_3": 82.0,
+      "parked": 88.05
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.35,
+     "estimation": {
+      "rms_position_error_in": 0.063,
+      "max_position_error_in": 0.21,
+      "max_heading_error_deg": 1.0,
+      "line_updates": 312,
+      "range_updates": 5703,
+      "range_rejected": 823
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 78.05,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      160,
+      161,
+      161
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 72.0,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.35,
+      "lap_2": 35.15,
+      "lap_3": 72.0,
+      "parked": 78.05
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.35,
+     "estimation": {
+      "rms_position_error_in": 0.125,
+      "max_position_error_in": 0.345,
+      "max_heading_error_deg": 0.79,
+      "line_updates": 208,
+      "range_updates": 5028,
+      "range_rejected": 782
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 82.6,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      12,
+      11,
+      9
+     ],
+     "vehicle_contact_steps": [
+      131,
+      137,
+      135
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 78.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 19.2,
+      "lap_2": 34.9,
+      "lap_3": 78.9,
+      "parked": 82.6
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 119.44,
+     "estimation": {
+      "rms_position_error_in": 0.084,
+      "max_position_error_in": 0.288,
+      "max_heading_error_deg": 1.14,
+      "line_updates": 199,
+      "range_updates": 5382,
+      "range_rejected": 798
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.6,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      34,
+      34,
+      34
+     ],
+     "vehicle_contact_steps": [
+      210,
+      209,
+      210
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 80.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 22.45,
+      "lap_2": 41.3,
+      "lap_3": 80.35,
+      "parked": 87.6
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 134.41,
+     "estimation": {
+      "rms_position_error_in": 0.081,
+      "max_position_error_in": 0.217,
+      "max_heading_error_deg": 1.22,
+      "line_updates": 412,
+      "range_updates": 5527,
+      "range_rejected": 1021
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 83.9,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      178,
+      179,
+      179
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 80.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 19.65,
+      "lap_2": 35.75,
+      "lap_3": 80.15,
+      "parked": 83.9
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.059,
+      "max_position_error_in": 0.234,
+      "max_heading_error_deg": 1.47,
+      "line_updates": 202,
+      "range_updates": 5445,
+      "range_rejected": 836
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 80.35,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      181,
+      182,
+      182
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 73.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 20.05,
+      "lap_2": 36.55,
+      "lap_3": 73.15,
+      "parked": 80.35
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.134,
+      "max_position_error_in": 0.369,
+      "max_heading_error_deg": 1.1,
+      "line_updates": 200,
+      "range_updates": 5107,
+      "range_rejected": 924
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.8,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      177,
+      177,
+      178
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 81.8,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.85,
+      "lap_2": 36.15,
+      "lap_3": 81.8,
+      "parked": 87.8
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.153,
+      "max_position_error_in": 0.398,
+      "max_heading_error_deg": 0.93,
+      "line_updates": 220,
+      "range_updates": 5722,
+      "range_rejected": 823
+     }
+    }
+   ]
+  },
+  {
+   "condition": "aligned_vehicles",
+   "sensing": "ranges_only",
+   "summary": {
+    "completed": 20,
+    "parked": 20,
+    "laps_with_wall_contact": 26,
+    "rms_position_error_in_median": 0.124,
+    "max_position_error_in_worst": 0.799,
+    "max_heading_error_deg_worst": 2.24,
+    "mean_score_like": 266.25
+   },
+   "runs": [
+    {
+     "state": "DONE",
+     "time_s": 88.5,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      179,
+      179,
+      179
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 81.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 20.05,
+      "lap_2": 36.55,
+      "lap_3": 81.25,
+      "parked": 88.5
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.157,
+      "max_position_error_in": 0.413,
+      "max_heading_error_deg": 0.82,
+      "line_updates": 0,
+      "range_updates": 5843,
+      "range_rejected": 800
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 86.15,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "lane_change"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      40,
+      40,
+      41
+     ],
+     "vehicle_contact_steps": [
+      236,
+      234,
+      234
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 82.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 23.1,
+      "lap_2": 42.55,
+      "lap_3": 82.4,
+      "parked": 86.15
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 129.15,
+     "estimation": {
+      "rms_position_error_in": 0.16,
+      "max_position_error_in": 0.468,
+      "max_heading_error_deg": 0.97,
+      "line_updates": 0,
+      "range_updates": 5194,
+      "range_rejected": 1244
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 80.85,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      41,
+      52,
+      54
+     ],
+     "vehicle_contact_steps": [
+      185,
+      186,
+      187
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 77.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.25,
+      "lap_2": 38.95,
+      "lap_3": 77.1,
+      "parked": 80.85
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.62,
+     "estimation": {
+      "rms_position_error_in": 0.21,
+      "max_position_error_in": 0.648,
+      "max_heading_error_deg": 1.24,
+      "line_updates": 0,
+      "range_updates": 5152,
+      "range_rejected": 899
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 82.7,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      5,
+      5
+     ],
+     "vehicle_contact_steps": [
+      223,
+      223,
+      223
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 78.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.85,
+      "lap_2": 40.25,
+      "lap_3": 78.9,
+      "parked": 82.7
+     },
+     "score_like": 285,
+     "stop_reason": null,
+     "lap_length_in": 126.58,
+     "estimation": {
+      "rms_position_error_in": 0.208,
+      "max_position_error_in": 0.646,
+      "max_heading_error_deg": 1.24,
+      "line_updates": 0,
+      "range_updates": 5152,
+      "range_rejected": 1079
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 73.75,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      98,
+      95,
+      96
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 67.8,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 17.9,
+      "lap_2": 32.25,
+      "lap_3": 67.8,
+      "parked": 73.75
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.27,
+     "estimation": {
+      "rms_position_error_in": 0.098,
+      "max_position_error_in": 0.271,
+      "max_heading_error_deg": 0.86,
+      "line_updates": 0,
+      "range_updates": 4809,
+      "range_rejected": 680
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 84.0,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      177,
+      178,
+      180
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 80.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 19.65,
+      "lap_2": 35.8,
+      "lap_3": 80.25,
+      "parked": 84.0
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.237,
+      "max_position_error_in": 0.708,
+      "max_heading_error_deg": 0.88,
+      "line_updates": 0,
+      "range_updates": 5498,
+      "range_rejected": 801
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 88.25,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      35,
+      39,
+      33
+     ],
+     "vehicle_contact_steps": [
+      179,
+      179,
+      178
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 84.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.05,
+      "lap_2": 38.55,
+      "lap_3": 84.45,
+      "parked": 88.25
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 127.64,
+     "estimation": {
+      "rms_position_error_in": 0.239,
+      "max_position_error_in": 0.799,
+      "max_heading_error_deg": 2.24,
+      "line_updates": 0,
+      "range_updates": 5509,
+      "range_rejected": 1073
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.05,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      185,
+      185,
+      186
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 83.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 20.75,
+      "lap_2": 37.95,
+      "lap_3": 83.3,
+      "parked": 87.05
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 126.02,
+     "estimation": {
+      "rms_position_error_in": 0.127,
+      "max_position_error_in": 0.375,
+      "max_heading_error_deg": 1.11,
+      "line_updates": 0,
+      "range_updates": 5718,
+      "range_rejected": 824
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 92.15,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      190,
+      188,
+      190
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 84.95,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 21.3,
+      "lap_2": 39.0,
+      "lap_3": 84.95,
+      "parked": 92.15
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 125.85,
+     "estimation": {
+      "rms_position_error_in": 0.068,
+      "max_position_error_in": 0.217,
+      "max_heading_error_deg": 0.9,
+      "line_updates": 0,
+      "range_updates": 5941,
+      "range_rejected": 892
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 79.4,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      153,
+      153,
+      152
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 72.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 19.7,
+      "lap_2": 35.9,
+      "lap_3": 72.15,
+      "parked": 79.4
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.15,
+     "estimation": {
+      "rms_position_error_in": 0.086,
+      "max_position_error_in": 0.307,
+      "max_heading_error_deg": 0.81,
+      "line_updates": 0,
+      "range_updates": 5074,
+      "range_rejected": 820
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.45,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      4,
+      19,
+      3
+     ],
+     "vehicle_contact_steps": [
+      161,
+      158,
+      161
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 80.2,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 19.75,
+      "lap_2": 35.9,
+      "lap_3": 80.2,
+      "parked": 87.45
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 119.4,
+     "estimation": {
+      "rms_position_error_in": 0.072,
+      "max_position_error_in": 0.203,
+      "max_heading_error_deg": 0.93,
+      "line_updates": 0,
+      "range_updates": 5637,
+      "range_rejected": 867
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 79.55,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      183,
+      184,
+      184
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 73.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.75,
+      "lap_2": 36.0,
+      "lap_3": 73.5,
+      "parked": 79.55
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.08,
+      "max_position_error_in": 0.228,
+      "max_heading_error_deg": 1.17,
+      "line_updates": 0,
+      "range_updates": 5109,
+      "range_rejected": 827
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 84.6,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      42,
+      44,
+      42
+     ],
+     "vehicle_contact_steps": [
+      202,
+      203,
+      202
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 78.65,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.6,
+      "lap_2": 39.6,
+      "lap_3": 78.65,
+      "parked": 84.6
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.4,
+     "estimation": {
+      "rms_position_error_in": 0.267,
+      "max_position_error_in": 0.778,
+      "max_heading_error_deg": 0.87,
+      "line_updates": 0,
+      "range_updates": 5406,
+      "range_rejected": 992
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.6,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      38,
+      36,
+      36
+     ],
+     "vehicle_contact_steps": [
+      218,
+      221,
+      221
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 81.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 22.5,
+      "lap_2": 41.55,
+      "lap_3": 81.6,
+      "parked": 87.6
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.35,
+     "estimation": {
+      "rms_position_error_in": 0.06,
+      "max_position_error_in": 0.236,
+      "max_heading_error_deg": 0.81,
+      "line_updates": 0,
+      "range_updates": 5667,
+      "range_rejected": 801
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 78.1,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      157,
+      158,
+      160
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 72.05,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.3,
+      "lap_2": 35.1,
+      "lap_3": 72.05,
+      "parked": 78.1
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.35,
+     "estimation": {
+      "rms_position_error_in": 0.121,
+      "max_position_error_in": 0.329,
+      "max_heading_error_deg": 0.7,
+      "line_updates": 0,
+      "range_updates": 5036,
+      "range_rejected": 769
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 82.5,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      9,
+      13,
+      11
+     ],
+     "vehicle_contact_steps": [
+      134,
+      138,
+      131
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 78.8,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 19.2,
+      "lap_2": 34.95,
+      "lap_3": 78.8,
+      "parked": 82.5
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 119.44,
+     "estimation": {
+      "rms_position_error_in": 0.107,
+      "max_position_error_in": 0.304,
+      "max_heading_error_deg": 1.2,
+      "line_updates": 0,
+      "range_updates": 5363,
+      "range_rejected": 801
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.6,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      35,
+      33,
+      36
+     ],
+     "vehicle_contact_steps": [
+      209,
+      209,
+      209
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 80.35,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 22.5,
+      "lap_2": 41.35,
+      "lap_3": 80.35,
+      "parked": 87.6
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 134.41,
+     "estimation": {
+      "rms_position_error_in": 0.075,
+      "max_position_error_in": 0.203,
+      "max_heading_error_deg": 1.0,
+      "line_updates": 0,
+      "range_updates": 5526,
+      "range_rejected": 1001
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 83.9,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      179,
+      179,
+      181
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 80.15,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 19.7,
+      "lap_2": 35.8,
+      "lap_3": 80.15,
+      "parked": 83.9
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.056,
+      "max_position_error_in": 0.234,
+      "max_heading_error_deg": 1.46,
+      "line_updates": 0,
+      "range_updates": 5463,
+      "range_rejected": 827
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 80.4,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      185,
+      182,
+      182
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 73.2,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 20.15,
+      "lap_2": 36.65,
+      "lap_3": 73.2,
+      "parked": 80.4
+     },
+     "score_like": 315,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.144,
+      "max_position_error_in": 0.391,
+      "max_heading_error_deg": 1.23,
+      "line_updates": 0,
+      "range_updates": 5125,
+      "range_rejected": 919
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.65,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      0
+     ],
+     "vehicle_contact_steps": [
+      176,
+      178,
+      177
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 81.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.8,
+      "lap_2": 36.15,
+      "lap_3": 81.6,
+      "parked": 87.65
+     },
+     "score_like": 250,
+     "stop_reason": null,
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 0.131,
+      "max_position_error_in": 0.338,
+      "max_heading_error_deg": 0.93,
+      "line_updates": 0,
+      "range_updates": 5724,
+      "range_rejected": 805
+     }
+    }
+   ]
+  },
+  {
+   "condition": "aligned_vehicles",
+   "sensing": "lines_only",
+   "summary": {
+    "completed": 8,
+    "parked": 8,
+    "laps_with_wall_contact": 56,
+    "rms_position_error_in_median": 4.671,
+    "max_position_error_in_worst": 46.703,
+    "max_heading_error_deg_worst": 92.48,
+    "mean_score_like": 234.75
+   },
+   "runs": [
+    {
+     "state": "STOPPED",
+     "time_s": 112.2,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      55,
+      123,
+      1195
+     ],
+     "vehicle_contact_steps": [
+      179,
+      196,
+      85
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 78.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.65,
+      "lap_1": 20.2,
+      "lap_2": 37.1,
+      "lap_3": 78.6
+     },
+     "score_like": 190,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 18.986,
+      "max_position_error_in": 46.703,
+      "max_heading_error_deg": 83.35,
+      "line_updates": 105,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 111.2,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "lane_change"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      95,
+      49,
+      48
+     ],
+     "vehicle_contact_steps": [
+      220,
+      225,
+      225
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 81.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 22.55,
+      "lap_2": 41.9,
+      "lap_3": 81.25
+     },
+     "score_like": 255,
+     "stop_reason": "stalled",
+     "lap_length_in": 129.15,
+     "estimation": {
+      "rms_position_error_in": 1.312,
+      "max_position_error_in": 3.361,
+      "max_heading_error_deg": 4.48,
+      "line_updates": 257,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 80.5,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      27,
+      45,
+      81
+     ],
+     "vehicle_contact_steps": [
+      185,
+      185,
+      185
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 76.8,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.2,
+      "lap_2": 38.85,
+      "lap_3": 76.8,
+      "parked": 80.5
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.62,
+     "estimation": {
+      "rms_position_error_in": 1.241,
+      "max_position_error_in": 3.561,
+      "max_heading_error_deg": 10.73,
+      "line_updates": 256,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 82.65,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      21,
+      62,
+      284
+     ],
+     "vehicle_contact_steps": [
+      219,
+      220,
+      221
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 78.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 21.9,
+      "lap_2": 40.15,
+      "lap_3": 78.9,
+      "parked": 82.65
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 126.58,
+     "estimation": {
+      "rms_position_error_in": 2.498,
+      "max_position_error_in": 4.988,
+      "max_heading_error_deg": 6.81,
+      "line_updates": 234,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 98.1,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      103,
+      97,
+      174
+     ],
+     "vehicle_contact_steps": [
+      108,
+      109,
+      110
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 65.65,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 17.2,
+      "lap_2": 30.8,
+      "lap_3": 65.65
+     },
+     "score_like": 255,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.27,
+     "estimation": {
+      "rms_position_error_in": 5.43,
+      "max_position_error_in": 8.073,
+      "max_heading_error_deg": 12.9,
+      "line_updates": 169,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 111.6,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      36,
+      80,
+      1148
+     ],
+     "vehicle_contact_steps": [
+      180,
+      187,
+      194
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 81.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.65,
+      "lap_1": 20.05,
+      "lap_2": 36.55,
+      "lap_3": 81.5
+     },
+     "score_like": 190,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 6.716,
+      "max_position_error_in": 9.503,
+      "max_heading_error_deg": 12.65,
+      "line_updates": 115,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 86.2,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      139,
+      3,
+      70
+     ],
+     "vehicle_contact_steps": [
+      115,
+      199,
+      197
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 82.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.45,
+      "lap_1": 18.8,
+      "lap_2": 36.8,
+      "lap_3": 82.55,
+      "parked": 86.2
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 127.64,
+     "estimation": {
+      "rms_position_error_in": 1.669,
+      "max_position_error_in": 5.528,
+      "max_heading_error_deg": 10.35,
+      "line_updates": 238,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 87.3,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      76
+     ],
+     "vehicle_contact_steps": [
+      183,
+      185,
+      206
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 83.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 20.55,
+      "lap_2": 37.6,
+      "lap_3": 83.55,
+      "parked": 87.3
+     },
+     "score_like": 235,
+     "stop_reason": null,
+     "lap_length_in": 126.02,
+     "estimation": {
+      "rms_position_error_in": 2.141,
+      "max_position_error_in": 6.337,
+      "max_heading_error_deg": 14.08,
+      "line_updates": 196,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 91.65,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      5,
+      11,
+      485
+     ],
+     "vehicle_contact_steps": [
+      183,
+      185,
+      173
+     ],
+     "exchange_result": "bailed out",
+     "parked": true,
+     "finish_s": 84.4,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.15,
+      "lap_2": 38.75,
+      "lap_3": 84.4,
+      "parked": 91.65
+     },
+     "score_like": 205,
+     "stop_reason": null,
+     "lap_length_in": 125.85,
+     "estimation": {
+      "rms_position_error_in": 1.978,
+      "max_position_error_in": 3.42,
+      "max_heading_error_deg": 8.33,
+      "line_updates": 229,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 106.45,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      901
+     ],
+     "vehicle_contact_steps": [
+      174,
+      173,
+      142
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 72.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.65,
+      "lap_1": 20.2,
+      "lap_2": 36.7,
+      "lap_3": 72.85
+     },
+     "score_like": 285,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.15,
+     "estimation": {
+      "rms_position_error_in": 3.913,
+      "max_position_error_in": 5.913,
+      "max_heading_error_deg": 15.69,
+      "line_updates": 110,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 109.9,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      170,
+      133,
+      1245
+     ],
+     "vehicle_contact_steps": [
+      99,
+      98,
+      166
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 73.8,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 17.55,
+      "lap_2": 31.05,
+      "lap_3": 73.8
+     },
+     "score_like": 190,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.4,
+     "estimation": {
+      "rms_position_error_in": 20.072,
+      "max_position_error_in": 31.424,
+      "max_heading_error_deg": 60.34,
+      "line_updates": 121,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 107.5,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      60,
+      117,
+      292
+     ],
+     "vehicle_contact_steps": [
+      186,
+      181,
+      216
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 73.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.8,
+      "lap_2": 35.85,
+      "lap_3": 73.5
+     },
+     "score_like": 255,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 9.79,
+      "max_position_error_in": 15.888,
+      "max_heading_error_deg": 26.15,
+      "line_updates": 126,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 85.7,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      19,
+      83,
+      89
+     ],
+     "vehicle_contact_steps": [
+      206,
+      203,
+      206
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 79.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.65,
+      "lap_1": 21.75,
+      "lap_2": 40.0,
+      "lap_3": 79.6,
+      "parked": 85.7
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.4,
+     "estimation": {
+      "rms_position_error_in": 1.803,
+      "max_position_error_in": 3.059,
+      "max_heading_error_deg": 6.96,
+      "line_updates": 254,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 86.55,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      73,
+      72,
+      75
+     ],
+     "vehicle_contact_steps": [
+      207,
+      203,
+      203
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 80.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 22.3,
+      "lap_2": 40.8,
+      "lap_3": 80.55,
+      "parked": 86.55
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 127.35,
+     "estimation": {
+      "rms_position_error_in": 0.958,
+      "max_position_error_in": 1.923,
+      "max_heading_error_deg": 4.4,
+      "line_updates": 259,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 107.4,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      151,
+      144,
+      591
+     ],
+     "vehicle_contact_steps": [
+      161,
+      170,
+      230
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 72.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.65,
+      "lap_1": 19.4,
+      "lap_2": 35.4,
+      "lap_3": 72.3
+     },
+     "score_like": 255,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.35,
+     "estimation": {
+      "rms_position_error_in": 24.119,
+      "max_position_error_in": 39.373,
+      "max_heading_error_deg": 89.15,
+      "line_updates": 109,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 114.3,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      192,
+      170,
+      374
+     ],
+     "vehicle_contact_steps": [
+      143,
+      178,
+      261
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 81.75,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.45,
+      "lap_2": 35.75,
+      "lap_3": 81.75
+     },
+     "score_like": 190,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.44,
+     "estimation": {
+      "rms_position_error_in": 23.41,
+      "max_position_error_in": 40.295,
+      "max_heading_error_deg": 77.98,
+      "line_updates": 117,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "DONE",
+     "time_s": 88.15,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      29,
+      60,
+      63
+     ],
+     "vehicle_contact_steps": [
+      227,
+      217,
+      211
+     ],
+     "exchange_result": "done",
+     "parked": true,
+     "finish_s": 80.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.65,
+      "lap_1": 22.8,
+      "lap_2": 41.75,
+      "lap_3": 80.9,
+      "parked": 88.15
+     },
+     "score_like": 270,
+     "stop_reason": null,
+     "lap_length_in": 134.41,
+     "estimation": {
+      "rms_position_error_in": 0.713,
+      "max_position_error_in": 1.465,
+      "max_heading_error_deg": 6.69,
+      "line_updates": 397,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 113.85,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      83,
+      124,
+      1193
+     ],
+     "vehicle_contact_steps": [
+      178,
+      190,
+      259
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 83.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 19.65,
+      "lap_2": 35.9,
+      "lap_3": 83.6
+     },
+     "score_like": 190,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 10.2,
+      "max_position_error_in": 14.732,
+      "max_heading_error_deg": 29.74,
+      "line_updates": 153,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 107.9,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      87,
+      128,
+      1040
+     ],
+     "vehicle_contact_steps": [
+      191,
+      194,
+      236
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 74.3,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 20.0,
+      "lap_2": 36.5,
+      "lap_3": 74.3
+     },
+     "score_like": 255,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 11.698,
+      "max_position_error_in": 19.105,
+      "max_heading_error_deg": 38.61,
+      "line_updates": 115,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 118.3,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      112,
+      130,
+      769
+     ],
+     "vehicle_contact_steps": [
+      182,
+      194,
+      231
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 83.05,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 20.0,
+      "lap_2": 36.75,
+      "lap_3": 83.05
+     },
+     "score_like": 190,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 24.308,
+      "max_position_error_in": 40.518,
+      "max_heading_error_deg": 92.48,
+      "line_updates": 115,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    }
+   ]
+  },
+  {
+   "condition": "aligned_vehicles",
+   "sensing": "odometry_only",
+   "summary": {
+    "completed": 0,
+    "parked": 0,
+    "laps_with_wall_contact": 49,
+    "rms_position_error_in_median": 10.619,
+    "max_position_error_in_worst": 57.234,
+    "max_heading_error_deg_worst": 126.09,
+    "mean_score_like": 234
+   },
+   "runs": [
+    {
+     "state": "STOPPED",
+     "time_s": 114.4,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      70,
+      421
+     ],
+     "vehicle_contact_steps": [
+      188,
+      194,
+      149
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 80.75,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 20.25,
+      "lap_2": 37.0,
+      "lap_3": 80.75
+     },
+     "score_like": 205,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 16.038,
+      "max_position_error_in": 27.654,
+      "max_heading_error_deg": 52.07,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 115.3,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "lane_change"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      92,
+      180,
+      632
+     ],
+     "vehicle_contact_steps": [
+      195,
+      195,
+      335
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 83.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 22.8,
+      "lap_2": 41.4,
+      "lap_3": 83.1
+     },
+     "score_like": 255,
+     "stop_reason": "stalled",
+     "lap_length_in": 129.15,
+     "estimation": {
+      "rms_position_error_in": 11.023,
+      "max_position_error_in": 19.13,
+      "max_heading_error_deg": 35.78,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 104.75,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      116,
+      147,
+      827
+     ],
+     "vehicle_contact_steps": [
+      185,
+      199,
+      145
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 73.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 20.9,
+      "lap_2": 38.0,
+      "lap_3": 73.9
+     },
+     "score_like": 255,
+     "stop_reason": "stalled",
+     "lap_length_in": 127.62,
+     "estimation": {
+      "rms_position_error_in": 19.866,
+      "max_position_error_in": 32.259,
+      "max_heading_error_deg": 60.22,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 112.1,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      145,
+      198,
+      827
+     ],
+     "vehicle_contact_steps": [
+      211,
+      251,
+      219
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 80.85,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 21.95,
+      "lap_2": 42.05,
+      "lap_3": 80.85
+     },
+     "score_like": 255,
+     "stop_reason": "stalled",
+     "lap_length_in": 126.58,
+     "estimation": {
+      "rms_position_error_in": 20.868,
+      "max_position_error_in": 34.96,
+      "max_heading_error_deg": 72.53,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 100.5,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      60,
+      88,
+      551
+     ],
+     "vehicle_contact_steps": [
+      123,
+      138,
+      69
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 67.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 18.35,
+      "lap_2": 33.45,
+      "lap_3": 67.9
+     },
+     "score_like": 255,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.27,
+     "estimation": {
+      "rms_position_error_in": 27.69,
+      "max_position_error_in": 44.539,
+      "max_heading_error_deg": 105.79,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 110.75,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      49,
+      63,
+      1170
+     ],
+     "vehicle_contact_steps": [
+      180,
+      182,
+      166
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 80.65,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 19.95,
+      "lap_2": 36.35,
+      "lap_3": 80.65
+     },
+     "score_like": 190,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 10.214,
+      "max_position_error_in": 19.581,
+      "max_heading_error_deg": 36.15,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 117.65,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      76,
+      126,
+      363
+     ],
+     "vehicle_contact_steps": [
+      203,
+      163,
+      262
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 85.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 21.55,
+      "lap_2": 37.95,
+      "lap_3": 85.55
+     },
+     "score_like": 190,
+     "stop_reason": "stalled",
+     "lap_length_in": 127.64,
+     "estimation": {
+      "rms_position_error_in": 19.798,
+      "max_position_error_in": 33.237,
+      "max_heading_error_deg": 46.4,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 114.35,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      177
+     ],
+     "vehicle_contact_steps": [
+      208,
+      210,
+      207
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 83.6,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 21.0,
+      "lap_2": 38.45,
+      "lap_3": 83.6
+     },
+     "score_like": 220,
+     "stop_reason": "stalled",
+     "lap_length_in": 126.02,
+     "estimation": {
+      "rms_position_error_in": 6.509,
+      "max_position_error_in": 10.934,
+      "max_heading_error_deg": 12.78,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 117.2,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      46,
+      112,
+      291
+     ],
+     "vehicle_contact_steps": [
+      202,
+      226,
+      128
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 83.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.6,
+      "lap_1": 21.3,
+      "lap_2": 39.15,
+      "lap_3": 83.45
+     },
+     "score_like": 190,
+     "stop_reason": "stalled",
+     "lap_length_in": 125.85,
+     "estimation": {
+      "rms_position_error_in": 29.343,
+      "max_position_error_in": 45.235,
+      "max_heading_error_deg": 95.03,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 104.15,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      0,
+      813
+     ],
+     "vehicle_contact_steps": [
+      154,
+      143,
+      115
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 70.5,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.8,
+      "lap_2": 35.8,
+      "lap_3": 70.5
+     },
+     "score_like": 285,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.15,
+     "estimation": {
+      "rms_position_error_in": 2.822,
+      "max_position_error_in": 4.516,
+      "max_heading_error_deg": 4.7,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 113.75,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      39,
+      51,
+      761
+     ],
+     "vehicle_contact_steps": [
+      178,
+      187,
+      148
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 80.1,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.85,
+      "lap_2": 36.25,
+      "lap_3": 80.1
+     },
+     "score_like": 190,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.4,
+     "estimation": {
+      "rms_position_error_in": 14.32,
+      "max_position_error_in": 30.356,
+      "max_heading_error_deg": 55.29,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 101.85,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      5,
+      0,
+      85
+     ],
+     "vehicle_contact_steps": [
+      184,
+      184,
+      68
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 69.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 19.7,
+      "lap_2": 35.9,
+      "lap_3": 69.55
+     },
+     "score_like": 270,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 2.529,
+      "max_position_error_in": 8.301,
+      "max_heading_error_deg": 12.67,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 107.6,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      111,
+      112,
+      514
+     ],
+     "vehicle_contact_steps": [
+      210,
+      203,
+      75
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 75.2,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.65,
+      "lap_1": 21.8,
+      "lap_2": 39.8,
+      "lap_3": 75.2
+     },
+     "score_like": 255,
+     "stop_reason": "stalled",
+     "lap_length_in": 127.4,
+     "estimation": {
+      "rms_position_error_in": 26.389,
+      "max_position_error_in": 41.417,
+      "max_heading_error_deg": 90.74,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 107.4,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      83,
+      209,
+      315
+     ],
+     "vehicle_contact_steps": [
+      195,
+      172,
+      111
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 75.05,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 21.85,
+      "lap_2": 38.95,
+      "lap_3": 75.05
+     },
+     "score_like": 255,
+     "stop_reason": "stalled",
+     "lap_length_in": 127.35,
+     "estimation": {
+      "rms_position_error_in": 36.704,
+      "max_position_error_in": 57.234,
+      "max_heading_error_deg": 126.09,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 104.85,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "clean",
+      "contact"
+     ],
+     "planned_contact_vehicles": 2,
+     "wall_contact_steps": [
+      0,
+      66,
+      80
+     ],
+     "vehicle_contact_steps": [
+      163,
+      148,
+      180
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 72.55,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.5,
+      "lap_2": 35.1,
+      "lap_3": 72.55
+     },
+     "score_like": 270,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.35,
+     "estimation": {
+      "rms_position_error_in": 2.444,
+      "max_position_error_in": 3.95,
+      "max_heading_error_deg": 6.01,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 106.55,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      0,
+      43,
+      818
+     ],
+     "vehicle_contact_steps": [
+      131,
+      131,
+      174
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 76.45,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.5,
+      "lap_1": 17.85,
+      "lap_2": 32.15,
+      "lap_3": 76.45
+     },
+     "score_like": 205,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.44,
+     "estimation": {
+      "rms_position_error_in": 7.582,
+      "max_position_error_in": 16.592,
+      "max_heading_error_deg": 28.29,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 113.9,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "clean"
+     ],
+     "planned_contact_vehicles": 1,
+     "wall_contact_steps": [
+      101,
+      109,
+      1081
+     ],
+     "vehicle_contact_steps": [
+      208,
+      213,
+      187
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 80.25,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 22.75,
+      "lap_2": 42.05,
+      "lap_3": 80.25
+     },
+     "score_like": 255,
+     "stop_reason": "stalled",
+     "lap_length_in": 134.41,
+     "estimation": {
+      "rms_position_error_in": 9.679,
+      "max_position_error_in": 15.837,
+      "max_heading_error_deg": 34.28,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 110.3,
+     "laps": 3,
+     "assigned_box": 1,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      0,
+      151
+     ],
+     "vehicle_contact_steps": [
+      179,
+      179,
+      179
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 80.05,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 19.65,
+      "lap_2": 35.75,
+      "lap_3": 80.05
+     },
+     "score_like": 220,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 4.087,
+      "max_position_error_in": 6.647,
+      "max_heading_error_deg": 9.98,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 106.55,
+     "laps": 3,
+     "assigned_box": 3,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      0,
+      55,
+      214
+     ],
+     "vehicle_contact_steps": [
+      187,
+      188,
+      191
+     ],
+     "exchange_result": "done",
+     "parked": false,
+     "finish_s": 72.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 20.0,
+      "lap_2": 36.5,
+      "lap_3": 72.9
+     },
+     "score_like": 270,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 5.806,
+      "max_position_error_in": 9.094,
+      "max_heading_error_deg": 15.52,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    },
+    {
+     "state": "STOPPED",
+     "time_s": 114.35,
+     "laps": 3,
+     "assigned_box": 2,
+     "lane_modes": [
+      "contact",
+      "contact"
+     ],
+     "planned_contact_vehicles": 3,
+     "wall_contact_steps": [
+      42,
+      63,
+      292
+     ],
+     "vehicle_contact_steps": [
+      181,
+      181,
+      143
+     ],
+     "exchange_result": "bailed out",
+     "parked": false,
+     "finish_s": 81.9,
+     "events_s": {
+      "green_start": 0.75,
+      "entered": 3.55,
+      "lap_1": 20.0,
+      "lap_2": 36.5,
+      "lap_3": 81.9
+     },
+     "score_like": 190,
+     "stop_reason": "stalled",
+     "lap_length_in": 119.11,
+     "estimation": {
+      "rms_position_error_in": 9.959,
+      "max_position_error_in": 22.235,
+      "max_heading_error_deg": 38.69,
+      "line_updates": 0,
+      "range_updates": 0,
+      "range_rejected": 0
+     }
+    }
+   ]
+  }
+ ]
+}

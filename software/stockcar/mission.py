@@ -23,6 +23,8 @@ from stockcar.geometry import axis_rect, rectangle, separation, wrap
 from stockcar.obstacles import GUIDE_PLUSH, center_range, footprint
 from stockcar.passage import common_line, free_center_intervals
 from stockcar.supervisor import Supervisor
+from stockcar.estimator import Estimator
+from stockcar.sensors import Band, SensorSuite
 
 R_TURN = 7.5
 GATE = (44.0 - R_TURN, 24.0)
@@ -186,7 +188,11 @@ def lane_plan(field, layout, side, default_y):
 
 
 class MissionSim:
-    def __init__(self, preset="aggressive", envelope="nominal", field=None, footprint_kind="square"):
+    def __init__(self, preset="aggressive", envelope="nominal", field=None, footprint_kind="square", sensing=False):
+        # sensing: False (control on true pose), True or "full", "lines_only", "ranges_only", "odometry_only"
+        if sensing not in (False, True, "full", "lines_only", "ranges_only", "odometry_only"):
+            raise ValueError(f"unknown sensing mode {sensing}")
+        self.sensing = sensing
         self.field = field or Field()
         self.env = lapmodel.ENVELOPES[envelope]
         self.preset = preset
@@ -226,7 +232,7 @@ class MissionSim:
         self.lap_length_in = self.routes["LAP"].length
 
     # -- simulation ----------------------------------------------------------
-    def reset(self, layout):
+    def reset(self, layout, sensor_seed=0):
         self.layout = layout
         self.build_routes(layout)
         self.sup = Supervisor(self.preset, lap_length_m=self.lap_length_in * 0.0254, stop_at_s=lapmodel.AUTO_STOP_S)
@@ -245,7 +251,18 @@ class MissionSim:
         self.exchange_started = None
         self.parked = False
         self.out = self.sup.update(0.0, {})
+        self.est = None
+        self.err_sq, self.err_n, self.err_max, self.head_err_max = 0.0, 0, 0.0, 0.0
+        if self.sensing:
+            self.sensors = SensorSuite(random.Random(sensor_seed), self.field, self.barriers, layout.polys)
+            self.est = Estimator((x, y, 0.0), Band(self.field), self.barriers)
         return self.observe()
+
+    def pose(self):
+        """Pose used for control: the estimate when sensing is on, otherwise the truth."""
+        if self.est is not None:
+            return self.est.pose()
+        return self.state["x"], self.state["y"], self.state["th"]
 
     def _set_route(self, name):
         if name != self.route_name:
@@ -267,8 +284,8 @@ class MissionSim:
         if self.out["motion"] in ("hold", "stop", "exchange") or self.route_name is None or self.route_done:
             return (0.0, 0.0)
         (tx, ty), remaining = self.target()
-        s = self.state
-        alpha = wrap(math.atan2(ty - s["y"], tx - s["x"]) - s["th"])
+        px, py, pth = self.pose()
+        alpha = wrap(math.atan2(ty - py, tx - px) - pth)
         scale = self.out.get("speed_scale", 1.0)
         v = self.env["cruise"] * scale
         v = min(v, math.sqrt(2 * self.a_max * 0.5 * max(0.0, remaining)) + 0.5)
@@ -304,6 +321,16 @@ class MissionSim:
         self.odometry_in += math.hypot(dx, dy)
         self.t += self.dt
         self.contact_cooldown = max(0.0, self.contact_cooldown - self.dt)
+        if self.est is not None:
+            meas = self.sensors.measure((s["x"], s["y"], s["th"]), s["v"], s["w"], self.dt)
+            self.est.predict(meas["encoder_delta"], meas["gyro"], self.dt)
+            self.est.correct(meas, use_lines=self.sensing in (True, "full", "lines_only"), use_ranges=self.sensing in (True, "full", "ranges_only"))
+            ex, ey, eth = self.est.pose()
+            err = math.hypot(ex - s["x"], ey - s["y"])
+            self.err_sq += err * err
+            self.err_n += 1
+            self.err_max = max(self.err_max, err)
+            self.head_err_max = max(self.head_err_max, abs(wrap(eth - s["th"])))
         new_contacts = self._contacts()
         progress = self._advance_route()
         reward = progress / 10.0 - 0.002 - 2.0 * new_contacts + self._mission() / 100.0
@@ -330,9 +357,10 @@ class MissionSim:
             return 0.0
         r = self.routes[self.route_name]
         old = r.s[self.route_index]
-        self.route_index = r.nearest(self.state["x"], self.state["y"], self.route_index)
+        px, py, _ = self.pose()
+        self.route_index = r.nearest(px, py, self.route_index)
         end = r.pts[-1]
-        if self.route_index >= len(r.pts) - 2 and math.hypot(self.state["x"] - end[0], self.state["y"] - end[1]) < 1.0:
+        if self.route_index >= len(r.pts) - 2 and math.hypot(px - end[0], py - end[1]) < 1.0:
             self.route_done = True
         return r.s[self.route_index] - old
 
@@ -428,7 +456,11 @@ class MissionSim:
                 "wall_contact_steps": list(self.wall_contacts), "vehicle_contact_steps": list(self.vehicle_contacts),
                 "exchange_result": self.out.get("exchange_result"), "parked": self.parked,
                 "finish_s": None if finish is None else round(finish, 2), "events_s": {k: round(v, 2) for k, v in self.events.items()},
-                "score_like": score, "stop_reason": self.out.get("stop_reason"), "lap_length_in": round(self.lap_length_in, 2)}
+                "score_like": score, "stop_reason": self.out.get("stop_reason"), "lap_length_in": round(self.lap_length_in, 2),
+                "estimation": None if self.est is None else {
+                    "rms_position_error_in": round(math.sqrt(self.err_sq / max(1, self.err_n)), 3), "max_position_error_in": round(self.err_max, 3),
+                    "max_heading_error_deg": round(math.degrees(self.head_err_max), 2), "line_updates": self.est.line_updates,
+                    "range_updates": self.est.range_updates, "range_rejected": self.est.range_rejected}}
 
 
 def _poly(waypoints):
@@ -473,11 +505,11 @@ def overlap_fraction(poly, box):
     return 0.0 if not pts or total == 0 else area(pts) / total
 
 
-def run(seed, preset="aggressive", envelope="nominal", obstacles=True, reading="offsets", yaw_mode="aligned", max_steps=4000):
+def run(seed, preset="aggressive", envelope="nominal", obstacles=True, reading="offsets", yaw_mode="aligned", max_steps=4000, sensing=False):
     rng = random.Random(seed)
-    sim = MissionSim(preset, envelope)
+    sim = MissionSim(preset, envelope, sensing=sensing)
     layout = random_layout(rng, sim.field, reading, yaw_mode, obstacles=obstacles)
-    sim.reset(layout)
+    sim.reset(layout, sensor_seed=seed)
     for _ in range(max_steps):
         _, _, done, info = sim.step()
         if done:

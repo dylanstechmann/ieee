@@ -3,7 +3,7 @@
   "status": "agent-run synthetic evaluation; not hardware, not legality",
   "input_hashes": {
     "tools/evaluate-mission-v10.py": "d35f6ae3a1d90c25b1974b67e63128218443216a32da93332e6634797294c233",
-    "software/stockcar/mission.py": "56afc2ef73b9896be2e9b9568d508945af95b8339a0b383397425deeac2d1727",
+    "software/stockcar/mission.py": "346fb5c977fddaaad7d790afcb466beacb3f2beeebe01803befb9da004032678",
     "software/stockcar/supervisor.py": "15bf5e68a33428ac4db1a94e54b2c5fc44ff0280ccfc1fb6b4a54b37c3b701ec",
     "software/stockcar/lapmodel.py": "943296d5f461cfef67d29934ce4129d06ad5c59762b1ebdfd21b18c098ff14a6",
     "software/stockcar/passage.py": "adda10e8ca96830a8df0438d9e07c56ba976d54c01e9bae3ad8bb49332ad9e3d",
@@ -13,7 +13,7 @@
     "derived/organizer-cad-v10/field-v10.json": "d3d7de9e9f7d257d6f4f095cb06836a6bb484861aeffca45cb96990dba4afdca"
   },
   "output_hashes": {
-    "evaluation.json": "f221fad878cc010d0193e0beffa1495853ff94f33ad0c4dbf2dc4c88cd2be3e5",
+    "evaluation.json": "cf8c96a5bf49bbcc8a5bfe085fd194df646d0f698b23c1410bdfb24bcbf3984a",
     "summary.md": "844ccaaa0d595ffaf62bd26f7aaa7fa1b8308bb580ad6237d86f3a20895e28c4"
   }
 }
