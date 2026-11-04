@@ -1,5 +1,7 @@
 # Execution and evidence
 
+> **Dated gates superseded by `BACKCAST-2026-11.md` (November 3, 2026).** The experiment definitions and evidence records below are kept unchanged.
+
 ## Source-audited stopping sensitivity and Integration Studio v6.1 — October 31, 2026
 
 Agent-run AI-assisted review and digital repair for this hobby/learning project. Preserved 28 original v6 files with verified hashes under `/workspace/ieee/ieee/derived/audits/2026-10-31-stopping-v6-prepair/`; no Git metadata was created. No detectable post-handoff edit was found, so the audit does not attribute the original issue to a particular agent.

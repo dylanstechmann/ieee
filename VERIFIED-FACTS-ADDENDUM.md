@@ -1,4 +1,4 @@
-# Verified facts — addendum (October 31 and November 1, 2026)
+# Verified facts — addendum (October 31 to November 3, 2026)
 
 Kept separate because `VERIFIED-FACTS.md` is a pinned input of sealed packages (hardware-development-v3, mechanism-prototyping-v3); editing it makes their verifiers stale.
 
@@ -30,3 +30,20 @@ Kept separate because `VERIFIED-FACTS.md` is a pinned input of sealed packages (
 * **#953 caster:** 13.52 mm from mounting face to ball bottom.
 * **Assembled with stock parts:** wheel center 101 mm from the robot centerline, so the **track is 202 mm** and the overall width 212 mm.
 * These are CAD geometry, not measurements of received parts.
+
+## Added 2026-11-03 (organizer page re-check and manual reading)
+
+* **Organizer page** (<https://ieeesoutheastcon.org/student-competitions/>), read by an agent on 2026-11-03. It was not archived as a file in this pass; re-check it before relying on it.
+  * Still links Game Manual 1 V3.0, Game Manual 2 V3.0 (file `Game-Manual-2027-2-V3-1.docx`), the arena build guide, the arena Fusion 360 zip and the spare-tire zip.
+  * "Details on Start Flag Operations (Game Manual 2, Appendix F) will be provided in Version 3.1."
+  * Registration opens 2027-01-01 and closes 2027-03-01. The hardware room opens 2027-04-15 at 12:00. Competition on 2027-04-17: rounds from 8:00 a.m., finals at the evening banquet.
+  * Official clarifications come only through the SoutheastCon Discord Q&A.
+  * Main Teams: one per IEEE Region 3 university, all members undergraduates there. Open Teams are unrestricted.
+  * Competitors must be IEEE members and registered for the conference: student member $135; registration closes 2027-03-31 with no late option.
+* **GS01 title:** "Interacting with Robot/Field After Randomization" (GM2 paragraph line 212). The rule text itself mentions only the Field.
+* **Obstacle quadrants (GM2 Appendix E, line 379):**
+  * each quadrant runs 16 in from one end of the center rail, with 4 in between;
+  * so each straightaway has two quadrants, and the three obstacles are placed among the four;
+  * the 2 in offsets and the 16 in width do not add up to the rail spacing, so the reference faces are open (QA03).
+* **AprilTag location is stated two ways:** on the wall separating the pit area from the racecourse (GM2 line 170), and by the starting area (lines 174 and 390). Open: QA02.
+* **Organizer `.f3d` files** are ZIP archives whose compressed members use method 93 (Zstandard). Confirmed by listing them with Python `zipfile` on 2026-11-03.

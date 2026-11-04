@@ -1,0 +1,351 @@
+{
+  "version": "0.10.0",
+  "date": "2026-11-03",
+  "status": "draft-not-posted",
+  "purpose": "Deduplicated, priority-ranked clarification questions for the official SoutheastCon Discord Q&A. The owner (or the club rules lead) searches existing answers, then posts what is still open. The agent never posts or contacts organizers.",
+  "manual_revision": "GM1 V3.0 (Game-Manual-2027-1-V3.docx) and GM2 V3.0 with October 4 revisions (Game-Manual-2027-2-V3-1.docx); organizer page re-checked 2026-11-03 still lists V3.0 and says Appendix F details will come in V3.1.",
+  "sources": {
+    "GM1": "derived/GM1-V3-paragraphs.txt",
+    "GM2": "derived/GM2-V3.1-paragraphs.txt",
+    "GM1v2": "derived/GM1-V2-paragraphs.txt"
+  },
+  "previous_question_sets": {
+    "Q1": "derived/confirmation-packet-v3/questions-to-organizer.md Q1: pit access around either end of the divider, same-end entry/exit, crossing the start box",
+    "Q2": "Q2: lane or marking containment",
+    "Q3": "Q3: lap direction, reversing, repeated finish crossings during the pit detour, finish-line endpoints",
+    "Q4": "Q4: allocation of the 3 cars across quadrants and lanes, containment, orientation",
+    "Q5": "Q5: toy models, dimensions, substitutions",
+    "Q6": "Q6: reference faces for Appendix E offsets, G02 tolerance application, flag-tower projections",
+    "Q7": "Q7: reach in versus enter the box, what completes a pit stop, timing of the >75% parking check",
+    "TB1": "derived/team-brief-v7/TEAM-BRIEF.md section 7 item 1: start flag raised or lowered, mount, V3.1 timing",
+    "TB2": "TB item 2: driving on or across the white line, lane requirement",
+    "TB3": "TB item 3: enter box or reach in, pit stop needed for the finish points, lap counting around the pit, start of the final lap",
+    "TB4": "TB item 4: toy models and sizes, whole car inside quadrant, two cars on one straightaway",
+    "TB5": "TB item 5: checkered openings for entering and leaving the pit",
+    "TB6": "TB item 6: round 10-in base and R01",
+    "TB7": "TB item 7: Technician setting the pit box after the die roll",
+    "TB8": "TB item 8: Team Game Elements, publicity once or per match"
+  },
+  "questions": [
+    {
+      "id": "QA01",
+      "rank": 1,
+      "batch": 1,
+      "topic": "Minimum robot size",
+      "question": "R01 requires a minimum size of 10 in long by 10 in wide for 3 in up from the surface. (a) Does a round base 10 in in diameter satisfy this? (b) V2 added 'The Robot may not contract this portion at any time'; V3 omits that sentence. Must the 10 x 10 in lower portion be kept for the whole match?",
+      "citations": [
+        {
+          "doc": "GM1",
+          "line": 242,
+          "quote": "The Robot must have a minimum size of 10 inches long by 10 inches wide for 3 inches up from the surface.",
+          "section": "R01"
+        },
+        {
+          "doc": "GM1v2",
+          "line": 234,
+          "quote": "The Robot may not contract this portion at any time.",
+          "section": "R01 (V2)"
+        }
+      ],
+      "design_impact": "Chassis shape and every route: a square 10 x 10 in body sweeps a 14.1 in circle when it spins in place, a round 10 in body sweeps 10 in. Also decides whether obstacle passes need the full 10 in gap.",
+      "interim_assumption": "Square 10 x 10 in lower body that never contracts.",
+      "supersedes": [
+        "TB6"
+      ]
+    },
+    {
+      "id": "QA02",
+      "rank": 2,
+      "batch": 1,
+      "topic": "AprilTag location and Technician settings",
+      "question": "(a) GM2 3.3 (definitions) says the AprilTag is mounted on the wall separating the pit area from the racecourse, while 3.4.1 and Appendix G say it is fastened by the starting area. Where exactly is it mounted (height and facing), and is it always visible from the start box? (b) 3.4.1 lists tag selection and obstacle placement before the Technician declares that all settings are selected, and GS01 is titled 'Interacting with Robot/Field After Randomization'. May the Technician set a switch on the robot (for example the assigned box) after the die roll, or does that forfeit the randomized-task points under GS01?",
+      "citations": [
+        {
+          "doc": "GM2",
+          "line": 170,
+          "quote": "the Apriltag mounted to the Field on the wall separating the pit area from the racecourse will specify which pit box your Robot is assigned to.",
+          "section": "§3.3"
+        },
+        {
+          "doc": "GM2",
+          "line": 174,
+          "quote": "will be selected and fastened to the wall by the starting area.",
+          "section": "§3.4.1"
+        },
+        {
+          "doc": "GM2",
+          "line": 179,
+          "quote": "The Technician declares to the ref that all settings are selected, and the Robot is ready for match start.",
+          "section": "§3.4.1"
+        },
+        {
+          "doc": "GM2",
+          "line": 209,
+          "quote": "the Technician is allowed to set and position the Robot in any way within the 12 inches starting cube",
+          "section": "G08"
+        },
+        {
+          "doc": "GM2",
+          "line": 212,
+          "quote": "Interacting with Robot/Field After Randomization - Interactions with the Field after Randomization of the Game Elements is forbidden.",
+          "section": "GS01"
+        }
+      ],
+      "design_impact": "Whether the robot needs a camera and vision computer to read the tag, and whether obstacle positions must be sensed on board. A Pico-only robot boots in under a second; a camera computer adds cost, boot time and a failure point.",
+      "interim_assumption": "No settings after randomization: the robot reads the tag itself and senses obstacles itself.",
+      "supersedes": [
+        "TB7"
+      ]
+    },
+    {
+      "id": "QA03",
+      "rank": 3,
+      "batch": 1,
+      "topic": "Obstacle vehicles and placement",
+      "question": "(a) Which exact toy vehicles are used (the Amazon 'Toy Vehicle Obstacle Set' in Appendix B), and what are their footprints? (b) Is each vehicle entirely inside its 16 x 16 in quadrant, in any orientation? (c) Does 'inner lane and outer lane' mean each vehicle sits in one half of its quadrant, and can two vehicles be on the same straightaway? (d) Appendix E measures 2 in from the side rail and 2 in from the center rail with a 16 in width, but the rails are roughly 22 in apart; which faces are the offsets measured from?",
+      "citations": [
+        {
+          "doc": "GM2",
+          "line": 127,
+          "quote": "There will be 3 randomly placed obstacles on the course. The obstacles will be placed in different lanes.",
+          "section": "§3.1"
+        },
+        {
+          "doc": "GM2",
+          "line": 175,
+          "quote": "The obstacles will be placed in quadrants on the straight aways, in the inner lane and the outer lane.",
+          "section": "§3.4.1"
+        },
+        {
+          "doc": "GM2",
+          "line": 321,
+          "quote": "Toy Vehicle Obstacle Set",
+          "section": "Appendix B"
+        },
+        {
+          "doc": "GM2",
+          "line": 379,
+          "quote": "The Quadrants will start 2 inches from the side rail and stop 2 inches from the center rail with a total width of 16 inches.",
+          "section": "Appendix E"
+        }
+      ],
+      "design_impact": "Every lap passes all three vehicles. The organizer guide shows a plush vehicle of about 8.55 x 8.2 in; if a vehicle can sit near the middle of a roughly 22 in corridor, a 10 in robot may have no contact-free gap.",
+      "interim_assumption": "Vehicles about 8.55 x 8.2 in, wholly inside a quadrant, any orientation; contact-free passes are not guaranteed.",
+      "supersedes": [
+        "Q4",
+        "Q5",
+        "TB4"
+      ]
+    },
+    {
+      "id": "QA04",
+      "rank": 4,
+      "batch": 1,
+      "topic": "Track markings",
+      "question": "May the robot drive on or across the white track marking? At both ends the strip between the marking and the wall is about 8.4 to 8.7 in, narrower than the 10 in minimum robot. Is there any lane requirement other than the physical walls and dividers?",
+      "citations": [
+        {
+          "doc": "GM2",
+          "line": 131,
+          "quote": "There are 2 areas on the field: the racecourse and the pit area.",
+          "section": "§3.2"
+        },
+        {
+          "doc": "GM1",
+          "line": 242,
+          "quote": "The Robot must have a minimum size of 10 inches long by 10 inches wide for 3 inches up from the surface.",
+          "section": "R01"
+        }
+      ],
+      "design_impact": "If the marking were a boundary, no legal robot could fit the end strips, so the answer decides which corridors routes may use.",
+      "interim_assumption": "Only physical walls and dividers constrain motion; minimize marking crossings where it costs nothing.",
+      "supersedes": [
+        "Q2",
+        "TB2"
+      ]
+    },
+    {
+      "id": "QA05",
+      "rank": 5,
+      "batch": 2,
+      "topic": "Pit access",
+      "question": "Which checkered openings may the robot use to enter and to leave the pit area? May it enter and leave through the same opening, and may it cross the start box on the way?",
+      "citations": [
+        {
+          "doc": "GM2",
+          "line": 390,
+          "quote": "During the pit stop the robot must enter the Pit Area and drop off the old spare tire which is red and pick up the new spare tire which is blue.",
+          "section": "Appendix G"
+        },
+        {
+          "doc": "GM2",
+          "line": 393,
+          "quote": "enter assigned Pit Box",
+          "section": "Appendix G"
+        }
+      ],
+      "design_impact": "Fixes the pit routes and how much time the pit stop costs.",
+      "interim_assumption": "Any opening, same-end use allowed; simulated routes keep this conditional.",
+      "supersedes": [
+        "Q1",
+        "TB5"
+      ]
+    },
+    {
+      "id": "QA06",
+      "rank": 6,
+      "batch": 2,
+      "topic": "Laps and the final lap",
+      "question": "(a) Which direction must laps run, and may the robot reverse? (b) The pit detour may cross the start/finish checkerboard extra times; how are laps counted? (c) Does the final (victory) lap begin when the robot leaves the pit after lap 2, or at the next finish-line crossing?",
+      "citations": [
+        {
+          "doc": "GM2",
+          "line": 149,
+          "quote": "Robot completes three laps around the course in under 3 minutes.",
+          "section": "§3.2.2"
+        },
+        {
+          "doc": "GM2",
+          "line": 150,
+          "quote": "Robot makes a pit stop between lap 1 and 2 or between lap 2 and 3.",
+          "section": "§3.2.2"
+        },
+        {
+          "doc": "GM2",
+          "line": 127,
+          "quote": "On the final (victory) lap, if the Robots raise a flag with the school logo, colors, emblem, etc., additional points will be awarded.",
+          "section": "§3.1"
+        }
+      ],
+      "design_impact": "Lap-counting logic and when to raise the school flag (25 points).",
+      "interim_assumption": "Either direction; laps counted by route progress; flag raised on leaving the pit after lap 2 and kept up.",
+      "supersedes": [
+        "Q3",
+        "TB3"
+      ]
+    },
+    {
+      "id": "QA07",
+      "rank": 7,
+      "batch": 2,
+      "topic": "Tire exchange and parking",
+      "question": "(a) Appendix G says the robot does not have to enter the assigned pit box, but its sequence says 'enter assigned Pit Box'. Must any part of the robot enter the box, or may it reach in? (b) Is a pit stop required to earn the 100 points for finishing within 3 minutes? (c) Is the more-than-75%-in-box check made at the finish-line crossing or after the robot stops, and is the 2:45 / 3:00 time taken at the finish line or at parking?",
+      "citations": [
+        {
+          "doc": "GM2",
+          "line": 392,
+          "quote": "The robot itself does not have to enter the assigned pit box during the challenge.",
+          "section": "Appendix G"
+        },
+        {
+          "doc": "GM2",
+          "line": 393,
+          "quote": "enter assigned Pit Box",
+          "section": "Appendix G"
+        },
+        {
+          "doc": "GM2",
+          "line": 160,
+          "quote": "more than 75% of the Robot must be in the Assigned Pit Box to be awarded points.",
+          "section": "§3.3"
+        },
+        {
+          "doc": "GM2",
+          "line": 222,
+          "quote": "Crossing the finish line in 3 minutes or less",
+          "section": "§3.6"
+        }
+      ],
+      "design_impact": "Mechanism reach, pit route, and whether parking time counts against the 2:45 bonus.",
+      "interim_assumption": "Robot body enters the box; parking time is charged inside the 165 s bonus budget.",
+      "supersedes": [
+        "Q7",
+        "TB3"
+      ]
+    },
+    {
+      "id": "QA08",
+      "rank": 8,
+      "batch": 2,
+      "topic": "Start flag",
+      "question": "3.1 says the robot begins when the green flag is lowered, but 3.4.1 and 3.4.2 say the flag is secured down and the referee raises it. Which is correct, where exactly is the flag mounted, and when will V3.1 with Appendix F be posted?",
+      "citations": [
+        {
+          "doc": "GM2",
+          "line": 127,
+          "quote": "When the green flag is lowered, your Robot will begin.",
+          "section": "§3.1"
+        },
+        {
+          "doc": "GM2",
+          "line": 176,
+          "quote": "The green start flag will be secured in the down position.",
+          "section": "§3.4.1"
+        },
+        {
+          "doc": "GM2",
+          "line": 181,
+          "quote": "The match starts when a Referee raises the Start Flag and declares the Match started.",
+          "section": "§3.4.2"
+        },
+        {
+          "doc": "GM2",
+          "line": 383,
+          "quote": "Details will be provided in Version 3.1.",
+          "section": "Appendix F"
+        }
+      ],
+      "design_impact": "Start sensing for the 10-point green-flag start; an early start costs a Yellow Card and 2 points.",
+      "interim_assumption": "Detect a raise; keep the start-switch fallback with its 5 s static period.",
+      "supersedes": [
+        "TB1"
+      ]
+    },
+    {
+      "id": "QA09",
+      "rank": 9,
+      "batch": 2,
+      "topic": "Field tolerances and walls",
+      "question": "How is the G02 +/-1 in tolerance applied: independently per element, so a corridor could narrow by up to 2 in? Are the walls mounted inside the 4 x 8 ft board, and are they actual 3/4 in lumber or 1 in as drawn?",
+      "citations": [
+        {
+          "doc": "GM2",
+          "line": 202,
+          "quote": "Competition provided Field and Game Elements will start each Match with positional tolerances that may vary by",
+          "section": "G02"
+        }
+      ],
+      "design_impact": "Clearance margins for every corridor, the U-turns and the obstacle passes.",
+      "interim_assumption": "Independent +/-1 in per element; walls inside the board; test both 3/4 in and 1 in.",
+      "supersedes": [
+        "Q6"
+      ]
+    },
+    {
+      "id": "QA10",
+      "rank": 10,
+      "batch": 2,
+      "topic": "Team Game Elements and publicity",
+      "question": "Are Team Game Elements used in this game (TE01 and TE02 exist, but the game describes none)? Is the 10-point publicity award counted once or in every match?",
+      "citations": [
+        {
+          "doc": "GM2",
+          "line": 214,
+          "quote": "Each Team Game Element must pass Inspection before it is allowed to be used in a Match.",
+          "section": "TE01"
+        },
+        {
+          "doc": "GM2",
+          "line": 244,
+          "quote": "Team enters the publicity contest",
+          "section": "§3.6"
+        }
+      ],
+      "design_impact": "Low; affects the score model and whether any separate element is worth building.",
+      "interim_assumption": "No Team Game Elements; publicity excluded from the robot-task total.",
+      "supersedes": [
+        "TB8"
+      ]
+    }
+  ]
+}

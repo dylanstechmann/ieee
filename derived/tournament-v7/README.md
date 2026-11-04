@@ -9,7 +9,7 @@ Agent-run planning arithmetic for the owner's hobby/learning project. Every prob
 - **Qualification** (GM1 V3 §4.7.1): each Team plays three Qualification Matches, and only the **best** score counts. Ties break on the second-best, then the third-best score.
 - **Elimination** (GM1 V3 §3.3.1, §4.8–4.9): single head-to-head Matches, where the higher score wins. The top six seeds advance directly; seeds 7–10 play in for the last two places, and the final is at the Awards Banquet.
 
-A best-of-three ranking rewards a high ceiling more than a high average. This model makes that trade-off computable.
+A best-of-three ranking rewards a high ceiling more than a high average. This model makes that trade-off computable. ("Best-of-3" in this package means the highest of the three Qualification Match scores, not a best-of-three series.)
 
 ## Model
 

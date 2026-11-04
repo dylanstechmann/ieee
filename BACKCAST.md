@@ -1,5 +1,7 @@
 # Backcasting from winning in 2027
 
+> **Superseded for dates and gates by `BACKCAST-2026-11.md` (November 3, 2026).** This October 8 plan is kept as history.
+
 > **Historical plan:** V2 scoring and dates below are superseded or past. Review `CURRENT-RULES-2026-10-29.md` before using these targets; team progress has not been established.
 
 Prepared October 8, 2026. Competition identity remains a working assumption; dates and governing sources are in [RULES-AND-SOURCES.md](RULES-AND-SOURCES.md).

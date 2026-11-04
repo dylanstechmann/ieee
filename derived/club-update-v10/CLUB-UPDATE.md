@@ -1,0 +1,45 @@
+# Club update v10: from studies to the first physical tests
+
+November 3, 2026 · IEEE SoutheastCon 2027 Stock Car Race · hobby/learning project, AI-assisted planning and software
+
+This updates the November 3 club package (`derived/club-package-v9/CLUB-PRESENTATION.md`) after a full review of the repository. Nothing has been bought, built or tested yet. The goal for the next two weeks is to change that.
+
+## Three corrections to the club package
+
+1. **Every real match has three obstacles, passed on every lap.** The simulator's "nominal" runs had none, so its clean three-lap result does not describe any legal match. Obstacle handling is the core of every lap, not an extra.
+2. **The obstacle stand-in was too small.** The simulator used a circle about 4.6 in across, and the planner a 2 in square. The organizer's guide shows a plush vehicle of about 8.55 x 8.2 in. With vehicles that size, a 10 in robot may not always have a contact-free gap; that is now the most important software study.
+3. **"20 of 20 episodes" overstated the evidence.** The seed only picked the pit box, so the 20 runs were three deterministic runs (one per box) repeated. The next simulator version adds real variation.
+
+The review also found that the reinforcement-learning interface cannot yet be driven by a policy, and that the simulator does not use the motor model. Both are fixed in the next software version; no learning is planned before real sensor data exists.
+
+## Next two weeks
+
+| When | Who | What |
+|---|---|---|
+| Nov 4–7 | Rules lead | Search the official Discord Q&A, then post the open questions from `derived/qa-pack-v10/PASTE.md` (batch 1 first). Record everything in `qa/answers-ledger.json`. |
+| Nov 5–7 | Owner / club | Decide purchases: Order A drivetrain parts ($177.25 archived price), the official obstacle set ($35.95) and practice-field materials (organizer list $182.39 plus paint). Ask FAU about space, printers, supervision and battery policy. |
+| Nov 9–15 | Mechanical lead + volunteers | Build the 4 x 8 ft practice field from the field packet (coming next), then measure it as built. |
+| On arrival | Mechanical + bench leads | Caliper-check the motors, brackets, hubs, wheels and casters before printing the corrected mule deck. |
+| From Nov 16 | Tire lead | Print tire replicas and test the three pickup concepts on a repeatable fixture. |
+
+## Dates that cannot move
+
+- Competition registration: Jan 1 to Mar 1, 2027; every competitor needs IEEE membership.
+- Conference registration: by Mar 31, 2027; there is no late registration.
+- Hardware room opens Apr 15; competition Apr 17. Three qualification matches, and only the best one counts.
+
+The gates between now and April are in `BACKCAST-2026-11.md`.
+
+## What the AI agent is building next
+
+These are digital; each is labeled agent-run and is not hardware validation:
+- the Q&A pack;
+- a practice-field build packet;
+- the corrected shaft-down mule deck with drill template;
+- bench firmware and test scripts for the Pico 2;
+- a corrected simulator with realistic obstacles;
+- a passability study for square and round robots;
+- a faster arc-based lap planner;
+- tire-fixture and full-size mockup drawings.
+
+The agent does not buy parts or contact the organizers.

@@ -2,6 +2,25 @@
 
 November 3, 2026. AI-assisted software for the owner's hobby/learning project. **Not a legal route, calibrated robot model, physical test or trained RL result.**
 
+## Review notes (November 3, 2026)
+
+An agent review found these limits. v9 stays frozen, because `derived/robot-studio-v8/build-manifest.json` pins `evaluation.json`; the fixes go into the next simulator version.
+
+- **20 seeds, 3 runs.** The seed only chooses the pit box (`assigned_box = 1 + seed % 3`, `software/mission_v9.py:295`), and nominal evaluation disables noise and obstacles. The 20 evaluation seeds are therefore 3 deterministic runs repeated.
+- **No obstacles in the nominal case.** Every legal match has three obstacles, passed on every lap.
+- **Obstacle stand-in too small.** The stand-in is a circle of radius 0.058 m (about 4.6 in), and the detour planner uses a 2 in square; the organizer guide's plush vehicle is about 8.55 x 8.2 in.
+- **Lap time.** Nominal laps take 29.60–29.65 s for every box: an in-memory re-run on November 3 gave laps ending at 37.45, 67.10 and 141.4–141.8 s. The 32.35 s figure below was wrong, so the detour costs about 14.8 s per lap.
+- **RL interface cannot be driven by a policy.**
+  - `PathFollower.settled` only accumulates inside the classical controller (`mission_v9.py:150-154`), and route advancement checks it (`:435-438`). Actions passed to `MissionEnv.step(action)` therefore never complete a segment.
+  - The observation drops the target heading and the segment type (`:341`).
+  - The reward is distance moved minus penalties (`:464`), not the shaping that `mission-v9.json` describes.
+- **`software/match_logic.py` is not used here,** and its lap length (4.04 m) differs from this route's (3.81 m).
+- **Logic issues.**
+  - The `final_lap` slice is a no-op (`:202`, `:219-220`).
+  - PARK's first waypoint (36, 12) in differs from where PARK starts (36, 36) in.
+  - The school flag is raised on pit exit even when `pit_after_lap` is 1 (`:408-411`).
+  - The score-like total credits clean laps that were never driven; the entry-blocker probe scores 130 (`:474`).
+
 ## What was recovered
 
 The broken waypoint prototype is preserved unchanged as `prototype-before-reset.py`; do not import it. The replacement reuses `derived/differential-drive-v3/report.json`, whose conservative 10 × 10 in rectangular forward/reverse/spin routes had already passed sampled geometry checks. It does not use the unapproved round-base assumption.
@@ -21,7 +40,7 @@ The shortened pit approach uses the upper approach lane and a 35-inch turn colum
 
 ### Timeout diagnosis (November 3)
 
-The phase trace for seed 100 (box 2) shows the first two detoured laps completing at 52.25 s and 96.75 s, the exchange at 122.00 s, and the final lap starting at 141.80 s. The final lap reaches its lower-lane return at 171.40 s and auto-stops at 178.00 s with two laps complete. The nominal lap is 32.35 s; the detoured lap is 44.40 s. The detour adds 38 inches of translation and four 90-degree spins (188 inches and 720 degrees total, versus 150 inches and 360 degrees nominally).
+The phase trace for seed 100 (box 2) shows the first two detoured laps completing at 52.25 s and 96.75 s, the exchange at 122.00 s, and the final lap starting at 141.80 s. The final lap reaches its lower-lane return at 171.40 s and auto-stops at 178.00 s with two laps complete. The nominal lap is about 29.6 s (29.60–29.65 s; corrected on November 3 from an earlier 32.35 s); the detoured lap is 44.40 s. The detour adds 38 inches of translation and four 90-degree spins (188 inches and 720 degrees total, versus 150 inches and 360 degrees nominally).
 
 The existing planner's wheel-travel objective and a time-weighted candidate comparison select the same four-turn local bypass. Candidate reverse-entry and reverse-rejoin shortcuts were checked with the unchanged 10 × 10-inch footprint and sampled transitions: they intersect the center divider except at the existing end gaps. The divider spans x=43.87–79.87 inches at y=24.073 inches; the upper-lane obstacle blocks the direct straight. Thus this investigation found no valid shorter local route, not evidence that no route exists. No deadline, speed, footprint, obstacle or divider constraint was relaxed. The next route study must use measured obstacle/field geometry and a broader route/maneuver model, not repeated tuning of this fixed bypass.
 

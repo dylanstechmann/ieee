@@ -3,8 +3,12 @@
 `match_logic.py` is the decision layer for one Stock Car Race match under the V3 manuals. You call `MatchLogic.update(now_s, obs)` every control tick and drive the robot from what it returns. It does no I/O, so it can sit inside a ROS 2 node, a MicroPython loop on a microcontroller, or a simulator. Agent-written for team discussion; it has not run on a robot.
 
 ```
-uv run --no-project --python 3.12 python -I -m unittest discover -s software -v   # 13 tests
+uv run --no-project --python 3.12 python -B -I -m unittest discover -s software -v   # 33 tests (13 here, 20 for mission_v9)
 ```
+
+Or run every project check with `node tools/check-all.js` from the repository root.
+
+**November 3 review:** `mission_v9.py` does not use this module yet; the two disagree on lap length (4.04 m here, 3.81 m in the simulator). The review notes in `../derived/mission-v9/README.md` list the simulator's known defects. The next simulator version is planned to use one supervisor evolved from this file.
 
 ## What it decides
 

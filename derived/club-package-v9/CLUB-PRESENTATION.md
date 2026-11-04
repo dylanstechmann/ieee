@@ -1,5 +1,13 @@
 # Stock Car Race — engineering progress and next build gate
 
+> **Correction, November 3 review:**
+> - The "20/20 episodes" below are 3 deterministic runs (one per pit box) repeated.
+> - They have no obstacles, but every real match has three, passed on every lap.
+> - The obstacle stand-in was about half the size of the organizer's vehicle.
+> - The nominal lap is about 29.6 s, not 32.35 s.
+>
+> See `../club-update-v10/CLUB-UPDATE.md` for the corrections and the next two weeks.
+
 November 3, 2026 · IEEE SoutheastCon 2027 hobby/learning project · AI-assisted research and software
 
 **Purpose:** decide the first physical experiments and assign club work. This is not a finished robot, a legal-route ruling or a request to buy a complete parts list.

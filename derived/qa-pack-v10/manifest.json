@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-03",
+  "status": "agent-prepared Q&A drafts; not posted; not organizer answers",
+  "input_hashes": {
+    "qa-pack-v10.json": "65e33be5e593b3e2ad290654d4646b27bbd36ddcee1a5bbc091a8a1091804e7f",
+    "tools/qa-pack-v10.js": "d8780c88ab28be3ec0e95586303d4e1879a01c50b7a282c62ce19ade4bdda53c",
+    "derived/GM1-V3-paragraphs.txt": "0ab94b4191eb53d6fe7f0179b20967b50946bd0f7825dd19ea5cb0d93ce4d453",
+    "derived/GM2-V3.1-paragraphs.txt": "2bff327a36dec34bf89cb83aaa10a11faf078375294767db07bdc2b9d3ed8213",
+    "derived/GM1-V2-paragraphs.txt": "8889aa1cbe06036dac2619577b71812992db3716f382b8b2048f3ebb5be09ea2"
+  },
+  "output_hashes": {
+    "QUESTIONS.md": "1a145c211ac8860e5ab75f140109663a0cd855e6ac21330818bc24d04d030e72",
+    "PASTE.md": "8f009866c0ec04b399c6800d050b0e043ee2bb479240efc81d53bc0eb76f1121",
+    "ledger-template.json": "6d0aee46379a51daa9d9b44c7403f5f5e5d5c9be5d074daf9d6571dfce6b2953"
+  }
+}
