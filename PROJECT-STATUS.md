@@ -16,7 +16,7 @@ Updated November 4, 2026. Personal hobby/learning project with AI-assisted resea
 
 ## Start here
 
-Open **`share/Robot-Studio-v8.html`** for the consolidated offline studio. Its guide is `derived/robot-studio-v8/README.md`.
+Open **`share/Showcase-v10.html`** for the one-page overview (arena, parts, physics, simulations) built for sharing. The consolidated offline studio is **`share/Robot-Studio-v8.html`**; its guide is `derived/robot-studio-v8/README.md`.
 
 v8 combines rather than replaces the earlier work:
 

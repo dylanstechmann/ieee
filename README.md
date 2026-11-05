@@ -21,6 +21,7 @@ This project is separate from the FAU team's own work. Roles, gates and dates in
 
 | To... | Open |
 |---|---|
+| See everything on one shareable page | `share/Showcase-v10.html` (arena, parts, physics, simulation — offline, self-contained) |
 | See the plan, gates and dates to April | `BACKCAST-2026-11.md` |
 | Build the practice field | `derived/practice-field-v10/` (materials, layout coordinates, as-built template), from the organizer CAD in `derived/organizer-cad-v10/` |
 | Build the drivetrain mule | `derived/drivetrain-mule-v10/` (shaft-down deck, risers, fit report, inspection templates) |
@@ -69,7 +70,7 @@ It was tested with Node v24.18.1, uv 0.13 and CPython 3.12.16. It checks softwar
 | `software/` | Python simulators, estimator, route tools and match logic, with tests |
 | `firmware/` | Pico 2 MicroPython skeleton (bench, safety and mission driver) with CPython host tests; not flashed |
 | `schemas/` | Shared data formats (telemetry v1, mission log v1) |
-| `share/` | Offline HTML studios (v4–v8) and mission replays (v10) |
+| `share/` | Showcase page (v10), offline HTML studios (v4–v8) and mission replays (v10) |
 | `sources/` | Archived organizer and vendor files with hashes |
 | `derived/audits/` | Dated audits, including the November 3 baseline |
 | `*-vN.json` (root) | Inputs to the matching packages |
