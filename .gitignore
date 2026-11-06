@@ -6,3 +6,6 @@ software/__pycache__/
 .env
 .env.*
 !.env.example
+
+# archive/backup tarballs are local preservation artifacts, not tracked sources
+*.tar.gz
