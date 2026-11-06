@@ -1,4 +1,4 @@
-# Agent instructions — ieee
+# Agent instructions — roboticThingAvoidance
 
 ## Agent tooling (portable across harnesses)
 

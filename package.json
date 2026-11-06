@@ -1,5 +1,5 @@
 {
-  "name": "ieee-southeastcon-2027-stock-car",
+  "name": "roboticThingAvoidance",
   "version": "0.10.0",
   "private": true,
   "description": "Personal hobby/learning project: AI-assisted planning, simulation and build packages for the IEEE SoutheastCon 2027 Stock Car Race. Not a validated competition robot.",
