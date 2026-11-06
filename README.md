@@ -6,6 +6,8 @@ Most planning, simulation and software here were developed with AI assistance ac
 
 This project is separate from the FAU team's own work. Roles, gates and dates in these documents are planning suggestions, not team decisions.
 
+The latest one-file showcase is [`share/Showcase-v13.html`](share/Showcase-v13.html) — the v13 source-evidenced 3D CAD assembly and continuous-joint live contact study. Open it in a modern desktop browser; for iPhone, see `share/HOST-V13.txt`.
+
 ## Status — November 4, 2026
 
 - **Physical work: none yet.** No parts are ordered, no practice field is built, no organizer Q&A has been posted and no robot has been tested.
