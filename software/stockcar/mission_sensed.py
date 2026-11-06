@@ -1,5 +1,5 @@
 """Sensed-mission simulator: the v10 `MissionSim` with the AprilTag (pit box) and the start flag fed
-through camera models instead of ground truth.
+through camera models instead of ground truth, plus an optional stop-on-vehicle-contact safety layer.
 
 This is a subclass, not an edit of `software/stockcar/mission.py`, because that file is a pinned input
 of the sealed envelope/estimation/full-mission/maneuver/mission v10 packages and must stay byte-identical.
@@ -17,7 +17,23 @@ class SensedMissionSim(MissionSim):
     """MissionSim whose supervisor sees the pit box and start flag only through the camera models.
 
     `_mission()` deliberately mirrors `MissionSim._mission()` byte-for-byte except for the two sensed
-    observations; the route, exchange, parking and event logic is the unchanged v10 behaviour."""
+    observations; the route, exchange, parking and event logic is the unchanged v10 behaviour.
+
+    `collision_stops=True` halts the robot the frame after any vehicle contact instead of the v10
+    "continue gently" policy — the first step toward a sensed, obstacle-aware robot (avoidance wiring is
+    the next step; see `avoidance.py`)."""
+
+    def __init__(self, preset="aggressive", envelope="nominal", field=None, footprint_kind="square",
+                 sensing=False, collision_stops=False):
+        super().__init__(preset, envelope, field, footprint_kind, sensing)
+        self.collision_stops = collision_stops
+
+    def classical_action(self):
+        if self.collision_stops:
+            lap = min(self.sup.laps, 2)
+            if self.vehicle_contacts[lap] > 0:
+                return (0.0, 0.0)
+        return super().classical_action()
 
     def reset(self, layout, sensor_seed=0):
         out = super().reset(layout, sensor_seed)
@@ -79,10 +95,10 @@ class SensedMissionSim(MissionSim):
 
 
 def run_sensed(seed, preset="aggressive", envelope="nominal", obstacles=True, reading="offsets",
-               yaw_mode="aligned", max_steps=4000, sensing=False):
+               yaw_mode="aligned", max_steps=4000, sensing=False, collision_stops=False):
     """Run one sensed mission to completion and return the info dict, mirroring mission.run()."""
     rng = random.Random(seed)
-    sim = SensedMissionSim(preset, envelope, sensing=sensing)
+    sim = SensedMissionSim(preset, envelope, sensing=sensing, collision_stops=collision_stops)
     layout = random_layout(rng, sim.field, reading, yaw_mode, obstacles=obstacles)
     sim.reset(layout, sensor_seed=seed)
     for _ in range(max_steps):

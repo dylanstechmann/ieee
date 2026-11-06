@@ -52,10 +52,33 @@ supervisor senses them instead of being told:
 
 `node tools/check-all.js` passes (36/36); `software` suite is now 151 tests.
 
+## Track 1b — vehicle collision detection and avoidance (done, part 1)
+
+- `software/stockcar/collision.py` — `overlapping` / `check` (signed-separation polygon tests) and a
+  `ContactRecorder` mirroring `MissionSim._contacts` without its side effects.
+- `software/stockcar/avoidance.py` — `plan_shift` (centre of the widest open lateral band past one
+  vehicle, preferring the side nearest the lane) and `shifted_target` waypoint offset helper.
+- `SensedMissionSim` gained a `collision_stops` flag: the frame after any vehicle contact the robot halts
+  instead of the v10 "continue gently" policy. `software` suite is now 158 tests.
+
+`node tools/check-all.js` still passes 36/36.
+
+## Important finding — sealing pins nearly every stockcar source file
+
+Reading the sealed manifests shows the pinned v10 inputs **include** `mission.py`, `supervisor.py`,
+`lapmodel.py`, `passage.py`, `field.py`, `obstacles.py`, `geometry.py`, `dynamics.py`, `envelope.py`,
+`sensors.py`, `estimator.py`, `tracker.py`, `routes.py`, and most of `firmware/pico2/*.py` /
+`firmware/host_tests/*.py`. So the plan's steps that say to *edit* `Field`, `SensorSuite`, `MissionSim`,
+`build_routes`, etc. must instead be done as **new files + subclasses** (as `mission_sensed.py`,
+`collision.py`, `avoidance.py` do). Do not edit pinned files; every new study goes in a new versioned
+package.
+
 ## Next
 
-Track 1 continued (per `implementation_plan.md`): a sensed **vehicle** detection + avoidance layer and
-sealed `derived/sensing-v11/` / `derived/full-mission-v11/` packages; then Track 2 (board-side estimator).
-The lap-line model exists but is not yet wired into the mission, because the v10 route transitions key
-`checker_crossing` off route completion rather than the literal checkered line — that needs a route
-refactor and its own validation.
+- **Track 1b part 2** — wire `avoidance.py` into the subclass's route target (avoid, not just stop), and
+  generate/seal `derived/sensing-v11/` + `derived/full-mission-v11/` with contact-free / completion
+  reporting (new `tools/*-v11.*` + `tests/*-v11.test.js`, no edits to v10 inputs).
+- **Track 2** — EKF port to `firmware/pico2/estimator.py` (+ new host parity test) and HAL stubs; only
+  unpinned firmware files (`hal.py`, `main.py`, new files) are safe to touch.
+- The lap-line model (`LapLineDetector`) exists but stays unwired until the v10 route transitions are
+  refactored, because `checker_crossing` is currently keyed off route completion, not the literal line.
