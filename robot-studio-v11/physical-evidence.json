@@ -1,0 +1,18 @@
+{
+  "schema": "physical-assumptions-v11/1",
+  "stage": "prepurchase-assumed",
+  "massBudgetKg": {"twoMotors":0.41,"twoWheels":0.072,"twoHubs":0.028,"twoBrackets":0.066,"deck":0.17,"castersAndRisers":0.044,"battery":0.18,"electronics":0.10,"liftAndFasteners":0.28},
+  "massBudgetNote": "1.35 kg rounded whole-chassis assumption. Motor mass 205 g each is archived manufacturer data; remaining allocations are estimates, not measured values. No hardware purchased.",
+  "parameters": [
+    {"name":"motorMassEach","value":0.205,"unit":"kg","basis":"manufacturer specification archived in sources/hardware-2026-10-31/pololu/product-4754-specs.html"},
+    {"name":"chassisMass","value":1.35,"unit":"kg","basis":"assumed mass budget; includes complete mechanism"},
+    {"name":"tireMass","value":0.08,"unit":"kg","basis":"assumed demonstration tire, not organizer measured tire"},
+    {"name":"wheelFloorFriction","value":0.65,"unit":"coefficient","basis":"assumed rubber / painted board, dry"},
+    {"name":"tireTrayFriction","value":0.8,"unit":"coefficient","basis":"assumed rubber / polymer tray, dry"},
+    {"name":"motorAvailableTorque","value":0.12,"unit":"N m","basis":"assumed conservative operating limit, not published stall rating"},
+    {"name":"liftForce","value":8,"unit":"N","basis":"hypothetical actuator budget; payload weight gate only"},
+    {"name":"liftStroke","value":0.15,"unit":"m","basis":"proposed travel to clear low props; no physical actuator selected"}
+  ],
+  "credits": ["Rapier 0.12.0, Dimforge, Apache-2.0", "Three.js 0.170.0, Three.js authors, MIT", "CadQuery 2.8.0, CadQuery contributors, Apache-2.0", "Pololu manufacturer specification/drawing references; redistributed geometry is agent-written approximation", "Organizer field extraction retained only in reference-field mode"],
+  "limitations": ["Level-plane chassis cannot tip; tire is fully dynamic", "Force-limited virtual wheel traction, not individual rolling wheel bodies", "Ideal position-controlled lift with payload-weight gating, not torque/compliance simulation", "Known-map navigation; no camera, lidar, flag detector or firmware controller parity", "New enlarged demo arena is not competition geometry or a scoring qualification", "Tray and fixture geometry proposed for this demo, not measured organizer hardware", "22 mm archived motor CAD shaft datum versus 16 mm published length remains unresolved", "No transferred historical 91/91 results; parameter changes require a new live run", "Couches are fictional miniature demo props; not official competition obstacles"]
+}

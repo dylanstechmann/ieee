@@ -1,0 +1,8 @@
+test_deck_solid_and_parameter_change (test_structure.StructureTests.test_deck_solid_and_parameter_change) ... ok
+test_invalid_geometry_is_rejected (test_structure.StructureTests.test_invalid_geometry_is_rejected) ... ok
+test_riser_height_is_editable (test_structure.StructureTests.test_riser_height_is_editable) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.164s
+
+OK

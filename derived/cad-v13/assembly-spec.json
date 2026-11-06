@@ -1,0 +1,1314 @@
+{
+  "schema": "assembly-spec-v13/1",
+  "id": "order-a-bom-nominal-16mm-v13",
+  "revision": "v13.0",
+  "units": "mm",
+  "renderAxes": "X forward, Y up, Z right",
+  "partFrames": "vendor-native or documented CadQuery local",
+  "parts": [
+    {
+      "id": "motor",
+      "bomId": "A-MOTOR",
+      "sku": "4754",
+      "role": "purchased",
+      "geometryMode": "vendor-step",
+      "sourceIds": [
+        "motor-page",
+        "motor-step"
+      ],
+      "stepSourceId": "motor-step",
+      "installedQuantity": 2,
+      "expected": {
+        "bodyLengthMm": 70.1,
+        "shaftOffsetMm": 7,
+        "shaftDiameterMm": 6,
+        "vendorShaftLengthMm": 22,
+        "bomShaftLengthMm": 16
+      },
+      "omissions": [
+        "Internal gear teeth, windings and electronics are not reconstructed",
+        "Manufacturer STEP and product page disagree on shaft length"
+      ]
+    },
+    {
+      "id": "bracket",
+      "bomId": "A-BRACKET",
+      "sku": "1995",
+      "role": "purchased",
+      "geometryMode": "vendor-step",
+      "sourceIds": [
+        "bracket-page",
+        "bracket-step"
+      ],
+      "stepSourceId": "bracket-step",
+      "installedQuantity": 2,
+      "expected": {
+        "widthMm": 36.8,
+        "heightMm": 36.8,
+        "depthMm": 6.5,
+        "axisAboveMountMm": 18.4
+      },
+      "omissions": [
+        "Included M3 screw lengths and head profiles are not established; screws are not rendered as exact hardware"
+      ]
+    },
+    {
+      "id": "hub",
+      "bomId": "A-HUB",
+      "sku": "1083",
+      "role": "purchased",
+      "geometryMode": "vendor-step",
+      "sourceIds": [
+        "hub-page",
+        "hub-step"
+      ],
+      "stepSourceId": "hub-step",
+      "installedQuantity": 2,
+      "expected": {
+        "flangeDiameterMm": 25.4,
+        "lengthMm": 9.2,
+        "boreMm": 6
+      },
+      "omissions": [
+        "Included set screws and Allen wrench are catalogued but not represented as exact solids"
+      ]
+    },
+    {
+      "id": "wheel",
+      "bomId": "A-WHEEL",
+      "sku": "1430",
+      "role": "purchased",
+      "geometryMode": "vendor-step",
+      "sourceIds": [
+        "wheel-page",
+        "wheel-step"
+      ],
+      "stepSourceId": "wheel-step",
+      "installedQuantity": 2,
+      "expected": {
+        "diameterMm": 80,
+        "nominalWidthMm": 10,
+        "overallCadAxialExtentMm": 11.75
+      },
+      "omissions": [
+        "Nominal 10 mm catalogue width is not a license to scale the 11.75 mm CAD extent"
+      ]
+    },
+    {
+      "id": "caster",
+      "bomId": "A-CASTER",
+      "sku": "953",
+      "role": "purchased",
+      "geometryMode": "vendor-step",
+      "sourceIds": [
+        "caster-page",
+        "caster-step"
+      ],
+      "stepSourceId": "caster-step",
+      "installedQuantity": 2,
+      "expected": {
+        "heightMm": 13.52,
+        "ballDiameterMm": 12.7,
+        "selectedSpacerMm": 3.175
+      },
+      "omissions": [
+        "Included #2 screw/nut head and thread profiles are not represented as exact solids"
+      ]
+    },
+    {
+      "id": "wheel-screw",
+      "bomId": "A-WHEEL-SCREWS",
+      "sku": "1962",
+      "role": "purchased",
+      "geometryMode": "standard-nominal",
+      "sourceIds": [
+        "wheel-screw-page"
+      ],
+      "installedQuantity": 12,
+      "expected": {
+        "majorDiameterMm": 2.845,
+        "lengthMm": 12.7
+      },
+      "omissions": [
+        "Phillips drive and head contour are simplified nominal geometry, not a measured manufacturer replica"
+      ]
+    },
+    {
+      "id": "deck",
+      "bomId": "A-FAU-FIXTURE",
+      "sku": null,
+      "role": "custom",
+      "geometryMode": "cadquery-custom",
+      "sourceIds": [
+        "mule-geometry"
+      ],
+      "omissions": []
+    },
+    {
+      "id": "riser",
+      "bomId": "A-FAU-FIXTURE",
+      "sku": null,
+      "role": "custom",
+      "geometryMode": "cadquery-custom",
+      "sourceIds": [
+        "mule-geometry"
+      ],
+      "omissions": []
+    },
+    {
+      "id": "caster-spacer",
+      "bomId": "A-CASTER",
+      "sku": "953",
+      "role": "custom",
+      "geometryMode": "cadquery-custom",
+      "sourceIds": [
+        "caster-page"
+      ],
+      "omissions": [
+        "Envelope study; exact spacer holes omitted"
+      ]
+    },
+    {
+      "id": "lift",
+      "bomId": null,
+      "sku": null,
+      "role": "proposed",
+      "geometryMode": "cadquery-custom",
+      "sourceIds": [],
+      "omissions": [
+        "No actuator selected"
+      ]
+    },
+    {
+      "id": "gate",
+      "bomId": null,
+      "sku": null,
+      "role": "proposed",
+      "geometryMode": "cadquery-custom",
+      "sourceIds": [],
+      "omissions": [
+        "No actuator selected"
+      ]
+    }
+  ],
+  "instances": [
+    {
+      "id": "deck",
+      "partId": "deck",
+      "assetId": "deck",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        0.0,
+        23.6,
+        0.0
+      ],
+      "rotationDeg": [
+        -90,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "fixed",
+      "basis": "project-custom v10 deck"
+    },
+    {
+      "id": "right-motor",
+      "partId": "motor",
+      "assetId": "motor-16mm",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        -19.93,
+        54.0,
+        54.08
+      ],
+      "rotationDeg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "fixed",
+      "basis": "bom-nominal-16mm; vendor body datum"
+    },
+    {
+      "id": "right-bracket",
+      "partId": "bracket",
+      "assetId": "bracket",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        -3.25,
+        47.0,
+        95.65
+      ],
+      "rotationDeg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "fixed",
+      "basis": "vendor bracket mounting-face datum"
+    },
+    {
+      "id": "right-hub",
+      "partId": "hub",
+      "assetId": "hub",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        0.0,
+        40.0,
+        87.5
+      ],
+      "rotationDeg": [
+        180,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "right-wheel",
+      "basis": "hub flange seated at selected shaft tip; received-part fit unmeasured"
+    },
+    {
+      "id": "right-wheel",
+      "partId": "wheel",
+      "assetId": "wheel",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        0.0,
+        40.0,
+        95.0
+      ],
+      "rotationDeg": [
+        0,
+        -90,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "right-wheel",
+      "basis": "native vendor wheel geometry; catalogue width does not rescale CAD"
+    },
+    {
+      "id": "right-wheel-screw-1",
+      "partId": "wheel-screw",
+      "assetId": "wheel-screw",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        0.899,
+        30.994,
+        91.0
+      ],
+      "rotationDeg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "right-wheel",
+      "basis": "nominal #4-40 screw in hub-pattern display; axial seating unverified"
+    },
+    {
+      "id": "right-wheel-screw-2",
+      "partId": "wheel-screw",
+      "assetId": "wheel-screw",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        9.148,
+        35.756,
+        91.0
+      ],
+      "rotationDeg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "right-wheel",
+      "basis": "nominal #4-40 screw in hub-pattern display; axial seating unverified"
+    },
+    {
+      "id": "right-wheel-screw-3",
+      "partId": "wheel-screw",
+      "assetId": "wheel-screw",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        9.148,
+        45.281,
+        91.0
+      ],
+      "rotationDeg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "right-wheel",
+      "basis": "nominal #4-40 screw in hub-pattern display; axial seating unverified"
+    },
+    {
+      "id": "right-wheel-screw-4",
+      "partId": "wheel-screw",
+      "assetId": "wheel-screw",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        0.899,
+        50.044,
+        91.0
+      ],
+      "rotationDeg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "right-wheel",
+      "basis": "nominal #4-40 screw in hub-pattern display; axial seating unverified"
+    },
+    {
+      "id": "right-wheel-screw-5",
+      "partId": "wheel-screw",
+      "assetId": "wheel-screw",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        -7.35,
+        45.281,
+        91.0
+      ],
+      "rotationDeg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "right-wheel",
+      "basis": "nominal #4-40 screw in hub-pattern display; axial seating unverified"
+    },
+    {
+      "id": "right-wheel-screw-6",
+      "partId": "wheel-screw",
+      "assetId": "wheel-screw",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        -7.35,
+        35.756,
+        91.0
+      ],
+      "rotationDeg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "right-wheel",
+      "basis": "nominal #4-40 screw in hub-pattern display; axial seating unverified"
+    },
+    {
+      "id": "left-motor",
+      "partId": "motor",
+      "assetId": "motor-16mm",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        19.93,
+        54.0,
+        -54.08
+      ],
+      "rotationDeg": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "fixed",
+      "basis": "bom-nominal-16mm; vendor body datum"
+    },
+    {
+      "id": "left-bracket",
+      "partId": "bracket",
+      "assetId": "bracket",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        3.25,
+        47.0,
+        -95.65
+      ],
+      "rotationDeg": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "fixed",
+      "basis": "vendor bracket mounting-face datum"
+    },
+    {
+      "id": "left-hub",
+      "partId": "hub",
+      "assetId": "hub",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        0.0,
+        40.0,
+        -87.5
+      ],
+      "rotationDeg": [
+        0,
+        0,
+        180
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "left-wheel",
+      "basis": "hub flange seated at selected shaft tip; received-part fit unmeasured"
+    },
+    {
+      "id": "left-wheel",
+      "partId": "wheel",
+      "assetId": "wheel",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        0.0,
+        40.0,
+        -95.0
+      ],
+      "rotationDeg": [
+        0,
+        90,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "left-wheel",
+      "basis": "native vendor wheel geometry; catalogue width does not rescale CAD"
+    },
+    {
+      "id": "left-wheel-screw-1",
+      "partId": "wheel-screw",
+      "assetId": "wheel-screw",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        -0.899,
+        30.994,
+        -91.0
+      ],
+      "rotationDeg": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "left-wheel",
+      "basis": "nominal #4-40 screw in hub-pattern display; axial seating unverified"
+    },
+    {
+      "id": "left-wheel-screw-2",
+      "partId": "wheel-screw",
+      "assetId": "wheel-screw",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        -9.148,
+        35.756,
+        -91.0
+      ],
+      "rotationDeg": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "left-wheel",
+      "basis": "nominal #4-40 screw in hub-pattern display; axial seating unverified"
+    },
+    {
+      "id": "left-wheel-screw-3",
+      "partId": "wheel-screw",
+      "assetId": "wheel-screw",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        -9.148,
+        45.281,
+        -91.0
+      ],
+      "rotationDeg": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "left-wheel",
+      "basis": "nominal #4-40 screw in hub-pattern display; axial seating unverified"
+    },
+    {
+      "id": "left-wheel-screw-4",
+      "partId": "wheel-screw",
+      "assetId": "wheel-screw",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        -0.899,
+        50.044,
+        -91.0
+      ],
+      "rotationDeg": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "left-wheel",
+      "basis": "nominal #4-40 screw in hub-pattern display; axial seating unverified"
+    },
+    {
+      "id": "left-wheel-screw-5",
+      "partId": "wheel-screw",
+      "assetId": "wheel-screw",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        7.35,
+        45.281,
+        -91.0
+      ],
+      "rotationDeg": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "left-wheel",
+      "basis": "nominal #4-40 screw in hub-pattern display; axial seating unverified"
+    },
+    {
+      "id": "left-wheel-screw-6",
+      "partId": "wheel-screw",
+      "assetId": "wheel-screw",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        7.35,
+        35.756,
+        -91.0
+      ],
+      "rotationDeg": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "left-wheel",
+      "basis": "nominal #4-40 screw in hub-pattern display; axial seating unverified"
+    },
+    {
+      "id": "caster--75",
+      "partId": "caster",
+      "assetId": "caster",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        -75.0,
+        2.1,
+        0.0
+      ],
+      "rotationDeg": [
+        -90,
+        0,
+        -90
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "fixed",
+      "basis": "vendor caster; ball bottom at floor datum"
+    },
+    {
+      "id": "caster-spacer--75",
+      "partId": "caster-spacer",
+      "assetId": "caster-spacer",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        -75.0,
+        15.1075,
+        0.0
+      ],
+      "rotationDeg": [
+        -90,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "fixed",
+      "basis": "selected 1/8 inch spacer envelope"
+    },
+    {
+      "id": "riser--75",
+      "partId": "riser",
+      "assetId": "riser",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        -75.0,
+        16.695,
+        0.0
+      ],
+      "rotationDeg": [
+        -90,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "fixed",
+      "basis": "project-custom riser"
+    },
+    {
+      "id": "caster-75",
+      "partId": "caster",
+      "assetId": "caster",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        75.0,
+        2.1,
+        0.0
+      ],
+      "rotationDeg": [
+        -90,
+        0,
+        -90
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "fixed",
+      "basis": "vendor caster; ball bottom at floor datum"
+    },
+    {
+      "id": "caster-spacer-75",
+      "partId": "caster-spacer",
+      "assetId": "caster-spacer",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        75.0,
+        15.1075,
+        0.0
+      ],
+      "rotationDeg": [
+        -90,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "fixed",
+      "basis": "selected 1/8 inch spacer envelope"
+    },
+    {
+      "id": "riser-75",
+      "partId": "riser",
+      "assetId": "riser",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        75.0,
+        16.695,
+        0.0
+      ],
+      "rotationDeg": [
+        -90,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "fixed",
+      "basis": "project-custom riser"
+    },
+    {
+      "id": "fork-right",
+      "partId": "lift",
+      "assetId": "fork-right",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        164.0,
+        5.0,
+        -19.0
+      ],
+      "rotationDeg": [
+        -90,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "lift",
+      "basis": "proposed custom mechanism; assumed dimensions"
+    },
+    {
+      "id": "fork-left",
+      "partId": "lift",
+      "assetId": "fork-left",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        164.0,
+        5.0,
+        19.0
+      ],
+      "rotationDeg": [
+        -90,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "lift",
+      "basis": "proposed custom mechanism; assumed dimensions"
+    },
+    {
+      "id": "tray-back",
+      "partId": "lift",
+      "assetId": "tray-back",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        105.0,
+        47.0,
+        0.0
+      ],
+      "rotationDeg": [
+        -90,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "lift",
+      "basis": "proposed custom mechanism; assumed dimensions"
+    },
+    {
+      "id": "tray-side-right",
+      "partId": "lift",
+      "assetId": "tray-side-right",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        165.0,
+        37.0,
+        -62.0
+      ],
+      "rotationDeg": [
+        -90,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "lift",
+      "basis": "proposed custom mechanism; assumed dimensions"
+    },
+    {
+      "id": "tray-side-left",
+      "partId": "lift",
+      "assetId": "tray-side-left",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        165.0,
+        37.0,
+        62.0
+      ],
+      "rotationDeg": [
+        -90,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "lift",
+      "basis": "proposed custom mechanism; assumed dimensions"
+    },
+    {
+      "id": "gate",
+      "partId": "gate",
+      "assetId": "gate",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        233.0,
+        32.0,
+        0.0
+      ],
+      "rotationDeg": [
+        -90,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "gate",
+      "basis": "proposed custom mechanism; assumed dimensions"
+    },
+    {
+      "id": "mast",
+      "partId": "lift",
+      "assetId": "mast",
+      "componentIds": [
+        "geometry"
+      ],
+      "parentId": null,
+      "positionMm": [
+        75.0,
+        105.0,
+        0.0
+      ],
+      "rotationDeg": [
+        -90,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motionGroup": "fixed",
+      "basis": "proposed custom mechanism; assumed dimensions"
+    }
+  ],
+  "joints": [
+    {
+      "id": "lift-carriage",
+      "parentInstanceId": "deck",
+      "childInstanceId": "tray-back",
+      "kind": "prismatic",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "home": 150,
+      "limits": [
+        0,
+        150
+      ],
+      "units": "mm",
+      "collisionPolicy": "ideal position actuation"
+    },
+    {
+      "id": "gate-slide",
+      "parentInstanceId": "tray-back",
+      "childInstanceId": "gate",
+      "kind": "prismatic",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "home": 0,
+      "limits": [
+        0,
+        1
+      ],
+      "travelMm": 54,
+      "speedMmPerS": 90,
+      "collisionPolicy": "continuous collidable travel"
+    }
+  ],
+  "interfaces": [
+    {
+      "id": "shaft-bore",
+      "kind": "shaft-bore",
+      "variant": "bom-nominal-16mm",
+      "measuredValueMm": 6,
+      "requiredValueMm": 6,
+      "evidenceIds": [
+        "motor-page",
+        "hub-step"
+      ]
+    },
+    {
+      "id": "hub-span",
+      "kind": "engagement",
+      "variant": "bom-nominal-16mm",
+      "measuredValueMm": 9.2,
+      "requiredValueMm": 9.2,
+      "evidenceIds": [
+        "hub-step"
+      ]
+    },
+    {
+      "id": "motor-body-gap",
+      "kind": "clearance",
+      "variant": "bom-nominal-16mm",
+      "measuredValueMm": 7.8,
+      "requiredValueMm": 8,
+      "evidenceIds": [
+        "mule-geometry"
+      ]
+    },
+    {
+      "id": "wheel-diameter",
+      "kind": "clearance",
+      "variant": "bom-nominal-16mm",
+      "measuredValueMm": 80,
+      "requiredValueMm": 80,
+      "evidenceIds": [
+        "wheel-page",
+        "wheel-step"
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "instanceA": "fork-right",
+      "instanceB": "tray-back",
+      "reason": "joined custom tray"
+    },
+    {
+      "instanceA": "fork-left",
+      "instanceB": "tray-back",
+      "reason": "joined custom tray"
+    },
+    {
+      "instanceA": "tray-side-right",
+      "instanceB": "tray-back",
+      "reason": "joined custom tray"
+    },
+    {
+      "instanceA": "tray-side-left",
+      "instanceB": "tray-back",
+      "reason": "joined custom tray"
+    }
+  ],
+  "colliders": [
+    {
+      "id": "fork-right",
+      "shape": "cuboid",
+      "halfExtentsMm": [
+        67.0,
+        3.0,
+        8.0
+      ],
+      "positionMm": [
+        164,
+        5,
+        -19
+      ],
+      "motionGroup": "lift"
+    },
+    {
+      "id": "fork-left",
+      "shape": "cuboid",
+      "halfExtentsMm": [
+        67.0,
+        3.0,
+        8.0
+      ],
+      "positionMm": [
+        164,
+        5,
+        19
+      ],
+      "motionGroup": "lift"
+    },
+    {
+      "id": "tray-back",
+      "shape": "cuboid",
+      "halfExtentsMm": [
+        4.0,
+        38.0,
+        63.0
+      ],
+      "positionMm": [
+        105,
+        47,
+        0
+      ],
+      "motionGroup": "lift"
+    },
+    {
+      "id": "tray-side-right",
+      "shape": "cuboid",
+      "halfExtentsMm": [
+        64.0,
+        28.0,
+        4.0
+      ],
+      "positionMm": [
+        165,
+        37,
+        -62
+      ],
+      "motionGroup": "lift"
+    },
+    {
+      "id": "tray-side-left",
+      "shape": "cuboid",
+      "halfExtentsMm": [
+        64.0,
+        28.0,
+        4.0
+      ],
+      "positionMm": [
+        165,
+        37,
+        62
+      ],
+      "motionGroup": "lift"
+    },
+    {
+      "id": "gate",
+      "shape": "cuboid",
+      "halfExtentsMm": [
+        4.0,
+        23.0,
+        63.0
+      ],
+      "positionMm": [
+        233,
+        32,
+        0
+      ],
+      "motionGroup": "gate"
+    }
+  ],
+  "physics": {
+    "trackMm": 190,
+    "overallWidthMm": 203.5,
+    "chassisHalfExtentsMm": [
+      95,
+      25,
+      101.75
+    ],
+    "chassisPositionMm": [
+      0,
+      40,
+      0
+    ],
+    "gateTravelMm": 54,
+    "gateSpeedMmPerS": 90
+  },
+  "sourceIds": [
+    "motor-page",
+    "motor-step",
+    "bracket-page",
+    "bracket-step",
+    "hub-page",
+    "hub-step",
+    "wheel-page",
+    "wheel-step",
+    "caster-page",
+    "caster-step",
+    "wheel-screw-page",
+    "mule-geometry"
+  ],
+  "qualification": [
+    "Deck, riser, tray and gate are proposed custom geometry, not purchased parts.",
+    "The 16 mm BOM-nominal shaft moves the hub/wheel stack inward by 6 mm per side relative to the 22 mm vendor-CAD study.",
+    "The 7.8 mm motor-body gap remains below the project's 8 mm gate.",
+    "Fastener axial seating is visual-only unless separately checked; no fabrication release is implied."
+  ],
+  "assemblyHash": "3f5c812c45ad532ca2718b49b507546608001f8814a61e6b3fa7210d5e037cbd"
+}

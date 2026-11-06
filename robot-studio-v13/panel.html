@@ -1,0 +1,36 @@
+<section id="studio-v13"><div class="wrap">
+<p class="eyebrow">V13 · source-evidenced parts + continuous-joint contact simulation</p>
+<h2>Actual selected parts. <em>Visible evidence.</em></h2>
+<p>Detailed manufacturer STEP geometry is converted with open-source tools at native scale. The default follows the published 16 mm motor shaft; the original 22 mm CAD remains a separate comparison. Custom structure and the amber proposed mechanism are not purchased components. All work is agent-run; no received-part measurement or hardware qualification is claimed.</p>
+<div id="v13-workspace">
+<div class="v13-command"><div><p class="v13-kicker">03 / Digital twin workbench</p><h3>Source to simulation</h3></div><span class="v13-study-badge">Unqualified hardware</span></div>
+<div class="v13-metrics" aria-label="Workbench summary">
+<div class="v13-metric"><span>Native-scale assets</span><strong>17 <small>GLB</small></strong></div>
+<div class="v13-metric"><span>Placed instances</span><strong>34</strong></div>
+<div class="v13-metric"><span>Continuous gate</span><strong>54 <small>mm</small></strong></div>
+<div class="v13-metric v13-alert"><span>Motor-body gap</span><strong>7.8 <small>mm / fail</small></strong></div>
+</div>
+<div class="v13-toolbar">
+<label>Workspace <select id="v13-mode"><option value="sequence">Assemble → live mission</option><option value="live">Live physics arena</option><option value="assembly">Assembly inspection</option><option value="replay">Historical simulated mission</option></select></label>
+<label>Shaft study <select id="v13-shaft-variant"><option value="16">Published 16 mm — default</option><option value="22">Vendor CAD 22 mm — comparison</option></select></label>
+<div class="v13-camera-actions" role="group" aria-label="Camera views"><button id="v13-close">Robot close-up</button><button id="v13-field">Whole field</button></div>
+</div>
+<div class="v13-toolbar v13-toolbar-secondary"><button id="v13-fullscreen">Full screen</button>
+<label class="v13-check"><input type="checkbox" id="v13-zoom"> Wheel zoom</label><label class="v13-check"><input type="checkbox" id="v13-mechanism" checked> Proposed mechanism</label>
+</div>
+<div class="v13-stage"><canvas id="v13-canvas" aria-label="Detailed source-evidenced CAD assembly and contact simulation"></canvas><div class="v13-stage-meta" aria-hidden="true"><span id="v13-stage-label">Assembly / native scale</span><span>Drag to orbit · wheel zoom is opt-in</span></div></div>
+<noscript><p class="v13-warning">Interactive 3D is unavailable because JavaScript is not running. iOS Files, Mail and Messages previews can render this page but do not execute its scripts. Open the hosted link in Safari; see `share/HOST-V13.txt`.</p></noscript>
+<div class="v13-readout"><p id="v13-clock" role="status"></p><p id="v13-assembly-status" role="status"></p></div>
+<details class="v13-identity"><summary>Assembly identity &amp; source notes</summary><p id="v13-variant"></p><p id="v13-stack"></p></details>
+<div id="v13-live-controls" hidden><div id="v13-live-playback"><button class="v13-primary" id="v13-live-play">Run mission</button><button id="v13-live-reset">Reset physical world</button><span class="v13-fixed-step">Fixed step · 1/120 s</span></div><div class="v13-toolbar">
+<label>Arena <select id="v13-arena"><option value="demo">Enlarged demo — nominal regression</option><option value="organizer">Organizer CAD — live attempt, may fail</option></select></label>
+<label>Scenario <select id="v13-live-scenario"><option value="nominal">Nominal assumed properties</option><option value="missing">Missing tire</option><option value="weak">Underpowered lift</option><option value="misaligned">Misaligned source tire</option><option value="slippery">Low friction</option><option value="blocked">Blocked route</option></select></label>
+<label>Simulation speed <select id="v13-live-rate"><option value="1">1×</option><option value="4" selected>4×</option><option value="12">12×</option></select></label>
+<label class="v13-check"><input id="v13-follow" type="checkbox"> Follow robot</label><label class="v13-check"><input id="v13-colliders" type="checkbox"> Collision geometry</label><button id="v13-export-run">Download run JSON</button></div>
+<p class="v13-warning">Live physics uses a level-plane chassis, force-based traction and ideal position-actuated lift/gate. The horizontal gate stays collidable through its 54 mm stroke. Source/destination rails are proposed fixtures, not official tire hardware. Digital outcomes are not hardware or scoring qualification.</p>
+<p class="v13-panel-label">Live contact telemetry</p><pre id="v13-live-telemetry"></pre><details><summary>Editable physical assumptions — changes reset the live world</summary><div id="v13-parameters"></div><p id="v13-live-model"></p></details>
+</div>
+<div id="v13-transport" hidden><button class="v13-primary" id="v13-play">Play</button><button id="v13-reset">Reset</button><label>Run <select id="v13-scenario"><option value="0">Original simulated mission</option><option value="1">Exchange bail-out</option></select></label><label>Speed <select id="v13-rate"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select></label><input id="v13-seek" type="range" min="0" value="0" aria-label="Recorded mission position"></div>
+<div class="v13-columns"><div class="v13-panel"><div class="v13-panel-heading"><h3>Selected parts &amp; provenance</h3><span class="v13-count">11 part types</span></div><div id="v13-parts"></div><h3>Part evidence</h3><pre id="v13-detail"></pre></div><div class="v13-panel"><div class="v13-panel-heading"><h3>Fit results</h3><span class="v13-count">1 fail · 1 conflict</span></div><div id="v13-fit-summary" class="v13-fit-list"></div><h3>Mission events</h3><pre id="v13-events">Select historical simulated mission to inspect the event sequence.</pre></div></div>
+<p class="v13-warning">Evidence boundary: nominal CAD is not measured received hardware. Fastener head/thread simplifications and unselected mechanism/electronics remain disclosed. The 7.8 mm motor-body gap still fails the project's 8 mm rule. Historical replay remains separate from the v13 live assembly.</p>
+</div></div></section>

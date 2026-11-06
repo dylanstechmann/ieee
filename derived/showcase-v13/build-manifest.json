@@ -1,0 +1,60 @@
+{
+  "schema": "showcase-v13-build/1",
+  "dependencies": {
+    "versions": {
+      "three": "0.170.0",
+      "esbuild": "0.24.0",
+      "rapier": "0.12.0"
+    },
+    "sha256": {
+      "three": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb",
+      "esbuild": "2f43ded7ed5e0e1985cbed5297833e895000f9161812ca7cc29bdf549bfc6c9e",
+      "rapier": "bf2235a36bab9f3098f67c053f17ec6a4772b4dc912bfd4e8fb7a29f8babeacf"
+    }
+  },
+  "status": "source-evidenced assembly and reduced-order continuous-joint contact mission; not competition or physical qualification",
+  "inputs": {
+    "share/Showcase-v10.html": "36246781787e1f41e1f27b67ae2b35dcee521fbef5491af33dff1bce6d6f9048",
+    "share/Mission-Replay-v10.html": "b1a68581e3a9f2e8eab1a1b050495a8dcdbf31f676437b6c9100538d67880128",
+    "share/Mission-Replay-v10-bail-out.html": "4a76014f2d84e55c9ff7f104be40565b09fa01301268be4bd9771c420109a5ca",
+    "robot-studio-v13/app.js": "98738ad148015bf24d8f0659616c8f48849a9a3f82d799100041dfb7fb08019b",
+    "robot-studio-v13/live-view.js": "108368173991b8c38c8c66fdd7137bd514d16cea12da15fc6528ff0e36b7701c",
+    "robot-studio-v13/physics.js": "fb9d916d98c656e1acde49be0d96de2f78f8ab8e5ad505a6b6002ddf4ff59f48",
+    "robot-studio-v13/assembly-spec.js": "a75a229711b4e8002fe07f6b7c0cfd2f2945a4a4d27dc7d5f2c45f82e01aa9ba",
+    "robot-studio-v11/arenas.js": "a0e40b637e6dbb13922aeafb9d1e31610b6194f2196f589dd7b24eaa728d2668",
+    "robot-studio-v13/physical-evidence.json": "e226e3a23e637e07287c7c2e23aaad9348fffef13e73e4593bd86c51c17d3588",
+    "robot-studio-v13/panel.html": "58534375a1c5ea217c05337bad98af8c2e568046964f771bdb07bd0f454a60be",
+    "robot-studio-v13/panel.css": "1d8c0147e40342b98955f4704260993c3717a59743a205824837c47b98b6e6ed",
+    "cad-v13/bom-evidence.json": "17504a2a2d8ae8760e46bd904fc85d0b0b7ae02e9acbdc947f86f2f9ad74a7c1",
+    "cad-v13/assembly-layout.json": "585790d55e33c685f314746393536210c55ae9fc60802d8c58ff308f32391f92",
+    "derived/cad-v13/manifest.json": "8a3b9257066934c6df7c79655308c464be2a05237ac20a3779a81d576ebd807d",
+    "derived/cad-v13/assembly-spec.json": "cdfa7853852aa177df2f32213a4451a895cadb3d29af88c960eda44b7f3a06a0",
+    "derived/cad-v13/assembly-vendor-22mm.json": "fa7f6383d281260c801e1bb3b3427177d6d6c96908958c9ff570f42d864af394",
+    "derived/cad-v13/fit-results.json": "fc0940f2db2a9d2d23360fee62c96f8a7e9a8d05e35a76d6229a91b2482670b1",
+    "derived/organizer-cad-v10/field-v10.json": "d3d7de9e9f7d257d6f4f095cb06836a6bb484861aeffca45cb96990dba4afdca",
+    "tools/build-showcase-v13.js": "7d29e5c4b331b5d9400c2131f2ff6ff1d568ee0007cc9b4912f835a6f791e004",
+    "order-a-procurement-v4.json": "12fa6454864d0d21bc27464b5ab9072d90ffc18e0fe218134de871719353f2da",
+    "derived/cad-v13/parts/motor.glb": "60ea63613a1e06f17a9055146b63d8bedd709676b431ad77e945b8ee247f99df",
+    "derived/cad-v13/parts/bracket.glb": "7e1e5412203be7cd462ea25e9e66c1ddfb575f7717f8b3579ed696f485442676",
+    "derived/cad-v13/parts/hub.glb": "13a3dfe016fef8dc8a87486e1f206e65fa75c1a4e746b3a501bf0cdf0309d8b3",
+    "derived/cad-v13/parts/wheel.glb": "5f08fbad87ba3634429a7be031eb4ef6456435c7ef0efd080ea3c962829b103b",
+    "derived/cad-v13/parts/caster.glb": "202b92c369dfd3f4a5962ae7de7e129248202404610a4157398bf25a67ef6fd9",
+    "derived/cad-v13/parts/motor-16mm.glb": "390b9eda5ec9ed47ebada424c3db7cfb05b39d69b23d074d6cf57c01a08f5102",
+    "derived/cad-v13/parts/deck.glb": "bb597cb9049269d53a1194c497080526afa04b080b896a21ef8cf83f2fb10635",
+    "derived/cad-v13/parts/riser.glb": "1f87c7d0054d9d978ce4a00dff83fb60693e923df930c9691555b876a1289d41",
+    "derived/cad-v13/parts/caster-spacer.glb": "abcb4d20ca69b0c145d6468127b905afc54364f803c9dd8d2c15c3ce9e357a97",
+    "derived/cad-v13/parts/fork-right.glb": "96a63a1e810ddaab85aa64a8656ec336d783039d58c2130f50e261849cba5ff7",
+    "derived/cad-v13/parts/fork-left.glb": "b86969866a9e800f5e866c8f4238521ef476bd46e4f2b8b4413ac4de10659184",
+    "derived/cad-v13/parts/tray-back.glb": "9840ee4a4aa67f2cb507c732cc63c5362996d4fc2ccca6355268c222cd7454d5",
+    "derived/cad-v13/parts/tray-side-right.glb": "b11e12600fcd9e4c9af3b62aca89f5a1032ab9d59bf68061453780da2a3bf7dd",
+    "derived/cad-v13/parts/tray-side-left.glb": "bdd2f59945ea66c7eec99f8c352662db8a71c909ead44e4fd5696e3673e97e09",
+    "derived/cad-v13/parts/gate.glb": "ba8c0ae7255bb81dc41c2d2b6d71cfca0ae0c7887ec57fe72a13dd5f22fd6ecf",
+    "derived/cad-v13/parts/mast.glb": "371aaa95e6f8090f882dfbf724cebced6253e713cd9e0022bff8e16b2a532ba5",
+    "derived/cad-v13/parts/wheel-screw.glb": "71b67629f8de52d2b361f591eaa65ab84e509b9200be2897ec6229f87657064d"
+  },
+  "output": {
+    "file": "share/Showcase-v13.html",
+    "sha256": "d353cda188c07b7439bcf4ab526fb3ff00e954186b0298b87574525a0c8d12a1",
+    "bytes": 9152169
+  }
+}

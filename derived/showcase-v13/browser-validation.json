@@ -1,0 +1,1897 @@
+{
+  "schema": "showcase-v13-browser/1",
+  "htmlSha256": "d353cda188c07b7439bcf4ab526fb3ff00e954186b0298b87574525a0c8d12a1",
+  "browser": "155.0.8059.12",
+  "offline": true,
+  "protocol": "file:",
+  "errors": [],
+  "externalRequests": [],
+  "initial": {
+    "ready": true,
+    "mode": "sequence",
+    "playing": true,
+    "cursor": 0,
+    "selected": "motor",
+    "assemblyId": "order-a-bom-nominal-16mm-v13",
+    "assemblyHash": "3f5c812c45ad532ca2718b49b507546608001f8814a61e6b3fa7210d5e037cbd",
+    "assets": 17,
+    "instanceCount": 34,
+    "framing": null,
+    "livePhysics": true,
+    "live": {
+      "time": 0,
+      "phase": "lap",
+      "result": "running",
+      "laps": 0,
+      "assemblyId": "order-a-bom-nominal-16mm-v13",
+      "assemblyHash": "3f5c812c45ad532ca2718b49b507546608001f8814a61e6b3fa7210d5e037cbd",
+      "profileId": "v13-jointed-gate",
+      "robot": {
+        "x": -0.5,
+        "y": 0,
+        "z": -0.7799999713897705,
+        "yaw": 0
+      },
+      "tire": {
+        "x": -1.600000023841858,
+        "y": 0.03700000047683716,
+        "z": -0.699999988079071,
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        }
+      },
+      "lift": 0.15,
+      "gateOpen": 0,
+      "gateTarget": 0,
+      "jointPositions": {
+        "liftMm": 150,
+        "gateOpen": 0
+      },
+      "contactCounters": {},
+      "contactSamples": [],
+      "contactSampleOverflow": 0,
+      "wheelAngles": [
+        0,
+        0
+      ],
+      "command": {
+        "left": 0,
+        "right": 0
+      },
+      "contacts": 0,
+      "collisionSteps": 0,
+      "carriedSeconds": 0,
+      "peakTireHeight": 0,
+      "goal": {
+        "x": -0.3,
+        "z": -0.78
+      },
+      "path": [
+        {
+          "x": -0.4700000000000002,
+          "z": -0.7799999999999999
+        },
+        {
+          "x": -0.43000000000000016,
+          "z": -0.7799999999999999
+        },
+        {
+          "x": -0.3900000000000001,
+          "z": -0.7799999999999999
+        },
+        {
+          "x": -0.3500000000000001,
+          "z": -0.7799999999999999
+        },
+        {
+          "x": -0.3,
+          "z": -0.78
+        }
+      ],
+      "events": [
+        {
+          "time": 0,
+          "message": "Live mission started; level-plane differential-drive model"
+        }
+      ],
+      "parameters": {
+        "chassisMass": 1.35,
+        "tireMass": 0.08,
+        "traction": 0.65,
+        "tireFriction": 0.8,
+        "motorTorque": 0.12,
+        "maxSpeed": 0.24,
+        "wheelRadius": 0.04,
+        "track": 0.19,
+        "liftForce": 8,
+        "liftSpeed": 0.035,
+        "liftHeight": 0.15,
+        "tireOffset": 0,
+        "obstacles": true,
+        "tirePresent": true,
+        "blocked": false
+      },
+      "arenaId": "demo",
+      "arenaQualification": "not competition geometry",
+      "evidence": {
+        "supportDuration": 0,
+        "releaseDuration": 0,
+        "sourceSupport": false,
+        "destinationSupport": false,
+        "loadBearingSupport": false,
+        "gateContact": false,
+        "finite": true
+      },
+      "terminalReason": null,
+      "model": "Rapier 0.12.0; v13 datum registry; level-plane chassis; force-limited differential traction; ideal position lift; continuous collidable gate; dynamic compound tire",
+      "identity": {
+        "assemblyId": "order-a-bom-nominal-16mm-v13",
+        "assemblyHash": "3f5c812c45ad532ca2718b49b507546608001f8814a61e6b3fa7210d5e037cbd",
+        "assemblyRevision": "v13.0",
+        "arenaId": "demo",
+        "physicalModelRevision": "v13-jointed-gate",
+        "parameterProfileId": "editable-assumptions-v13/1"
+      }
+    },
+    "assembly": {
+      "time": 0,
+      "remaining": 34,
+      "duration": 17.82
+    }
+  },
+  "vendor": {
+    "ready": true,
+    "mode": "assembly",
+    "playing": false,
+    "cursor": 0,
+    "selected": "gate",
+    "assemblyId": "order-a-vendor-cad-22mm-v13",
+    "assemblyHash": "c29531212fd9daebcbdc33c3f30d7138581f9c852a004d5506e57547869c5bdc",
+    "assets": 17,
+    "instanceCount": 34,
+    "framing": {
+      "center": [
+        0.37579999999999997,
+        0.10250224999999992,
+        0.15239999999999995
+      ],
+      "sizeMm": 444.0621071654843,
+      "ndcBounds": [
+        -0.4072558407144808,
+        -0.8364943364683133,
+        0.4468639346421765,
+        0.5713859056613244
+      ]
+    },
+    "livePhysics": true,
+    "live": {
+      "time": 0.39166666666666705,
+      "phase": "lap",
+      "result": "running",
+      "laps": 0,
+      "assemblyId": "order-a-bom-nominal-16mm-v13",
+      "assemblyHash": "3f5c812c45ad532ca2718b49b507546608001f8814a61e6b3fa7210d5e037cbd",
+      "profileId": "v13-jointed-gate",
+      "robot": {
+        "x": -0.4444258213043213,
+        "y": 0,
+        "z": -0.7799999713897705,
+        "yaw": 0
+      },
+      "tire": {
+        "x": -1.599988341331482,
+        "y": 0.03270179405808449,
+        "z": -0.7000240683555603,
+        "rotation": {
+          "x": -0.0007739240536466241,
+          "y": -0.0000015722982880106429,
+          "z": -0.000493127794470638,
+          "w": 0.9999995827674866
+        }
+      },
+      "lift": 0.15,
+      "gateOpen": 0,
+      "gateTarget": 0,
+      "jointPositions": {
+        "liftMm": 150,
+        "gateOpen": 0
+      },
+      "contactCounters": {
+        "tire-segment-3|source-rail-1": 45,
+        "tire-segment-4|source-rail-1": 45,
+        "tire-segment-5|source-rail-1": 45,
+        "tire-segment-6|source-rail-1": 45,
+        "tire-segment-7|source-rail-1": 45,
+        "tire-segment-13|source-rail--1": 45,
+        "tire-segment-14|source-rail--1": 45,
+        "tire-segment-15|source-rail--1": 45,
+        "tire-segment-16|source-rail--1": 45,
+        "tire-segment-17|source-rail--1": 45
+      },
+      "contactSamples": [
+        {
+          "timeS": 0.025,
+          "phase": "lap",
+          "colliderA": "tire-segment-3",
+          "colliderB": "source-rail-1",
+          "category": "support",
+          "impulseNs": null
+        },
+        {
+          "timeS": 0.025,
+          "phase": "lap",
+          "colliderA": "tire-segment-4",
+          "colliderB": "source-rail-1",
+          "category": "support",
+          "impulseNs": null
+        },
+        {
+          "timeS": 0.025,
+          "phase": "lap",
+          "colliderA": "tire-segment-5",
+          "colliderB": "source-rail-1",
+          "category": "support",
+          "impulseNs": null
+        },
+        {
+          "timeS": 0.025,
+          "phase": "lap",
+          "colliderA": "tire-segment-6",
+          "colliderB": "source-rail-1",
+          "category": "support",
+          "impulseNs": null
+        },
+        {
+          "timeS": 0.025,
+          "phase": "lap",
+          "colliderA": "tire-segment-7",
+          "colliderB": "source-rail-1",
+          "category": "support",
+          "impulseNs": null
+        },
+        {
+          "timeS": 0.025,
+          "phase": "lap",
+          "colliderA": "tire-segment-13",
+          "colliderB": "source-rail--1",
+          "category": "support",
+          "impulseNs": null
+        },
+        {
+          "timeS": 0.025,
+          "phase": "lap",
+          "colliderA": "tire-segment-14",
+          "colliderB": "source-rail--1",
+          "category": "support",
+          "impulseNs": null
+        },
+        {
+          "timeS": 0.025,
+          "phase": "lap",
+          "colliderA": "tire-segment-15",
+          "colliderB": "source-rail--1",
+          "category": "support",
+          "impulseNs": null
+        },
+        {
+          "timeS": 0.025,
+          "phase": "lap",
+          "colliderA": "tire-segment-16",
+          "colliderB": "source-rail--1",
+          "category": "support",
+          "impulseNs": null
+        },
+        {
+          "timeS": 0.025,
+          "phase": "lap",
+          "colliderA": "tire-segment-17",
+          "colliderB": "source-rail--1",
+          "category": "support",
+          "impulseNs": null
+        }
+      ],
+      "contactSampleOverflow": 0,
+      "wheelAngles": [
+        1.3682448966465766,
+        1.3682410841149715
+      ],
+      "command": {
+        "left": 0.18000014590087113,
+        "right": 0.17999985409908167
+      },
+      "contacts": 0,
+      "collisionSteps": 0,
+      "carriedSeconds": 0,
+      "peakTireHeight": 0.03663107007741928,
+      "goal": {
+        "x": -0.3,
+        "z": -0.78
+      },
+      "path": [
+        {
+          "x": -0.3900000000000001,
+          "z": -0.7799999999999999
+        },
+        {
+          "x": -0.3500000000000001,
+          "z": -0.7799999999999999
+        },
+        {
+          "x": -0.3,
+          "z": -0.78
+        }
+      ],
+      "events": [
+        {
+          "time": 0,
+          "message": "Live mission started; level-plane differential-drive model"
+        }
+      ],
+      "parameters": {
+        "chassisMass": 1.35,
+        "tireMass": 0.08,
+        "traction": 0.65,
+        "tireFriction": 0.8,
+        "motorTorque": 0.12,
+        "maxSpeed": 0.24,
+        "wheelRadius": 0.04,
+        "track": 0.19,
+        "liftForce": 8,
+        "liftSpeed": 0.035,
+        "liftHeight": 0.15,
+        "tireOffset": 0,
+        "obstacles": true,
+        "tirePresent": true,
+        "blocked": false
+      },
+      "arenaId": "demo",
+      "arenaQualification": "not competition geometry",
+      "evidence": {
+        "supportDuration": 0,
+        "releaseDuration": 0,
+        "sourceSupport": true,
+        "destinationSupport": false,
+        "loadBearingSupport": false,
+        "gateContact": false,
+        "finite": true
+      },
+      "terminalReason": null,
+      "model": "Rapier 0.12.0; v13 datum registry; level-plane chassis; force-limited differential traction; ideal position lift; continuous collidable gate; dynamic compound tire",
+      "identity": {
+        "assemblyId": "order-a-bom-nominal-16mm-v13",
+        "assemblyHash": "3f5c812c45ad532ca2718b49b507546608001f8814a61e6b3fa7210d5e037cbd",
+        "assemblyRevision": "v13.0",
+        "arenaId": "demo",
+        "physicalModelRevision": "v13-jointed-gate",
+        "parameterProfileId": "editable-assumptions-v13/1"
+      }
+    },
+    "assembly": {
+      "time": 17.89979999999997,
+      "remaining": 0,
+      "duration": 17.82
+    }
+  },
+  "assemblyFraming": {
+    "center": [
+      0.37579999999999997,
+      0.09888653733089517,
+      0.15239999999999998
+    ],
+    "sizeMm": 441.8871664107366,
+    "ndcBounds": [
+      -0.39935672601671135,
+      -0.8392390936555993,
+      0.4442329061399131,
+      0.5821643595218251
+    ]
+  },
+  "narrowFraming": {
+    "center": [
+      0.37579999999999997,
+      0.10250224999999992,
+      0.15239999999999998
+    ],
+    "sizeMm": 438.4599810932009,
+    "ndcBounds": [
+      -0.40156856715209516,
+      -0.8340270836778955,
+      0.44697147553498967,
+      0.5740321281414871
+    ]
+  },
+  "legacyApiCompatibility": {
+    "assets": 17,
+    "instanceCount": 34
+  },
+  "webgl2Diagnostic": {
+    "error": "webgl2-unavailable",
+    "message": "Interactive 3D unavailable: this browser does not expose WebGL2, required by Three.js 0.170. Update iOS/Safari or open the served showcase in a modern browser."
+  },
+  "noscriptGuidance": true,
+  "editedRun": {
+    "assemblyId": "order-a-bom-nominal-16mm-v13",
+    "assemblyHash": "3f5c812c45ad532ca2718b49b507546608001f8814a61e6b3fa7210d5e037cbd",
+    "tireMass": 0.12
+  },
+  "exportedRunIdentity": {
+    "assemblyId": "order-a-bom-nominal-16mm-v13",
+    "assemblyHash": "3f5c812c45ad532ca2718b49b507546608001f8814a61e6b3fa7210d5e037cbd",
+    "tireMass": 0.12
+  },
+  "organizer": {
+    "time": 60.0416666666639,
+    "phase": "failed",
+    "result": "failed",
+    "laps": 1,
+    "assemblyId": "order-a-bom-nominal-16mm-v13",
+    "assemblyHash": "3f5c812c45ad532ca2718b49b507546608001f8814a61e6b3fa7210d5e037cbd",
+    "profileId": "v13-jointed-gate",
+    "robot": {
+      "x": -0.8733325600624084,
+      "y": 0,
+      "z": 0.3788062632083893,
+      "yaw": -3.141510891180371
+    },
+    "tire": {
+      "x": -1.1744948625564575,
+      "y": 0.0489870086312294,
+      "z": 0.3817599415779114,
+      "rotation": {
+        "x": 0.002519747242331505,
+        "y": -0.002740747993811965,
+        "z": -0.7071029543876648,
+        "w": 0.7071008086204529
+      }
+    },
+    "lift": 0.15,
+    "gateOpen": 0,
+    "gateTarget": 0,
+    "jointPositions": {
+      "liftMm": 150,
+      "gateOpen": 0
+    },
+    "contactCounters": {
+      "tire-segment-3|source-rail-1": 6039,
+      "tire-segment-4|source-rail-1": 5711,
+      "tire-segment-5|source-rail-1": 5655,
+      "tire-segment-6|source-rail-1": 5648,
+      "tire-segment-7|source-rail-1": 5643,
+      "tire-segment-13|source-rail--1": 5642,
+      "tire-segment-14|source-rail--1": 5646,
+      "tire-segment-15|source-rail--1": 5650,
+      "tire-segment-16|source-rail--1": 5711,
+      "tire-segment-17|source-rail--1": 6039,
+      "tire-segment-0|gate": 466,
+      "tire-segment-1|gate": 480,
+      "tire-segment-2|gate": 547,
+      "tire-segment-17|gate": 539,
+      "tire-segment-18|gate": 539,
+      "tire-segment-19|gate": 476,
+      "tire-segment-3|gate": 542,
+      "tire-segment-4|gate": 462,
+      "tire-segment-16|gate": 441,
+      "tire-segment-5|gate": 128,
+      "tire-segment-15|gate": 114,
+      "tire-segment-6|gate": 65,
+      "tire-segment-14|gate": 65
+    },
+    "contactSamples": [
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-3",
+        "colliderB": "source-rail-1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-4",
+        "colliderB": "source-rail-1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-5",
+        "colliderB": "source-rail-1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-6",
+        "colliderB": "source-rail-1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-7",
+        "colliderB": "source-rail-1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-13",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-14",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-15",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-16",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-17",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 46.799999999997986,
+        "phase": "source-align",
+        "colliderA": "tire-segment-0",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 46.799999999997986,
+        "phase": "source-align",
+        "colliderA": "tire-segment-1",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 46.799999999997986,
+        "phase": "source-align",
+        "colliderA": "tire-segment-2",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 46.799999999997986,
+        "phase": "source-align",
+        "colliderA": "tire-segment-17",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 46.799999999997986,
+        "phase": "source-align",
+        "colliderA": "tire-segment-18",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 46.799999999997986,
+        "phase": "source-align",
+        "colliderA": "tire-segment-19",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 46.858333333331316,
+        "phase": "source-align",
+        "colliderA": "tire-segment-3",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 47.51666666666461,
+        "phase": "source-align",
+        "colliderA": "tire-segment-4",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 47.59999999999794,
+        "phase": "acquire",
+        "colliderA": "tire-segment-16",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 49.08333333333119,
+        "phase": "acquire",
+        "colliderA": "tire-segment-3",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 49.08333333333119,
+        "phase": "acquire",
+        "colliderA": "tire-segment-4",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 49.08333333333119,
+        "phase": "acquire",
+        "colliderA": "tire-segment-5",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 49.09166666666452,
+        "phase": "acquire",
+        "colliderA": "tire-segment-2",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 49.10833333333119,
+        "phase": "acquire",
+        "colliderA": "tire-segment-1",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 49.124999999997854,
+        "phase": "acquire",
+        "colliderA": "tire-segment-0",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 49.14166666666452,
+        "phase": "acquire",
+        "colliderA": "tire-segment-19",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 49.158333333331186,
+        "phase": "acquire",
+        "colliderA": "tire-segment-18",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 49.16666666666452,
+        "phase": "acquire",
+        "colliderA": "tire-segment-17",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 49.17499999999785,
+        "phase": "acquire",
+        "colliderA": "tire-segment-15",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 49.17499999999785,
+        "phase": "acquire",
+        "colliderA": "tire-segment-16",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 52.041666666664355,
+        "phase": "lift",
+        "colliderA": "tire-segment-5",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 52.041666666664355,
+        "phase": "lift",
+        "colliderA": "tire-segment-15",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 52.22499999999768,
+        "phase": "lift",
+        "colliderA": "tire-segment-6",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 52.22499999999768,
+        "phase": "lift",
+        "colliderA": "tire-segment-14",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      }
+    ],
+    "contactSampleOverflow": 0,
+    "wheelAngles": [
+      116.30982272519664,
+      101.47948557447928
+    ],
+    "command": {
+      "left": 0,
+      "right": 0
+    },
+    "contacts": 0,
+    "collisionSteps": 0,
+    "carriedSeconds": 0,
+    "peakTireHeight": 0.06525447219610214,
+    "goal": {
+      "x": -0.8753999999999998,
+      "z": 0.381
+    },
+    "path": [
+      {
+        "x": -0.7288,
+        "z": 0.3758
+      },
+      {
+        "x": -0.7438,
+        "z": 0.3758
+      },
+      {
+        "x": -0.7587999999999999,
+        "z": 0.3758
+      },
+      {
+        "x": -0.7738,
+        "z": 0.3758
+      },
+      {
+        "x": -0.7888,
+        "z": 0.3758
+      },
+      {
+        "x": -0.8038,
+        "z": 0.3758
+      },
+      {
+        "x": -0.8188,
+        "z": 0.3758
+      },
+      {
+        "x": -0.8338,
+        "z": 0.3758
+      },
+      {
+        "x": -0.8488,
+        "z": 0.3758
+      },
+      {
+        "x": -0.8638,
+        "z": 0.3758
+      },
+      {
+        "x": -0.8753999999999998,
+        "z": 0.381
+      }
+    ],
+    "events": [
+      {
+        "time": 0,
+        "message": "Live mission started; level-plane differential-drive model"
+      },
+      {
+        "time": 33.099999999998765,
+        "message": "Lap 1: all ordered physical position gates crossed"
+      },
+      {
+        "time": 33.099999999998765,
+        "message": "to source"
+      },
+      {
+        "time": 42.75833333333155,
+        "message": "source align"
+      },
+      {
+        "time": 47.583333333331275,
+        "message": "acquire"
+      },
+      {
+        "time": 52.02499999999769,
+        "message": "lift"
+      },
+      {
+        "time": 60.03333333333057,
+        "message": "Acquisition failed: no elevated tire supported by fork contacts"
+      }
+    ],
+    "parameters": {
+      "chassisMass": 1.35,
+      "tireMass": 0.08,
+      "traction": 0.65,
+      "tireFriction": 0.8,
+      "motorTorque": 0.12,
+      "maxSpeed": 0.24,
+      "wheelRadius": 0.04,
+      "track": 0.19,
+      "liftForce": 8,
+      "liftSpeed": 0.035,
+      "liftHeight": 0.15,
+      "tireOffset": 0,
+      "obstacles": true,
+      "tirePresent": true,
+      "blocked": false
+    },
+    "arenaId": "organizer",
+    "arenaQualification": "live geometry attempt; not scoring qualification; tire rails proposed within pit boxes, not organizer mechanism; no couch props",
+    "evidence": {
+      "supportDuration": 0,
+      "releaseDuration": 0,
+      "sourceSupport": false,
+      "destinationSupport": false,
+      "loadBearingSupport": false,
+      "gateContact": false,
+      "finite": true
+    },
+    "terminalReason": "Acquisition failed: no elevated tire supported by fork contacts",
+    "model": "Rapier 0.12.0; v13 datum registry; level-plane chassis; force-limited differential traction; ideal position lift; continuous collidable gate; dynamic compound tire"
+  },
+  "live": {
+    "time": 352.89166666651005,
+    "phase": "complete",
+    "result": "passed",
+    "laps": 3,
+    "assemblyId": "order-a-bom-nominal-16mm-v13",
+    "assemblyHash": "3f5c812c45ad532ca2718b49b507546608001f8814a61e6b3fa7210d5e037cbd",
+    "profileId": "v13-jointed-gate",
+    "robot": {
+      "x": -1.9045716524124146,
+      "y": 0,
+      "z": 0.3212554156780243,
+      "yaw": 1.364645265998663
+    },
+    "tire": {
+      "x": -1.582081913948059,
+      "y": 0.05227626487612724,
+      "z": 0.6565564274787903,
+      "rotation": {
+        "x": -0.03841821849346161,
+        "y": 0.05407857522368431,
+        "z": 0.6019248962402344,
+        "w": 0.7957925796508789
+      }
+    },
+    "lift": 0,
+    "gateOpen": 1,
+    "gateTarget": 1,
+    "jointPositions": {
+      "liftMm": 0,
+      "gateOpen": 1
+    },
+    "contactCounters": {
+      "tire-segment-3|source-rail-1": 12375,
+      "tire-segment-4|source-rail-1": 12375,
+      "tire-segment-5|source-rail-1": 12649,
+      "tire-segment-6|source-rail-1": 12708,
+      "tire-segment-7|source-rail-1": 12743,
+      "tire-segment-13|source-rail--1": 12392,
+      "tire-segment-14|source-rail--1": 12445,
+      "tire-segment-15|source-rail--1": 12443,
+      "tire-segment-16|source-rail--1": 12440,
+      "tire-segment-17|source-rail--1": 12444,
+      "tire-segment-6|gate": 29125,
+      "tire-segment-7|gate": 29133,
+      "tire-segment-8|gate": 283,
+      "tire-segment-8|source-rail-1": 150,
+      "tire-segment-18|source-rail--1": 108,
+      "tire-segment-19|source-rail--1": 185,
+      "tire-segment-0|source-rail--1": 27,
+      "tire-segment-13|tray-side-right": 28067,
+      "tire-segment-10|fork-right": 28035,
+      "tire-segment-14|tray-side-right": 28057,
+      "tire-segment-10|destination-rail--1": 1230,
+      "tire-segment-11|destination-rail--1": 1240,
+      "tire-segment-9|destination-rail--1": 160,
+      "tire-segment-5|gate": 112,
+      "tire-segment-12|destination-rail--1": 21,
+      "tire-segment-9|gate": 180,
+      "tire-segment-10|gate": 132,
+      "tire-segment-11|gate": 153,
+      "tire-segment-12|gate": 156,
+      "tire-segment-13|gate": 28,
+      "tire-segment-14|gate": 1
+    },
+    "contactSamples": [
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-3",
+        "colliderB": "source-rail-1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-4",
+        "colliderB": "source-rail-1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-5",
+        "colliderB": "source-rail-1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-6",
+        "colliderB": "source-rail-1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-7",
+        "colliderB": "source-rail-1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-13",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-14",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-15",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-16",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 0.025,
+        "phase": "lap",
+        "colliderA": "tire-segment-17",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 102.71666666669448,
+        "phase": "source-align",
+        "colliderA": "tire-segment-6",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 102.71666666669448,
+        "phase": "source-align",
+        "colliderA": "tire-segment-7",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 102.77500000002786,
+        "phase": "source-align",
+        "colliderA": "tire-segment-8",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 103.15000000002816,
+        "phase": "source-align",
+        "colliderA": "tire-segment-8",
+        "colliderB": "source-rail-1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 103.19166666669486,
+        "phase": "source-align",
+        "colliderA": "tire-segment-14",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 103.2000000000282,
+        "phase": "source-align",
+        "colliderA": "tire-segment-5",
+        "colliderB": "source-rail-1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 103.23333333336156,
+        "phase": "source-align",
+        "colliderA": "tire-segment-15",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 103.2833333333616,
+        "phase": "source-align",
+        "colliderA": "tire-segment-16",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 103.30833333336162,
+        "phase": "source-align",
+        "colliderA": "tire-segment-17",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 103.33333333336164,
+        "phase": "source-align",
+        "colliderA": "tire-segment-18",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 103.35000000002832,
+        "phase": "source-align",
+        "colliderA": "tire-segment-19",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 103.41666666669504,
+        "phase": "source-align",
+        "colliderA": "tire-segment-0",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 103.60000000002852,
+        "phase": "acquire",
+        "colliderA": "tire-segment-13",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 104.22500000002901,
+        "phase": "acquire",
+        "colliderA": "tire-segment-18",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 104.36666666669579,
+        "phase": "acquire",
+        "colliderA": "tire-segment-18",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 104.84166666669617,
+        "phase": "acquire",
+        "colliderA": "tire-segment-19",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 104.93333333336291,
+        "phase": "acquire",
+        "colliderA": "tire-segment-19",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 105.05833333336301,
+        "phase": "acquire",
+        "colliderA": "tire-segment-18",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 105.05833333336301,
+        "phase": "acquire",
+        "colliderA": "tire-segment-19",
+        "colliderB": "source-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 105.14166666669641,
+        "phase": "acquire",
+        "colliderA": "tire-segment-8",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 105.99166666669709,
+        "phase": "acquire",
+        "colliderA": "tire-segment-8",
+        "colliderB": "source-rail-1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 108.69166666669923,
+        "phase": "lift",
+        "colliderA": "tire-segment-13",
+        "colliderB": "tray-side-right",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 108.70000000003257,
+        "phase": "lift",
+        "colliderA": "tire-segment-10",
+        "colliderB": "fork-right",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 108.7250000000326,
+        "phase": "lift",
+        "colliderA": "tire-segment-14",
+        "colliderB": "tray-side-right",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 342.20833333318643,
+        "phase": "lower",
+        "colliderA": "tire-segment-10",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 342.20833333318643,
+        "phase": "lower",
+        "colliderA": "tire-segment-11",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 342.2333333331864,
+        "phase": "lower",
+        "colliderA": "tire-segment-9",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 342.5166666665195,
+        "phase": "lower",
+        "colliderA": "tire-segment-5",
+        "colliderB": "gate",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 342.5499999998528,
+        "phase": "lower",
+        "colliderA": "tire-segment-8",
+        "colliderB": "gate",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 342.5916666665194,
+        "phase": "lower",
+        "colliderA": "tire-segment-8",
+        "colliderB": "gate",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 342.658333333186,
+        "phase": "lower",
+        "colliderA": "tire-segment-5",
+        "colliderB": "gate",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 342.7416666665193,
+        "phase": "lower",
+        "colliderA": "tire-segment-5",
+        "colliderB": "gate",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 342.82499999985254,
+        "phase": "lower",
+        "colliderA": "tire-segment-5",
+        "colliderB": "gate",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 342.8749999998525,
+        "phase": "lower",
+        "colliderA": "tire-segment-5",
+        "colliderB": "gate",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 342.9333333331858,
+        "phase": "lower",
+        "colliderA": "tire-segment-5",
+        "colliderB": "gate",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 342.9416666665191,
+        "phase": "lower",
+        "colliderA": "tire-segment-11",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 342.9999999998524,
+        "phase": "lower",
+        "colliderA": "tire-segment-5",
+        "colliderB": "gate",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 343.2999999998521,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-11",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 343.40833333318534,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-10",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 343.48333333318527,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-8",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 343.50833333318525,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-8",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 343.57499999985185,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-8",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 343.63333333318513,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-8",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 343.67499999985176,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-8",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 343.70833333318507,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-8",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 343.7499999998517,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-8",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 343.9416666665182,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-9",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 343.9749999998515,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-9",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 344.0166666665181,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-12",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 344.02499999985145,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-9",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 344.0999999998514,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-9",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 344.11666666651803,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-10",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 344.12499999985135,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-6",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 344.14999999985133,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-12",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 344.24999999985124,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-9",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 344.2666666665179,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-5",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 344.2666666665179,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-9",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 344.29166666651787,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-11",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 344.29166666651787,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-12",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 344.3083333331845,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-9",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 344.4583333331844,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-10",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 344.79999999985074,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-13",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 344.8249999998507,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-12",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 344.9249999998506,
+        "phase": "release-backout",
+        "colliderA": "tire-segment-5",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 345.4249999998502,
+        "phase": "park",
+        "colliderA": "tire-segment-13",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 345.44999999985015,
+        "phase": "park",
+        "colliderA": "tire-segment-9",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 345.4583333331835,
+        "phase": "park",
+        "colliderA": "tire-segment-14",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 345.4666666665168,
+        "phase": "park",
+        "colliderA": "tire-segment-9",
+        "colliderB": "destination-rail--1",
+        "category": "support",
+        "impulseNs": null
+      },
+      {
+        "timeS": 345.48333333318345,
+        "phase": "park",
+        "colliderA": "tire-segment-13",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 345.4999999998501,
+        "phase": "park",
+        "colliderA": "tire-segment-13",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      },
+      {
+        "timeS": 345.5666666665167,
+        "phase": "park",
+        "colliderA": "tire-segment-13",
+        "colliderB": "gate",
+        "category": "unexpected-contact",
+        "impulseNs": null
+      }
+    ],
+    "contactSampleOverflow": 0,
+    "wheelAngles": [
+      697.1106645869985,
+      779.9231956671329
+    ],
+    "command": {
+      "left": 0,
+      "right": 0
+    },
+    "contacts": 0,
+    "collisionSteps": 0,
+    "carriedSeconds": 228.86666666662285,
+    "peakTireHeight": 0.17695099115371704,
+    "goal": {
+      "x": -1.9,
+      "z": 0.3
+    },
+    "path": [
+      {
+        "x": -1.9,
+        "z": 0.3
+      }
+    ],
+    "events": [
+      {
+        "time": 0,
+        "message": "Live mission started; level-plane differential-drive model"
+      },
+      {
+        "time": 59.208333333330614,
+        "message": "Lap 1: all ordered physical position gates crossed"
+      },
+      {
+        "time": 59.208333333330614,
+        "message": "to source"
+      },
+      {
+        "time": 97.2166666666901,
+        "message": "source align"
+      },
+      {
+        "time": 103.50000000002844,
+        "message": "acquire"
+      },
+      {
+        "time": 107.45000000003158,
+        "message": "lift"
+      },
+      {
+        "time": 112.2083333333687,
+        "message": "Contact-supported tire lift confirmed with gate closed; no attachment joint"
+      },
+      {
+        "time": 112.2083333333687,
+        "message": "source backout"
+      },
+      {
+        "time": 114.04166666670349,
+        "message": "return to course"
+      },
+      {
+        "time": 150.68333333336062,
+        "message": "lap"
+      },
+      {
+        "time": 210.01666666664,
+        "message": "Lap 2: all ordered physical position gates crossed"
+      },
+      {
+        "time": 270.64166666658485,
+        "message": "Lap 3: all ordered physical position gates crossed"
+      },
+      {
+        "time": 270.64166666658485,
+        "message": "to delivery"
+      },
+      {
+        "time": 332.24999999986215,
+        "message": "delivery align"
+      },
+      {
+        "time": 334.2749999998603,
+        "message": "place"
+      },
+      {
+        "time": 338.2249999998567,
+        "message": "lower"
+      },
+      {
+        "time": 343.05833333318566,
+        "message": "release backout"
+      },
+      {
+        "time": 345.38333333318354,
+        "message": "Tire released onto destination fixture, independently supported"
+      },
+      {
+        "time": 345.38333333318354,
+        "message": "park"
+      },
+      {
+        "time": 352.8833333331767,
+        "message": "complete"
+      },
+      {
+        "time": 352.8833333331767,
+        "message": "Three live laps, contact pickup, transport, release and parking completed"
+      }
+    ],
+    "parameters": {
+      "chassisMass": 1.35,
+      "tireMass": 0.08,
+      "traction": 0.65,
+      "tireFriction": 0.8,
+      "motorTorque": 0.12,
+      "maxSpeed": 0.24,
+      "wheelRadius": 0.04,
+      "track": 0.19,
+      "liftForce": 8,
+      "liftSpeed": 0.035,
+      "liftHeight": 0.15,
+      "tireOffset": 0,
+      "obstacles": true,
+      "tirePresent": true,
+      "blocked": false
+    },
+    "arenaId": "demo",
+    "arenaQualification": "not competition geometry",
+    "evidence": {
+      "supportDuration": 0.5083333333333333,
+      "releaseDuration": 0.5000000000000007,
+      "sourceSupport": false,
+      "destinationSupport": true,
+      "loadBearingSupport": false,
+      "gateContact": false,
+      "finite": true
+    },
+    "terminalReason": "Three live laps, contact pickup, transport, release and parking completed",
+    "model": "Rapier 0.12.0; v13 datum registry; level-plane chassis; force-limited differential traction; ideal position lift; continuous collidable gate; dynamic compound tire"
+  },
+  "missing": {
+    "time": 115.45833333337129,
+    "phase": "failed",
+    "result": "failed",
+    "laps": 1,
+    "assemblyId": "order-a-bom-nominal-16mm-v13",
+    "assemblyHash": "3f5c812c45ad532ca2718b49b507546608001f8814a61e6b3fa7210d5e037cbd",
+    "profileId": "v13-jointed-gate",
+    "robot": {
+      "x": -1.768113613128662,
+      "y": 0,
+      "z": -0.6797729730606079,
+      "yaw": 0.00008190253968961251
+    },
+    "tire": null,
+    "lift": 0.15,
+    "gateOpen": 0,
+    "gateTarget": 0,
+    "jointPositions": {
+      "liftMm": 150,
+      "gateOpen": 0
+    },
+    "contactCounters": {},
+    "contactSamples": [],
+    "contactSampleOverflow": 0,
+    "wheelAngles": [
+      221.47306330228028,
+      251.24061325888616
+    ],
+    "command": {
+      "left": 0,
+      "right": 0
+    },
+    "contacts": 0,
+    "collisionSteps": 0,
+    "carriedSeconds": 0,
+    "peakTireHeight": 0,
+    "goal": {
+      "x": -1.766,
+      "z": -0.7
+    },
+    "path": [
+      {
+        "x": -1.87,
+        "z": -0.6599999999999999
+      },
+      {
+        "x": -1.83,
+        "z": -0.6599999999999999
+      },
+      {
+        "x": -1.79,
+        "z": -0.6599999999999999
+      },
+      {
+        "x": -1.766,
+        "z": -0.7
+      }
+    ],
+    "events": [
+      {
+        "time": 0,
+        "message": "Live mission started; level-plane differential-drive model"
+      },
+      {
+        "time": 59.208333333330614,
+        "message": "Lap 1: all ordered physical position gates crossed"
+      },
+      {
+        "time": 59.208333333330614,
+        "message": "to source"
+      },
+      {
+        "time": 97.2166666666901,
+        "message": "source align"
+      },
+      {
+        "time": 103.50000000002844,
+        "message": "acquire"
+      },
+      {
+        "time": 107.45000000003158,
+        "message": "lift"
+      },
+      {
+        "time": 115.45000000003795,
+        "message": "Acquisition failed: no elevated tire supported by fork contacts"
+      }
+    ],
+    "parameters": {
+      "chassisMass": 1.35,
+      "tireMass": 0.08,
+      "traction": 0.65,
+      "tireFriction": 0.8,
+      "motorTorque": 0.12,
+      "maxSpeed": 0.24,
+      "wheelRadius": 0.04,
+      "track": 0.19,
+      "liftForce": 8,
+      "liftSpeed": 0.035,
+      "liftHeight": 0.15,
+      "tireOffset": 0,
+      "obstacles": true,
+      "tirePresent": false,
+      "blocked": false
+    },
+    "arenaId": "demo",
+    "arenaQualification": "not competition geometry",
+    "evidence": {
+      "supportDuration": 0,
+      "releaseDuration": 0,
+      "sourceSupport": false,
+      "destinationSupport": false,
+      "loadBearingSupport": false,
+      "gateContact": false,
+      "finite": true
+    },
+    "terminalReason": "Acquisition failed: no elevated tire supported by fork contacts",
+    "model": "Rapier 0.12.0; v13 datum registry; level-plane chassis; force-limited differential traction; ideal position lift; continuous collidable gate; dynamic compound tire"
+  },
+  "narrowOverflow": false,
+  "screenshots": [
+    "derived/showcase-v13/screenshots/part-motor.png",
+    "derived/showcase-v13/screenshots/part-bracket.png",
+    "derived/showcase-v13/screenshots/part-hub.png",
+    "derived/showcase-v13/screenshots/part-wheel.png",
+    "derived/showcase-v13/screenshots/part-caster.png",
+    "derived/showcase-v13/screenshots/part-wheel-screw.png",
+    "derived/showcase-v13/screenshots/part-deck.png",
+    "derived/showcase-v13/screenshots/part-riser.png",
+    "derived/showcase-v13/screenshots/part-caster-spacer.png",
+    "derived/showcase-v13/screenshots/part-lift.png",
+    "derived/showcase-v13/screenshots/part-gate.png",
+    "derived/showcase-v13/screenshots/assembly.png",
+    "derived/showcase-v13/screenshots/assembly-vendor-22mm.png",
+    "derived/showcase-v13/screenshots/live-complete.png",
+    "derived/showcase-v13/screenshots/organizer-live.png",
+    "derived/showcase-v13/screenshots/narrow-assembly.png"
+  ],
+  "checks": [
+    "offline file load",
+    "34-instance assembly animation",
+    "historical play, seek and reset",
+    "11 individual part views with projected bounds",
+    "fit failure and shaft conflict visible",
+    "16/22 mm variant identity and track",
+    "edited run preserves assembly identity",
+    "actual run JSON download",
+    "pause freezes fixed-step world",
+    "nominal three-lap contact mission",
+    "named gate contacts",
+    "independent destination release",
+    "missing tire fails",
+    "organizer arena terminal failure",
+    "post-mission zero-joint assembly datum",
+    "narrow layout with whole-robot framing"
+  ],
+  "limitations": [
+    "software WebGL only; no real-GPU performance qualification",
+    "level-plane chassis and ideal lift/gate; organizer attempt is not competition qualification",
+    "legacy-API, WebGL2-blocked and no-JavaScript checks are Chromium simulations, not physical iPhone validation"
+  ]
+}

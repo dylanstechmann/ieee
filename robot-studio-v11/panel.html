@@ -1,0 +1,33 @@
+<section id="studio-v11">
+<div class="wrap">
+<p class="eyebrow">Integrated workspace · assembly sequence + live contact simulation</p>
+<h2>From loose parts <em>to a working digital robot.</em></h2>
+<p>One document, no separate studio file needed. The sequence seats the deck, motors, wheels, casters, proposed lift and generic battery/controller reservations, then starts the live mission. Purchased-part shapes are editable CadQuery exterior studies—not exact product replicas. Click a component to inspect what is documented and what is still approximate.</p>
+<div id="v11-workspace">
+<div class="v11-toolbar">
+<label>Workspace <select id="v11-mode"><option value="sequence">Assemble → live mission</option><option value="live">Live physics arena</option><option value="assembly">Assembly inspection</option><option value="replay">Historical simulated mission</option></select></label>
+<button id="v11-close">Robot close-up</button><button id="v11-field">Whole field</button><button id="v11-fullscreen">Full screen</button>
+<label><input type="checkbox" id="v11-zoom"> Enable wheel zoom (otherwise scroll page)</label>
+<label><input type="checkbox" id="v11-mechanism" checked> Mounted mechanism concept</label>
+</div>
+<canvas id="v11-canvas" aria-label="Interactive CAD assembly and recorded simulation"></canvas>
+<p id="v11-clock" role="status"></p>
+<p id="v11-assembly-status" role="status"></p>
+<div id="v11-live-controls" hidden>
+<div class="v11-toolbar"><button id="v11-live-play">Run mission</button><button id="v11-live-reset">Reset physical world</button>
+<label>Arena <select id="v11-arena"><option value="demo">Enlarged demo — nominal regression</option><option value="organizer">Organizer CAD — live attempt, may fail</option></select></label>
+<label>Scenario <select id="v11-live-scenario"><option value="nominal">Nominal assumed properties</option><option value="missing">Missing tire</option><option value="weak">Underpowered lift</option><option value="misaligned">Misaligned source tire</option><option value="slippery">Low friction</option><option value="blocked">Blocked route</option></select></label>
+<label>Simulation speed <select id="v11-live-rate"><option value="1">1× real time</option><option value="4" selected>4×</option><option value="12">12×</option></select></label>
+<label><input id="v11-follow" type="checkbox"> Follow robot</label><label><input id="v11-colliders" type="checkbox"> Collision geometry</label><button id="v11-export-run">Download run JSON</button></div>
+<p class="v11-warning">Choose the enlarged 4.86 × 2.48 m demo or the archived organizer-CAD 2.4384 × 1.2192 m field. Organizer mode uses proposed tire rail fixtures and position-gate laps, not official scoring or tire hardware. Miniature couches exist only in the demo. Both modes use a known map, not perception. Contacts can cause bumps, stalls, tire loss or failure; a digital pass is not hardware qualification.</p>
+<pre id="v11-live-telemetry"></pre>
+<details><summary>Editable physical assumptions — changes reset the live world</summary><div id="v11-parameters"></div><p id="v11-live-model"></p></details>
+</div>
+<div id="v11-transport" hidden><button id="v11-play">Play</button><button id="v11-reset">Reset</button>
+<label>Run <select id="v11-scenario"><option value="0">Original simulated mission</option><option value="1">Exchange bail-out</option></select></label>
+<label>Speed <select id="v11-rate"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select></label>
+<input id="v11-seek" type="range" min="0" value="0" aria-label="Recorded mission position"></div>
+<div class="v11-columns"><div><h3>Parts &amp; editable parameters</h3><div id="v11-parts"></div><pre id="v11-detail"></pre></div>
+<div><h3>Dimension revision preview</h3><label>Hypothetical wheel diameter (mm) <input id="v11-diameter" type="number" min="60" max="100" step="0.1" value="80"></label><button id="v11-restore">Restore original</button><p id="v11-variant">Historical nominal dimensions; no received parts measured.</p><p id="v11-stack"></p><h3>Recorded mission events</h3><pre id="v11-events">Select historical simulated mission to inspect the event sequence.</pre></div></div>
+<p class="v11-warning">Evidence boundary: LIVE uses Rapier rigid-body contacts for the tire, fixtures, tray and obstacles, with a force-driven chassis constrained to a level plane and a position-controlled lift. No tire parenting, pickup weld or timer-declared acquisition is used. Chassis tipping, individual wheel suspension, motor electrical dynamics, lift compliance and perception are not modeled. The amber lift/tray is a proposed custom mechanism, not purchased hardware. Historical replay remains a separate timer-driven Python trace on the competition field and does not validate this new assembly. All runs are agent-authored digital studies; no physical robot or owner-reviewed qualification is claimed.</p>
+</div></div></section>

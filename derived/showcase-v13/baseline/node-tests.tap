@@ -1,0 +1,136 @@
+TAP version 13
+# Subtest: nominal live mission makes three laps and physically lifts, carries and releases tire
+ok 1 - nominal live mission makes three laps and physically lifts, carries and releases tire
+  ---
+  duration_ms: 8493.28758
+  type: 'test'
+  ...
+# Subtest: missing tire cannot produce acquisition success
+ok 2 - missing tire cannot produce acquisition success
+  ---
+  duration_ms: 322.36503
+  type: 'test'
+  ...
+# Subtest: underpowered lift visibly stalls instead of teleporting payload
+ok 3 - underpowered lift visibly stalls instead of teleporting payload
+  ---
+  duration_ms: 1881.026817
+  type: 'test'
+  ...
+# Subtest: misaligned source cannot be declared captured by elapsed time
+ok 4 - misaligned source cannot be declared captured by elapsed time
+  ---
+  duration_ms: 3434.540199
+  type: 'test'
+  ...
+# Subtest: bad physical values cannot silently enter runs
+ok 5 - bad physical values cannot silently enter runs
+  ---
+  duration_ms: 0.466317
+  type: 'test'
+  ...
+# Subtest: planner detours rather than crossing an inflated obstruction
+ok 6 - planner detours rather than crossing an inflated obstruction
+  ---
+  duration_ms: 2.560737
+  type: 'test'
+  ...
+# Subtest: terminal states stay fixed, snapshots do not alias paths, and disposal is idempotent
+ok 7 - terminal states stay fixed, snapshots do not alias paths, and disposal is idempotent
+  ---
+  duration_ms: 2.040837
+  type: 'test'
+  ...
+# Subtest: interrupted acquisition contact cannot accumulate into a pickup pass
+ok 8 - interrupted acquisition contact cannot accumulate into a pickup pass
+  ---
+  duration_ms: 10.117048
+  type: 'test'
+  ...
+# Subtest: new showcase rebuilds exactly and embeds CAD, traces and runtime
+ok 9 - new showcase rebuilds exactly and embeds CAD, traces and runtime
+  ---
+  duration_ms: 447.278104
+  type: 'test'
+  ...
+# Subtest: CAD manifest assets and source hashes remain fresh
+ok 10 - CAD manifest assets and source hashes remain fresh
+  ---
+  duration_ms: 52.486272
+  type: 'test'
+  ...
+# Subtest: assembly export binds placements and a valid binary glTF to source hashes
+ok 11 - assembly export binds placements and a valid binary glTF to source hashes
+  ---
+  duration_ms: 24.975332
+  type: 'test'
+  ...
+# Subtest: organizer arena uses archived SI dimensions, not the enlarged demonstration
+ok 12 - organizer arena uses archived SI dimensions, not the enlarged demonstration
+  ---
+  duration_ms: 2.394707
+  type: 'test'
+  ...
+# Subtest: planner rejects nonfinite and unreachable exact endpoints
+ok 13 - planner rejects nonfinite and unreachable exact endpoints
+  ---
+  duration_ms: 1.443974
+  type: 'test'
+  ...
+# Subtest: shared procedural study has unique positive components and disclosed reservations
+ok 14 - shared procedural study has unique positive components and disclosed reservations
+  ---
+  duration_ms: 0.660384
+  type: 'test'
+  ...
+# Subtest: GLB contains complete core plus procedural components with matching collision study
+ok 15 - GLB contains complete core plus procedural components with matching collision study
+  ---
+  duration_ms: 13.455675
+  type: 'test'
+  ...
+# Subtest: dimension resolver reproduces historical stack without changing its source
+ok 16 - dimension resolver reproduces historical stack without changing its source
+  ---
+  duration_ms: 2.573479
+  type: 'test'
+  ...
+# Subtest: received dimensions propagate to axle, deck and riser in a separate revision
+ok 17 - received dimensions propagate to axle, deck and riser in a separate revision
+  ---
+  duration_ms: 0.693167
+  type: 'test'
+  ...
+# Subtest: similar-looking substitute gets a distinct identity and recalculated width
+ok 18 - similar-looking substitute gets a distinct identity and recalculated width
+  ---
+  duration_ms: 0.355852
+  type: 'test'
+  ...
+# Subtest: invalid, absent and unknown dimensions cannot silently enter the model
+ok 19 - invalid, absent and unknown dimensions cannot silently enter the model
+  ---
+  duration_ms: 1.386423
+  type: 'test'
+  ...
+# Subtest: impossible support stack remains a visible failure instead of being corrected silently
+ok 20 - impossible support stack remains a visible failure instead of being corrected silently
+  ---
+  duration_ms: 0.315536
+  type: 'test'
+  ...
+# Subtest: measurements require a record and substitutions require a new product identity
+ok 21 - measurements require a record and substitutions require a new product identity
+  ---
+  duration_ms: 1.993772
+  type: 'test'
+  ...
+1..21
+# tests 21
+# suites 0
+# pass 21
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 14393.858773

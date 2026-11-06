@@ -21,7 +21,10 @@ This project is separate from the FAU team's own work. Roles, gates and dates in
 
 | To... | Open |
 |---|---|
-| See everything on one shareable page | `share/Showcase-v10.html` (arena, parts, physics, simulation — offline, self-contained) |
+| See the latest source-evidenced parts and live contact study | `share/Showcase-v13.html` (offline, self-contained; guide: `robot-studio-v13/README.md`) |
+| Open the v13 showcase on an iPhone | Host it once at a public static URL and share that link; iOS Files/Mail previews do not run the 3D studio (`share/HOST-V13.txt`) |
+| Review the v13 mechanical blockers and actual validation outcomes | `docs/mechanical-readiness-v13.md` |
+| See everything on the earlier shareable page | `share/Showcase-v10.html` (arena, parts, physics, simulation — offline, self-contained) |
 | See the plan, gates and dates to April | `BACKCAST-2026-11.md` |
 | Build the practice field | `derived/practice-field-v10/` (materials, layout coordinates, as-built template), from the organizer CAD in `derived/organizer-cad-v10/` |
 | Build the drivetrain mule | `derived/drivetrain-mule-v10/` (shaft-down deck, risers, fit report, inspection templates) |
@@ -44,6 +47,17 @@ This project is separate from the FAU team's own work. Roles, gates and dates in
 | Check rules and numbers | `CURRENT-RULES-2026-10-29.md`, `VERIFIED-FACTS.md` + `VERIFIED-FACTS-ADDENDUM.md`, `ERRATA-2026-11.md` |
 | View the robot and field in 3D, offline | `share/Robot-Studio-v8.html` (guide: `derived/robot-studio-v8/README.md`) |
 | Read older announcements and the October plan | `HISTORY.md` |
+
+## Sharable showcase release habit
+
+When a new one-file showcase is ready, follow this recurring habit so the GitHub front page always points at the latest showable page:
+
+1. Produce or refresh the one-file HTML (for v13: `node tools/build-showcase-v13.js`).
+2. Run the focused v13 tests plus `node tools/check-all.js`.
+3. Put the new HTML in `share/` (e.g. `share/Showcase-v13.html`) and keep earlier pinned showcase HTML files unchanged.
+4. Point this README's “latest one-file showcase” line and the first “Start here” row at the new file.
+5. Run `secrets-guard --staged`, commit, and push to `main`.
+6. Desktop reviewers open the HTML in a browser. iPhone reviewers need a hosted public URL; see `share/HOST-V13.txt`.
 
 ## Run the checks
 

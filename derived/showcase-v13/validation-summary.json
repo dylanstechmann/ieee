@@ -1,0 +1,206 @@
+{
+  "schema": "showcase-v13-validation-summary/1",
+  "generatedBy": "agent-authored deterministic projection of saved reports; not physical qualification",
+  "html": {
+    "file": "share/Showcase-v13.html",
+    "sha256": "d353cda188c07b7439bcf4ab526fb3ff00e954186b0298b87574525a0c8d12a1",
+    "bytes": 9152169
+  },
+  "cad": {
+    "assets": 17,
+    "sources": 12,
+    "instances": 34,
+    "assemblyId": "order-a-bom-nominal-16mm-v13",
+    "assemblyHash": "3f5c812c45ad532ca2718b49b507546608001f8814a61e6b3fa7210d5e037cbd",
+    "fitStatuses": {
+      "pass": 8,
+      "fail": 2,
+      "conflict": 2
+    },
+    "gateTravelSamples": 21,
+    "qualification": "agent-run nominal/exact-solid digital checks; not received-part measurements, manufacturing tolerance analysis or a continuous collision certificate"
+  },
+  "headless": {
+    "engine": "Rapier 0.12.0",
+    "physicsProfile": "v13-jointed-gate",
+    "runs": [
+      {
+        "id": "nominal",
+        "result": "passed",
+        "timeS": 352.89166666651005,
+        "laps": 3,
+        "terminalReason": "Three live laps, contact pickup, transport, release and parking completed",
+        "carriedS": 228.86666666662285,
+        "peakTireHeightM": 0.17695099115371704,
+        "supportDurationS": 0.5083333333333333,
+        "releaseDurationS": 0.5000000000000007
+      },
+      {
+        "id": "missing",
+        "result": "failed",
+        "timeS": 115.45833333337129,
+        "laps": 1,
+        "terminalReason": "Acquisition failed: no elevated tire supported by fork contacts",
+        "carriedS": 0,
+        "peakTireHeightM": 0,
+        "supportDurationS": 0,
+        "releaseDurationS": 0
+      },
+      {
+        "id": "weak",
+        "result": "failed",
+        "timeS": 107.46666666669826,
+        "laps": 1,
+        "terminalReason": "Lift stalled: assumed payload weight exceeds actuator force",
+        "carriedS": 0,
+        "peakTireHeightM": 0.03663107007741928,
+        "supportDurationS": 0,
+        "releaseDurationS": 0
+      },
+      {
+        "id": "misaligned",
+        "result": "failed",
+        "timeS": 122.81666666671047,
+        "laps": 1,
+        "terminalReason": "Acquisition failed: no elevated tire supported by fork contacts",
+        "carriedS": 0,
+        "peakTireHeightM": 0.03663107007741928,
+        "supportDurationS": 0,
+        "releaseDurationS": 0
+      },
+      {
+        "id": "organizer",
+        "result": "failed",
+        "timeS": 60.0416666666639,
+        "laps": 1,
+        "terminalReason": "Acquisition failed: no elevated tire supported by fork contacts",
+        "carriedS": 0,
+        "peakTireHeightM": 0.06525447219610214,
+        "supportDurationS": 0,
+        "releaseDurationS": 0
+      },
+      {
+        "id": "demo-heavy-tire",
+        "result": "passed",
+        "timeS": 352.89166666651005,
+        "laps": 3,
+        "terminalReason": "Three live laps, contact pickup, transport, release and parking completed",
+        "carriedS": 228.86666666662285,
+        "peakTireHeightM": 0.1792435497045517,
+        "supportDurationS": 0.5083333333333333,
+        "releaseDurationS": 0.5000000000000007
+      }
+    ]
+  },
+  "browser": {
+    "browser": "155.0.8059.12",
+    "htmlSha256": "d353cda188c07b7439bcf4ab526fb3ff00e954186b0298b87574525a0c8d12a1",
+    "offline": true,
+    "protocol": "file:",
+    "checks": [
+      "offline file load",
+      "34-instance assembly animation",
+      "historical play, seek and reset",
+      "11 individual part views with projected bounds",
+      "fit failure and shaft conflict visible",
+      "16/22 mm variant identity and track",
+      "edited run preserves assembly identity",
+      "actual run JSON download",
+      "pause freezes fixed-step world",
+      "nominal three-lap contact mission",
+      "named gate contacts",
+      "independent destination release",
+      "missing tire fails",
+      "organizer arena terminal failure",
+      "post-mission zero-joint assembly datum",
+      "narrow layout with whole-robot framing"
+    ],
+    "errorCount": 0,
+    "externalRequestCount": 0,
+    "narrowOverflow": false,
+    "screenshots": [
+      "derived/showcase-v13/screenshots/part-motor.png",
+      "derived/showcase-v13/screenshots/part-bracket.png",
+      "derived/showcase-v13/screenshots/part-hub.png",
+      "derived/showcase-v13/screenshots/part-wheel.png",
+      "derived/showcase-v13/screenshots/part-caster.png",
+      "derived/showcase-v13/screenshots/part-wheel-screw.png",
+      "derived/showcase-v13/screenshots/part-deck.png",
+      "derived/showcase-v13/screenshots/part-riser.png",
+      "derived/showcase-v13/screenshots/part-caster-spacer.png",
+      "derived/showcase-v13/screenshots/part-lift.png",
+      "derived/showcase-v13/screenshots/part-gate.png",
+      "derived/showcase-v13/screenshots/assembly.png",
+      "derived/showcase-v13/screenshots/assembly-vendor-22mm.png",
+      "derived/showcase-v13/screenshots/live-complete.png",
+      "derived/showcase-v13/screenshots/organizer-live.png",
+      "derived/showcase-v13/screenshots/narrow-assembly.png"
+    ],
+    "nominal": {
+      "result": "passed",
+      "timeS": 352.89166666651005,
+      "laps": 3,
+      "terminalReason": "Three live laps, contact pickup, transport, release and parking completed",
+      "carriedS": 228.86666666662285,
+      "peakTireHeightM": 0.17695099115371704,
+      "supportDurationS": 0.5083333333333333,
+      "releaseDurationS": 0.5000000000000007
+    },
+    "organizer": {
+      "result": "failed",
+      "timeS": 60.0416666666639,
+      "laps": 1,
+      "terminalReason": "Acquisition failed: no elevated tire supported by fork contacts",
+      "carriedS": 0,
+      "peakTireHeightM": 0.06525447219610214,
+      "supportDurationS": 0,
+      "releaseDurationS": 0
+    },
+    "limitations": [
+      "software WebGL only; no real-GPU performance qualification",
+      "level-plane chassis and ideal lift/gate; organizer attempt is not competition qualification",
+      "legacy-API, WebGL2-blocked and no-JavaScript checks are Chromium simulations, not physical iPhone validation"
+    ]
+  },
+  "fullCheck": {
+    "source": "/tmp/ieee-v13-host-full.json",
+    "verdict": "PASS",
+    "seconds": 188,
+    "node": {
+      "tests": 289,
+      "pass": 289,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0,
+      "cancelled": 0
+    },
+    "python": [
+      {
+        "name": "python: software",
+        "status": "PASS",
+        "counts": {
+          "tests": 138,
+          "skipped": 0
+        }
+      },
+      {
+        "name": "python: firmware host tests",
+        "status": "PASS",
+        "counts": {
+          "tests": 67,
+          "skipped": 0
+        }
+      }
+    ],
+    "verifiers": {
+      "total": 32,
+      "passed": 32
+    },
+    "treeUnchanged": true,
+    "started": "2026-11-05T22:37:01.876Z"
+  },
+  "limitations": [
+    "A digital pass is not received-part metrology, manufacturing approval, actuator sizing, competition scoring or hardware qualification.",
+    "Known motor-gap and shaft-source failures remain visible; organizer acquisition fails."
+  ]
+}

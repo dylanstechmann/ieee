@@ -1,0 +1,19 @@
+{
+  "schema":"physical-evidence-v13/1",
+  "massBudgetNote":"Physics masses remain editable assumptions; detailed CAD appearance does not measure mass, inertia, friction, actuator force or received-part dimensions.",
+  "limitations":[
+    "The 16 mm motor shaft follows the selected product specification; the original 22 mm manufacturer STEP remains a separate conflicting variant, not a resolved physical measurement.",
+    "Purchased-part GLBs preserve native geometry scale. Simplified physics envelopes and nominal fasteners are not manufacturing models.",
+    "The chassis is constrained to a level plane with force-based traction; independent wheel suspension, tipping and motor electrical dynamics are not modeled.",
+    "Lift and gate are ideal position-actuated joints. Their collision contacts do not qualify actuator force, compliance, link strength or hardware safety.",
+    "The destination/source rails are proposed fixtures. Organizer-field runs are not official scoring, tire-hardware or competition qualification.",
+    "Open-gate contact is reported separately from load-bearing fork/tray support; release still requires destination support, low height and persistence.",
+    "No purchases, received-part measurements, fabrication, owner-reviewed visual approval or physical robot tests are claimed."
+  ],
+  "credits":[
+    "Pololu product pages, dimension drawings and archived STEP reference models; manufacturer data is not relicensed as project-owned open source.",
+    "CadQuery/OpenCASCADE, cascadio and trimesh for open-source solid conversion and metrology.",
+    "Three.js, esbuild and Rapier for the offline viewer, bundle and reduced-order contact simulation.",
+    "IEEE SoutheastCon organizer field CAD for the separate organizer-geometry study."
+  ]
+}

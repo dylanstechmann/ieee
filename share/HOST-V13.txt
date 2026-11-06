@@ -1,0 +1,43 @@
+SHARE THE V13 SHOWCASE WITHOUT A LAN
+
+Why a link is needed on iPhone
+--------------------------------
+iOS Files, Mail and Messages previews can show the static page but do not
+execute the embedded JavaScript/WebGL. That is why the 3D studio is missing
+when the raw HTML file is opened from those previews. A normal public URL in
+Safari runs it normally.
+
+Host once, then send a link
+---------------------------
+Choose one static-host option. Recipients only open the link; they never run
+a server or join a network.
+
+1. Netlify Drop (no server setup)
+   - Create an empty folder, for example host-v13.
+   - Copy share/Showcase-v13.html into it and rename the copy to index.html.
+   - Visit https://app.netlify.com/drop and drag the host-v13 folder there.
+   - Share the generated https://...netlify.app/ link.
+
+2. GitHub Pages
+   - Put a copy of share/Showcase-v13.html at docs/index.html in a public
+     repository, or publish a small repository containing only that file.
+   - Enable GitHub Pages for that repository/branch.
+   - Share the generated https://<account>.github.io/<repository>/ link.
+
+3. Existing Alibaba server kit
+   - If you already have the server described in share/deploy-alibaba/,
+     upload the v13 HTML with the existing installer:
+       scp share/Showcase-v13.html share/deploy-alibaba/deploy.sh \
+           SSH_USER@SERVER_PUBLIC_IP:./
+       ssh -t SSH_USER@SERVER_PUBLIC_IP \
+           "sudo bash ./deploy.sh ./Showcase-v13.html"
+   - Share http://SERVER_PUBLIC_IP:8080/ after allowing that port.
+
+On iPhone
+---------
+Open the shared link in Safari. For an app-like launch, tap Share, then Add to
+Home Screen. The page now declares the iPhone web-app title and status-bar
+style. Safari needs WebGL2 (iOS 15 or newer); older systems show an explicit
+WebGL2 diagnostic instead of a silent empty canvas.
+
+A hosted copy is still the same digital study, not a validated robot.

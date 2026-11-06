@@ -1,0 +1,174 @@
+{
+  "schema": "fit-results-v13/1",
+  "units": "mm",
+  "gateTravelSamples": 21,
+  "results": [
+    {
+      "id": "shaft-bore",
+      "kind": "shaft-bore",
+      "variant": "bom-nominal-16mm",
+      "measuredValueMm": 6,
+      "requiredValueMm": 6,
+      "evidenceIds": [
+        "motor-page",
+        "hub-step"
+      ],
+      "status": "pass",
+      "firstFailure": null,
+      "reason": "nominal named geometric check only; received-part tolerances are not qualified"
+    },
+    {
+      "id": "hub-span",
+      "kind": "engagement",
+      "variant": "bom-nominal-16mm",
+      "measuredValueMm": 9.2,
+      "requiredValueMm": 9.2,
+      "evidenceIds": [
+        "hub-step"
+      ],
+      "status": "pass",
+      "firstFailure": null,
+      "reason": "nominal named geometric check only; received-part tolerances are not qualified"
+    },
+    {
+      "id": "motor-body-gap",
+      "kind": "clearance",
+      "variant": "bom-nominal-16mm",
+      "measuredValueMm": 7.8,
+      "requiredValueMm": 8,
+      "evidenceIds": [
+        "mule-geometry"
+      ],
+      "status": "fail",
+      "firstFailure": {
+        "pose": "nominal",
+        "partA": "motor-body-gap",
+        "partB": "clearance"
+      },
+      "reason": "nominal named geometric check only; received-part tolerances are not qualified"
+    },
+    {
+      "id": "wheel-diameter",
+      "kind": "clearance",
+      "variant": "bom-nominal-16mm",
+      "measuredValueMm": 80,
+      "requiredValueMm": 80,
+      "evidenceIds": [
+        "wheel-page",
+        "wheel-step"
+      ],
+      "status": "pass",
+      "firstFailure": null,
+      "reason": "nominal named geometric check only; received-part tolerances are not qualified"
+    },
+    {
+      "id": "motor-shaft-source-length",
+      "kind": "shaft-bore",
+      "variant": "order-a-bom-nominal-16mm-v13",
+      "status": "conflict",
+      "measuredValueMm": null,
+      "requiredValueMm": null,
+      "firstFailure": null,
+      "reason": "selected product page states 16 mm; archived manufacturer STEP measures 22 mm; variants remain separate",
+      "evidenceIds": [
+        "motor-page",
+        "motor-step"
+      ]
+    },
+    {
+      "id": "gate-travel-clearance",
+      "kind": "clearance",
+      "variant": "order-a-bom-nominal-16mm-v13",
+      "status": "pass",
+      "measuredValueMm": 0,
+      "requiredValueMm": 0,
+      "firstFailure": null,
+      "reason": "no exact-solid gate/lift overlap at 21 evenly spaced poses; not a continuous collision certificate",
+      "evidenceIds": []
+    },
+    {
+      "id": "shaft-bore",
+      "kind": "shaft-bore",
+      "variant": "vendor-cad-22mm",
+      "measuredValueMm": 6,
+      "requiredValueMm": 6,
+      "evidenceIds": [
+        "motor-page",
+        "hub-step"
+      ],
+      "status": "pass",
+      "firstFailure": null,
+      "reason": "nominal named geometric check only; received-part tolerances are not qualified"
+    },
+    {
+      "id": "hub-span",
+      "kind": "engagement",
+      "variant": "vendor-cad-22mm",
+      "measuredValueMm": 9.2,
+      "requiredValueMm": 9.2,
+      "evidenceIds": [
+        "hub-step"
+      ],
+      "status": "pass",
+      "firstFailure": null,
+      "reason": "nominal named geometric check only; received-part tolerances are not qualified"
+    },
+    {
+      "id": "motor-body-gap",
+      "kind": "clearance",
+      "variant": "vendor-cad-22mm",
+      "measuredValueMm": 7.8,
+      "requiredValueMm": 8,
+      "evidenceIds": [
+        "mule-geometry"
+      ],
+      "status": "fail",
+      "firstFailure": {
+        "pose": "nominal",
+        "partA": "motor-body-gap",
+        "partB": "clearance"
+      },
+      "reason": "nominal named geometric check only; received-part tolerances are not qualified"
+    },
+    {
+      "id": "wheel-diameter",
+      "kind": "clearance",
+      "variant": "vendor-cad-22mm",
+      "measuredValueMm": 80,
+      "requiredValueMm": 80,
+      "evidenceIds": [
+        "wheel-page",
+        "wheel-step"
+      ],
+      "status": "pass",
+      "firstFailure": null,
+      "reason": "nominal named geometric check only; received-part tolerances are not qualified"
+    },
+    {
+      "id": "motor-shaft-source-length",
+      "kind": "shaft-bore",
+      "variant": "order-a-vendor-cad-22mm-v13",
+      "status": "conflict",
+      "measuredValueMm": null,
+      "requiredValueMm": null,
+      "firstFailure": null,
+      "reason": "selected product page states 16 mm; archived manufacturer STEP measures 22 mm; variants remain separate",
+      "evidenceIds": [
+        "motor-page",
+        "motor-step"
+      ]
+    },
+    {
+      "id": "gate-travel-clearance",
+      "kind": "clearance",
+      "variant": "order-a-vendor-cad-22mm-v13",
+      "status": "pass",
+      "measuredValueMm": 0,
+      "requiredValueMm": 0,
+      "firstFailure": null,
+      "reason": "no exact-solid gate/lift overlap at 21 evenly spaced poses; not a continuous collision certificate",
+      "evidenceIds": []
+    }
+  ],
+  "qualification": "agent-run nominal/exact-solid digital checks; not received-part measurements, manufacturing tolerance analysis or a continuous collision certificate"
+}

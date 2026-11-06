@@ -1,0 +1,220 @@
+{
+  "schema": "collision-study-v12/1",
+  "units": "m",
+  "assemblyId": "historical-mule-reference",
+  "primitives": [
+    {
+      "id": "spacer--0.075",
+      "partId": "caster",
+      "size": [
+        0.02032,
+        0.003175,
+        0.01524
+      ],
+      "position": [
+        -0.075,
+        0.0151,
+        0
+      ],
+      "color": 5264987,
+      "motion": "fixed",
+      "basis": "archived caster spacer envelope",
+      "shape": "cuboid"
+    },
+    {
+      "id": "spacer-0.075",
+      "partId": "caster",
+      "size": [
+        0.02032,
+        0.003175,
+        0.01524
+      ],
+      "position": [
+        0.075,
+        0.0151,
+        0
+      ],
+      "color": 5264987,
+      "motion": "fixed",
+      "basis": "archived caster spacer envelope",
+      "shape": "cuboid"
+    },
+    {
+      "id": "fork--1",
+      "partId": "lift",
+      "size": [
+        0.134,
+        0.006,
+        0.016
+      ],
+      "position": [
+        0.164,
+        0.005,
+        -0.019
+      ],
+      "color": 14984787,
+      "motion": "lift",
+      "basis": "proposed mechanism; assumed dimensions",
+      "shape": "cuboid"
+    },
+    {
+      "id": "fork-1",
+      "partId": "lift",
+      "size": [
+        0.134,
+        0.006,
+        0.016
+      ],
+      "position": [
+        0.164,
+        0.005,
+        0.019
+      ],
+      "color": 14984787,
+      "motion": "lift",
+      "basis": "proposed mechanism; assumed dimensions",
+      "shape": "cuboid"
+    },
+    {
+      "id": "tray-back",
+      "partId": "lift",
+      "size": [
+        0.008,
+        0.076,
+        0.126
+      ],
+      "position": [
+        0.105,
+        0.047,
+        0
+      ],
+      "color": 14984787,
+      "motion": "lift",
+      "basis": "proposed mechanism; assumed dimensions",
+      "shape": "cuboid"
+    },
+    {
+      "id": "tray-side--1",
+      "partId": "lift",
+      "size": [
+        0.128,
+        0.056,
+        0.008
+      ],
+      "position": [
+        0.165,
+        0.037,
+        -0.062
+      ],
+      "color": 14984787,
+      "motion": "lift",
+      "basis": "proposed mechanism; assumed dimensions",
+      "shape": "cuboid"
+    },
+    {
+      "id": "tray-side-1",
+      "partId": "lift",
+      "size": [
+        0.128,
+        0.056,
+        0.008
+      ],
+      "position": [
+        0.165,
+        0.037,
+        0.062
+      ],
+      "color": 14984787,
+      "motion": "lift",
+      "basis": "proposed mechanism; assumed dimensions",
+      "shape": "cuboid"
+    },
+    {
+      "id": "gate",
+      "partId": "lift",
+      "size": [
+        0.008,
+        0.046,
+        0.126
+      ],
+      "position": [
+        0.228,
+        0.032,
+        0
+      ],
+      "color": 13876098,
+      "motion": "gate",
+      "basis": "proposed mechanism; assumed dimensions",
+      "shape": "cuboid"
+    },
+    {
+      "id": "mast",
+      "partId": "lift",
+      "size": [
+        0.012,
+        0.2,
+        0.1
+      ],
+      "position": [
+        0.075,
+        0.105,
+        0
+      ],
+      "color": 9280414,
+      "motion": "fixed",
+      "basis": "proposed mechanism; assumed dimensions",
+      "shape": "cuboid"
+    },
+    {
+      "id": "battery-reservation",
+      "partId": "battery-reservation",
+      "size": [
+        0.055,
+        0.022,
+        0.036
+      ],
+      "position": [
+        -0.035,
+        0.039599999999999996,
+        0
+      ],
+      "color": 3356990,
+      "motion": "fixed",
+      "basis": "generic packaging reservation; no selected SKU",
+      "shape": "cuboid"
+    },
+    {
+      "id": "controller-reservation",
+      "partId": "controller-reservation",
+      "size": [
+        0.032,
+        0.003,
+        0.026
+      ],
+      "position": [
+        0.018,
+        0.0366,
+        0
+      ],
+      "color": 3767648,
+      "motion": "fixed",
+      "basis": "generic packaging reservation; no selected SKU",
+      "shape": "cuboid"
+    }
+  ],
+  "chassis": {
+    "shape": "cuboid",
+    "halfExtents": [
+      0.095,
+      0.025,
+      0.106
+    ],
+    "position": [
+      0,
+      0.04,
+      0
+    ],
+    "basis": "conservative whole-chassis contact approximation; not a mesh union"
+  },
+  "qualification": "geometry study only; electronics/mast are not all active physical colliders"
+}

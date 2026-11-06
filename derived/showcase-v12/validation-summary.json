@@ -1,0 +1,210 @@
+{
+  "schema": "v12-validation-summary/1",
+  "agentRun": true,
+  "date": "2026-11-05",
+  "notHardwareQualification": true,
+  "html": {
+    "file": "share/Showcase-v12.html",
+    "sha256": "2d334c7e2f8f0007dc3b21fdbd3a1b668f8b5e8d4da1b2b444a05d39a30f372b",
+    "bytes": 4235293
+  },
+  "fullRegression": {
+    "verdict": "PASS",
+    "steps": 35,
+    "node": "v24.18.1",
+    "python": "3.12.16",
+    "seconds": 150.3,
+    "report": "/tmp/ieee-v12-full.json",
+    "log": "/tmp/ieee-v12-full.log"
+  },
+  "targetedNodeTests": {
+    "passed": 21,
+    "failed": 0
+  },
+  "cadQueryTests": {
+    "passed": 3,
+    "failed": 0
+  },
+  "offlineBrowser": {
+    "checks": 16,
+    "errors": [],
+    "externalRequests": [],
+    "organizerEditedWheelOutcome": "passed"
+  },
+  "scenarios": [
+    {
+      "id": "nominal",
+      "arena": "demo",
+      "result": "passed",
+      "laps": 3,
+      "seconds": 371.43333333315985,
+      "obstacleContacts": 7,
+      "reason": "Three live laps, contact pickup, transport, release and parking completed",
+      "evidence": {
+        "supportDuration": 0.5083333333333333,
+        "releaseDuration": 0.5000000000000007,
+        "sourceSupport": false,
+        "destinationSupport": true,
+        "finite": true
+      }
+    },
+    {
+      "id": "missing",
+      "arena": "demo",
+      "result": "failed",
+      "laps": 1,
+      "seconds": 117.78333333337314,
+      "obstacleContacts": 2,
+      "reason": "Acquisition failed: no elevated tire supported by fork contacts",
+      "evidence": {
+        "supportDuration": 0,
+        "releaseDuration": 0,
+        "sourceSupport": false,
+        "destinationSupport": false,
+        "finite": true
+      }
+    },
+    {
+      "id": "weak",
+      "arena": "demo",
+      "result": "failed",
+      "laps": 1,
+      "seconds": 109.75833333336675,
+      "obstacleContacts": 2,
+      "reason": "Lift stalled: assumed payload weight exceeds actuator force",
+      "evidence": {
+        "supportDuration": 0,
+        "releaseDuration": 0,
+        "sourceSupport": true,
+        "destinationSupport": false,
+        "finite": true
+      }
+    },
+    {
+      "id": "misaligned",
+      "arena": "demo",
+      "result": "failed",
+      "laps": 1,
+      "seconds": 123.95833333337805,
+      "obstacleContacts": 2,
+      "reason": "Acquisition failed: no elevated tire supported by fork contacts",
+      "evidence": {
+        "supportDuration": 0,
+        "releaseDuration": 0,
+        "sourceSupport": false,
+        "destinationSupport": false,
+        "finite": true
+      }
+    },
+    {
+      "id": "slippery",
+      "arena": "demo",
+      "result": "failed",
+      "laps": 1,
+      "seconds": 492.7499999997162,
+      "obstacleContacts": 9,
+      "reason": "Tire lost during transport",
+      "evidence": {
+        "supportDuration": 0.5083333333333333,
+        "releaseDuration": 0,
+        "sourceSupport": false,
+        "destinationSupport": false,
+        "finite": true
+      }
+    },
+    {
+      "id": "blocked",
+      "arena": "demo",
+      "result": "failed",
+      "laps": 3,
+      "seconds": 437.5166666664331,
+      "obstacleContacts": 7,
+      "reason": "Release failed: tire not independently resting in destination",
+      "evidence": {
+        "supportDuration": 0.5083333333333333,
+        "releaseDuration": 0,
+        "sourceSupport": false,
+        "destinationSupport": false,
+        "finite": true
+      }
+    },
+    {
+      "id": "organizer",
+      "arena": "organizer",
+      "result": "passed",
+      "laps": 3,
+      "seconds": 179.90833333333404,
+      "obstacleContacts": 0,
+      "reason": "Three live laps, contact pickup, transport, release and parking completed",
+      "evidence": {
+        "supportDuration": 0.5083333333333333,
+        "releaseDuration": 0.5000000000000007,
+        "sourceSupport": false,
+        "destinationSupport": true,
+        "finite": true
+      }
+    },
+    {
+      "id": "organizer-low-speed",
+      "arena": "organizer",
+      "result": "passed",
+      "laps": 3,
+      "seconds": 211.13333333330564,
+      "obstacleContacts": 0,
+      "reason": "Three live laps, contact pickup, transport, release and parking completed",
+      "evidence": {
+        "supportDuration": 0.5083333333333333,
+        "releaseDuration": 0.5000000000000007,
+        "sourceSupport": false,
+        "destinationSupport": true,
+        "finite": true
+      }
+    },
+    {
+      "id": "demo-low-speed",
+      "arena": "demo",
+      "result": "passed",
+      "laps": 3,
+      "seconds": 371.43333333315985,
+      "obstacleContacts": 7,
+      "reason": "Three live laps, contact pickup, transport, release and parking completed",
+      "evidence": {
+        "supportDuration": 0.5083333333333333,
+        "releaseDuration": 0.5000000000000007,
+        "sourceSupport": false,
+        "destinationSupport": true,
+        "finite": true
+      }
+    },
+    {
+      "id": "demo-heavy-tire",
+      "arena": "demo",
+      "result": "failed",
+      "laps": 3,
+      "seconds": 373.57499999982457,
+      "obstacleContacts": 7,
+      "reason": "Release failed: tire not independently resting in destination",
+      "evidence": {
+        "supportDuration": 0.5083333333333333,
+        "releaseDuration": 0,
+        "sourceSupport": false,
+        "destinationSupport": true,
+        "finite": true
+      }
+    }
+  ],
+  "secrets": {
+    "changedSourcesAndHTML": "clean, 20 files scanned",
+    "wholeWorktree": "one finding in unchanged share/Showcase-v10.html embedded base64 PNG, independently decoded PNG signature 89504e470d0a1a0a, 238787 bytes; classified image-payload false positive, no credential assignment; historical file not modified"
+  },
+  "preservedV11Sha256": "7cdd15512e227c8c34a39e09d82c25378d8ece93ec49ea0ec95648103a60cac4",
+  "remaining": [
+    "22 mm archived motor shaft datum vs 16 mm published length unresolved",
+    "Historic 7.8 mm motor gap vs 8 mm gate unresolved",
+    "No final electronics/lift actuator selection or physical fit certification",
+    "Ideal kinematic lift and level-plane chassis; no tipping/compliance qualification",
+    "Firmware parity, perception, official competition scoring/tire hardware and arbitrary browser B-rep regeneration not implemented",
+    "Proposed mechanism exported as shared boxes, not a complete manufacturable articulated assembly",
+    "Managed IEEE reservation/controller CLI unavailable; exclusive ownership not established"
+  ]
+}

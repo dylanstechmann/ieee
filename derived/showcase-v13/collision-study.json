@@ -1,0 +1,120 @@
+{
+  "schema": "collision-study-v13/1",
+  "assemblyId": "order-a-bom-nominal-16mm-v13",
+  "assemblyHash": "3f5c812c45ad532ca2718b49b507546608001f8814a61e6b3fa7210d5e037cbd",
+  "colliders": [
+    {
+      "id": "chassis",
+      "shape": "cuboid",
+      "halfExtents": [
+        0.0475,
+        0.0125,
+        0.050875
+      ],
+      "position": [
+        0,
+        0.04,
+        0
+      ],
+      "motionGroup": "fixed",
+      "collisionRole": "active"
+    },
+    {
+      "id": "fork-right",
+      "shape": "cuboid",
+      "halfExtents": [
+        0.0335,
+        0.0015,
+        0.004
+      ],
+      "position": [
+        0.164,
+        0.005,
+        -0.019
+      ],
+      "motionGroup": "lift",
+      "collisionRole": "active"
+    },
+    {
+      "id": "fork-left",
+      "shape": "cuboid",
+      "halfExtents": [
+        0.0335,
+        0.0015,
+        0.004
+      ],
+      "position": [
+        0.164,
+        0.005,
+        0.019
+      ],
+      "motionGroup": "lift",
+      "collisionRole": "active"
+    },
+    {
+      "id": "tray-back",
+      "shape": "cuboid",
+      "halfExtents": [
+        0.002,
+        0.019,
+        0.0315
+      ],
+      "position": [
+        0.105,
+        0.047,
+        0
+      ],
+      "motionGroup": "lift",
+      "collisionRole": "active"
+    },
+    {
+      "id": "tray-side-right",
+      "shape": "cuboid",
+      "halfExtents": [
+        0.032,
+        0.014,
+        0.002
+      ],
+      "position": [
+        0.165,
+        0.037,
+        -0.062
+      ],
+      "motionGroup": "lift",
+      "collisionRole": "active"
+    },
+    {
+      "id": "tray-side-left",
+      "shape": "cuboid",
+      "halfExtents": [
+        0.032,
+        0.014,
+        0.002
+      ],
+      "position": [
+        0.165,
+        0.037,
+        0.062
+      ],
+      "motionGroup": "lift",
+      "collisionRole": "active"
+    },
+    {
+      "id": "gate",
+      "shape": "cuboid",
+      "halfExtents": [
+        0.002,
+        0.0115,
+        0.0315
+      ],
+      "position": [
+        0.233,
+        0.032,
+        0
+      ],
+      "motionGroup": "gate",
+      "collisionRole": "active"
+    }
+  ],
+  "qualification": "named reduced-order cuboids; not exact mesh collision or hardware qualification"
+}

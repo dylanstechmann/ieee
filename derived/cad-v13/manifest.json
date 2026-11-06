@@ -1,0 +1,555 @@
+{
+  "schema": "editable-cad-v13/1",
+  "units": "mm",
+  "cadquery": "2.8.0",
+  "status": "source-evidenced purchased geometry, explicit shaft conflict and proposed custom mechanism; no physical validation",
+  "defaultAssembly": "assembly-spec.json",
+  "vendorComparisonAssembly": "assembly-vendor-22mm.json",
+  "assemblyHashes": {
+    "bom-nominal-16mm": "3f5c812c45ad532ca2718b49b507546608001f8814a61e6b3fa7210d5e037cbd",
+    "vendor-cad-22mm": "c29531212fd9daebcbdc33c3f30d7138581f9c852a004d5506e57547869c5bdc"
+  },
+  "sources": [
+    {
+      "id": "motor-page",
+      "kind": "product-page",
+      "path": "sources/hardware-2026-10-31/pololu/product-4754-specs.html",
+      "sha256": "75e2d2b69b0277c45daabbb4f2ae617d3fbb14a9c89cf9fa43effba5f42afc71",
+      "locator": "item 4754; 16 mm long, 6 mm diameter D-shaft",
+      "attribution": "Pololu archived product data"
+    },
+    {
+      "id": "motor-step",
+      "kind": "vendor-step",
+      "path": "sources/hardware-2026-10-31/pololu/step/37d-gearmotor-50-70-encoder.step",
+      "sha256": "f7d729d723ed3bbb9f71bf8a4b54d055565f036df0ddfbd438e950eaed713c15",
+      "locator": "shared 50:1/70:1 encoder gearmotor model",
+      "attribution": "Pololu manufacturer reference CAD"
+    },
+    {
+      "id": "bracket-page",
+      "kind": "product-page",
+      "path": "sources/hardware-2026-10-31/pololu/product-1995-specs.html",
+      "sha256": "ea2166a33dd94364672d799c0061f8f70e026e4fdd9eb5ec831c773cba78b9a5",
+      "locator": "item 1995; nine M3 screws included",
+      "attribution": "Pololu archived product data"
+    },
+    {
+      "id": "bracket-step",
+      "kind": "vendor-step",
+      "path": "sources/hardware-2026-10-31/pololu/step/1995-machined-bracket.step",
+      "sha256": "33c57cdf90fbc398fa9dfa3c0cd04346dbd7b5bb137774b74cb38b1a573b827a",
+      "locator": "machined bracket and mounting features",
+      "attribution": "Pololu manufacturer reference CAD"
+    },
+    {
+      "id": "hub-page",
+      "kind": "product-page",
+      "path": "sources/hardware-2026-10-31/pololu/product-1083-overview.html",
+      "sha256": "a9763335465cb40165a81f8973dcac3904c2493984d374234a517b0fcf9d60fa",
+      "locator": "6 mm hub, #4-40 holes, set screws included",
+      "attribution": "Pololu archived product data"
+    },
+    {
+      "id": "hub-step",
+      "kind": "vendor-step",
+      "path": "sources/hardware-2026-11-01/pololu/step/1083-hub-6mm-4-40.step",
+      "sha256": "a0cd01fbc076b1c404f7c0fa77dd981fc77a974df9282f66bd39b2ad3b28b647",
+      "locator": "hub flange, collar, bore and mounting holes",
+      "attribution": "Pololu manufacturer reference CAD"
+    },
+    {
+      "id": "wheel-page",
+      "kind": "product-page",
+      "path": "sources/hardware-2026-10-31/pololu/product-1430-overview.html",
+      "sha256": "7fa55d7d662c0ff9aade8bc0a00eeaeeabc2c3b04ceee8c26db5882df06d2393",
+      "locator": "80 x 10 mm nominal wheel with silicone tire",
+      "attribution": "Pololu archived product data"
+    },
+    {
+      "id": "wheel-step",
+      "kind": "vendor-step",
+      "path": "sources/hardware-2026-11-01/pololu/step/pololu-wheel-80x10mm-black.step",
+      "sha256": "075a09e030a515eeda53fbc9b71aa6f8cee7d8f2f03c33a402d91041274fb981",
+      "locator": "wheel tread, rim, spokes and hub interface",
+      "attribution": "Pololu manufacturer reference CAD"
+    },
+    {
+      "id": "caster-page",
+      "kind": "product-page",
+      "path": "sources/hardware-2026-10-31/pololu/product-953-overview.html",
+      "sha256": "e6a12c40cf1783ffc7ff1da2767a3275b34a611d27196c604d1b569af329d8d2",
+      "locator": "1/2 inch ball, spacers, two 7/16 inch #2 screws and nuts",
+      "attribution": "Pololu archived product data"
+    },
+    {
+      "id": "caster-step",
+      "kind": "vendor-step",
+      "path": "sources/hardware-2026-10-31/pololu/step/953-ball-caster.step",
+      "sha256": "6299298cfb032ac64d025773c2ce15d49e3df4a6021ded1c2b3da4592b05620a",
+      "locator": "caster housing and metal ball",
+      "attribution": "Pololu manufacturer reference CAD"
+    },
+    {
+      "id": "wheel-screw-page",
+      "kind": "product-page",
+      "path": "sources/hardware-2026-10-31/pololu/product-1962-specs.html",
+      "sha256": "ffc8d15ae7edce923314c3bb3f0d4cc796f49da42dfd2d3b7d9ce6f524cf52d0",
+      "locator": "item 1962; #4-40, 1/2 inch Phillips screw",
+      "attribution": "Pololu archived product data"
+    },
+    {
+      "id": "mule-geometry",
+      "kind": "project-cad",
+      "path": "derived/drivetrain-mule-v10/geometry.json",
+      "sha256": "5a26e8e315c898d5c7217f1f8386ecc8b416b9456d4bebbb9756980ba17a492a",
+      "locator": "shaft-down custom deck, riser and nominal stack",
+      "attribution": "Agent-authored project CAD study; no received parts measured"
+    }
+  ],
+  "assets": [
+    {
+      "id": "motor",
+      "geometryMode": "vendor-step",
+      "qualification": "unscaled manufacturer reference CAD",
+      "sourceStep": "sources/hardware-2026-10-31/pololu/step/37d-gearmotor-50-70-encoder.step",
+      "sourceStepSha256": "f7d729d723ed3bbb9f71bf8a4b54d055565f036df0ddfbd438e950eaed713c15",
+      "glb": "motor.glb",
+      "glbSha256": "60ea63613a1e06f17a9055146b63d8bedd709676b431ad77e945b8ee247f99df",
+      "stl": "motor.stl",
+      "stlSha256": "c4982412fa8ae33bb01609a668b45fcfc9d74152c736a8d9a7018fc53715d229",
+      "boundsMm": [
+        1.5192808488149983,
+        -22.830267221038213,
+        -50.18255721950988,
+        38.404164952741844,
+        18.400000100000003,
+        41.92593255399757
+      ],
+      "volumeMm3": 60610.05556092865,
+      "subMeshes": 16,
+      "triangles": 19452
+    },
+    {
+      "id": "bracket",
+      "geometryMode": "vendor-step",
+      "qualification": "unscaled manufacturer reference CAD",
+      "sourceStep": "sources/hardware-2026-10-31/pololu/step/1995-machined-bracket.step",
+      "sourceStepSha256": "33c57cdf90fbc398fa9dfa3c0cd04346dbd7b5bb137774b74cb38b1a573b827a",
+      "glb": "bracket.glb",
+      "glbSha256": "7e1e5412203be7cd462ea25e9e66c1ddfb575f7717f8b3579ed696f485442676",
+      "stl": "bracket.stl",
+      "stlSha256": "897e5b77218b97f503ba7f04546b37739010e01fa9c86f3dbea04108e7de9e63",
+      "boundsMm": [
+        -15.163369169911217,
+        -18.400423871433286,
+        -21.6633691699122,
+        21.663369169913075,
+        18.40852047101817,
+        -15.136630830087794
+      ],
+      "volumeMm3": 5153.361141582806,
+      "subMeshes": 1,
+      "triangles": 6584
+    },
+    {
+      "id": "hub",
+      "geometryMode": "vendor-step",
+      "qualification": "unscaled manufacturer reference CAD",
+      "sourceStep": "sources/hardware-2026-11-01/pololu/step/1083-hub-6mm-4-40.step",
+      "sourceStepSha256": "a0cd01fbc076b1c404f7c0fa77dd981fc77a974df9282f66bd39b2ad3b28b647",
+      "glb": "hub.glb",
+      "glbSha256": "13a3dfe016fef8dc8a87486e1f206e65fa75c1a4e746b3a501bf0cdf0309d8b3",
+      "stl": "hub.stl",
+      "stlSha256": "3d33f488212cca87d5867f1228a348e5c75367ffa9e2bb4b0d745962a56de34b",
+      "boundsMm": [
+        -12.706816040194715,
+        -12.703006996175912,
+        -2.508365847308004,
+        12.706918944570354,
+        12.702833211409892,
+        6.703728621161791
+      ],
+      "volumeMm3": 2550.1239684503303,
+      "subMeshes": 1,
+      "triangles": 7460
+    },
+    {
+      "id": "wheel",
+      "geometryMode": "vendor-step",
+      "qualification": "unscaled manufacturer reference CAD",
+      "sourceStep": "sources/hardware-2026-11-01/pololu/step/pololu-wheel-80x10mm-black.step",
+      "sourceStepSha256": "075a09e030a515eeda53fbc9b71aa6f8cee7d8f2f03c33a402d91041274fb981",
+      "glb": "wheel.glb",
+      "glbSha256": "5f08fbad87ba3634429a7be031eb4ef6456435c7ef0efd080ea3c962829b103b",
+      "stl": "wheel.stl",
+      "stlSha256": "93d958ae6091ba914f79d626d4a96282cabf1a1e47225c3ff96bd2910c588aa5",
+      "boundsMm": [
+        -6.751337463749293,
+        -40.01285431060497,
+        -40.00042159063763,
+        5.023213753634804,
+        40.01285431060497,
+        40.00042159063762
+      ],
+      "volumeMm3": 19220.08091411493,
+      "subMeshes": 2,
+      "triangles": 106370
+    },
+    {
+      "id": "caster",
+      "geometryMode": "vendor-step",
+      "qualification": "unscaled manufacturer reference CAD",
+      "sourceStep": "sources/hardware-2026-10-31/pololu/step/953-ball-caster.step",
+      "sourceStepSha256": "6299298cfb032ac64d025773c2ce15d49e3df4a6021ded1c2b3da4592b05620a",
+      "glb": "caster.glb",
+      "glbSha256": "202b92c369dfd3f4a5962ae7de7e129248202404610a4157398bf25a67ef6fd9",
+      "stl": "caster.stl",
+      "stlSha256": "8361c18c59d265833863dfd5cd4681a78ca7a56be203cb163ba169180cf6db56",
+      "boundsMm": [
+        -10.161306341619627,
+        -7.626422842581969,
+        -2.098457573036543,
+        10.16130625802872,
+        7.62642284258197,
+        11.438254529733939
+      ],
+      "volumeMm3": 1828.2689582892683,
+      "subMeshes": 2,
+      "triangles": 10066
+    },
+    {
+      "id": "motor-16mm",
+      "geometryMode": "bom-nominal-derived",
+      "qualification": "detailed vendor body plus replacement 16 mm D-shaft; not unmodified vendor CAD",
+      "derivativeOf": "motor",
+      "removedSourceShaftTriangles": 174,
+      "glb": "motor-16mm.glb",
+      "glbSha256": "390b9eda5ec9ed47ebada424c3db7cfb05b39d69b23d074d6cf57c01a08f5102",
+      "shaftStep": "motor-shaft-16mm.step",
+      "shaftStepSha256": "d3b98ebf301ac78b903e03215863b34ccc3f086715c970f69712c577acbbf7ee",
+      "shaftStl": "motor-shaft-16mm.stl",
+      "shaftStlSha256": "6f1487431c7688024f2414ebdb499ed2dca8153f5a326bb33be8a6069fea9002",
+      "shaftBoundsMm": [
+        0,
+        0,
+        0,
+        6,
+        6,
+        16
+      ],
+      "boundsMm": [
+        1.5192808488149983,
+        -22.830267221038213,
+        -50.18255721950988,
+        38.404164952741844,
+        18.400000100000003,
+        35.92
+      ],
+      "shaftDatum": {
+        "axisXmm": 19.93,
+        "axisYmm": -7.0,
+        "gearboxFaceZmm": 19.92,
+        "oldTipZmm": 41.92
+      }
+    },
+    {
+      "id": "deck",
+      "geometryMode": "cadquery-custom",
+      "qualification": "project-custom deck; no fabrication release",
+      "step": "deck.step",
+      "stepSha256": "050fa8a1c89f4240a9cca0a8f9de95c02c04621ba2702c77d9c10151eaea6082",
+      "stl": "deck.stl",
+      "stlSha256": "0c534b4d94242b127176908ebd19fc924eabec9fd68bac0034e60f618d18dc8f",
+      "glb": "deck.glb",
+      "glbSha256": "bb597cb9049269d53a1194c497080526afa04b080b896a21ef8cf83f2fb10635",
+      "boundsMm": [
+        -95.00090364391141,
+        -86.00090364391141,
+        -0.0009036439114070941,
+        95.00090364391141,
+        86.0009036439114,
+        5.000903643911407
+      ],
+      "volumeMm3": 162990.8208159207
+    },
+    {
+      "id": "riser",
+      "geometryMode": "cadquery-custom",
+      "qualification": "project-custom riser; received-part adjustment required",
+      "step": "riser.step",
+      "stepSha256": "e3d303d3bd859375185c5e268dfe7b2f9d7bce6d55bac24b2d38ad7c9478a28a",
+      "stl": "riser.stl",
+      "stlSha256": "d89898433fd7105d39319cdff76ad44d35b0b071af4554f92b9663065a870a8a",
+      "glb": "riser.glb",
+      "glbSha256": "1f87c7d0054d9d978ce4a00dff83fb60693e923df930c9691555b876a1289d41",
+      "boundsMm": [
+        -12.000000100000006,
+        -12.000000100000006,
+        -0.000388622498981046,
+        12.000000100000006,
+        12.000000100000006,
+        6.9053886224989816
+      ],
+      "volumeMm3": 3909.490321021758
+    },
+    {
+      "id": "caster-spacer",
+      "geometryMode": "cadquery-custom",
+      "qualification": "selected spacer envelope; holes omitted",
+      "step": "caster-spacer.step",
+      "stepSha256": "983c8582bfb50caa5b8638197c1f3a76ebe7fd2d7968430eecbaceb513997659",
+      "stl": "caster-spacer.stl",
+      "stlSha256": "bd7195a7bcf924a95f1eb633add8d774980b20878ba08b28db29931d892f396f",
+      "glb": "caster-spacer.glb",
+      "glbSha256": "abcb4d20ca69b0c145d6468127b905afc54364f803c9dd8d2c15c3ce9e357a97",
+      "boundsMm": [
+        -10.1600001,
+        -7.6200001,
+        -1.5875001000000002,
+        10.1600001,
+        7.6200001,
+        1.5875001000000002
+      ],
+      "volumeMm3": 983.2238400000001
+    },
+    {
+      "id": "fork-right",
+      "geometryMode": "cadquery-custom",
+      "qualification": "proposed mechanism; assumed dimensions",
+      "step": "fork-right.step",
+      "stepSha256": "1cc09ba799fe59862ded9a494ba39f6f3f3307c3dc961f5c33c20a293b6041dd",
+      "stl": "fork-right.stl",
+      "stlSha256": "ca666e4d2a75d56fb46a4aadf1889b9d807d38a5b68f6f8f7785abbcc96e34ff",
+      "glb": "fork-right.glb",
+      "glbSha256": "96a63a1e810ddaab85aa64a8656ec336d783039d58c2130f50e261849cba5ff7",
+      "boundsMm": [
+        -67.00000010000001,
+        -8.000000100000003,
+        -3.0000001000000034,
+        67.00000010000001,
+        8.000000100000003,
+        3.0000001000000034
+      ],
+      "volumeMm3": 12864.0
+    },
+    {
+      "id": "fork-left",
+      "geometryMode": "cadquery-custom",
+      "qualification": "proposed mechanism; assumed dimensions",
+      "step": "fork-left.step",
+      "stepSha256": "623a8f311aa573fe8e44dd9d850c975d8ce20d75de80cd1055cfd73e95ac3f78",
+      "stl": "fork-left.stl",
+      "stlSha256": "ca666e4d2a75d56fb46a4aadf1889b9d807d38a5b68f6f8f7785abbcc96e34ff",
+      "glb": "fork-left.glb",
+      "glbSha256": "b86969866a9e800f5e866c8f4238521ef476bd46e4f2b8b4413ac4de10659184",
+      "boundsMm": [
+        -67.00000010000001,
+        -8.000000100000003,
+        -3.0000001000000034,
+        67.00000010000001,
+        8.000000100000003,
+        3.0000001000000034
+      ],
+      "volumeMm3": 12864.0
+    },
+    {
+      "id": "tray-back",
+      "geometryMode": "cadquery-custom",
+      "qualification": "proposed mechanism; assumed dimensions",
+      "step": "tray-back.step",
+      "stepSha256": "da6e7cc9e403097e55e642a2f9ad261fd48c6163b5964c16ea71ef045e829115",
+      "stl": "tray-back.stl",
+      "stlSha256": "0462e88469b9253bb25cbe61fc730d33308707c1991bd9b9a704aecc3e4e492a",
+      "glb": "tray-back.glb",
+      "glbSha256": "9840ee4a4aa67f2cb507c732cc63c5362996d4fc2ccca6355268c222cd7454d5",
+      "boundsMm": [
+        -4.000000100000002,
+        -63.0000001,
+        -38.0000001,
+        4.000000100000002,
+        63.0000001,
+        38.0000001
+      ],
+      "volumeMm3": 76608.0
+    },
+    {
+      "id": "tray-side-right",
+      "geometryMode": "cadquery-custom",
+      "qualification": "proposed mechanism; assumed dimensions",
+      "step": "tray-side-right.step",
+      "stepSha256": "2715c2c1dedded45cdcc40692abbd9d999b5ff9f7bd7ae1c5871b20edf4e6925",
+      "stl": "tray-side-right.stl",
+      "stlSha256": "d443539412a366e112f3df3a66182bb3aeb2b79f45bb7c16666c18830a8dba57",
+      "glb": "tray-side-right.glb",
+      "glbSha256": "b11e12600fcd9e4c9af3b62aca89f5a1032ab9d59bf68061453780da2a3bf7dd",
+      "boundsMm": [
+        -64.00000010000001,
+        -4.000000100000004,
+        -28.000000100000005,
+        64.00000010000001,
+        4.000000100000004,
+        28.000000100000005
+      ],
+      "volumeMm3": 57344.00000000001
+    },
+    {
+      "id": "tray-side-left",
+      "geometryMode": "cadquery-custom",
+      "qualification": "proposed mechanism; assumed dimensions",
+      "step": "tray-side-left.step",
+      "stepSha256": "e6c39ed400a807c6de66915f819371baf35cb7282241ddfd47255682db2a6872",
+      "stl": "tray-side-left.stl",
+      "stlSha256": "d443539412a366e112f3df3a66182bb3aeb2b79f45bb7c16666c18830a8dba57",
+      "glb": "tray-side-left.glb",
+      "glbSha256": "bdd2f59945ea66c7eec99f8c352662db8a71c909ead44e4fd5696e3673e97e09",
+      "boundsMm": [
+        -64.00000010000001,
+        -4.000000100000004,
+        -28.000000100000005,
+        64.00000010000001,
+        4.000000100000004,
+        28.000000100000005
+      ],
+      "volumeMm3": 57344.00000000001
+    },
+    {
+      "id": "gate",
+      "geometryMode": "cadquery-custom",
+      "qualification": "proposed mechanism; assumed dimensions",
+      "step": "gate.step",
+      "stepSha256": "c25824798ef1bbde4c48ac744f20ed953e513770f42f92997a8169c5a5fc461b",
+      "stl": "gate.stl",
+      "stlSha256": "4ade337d6867901b41761088b1e7cf3c1db7aa1b2315fdf349ffc9c409685e25",
+      "glb": "gate.glb",
+      "glbSha256": "ba8c0ae7255bb81dc41c2d2b6d71cfca0ae0c7887ec57fe72a13dd5f22fd6ecf",
+      "boundsMm": [
+        -4.000000100000001,
+        -63.0000001,
+        -23.0000001,
+        4.000000100000001,
+        63.0000001,
+        23.0000001
+      ],
+      "volumeMm3": 46368.0
+    },
+    {
+      "id": "mast",
+      "geometryMode": "cadquery-custom",
+      "qualification": "proposed mechanism; assumed dimensions",
+      "step": "mast.step",
+      "stepSha256": "3b8953bd10435c3129df3a8f9553ce38cbf042ac92e5f4051d504dc8859da55c",
+      "stl": "mast.stl",
+      "stlSha256": "d9391aabe7820f8a11ca3ec4058e62e394999154bf5d3dfdccbb922d0a576d1a",
+      "glb": "mast.glb",
+      "glbSha256": "371aaa95e6f8090f882dfbf724cebced6253e713cd9e0022bff8e16b2a532ba5",
+      "boundsMm": [
+        -6.000000100000008,
+        -50.00000010000001,
+        -100.00000010000001,
+        6.000000100000008,
+        50.00000010000001,
+        100.00000010000001
+      ],
+      "volumeMm3": 240000.0
+    },
+    {
+      "id": "wheel-screw",
+      "geometryMode": "standard-nominal",
+      "qualification": "documented #4-40 diameter/length; simplified head, drive and smooth thread",
+      "step": "wheel-screw.step",
+      "stepSha256": "bc1f7285a7fa265398f3bebc5ebc9c279d152405059f494d825ee93280b44476",
+      "stl": "wheel-screw.stl",
+      "stlSha256": "b2a5eccb724913fbb57179761bca2a97f381afc8a47f65e0e544d19013524c2c",
+      "glb": "wheel-screw.glb",
+      "glbSha256": "71b67629f8de52d2b361f591eaa65ab84e509b9200be2897ec6229f87657064d",
+      "boundsMm": [
+        -2.7508548494977556,
+        -2.7500001000000007,
+        -12.700442238603838,
+        2.7508548494977556,
+        2.7500001000000003,
+        2.200854849497756
+      ],
+      "volumeMm3": 129.27805886666164
+    }
+  ],
+  "coverage": [
+    {
+      "bomId": "A-MOTOR",
+      "sku": "4754",
+      "geometryMode": "vendor-step",
+      "installedQuantity": 2,
+      "omissions": [
+        "Internal gear teeth, windings and electronics are not reconstructed",
+        "Manufacturer STEP and product page disagree on shaft length"
+      ]
+    },
+    {
+      "bomId": "A-BRACKET",
+      "sku": "1995",
+      "geometryMode": "vendor-step",
+      "installedQuantity": 2,
+      "omissions": [
+        "Included M3 screw lengths and head profiles are not established; screws are not rendered as exact hardware"
+      ]
+    },
+    {
+      "bomId": "A-HUB",
+      "sku": "1083",
+      "geometryMode": "vendor-step",
+      "installedQuantity": 2,
+      "omissions": [
+        "Included set screws and Allen wrench are catalogued but not represented as exact solids"
+      ]
+    },
+    {
+      "bomId": "A-WHEEL",
+      "sku": "1430",
+      "geometryMode": "vendor-step",
+      "installedQuantity": 2,
+      "omissions": [
+        "Nominal 10 mm catalogue width is not a license to scale the 11.75 mm CAD extent"
+      ]
+    },
+    {
+      "bomId": "A-CASTER",
+      "sku": "953",
+      "geometryMode": "vendor-step",
+      "installedQuantity": 2,
+      "omissions": [
+        "Included #2 screw/nut head and thread profiles are not represented as exact solids"
+      ]
+    },
+    {
+      "bomId": "A-WHEEL-SCREWS",
+      "sku": "1962",
+      "geometryMode": "standard-nominal",
+      "installedQuantity": 12,
+      "omissions": [
+        "Phillips drive and head contour are simplified nominal geometry, not a measured manufacturer replica"
+      ]
+    }
+  ],
+  "inputHashes": {
+    "cad-v13/bom-evidence.json": "17504a2a2d8ae8760e46bd904fc85d0b0b7ae02e9acbdc947f86f2f9ad74a7c1",
+    "cad-v13/assembly-layout.json": "585790d55e33c685f314746393536210c55ae9fc60802d8c58ff308f32391f92",
+    "tools/build-cad-v13.py": "7e54e399b8d5d72b6576bb3b3e36b9d6a1223aed281ef4e18a4df02e7531d3a4",
+    "cad-v13/parts/structure.py": "48f75ee21b47a6ea7c9a527cde6f1ab1a73a8f3226f2499f33d9ec193b03aeea",
+    "cad-v13/parts/mechanism.py": "432499737dbce784bfc4836d1e70e11824123b37d6aafc91a6939d857bfe02d7",
+    "cad-v13/parts/hardware.py": "970b005218be6f0087fbca786df585c75e34b55c6824a9480b31156776ff250b",
+    "order-a-procurement-v4.json": "12fa6454864d0d21bc27464b5ab9072d90ffc18e0fe218134de871719353f2da",
+    "derived/drivetrain-mule-v10/geometry.json": "5a26e8e315c898d5c7217f1f8386ecc8b416b9456d4bebbb9756980ba17a492a",
+    "sources/hardware-2026-10-31/pololu/product-4754-specs.html": "75e2d2b69b0277c45daabbb4f2ae617d3fbb14a9c89cf9fa43effba5f42afc71",
+    "sources/hardware-2026-10-31/pololu/step/37d-gearmotor-50-70-encoder.step": "f7d729d723ed3bbb9f71bf8a4b54d055565f036df0ddfbd438e950eaed713c15",
+    "sources/hardware-2026-10-31/pololu/product-1995-specs.html": "ea2166a33dd94364672d799c0061f8f70e026e4fdd9eb5ec831c773cba78b9a5",
+    "sources/hardware-2026-10-31/pololu/step/1995-machined-bracket.step": "33c57cdf90fbc398fa9dfa3c0cd04346dbd7b5bb137774b74cb38b1a573b827a",
+    "sources/hardware-2026-10-31/pololu/product-1083-overview.html": "a9763335465cb40165a81f8973dcac3904c2493984d374234a517b0fcf9d60fa",
+    "sources/hardware-2026-11-01/pololu/step/1083-hub-6mm-4-40.step": "a0cd01fbc076b1c404f7c0fa77dd981fc77a974df9282f66bd39b2ad3b28b647",
+    "sources/hardware-2026-10-31/pololu/product-1430-overview.html": "7fa55d7d662c0ff9aade8bc0a00eeaeeabc2c3b04ceee8c26db5882df06d2393",
+    "sources/hardware-2026-11-01/pololu/step/pololu-wheel-80x10mm-black.step": "075a09e030a515eeda53fbc9b71aa6f8cee7d8f2f03c33a402d91041274fb981",
+    "sources/hardware-2026-10-31/pololu/product-953-overview.html": "e6a12c40cf1783ffc7ff1da2767a3275b34a611d27196c604d1b569af329d8d2",
+    "sources/hardware-2026-10-31/pololu/step/953-ball-caster.step": "6299298cfb032ac64d025773c2ce15d49e3df4a6021ded1c2b3da4592b05620a",
+    "sources/hardware-2026-10-31/pololu/product-1962-specs.html": "ffc8d15ae7edce923314c3bb3f0d4cc796f49da42dfd2d3b7d9ce6f524cf52d0"
+  }
+}

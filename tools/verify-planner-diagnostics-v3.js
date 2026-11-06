@@ -6,14 +6,15 @@ const {checkContract,evaluate}=require('./contract-navigation-v3');
 const {build}=require('./constrained-field-v3');
 const {makeField}=require('./navigation-v3');
 const {primitives}=require('./differential-drive-v3');
-const root=path.resolve(__dirname,'..'),read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'));
+// Some sealed v3 records contain an accidentally duplicated absolute repository root.
+const root=path.resolve(__dirname,'..'),resolve=f=>{const absolute=path.isAbsolute(f)?f:path.join(root,f),nested=path.join(root,path.basename(root));return absolute===nested?root:absolute.startsWith(nested+path.sep)?path.join(root,path.relative(nested,absolute)):absolute;},read=f=>JSON.parse(fs.readFileSync(resolve(f),'utf8'));
 const reportPath=path.join(root,'derived/planner-diagnostics-v3/report.json');
 const r=read('derived/planner-diagnostics-v3/report.json'),manifest=read('derived/planner-diagnostics-v3/baseline-manifest.json');
-const hash=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+const hash=f=>crypto.createHash('sha256').update(fs.readFileSync(resolve(f))).digest('hex');
 // A dated supersession record accepts one documented input change (tools/avoidance-v3.js, edited after
 // sealing) only at its exact recorded hashes; every other input stays strict. See the record for why.
 const supersession=read('derived/audits/2026-11-03-planner-diagnostics-v3-input-supersession/record.json');
-const {accepted,stale}=require('./input-supersession').checkInputHashes(r.input_hashes,f=>hash(path.join(root,f)),supersession);
+const {accepted,stale}=require('./input-supersession').checkInputHashes(r.input_hashes,f=>hash(f),supersession);
 for(const s of stale)assert.equal(s.current,s.sealed,`stale input ${s.file}`);
 for(const [f,expected] of Object.entries(manifest.files))if(f.includes('/derived/')||f.endsWith('.json'))assert.equal(hash(f),expected,`historical input/artifact changed ${f}`);
 assert.equal(r.results.length,48);

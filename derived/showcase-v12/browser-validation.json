@@ -1,0 +1,876 @@
+{
+  "schema": "showcase-v12-browser/1",
+  "htmlSha256": "2d334c7e2f8f0007dc3b21fdbd3a1b668f8b5e8d4da1b2b444a05d39a30f372b",
+  "browser": "155.0.8059.12",
+  "offline": true,
+  "protocol": "file:",
+  "errors": [],
+  "externalRequests": [],
+  "initial": {
+    "ready": true,
+    "mode": "sequence",
+    "playing": true,
+    "cursor": 0,
+    "selected": "motor",
+    "configurationId": "historical-mule-reference",
+    "assets": 10,
+    "stack": {
+      "configurationId": "historical-mule-reference",
+      "revision": "nominal-v10",
+      "basis": "historical CAD-derived stack; not physically measured",
+      "axleHeightMm": 40,
+      "shaftAboveMountMm": 11.399999999999999,
+      "deckTopMm": 28.6,
+      "deckBottomMm": 23.6,
+      "casterRiserMm": 6.905000000000001,
+      "trackMm": 202,
+      "overallWheelWidthMm": 212,
+      "checks": [
+        {
+          "id": "deck-above-floor",
+          "pass": true
+        },
+        {
+          "id": "positive-caster-riser",
+          "pass": true
+        }
+      ],
+      "qualification": "dimension-stack-only; not a complete fit or hardware validation"
+    },
+    "livePhysics": true,
+    "live": {
+      "time": 0,
+      "phase": "lap",
+      "result": "running",
+      "laps": 0,
+      "robot": {
+        "x": -0.5,
+        "y": 0,
+        "z": -0.7799999713897705,
+        "yaw": 0
+      },
+      "tire": {
+        "x": -1.600000023841858,
+        "y": 0.03700000047683716,
+        "z": -0.699999988079071,
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        }
+      },
+      "lift": 0.15,
+      "wheelAngles": [
+        0,
+        0
+      ],
+      "command": {
+        "left": 0,
+        "right": 0
+      },
+      "contacts": 0,
+      "collisionSteps": 0,
+      "carriedSeconds": 0,
+      "peakTireHeight": 0,
+      "goal": {
+        "x": -0.3,
+        "z": -0.78
+      },
+      "path": [
+        {
+          "x": -0.4700000000000002,
+          "z": -0.7799999999999999
+        },
+        {
+          "x": -0.43000000000000016,
+          "z": -0.7799999999999999
+        },
+        {
+          "x": -0.3900000000000001,
+          "z": -0.7799999999999999
+        },
+        {
+          "x": -0.3500000000000001,
+          "z": -0.7799999999999999
+        },
+        {
+          "x": -0.3,
+          "z": -0.78
+        }
+      ],
+      "events": [
+        {
+          "time": 0,
+          "message": "Live mission started; level-plane differential-drive model"
+        }
+      ],
+      "parameters": {
+        "chassisMass": 1.35,
+        "tireMass": 0.08,
+        "traction": 0.65,
+        "tireFriction": 0.8,
+        "motorTorque": 0.12,
+        "maxSpeed": 0.24,
+        "wheelRadius": 0.04,
+        "track": 0.202,
+        "liftForce": 8,
+        "liftSpeed": 0.035,
+        "liftHeight": 0.15,
+        "tireOffset": 0,
+        "obstacles": true,
+        "tirePresent": true,
+        "blocked": false
+      },
+      "arenaId": "demo",
+      "arenaQualification": "not competition geometry",
+      "evidence": {
+        "supportDuration": 0,
+        "releaseDuration": 0,
+        "sourceSupport": false,
+        "destinationSupport": false,
+        "finite": true
+      },
+      "terminalReason": null,
+      "model": "Rapier 0.12.0; level-plane chassis; force-limited differential traction; ideal position lift; dynamic compound tire",
+      "identity": {
+        "assemblyId": "historical-mule-reference",
+        "assemblyRevision": "nominal-v10",
+        "arenaId": "demo",
+        "physicalModelRevision": "contact-evidence-v12/1",
+        "parameterProfileId": "editable-assumptions-v12/1"
+      }
+    },
+    "assembly": {
+      "time": 0,
+      "remaining": 17,
+      "duration": 9.66
+    }
+  },
+  "revised": {
+    "ready": true,
+    "mode": "assembly",
+    "playing": false,
+    "cursor": 200,
+    "selected": "motor",
+    "configurationId": "hypothetical-wheel-variant",
+    "assets": 10,
+    "stack": {
+      "configurationId": "hypothetical-wheel-variant",
+      "revision": "browser-preview",
+      "basis": "hypothetical wheel-size preview; original mesh profile reused; not the purchased SKU",
+      "axleHeightMm": 42,
+      "shaftAboveMountMm": 11.399999999999999,
+      "deckTopMm": 30.6,
+      "deckBottomMm": 25.6,
+      "casterRiserMm": 8.905000000000001,
+      "trackMm": 202,
+      "overallWheelWidthMm": 212,
+      "checks": [
+        {
+          "id": "deck-above-floor",
+          "pass": true
+        },
+        {
+          "id": "positive-caster-riser",
+          "pass": true
+        }
+      ],
+      "qualification": "dimension-stack-only; not a complete fit or hardware validation"
+    },
+    "livePhysics": true,
+    "live": {
+      "time": 0.3250000000000002,
+      "phase": "lap",
+      "result": "running",
+      "laps": 0,
+      "robot": {
+        "x": -0.45607301592826843,
+        "y": 0,
+        "z": -0.7799999713897705,
+        "yaw": 0
+      },
+      "tire": {
+        "x": -1.5999902486801147,
+        "y": 0.03275257721543312,
+        "z": -0.7000201940536499,
+        "rotation": {
+          "x": -0.0006421817233785987,
+          "y": -0.0000015187491726464941,
+          "z": -0.00040821306174620986,
+          "w": 0.9999997019767761
+        }
+      },
+      "lift": 0.15,
+      "wheelAngles": [
+        1.077515418799535,
+        1.0775125869519355
+      ],
+      "command": {
+        "left": 0.18000031499933264,
+        "right": 0.17999968500047284
+      },
+      "contacts": 0,
+      "collisionSteps": 0,
+      "carriedSeconds": 0,
+      "peakTireHeight": 0.03663107007741928,
+      "goal": {
+        "x": -0.3,
+        "z": -0.78
+      },
+      "path": [
+        {
+          "x": -0.43000000000000016,
+          "z": -0.7799999999999999
+        },
+        {
+          "x": -0.3900000000000001,
+          "z": -0.7799999999999999
+        },
+        {
+          "x": -0.3500000000000001,
+          "z": -0.7799999999999999
+        },
+        {
+          "x": -0.3,
+          "z": -0.78
+        }
+      ],
+      "events": [
+        {
+          "time": 0,
+          "message": "Live mission started; level-plane differential-drive model"
+        }
+      ],
+      "parameters": {
+        "chassisMass": 1.35,
+        "tireMass": 0.08,
+        "traction": 0.65,
+        "tireFriction": 0.8,
+        "motorTorque": 0.12,
+        "maxSpeed": 0.24,
+        "wheelRadius": 0.04,
+        "track": 0.202,
+        "liftForce": 8,
+        "liftSpeed": 0.035,
+        "liftHeight": 0.15,
+        "tireOffset": 0,
+        "obstacles": true,
+        "tirePresent": true,
+        "blocked": false
+      },
+      "arenaId": "demo",
+      "arenaQualification": "not competition geometry",
+      "evidence": {
+        "supportDuration": 0,
+        "releaseDuration": 0,
+        "sourceSupport": true,
+        "destinationSupport": false,
+        "finite": true
+      },
+      "terminalReason": null,
+      "model": "Rapier 0.12.0; level-plane chassis; force-limited differential traction; ideal position lift; dynamic compound tire",
+      "identity": {
+        "assemblyId": "historical-mule-reference",
+        "assemblyRevision": "nominal-v10",
+        "arenaId": "demo",
+        "physicalModelRevision": "contact-evidence-v12/1",
+        "parameterProfileId": "editable-assumptions-v12/1"
+      }
+    },
+    "assembly": {
+      "time": 9.6998,
+      "remaining": 0,
+      "duration": 9.66
+    }
+  },
+  "editedRun": {
+    "time": 0,
+    "phase": "lap",
+    "result": "running",
+    "laps": 0,
+    "robot": {
+      "x": -0.5,
+      "y": 0,
+      "z": -0.7799999713897705,
+      "yaw": 0
+    },
+    "tire": {
+      "x": -1.600000023841858,
+      "y": 0.03700000047683716,
+      "z": -0.699999988079071,
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      }
+    },
+    "lift": 0.15,
+    "wheelAngles": [
+      0,
+      0
+    ],
+    "command": {
+      "left": 0,
+      "right": 0
+    },
+    "contacts": 0,
+    "collisionSteps": 0,
+    "carriedSeconds": 0,
+    "peakTireHeight": 0,
+    "goal": {
+      "x": -0.3,
+      "z": -0.78
+    },
+    "path": [
+      {
+        "x": -0.4700000000000002,
+        "z": -0.7799999999999999
+      },
+      {
+        "x": -0.43000000000000016,
+        "z": -0.7799999999999999
+      },
+      {
+        "x": -0.3900000000000001,
+        "z": -0.7799999999999999
+      },
+      {
+        "x": -0.3500000000000001,
+        "z": -0.7799999999999999
+      },
+      {
+        "x": -0.3,
+        "z": -0.78
+      }
+    ],
+    "events": [
+      {
+        "time": 0,
+        "message": "Live mission started; level-plane differential-drive model"
+      }
+    ],
+    "parameters": {
+      "chassisMass": 1.35,
+      "tireMass": 0.08,
+      "traction": 0.65,
+      "tireFriction": 0.8,
+      "motorTorque": 0.12,
+      "maxSpeed": 0.24,
+      "wheelRadius": 0.042,
+      "track": 0.202,
+      "liftForce": 8,
+      "liftSpeed": 0.035,
+      "liftHeight": 0.15,
+      "tireOffset": 0,
+      "obstacles": true,
+      "tirePresent": true,
+      "blocked": false
+    },
+    "arenaId": "demo",
+    "arenaQualification": "not competition geometry",
+    "evidence": {
+      "supportDuration": 0,
+      "releaseDuration": 0,
+      "sourceSupport": false,
+      "destinationSupport": false,
+      "finite": true
+    },
+    "terminalReason": null,
+    "model": "Rapier 0.12.0; level-plane chassis; force-limited differential traction; ideal position lift; dynamic compound tire",
+    "identity": {
+      "assemblyId": "hypothetical-wheel-variant",
+      "assemblyRevision": "browser-preview",
+      "arenaId": "demo",
+      "physicalModelRevision": "contact-evidence-v12/1",
+      "parameterProfileId": "editable-assumptions-v12/1"
+    }
+  },
+  "exportedRunIdentity": "hypothetical-wheel-variant",
+  "organizer": {
+    "time": 179.90833333333404,
+    "phase": "complete",
+    "result": "passed",
+    "laps": 3,
+    "robot": {
+      "x": -0.7461539506912231,
+      "y": 0,
+      "z": -0.37865233421325684,
+      "yaw": 0.2109033159155953
+    },
+    "tire": {
+      "x": -1.042222499847412,
+      "y": 0.03199825435876846,
+      "z": -0.37611865997314453,
+      "rotation": {
+        "x": -0.00000933253704715753,
+        "y": -0.002494931686669588,
+        "z": 0.000008537815119780134,
+        "w": 0.9999968409538269
+      }
+    },
+    "lift": 0,
+    "wheelAngles": [
+      348.34433385775714,
+      287.1529399440599
+    ],
+    "command": {
+      "left": 0,
+      "right": 0
+    },
+    "contacts": 0,
+    "collisionSteps": 0,
+    "carriedSeconds": 115.70000000003814,
+    "peakTireHeight": 0.1728104203939438,
+    "goal": {
+      "x": -0.7244334,
+      "z": -0.381
+    },
+    "path": [
+      {
+        "x": -0.7244334,
+        "z": -0.381
+      }
+    ],
+    "events": [
+      {
+        "time": 0,
+        "message": "Live mission started; level-plane differential-drive model"
+      },
+      {
+        "time": 34.47499999999869,
+        "message": "Lap 1: all ordered physical position gates crossed"
+      },
+      {
+        "time": 34.47499999999869,
+        "message": "to source"
+      },
+      {
+        "time": 44.20833333333147,
+        "message": "source align"
+      },
+      {
+        "time": 49.07499999999786,
+        "message": "acquire"
+      },
+      {
+        "time": 53.50833333333094,
+        "message": "lift"
+      },
+      {
+        "time": 58.266666666664,
+        "message": "Contact-supported tire lift confirmed; no attachment joint"
+      },
+      {
+        "time": 58.266666666664,
+        "message": "source backout"
+      },
+      {
+        "time": 60.09999999999723,
+        "message": "return to course"
+      },
+      {
+        "time": 70.85833333333579,
+        "message": "lap"
+      },
+      {
+        "time": 106.95833333336452,
+        "message": "Lap 2: all ordered physical position gates crossed"
+      },
+      {
+        "time": 143.84166666670018,
+        "message": "Lap 3: all ordered physical position gates crossed"
+      },
+      {
+        "time": 143.84166666670018,
+        "message": "to delivery"
+      },
+      {
+        "time": 166.00833333334668,
+        "message": "delivery align"
+      },
+      {
+        "time": 166.68333333334607,
+        "message": "place"
+      },
+      {
+        "time": 171.11666666667537,
+        "message": "lower"
+      },
+      {
+        "time": 175.37500000000483,
+        "message": "release backout"
+      },
+      {
+        "time": 177.70000000000272,
+        "message": "Tire released onto destination fixture, independently supported"
+      },
+      {
+        "time": 177.70000000000272,
+        "message": "park"
+      },
+      {
+        "time": 179.90000000000072,
+        "message": "complete"
+      },
+      {
+        "time": 179.90000000000072,
+        "message": "Three live laps, contact pickup, transport, release and parking completed"
+      }
+    ],
+    "parameters": {
+      "chassisMass": 1.35,
+      "tireMass": 0.08,
+      "traction": 0.65,
+      "tireFriction": 0.8,
+      "motorTorque": 0.12,
+      "maxSpeed": 0.24,
+      "wheelRadius": 0.042,
+      "track": 0.202,
+      "liftForce": 8,
+      "liftSpeed": 0.035,
+      "liftHeight": 0.15,
+      "tireOffset": 0,
+      "obstacles": true,
+      "tirePresent": true,
+      "blocked": false
+    },
+    "arenaId": "organizer",
+    "arenaQualification": "live geometry attempt; not scoring qualification; tire rails proposed within pit boxes, not organizer mechanism; no couch props",
+    "evidence": {
+      "supportDuration": 0.5083333333333333,
+      "releaseDuration": 0.5000000000000007,
+      "sourceSupport": false,
+      "destinationSupport": true,
+      "finite": true
+    },
+    "terminalReason": "Three live laps, contact pickup, transport, release and parking completed",
+    "model": "Rapier 0.12.0; level-plane chassis; force-limited differential traction; ideal position lift; dynamic compound tire"
+  },
+  "live": {
+    "time": 371.43333333315985,
+    "phase": "complete",
+    "result": "passed",
+    "laps": 3,
+    "robot": {
+      "x": -1.9046494960784912,
+      "y": 0,
+      "z": 0.3213731348514557,
+      "yaw": 1.3615741461282518
+    },
+    "tire": {
+      "x": -1.5585354566574097,
+      "y": 0.02520526945590973,
+      "z": 0.6757261753082275,
+      "rotation": {
+        "x": 0.05954274162650108,
+        "y": -0.15469780564308167,
+        "z": -0.10021466761827469,
+        "w": 0.981060802936554
+      }
+    },
+    "lift": 0,
+    "wheelAngles": [
+      693.1385569153363,
+      781.2110044201675
+    ],
+    "command": {
+      "left": 0,
+      "right": 0
+    },
+    "contacts": 7,
+    "collisionSteps": 3606,
+    "carriedSeconds": 245.65833333327424,
+    "peakTireHeight": 0.17378410696983337,
+    "goal": {
+      "x": -1.9,
+      "z": 0.3
+    },
+    "path": [
+      {
+        "x": -1.9,
+        "z": 0.3
+      }
+    ],
+    "events": [
+      {
+        "time": 0,
+        "message": "Live mission started; level-plane differential-drive model"
+      },
+      {
+        "time": 60.39166666666388,
+        "message": "Lap 1: all ordered physical position gates crossed"
+      },
+      {
+        "time": 60.39166666666388,
+        "message": "to source"
+      },
+      {
+        "time": 77.825000000008,
+        "message": "Chassis obstacle contact resolved by physics"
+      },
+      {
+        "time": 84.73333333334683,
+        "message": "Chassis obstacle contact resolved by physics"
+      },
+      {
+        "time": 99.48333333335857,
+        "message": "source align"
+      },
+      {
+        "time": 105.80000000003027,
+        "message": "acquire"
+      },
+      {
+        "time": 109.74166666670007,
+        "message": "lift"
+      },
+      {
+        "time": 114.50000000003719,
+        "message": "Contact-supported tire lift confirmed; no attachment joint"
+      },
+      {
+        "time": 114.50000000003719,
+        "message": "source backout"
+      },
+      {
+        "time": 116.33333333337198,
+        "message": "return to course"
+      },
+      {
+        "time": 127.7833333333811,
+        "message": "Chassis obstacle contact resolved by physics"
+      },
+      {
+        "time": 138.84166666670473,
+        "message": "Chassis obstacle contact resolved by physics"
+      },
+      {
+        "time": 145.05833333336574,
+        "message": "Chassis obstacle contact resolved by physics"
+      },
+      {
+        "time": 165.79166666668021,
+        "message": "lap"
+      },
+      {
+        "time": 226.30833333329184,
+        "message": "Lap 2: all ordered physical position gates crossed"
+      },
+      {
+        "time": 288.1583333332356,
+        "message": "Lap 3: all ordered physical position gates crossed"
+      },
+      {
+        "time": 288.1583333332356,
+        "message": "to delivery"
+      },
+      {
+        "time": 329.6166666665312,
+        "message": "Chassis obstacle contact resolved by physics"
+      },
+      {
+        "time": 336.5333333331916,
+        "message": "Chassis obstacle contact resolved by physics"
+      },
+      {
+        "time": 351.30833333317815,
+        "message": "delivery align"
+      },
+      {
+        "time": 353.3666666665096,
+        "message": "place"
+      },
+      {
+        "time": 357.3083333331727,
+        "message": "lower"
+      },
+      {
+        "time": 361.56666666650216,
+        "message": "release backout"
+      },
+      {
+        "time": 363.89166666650004,
+        "message": "Tire released onto destination fixture, independently supported"
+      },
+      {
+        "time": 363.89166666650004,
+        "message": "park"
+      },
+      {
+        "time": 371.4249999998265,
+        "message": "complete"
+      },
+      {
+        "time": 371.4249999998265,
+        "message": "Three live laps, contact pickup, transport, release and parking completed"
+      }
+    ],
+    "parameters": {
+      "chassisMass": 1.35,
+      "tireMass": 0.08,
+      "traction": 0.65,
+      "tireFriction": 0.8,
+      "motorTorque": 0.12,
+      "maxSpeed": 0.24,
+      "wheelRadius": 0.04,
+      "track": 0.202,
+      "liftForce": 8,
+      "liftSpeed": 0.035,
+      "liftHeight": 0.15,
+      "tireOffset": 0,
+      "obstacles": true,
+      "tirePresent": true,
+      "blocked": false
+    },
+    "arenaId": "demo",
+    "arenaQualification": "not competition geometry",
+    "evidence": {
+      "supportDuration": 0.5083333333333333,
+      "releaseDuration": 0.5000000000000007,
+      "sourceSupport": false,
+      "destinationSupport": true,
+      "finite": true
+    },
+    "terminalReason": "Three live laps, contact pickup, transport, release and parking completed",
+    "model": "Rapier 0.12.0; level-plane chassis; force-limited differential traction; ideal position lift; dynamic compound tire"
+  },
+  "missing": {
+    "time": 117.78333333337314,
+    "phase": "failed",
+    "result": "failed",
+    "laps": 1,
+    "robot": {
+      "x": -1.7683480978012085,
+      "y": 0,
+      "z": -0.679641842842102,
+      "yaw": 0.00008189820321911838
+    },
+    "tire": null,
+    "lift": 0.15,
+    "wheelAngles": [
+      220.31761896000762,
+      251.98597155275155
+    ],
+    "command": {
+      "left": 0,
+      "right": 0
+    },
+    "contacts": 2,
+    "collisionSteps": 664,
+    "carriedSeconds": 0,
+    "peakTireHeight": 0,
+    "goal": {
+      "x": -1.766,
+      "z": -0.7
+    },
+    "path": [
+      {
+        "x": -1.87,
+        "z": -0.6599999999999999
+      },
+      {
+        "x": -1.83,
+        "z": -0.6599999999999999
+      },
+      {
+        "x": -1.79,
+        "z": -0.6599999999999999
+      },
+      {
+        "x": -1.766,
+        "z": -0.7
+      }
+    ],
+    "events": [
+      {
+        "time": 0,
+        "message": "Live mission started; level-plane differential-drive model"
+      },
+      {
+        "time": 60.39166666666388,
+        "message": "Lap 1: all ordered physical position gates crossed"
+      },
+      {
+        "time": 60.39166666666388,
+        "message": "to source"
+      },
+      {
+        "time": 77.825000000008,
+        "message": "Chassis obstacle contact resolved by physics"
+      },
+      {
+        "time": 84.73333333334683,
+        "message": "Chassis obstacle contact resolved by physics"
+      },
+      {
+        "time": 99.51666666669193,
+        "message": "source align"
+      },
+      {
+        "time": 105.83333333336363,
+        "message": "acquire"
+      },
+      {
+        "time": 109.77500000003343,
+        "message": "lift"
+      },
+      {
+        "time": 117.7750000000398,
+        "message": "Acquisition failed: no elevated tire supported by fork contacts"
+      }
+    ],
+    "parameters": {
+      "chassisMass": 1.35,
+      "tireMass": 0.08,
+      "traction": 0.65,
+      "tireFriction": 0.8,
+      "motorTorque": 0.12,
+      "maxSpeed": 0.24,
+      "wheelRadius": 0.04,
+      "track": 0.202,
+      "liftForce": 8,
+      "liftSpeed": 0.035,
+      "liftHeight": 0.15,
+      "tireOffset": 0,
+      "obstacles": true,
+      "tirePresent": false,
+      "blocked": false
+    },
+    "arenaId": "demo",
+    "arenaQualification": "not competition geometry",
+    "evidence": {
+      "supportDuration": 0,
+      "releaseDuration": 0,
+      "sourceSupport": false,
+      "destinationSupport": false,
+      "finite": true
+    },
+    "terminalReason": "Acquisition failed: no elevated tire supported by fork contacts",
+    "model": "Rapier 0.12.0; level-plane chassis; force-limited differential traction; ideal position lift; dynamic compound tire"
+  },
+  "narrowOverflow": false,
+  "checks": [
+    "load",
+    "assembly animation",
+    "play",
+    "reset",
+    "bail-out trace",
+    "seek",
+    "dimension revision",
+    "edited run identity and radius",
+    "download actual run JSON",
+    "pause freezes simulation",
+    "organizer arena switch resets world",
+    "organizer live terminal attempt",
+    "restore",
+    "live three-lap contact mission",
+    "missing tire fails",
+    "narrow layout"
+  ],
+  "limitations": [
+    "no real GPU performance qualification",
+    "level-plane chassis and ideal lift; organizer-field attempts do not constitute competition qualification"
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "schema": "assembly-instances-v11/1",
+  "configurationId": "historical-mule-reference",
+  "revision": "nominal-v10",
+  "units": "m",
+  "axis": "X forward, Y up, Z right",
+  "stack": {
+    "configurationId": "historical-mule-reference",
+    "revision": "nominal-v10",
+    "basis": "archived CAD-derived; no physical measurement",
+    "axleHeightMm": 40,
+    "shaftAboveMountMm": 11.399999999999999,
+    "deckTopMm": 28.6,
+    "deckBottomMm": 23.6,
+    "casterRiserMm": 6.905000000000001,
+    "trackMm": 202,
+    "overallWheelWidthMm": 212,
+    "checks": [
+      {
+        "id": "deck-above-floor",
+        "pass": true
+      },
+      {
+        "id": "positive-caster-riser",
+        "pass": true
+      }
+    ],
+    "qualification": "dimension-stack-only; not a complete fit or hardware validation"
+  },
+  "instances": [
+    {
+      "id": "deck",
+      "partId": "deck",
+      "assetId": "deck-body",
+      "position": [
+        0,
+        0.023600000000000003,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "fixed"
+    },
+    {
+      "id": "left-motor-housing",
+      "partId": "motor",
+      "assetId": "motor-housing",
+      "position": [
+        0,
+        0.04,
+        0.074
+      ],
+      "rotationY": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "fixed"
+    },
+    {
+      "id": "left-motor-shaft",
+      "partId": "motor",
+      "assetId": "motor-shaft",
+      "position": [
+        0,
+        0.04,
+        0.074
+      ],
+      "rotationY": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "fixed"
+    },
+    {
+      "id": "left-bracket-body",
+      "partId": "bracket",
+      "assetId": "bracket-body",
+      "position": [
+        0,
+        0.04,
+        0.074
+      ],
+      "rotationY": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "fixed"
+    },
+    {
+      "id": "left-wheel-tire",
+      "partId": "wheel",
+      "assetId": "wheel-tire",
+      "position": [
+        0,
+        0.04,
+        0.101
+      ],
+      "rotationY": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "left-wheel"
+    },
+    {
+      "id": "left-wheel-rim",
+      "partId": "wheel",
+      "assetId": "wheel-rim",
+      "position": [
+        0,
+        0.04,
+        0.101
+      ],
+      "rotationY": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "left-wheel"
+    },
+    {
+      "id": "left-hub",
+      "partId": "hub",
+      "assetId": "hub-body",
+      "position": [
+        0,
+        0.04,
+        0.096
+      ],
+      "rotationY": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "left-wheel"
+    },
+    {
+      "id": "right-motor-housing",
+      "partId": "motor",
+      "assetId": "motor-housing",
+      "position": [
+        0,
+        0.04,
+        -0.074
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "fixed"
+    },
+    {
+      "id": "right-motor-shaft",
+      "partId": "motor",
+      "assetId": "motor-shaft",
+      "position": [
+        0,
+        0.04,
+        -0.074
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "fixed"
+    },
+    {
+      "id": "right-bracket-body",
+      "partId": "bracket",
+      "assetId": "bracket-body",
+      "position": [
+        0,
+        0.04,
+        -0.074
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "fixed"
+    },
+    {
+      "id": "right-wheel-tire",
+      "partId": "wheel",
+      "assetId": "wheel-tire",
+      "position": [
+        0,
+        0.04,
+        -0.101
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "right-wheel"
+    },
+    {
+      "id": "right-wheel-rim",
+      "partId": "wheel",
+      "assetId": "wheel-rim",
+      "position": [
+        0,
+        0.04,
+        -0.101
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "right-wheel"
+    },
+    {
+      "id": "right-hub",
+      "partId": "hub",
+      "assetId": "hub-body",
+      "position": [
+        0,
+        0.04,
+        -0.096
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "right-wheel"
+    },
+    {
+      "id": "riser--0.075",
+      "partId": "riser",
+      "assetId": "riser-body",
+      "position": [
+        -0.075,
+        0.016695,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        0.9992764109985529,
+        1
+      ],
+      "motion": "fixed"
+    },
+    {
+      "id": "caster--0.075-body",
+      "partId": "caster",
+      "assetId": "caster-body",
+      "position": [
+        -0.075,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "fixed"
+    },
+    {
+      "id": "caster--0.075-ball",
+      "partId": "caster",
+      "assetId": "caster-ball",
+      "position": [
+        -0.075,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "fixed"
+    },
+    {
+      "id": "riser-0.075",
+      "partId": "riser",
+      "assetId": "riser-body",
+      "position": [
+        0.075,
+        0.016695,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        0.9992764109985529,
+        1
+      ],
+      "motion": "fixed"
+    },
+    {
+      "id": "caster-0.075-body",
+      "partId": "caster",
+      "assetId": "caster-body",
+      "position": [
+        0.075,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "fixed"
+    },
+    {
+      "id": "caster-0.075-ball",
+      "partId": "caster",
+      "assetId": "caster-ball",
+      "position": [
+        0.075,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "motion": "fixed"
+    }
+  ],
+  "limitations": [
+    "Approximate purchased exteriors",
+    "Motor mating-length conflict unresolved",
+    "Proposed lift, electronics reservations and spacers are procedural additions, not these STL instances"
+  ],
+  "glbSha256": "9d683b14b036533d7d0ee6db0d221cc384b69c307077c5dbfa62f6ffcf47c418",
+  "inputHashes": {
+    "robot-studio-v11/assembly.js": "8d4e9f088f8c2df20d6477f64c38894e5907b8ff8062175eb6278dd558c1b1e1",
+    "robot-studio-v11/dimensions.js": "042622a0b4f6a9a63be6652130b8e999c1c1673ad8c23aa9b933f4bea33a9647",
+    "derived/cad-v11/manifest.json": "dfd467a7da1f8a4138abffdcf4ac012e4a6929d7daed3ed63c23f37f38fdd878",
+    "derived/drivetrain-mule-v10/geometry.json": "5a26e8e315c898d5c7217f1f8386ecc8b416b9456d4bebbb9756980ba17a492a"
+  }
+}

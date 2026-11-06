@@ -1,0 +1,25 @@
+{
+  "schema":"assembly-layout-v13/1",
+  "sourceGeometry":"derived/drivetrain-mule-v10/geometry.json",
+  "layout":{
+    "gearboxFaceMm":74,"gearboxCenterHeightMm":47,"axleHeightMm":40,
+    "deckTopMm":28.6,"deckBottomMm":23.6,"casterPositionsXmm":[-75,75],
+    "casterSpacerMm":3.175,"casterRiserMm":6.905,"motorBodyGapMm":7.8,
+    "motorBodyGapMinimumMm":8,"gateTravelMm":54,"gateSpeedMmPerS":90
+  },
+  "mechanism":[
+    {"id":"fork-right","partId":"lift","sizeMm":[134,6,16],"positionMm":[164,5,-19],"motionGroup":"lift"},
+    {"id":"fork-left","partId":"lift","sizeMm":[134,6,16],"positionMm":[164,5,19],"motionGroup":"lift"},
+    {"id":"tray-back","partId":"lift","sizeMm":[8,76,126],"positionMm":[105,47,0],"motionGroup":"lift"},
+    {"id":"tray-side-right","partId":"lift","sizeMm":[128,56,8],"positionMm":[165,37,-62],"motionGroup":"lift"},
+    {"id":"tray-side-left","partId":"lift","sizeMm":[128,56,8],"positionMm":[165,37,62],"motionGroup":"lift"},
+    {"id":"gate","partId":"gate","sizeMm":[8,46,126],"positionMm":[233,32,0],"motionGroup":"gate"},
+    {"id":"mast","partId":"lift","sizeMm":[12,200,100],"positionMm":[75,105,0],"motionGroup":"fixed"}
+  ],
+  "qualification":[
+    "Deck, riser, tray and gate are proposed custom geometry, not purchased parts.",
+    "The 16 mm BOM-nominal shaft moves the hub/wheel stack inward by 6 mm per side relative to the 22 mm vendor-CAD study.",
+    "The 7.8 mm motor-body gap remains below the project's 8 mm gate.",
+    "Fastener axial seating is visual-only unless separately checked; no fabrication release is implied."
+  ]
+}

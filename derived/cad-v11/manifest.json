@@ -1,0 +1,194 @@
+{
+  "schema": "editable-cad-v11/1",
+  "units": "mm",
+  "cadquery": "2.8.0",
+  "status": "proposed structure and approximate purchased-part exteriors; no physical validation",
+  "inputHashes": {
+    "cad-v11/parts.json": "9b3ecf063cb252f7e1f6fc308fd5aeea8a8d205be97577f61bbe8a4630a228d9",
+    "tools/build-cad-v11.py": "7cb7f0b5f5c1bfae334dc4e8b455a55bafe4503928f1efbf8267fab78249c0e2",
+    "cad-v11/parts/structure.py": "48f75ee21b47a6ea7c9a527cde6f1ab1a73a8f3226f2499f33d9ec193b03aeea",
+    "cad-v11/parts/drivetrain.py": "1bf72ce75fb6968f7b81295c8d068ffa414d499e03bc296778d8710654b126b8"
+  },
+  "assets": [
+    {
+      "id": "deck-body",
+      "partId": "deck",
+      "component": "body",
+      "stl": "deck-body.stl",
+      "step": "deck-body.step",
+      "sha256": "b1c4d5a7f6fc5ca8bd030c7080612a966a90c30bfabd91518b1f78adbe945ffe",
+      "stepSha256": "9b8eb7cbcc909f3c4894333d03c06e62f043b5e06ded74389bcdfc93ee04d9bd",
+      "volumeMm3": 162990.8208159207,
+      "boundsMm": [
+        -95.00209798563482,
+        -86.00209798563482,
+        -0.002097985634817156,
+        95.00209798563482,
+        86.00209798563482,
+        5.002097985634817
+      ]
+    },
+    {
+      "id": "riser-body",
+      "partId": "riser",
+      "component": "body",
+      "stl": "riser-body.stl",
+      "step": "riser-body.step",
+      "sha256": "e3a51808032465a2e36bb753e97270de39f412d60d92d21b7d74ad698c751447",
+      "stepSha256": "a32851cbcec48199fc612941bff0ff43186d2ce4d8de966a4bfda596d89ad822",
+      "volumeMm3": 3912.321233636547,
+      "boundsMm": [
+        -12.000000100000005,
+        -12.000000100000005,
+        -0.0008742190145038167,
+        12.000000100000005,
+        12.000000100000005,
+        6.910874219014504
+      ]
+    },
+    {
+      "id": "motor-housing",
+      "partId": "motor",
+      "component": "housing",
+      "stl": "motor-housing.stl",
+      "step": "motor-housing.step",
+      "sha256": "2a71e0e6874f34ee1afb78050a2c0c65b4e14b6690ebb61e3e1115eec1d6cca4",
+      "stepSha256": "953a34f83badab21bbc49c3464c218ce06a7a038cb39a9bc21ffd4d96d88f78b",
+      "volumeMm3": 74559.59437683516,
+      "boundsMm": [
+        -18.41286713189347,
+        -70.11286713189347,
+        -11.41286713189347,
+        18.41286713189347,
+        0.012867131893471582,
+        25.41286713189347
+      ]
+    },
+    {
+      "id": "motor-shaft",
+      "partId": "motor",
+      "component": "shaft",
+      "stl": "motor-shaft.stl",
+      "step": "motor-shaft.step",
+      "sha256": "c1481c889ee64d7288bec47112efac4c6d443960836c486d55fff4236e1f2d27",
+      "stepSha256": "a52bc1d9f6faa0ff136f56e8c9364c19ddbc8c368803057b154d88669eba8139",
+      "volumeMm3": 589.6621258697089,
+      "boundsMm": [
+        -3.000505115943297,
+        -0.002085109509645554,
+        -3.0000001000000007,
+        3.000505115943297,
+        22.002085109509647,
+        2.402085109509646
+      ]
+    },
+    {
+      "id": "wheel-tire",
+      "partId": "wheel",
+      "component": "tire",
+      "stl": "wheel-tire.stl",
+      "step": "wheel-tire.step",
+      "sha256": "6e6a7f51410fd04e18d61e5c2e2ba9a2d1f7a96b8327c7a0abd950f720fbac5a",
+      "stepSha256": "9baf98e362f4eeeda3d4387e149bf4e950086c6a38c190f949c31faaa65f45b0",
+      "volumeMm3": 7257.07902979241,
+      "boundsMm": [
+        -40.02797190846407,
+        -5.027971908464066,
+        -40.02797190846407,
+        40.02797190846407,
+        5.027971908464066,
+        40.02797190846407
+      ]
+    },
+    {
+      "id": "wheel-rim",
+      "partId": "wheel",
+      "component": "rim",
+      "stl": "wheel-rim.stl",
+      "step": "wheel-rim.step",
+      "sha256": "a35abccbe9b7179d057d0b7137b455f170da174dd87fe6ed99381026f416ce4f",
+      "stepSha256": "87c7ab3d965495d252c1d299694062b37735f00151ecff677281d1d4a666ec33",
+      "volumeMm3": 21259.942885005537,
+      "boundsMm": [
+        -37.025874022829264,
+        -3.525874022829262,
+        -37.025874022829264,
+        37.025874022829264,
+        3.525874022829262,
+        37.025874022829264
+      ]
+    },
+    {
+      "id": "hub-body",
+      "partId": "hub",
+      "component": "body",
+      "stl": "hub-body.stl",
+      "step": "hub-body.step",
+      "sha256": "35216e9b43b20c198f156615664794421998096fc1fea2068affaff66b0b2eb1",
+      "stepSha256": "14cdbbf321396a800a570d0c748d43ef8425cb9b6506e831a32f17933df3ea51",
+      "volumeMm3": 1961.2020458564998,
+      "boundsMm": [
+        -12.70888114918734,
+        -6.204195871269609,
+        -12.70888114918734,
+        12.70888114918734,
+        3.008881149187341,
+        12.70888114918734
+      ]
+    },
+    {
+      "id": "bracket-body",
+      "partId": "bracket",
+      "component": "body",
+      "stl": "bracket-body.stl",
+      "step": "bracket-body.step",
+      "sha256": "edffcd87b72e5cb15003556246ace697bd606fd6feac3610b267b10470cbce0a",
+      "stepSha256": "5eba87b8d6868cf537f09a4d5dcbb7b0b0e634f44903effd8a545bd2097cf32f",
+      "volumeMm3": 3597.6064834500794,
+      "boundsMm": [
+        -18.400000100000046,
+        -0.011088626494416736,
+        -11.400000100000048,
+        18.400000100000046,
+        6.511088626494416,
+        25.400000100000046
+      ]
+    },
+    {
+      "id": "caster-ball",
+      "partId": "caster",
+      "component": "ball",
+      "stl": "caster-ball.stl",
+      "step": "caster-ball.step",
+      "sha256": "8ca7ae3b2191fcd3e904268dbc17a5dd3dc0be7cf7756472cd3566b65182f30a",
+      "stepSha256": "9a3ed2ec99c2af6d4e2d2823600985be2050e2630770dd3f919dd93fe55fa42b",
+      "volumeMm3": 1072.5308307563698,
+      "boundsMm": [
+        -6.377429833052203,
+        -6.377429833052203,
+        -0.036132287360658,
+        6.386132287360658,
+        6.377429833052203,
+        12.736132287360658
+      ]
+    },
+    {
+      "id": "caster-body",
+      "partId": "caster",
+      "component": "body",
+      "stl": "caster-body.stl",
+      "step": "caster-body.step",
+      "sha256": "2f6351132044ab796c28cdc6b3253687659bcbe8af6ca0ad90f63c823d164e6d",
+      "stepSha256": "53162e84c51d76aa46cbdc75c84d62b02f467a89f28fa5ae9a1cf5e7c9948737",
+      "volumeMm3": 1238.7071999999998,
+      "boundsMm": [
+        -10.160000100000001,
+        -7.620000100000002,
+        9.519999899999998,
+        10.160000100000001,
+        7.620000100000002,
+        13.5200001
+      ]
+    }
+  ]
+}
