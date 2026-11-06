@@ -142,8 +142,14 @@ Worked on branch `track1d-vehicle-sensing` (pushed). Both tracks landed:
 - `tools/evaluate-rl-v1.py` runs both policies through `MissionEnv` over the evaluation seeds
   100-119 and seals `derived/rl-v1/` (report, summary, manifest): completion, total reward, steps,
   score-like and contact steps. Classical completes 20/20 (mean total reward +44.5, score-like
-  267.75); random completes 0/20 (mean −8.2) and auto-stops. No RL policy has been trained.
-  `tools/verify-rl-v1.js` and `tests/rl-v1.test.js` verify the package.
+  267.75); random completes 0/20 (mean −8.2) and auto-stops. `tools/verify-rl-v1.js` and
+  `tests/rl-v1.test.js` verify the package.
+- **First trained policy (`derived/rl-v2/`):** a 38-weight linear `LearnedPolicy`
+  (`software/stockcar/policies.py`) trained by the cross-entropy method (`tools/train-rl-policy.py`,
+  seeds 0–3, 10 generations, fitness 43.2 → 128.6 over 4 train seeds) completes 20/20 evaluation
+  missions: mean total reward 41.3 (classical 44.5, random −8.2), score-like 240.75 (classical
+  267.75), about half the vehicle-contact steps (5595 vs 10829). Sealed with `tools/evaluate-rl-v2.py`
+  + `verify-rl-v2.js` + `tests/rl-v2.test.js`.
 - Owner-facing summary refreshed: README "Status" and `PROJECT-STATUS.md` describe the sensing,
   estimation and RL-scaffold work alongside the still-open physical gates.
 
@@ -155,5 +161,5 @@ Worked on branch `track1d-vehicle-sensing` (pushed). Both tracks landed:
   refactored, because `checker_crossing` is currently keyed off route completion, not the literal line.
 - Wire `EstimatorBoard` into `main.py` once a real pose source exists on the board (no safe
   synthetic path yet, per the process notes).
-- A trained RL policy can now replace `Random` in `software/stockcar/policies.py` and be compared
-  against `Classical` through the same `derived/rl-v1` harness.
+- Make the learned policy stronger (a nonlinear policy and/or a larger training budget), still
+  compared against `Classical` in `derived/rl-v2`.

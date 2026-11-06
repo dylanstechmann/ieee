@@ -17,7 +17,7 @@ The latest one-file showcase is [`share/Showcase-v13.html`](share/Showcase-v13.h
 
   **Sensing and estimation (Tracks 1–2):** the AprilTag (pit box) and start flag are now sensed through camera models in an opt-in mission subclass, vehicle contacts are attributed by phase (`derived/avoid-v12/`), and the EKF estimator has a firmware port (`firmware/pico2/estimator.py`) that matches the host filter. The avoid-v12 sweep finds the binding constraint is the 10 in robot envelope against guide-size vehicles — no blend timing made a run contact-free — not the planner.
 
-  **Reinforcement learning (Track 3):** an RL-vs-classical evaluation scaffold (`derived/rl-v1/`) runs the supervised planner as the classical baseline through the gym-style `MissionEnv`. No RL policy has been trained.
+  **Reinforcement learning (Track 3):** an RL-vs-classical harness (`derived/rl-v1/`) and the first trained policy (`derived/rl-v2/`). A 38-weight linear policy trained by the cross-entropy method on seeds 0–3 completes 20/20 evaluation missions (mean score-like 240.75 vs the classical 267.75, with about half the vehicle-contact steps). It is not matched to a physical robot.
 
   **Known limits:** the base model tells the robot the vehicle positions; a sensed subclass sees only an assumed-size near face. The lap line is modeled but not yet wired into the route, the board estimator is not wired into `main.py`, and nothing has run on a board. Parameters are placeholders until bench and field measurements replace them.
 
