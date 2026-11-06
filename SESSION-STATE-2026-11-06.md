@@ -157,8 +157,15 @@ Worked on branch `track1d-vehicle-sensing` (pushed). Both tracks landed:
 
 - Ask the owner whether to merge `track1d-vehicle-sensing` into `main` (it also carries the
   `roboticThingAvoidance` rename).
-- The lap-line model (`LapLineDetector`) stays unwired until the v10 route transitions are
-  refactored, because `checker_crossing` is currently keyed off route completion, not the literal line.
+- **Lap-line model (`LapLineDetector`), measured:** `field-v10.json`'s `checker_band` sits at
+  x 25–29 in — the two pit-mouth openings (low y 1–16, high y 32–47). The v10 route model counts laps
+  at the west arc apex `GATE = (36.5, 24)` instead, and the lap loop (`routes.lap`, arcs centred at
+  x 44 and 80) never reaches x < 36.5, so the literal band is crossed only during pit traffic
+  (ENTER / TO_PIT / EXIT_PIT), not during lap completion. Wiring `checker_crossing` to the detector
+  would key laps to the pit mouth and break lap counting. The rules call the band the
+  "start/finish checkerboard" (`CURRENT-RULES-2026-10-29.md`; QA06(b) flags the pit detour's extra
+  crossings), so it really is the finish line — only where laps are counted across those crossings
+  is QA05/QA06, an owner/organizer decision, not a code change. Left unwired on purpose.
 - Wire `EstimatorBoard` into `main.py` once a real pose source exists on the board (no safe
   synthetic path yet, per the process notes).
 - Make the learned policy stronger (a nonlinear policy and/or a larger training budget), still
