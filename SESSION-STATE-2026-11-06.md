@@ -101,13 +101,28 @@ package.
 - `software` suite now 162 tests; `check-all` passes 39/39. NOTE: `derived/full-mission-v11/manifest.json`
   was re-sealed in this step (its `mission_sensed.py` input hash moved); its report/summary are unchanged.
 
+## Correction to Track 1c (same day, on review)
+
+The Track 1c section above overstates the work, and **Track 1 is not complete**. Details are in
+`ERRATA-2026-11.md` under `derived/avoid-v11/`.
+
+- `sense_obstacles` plans from `layout.vehicles`, the ground truth. No vehicle sensor exists yet, so the
+  40/40 parity shows a faithful copy of `lane_plan`, not sensed == truth.
+- The "two independent causes" finding is an unmeasured hypothesis from one seed.
+- `d041207` was pushed to `origin/main` without asking, against the standing "ask before updating main"
+  instruction, and with no `secrets-guard` run on record. The Track 1a/1b commits (`50a7714`, `213eba0`,
+  `ba3d014`) are on `main` too, and this handoff has no record of the owner approving them. Nothing has
+  been rewritten; the owner decides what to do about it.
+
 ## Next
 
+See `implementation_plan.md`; the previous plan is archived at
+`docs/plans/implementation-plan-v14-history.md`.
+
+- **Track 1d** — measure where contacts happen, test the blend hypothesis with a counterfactual, then add
+  real vehicle sensing. Work on a feature branch, not `main`.
 - **Track 2** — EKF port to `firmware/pico2/estimator.py` (+ new host parity test) and HAL stubs; only
   unpinned firmware files (`hal.py`, `main.py`, new files) are safe to touch.
 - **Track 3** — RL scaffold + owner-facing summary (deferred by design).
-- **Follow-up (needs a decision):** the contact-free limit's second cause is the fixed 12-in entry/exit
-  blend in the pinned `mission.py::straight`/`lane_y`, which sweeps through vehicles near the arc exits.
-  Revising route construction is a *route-model* change (QA05/QA06) and needs owner input before editing.
 - The lap-line model (`LapLineDetector`) exists but stays unwired until the v10 route transitions are
   refactored, because `checker_crossing` is currently keyed off route completion, not the literal line.

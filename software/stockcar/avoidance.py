@@ -1,4 +1,4 @@
-"""Sensed-vehicle avoidance: pick the side of a blocked lane with room and shift laterally around it.
+"""Vehicle avoidance: pick the side of a blocked lane with room and shift laterally around it.
 
 Pure functions over the field corridor and a single vehicle footprint, unit-tested in isolation and
 reusable by the `mission_sensed.py` subclass — so the pinned v10 source files stay byte-identical.
@@ -13,11 +13,11 @@ _STRAIGHT_X = {"low": (44.0, 80.0), "high": (80.0, 44.0)}
 
 
 def plan_straight(field, vehicles, side, default_y, robot_width=10.0, margin=0.25):
-    """(lanes, mode, blocked) lane plan for one straightaway, read from *sensed* vehicle positions.
+    """(lanes, mode, blocked) lane plan for one straightaway, from the *given* vehicle positions.
 
     `vehicles` is a list of ``{cx, cy, yaw[, shape]}`` dicts already on `side` (guide-size by default).
     The decision order and return shape mirror ``mission.lane_plan`` exactly so a sensed mission can swap
-    this in behind an opt-in ``sense_obstacles`` flag without touching the pinned v10 source:
+    this in behind an opt-in ``replan_lanes`` flag without touching the pinned v10 source:
 
     - ``clear``: one common line clears every vehicle;
     - ``lane_change``: an S-curve threads between vehicles in travel order;
@@ -25,7 +25,7 @@ def plan_straight(field, vehicles, side, default_y, robot_width=10.0, margin=0.2
 
     ``robot_width``/``margin`` parametrise the assumed footprint (the same values ``passage`` uses). At the
     defaults (10.0 / 0.25) this reproduces ``lane_plan`` byte-for-byte, which is the intended
-    sensed == truth regression check. A smaller width is the one lever that turns ``contact`` straights
+    parity regression check. A smaller width is the one lever that turns ``contact`` straights
     back into passable ones — quantified in ``derived/avoid-v11/``.
     """
     band = field.corridor(side)
@@ -67,7 +67,7 @@ def plan_straight(field, vehicles, side, default_y, robot_width=10.0, margin=0.2
 
 
 class AvoidancePlanner:
-    """Per-straight avoidance decision from sensed vehicle positions (see `plan_straight`)."""
+    """Per-straight avoidance decision from given vehicle positions (see `plan_straight`)."""
 
     def __init__(self, field, robot_width=10.0, margin=0.25):
         self.field = field

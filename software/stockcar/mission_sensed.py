@@ -25,15 +25,16 @@ class SensedMissionSim(MissionSim):
     `collision_stops=True` halts the robot the frame after any vehicle contact instead of the v10
     "continue gently" policy.
 
-    `sense_obstacles=True` builds the lap lanes from `avoidance.plan_straight` (sensed vehicle positions)
-    instead of the ground-truth `lane_plan`, and `footprint_in` overrides the assumed square robot size —
-    the two levers that `derived/avoid-v11/` sweeps to find why contact-free runs are so rare."""
+    `replan_lanes=True` builds the lap lanes from `avoidance.plan_straight` (the vehicle positions in the
+    layout) instead of `lane_plan`, and `footprint_in` overrides the assumed square robot size — the two
+    levers that `derived/avoid-v11/` sweeps to find why contact-free runs are so rare. Until a real vehicle
+    sensor exists (Track 1d) both planners receive the same ground-truth positions."""
 
     def __init__(self, preset="aggressive", envelope="nominal", field=None, footprint_kind="square",
-                 sensing=False, collision_stops=False, sense_obstacles=False, footprint_in=None):
+                 sensing=False, collision_stops=False, replan_lanes=False, footprint_in=None):
         super().__init__(preset, envelope, field, footprint_kind, sensing)
         self.collision_stops = collision_stops
-        self.sense_obstacles = sense_obstacles
+        self.replan_lanes = replan_lanes
         self.footprint_in = footprint_in
 
     def _footprint(self, x, y, th):
@@ -46,10 +47,10 @@ class SensedMissionSim(MissionSim):
         return super()._footprint(x, y, th)
 
     def build_routes(self, layout):
-        if not self.sense_obstacles:
+        if not self.replan_lanes:
             super().build_routes(layout)
             return
-        # Mirrors MissionSim.build_routes with lane_plan swapped for the sensed-obstacle planner; the
+        # Mirrors MissionSim.build_routes with lane_plan swapped for the avoidance planner; the
         # loop/enter/pit/park geometry is the unchanged (QA05/QA06-assumed) v10 route.
         width = self.footprint_in if self.footprint_in is not None else 10.0
         low_lanes, self.low_mode, low_blocked = plan_straight(
@@ -143,11 +144,11 @@ class SensedMissionSim(MissionSim):
 
 def run_sensed(seed, preset="aggressive", envelope="nominal", obstacles=True, reading="offsets",
                yaw_mode="aligned", max_steps=4000, sensing=False, collision_stops=False,
-               sense_obstacles=False, footprint_in=None):
+               replan_lanes=False, footprint_in=None):
     """Run one sensed mission to completion and return the info dict, mirroring mission.run()."""
     rng = random.Random(seed)
     sim = SensedMissionSim(preset, envelope, sensing=sensing, collision_stops=collision_stops,
-                           sense_obstacles=sense_obstacles, footprint_in=footprint_in)
+                           replan_lanes=replan_lanes, footprint_in=footprint_in)
     layout = random_layout(rng, sim.field, reading, yaw_mode, obstacles=obstacles)
     sim.reset(layout, sensor_seed=seed)
     for _ in range(max_steps):

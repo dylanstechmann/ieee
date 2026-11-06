@@ -2,9 +2,9 @@
   "date": "2026-11-06",
   "status": "agent-run synthetic study; robot/vehicle footprints and route blends are assumptions",
   "input_hashes": {
-    "tools/evaluate-avoid-v11.py": "a372c3937c4aea38fa5cd9c5b92ce6f5ce06aba79dbf77b30371acb66461e672",
-    "software/stockcar/mission_sensed.py": "70927f5d471c10d704ef9f937227aa970105b098b24eb0c0bcad4d0bdbd450d6",
-    "software/stockcar/avoidance.py": "05a2a5e4aaf6dbd9761306092c87b6e0acc998d6190d8baa68e3fb505c6437bd",
+    "tools/evaluate-avoid-v11.py": "54406a236054b139afbe9953414bee47f875b23bd49cd74decc967c07dca66b1",
+    "software/stockcar/mission_sensed.py": "fa619a6532e907e84bd52285bde561d1962339be0b3e75e0be0deada0a3e93fd",
+    "software/stockcar/avoidance.py": "5f0d1099eb26e3c9b64bf2a395e1119cf2a8fc8e8e2894b58a177d8c749d1952",
     "software/stockcar/mission.py": "346fb5c977fddaaad7d790afcb466beacb3f2beeebe01803befb9da004032678",
     "software/stockcar/supervisor.py": "15bf5e68a33428ac4db1a94e54b2c5fc44ff0280ccfc1fb6b4a54b37c3b701ec",
     "software/stockcar/lapmodel.py": "943296d5f461cfef67d29934ce4129d06ad5c59762b1ebdfd21b18c098ff14a6",

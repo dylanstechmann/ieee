@@ -34,4 +34,4 @@ for (const condition of ['aligned_vehicles', 'random_yaw_vehicles']) {
 const aligned = report.results.filter(r => r.condition === 'aligned_vehicles');
 assert.ok(aligned.find(r => r.footprint_in === 10.0).summary.mean_planned_blocked > 0, '10 in robot flags blocked straights');
 assert.equal(aligned.find(r => r.footprint_in === 6.0).summary.mean_planned_blocked, 0, '6 in robot flags none');
-console.log(`Verified avoid v11: planned-blocked falls ${aligned.find(r => r.footprint_in === 10.0).summary.mean_planned_blocked} -> ${aligned.find(r => r.footprint_in === 6.0).summary.mean_planned_blocked} as footprint shrinks, yet contact-free stays 0 (entry/exit blends).`);
+console.log(`Verified avoid v11: planned-blocked falls ${aligned.find(r => r.footprint_in === 10.0).summary.mean_planned_blocked} -> ${aligned.find(r => r.footprint_in === 6.0).summary.mean_planned_blocked} as footprint shrinks, yet contact-free stays 0 (cause unmeasured — see ERRATA-2026-11.md).`);

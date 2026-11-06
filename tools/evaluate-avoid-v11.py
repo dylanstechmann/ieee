@@ -46,7 +46,7 @@ def main():
     results = []
     for width in WIDTHS:
         for cname, yaw_mode in CONDITIONS.items():
-            runs = [run_sensed(seed, obstacles=True, yaw_mode=yaw_mode, sense_obstacles=True,
+            runs = [run_sensed(seed, obstacles=True, yaw_mode=yaw_mode, replan_lanes=True,
                                footprint_in=width) for seed in SEEDS]
             results.append({"footprint_in": width, "condition": cname, "summary": summarize(runs)})
     lines = [

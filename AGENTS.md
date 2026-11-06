@@ -18,9 +18,14 @@ Cline, Codex, OpenCode, Kilo Code, Kimi Code and Grok share one setup:
 - Keys: `~/.config/ai-keys.env` via the `agentkeys` loader — never in git,
   MCP config or chat. Run `secrets-guard` (`--staged`) before committing.
 
-## Release habit
+## Release habit (owner preference — keep the showcase at the top)
+
+The GitHub front page is the `README.md` rendered at the top of the repo. The
+owner always wants the HTML that shows off the work/3D/etc. — the latest
+one-file showcase — on that front page, at the top, before any status detail.
+Never let the front page drift to text-only.
 
 After producing a new one-file showcase: add it to `share/`, point the README
-front-page “latest one-file showcase” line and the first “Start here” row at it,
-run `secrets-guard --staged`, commit, and push to `main`. Never overwrite
-earlier pinned showcase HTML files.
+front-page “latest one-file showcase” line and the first “Start here” row at it
+(both live at the top of the README), run `secrets-guard --staged`, commit, and
+push to `main`. Never overwrite earlier pinned showcase HTML files.

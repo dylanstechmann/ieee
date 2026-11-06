@@ -3,7 +3,7 @@
   "status": "agent-run synthetic study; not a robot test; tag/flag poses are assumptions",
   "input_hashes": {
     "tools/evaluate-full-mission-v11.py": "6a627c0233aec9007e4a39eee53ba7773672b3dbc6b285abdeaff9f9d4628f2b",
-    "software/stockcar/mission_sensed.py": "70927f5d471c10d704ef9f937227aa970105b098b24eb0c0bcad4d0bdbd450d6",
+    "software/stockcar/mission_sensed.py": "fa619a6532e907e84bd52285bde561d1962339be0b3e75e0be0deada0a3e93fd",
     "software/stockcar/mission.py": "346fb5c977fddaaad7d790afcb466beacb3f2beeebe01803befb9da004032678",
     "software/stockcar/supervisor.py": "15bf5e68a33428ac4db1a94e54b2c5fc44ff0280ccfc1fb6b4a54b37c3b701ec",
     "software/stockcar/lapmodel.py": "943296d5f461cfef67d29934ce4129d06ad5c59762b1ebdfd21b18c098ff14a6",

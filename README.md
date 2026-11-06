@@ -52,7 +52,7 @@ The latest one-file showcase is [`share/Showcase-v13.html`](share/Showcase-v13.h
 
 ## Sharable showcase release habit
 
-When a new one-file showcase is ready, follow this recurring habit so the GitHub front page always points at the latest showable page:
+When a new one-file showcase is ready, follow this recurring habit so the GitHub front page always shows the latest showable HTML at the top, before the status detail:
 
 1. Produce or refresh the one-file HTML (for v13: `node tools/build-showcase-v13.js`).
 2. Run the focused v13 tests plus `node tools/check-all.js`.
