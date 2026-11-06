@@ -4,8 +4,10 @@ const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypt
 const {build}=require('./constrained-field-v3'),{makeField,svg}=require('./navigation-v3'),{routesFor,primitives}=require('./differential-drive-v3');
 const {summarize,candidateAudit,passageCoordinates}=require('./connected-navigation-v3'),{evaluate,checkContract}=require('./contract-navigation-v3');
 const {metrics,summary:metricSummary}=require('./connected-candidate-summary-v3');
-// Some sealed v3 records contain an accidentally duplicated absolute repository root.
-const root=path.resolve(__dirname,'..'),resolve=f=>{const absolute=path.isAbsolute(f)?f:path.join(root,f),nested=path.join(root,path.basename(root));return absolute===nested?root:absolute.startsWith(nested+path.sep)?path.join(root,path.relative(nested,absolute)):absolute;},read=f=>JSON.parse(fs.readFileSync(resolve(f),'utf8')),hash=f=>crypto.createHash('sha256').update(fs.readFileSync(resolve(f))).digest('hex');
+// Some sealed v3 records contain an accidentally duplicated absolute repository root, and the repo
+// was renamed ieee -> roboticThingAvoidance, so historical /workspace/ieee prefixes are remapped to
+// wherever the repository now lives.
+const root=path.resolve(__dirname,'..'),resolve=f=>{if(!path.isAbsolute(f))return path.join(root,f);const nested=path.join(root,path.basename(root));if(f===nested)return root;if(f.startsWith(nested+path.sep))return path.join(root,path.relative(nested,f));const old=f.match(/^\/workspace\/ieee(?:\/ieee)?\/(.*)$/);return old?path.join(root,old[1]):f;},read=f=>JSON.parse(fs.readFileSync(resolve(f),'utf8')),hash=f=>crypto.createHash('sha256').update(fs.readFileSync(resolve(f))).digest('hex');
 const r=read('derived/connected-navigation-v3/report.json'),manifest=read('derived/connected-navigation-v3/baseline-manifest.json'),source=read('constrained-field-v3.json'),model=build(source,read(source.trace_file));
 const sourceAudit=read('derived/connected-navigation-v3/obstacle-source-audit.json');assert.equal(hash(sourceAudit.source),sourceAudit.sha256);assert.equal(hash(sourceAudit.appendix_image.path),sourceAudit.appendix_image.sha256);
 const xml=require('node:child_process').execFileSync('unzip',['-p',resolve(sourceAudit.source),'word/document.xml'],{encoding:'utf8',maxBuffer:8000000});

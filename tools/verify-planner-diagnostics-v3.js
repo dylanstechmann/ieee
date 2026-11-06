@@ -6,8 +6,10 @@ const {checkContract,evaluate}=require('./contract-navigation-v3');
 const {build}=require('./constrained-field-v3');
 const {makeField}=require('./navigation-v3');
 const {primitives}=require('./differential-drive-v3');
-// Some sealed v3 records contain an accidentally duplicated absolute repository root.
-const root=path.resolve(__dirname,'..'),resolve=f=>{const absolute=path.isAbsolute(f)?f:path.join(root,f),nested=path.join(root,path.basename(root));return absolute===nested?root:absolute.startsWith(nested+path.sep)?path.join(root,path.relative(nested,absolute)):absolute;},read=f=>JSON.parse(fs.readFileSync(resolve(f),'utf8'));
+// Some sealed v3 records contain an accidentally duplicated absolute repository root, and the repo
+// was renamed ieee -> roboticThingAvoidance, so historical /workspace/ieee prefixes are remapped to
+// wherever the repository now lives.
+const root=path.resolve(__dirname,'..'),resolve=f=>{if(!path.isAbsolute(f))return path.join(root,f);const nested=path.join(root,path.basename(root));if(f===nested)return root;if(f.startsWith(nested+path.sep))return path.join(root,path.relative(nested,f));const old=f.match(/^\/workspace\/ieee(?:\/ieee)?\/(.*)$/);return old?path.join(root,old[1]):f;},read=f=>JSON.parse(fs.readFileSync(resolve(f),'utf8'));
 const reportPath=path.join(root,'derived/planner-diagnostics-v3/report.json');
 const r=read('derived/planner-diagnostics-v3/report.json'),manifest=read('derived/planner-diagnostics-v3/baseline-manifest.json');
 const hash=f=>crypto.createHash('sha256').update(fs.readFileSync(resolve(f))).digest('hex');
