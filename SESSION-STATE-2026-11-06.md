@@ -134,12 +134,26 @@ Worked on branch `track1d-vehicle-sensing` (pushed). Both tracks landed:
 
 `node tools/check-all.js` passes (40/40 steps: node 293, software 193, firmware 72, all verifiers).
 
+## Track 3 — RL-vs-classical scaffold (done this session)
+
+- `software/stockcar/policies.py` — a policy protocol (`obs -> action | None`, where `None`
+  delegates to the supervised classical planner) with `Classical` (baseline) and `Random` (uniform)
+  implementations and a `POLICIES` registry that a trained policy later drops into.
+- `tools/evaluate-rl-v1.py` runs both policies through `MissionEnv` over the evaluation seeds
+  100-119 and seals `derived/rl-v1/` (report, summary, manifest): completion, total reward, steps,
+  score-like and contact steps. Classical completes 20/20 (mean total reward +44.5, score-like
+  267.75); random completes 0/20 (mean −8.2) and auto-stops. No RL policy has been trained.
+  `tools/verify-rl-v1.js` and `tests/rl-v1.test.js` verify the package.
+- Owner-facing summary refreshed: README "Status" and `PROJECT-STATUS.md` describe the sensing,
+  estimation and RL-scaffold work alongside the still-open physical gates.
+
 ## Next
 
-See `implementation_plan.md`; the previous plan is archived at
-`docs/plans/implementation-plan-v14-history.md`.
-
-- **Track 3** — RL scaffold + owner-facing summary (deferred by design).
-- The lap-line model (`LapLineDetector`) exists but stays unwired until the v10 route transitions are
+- Ask the owner whether to merge `track1d-vehicle-sensing` into `main` (it also carries the
+  `roboticThingAvoidance` rename).
+- The lap-line model (`LapLineDetector`) stays unwired until the v10 route transitions are
   refactored, because `checker_crossing` is currently keyed off route completion, not the literal line.
-- Ask the owner whether to merge `track1d-vehicle-sensing` into `main`.
+- Wire `EstimatorBoard` into `main.py` once a real pose source exists on the board (no safe
+  synthetic path yet, per the process notes).
+- A trained RL policy can now replace `Random` in `software/stockcar/policies.py` and be compared
+  against `Classical` through the same `derived/rl-v1` harness.

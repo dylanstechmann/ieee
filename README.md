@@ -8,14 +8,18 @@ This project is separate from the FAU team's own work. Roles, gates and dates in
 
 The latest one-file showcase is [`share/Showcase-v13.html`](share/Showcase-v13.html) — the v13 source-evidenced 3D CAD assembly and continuous-joint live contact study. Open it in a modern desktop browser; for iPhone, see `share/HOST-V13.txt`.
 
-## Status — November 4, 2026
+## Status — November 6, 2026
 
 - **Physical work: none yet.** No parts are ordered, no practice field is built, no organizer Q&A has been posted and no robot has been tested.
 - **Rules:** the V3.0 manuals are reviewed. The score model is 390 robot points + 10 publicity. V3.1 (start-flag details) is announced but not posted.
 - **Hardware:** a drivetrain test mule (Order A, $177.25 researched) has been checked against Pololu's own CAD. That check found a 7 mm motor-shaft offset that the original mule kit missed. The corrected shaft-down mule deck is drawn in `derived/drivetrain-mule-v10/`, with a drill template, STEP/STL and caliper-driven regeneration; it is not yet printed. No competition chassis exists yet.
 - **Software (all simulated):** the v10 work runs on the organizer's CAD field. Whole missions chain the supervisor, mission driver, route files, path tracker, pose estimator and the firmware's control loop on a corrected drivetrain model, and all 91 evaluation missions finished and parked (`derived/full-mission-v10/`).
 
-  **Known limits:** the simulated robot passes straight through vehicles, the camera, start flag and lap line are not modeled, and nothing has run on a board. Parameters are placeholders until bench and field measurements replace them.
+  **Sensing and estimation (Tracks 1–2):** the AprilTag (pit box) and start flag are now sensed through camera models in an opt-in mission subclass, vehicle contacts are attributed by phase (`derived/avoid-v12/`), and the EKF estimator has a firmware port (`firmware/pico2/estimator.py`) that matches the host filter. The avoid-v12 sweep finds the binding constraint is the 10 in robot envelope against guide-size vehicles — no blend timing made a run contact-free — not the planner.
+
+  **Reinforcement learning (Track 3):** an RL-vs-classical evaluation scaffold (`derived/rl-v1/`) runs the supervised planner as the classical baseline through the gym-style `MissionEnv`. No RL policy has been trained.
+
+  **Known limits:** the base model tells the robot the vehicle positions; a sensed subclass sees only an assumed-size near face. The lap line is modeled but not yet wired into the route, the board estimator is not wired into `main.py`, and nothing has run on a board. Parameters are placeholders until bench and field measurements replace them.
 
   The older v9 simulator (`software/mission_v9.py`) stays frozen. Its nominal runs have no obstacles, its obstacle stand-in is about half size, and its 20 seeds are 3 deterministic runs.
 
