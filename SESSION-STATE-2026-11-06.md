@@ -114,15 +114,32 @@ The Track 1c section above overstates the work, and **Track 1 is not complete**.
   `ba3d014`) are on `main` too, and this handoff has no record of the owner approving them. Nothing has
   been rewritten; the owner decides what to do about it.
 
+## Track 1d and Track 2 (done this session)
+
+Worked on branch `track1d-vehicle-sensing` (pushed). Both tracks landed:
+
+- **Track 1d** — `software/stockcar/contact_attribution.py` (phase attribution), `lane_profile.py`
+  (vehicle-timed lateral profiles), `sensors_vehicle.py` (range-ring + `VehicleMap`), and
+  `mission_avoid.py` (`AvoidingMissionSim` with lane sources `v10_blend` / `oracle` / `sensed`), each
+  with a unit-test file. `derived/avoid-v12/` is sealed (36 cells, 720 runs) with
+  `tools/evaluate-avoid-v12.py`, `tools/verify-avoid-v12.js` and `tests/avoid-v12.test.js`. Result: the
+  blends carry most contacts, but vehicle-timed blends do not raise the contact-free rate (see
+  `ERRATA-2026-11.md`).
+- **Track 2** — `firmware/pico2/geom.py`, `firmware/pico2/estimator.py` (`EstimatorBoard`),
+  `firmware/pico2/field_tables.py` + `tools/build_field_tables.py`;
+  `firmware/host_tests/sensor_fakes.py`, `test_estimator_port.py`, `test_estimator_float32.py`,
+  `test_estimator_in_mission.py`; sensor stubs in `firmware/pico2/hal.py` and a `firmware/README.md`
+  update. The port matches the host filter (parity + float32 + in-mission) but is not wired into
+  `main.py`.
+
+`node tools/check-all.js` passes (40/40 steps: node 293, software 193, firmware 72, all verifiers).
+
 ## Next
 
 See `implementation_plan.md`; the previous plan is archived at
 `docs/plans/implementation-plan-v14-history.md`.
 
-- **Track 1d** — measure where contacts happen, test the blend hypothesis with a counterfactual, then add
-  real vehicle sensing. Work on a feature branch, not `main`.
-- **Track 2** — EKF port to `firmware/pico2/estimator.py` (+ new host parity test) and HAL stubs; only
-  unpinned firmware files (`hal.py`, `main.py`, new files) are safe to touch.
 - **Track 3** — RL scaffold + owner-facing summary (deferred by design).
 - The lap-line model (`LapLineDetector`) exists but stays unwired until the v10 route transitions are
   refactored, because `checker_crossing` is currently keyed off route completion, not the literal line.
+- Ask the owner whether to merge `track1d-vehicle-sensing` into `main`.

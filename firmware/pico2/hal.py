@@ -62,3 +62,16 @@ class PicoHal:
         if config.BATTERY_DIVIDER_RATIO is None:
             return None
         return self.battery.read_u16() / 65535 * 3.3 * config.BATTERY_DIVIDER_RATIO
+
+    # Sensor reads wait for Order B hardware and bench-lead review; nothing in main.py calls them yet.
+    def read_gyro(self):
+        raise NotImplementedError("gyro/IMU driver not chosen")
+
+    def read_reflectance(self):
+        raise NotImplementedError("reflectance array driver not chosen")
+
+    def read_ranges(self):
+        raise NotImplementedError("vehicle-detection ring driver not chosen")
+
+    def read_camera(self):
+        raise NotImplementedError("camera/apriltag interface not chosen")

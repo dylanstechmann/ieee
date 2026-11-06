@@ -29,7 +29,10 @@
 | `pico2/main.py` | Boot to IDLE; `main.bench()` from the REPL |
 | `mission_driver.py` | Turns the supervisor's phases into routes and spins; needs no hardware, and `main.py` deliberately cannot start it yet |
 | `route_store.py` | Reads the packed route files, one at a time |
-| `host_tests/` | 67 CPython tests: safety latch, auto-stop, watchdog, controller, drive shaping, all 16 encoder transitions, ring buffer, a full simulated bench run, MicroPython lint, bench tools, and the real control loop against the corrected drivetrain model (`plant_hal.py`), including whole laps and pit legs (`route_follow.py`) and whole missions (`full_mission.py`) |
+| `geom.py` | MicroPython-safe planar geometry and 4×4 matrix helpers for the on-board EKF |
+| `estimator.py` | On-board EKF port (`EstimatorBoard`) of `software/stockcar/estimator.py`; not wired into `main.py` |
+| `field_tables.py` | Generated static map (barrier polygons, marking band) and estimator constants (`tools/build_field_tables.py`) |
+| `host_tests/` | 72 CPython tests: safety latch, auto-stop, watchdog, controller, drive shaping, all 16 encoder transitions, ring buffer, a full simulated bench run, MicroPython lint, bench tools, and the real control loop against the corrected drivetrain model (`plant_hal.py`), including whole laps and pit legs (`route_follow.py`) and whole missions (`full_mission.py`) |
 
 The plant-backed tests catch control bugs, but their friction, mass and inertia values are placeholders, so passing them does not show that the gains suit a real robot. The motion limits in `config.py` come from the conservative envelope in `../derived/envelope-v10/`. Replace them after the E03 floor trials.
 
@@ -47,7 +50,7 @@ Each encoder uses one PIO state machine. It counts rising edges of channel A, ta
 1. Install the MicroPython UF2 for the Raspberry Pi Pico 2 (RP2350) from micropython.org. Record the version.
 2. Copy `pico2/*.py` to the board with Thonny or `mpremote cp`.
 
-The bench work needs only those files. `python -I tools/build_pico_bundle.py OUT_DIR` builds the larger folder for later mission work: the firmware, `supervisor.py`, `tracker.py` and the packed routes. It has not been tried on a board, and it has no estimator yet.
+The bench work needs only those files. `python -I tools/build_pico_bundle.py OUT_DIR` builds the larger folder for later mission work: the firmware, `supervisor.py`, `tracker.py` and the packed routes. It has not been tried on a board. An on-board EKF port (`pico2/estimator.py`) plus its static map (`pico2/field_tables.py`) is present and host-parity-tested, but it is not wired into `main.py` — no sensor driver exists yet, so `main.py` still boots to IDLE only.
 
 This container runs under WSL2 and normally cannot see the Pico's USB serial port without usbipd-win. Logs therefore move as files.
 

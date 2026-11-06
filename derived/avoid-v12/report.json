@@ -1,0 +1,939 @@
+{
+ "version": "0.12.0",
+ "date": "2026-11-06",
+ "status": "agent-run synthetic study; poses/footprints/blends and vehicle size are assumptions",
+ "seeds": [
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  108,
+  109,
+  110,
+  111,
+  112,
+  113,
+  114,
+  115,
+  116,
+  117,
+  118,
+  119
+ ],
+ "results": [
+  {
+   "lane_source": "v10_blend",
+   "yaw_mode": "aligned",
+   "footprint_in": 10.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 24,
+   "mean_infeasible_vehicles": 0.0,
+   "attribution": {
+    "arc": 939,
+    "entry_blend": 4266,
+    "exit_blend": 3171,
+    "lane_change": 352,
+    "lane_hold": 2247
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "v10_blend",
+   "yaw_mode": "aligned",
+   "footprint_in": 10.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 26,
+   "mean_infeasible_vehicles": 0.0,
+   "attribution": {
+    "arc": 920,
+    "entry_blend": 4249,
+    "exit_blend": 3191,
+    "lane_change": 362,
+    "lane_hold": 2239
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "v10_blend",
+   "yaw_mode": "aligned",
+   "footprint_in": 8.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 18,
+   "mean_infeasible_vehicles": 0.0,
+   "attribution": {
+    "arc": 587,
+    "entry_blend": 4123,
+    "exit_blend": 3263,
+    "lane_change": 958,
+    "lane_hold": 976
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "v10_blend",
+   "yaw_mode": "aligned",
+   "footprint_in": 8.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 19,
+   "mean_infeasible_vehicles": 0.0,
+   "attribution": {
+    "arc": 579,
+    "entry_blend": 4138,
+    "exit_blend": 3286,
+    "lane_change": 946,
+    "lane_hold": 995
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "v10_blend",
+   "yaw_mode": "aligned",
+   "footprint_in": 6.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 0,
+   "mean_infeasible_vehicles": 0.0,
+   "attribution": {
+    "arc": 283,
+    "entry_blend": 3488,
+    "exit_blend": 2576,
+    "lane_change": 666,
+    "lane_hold": 124
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "v10_blend",
+   "yaw_mode": "aligned",
+   "footprint_in": 6.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 0,
+   "mean_infeasible_vehicles": 0.0,
+   "attribution": {
+    "arc": 291,
+    "entry_blend": 3496,
+    "exit_blend": 2558,
+    "lane_change": 620,
+    "lane_hold": 134
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "v10_blend",
+   "yaw_mode": "random",
+   "footprint_in": 10.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 9,
+   "mean_infeasible_vehicles": 0.0,
+   "attribution": {
+    "arc": 757,
+    "entry_blend": 4046,
+    "exit_blend": 3192,
+    "lane_hold": 3462
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "v10_blend",
+   "yaw_mode": "random",
+   "footprint_in": 10.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 9,
+   "mean_infeasible_vehicles": 0.0,
+   "attribution": {
+    "arc": 767,
+    "entry_blend": 4038,
+    "exit_blend": 3190,
+    "lane_hold": 3464
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "v10_blend",
+   "yaw_mode": "random",
+   "footprint_in": 8.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 9,
+   "mean_infeasible_vehicles": 0.0,
+   "attribution": {
+    "arc": 355,
+    "entry_blend": 3947,
+    "exit_blend": 3190,
+    "lane_change": 86,
+    "lane_hold": 1978
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "v10_blend",
+   "yaw_mode": "random",
+   "footprint_in": 8.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 8,
+   "mean_infeasible_vehicles": 0.0,
+   "attribution": {
+    "arc": 362,
+    "entry_blend": 3988,
+    "exit_blend": 3152,
+    "lane_change": 160,
+    "lane_hold": 1980
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "v10_blend",
+   "yaw_mode": "random",
+   "footprint_in": 6.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 9,
+   "mean_infeasible_vehicles": 0.0,
+   "attribution": {
+    "arc": 140,
+    "entry_blend": 3766,
+    "exit_blend": 2881,
+    "lane_change": 116,
+    "lane_hold": 303
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "v10_blend",
+   "yaw_mode": "random",
+   "footprint_in": 6.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 8,
+   "mean_infeasible_vehicles": 0.0,
+   "attribution": {
+    "arc": 139,
+    "entry_blend": 3756,
+    "exit_blend": 2870,
+    "lane_change": 134,
+    "lane_hold": 294
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "oracle",
+   "yaw_mode": "aligned",
+   "footprint_in": 10.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 21,
+   "mean_infeasible_vehicles": 2.2,
+   "attribution": {
+    "arc": 914,
+    "entry_blend": 3838,
+    "exit_blend": 3386,
+    "lane_hold": 2876
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "oracle",
+   "yaw_mode": "aligned",
+   "footprint_in": 10.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 22,
+   "mean_infeasible_vehicles": 2.2,
+   "attribution": {
+    "arc": 914,
+    "entry_blend": 3840,
+    "exit_blend": 3383,
+    "lane_hold": 2863
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "oracle",
+   "yaw_mode": "aligned",
+   "footprint_in": 8.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 18,
+   "mean_infeasible_vehicles": 1.65,
+   "attribution": {
+    "arc": 560,
+    "entry_blend": 3384,
+    "exit_blend": 3298,
+    "lane_hold": 1781
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "oracle",
+   "yaw_mode": "aligned",
+   "footprint_in": 8.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 18,
+   "mean_infeasible_vehicles": 1.65,
+   "attribution": {
+    "arc": 555,
+    "entry_blend": 3401,
+    "exit_blend": 3340,
+    "lane_hold": 1780
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "oracle",
+   "yaw_mode": "aligned",
+   "footprint_in": 6.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 6,
+   "mean_infeasible_vehicles": 1.3,
+   "attribution": {
+    "arc": 300,
+    "entry_blend": 2452,
+    "exit_blend": 2381,
+    "lane_hold": 566
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "oracle",
+   "yaw_mode": "aligned",
+   "footprint_in": 6.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 6,
+   "mean_infeasible_vehicles": 1.3,
+   "attribution": {
+    "arc": 296,
+    "entry_blend": 2448,
+    "exit_blend": 2381,
+    "lane_hold": 567
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "oracle",
+   "yaw_mode": "random",
+   "footprint_in": 10.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 3,
+   "mean_infeasible_vehicles": 2.7,
+   "attribution": {
+    "arc": 761,
+    "entry_blend": 3952,
+    "exit_blend": 3258,
+    "lane_hold": 3589
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "oracle",
+   "yaw_mode": "random",
+   "footprint_in": 10.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 4,
+   "mean_infeasible_vehicles": 2.7,
+   "attribution": {
+    "arc": 770,
+    "entry_blend": 3946,
+    "exit_blend": 3260,
+    "lane_hold": 3600
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "oracle",
+   "yaw_mode": "random",
+   "footprint_in": 8.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 6,
+   "mean_infeasible_vehicles": 2.45,
+   "attribution": {
+    "arc": 371,
+    "entry_blend": 3637,
+    "exit_blend": 3561,
+    "lane_hold": 2364
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "oracle",
+   "yaw_mode": "random",
+   "footprint_in": 8.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 6,
+   "mean_infeasible_vehicles": 2.45,
+   "attribution": {
+    "arc": 367,
+    "entry_blend": 3695,
+    "exit_blend": 3563,
+    "lane_hold": 2356
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "oracle",
+   "yaw_mode": "random",
+   "footprint_in": 6.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 6,
+   "mean_infeasible_vehicles": 2.05,
+   "attribution": {
+    "arc": 152,
+    "entry_blend": 3241,
+    "exit_blend": 3318,
+    "lane_hold": 1040
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "oracle",
+   "yaw_mode": "random",
+   "footprint_in": 6.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 20,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    0
+   ],
+   "laps_with_vehicle_contact": 60,
+   "laps_with_wall_contact": 6,
+   "mean_infeasible_vehicles": 2.05,
+   "attribution": {
+    "arc": 155,
+    "entry_blend": 3200,
+    "exit_blend": 3288,
+    "lane_hold": 1025
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "sensed",
+   "yaw_mode": "aligned",
+   "footprint_in": 10.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 19,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    1
+   ],
+   "laps_with_vehicle_contact": 59,
+   "laps_with_wall_contact": 7,
+   "mean_infeasible_vehicles": 7.75,
+   "attribution": {
+    "arc": 872,
+    "entry_blend": 4064,
+    "exit_blend": 4018,
+    "lane_hold": 4079
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "sensed",
+   "yaw_mode": "aligned",
+   "footprint_in": 10.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 18,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    1
+   ],
+   "laps_with_vehicle_contact": 59,
+   "laps_with_wall_contact": 8,
+   "mean_infeasible_vehicles": 7.85,
+   "attribution": {
+    "arc": 856,
+    "entry_blend": 3999,
+    "exit_blend": 5391,
+    "lane_hold": 4466
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "sensed",
+   "yaw_mode": "aligned",
+   "footprint_in": 8.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 16,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    2
+   ],
+   "laps_with_vehicle_contact": 58,
+   "laps_with_wall_contact": 13,
+   "mean_infeasible_vehicles": 7.9,
+   "attribution": {
+    "arc": 549,
+    "entry_blend": 4143,
+    "exit_blend": 2981,
+    "lane_hold": 4552
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "sensed",
+   "yaw_mode": "aligned",
+   "footprint_in": 8.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 16,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    1
+   ],
+   "laps_with_vehicle_contact": 59,
+   "laps_with_wall_contact": 8,
+   "mean_infeasible_vehicles": 8.05,
+   "attribution": {
+    "arc": 540,
+    "entry_blend": 4197,
+    "exit_blend": 3191,
+    "lane_hold": 6115
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "sensed",
+   "yaw_mode": "aligned",
+   "footprint_in": 6.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 14,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    4
+   ],
+   "laps_with_vehicle_contact": 56,
+   "laps_with_wall_contact": 6,
+   "mean_infeasible_vehicles": 8.0,
+   "attribution": {
+    "arc": 257,
+    "entry_blend": 3744,
+    "exit_blend": 2509,
+    "lane_hold": 3407
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "sensed",
+   "yaw_mode": "aligned",
+   "footprint_in": 6.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 14,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    5
+   ],
+   "laps_with_vehicle_contact": 55,
+   "laps_with_wall_contact": 4,
+   "mean_infeasible_vehicles": 8.05,
+   "attribution": {
+    "arc": 252,
+    "entry_blend": 3194,
+    "exit_blend": 2324,
+    "lane_hold": 8201
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "sensed",
+   "yaw_mode": "random",
+   "footprint_in": 10.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 18,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    2
+   ],
+   "laps_with_vehicle_contact": 58,
+   "laps_with_wall_contact": 15,
+   "mean_infeasible_vehicles": 8.7,
+   "attribution": {
+    "arc": 747,
+    "entry_blend": 3929,
+    "exit_blend": 3536,
+    "lane_hold": 5747
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "sensed",
+   "yaw_mode": "random",
+   "footprint_in": 10.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 18,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    2
+   ],
+   "laps_with_vehicle_contact": 58,
+   "laps_with_wall_contact": 14,
+   "mean_infeasible_vehicles": 8.35,
+   "attribution": {
+    "arc": 739,
+    "entry_blend": 3949,
+    "exit_blend": 3461,
+    "lane_hold": 5456
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "sensed",
+   "yaw_mode": "random",
+   "footprint_in": 8.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 18,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    1
+   ],
+   "laps_with_vehicle_contact": 59,
+   "laps_with_wall_contact": 13,
+   "mean_infeasible_vehicles": 8.75,
+   "attribution": {
+    "arc": 367,
+    "entry_blend": 4144,
+    "exit_blend": 3897,
+    "lane_hold": 4703
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "sensed",
+   "yaw_mode": "random",
+   "footprint_in": 8.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 17,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    1
+   ],
+   "laps_with_vehicle_contact": 59,
+   "laps_with_wall_contact": 11,
+   "mean_infeasible_vehicles": 8.45,
+   "attribution": {
+    "arc": 359,
+    "entry_blend": 4025,
+    "exit_blend": 3854,
+    "lane_hold": 6658
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "sensed",
+   "yaw_mode": "random",
+   "footprint_in": 6.0,
+   "pose_mode": "true_pose",
+   "runs": 20,
+   "completed": 18,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    1
+   ],
+   "laps_with_vehicle_contact": 59,
+   "laps_with_wall_contact": 7,
+   "mean_infeasible_vehicles": 9.0,
+   "attribution": {
+    "arc": 140,
+    "entry_blend": 4012,
+    "exit_blend": 3742,
+    "lane_hold": 3858
+   },
+   "misses": 0,
+   "false_positives": 0
+  },
+  {
+   "lane_source": "sensed",
+   "yaw_mode": "random",
+   "footprint_in": 6.0,
+   "pose_mode": "ekf_pose",
+   "runs": 20,
+   "completed": 16,
+   "contact_free_runs": 0,
+   "contact_free_laps": [
+    0,
+    0,
+    2
+   ],
+   "laps_with_vehicle_contact": 58,
+   "laps_with_wall_contact": 5,
+   "mean_infeasible_vehicles": 8.45,
+   "attribution": {
+    "arc": 147,
+    "entry_blend": 3607,
+    "exit_blend": 3339,
+    "lane_hold": 4646
+   },
+   "misses": 0,
+   "false_positives": 0
+  }
+ ]
+}
