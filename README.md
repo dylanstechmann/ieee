@@ -6,6 +6,8 @@ Most planning, simulation and software here were developed with AI assistance ac
 
 This project is separate from the FAU team's own work. Roles, gates and dates in these documents are planning suggestions, not team decisions.
 
+The latest one-file showcase is [`share/Showcase-v13.html`](share/Showcase-v13.html) — the v13 source-evidenced 3D CAD assembly and continuous-joint live contact study. Open it in a modern desktop browser; for iPhone, see `share/HOST-V13.txt`.
+
 ## Status — November 4, 2026
 
 - **Physical work: none yet.** No parts are ordered, no practice field is built, no organizer Q&A has been posted and no robot has been tested.
@@ -21,6 +23,7 @@ This project is separate from the FAU team's own work. Roles, gates and dates in
 
 | To... | Open |
 |---|---|
+| See the latest showable page (v13 in 3D with live contact study) | [`share/Showcase-v13.html`](share/Showcase-v13.html) — desktop browser; iPhone: `share/HOST-V13.txt` |
 | See the plan, gates and dates to April | `BACKCAST-2026-11.md` |
 | Build the practice field | `derived/practice-field-v10/` (materials, layout coordinates, as-built template), from the organizer CAD in `derived/organizer-cad-v10/` |
 | Build the drivetrain mule | `derived/drivetrain-mule-v10/` (shaft-down deck, risers, fit report, inspection templates) |
