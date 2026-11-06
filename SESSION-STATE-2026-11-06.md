@@ -36,9 +36,26 @@ ahead, 2 behind), and a large set of v11–v13 showcase/CAD artifacts (`cad-v13/
 - `4442b80` consolidate v11-v13 source-evidenced showcase: CAD sources, derived artifacts, docs, tests and tools
 - `ecdbc7f` merge main: reconcile v13 showcase release and shared release habit (now `main` and `origin/main`)
 
+## Track 1a — sensed game-element observations (done)
+
+Added camera-based sensor models and wired the AprilTag (pit box) and start flag into the mission so the
+supervisor senses them instead of being told:
+
+- `software/stockcar/sensors_camera.py` — `CameraModel` (tag read within a range/FOV envelope),
+  `StartFlagModel` (visibility gated flag state), `LapLineDetector` (checkered-opening edge from the real
+  `field-v10.json` `checker_band`). Tag/flag poses are documented assumptions (QA02/QA08 open).
+- `software/stockcar/mission_sensed.py` — `SensedMissionSim(MissionSim)`: an opt-in subclass that feeds
+  `tag_id`/`flag_up` through the camera models. This is a **subclass, not an edit of `mission.py`**, which
+  is a pinned input of five sealed v10 packages and was left byte-identical (SHA-256 `346fb5c9…`).
+- `software/stockcar/tests/test_sensing_camera.py` — unit tests plus a sensed-mission integration test that
+  completes three laps and resolves its box from tag votes.
+
+`node tools/check-all.js` passes (36/36); `software` suite is now 151 tests.
+
 ## Next
 
-Track 1 — fully-sensed, obstacle-aware mission simulator (per `implementation_plan.md`):
-camera/AprilTag, start-flag and lap-line sensor models, vehicle collision detection, and a
-sensed-obstacle avoidance layer, producing sealed `derived/sensing-v11/` and
-`derived/full-mission-v11/` packages. The sealed v10 outputs must remain byte-identical.
+Track 1 continued (per `implementation_plan.md`): a sensed **vehicle** detection + avoidance layer and
+sealed `derived/sensing-v11/` / `derived/full-mission-v11/` packages; then Track 2 (board-side estimator).
+The lap-line model exists but is not yet wired into the mission, because the v10 route transitions key
+`checker_crossing` off route completion rather than the literal checkered line — that needs a route
+refactor and its own validation.
