@@ -85,12 +85,29 @@ Reading the sealed manifests shows the pinned v10 inputs **include** `mission.py
 `collision.py`, `avoidance.py` do). Do not edit pinned files; every new study goes in a new versioned
 package.
 
+## Track 1c — avoidance wiring + contact-free decomposition (done)
+
+- `avoidance.py` gained `plan_straight(field, vehicles, side, default_y, robot_width, margin)` (plus an
+  `AvoidancePlanner` wrapper): a lane plan read from *sensed* vehicle positions that mirrors `lane_plan`'s
+  return shape and is **byte-identical to `lane_plan` at the v10 defaults (40/40 parity)**.
+- `SensedMissionSim` gained `sense_obstacles` (build lap lanes via `plan_straight`) and `footprint_in`
+  (override the assumed square robot size), with `build_routes`/`_footprint` overridden — no pinned file
+  edited.
+- `derived/avoid-v11/` (240 runs) sweeps the footprint 10.0→6.0 in. **Key finding:** contact-free runs stay
+  0 even though the planner's blocked-straight count falls 2.1→0 — because the lap route's fixed 12-inch
+  entry/exit blends from lane-centre sweep through vehicles placed near the straightaway ends. So the
+  contact-free ≈ 0% bound has **two independent geometric causes** (10-in envelope; fixed entry blends),
+  neither a planner bug. Fix = measure the real robot and revise route construction.
+- `software` suite now 162 tests; `check-all` passes 39/39. NOTE: `derived/full-mission-v11/manifest.json`
+  was re-sealed in this step (its `mission_sensed.py` input hash moved); its report/summary are unchanged.
+
 ## Next
 
-- **Track 1c** — wire `avoidance.py` into the subclass's route target so a vehicle is routed *around*
-  (not just stopped at), and re-seal `full-mission-v11` to show contact-free runs rising above 0.
 - **Track 2** — EKF port to `firmware/pico2/estimator.py` (+ new host parity test) and HAL stubs; only
   unpinned firmware files (`hal.py`, `main.py`, new files) are safe to touch.
 - **Track 3** — RL scaffold + owner-facing summary (deferred by design).
+- **Follow-up (needs a decision):** the contact-free limit's second cause is the fixed 12-in entry/exit
+  blend in the pinned `mission.py::straight`/`lane_y`, which sweeps through vehicles near the arc exits.
+  Revising route construction is a *route-model* change (QA05/QA06) and needs owner input before editing.
 - The lap-line model (`LapLineDetector`) exists but stays unwired until the v10 route transitions are
   refactored, because `checker_crossing` is currently keyed off route completion, not the literal line.

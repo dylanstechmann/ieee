@@ -1,0 +1,181 @@
+{
+ "version": "0.11.0",
+ "date": "2026-11-06",
+ "status": "agent-run synthetic study; robot/vehicle footprints and route blends are assumptions",
+ "seeds": [
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  108,
+  109,
+  110,
+  111,
+  112,
+  113,
+  114,
+  115,
+  116,
+  117,
+  118,
+  119
+ ],
+ "widths_in": [
+  10.0,
+  9.0,
+  8.5,
+  8.0,
+  7.0,
+  6.0
+ ],
+ "results": [
+  {
+   "footprint_in": 10.0,
+   "condition": "aligned_vehicles",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "contact_free_runs": 0,
+    "laps_with_vehicle_contact": 60,
+    "laps_with_wall_contact": 24,
+    "mean_planned_blocked": 2.1
+   }
+  },
+  {
+   "footprint_in": 10.0,
+   "condition": "random_yaw_vehicles",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "contact_free_runs": 0,
+    "laps_with_vehicle_contact": 60,
+    "laps_with_wall_contact": 9,
+    "mean_planned_blocked": 2.8
+   }
+  },
+  {
+   "footprint_in": 9.0,
+   "condition": "aligned_vehicles",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "contact_free_runs": 0,
+    "laps_with_vehicle_contact": 60,
+    "laps_with_wall_contact": 6,
+    "mean_planned_blocked": 1.65
+   }
+  },
+  {
+   "footprint_in": 9.0,
+   "condition": "random_yaw_vehicles",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "contact_free_runs": 0,
+    "laps_with_vehicle_contact": 60,
+    "laps_with_wall_contact": 15,
+    "mean_planned_blocked": 2.45
+   }
+  },
+  {
+   "footprint_in": 8.5,
+   "condition": "aligned_vehicles",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "contact_free_runs": 0,
+    "laps_with_vehicle_contact": 60,
+    "laps_with_wall_contact": 18,
+    "mean_planned_blocked": 1.25
+   }
+  },
+  {
+   "footprint_in": 8.5,
+   "condition": "random_yaw_vehicles",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "contact_free_runs": 0,
+    "laps_with_vehicle_contact": 60,
+    "laps_with_wall_contact": 21,
+    "mean_planned_blocked": 2.2
+   }
+  },
+  {
+   "footprint_in": 8.0,
+   "condition": "aligned_vehicles",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "contact_free_runs": 0,
+    "laps_with_vehicle_contact": 60,
+    "laps_with_wall_contact": 18,
+    "mean_planned_blocked": 0.8
+   }
+  },
+  {
+   "footprint_in": 8.0,
+   "condition": "random_yaw_vehicles",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "contact_free_runs": 0,
+    "laps_with_vehicle_contact": 60,
+    "laps_with_wall_contact": 9,
+    "mean_planned_blocked": 1.95
+   }
+  },
+  {
+   "footprint_in": 7.0,
+   "condition": "aligned_vehicles",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "contact_free_runs": 0,
+    "laps_with_vehicle_contact": 60,
+    "laps_with_wall_contact": 3,
+    "mean_planned_blocked": 0.2
+   }
+  },
+  {
+   "footprint_in": 7.0,
+   "condition": "random_yaw_vehicles",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "contact_free_runs": 0,
+    "laps_with_vehicle_contact": 60,
+    "laps_with_wall_contact": 24,
+    "mean_planned_blocked": 1.0
+   }
+  },
+  {
+   "footprint_in": 6.0,
+   "condition": "aligned_vehicles",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "contact_free_runs": 0,
+    "laps_with_vehicle_contact": 60,
+    "laps_with_wall_contact": 0,
+    "mean_planned_blocked": 0.0
+   }
+  },
+  {
+   "footprint_in": 6.0,
+   "condition": "random_yaw_vehicles",
+   "summary": {
+    "runs": 20,
+    "completed": 20,
+    "contact_free_runs": 0,
+    "laps_with_vehicle_contact": 60,
+    "laps_with_wall_contact": 9,
+    "mean_planned_blocked": 0.45
+   }
+  }
+ ]
+}
