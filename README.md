@@ -47,6 +47,17 @@ The latest one-file showcase is [`share/Showcase-v13.html`](share/Showcase-v13.h
 | View the robot and field in 3D, offline | `share/Robot-Studio-v8.html` (guide: `derived/robot-studio-v8/README.md`) |
 | Read older announcements and the October plan | `HISTORY.md` |
 
+## Sharable showcase release habit
+
+When a new one-file showcase is ready, follow this recurring habit so the GitHub front page always points at the latest showable page:
+
+1. Produce or refresh the one-file HTML (for v13: `node tools/build-showcase-v13.js`).
+2. Run the focused v13 tests plus `node tools/check-all.js`.
+3. Put the new HTML in `share/` (e.g. `share/Showcase-v13.html`) and keep earlier pinned showcase HTML files unchanged.
+4. Point this README's “latest one-file showcase” line and the first “Start here” row at the new file.
+5. Run `secrets-guard --staged`, commit, and push to `main`.
+6. Desktop reviewers open the HTML in a browser. iPhone reviewers need a hosted public URL; see `share/HOST-V13.txt`.
+
 ## Run the checks
 
 ```sh
