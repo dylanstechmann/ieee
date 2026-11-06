@@ -61,7 +61,19 @@ supervisor senses them instead of being told:
 - `SensedMissionSim` gained a `collision_stops` flag: the frame after any vehicle contact the robot halts
   instead of the v10 "continue gently" policy. `software` suite is now 158 tests.
 
-`node tools/check-all.js` still passes 36/36.
+## Track 1b — sealed sensing-v11 and full-mission-v11 packages (done)
+
+- `tools/evaluate-sensing-v11.py` → `derived/sensing-v11/`: characterises the camera models (tag/flag
+  read envelope from a 5,580-pose sweep) and the lap-line detector (1 rising edge per checkered opening,
+  0 in the divider gap). `tools/verify-sensing-v11.js` + `tests/sensing-v11.test.js`.
+- `tools/evaluate-full-mission-v11.py` → `derived/full-mission-v11/`: 180 runs (seeds 100-119 x
+  empty/aligned/random-yaw x truth/sensed/sensed_stop). Key results: **sensed matches truth exactly** (the
+  camera resolves the box/flag without costing the mission); with guide-size vehicles **0% of runs are
+  contact-free** (all 60 laps touch a vehicle — the QA03 risk is real); `sensed_stop` halts at the first
+  contact (1 contact lap/run) instead of scraping through all three. `tools/verify-full-mission-v11.js` +
+  `tests/full-mission-v11.test.js`.
+
+`node tools/check-all.js` passes 38/38.
 
 ## Important finding — sealing pins nearly every stockcar source file
 
@@ -75,10 +87,10 @@ package.
 
 ## Next
 
-- **Track 1b part 2** — wire `avoidance.py` into the subclass's route target (avoid, not just stop), and
-  generate/seal `derived/sensing-v11/` + `derived/full-mission-v11/` with contact-free / completion
-  reporting (new `tools/*-v11.*` + `tests/*-v11.test.js`, no edits to v10 inputs).
+- **Track 1c** — wire `avoidance.py` into the subclass's route target so a vehicle is routed *around*
+  (not just stopped at), and re-seal `full-mission-v11` to show contact-free runs rising above 0.
 - **Track 2** — EKF port to `firmware/pico2/estimator.py` (+ new host parity test) and HAL stubs; only
   unpinned firmware files (`hal.py`, `main.py`, new files) are safe to touch.
+- **Track 3** — RL scaffold + owner-facing summary (deferred by design).
 - The lap-line model (`LapLineDetector`) exists but stays unwired until the v10 route transitions are
   refactored, because `checker_crossing` is currently keyed off route completion, not the literal line.

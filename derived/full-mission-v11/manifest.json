@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-06",
+  "status": "agent-run synthetic study; not a robot test; tag/flag poses are assumptions",
+  "input_hashes": {
+    "tools/evaluate-full-mission-v11.py": "6a627c0233aec9007e4a39eee53ba7773672b3dbc6b285abdeaff9f9d4628f2b",
+    "software/stockcar/mission_sensed.py": "09c39b134b6d751751757fa625b0b33e047252d395c26c2a162ae888aa6a1435",
+    "software/stockcar/mission.py": "346fb5c977fddaaad7d790afcb466beacb3f2beeebe01803befb9da004032678",
+    "software/stockcar/supervisor.py": "15bf5e68a33428ac4db1a94e54b2c5fc44ff0280ccfc1fb6b4a54b37c3b701ec",
+    "software/stockcar/lapmodel.py": "943296d5f461cfef67d29934ce4129d06ad5c59762b1ebdfd21b18c098ff14a6",
+    "software/stockcar/passage.py": "adda10e8ca96830a8df0438d9e07c56ba976d54c01e9bae3ad8bb49332ad9e3d",
+    "software/stockcar/field.py": "67516673e3eee0ee5decb2186eacffce21723abc0bbf4f43db0a9b8e08029b68",
+    "software/stockcar/obstacles.py": "9caa806ed4a555df08721ca3cb9e74c7aeb65f9dbdadbc265fd20a74cf8776b1",
+    "software/stockcar/geometry.py": "424a5f211dff9afa22c4f366ba13b122ecd5960b803ac97b3538c2bf1ac35491",
+    "software/stockcar/sensors_camera.py": "c7882bb539add156e19f0f209b7f9c026517e6d802a7baf764e8909ee7a0bf75",
+    "derived/organizer-cad-v10/field-v10.json": "d3d7de9e9f7d257d6f4f095cb06836a6bb484861aeffca45cb96990dba4afdca"
+  },
+  "output_hashes": {
+    "report.json": "c663a2a89aac6cc441a7cea1843523a826da6552bfd20a268d79a13be2f028c0",
+    "summary.md": "b0a4438e371334b45e7270ad08400e543954c6be05c42bc103010db45e2ff9b8"
+  }
+}

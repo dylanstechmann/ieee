@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-06",
+  "status": "agent-run synthetic study; tag/flag poses are assumptions (QA02/QA08)",
+  "input_hashes": {
+    "tools/evaluate-sensing-v11.py": "9f96f804483fa16238370eec007524fae5b8d761fb1faa9e7eaaf95e019eee93",
+    "software/stockcar/sensors_camera.py": "c7882bb539add156e19f0f209b7f9c026517e6d802a7baf764e8909ee7a0bf75",
+    "software/stockcar/field.py": "67516673e3eee0ee5decb2186eacffce21723abc0bbf4f43db0a9b8e08029b68",
+    "software/stockcar/geometry.py": "424a5f211dff9afa22c4f366ba13b122ecd5960b803ac97b3538c2bf1ac35491",
+    "derived/organizer-cad-v10/field-v10.json": "d3d7de9e9f7d257d6f4f095cb06836a6bb484861aeffca45cb96990dba4afdca"
+  },
+  "output_hashes": {
+    "report.json": "389a8407b4148d64005bd77ded3d5b7df65f093f0f46ab8559e44e3e57728660",
+    "summary.md": "d5ac62a9dc08a6149954737a67b1bfd48a7d8f9ce1b5fc784301bb9e596e8fb5"
+  }
+}

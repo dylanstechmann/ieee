@@ -1,0 +1,30 @@
+{
+ "version": "0.11.0",
+ "date": "2026-11-06",
+ "status": "agent-run synthetic study; tag/flag poses are assumptions (QA02/QA08)",
+ "tag_pose_in": [
+  28.0,
+  39.0
+ ],
+ "flag_pose_in": [
+  30.0,
+  39.0
+ ],
+ "visibility": {
+  "samples": 5580,
+  "tag_reads": 687,
+  "tag_read_fraction": 0.123118,
+  "tag_range_in": {
+   "min": 1.13,
+   "max": 35.85,
+   "mean": 22.17
+  },
+  "flag_views": 709,
+  "flag_view_fraction": 0.127061
+ },
+ "lap_line": {
+  "low": 1,
+  "high": 1,
+  "gap": 0
+ }
+}
