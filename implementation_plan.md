@@ -1,101 +1,136 @@
 # Implementation Plan
 
-## Planning baseline (2026-11-07 — pre-execution, not the final publication report)
-
-The primary branch `world-ccw-line-sq-adv-align` is at `bcb162c`, synchronized with origin. Its RL-v3 seal was committed at `f691e18`, where `check-all` passed 43/43; `bcb162c` subsequently changed only `implementation_plan.md` and `SESSION-STATE-2026-11-07.md`. The working checkout is `world-ccw-line-rd-adv-align` at `19fa738`; the only pre-existing uncommitted path is this plan document.
-
-All six functional worlds have local seals. The current checkout and four siblings must replace diverged origin heads; primary is a fast-forward. Live `git ls-remote` confirmed these values:
-
-| branch | local sealed commit before close-out docs | current origin head | publication mechanism |
-|---|---|---|---|
-| `world-ccw-line-sq-adv-align` | `bcb162c` (seal at `f691e18`) | `bcb162c` | ordinary fast-forward push |
-| `world-ccw-gate-sq-adv-align` | `3e2d969` | `108fb7c` | explicit `--force-with-lease` |
-| `world-ccw-line-rd-adv-align` | `19fa738` | `ab361ee` | explicit `--force-with-lease` |
-| `world-ccw-gate-rd-adv-align` | `58c3a70` | `70ef6e2` | explicit `--force-with-lease` |
-| `world-ccw-line-sq-adv-yaw` | `44ad8bd` | `d639daf` | explicit `--force-with-lease` |
-| `world-cw-line-sq-adv-align` | `2d4e0d4` | `02f0479` | explicit `--force-with-lease` |
-
-Each sibling is three commits ahead and one behind its origin branch because it was re-cut from primary. No unconditional `git push -f` is permitted. The expected origin hash must be re-read immediately before publication and embedded in the lease so an unrelated remote update stops the push.
-
-Read-only Git-object audits established that every functional branch has exactly the five expected files under `derived/rl-v3/<its-own-world>/`, no other world's seal, the correct `DEFAULT_WORLD`, and valid manifest input/output hashes. The pinned simulator inputs are byte-identical across all six. `/tmp/stamp4.log` ended `ALL_DONE 03:30:36`, with commit and `verify-world.js` success for yaw, cw, gate-rd, and line-rd; gate-sq was stamped earlier and was independently checked in the Git-object audit. Full `check-all` has not run on the five newly stamped siblings.
-
-Training remains intentionally non-uniform and is not rerun: primary, gate-sq, yaw, and cw used 10 CEM generations; line-rd and gate-rd used 3 after remaining flat at fitness `28.980`. The measured learned outcomes are retained without claiming superiority over the classical baseline.
-
-The two missing branches are `world-ccw-line-sq-enf-align` and `world-ccw-line-sq-adv-small`. **The owner's confirmed Option B is structural branch coverage: publish all eight, while deferring QA04 `enforced` and QA03 `small` simulation semantics.** Their existing `NotImplementedError` behavior is intentional and must not be removed in this close-out.
-
-Pinned inputs must remain byte-identical: `software/stockcar/{mission.py, routes.py, field.py, obstacles.py, supervisor.py, lapmodel.py, passage.py, geometry.py, sensors.py, sensors_camera.py, estimator.py}` and `derived/organizer-cad-v10/field-v10.json`. `main` remains at `f56fb53`; promotion is outside this task and requires separate owner approval.
-
 [Overview]
 
-Complete and publish the eight-world ruleset branch strategy as six validated, sealed functional branches plus two explicitly deferred structural placeholder branches, without changing simulator behavior or `main`.
+Implement and publish the two remaining ruleset worlds—`world-ccw-line-sq-enf-align` and `world-ccw-line-sq-adv-small`—with explicit hypothetical semantics, focused regression coverage, independently trained/evaluated five-file RL-v3 seals, and passing full gates on both final branch tips.
 
-The close-out includes three mandatory documentation updates, final-tip validation, branch creation, and publication. It does **not** implement `enforced` or `small`, change training budgets, retrain policies, regenerate seals, weaken tests, or alter tool behavior. The six existing RL-v3 packages remain the exact artifacts audited during planning. Validation commands execute existing simulations; no simulator source is edited.
+The published baseline is eight synchronized branches: six functional sealed worlds and two structural placeholders. The placeholders start at `b6611e7adaa8c6ac50d9b60fcbe401f58508c981` (`enf-align`) and `556a5cd1598d06973ed5b2f5bd18bced7e366693` (`adv-small`). This work changes only those two branches. The other six world branches and `main` (`f56fb53c6d8dba72d5f00b8d8dbae5eff4b7f42c`) remain untouched; promotion is a separate owner decision.
 
-First create one documentation close-out commit `D` on primary containing this plan, `SESSION-STATE-2026-11-07.md`, and `docs/worlds.md`. Cherry-pick `D` onto each of the five functional siblings so no branch retains stale claims that its seal or tooling is absent. Cut both placeholders from `D`, so they inherit the same documentation, then change only `DEFAULT_WORLD` and remove the inherited primary seal. This produces a consistent final tree on every branch before validation begins.
+Two planning defaults must be confirmed when this plan is approved:
+- **QA04 `enforced`:** model only the two horizontal straightaway marking strips. Build lane-aware routes that prefer a legal common lane and then minimize lane changes, but preserve execution when no legal route exists by falling back to the baseline route and reporting that fallback. Measure footprint/strip contact, subtract `2.0` training-reward units per new contact entry, and keep `score_like` unchanged. End-turn marking segments and pit routes are excluded. This is not a hard-stop rule or an organizer ruling.
+- **QA03 `small`:** retain the existing hypothetical `8.0 × 4.0 in` aligned rectangular toy, explicitly labeled unverified. Do not substitute the unsourced `6.5 × 3.25 in` alternative or call either footprint an official measurement. `ruleset.SMALL_TOY` remains the single value to replace after a sourced ruling, followed by retraining/resealing.
 
-Run full, unskipped `check-all` sequentially on primary and all five functional siblings **after** their final documentation commits. Do not publish any close-out commit until all six final functional tips pass. Placeholders receive structural/expected-failure checks instead of a green-gate claim: missing seals and `NotImplementedError` are intentional, so their full `check-all` remains red at `tests/worlds.test.js` and `tools/verify-world.js`.
-
-Publish primary by fast-forward, siblings with explicit hash-valued `--force-with-lease`, and previously absent placeholders by ordinary non-force push. Verify all eight local and remote tips and the unchanged `main` head. The repository README budgets about five minutes per full gate, so allow roughly 35–50 minutes including six sequential gates, documentation, branch operations, and publication; do not run gates concurrently in one working tree.
+All behavior lands in unpinned world modules. No existing seal is regenerated, no training budget or seed partition changes, no policy architecture changes, and no new sensed-vehicle/avoidance-planner fidelity is claimed. Both seals use the existing 38-weight CEM policy, ten generations, training seeds 0–3, and evaluation seeds 100–119. Poor performance or frequent lane violations is evidence, not a reason to weaken assertions.
 
 [Types]
 
-No Python, JSON-schema, or JavaScript type changes. `software/stockcar/ruleset.py` and `worlds.json` already define all eight names and dimensions and remain unchanged.
-
-The branch-state contract is:
-
-| state | `DEFAULT_WORLD` | `derived/rl-v3/<world>/` | simulation | release gate |
-|---|---|---|---|---|
-| functional (6 branches) | branch's own world | five sealed files, hashes valid | existing implementation | full `check-all` must pass |
-| structural placeholder (`enf-align`, `adv-small`) | branch's own world | absent, including no inherited primary seal | existing `NotImplementedError` retained | expected red; not promotion-eligible |
+- Keep `ruleset.get(name)`'s existing dictionary schema and world names unchanged. `lane_rule == "enforced"` selects straightaway marking semantics; `obstacle == "small"` selects `SMALL_TOY`. Observations remain 18 floats, actions remain `(v_cmd, w_cmd)` in `[-1, 1]`, and learned weights remain 38 numbers.
+- `straight_marking_bands(field)` returns `{"low": quad, "high": quad}`. Each quad contains four `(x, y)` vertices from the corresponding outer/inner ring edges in `field.data["features"]["track_marking"]`. Only ring edges 1 (low straight) and 5 (high straight) are included; the six rounded/end segments are excluded.
+- `lane_bands(field)` returns physical y intervals `{"low": {"outer": (y0, y1), "inner": (y0, y1)}, "high": ...}` using wall/divider faces and exact straight marking edges. These are geometry inputs, not center positions.
+- The enforced planner returns `{"lanes": [(x0, x1, y), ...], "mode": str, "blocked": int, "planned_lane_changes": int, "infeasible_vehicles": int, "fallback": bool}`. `lanes` remains compatible with `mission.straight`; `blocked` retains the base simulator's planned-contact meaning.
+- Enforced telemetry adds `lane_violations` (new-contact entries), `lane_violation_steps` (three per-lap counters), and serializable per-side planning diagnostics. Reward penalty and competition-like score remain separate.
+- Enforced evaluation cells add nonnegative `total_lane_violations`, `total_lane_violation_steps`, and `runs_with_lane_plan_fallback`. No existing report field is removed or reinterpreted. Each world keeps the five-file seal schema: `trained-weights.json`, `training.json`, `report.json`, `summary.md`, and `manifest.json`.
 
 [Files]
 
-Documentation modified once on primary in close-out commit `D`, then cherry-picked to the five siblings and inherited by both placeholders:
+New files on both placeholder branches through one common implementation commit:
+- `/workspace/roboticThingAvoidance/software/stockcar/world_geometry.py`: exact straight-marking extraction, physical lane bands, convex footprint/strip contact, and lane-center interval helpers.
+- `/workspace/roboticThingAvoidance/software/stockcar/world_layouts.py`: shape-parameterized `WorldLayout` and RNG-compatible random layout generation without editing pinned `mission.py`.
+- `/workspace/roboticThingAvoidance/software/stockcar/tests/test_world_geometry.py`: marking geometry, lane interval, and enforced planner unit tests.
+- `/workspace/roboticThingAvoidance/software/stockcar/tests/test_world_layouts.py`: baseline RNG equivalence, small-shape placement, footprint, and determinism tests.
 
-- `/workspace/roboticThingAvoidance/implementation_plan.md` — this corrected executable plan; its hash table is explicitly a pre-execution baseline, not a permanently current branch-tip table.
-- `/workspace/roboticThingAvoidance/SESSION-STATE-2026-11-07.md` — replace stale pre-stamp heads and the old Option A/B question with the confirmed structural Option B; record all six immutable seal commits, measured generation counts/results, the 6-functional + 2-placeholder model, validation/publication requirements, and deferred QA04/QA03 work. Avoid self-referential final-tip hashes that would become stale as soon as the handoff is committed.
-- `/workspace/roboticThingAvoidance/docs/worlds.md` — label the six functional worlds and two structural placeholders, explain that placeholders have no seal and intentionally fail world verification, and restrict promotion to a functional green branch with owner approval. Keep organizer assumptions distinct from rulings and retain the AI-assisted hobby/learning framing.
+Modified files in the common commit:
+- `/workspace/roboticThingAvoidance/software/stockcar/mission_worlds.py`: enable both default constructors; add enforced route replacement, contact telemetry/reward, and small-layout selection while retaining existing behavior for other worlds.
+- `/workspace/roboticThingAvoidance/software/stockcar/world_routes.py`: add deterministic enforced-lane planning using existing `passage` and `mission` helpers.
+- `/workspace/roboticThingAvoidance/software/stockcar/ruleset.py`: retain `SMALL_TOY` at 8 × 4 in and make its hypothetical source wording explicit; add no new world dimension.
+- `/workspace/roboticThingAvoidance/software/stockcar/worlds.json`: describe the exact enforced penalty scope and hypothetical 8 × 4 small toy while keeping dimensions and dependency mappings synchronized.
+- `/workspace/roboticThingAvoidance/software/stockcar/tests/test_worlds.py`: add constructor, mission, telemetry, penalty, small-world, seed-partition, and pinned-source regression tests.
+- `/workspace/roboticThingAvoidance/software/stockcar/tests/test_ruleset.py`: assert the 8 × 4 placeholder and mirrored semantics without weakening existing checks.
+- `/workspace/roboticThingAvoidance/tools/evaluate-world.py`: hash both new modules, aggregate enforced lane diagnostics, and state selected semantics in generated summaries.
+- `/workspace/roboticThingAvoidance/tools/verify-world.js`: require valid nonnegative enforced-lane aggregates in addition to all existing hash/schema checks.
+- `/workspace/roboticThingAvoidance/implementation_plan.md`: carry this approved plan into the common commit.
 
-Placeholder-only changes, relative to `D`:
+Branch-final documentation and generated artifacts:
+- `/workspace/roboticThingAvoidance/docs/worlds.md`: replace each branch's own placeholder status only after its seal exists; document straightaway-only penalties, fallback reporting, and the hypothetical 8 × 4 footprint. For the other deferred world, say its implementation and seal live on its named branch—never imply a second local seal.
+- `/workspace/roboticThingAvoidance/SESSION-STATE-2026-11-07.md`: record implementation state, measured training/evaluation/lane outcomes, validation commands, and remaining assumptions without self-stale final-tip tables.
+- `/workspace/roboticThingAvoidance/derived/rl-v3/world-ccw-line-sq-enf-align/`: generated only by the existing trainer/evaluator on the enforced branch.
+- `/workspace/roboticThingAvoidance/derived/rl-v3/world-ccw-line-sq-adv-small/`: generated only by the existing trainer/evaluator on the small branch.
 
-- `software/stockcar/DEFAULT_WORLD` — respectively `world-ccw-line-sq-enf-align\n` and `world-ccw-line-sq-adv-small\n`.
-- `derived/rl-v3/world-ccw-line-sq-adv-align/` — remove all five inherited primary seal files with `git rm -r`; do not create a replacement seal directory.
-
-No new source, test, schema, configuration, showcase, or dependency files. No changes to `ruleset.py`, `worlds.json`, `mission_worlds.py`, `world_routes.py`, training/evaluation tools, existing functional seals, or any pinned file. Gate logs and JSON summaries go under `/tmp/robotic-world-closeout/`, never into the repository. Future semantic work in `world_geometry.py`, `world_layouts.py`, `ruleset.py`, and `mission_worlds.py` is out of scope and requires a new approved plan.
+`tools/train-world.py`, `tests/worlds.test.js`, dependency manifests (`package.json`/`pyproject.toml`), and the six existing world branches require no edits. Do not modify any pinned input: `software/stockcar/{mission.py,routes.py,field.py,obstacles.py,supervisor.py,lapmodel.py,passage.py,geometry.py,sensors.py,sensors_camera.py,estimator.py}` or `derived/organizer-cad-v10/field-v10.json`. No other pinned package is regenerated.
 
 [Functions]
 
-None added, modified, or removed. In particular, do not change `ruleset.get`, `ruleset.default_name`, `WorldMissionEnv.reset`, `run_world`, `world_inputs`, `main` in either world tool, or `main` in `check-all.js`. The existing command interfaces and 38-weight policy format remain authoritative.
+New pure geometry functions in `software/stockcar/world_geometry.py`:
+- `straight_marking_bands(field) -> dict`: read outer/inner ring vertices and return low/high horizontal quads; validate the expected eight-vertex rings and straight-edge orientation instead of silently accepting malformed field data.
+- `lane_bands(field) -> dict`: derive outer/inner physical y intervals from `field.walls`, `field.center_divider`, and the exact low/high marking quads.
+- `marking_contacts(poly, bands) -> list[str]`: use pinned `geometry.separation` on convex polygons and count touching/overlap with a documented epsilon, not a vertex-only test. Return deterministic band names.
+- `lane_center_intervals(field, side, lane, robot_width=10.0, margin=0.25) -> tuple`: clip a robot-center interval to the selected physical lane using the same width/margin convention as `passage.free_center_intervals`; return an empty interval when the lane cannot contain that footprint.
+
+New planning function in `software/stockcar/world_routes.py`:
+- `enforced_lane_plan(field, layout, side, default_y) -> dict`: order obstacles in travel direction and evaluate `free_center_intervals` within each physical outer/inner lane. Prefer one common legal lane across every obstacle. Otherwise enumerate feasible lane assignments (at most two vehicles per straight) and choose the fewest entry/inter-vehicle lane changes, then least deviation from `default_y`, with lexical tie-breaking. Build spans exactly as `mission.lane_plan` does. If any obstacle has no legal interval or no assignment is feasible, return the baseline `mission.lane_plan` route with `fallback=True` and explicit infeasible counts so the run remains measurable rather than falsely legal.
+
+New layout function in `software/stockcar/world_layouts.py`:
+- `world_random_layout(rng, field, shape, reading="offsets", yaw_mode="aligned", p_exchange=0.7, obstacles=True) -> WorldLayout`: mirror `mission.random_layout` control flow and RNG-call order, replacing only `GUIDE_PLUSH` with `shape` in `center_range` and footprint construction. With `GUIDE_PLUSH`, its vehicles, box, exchange result, polygons, and RNG state must match the pinned baseline exactly.
+
+Modified functions:
+- `WorldMissionSim.__init__` in `mission_worlds.py`: remove the two default-path `NotImplementedError` guards, initialize enforced marking/counter state, and retain all other constructor settings.
+- `WorldMissionSim.build_routes(layout)`: call the base builder, then for enforced worlds replace only `routes["LAP"]` using `enforced_lane_plan` plus existing `mission.arc`/`mission.straight`; recompute lap length, planned contacts, and diagnostics. Preserve the existing CW mirror and all pit routes. Advisory/yaw behavior remains unchanged.
+- `WorldMissionSim.reset(layout, sensor_seed=0)`: reset lane contact state and diagnostics after base reset without changing seed handling.
+- `WorldMissionSim._update_lane_contacts() -> float`: inspect the true robot footprint after motion, increment per-step counters on any straight-strip contact, count only false→true entries as new violations, and return `2.0` for a new entry or `0.0` otherwise.
+- `WorldMissionSim._mission()`: invoke `_update_lane_contacts` for enforced worlds before the existing lap-line/supervisor logic.
+- `WorldMissionSim.step(action=None)`: subtract the pending lane penalty from the base reward after `super().step`, clear it, and return telemetry containing the just-updated counters. Never alter `score_like`.
+- `WorldMissionSim.info()`: expose enforced telemetry/planning diagnostics and preserve all existing fields.
+- `WorldMissionEnv.reset(seed)`: keep `mission.random_layout` for `GUIDE_PLUSH` worlds; call `world_random_layout` only when the world's shape differs. Keep the existing train/evaluation seed guards.
+- `tools/evaluate-world.py:world_inputs(world)`: add `world_geometry.py` and `world_layouts.py` while keeping `world_routes.py` mandatory. `cell(...)` aggregates enforced lane fields and summary generation explains reward-only penalties/fallbacks or the 8 × 4 hypothetical shape as appropriate.
+- `tools/verify-world.js`: for the enforced world, require finite integer lane aggregates within total-run/step bounds and a nonnegative fallback-run count; retain all existing hash, seed, weight, and result checks.
 
 [Classes]
 
-None added, modified, or removed. `WorldMissionSim.__init__` in `software/stockcar/mission_worlds.py` retains its explicit `NotImplementedError` branches for `lane_rule == "enforced"` and `obstacle == "small"`; `WorldMissionEnv` continues to construct that simulator without a placeholder fallback.
+- Add `WorldLayout(mission.Layout)` in `world_layouts.py` with `__init__(self, vehicles, assigned_box, exchange_success, shape)`. Call the base constructor for common attributes, store `shape`, and replace `polys` with `obstacles.footprint(shape, ...)` for every vehicle. This preserves the interface consumed by `MissionSim` without changing `mission.Layout`.
+- Modify `WorldMissionSim(mission.MissionSim)` as specified above. Do not add a second simulator or fork base physics/contact logic.
+- Modify `WorldMissionEnv` only for shape-aware layout creation. No class is removed and no migration is required.
 
 [Dependencies]
 
-No package, version, lockfile, Compose, or credential changes. Use the existing Git, Node.js 24, uv 0.13, and CPython 3.12 workflow; `check-all.js` invokes the Python suites through `uv run --no-project --python 3.12 python -B -I`. Run managed build/test work in the existing `ieee` project dev environment, whose `/workspace` is this repository, using the workspace controller/reservation if not already active; never start nested Docker. Reuse the repository's existing GitHub authentication without copying credentials into files or logs.
+No new packages or version changes. Python remains standard-library-only under CPython 3.12 through `uv`; JavaScript remains Node built-ins. Reuse existing `stockcar.geometry`, `obstacles`, `passage`, `mission`, and `random` functionality. Do not alter `package.json`, `package-lock.json`, or `pyproject.toml`. The two new Python modules become explicit RL-v3 manifest inputs so later semantic edits invalidate both new seals as intended.
 
 [Testing]
 
-1. **Documentation and commit hygiene:** run `git diff --check` and the repository's secrets-guard scan (`.claude/skills/secrets-guard/scripts/scan_secrets.py --staged`) before every commit; run the worktree scan before publication. Confirm the staged set contains only the three intended documents, or only a placeholder's `DEFAULT_WORLD` plus five primary-seal deletions.
-2. **Functional final-tip gate:** on primary and each of the five siblings, start with a clean tree and run `node tools/check-all.js --json /tmp/robotic-world-closeout/<world>.json --log-dir /tmp/robotic-world-closeout/<world>-logs`, capturing console output to `/tmp/robotic-world-closeout/<world>.log`. Require exit 0 and `RESULT: PASS`; record the actual pass count rather than assuming 43. Do not use `--skip`, `--no-node`, `--no-verifiers`, or `--no-python`; `--full` is not required for this docs/branch close-out.
-3. **Coverage supplied by that gate:** `tests/worlds.test.js` invokes `tools/verify-world.js` for the branch's `DEFAULT_WORLD`; the verifier stage checks it again alongside every other artifact verifier; Python discovery includes `software/stockcar/tests/test_ruleset.py` and `test_worlds.py`; the final tree-state step proves the run changed no files. `test_worlds.py` also guards `mission.py` SHA-256 `346fb5c977fddaaad7d790afcb466beacb3f2beeebe01803befb9da004032678`.
-4. **Seal and scope integrity:** before and after branch edits, compare each functional manifest's input/output hashes with Git-object content and verify exactly five own-world seal files and zero other RL-v3 world directories. Diff the pinned-file list against primary and require no differences. A failing gate may be diagnosed with `node tools/verify-world.js <world>`, but a targeted pass never substitutes for full `check-all`.
-5. **Placeholder negative/structural checks:** assert each branch's `DEFAULT_WORLD`, assert `git ls-tree -r --name-only <branch> -- derived/rl-v3` is empty, and confirm the deferred constructor still raises `NotImplementedError`. Run `node tools/verify-world.js` as an expected-failure probe and record that it fails because the placeholder manifest is absent. Do not create empty/fake seals, catch the constructor error, or modify tests/check-all to hide the expected red result. The ruleset and hard-coded simulator tests otherwise remain valid.
-6. **Publication verification:** after pushes, require exactly the eight intended `refs/heads/world-*` branches remotely, each remote hash equal to its local final tip, the correct branch-local `DEFAULT_WORLD`, and remote/local `main` still `f56fb53c6d8dba72d5f00b8d8dbae5eff4b7f42c`. Finish on primary with a clean working tree.
-7. **Failure policy:** any documentation conflict, hash mismatch, unexpected source diff, gate failure, lease failure, or unexpected remote branch stops publication. Preserve the existing seals and logs, report the exact failing branch/step, and do not retrain, regenerate, relax assertions, or force through the failure without a new approved correction.
+Focused tests before training, from the repository root:
+- `uv run --no-project --python 3.12 python -B -I -m unittest discover -s software/stockcar/tests -t software -p 'test_world*.py' -v`
+- Require all existing world/ruleset tests plus the new tests to pass with no skips. Do not run `tests/worlds.test.js` before a seal exists and call it a pass; its missing-manifest failure is expected only during intermediate construction.
+
+Geometry/planner requirements:
+- Validate exact low/high straight quads and physical lane intervals against the pinned CAD values, including 10.53 in and 11.071 in clearances where applicable.
+- Show the plain low/high centers overlap the marking, shifted legal inner centers do not, a polygon edge crossing is detected even with no vertex inside, touching is counted, and rounded/end marking segments do not create straightaway penalties.
+- Test empty/common-lane/minimum-change planning, deterministic ties, high-side reverse travel order, and impossible-obstacle fallback with explicit diagnostics. Never assert that a fallback route is legal.
+
+Layout requirements:
+- For several fixed seeds, compare `world_random_layout(..., GUIDE_PLUSH)` with `mission.random_layout` for vehicles, assigned box, exchange result, polygons, and subsequent RNG state.
+- Assert the small world creates three deterministic 8 × 4 aligned rectangles wholly inside allowed quadrant/center ranges, uses shape polygons in `layout.polys`, and is strictly smaller than `GUIDE_PLUSH` in both dimensions. Check an empty-obstacle layout and invalid side/lane errors.
+
+Simulation requirements:
+- Construct both formerly deferred worlds successfully and run seed 0 to three laps. Verify the primary seed-0 regression and existing gate/round/CW tests still pass on each modified branch.
+- For enforced synthetic poses, prove a legal pose returns zero penalty, first contact returns 2.0, persistent contact increments steps without another entry penalty, and `info()` exposes counters/fallback diagnostics without changing `score_like`. Verify small layout selection only occurs for the small shape and training/evaluation seed rejection remains unchanged.
+- Extend pinned-source guards beyond the existing `mission.py` SHA-256 check to cover at least `field.py`, `obstacles.py`, and `routes.py`; separately require `git diff --exit-code 6cf5a2228762f7a9ca652da674af877e57c21df0 -- <all pinned inputs>` on both final branches.
+
+Training and sealing, once per world with the existing defaults and no skip/tuning flags:
+- `uv run --no-project --python 3.12 python -B -I tools/train-world.py --world WORLD`
+- `uv run --no-project --python 3.12 python -B -I tools/evaluate-world.py --world WORLD`
+- `node tools/verify-world.js WORLD`
+- Require ten recorded CEM generations, 38 weights, three policies × 20 held-out runs, valid input/output hashes, and exactly five own-world files. Record learned/classical/random completion, score-like, contact metrics, best fitness, and—only for enforced—lane penalties/fallbacks. Do not require learned superiority or hide zero-completion results.
+
+Final gate on each committed final tip, sequentially, with logs outside the repository:
+- `node tools/check-all.js --json /tmp/robotic-world-semantics/WORLD.json --log-dir /tmp/robotic-world-semantics/WORLD-logs`
+- Require exit 0, `RESULT: PASS`, no skipped stages/verifiers, and unchanged tree. Record actual pass count and duration. Run `node tools/verify-world.js WORLD` again after the gate and confirm `DEFAULT_WORLD`, one own five-file seal, no other seal, clean status, and unchanged pinned files.
+- Run `secrets-guard --staged` before every commit and scan every newly introduced/changed text artifact before each push. The historical `share/Showcase-v10.html` PNG-base64 false positive is documented in `/tmp/robotic-world-closeout/secrets-scope-note.md`; do not print or copy the matched substring, edit the pinned showcase, or treat scoped scanning as a new secret waiver.
 
 [Implementation Order]
 
-1. **Confirm the approved starting state.** Ensure no other agent is using the working tree and the project dev reservation is active. From `/workspace/roboticThingAvoidance`, require a clean tree except for this plan edit, the six known local functional branches, no local/remote `enf-align` or `adv-small` branches, origin heads exactly as in the baseline table, and local/remote `main` at `f56fb53`. Preserve all existing commits and seals; do not use `checkout -f`, reset, clean, or rebase.
-2. **Create the shared documentation commit on primary.** Run `git switch world-ccw-line-sq-adv-align`, preserving the plan edit; if Git would overwrite it, stop rather than discarding it. Complete the three document edits listed in [Files]. Stage only those paths, inspect `git diff --cached`, run `git diff --cached --check` and `uv run --no-project --python 3.12 python -B -I .claude/skills/secrets-guard/scripts/scan_secrets.py --staged`, then commit `docs: close out eight-world branch strategy`. Record the resulting hash as `D`; do not push.
-3. **Propagate `D` to the five functional siblings.** In order `world-ccw-gate-sq-adv-align`, `world-ccw-line-rd-adv-align`, `world-ccw-gate-rd-adv-align`, `world-ccw-line-sq-adv-yaw`, `world-cw-line-sq-adv-align`: switch to the branch with a clean tree, run `git cherry-pick D` using the recorded hash, and confirm only the three documentation paths changed. Each branch must still differ from `D` only in `DEFAULT_WORLD` and replacement of the primary seal by its own five-file seal. Stop on any conflict or unexpected diff.
-4. **Create `world-ccw-line-sq-enf-align` locally.** After reconfirming it is absent, run `git switch -c world-ccw-line-sq-enf-align D`; write `world-ccw-line-sq-enf-align\n` to `software/stockcar/DEFAULT_WORLD`; run `git rm -rq derived/rl-v3/world-ccw-line-sq-adv-align/`; stage `DEFAULT_WORLD`; inspect/check/scan the staged set; commit `world(world-ccw-line-sq-enf-align): cut structural placeholder; semantics deferred`. Do not train, evaluate, seal, or push yet.
-5. **Create `world-ccw-line-sq-adv-small` locally.** Repeat step 4 from the same `D`, with `world-ccw-line-sq-adv-small` everywhere and commit message `world(world-ccw-line-sq-adv-small): cut structural placeholder; semantics deferred`. Both placeholders inherit `D` directly, so no cherry-pick or later documentation edit is needed.
-6. **Run all six functional gates before any publication.** Create `/tmp/robotic-world-closeout/`. Sequentially switch to primary and the five siblings, verify clean status and own-world seal integrity, then execute the full command in [Testing], with logs unique to each world. Record final commit, actual pass count, duration, and JSON verdict. If any branch fails, stop with no close-out branch pushed.
-7. **Validate placeholders as placeholders.** For each new branch, check its exact `DEFAULT_WORLD`, no tracked files under `derived/rl-v3/`, only the intended diff from `D`, retained `NotImplementedError`, and expected `verify-world.js` failure from the missing own-world manifest. Label these branches deferred; never report their expected red gate as a pass.
-8. **Perform a live remote/lease preflight.** Re-read `git ls-remote --heads origin`. Require primary still `bcb162c`; the five old sibling hashes still exactly `108fb7c`, `ab361ee`, `70ef6e2`, `d639daf`, and `02f0479` respectively; both placeholder refs absent; and `main` still `f56fb53`. Any change stops the affected publication for review. Run the secrets-guard worktree scan before pushes.
-9. **Publish without broad force.** Push primary normally: `git push origin world-ccw-line-sq-adv-align:refs/heads/world-ccw-line-sq-adv-align`. For each sibling, set `EXPECTED` from its just-verified old origin hash and run `git push --force-with-lease="refs/heads/$W:$EXPECTED" origin "$W:refs/heads/$W"`. Push each previously absent placeholder with ordinary `git push --set-upstream origin "$W:refs/heads/$W"`; no force is needed or allowed. Run secrets-guard before each push. If one lease fails after earlier pushes succeed, report the partial state and revalidate only what remains; never switch to `push -f`.
-10. **Verify and hand off.** Switch to primary, require a clean tree, and compare every local final tip with live origin. Confirm exactly eight world branches, correct defaults, six own-world seals, two empty RL-v3 trees, unchanged pinned files, and `main` at `f56fb53`. Report a table of all eight final local/remote heads and gate results, the log directory, the six measured seal outcomes, and the two deferred semantic work items. Make no further “optional” documentation commits after the gates; any correction requires repeating the affected final-tip gate.
+1. **Start-state preflight.** On primary, require `implementation_plan.md` to be the only dirty path and no other agent process to be operating on the tree. Confirm local/remote placeholder tips still equal `b6611e7adaa8c6ac50d9b60fcbe401f58508c981` and `556a5cd1598d06973ed5b2f5bd18bced7e366693`, both have empty RL-v3 trees and correct defaults, all six existing world tips match origin, and local/remote `main` is still `f56fb53`. Record the exact starting state under `/tmp/robotic-world-semantics/`; create no repository output there.
 
-Owner decisions preserved: all eight branches are published; six retain their existing seals and training budgets; `enforced` and `small` are structural placeholders only; no existing seal is regenerated; no pinned file or `main` changes.
+2. **Build the common semantics commit `B` on enforced.** Switch to `world-ccw-line-sq-enf-align`, carrying only this plan edit. Add `world_geometry.py`, `world_layouts.py`, their tests, the planner and simulator changes, manifest/verifier support, and ruleset/world-description updates specified above. Run focused tests, verify both constructors and seed-0 missions, and require all pinned inputs to remain byte-identical. Inspect the complete diff for accidental changes to advisory/yaw behavior. Stage the exact common paths, inspect `git diff --cached --check`, run `secrets-guard --staged`, and commit `worlds: implement deferred lane and small-obstacle semantics`. Do not train, create a seal, or run/present the full gate as green yet.
+
+3. **Propagate only `B` to small.** Switch to `world-ccw-line-sq-adv-small` and cherry-pick the recorded `B` hash. Resolve no conflict by weakening a test or changing a pinned file; stop on any conflict. Confirm the small default remains `world-ccw-line-sq-adv-small`, RL-v3 is still empty, the common code is patch-equivalent to enforced, and focused tests also pass here. The branches should now differ only in `DEFAULT_WORLD` and commit ancestry, not in semantic implementation.
+
+4. **Train, seal, document, and gate enforced.** Return to the enforced branch. Run the existing trainer and evaluator with defaults; inspect all 60 evaluation episodes and lane diagnostics. Update `docs/worlds.md` and `SESSION-STATE-2026-11-07.md` with the actual measured outcomes and explicit hypothetical semantics. Require exactly five generated files under `derived/rl-v3/world-ccw-line-sq-enf-align/`, run `node tools/verify-world.js world-ccw-line-sq-enf-align`, stage only the seal and final documentation, scan staged content, and commit `world(world-ccw-line-sq-enf-align): seal straightaway-lane semantics`. Run the full unskipped gate on that committed tip. Any code, tool, test, generated artifact, or documentation correction requires a new commit and another final-tip gate.
+
+5. **Train, seal, document, and gate small.** Switch to small. Run the same default trainer/evaluator, inspect all results, and update the same two documents with measured small-world results and a reference to the independently validated enforced branch without copying unverified results or inventing head hashes. Require exactly five own-world files and no enforced seal. Verify, scan, commit `world(world-ccw-line-sq-adv-small): seal hypothetical small-toy semantics`, then run the full unskipped gate on the committed tip. A crash, missing seal, stale hash, skipped check, or unexpected diff stops publication; merely disappointing measured performance does not get tuned away.
+
+6. **Cross-branch audit before publication.** Require both final tips to be descendants of their current origin placeholder tips, so both pushes are ordinary fast-forwards. Check clean trees, correct defaults, five own seal files and zero other seal files, valid manifests, identical common implementation content, unchanged pinned inputs, unchanged six sibling world refs, and unchanged `main`. Re-run live `git ls-remote --heads origin`; stop if either placeholder moved from its recorded start hash or `main` changed. Run the scoped secrets scan on every changed/new file on each branch.
+
+7. **Publish only the two branches.** Push enforced ordinarily as `git push origin world-ccw-line-sq-enf-align:refs/heads/world-ccw-line-sq-enf-align`, then small the same way. No force push is needed or permitted. Re-read remote refs after each push; if the first succeeds and the second fails, report the exact partial state and do not retry with force.
+
+8. **Final verification and handoff.** Return to primary and require a clean tree. Verify local/remote equality for both new tips, exactly eight world branches with the original six heads unchanged, six original seals untouched plus the two new seals, correct placeholder-to-functional documentation, and `main=f56fb53`. Report both final heads, actual gate counts/durations, measured CEM and classical/random/learned outcomes, enforced lane violations/fallbacks, the explicit QA04/QA03 assumptions, and `/tmp/robotic-world-semantics/` logs. Do not promote either world to `main` without a new owner-approved action.
+
+Failure policy: stop on conflicts, unexpected source diffs, focused/full test failures, training/evaluation errors, stale seals, remote movement, or push rejection. Never create fake seals, skip `verify-world`, weaken assertions, silently change the chosen semantics, regenerate an existing world's seal, or broaden publication to another branch.

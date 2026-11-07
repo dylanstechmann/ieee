@@ -47,4 +47,23 @@ assert.equal(training.weight_count, 38, 'training metadata reports 38 weights');
 assert.ok(Array.isArray(training.curve) && training.curve.length > 0, 'training curve present');
 assert.ok(Array.isArray(training.train_seeds) && training.train_seeds.length > 0, 'train seeds present');
 
+const worlds = JSON.parse(fs.readFileSync(path.join(root, 'software/stockcar/worlds.json'), 'utf8'));
+const spec = worlds.worlds[world];
+assert.ok(spec, `world ${world} present in worlds.json`);
+if (spec.lane_rule === 'enforced') {
+  for (const r of report.results) {
+    assert.ok(Number.isInteger(r.total_lane_violations) && r.total_lane_violations >= 0,
+      `${r.policy}: lane violations are non-negative integers`);
+    assert.ok(Number.isInteger(r.total_lane_violation_steps) && r.total_lane_violation_steps >= 0,
+      `${r.policy}: lane violation steps are non-negative integers`);
+    assert.ok(r.total_lane_violations <= r.runs * r.max_steps * 2,
+      `${r.policy}: lane violations within total-run bounds`);
+    assert.ok(r.total_lane_violation_steps <= r.runs * r.max_steps,
+      `${r.policy}: lane violation steps within total-run bounds`);
+    assert.ok(Number.isInteger(r.runs_with_lane_plan_fallback) && r.runs_with_lane_plan_fallback >= 0
+      && r.runs_with_lane_plan_fallback <= r.runs,
+      `${r.policy}: lane-plan fallback runs in [0, runs]`);
+  }
+}
+
 console.log(`Verified world ${world}: classical / random / learned across 20 evaluation seeds; trained weights and curve recorded as measured.`);

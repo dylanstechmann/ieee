@@ -36,7 +36,7 @@
       "lap": "line", "lap_mode": "drive", "direction": "ccw", "body": "square10",
       "lane_rule": "enforced", "obstacle": "align",
       "deps": ["QA01", "QA03", "QA04", "QA06"],
-      "description": "Enforced lanes (QA04: stay in lane, no crossing the white line)."
+      "description": "Enforced lanes (QA04): lane-aware physical outer/inner routing, straightaway-only white-line marking penalties in training reward, and explicit fallback diagnostics; not a hard-stop rule."
     },
     "world-cw-line-sq-adv-align": {
       "lap": "line", "lap_mode": "drive", "direction": "cw", "body": "square10",
@@ -48,7 +48,7 @@
       "lap": "line", "lap_mode": "drive", "direction": "ccw", "body": "square10",
       "lane_rule": "advisory", "obstacle": "small",
       "deps": ["QA01", "QA03", "QA04", "QA06"],
-      "description": "Smaller official toy obstacle (QA03 small-toy ruling; placeholder size)."
+      "description": "Hypothetical QA03 smaller official toy: the explicitly unverified 8 × 4 in placeholder footprint in ruleset.SMALL_TOY, not an official measurement."
     }
   }
 }

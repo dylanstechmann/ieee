@@ -61,9 +61,21 @@ class RulesetTests(unittest.TestCase):
         self.assertIs(align["shape"], GUIDE_PLUSH)
         self.assertEqual(align["yaw_mode"], "aligned")
         self.assertIs(yaw["shape"], GUIDE_PLUSH)
+        self.assertEqual(yaw["shape"], GUIDE_PLUSH)
         self.assertEqual(yaw["yaw_mode"], "random")
         self.assertEqual(small["shape"]["id"], "small_toy")
+        self.assertEqual((small["shape"]["length_in"], small["shape"]["width_in"]), (8.0, 4.0))
         self.assertEqual(small["yaw_mode"], "aligned")
+        self.assertIn("not a measured vehicle", small["shape"]["source"])
+
+    def test_deferred_world_descriptions_are_semantic_not_placeholders(self):
+        data = json.loads((ROOT / "stockcar" / "worlds.json").read_text(encoding="utf-8"))
+        enf = data["worlds"]["world-ccw-line-sq-enf-align"]["description"]
+        small = data["worlds"]["world-ccw-line-sq-adv-small"]["description"]
+        self.assertIn("straightaway-only", enf)
+        self.assertIn("fallback", enf)
+        self.assertIn("hypothetical", small.lower())
+        self.assertIn("unverified", small.lower())
 
     def test_deps_cover_every_world(self):
         for name in EXPECTED:
