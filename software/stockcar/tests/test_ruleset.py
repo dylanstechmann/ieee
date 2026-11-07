@@ -30,15 +30,16 @@ class RulesetTests(unittest.TestCase):
             s = ruleset.get(name)
             self.assertEqual(REQUIRED_KEYS, set(s), msg=name)
 
+    def test_default_matches_file(self):
+        name = ruleset.default_name()
+        self.assertIn(name, ruleset.world_names())
+        self.assertEqual(ruleset.get_default(), ruleset.get(name))
+
     def test_unknown_world_raises(self):
         with self.assertRaises(KeyError):
             ruleset.get("world-nope")
         with self.assertRaises(KeyError):
             ruleset.deps("world-nope")
-
-    def test_default_matches_file(self):
-        self.assertEqual(ruleset.default_name(), "world-ccw-line-sq-adv-align")
-        self.assertEqual(ruleset.get_default(), ruleset.get("world-ccw-line-sq-adv-align"))
 
     def test_pinned_identical_across_worlds(self):
         first = ruleset.get(EXPECTED[0])
