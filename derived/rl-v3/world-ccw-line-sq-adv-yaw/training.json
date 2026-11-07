@@ -1,0 +1,70 @@
+{
+ "date": "2026-11-07",
+ "method": "cross-entropy method (CEM)",
+ "world": "world-ccw-line-sq-adv-yaw",
+ "master_seed": 20261107,
+ "population": 16,
+ "elite": 4,
+ "generations": 10,
+ "train_seeds": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "max_steps": 1200,
+ "best_fitness": 99.833,
+ "weight_count": 38,
+ "curve": [
+  {
+   "generation": 0,
+   "best_fitness": 23.134,
+   "mean_fitness": 23.134
+  },
+  {
+   "generation": 1,
+   "best_fitness": 26.567,
+   "mean_fitness": 26.567
+  },
+  {
+   "generation": 2,
+   "best_fitness": 77.694,
+   "mean_fitness": 77.694
+  },
+  {
+   "generation": 3,
+   "best_fitness": 88.808,
+   "mean_fitness": 88.808
+  },
+  {
+   "generation": 4,
+   "best_fitness": 88.808,
+   "mean_fitness": 88.808
+  },
+  {
+   "generation": 5,
+   "best_fitness": 91.497,
+   "mean_fitness": 91.497
+  },
+  {
+   "generation": 6,
+   "best_fitness": 93.228,
+   "mean_fitness": 93.228
+  },
+  {
+   "generation": 7,
+   "best_fitness": 93.888,
+   "mean_fitness": 93.888
+  },
+  {
+   "generation": 8,
+   "best_fitness": 99.833,
+   "mean_fitness": 99.833
+  },
+  {
+   "generation": 9,
+   "best_fitness": 99.833,
+   "mean_fitness": 99.833
+  }
+ ]
+}
