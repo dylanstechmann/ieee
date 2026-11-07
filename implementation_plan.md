@@ -1,95 +1,90 @@
-# Implementation Plan — Ruleset "worlds" for the open rule questions
+# Implementation Plan
+
+## STATUS & OPEN DECISION (2026-11-07 — read this first)
+
+Steps 1–6 are **DONE** on `world-ccw-line-sq-adv-align` (HEAD `f691e18`, pushed): `ruleset.py`/`worlds.json`/`DEFAULT_WORLD`, `world_routes.py` (CW mirror), `mission_worlds.py` (`WorldMissionSim`/`WorldMissionEnv`), `docs/worlds.md`, Step 6 tooling (`train-world.py`, `evaluate-world.py`, `verify-world.js`, `worlds.test.js`), and a sealed `derived/rl-v3/world-ccw-line-sq-adv-align/`. `check-all` 43/43 green. Six branches cut; `enforced` + `small` not cut (raise `NotImplementedError`).
+
+**The scope below is NOT yet settled.** The owner deferred the `enforced`/`small` semantics ("idk"); my forced defaults are shaky (full critique in `SESSION-STATE-2026-11-07.md`):
+- **Recommended immediate scope: Step 7 only** — stamp the 6 functional branches (gate-sq, line-rd, gate-rd, yaw, cw) with the tooling + their own seals. Defer `enforced`/`small` to a deliberate follow-up.
+- **`enforced` (QA04)** is genuinely ambiguous (which white line? hard in-lane constraint vs crossing-penalty?). A hard constraint would make it near-always-fail (a 10 in robot confined to an ~11 in lane can't pass an 8.2 in obstacle sitting in it). The crossing-penalty default in this plan bolts a penalty onto the advisory route and measures the wrong thing. Do NOT rush this.
+- **`small` (QA03)** is narrower than QA03 (which is toy *interpretation*, not just size); the `obstacle: small` axis is a simplification. Real toy 6.5 × 3.25 in (placeholder is 8 × 4).
+
+Treat the `enforced`/`small` sections below as **deferred design reference, not approved scope**. Confirm scope with the owner before implementing anything.
 
 [Overview]
 
-Goal: consolidate the ten open organizer assumptions (QA01–QA10) into one versioned, single-source ruleset (`stockcar.ruleset`) so that every plausible combination of rule answers is a named, cheaply-built "world" branch; build and validate the best-guess world first, stamp out the rest with near-zero per-branch work, and only then train the RL policy per world.
+Goal: finish the ruleset-world branch strategy by (a) implementing the two deferred worlds — `enforced` lanes (QA04) and `small` obstacle (QA03) — in unpinned simulator code, and (b) stamping all eight world branches with the Step 6 training/eval/verify tooling and a per-world sealed RL artifact, so every rule combination is a buildable, `check-all`-green branch awaiting a ruling.
 
-Context: the v10 simulator hard-codes ten "working assumption" decisions across scattered files (`mission.py`'s route model, `supervisor.DEFAULTS`, `field.quadrants`, `obstacles.GUIDE_PLUSH`, `sensors_camera`'s TAG/FLAG poses). The owner wants to prepare for whichever answers the organizers eventually give — without contacting them — by making one branch per combination and fast-forwarding `main` to whichever branch a ruling later validates. The full cross-product of the five high-impact dimensions is 72 worlds, but most differ only across low/medium-impact knobs (QA02/07/08/09/10) that change reliability/timing/margins rather than strategy, so a **curated set of 8 named worlds** is the chosen scope. `mission.py` is a pinned input of five sealed packages and will not be edited; worlds reach it through the existing subclass/constructor seam, so it stays byte-identical.
+Context: Steps 1–6 are complete on `world-ccw-line-sq-adv-align` (primary): `ruleset.py`/`worlds.json`/`DEFAULT_WORLD`, `world_routes.py` (CW mirror), `mission_worlds.py` (`WorldMissionSim`/`WorldMissionEnv`), `docs/worlds.md`, the per-world tooling (`train-world.py`, `evaluate-world.py`, `verify-world.js`, `worlds.test.js`), and a sealed `derived/rl-v3/world-ccw-line-sq-adv-align/` (learned 17/20 vs classical 20/20). Six world branches exist; `enforced` and `small` raise `NotImplementedError`. `mission.py`, `routes.py`, `field.py`, `obstacles.py`, `supervisor.py`, `lapmodel.py`, `passage.py`, `geometry.py`, `sensors*.py`, `estimator.py` and `field-v10.json` are hashed by existing sealed verifiers and must stay byte-identical; all new behavior lands in unpinned files. The prior strategy plan is preserved in git history (commit `49af83c`).
 
-Approved (2026-11-06): curated 8-world scope; primary/best-guess is **`world-ccw-line-sq-adv-align`** (the checkered band is the finish line, per QA06); build the seams first so the remaining worlds are cheap, then train.
+Decisions (owner deferred the internal semantics; these are engineering defaults, documented and reversible):
+- QA04 "enforced" = crossing-penalty model. The white line is painted, not a barrier; the robot may physically cross but each crossing is logged and penalized in reward. The route stays advisory so violations are measurable. (A "hard in-lane route constraint" is noted as a future option, not built now.)
+- QA03 "small" = the real official toy (6.5 × 3.25 in, per QA03), replacing the 8 × 4 placeholder. `ruleset.SMALL_TOY` is updated; the primary seal is regenerated because `ruleset.py` is one of its hashed inputs.
+- Scope = all eight worlds. Sibling branches are re-cut from the fully-scaffolded primary so each carries identical code and differs only by `DEFAULT_WORLD` + its own `derived/rl-v3/<world>/`.
 
 [Types]
 
-Dependency-free (stdlib Python + JSON at tool boundaries). Data-shape contracts only.
+- `WorldSettings` — unchanged shape; `lane_rule ∈ {advisory, enforced}`, `obstacle ∈ {align, yaw, small}`, `shape` = `GUIDE_PLUSH` or `SMALL_TOY`.
+- `SMALL_TOY` — `{id: "small_toy", length_in: 6.5, width_in: 3.25, source: "QA03 toy car (3.25 × 6.5 × 2 in)"}` (was the 8 × 4 placeholder).
+- `MarkingBand` — per-side `(y_lo, y_hi)` white-line band derived from `field.data["clearances_in"]`: low `[walls[1]+10.53, center_divider[1]−11.071]`, high `[center_divider[3]+11.071, walls[3]−10.53]` (≈0.9 in wide; a 10 in robot centred in either lane clears it).
+- `WorldLayout` — duck-types `mission.Layout` (`vehicles`, `assigned_box`, `exchange_success`, `polys`) with `polys` built from a caller-supplied `shape` instead of the pinned `GUIDE_PLUSH`.
+- `info()` additions (enforced worlds only): `lane_violation_steps: [int, int, int]` and `lane_violations: int` (total entries).
+- `WorldResult` seal — unchanged five-file package per world.
 
-- `WorldName` — one of the 8 kebab-case keys, e.g. `world-ccw-line-sq-adv-align`.
-- `WorldSettings` — a dict with exactly these keys/values:
-  - `lap`: `"gate"` | `"line"` — where a lap/finish registers (route gate vs the literal checkered band).
-  - `lap_mode`: `"drive"` | `"all"` — only when `lap == "line"`; `drive` suppresses band crossings during the pit detour, `all` counts every crossing.
-  - `direction`: `"ccw"` | `"cw"`.
-  - `body`: `"square10"` | `"round10"` (maps to `footprint_kind` and `footprint_in`).
-  - `lane_rule`: `"advisory"` | `"enforced"`.
-  - `obstacle`: `"align"` | `"yaw"` | `"small"` — obstacle shape/yaw/size.
-  - `reading`: `"offsets"` | `"sixteen_from_wall"` | `"six_other"` (QA03; `"offsets"` in all 8).
-  - `yaw_mode`: `"aligned"` | `"random"`.
-  - Pinned (identical in all worlds): `tag_pose`, `flag_pose`, `flag_mode = "raise"`, `pit_fraction = 0.75`, wall/divider tolerance variants, `preset`, `envelope`.
-  - Derived helpers: `footprint_kind`, `footprint_in`, obstacle `shape` dict.
-- `WorldDeps` — `WorldName` → QA-item list, e.g. `world-ccw-line-sq-adv-align` → `[QA01, QA03, QA04, QA06]`.
-- `WorldResult` (per-world seal) — the sim's `info()` dict plus `world`, `policy_weights_file`, and train/eval seeds; the verifier compares recorded numbers, not a direction.
 [Files]
 
-New:
+New (unpinned):
+- `software/stockcar/world_geometry.py` — `marking_bands(field)` and `footprint_on_marking(poly, bands)`.
+- `software/stockcar/world_layouts.py` — `WorldLayout` + `world_random_layout(...)`, a shape-parameterized mirror of `mission.random_layout`.
 
-- `software/stockcar/ruleset.py` — `WORLDS` (the 8 presets), `get(name)`, `get_default()` (reads `software/stockcar/DEFAULT_WORLD`), `deps(name)`. Single source of truth.
-- `software/stockcar/DEFAULT_WORLD` — one-line file; each world branch sets it to its own name.
-- `software/stockcar/worlds.json` — machine-readable name↔settings↔QA table (for `verify-world.js`).
-- `software/stockcar/mission_worlds.py` — `WorldMissionSim(MissionSim)` and `WorldMissionEnv` (train 0–99 / eval 100–119).
-- `software/stockcar/mission_worlds.py` — `WorldMissionSim(MissionSim)` and `WorldMissionEnv` (train 0–99 / eval 100–119).
-- `software/stockcar/world_routes.py` — `lap_points(direction)` CCW/CW mirror (kept out of the pinned `routes.py`).
-- `software/stockcar/tests/test_ruleset.py`, `software/stockcar/tests/test_worlds.py`.
-- `docs/worlds.md` — the human-readable table: branch name, one-line uniqueness, the 5 dimension values, QA items (the "name the combinations" deliverable).
-- `tools/train-world.py` (`--world`, `--out`), `tools/evaluate-world.py` (`--world`, `--out`).
-- `tools/verify-world.js` + `tests/worlds.test.js`.
-- `derived/rl-v3/<world>/` — per-world sealed package (report/summary/manifest/weights); only the DEFAULT world's package exists on a given branch.
+Modified (unpinned):
+- `software/stockcar/ruleset.py` — update `SMALL_TOY` to 6.5 × 3.25.
+- `software/stockcar/mission_worlds.py` — remove the two `NotImplementedError`s; add enforced crossing detection/penalty/telemetry; route `small` through `world_layouts`.
+- `software/stockcar/tests/test_worlds.py` — enforced + small tests; extend the pinned-file SHA guard to `field.py`/`obstacles.py`.
+- `software/stockcar/tests/test_ruleset.py` — assert the small-toy dimensions.
+- `docs/worlds.md` — note enforced = crossing-penalty, small = real toy.
+- `implementation_plan.md` — this plan.
 
-Modified:
+Re-cut branches (force-update from primary): the existing five (`gate-sq`, `line-rd`, `gate-rd`, `yaw`, `cw`) plus two new (`enf`, `small`).
 
-- `software/stockcar/routes.py` — **left byte-identical**: it is a pinned input of the sealed `full-mission-v10`/`maneuver-v10` packages, so the CW mirror lives in the new `world_routes.py` instead (corrected from the original draft, which wrongly planned an additive edit here).
-- `tools/train-rl-policy.py`, `tools/evaluate-rl-v2.py` — left frozen; `derived/rl-v2` stays reproducible. New tools are additive.
-- `tools/check-all.js` — default steps untouched; `tests/worlds.test.js` joins the node suite but only asserts (a) the 8 worlds validate, (b) `get_default() == DEFAULT_WORLD`, (c) the primary world completes 3 laps. It must NOT require all 8 derived packages (each branch has only its own).
-
-Archived: `implementation_plan.md` → `docs/plans/implementation-plan-v15-history.md` (done).
-
-Branch plumbing: a world branch is the **shared codebase** with `DEFAULT_WORLD` set to its name and its `derived/rl-v3/<world>/` committed. Code is identical across worlds, so per-branch work = one line + one regeneration.
+Regenerated seals: `derived/rl-v3/<world>/` for all eight worlds (primary regenerated due to the `ruleset.py` change).
 
 [Functions]
 
-- `ruleset.get(name)` → validated `WorldSettings`; `KeyError` unknown, `ValueError` malformed.
-- `ruleset.get_default()` → `WorldSettings` for the name in `DEFAULT_WORLD`.
-- `ruleset.deps(name)` → QA-item list.
-- `world_routes.lap_points(direction)` → `[pts]` plain-lap oval for CCW/CW (CCW reuses `routes.lap(lane_lines())`; CW the y-reflected mirror), keeping the pinned `routes.py` untouched.
-- `WorldMissionSim.build_routes(layout)` (override) → ENTER/LAP/TO_PIT/EXIT_PIT/PARK from `lap_lines(...)`, the world footprint, and corridor bounds for `enforced`.
-- `WorldMissionSim._mission()` (override) → mirrors `MissionSim._mission()` but keys the lap/finish signal per `lap`: `gate` uses route completion as today; `line` arms `LapLineDetector` and fires `checker_crossing` on a rising band crossing filtered by `lap_mode` and the supervisor's `lap_length_m`/`lap_tolerance` guard.
-- `tools/train-world.py main()` → `--world`, `--out`; CEM hyperparameters identical to `train-rl-policy.py` (POPULATION 16, ELITE 4, GENERATIONS 10, TRAIN_SEEDS [0,1,2,3], MAX_STEPS 1200); writes `trained-weights.json` + `training.json`.
-- `tools/evaluate-world.py main()` → `Classical` + `LearnedPolicy` + `Random` through `WorldMissionEnv` over eval seeds 100–119; seals report/summary/manifest.
-- `tools/verify-world.js` → checks the sealed package, report numbers, and branch↔`DEFAULT_WORLD` consistency.
+- `world_geometry.marking_bands(field) -> dict` — reads `field.data["clearances_in"]["side_lane_wall_face_to_marking_outer_edge"]` (10.53) and `["inner_lane_marking_inner_edge_to_divider_face"]` (11.071); combines with `field.walls`/`field.center_divider` to return `{"low": (y0, y1), "high": (y0, y1)}`.
+- `world_geometry.footprint_on_marking(poly, bands) -> bool` — true if any vertex y lies in either band.
+- `world_layouts.world_random_layout(rng, field, shape, reading="offsets", yaw_mode="aligned", p_exchange=0.7, obstacles=True)` — logic mirror of `mission.random_layout` with `GUIDE_PLUSH` → `shape`.
+- `WorldMissionSim._lane_violation()` — footprint vs marking bands; on entry increments `lane_violation_steps[lap]` and `lane_violations`.
+- `WorldMissionSim._mission()` (override) — when `lane_rule == "enforced"`, call `_lane_violation()`, then `super()._mission()`.
+- `WorldMissionSim.step()` (override) — `super().step()`, then subtract `LANE_VIOLATION_PENALTY` (2.0) per new violation entry.
+- `WorldMissionSim.info()` (override) — add `lane_violation_steps`/`lane_violations` for enforced worlds.
+- `WorldMissionEnv.reset()` — when `world["shape"] is not GUIDE_PLUSH`, build the layout via `world_random_layout(..., shape=world["shape"])` wrapped in `WorldLayout`; otherwise keep `mission.random_layout` unchanged (align/yaw worlds keep byte-identical behavior + seals).
+
 [Classes]
 
-- `WorldMissionSim(MissionSim)` — `__init__(self, world=None, preset="aggressive", envelope="nominal", field=None, **overrides)`; `world` defaults to `ruleset.get_default()`; forwards `footprint_kind`/`footprint_in`, obstacle shape, reading/yaw to `MissionSim.__init__` and `random_layout`; overrides `build_routes` and `_mission` only. `step`/`observe`/`info`/sensing/estimation are inherited unchanged.
-- `WorldMissionEnv` — `__init__(self, world=None, evaluation=False, **kw)`; mirrors `MissionEnv` (`TRAIN = range(0,100)`, `EVAL = range(100,120)`); `reset(seed)`/`step(action)` delegate to `WorldMissionSim` with the world's `random_layout` args.
+- `WorldLayout` (new, `world_layouts.py`) — mirrors `mission.Layout`; `polys = [footprint(shape, v["cx"], v["cy"], v["yaw"]) for v in vehicles]`.
+- `WorldMissionSim` (modified) — gains `lane_violation_steps`, `lane_violations`, `prev_on_marking`, `marking_bands`; enforced overrides; small-layout routing.
+- `WorldMissionEnv` (modified) — `reset()` shape branch.
 
 [Dependencies]
 
-No new third-party packages. Stdlib Python + the existing Node verifier pattern. The owner's laptop/cloud budget maps to re-running `tools/train-world.py` with larger `--generations`/`--population`, or a future nonlinear `LearnedPolicyMLP` in `software/stockcar/policies.py` (still CEM-trained in stdlib so sealed artifacts stay reproducible). No external RL framework initially.
+None new (stdlib only). `world_geometry`/`world_layouts` import `stockcar.geometry` and `stockcar.obstacles` (already present). No third-party RL framework.
 
 [Testing]
 
-- `test_ruleset.py`: all 8 names present and valid; unknown world → `KeyError`; `get_default()` matches `DEFAULT_WORLD`; pinned knobs identical across worlds; QA-deps map covers every world.
-- `test_worlds.py`: (1) **regression** — `mission.py` SHA-256 unchanged; (2) CW loop is a mirror of CCW (y→48−y reflection, within 1e-9); (3) the primary world completes 3 laps on seeds 0–3 and registers the finish at a band crossing; (4) `lap_mode="drive"` suppresses band crossings during TO_PIT/EXIT_PIT; (5) `round10` vs `square10` footprint radius differs as expected.
-- `tests/worlds.test.js`: node-suite contract — 8 worlds validate, DEFAULT world completes a mission, and its sealed package (if present) re-verifies.
-- Regression guard: `node tools/check-all.js` stays green after the scaffolding lands, with `software`/node test counts only increasing.
-- Validation boundary (stated in every sealed package): synthetic simulator + host-test evidence only — not a rules ruling, competition score, or physical validation.
+- `test_worlds.py` additions:
+  - enforced: an in-lane route logs 0 violations; a synthetic crossing logs ≥1 and reduces reward; `info()` carries `lane_violation_steps`; the enforced world still completes 3 laps.
+  - small: `WorldLayout.polys` use the 6.5 × 3.25 footprint (smaller extent than `GUIDE_PLUSH`); `world_random_layout` places obstacles; the small world completes 3 laps.
+  - regression: extend the `mission.py` SHA-256 guard to also pin `field.py` and `obstacles.py`.
+- `test_ruleset.py`: add a dimensions assertion for `SMALL_TOY` (6.5 × 3.25).
+- Gate after each step: `node tools/check-all.js` green (verify-world + worlds.test.js + python suites); each sealed `derived/rl-v3/<world>/` re-verifies.
 
 [Implementation Order]
 
-1. Add `ruleset.py` + `DEFAULT_WORLD` + `worlds.json` + `test_ruleset.py`. Gate: `check-all` green; `mission.py` byte-identical.
-2. Add CW mirror + line-aware geometry to `routes.py` (additive only). Gate: mirror-equality test; existing verifiers green.
-3. Add `mission_worlds.py` + `test_worlds.py`, proving the primary world completes 3 laps with the finish at the checkered band.
-4. Write `docs/worlds.md`. Commit steps 1–4 after `secrets-guard`.
-5. Cut the branches from `main`, primary first: `world-ccw-line-sq-adv-align`, then `world-ccw-gate-sq-adv-align`, `world-ccw-line-rd-adv-align`, `world-ccw-gate-rd-adv-align`, `world-ccw-line-sq-adv-yaw`, `world-ccw-line-sq-enf-align`, `world-cw-line-sq-adv-align`, `world-ccw-line-sq-adv-small`. Each sets `DEFAULT_WORLD` to its name (`#4` and `#8` optional; dropping them gives 6).
-6. On the primary branch: add `train-world.py` + `evaluate-world.py` + `verify-world.js` + `tests/worlds.test.js`; train `LearnedPolicy`; seal `derived/rl-v3/world-ccw-line-sq-adv-align/`; run `check-all`; push.
-7. Stamp out the remaining 7: set `DEFAULT_WORLD`, regenerate its `derived/rl-v3/<world>/` via `train-world.py` + `evaluate-world.py`, run `check-all`, push. (Step 6 does the real work once.)
-8. Optional, after compute-budget confirmation: strengthen the policy (nonlinear MLP / larger CEM), re-compared against `Classical` per world.
-9. Promotion: when a ruling lands, confirm the matching branch's `DEFAULT_WORLD`, re-run `check-all`, and fast-forward `main` to that branch — ask the owner first, per the standing habit.
+1. On primary: add `world_geometry.py` + `world_layouts.py`; update `ruleset.SMALL_TOY`; extend `mission_worlds.py` (enforced + small); extend tests. Gate: focused python tests green; `mission.py`/`field.py`/`obstacles.py` byte-identical.
+2. Regenerate the primary seal (`evaluate-world.py --world world-ccw-line-sq-adv-align`) since `ruleset.py` changed. Gate: `verify-world.js` + `check-all` green. Commit + push primary.
+3. Stamp the seven siblings: for each world W, `git checkout -B W primary`, set `DEFAULT_WORLD=W`, `git rm -r` the primary seal, `train-world.py --world W` + `evaluate-world.py --world W`, `check-all`, commit, `push -f`. Gate: each branch's `check-all` green.
+4. Optional (Step 8): strengthen the policy (nonlinear MLP / larger CEM) per compute budget; re-seal affected worlds.
+5. Promotion (Step 9): on a ruling, confirm the matching branch's `DEFAULT_WORLD`, re-run `check-all`, fast-forward `main` — ask the owner first.
 
-Owner decisions baked in: curated 8-world scope; primary = `world-ccw-line-sq-adv-align`; scaffolding/seams first, training after.
+Owner decisions baked in: all eight worlds; enforced = crossing-penalty; small = real 6.5 × 3.25 toy; siblings re-cut from primary.
