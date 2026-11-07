@@ -34,6 +34,8 @@ New:
 - `software/stockcar/DEFAULT_WORLD` — one-line file; each world branch sets it to its own name.
 - `software/stockcar/worlds.json` — machine-readable name↔settings↔QA table (for `verify-world.js`).
 - `software/stockcar/mission_worlds.py` — `WorldMissionSim(MissionSim)` and `WorldMissionEnv` (train 0–99 / eval 100–119).
+- `software/stockcar/mission_worlds.py` — `WorldMissionSim(MissionSim)` and `WorldMissionEnv` (train 0–99 / eval 100–119).
+- `software/stockcar/world_routes.py` — `lap_points(direction)` CCW/CW mirror (kept out of the pinned `routes.py`).
 - `software/stockcar/tests/test_ruleset.py`, `software/stockcar/tests/test_worlds.py`.
 - `docs/worlds.md` — the human-readable table: branch name, one-line uniqueness, the 5 dimension values, QA items (the "name the combinations" deliverable).
 - `tools/train-world.py` (`--world`, `--out`), `tools/evaluate-world.py` (`--world`, `--out`).
@@ -42,7 +44,7 @@ New:
 
 Modified:
 
-- `software/stockcar/routes.py` — additive only: `lap_lines(direction)` (CCW/CW mirror) plus checker-event support so a `line` world can express "a lap ends at the checkered band". No change to `lap()`/`configurations()` signatures.
+- `software/stockcar/routes.py` — **left byte-identical**: it is a pinned input of the sealed `full-mission-v10`/`maneuver-v10` packages, so the CW mirror lives in the new `world_routes.py` instead (corrected from the original draft, which wrongly planned an additive edit here).
 - `tools/train-rl-policy.py`, `tools/evaluate-rl-v2.py` — left frozen; `derived/rl-v2` stays reproducible. New tools are additive.
 - `tools/check-all.js` — default steps untouched; `tests/worlds.test.js` joins the node suite but only asserts (a) the 8 worlds validate, (b) `get_default() == DEFAULT_WORLD`, (c) the primary world completes 3 laps. It must NOT require all 8 derived packages (each branch has only its own).
 
@@ -55,7 +57,7 @@ Branch plumbing: a world branch is the **shared codebase** with `DEFAULT_WORLD` 
 - `ruleset.get(name)` → validated `WorldSettings`; `KeyError` unknown, `ValueError` malformed.
 - `ruleset.get_default()` → `WorldSettings` for the name in `DEFAULT_WORLD`.
 - `ruleset.deps(name)` → QA-item list.
-- `routes.lap_lines(direction)` → `[pts]` oval for CCW/CW (CCW reuses `lap()`; CW the y-reflected mirror).
+- `world_routes.lap_points(direction)` → `[pts]` plain-lap oval for CCW/CW (CCW reuses `routes.lap(lane_lines())`; CW the y-reflected mirror), keeping the pinned `routes.py` untouched.
 - `WorldMissionSim.build_routes(layout)` (override) → ENTER/LAP/TO_PIT/EXIT_PIT/PARK from `lap_lines(...)`, the world footprint, and corridor bounds for `enforced`.
 - `WorldMissionSim._mission()` (override) → mirrors `MissionSim._mission()` but keys the lap/finish signal per `lap`: `gate` uses route completion as today; `line` arms `LapLineDetector` and fires `checker_crossing` on a rising band crossing filtered by `lap_mode` and the supervisor's `lap_length_m`/`lap_tolerance` guard.
 - `tools/train-world.py main()` → `--world`, `--out`; CEM hyperparameters identical to `train-rl-policy.py` (POPULATION 16, ELITE 4, GENERATIONS 10, TRAIN_SEEDS [0,1,2,3], MAX_STEPS 1200); writes `trained-weights.json` + `training.json`.
