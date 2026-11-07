@@ -1,0 +1,64 @@
+{
+ "version": "0.1.0",
+ "date": "2026-11-07",
+ "world": "world-ccw-line-sq-adv-small",
+ "status": "agent-run; one linear policy trained by CEM, none matched to a hardware robot",
+ "max_steps": 4000,
+ "seeds": [
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  108,
+  109,
+  110,
+  111,
+  112,
+  113,
+  114,
+  115,
+  116,
+  117,
+  118,
+  119
+ ],
+ "results": [
+  {
+   "policy": "classical",
+   "runs": 20,
+   "completed": 20,
+   "mean_total_reward": 45.217,
+   "mean_score_like": 270.0,
+   "mean_steps": 1599.6,
+   "max_steps": 1769,
+   "total_vehicle_contact_steps": 7409,
+   "total_wall_contact_steps": 277
+  },
+  {
+   "policy": "random",
+   "runs": 20,
+   "completed": 0,
+   "mean_total_reward": -8.203,
+   "mean_score_like": 10.0,
+   "mean_steps": 3575.0,
+   "max_steps": 3575,
+   "total_vehicle_contact_steps": 6709,
+   "total_wall_contact_steps": 32881
+  },
+  {
+   "policy": "learned",
+   "runs": 20,
+   "completed": 17,
+   "mean_total_reward": 37.627,
+   "mean_score_like": 216.5,
+   "mean_steps": 3120.0,
+   "max_steps": 3575,
+   "total_vehicle_contact_steps": 8607,
+   "total_wall_contact_steps": 27642
+  }
+ ]
+}

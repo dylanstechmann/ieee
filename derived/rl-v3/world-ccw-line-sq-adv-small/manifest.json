@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-07",
+  "status": "agent-run; one linear policy trained by CEM, none matched to a hardware robot",
+  "world": "world-ccw-line-sq-adv-small",
+  "input_hashes": {
+    "tools/evaluate-world.py": "0cfaa8c35e14e18c8167d9db0bb9ed532591064dfeb9a1efabd34b074c50efb9",
+    "software/stockcar/policies.py": "f72e4ca706418cf5c972de240055f5383b6ba7c8f5be394348c1e4b09506b5df",
+    "software/stockcar/mission.py": "346fb5c977fddaaad7d790afcb466beacb3f2beeebe01803befb9da004032678",
+    "software/stockcar/mission_worlds.py": "9a6c5276e6bb8f0bf5b26851a63faaaf71ba6c37f2ececd717395396a1f36bf1",
+    "software/stockcar/world_routes.py": "d8b83cbf9ad15abeeee390b04e8e1e57739c817972f41f939e45e210f457f138",
+    "software/stockcar/world_geometry.py": "325c5f9e08e520a88f8e3cf7b5109a80f7cfa2e032bdd8ac2b42a7e3c7197d54",
+    "software/stockcar/world_layouts.py": "8474726aafd8901d70574e982ad22ecc6d47291c29adaff8c337d9d394fbe9e8",
+    "software/stockcar/ruleset.py": "61d388a404ba37debe2ae96ba064e7827004ee12fd61c56e79d29b2d40fe5f96",
+    "software/stockcar/worlds.json": "f940d0f53a0f8de59d4178caea9df5a8b896dea6b31b3de6b2857692ef3b8ec9",
+    "software/stockcar/DEFAULT_WORLD": "8042027d1973f57ddd19793c57efa6b8e7817f8e23c62f90802576353c2b1eeb",
+    "software/stockcar/supervisor.py": "15bf5e68a33428ac4db1a94e54b2c5fc44ff0280ccfc1fb6b4a54b37c3b701ec",
+    "software/stockcar/lapmodel.py": "943296d5f461cfef67d29934ce4129d06ad5c59762b1ebdfd21b18c098ff14a6",
+    "software/stockcar/passage.py": "adda10e8ca96830a8df0438d9e07c56ba976d54c01e9bae3ad8bb49332ad9e3d",
+    "software/stockcar/field.py": "67516673e3eee0ee5decb2186eacffce21723abc0bbf4f43db0a9b8e08029b68",
+    "software/stockcar/obstacles.py": "9caa806ed4a555df08721ca3cb9e74c7aeb65f9dbdadbc265fd20a74cf8776b1",
+    "software/stockcar/geometry.py": "424a5f211dff9afa22c4f366ba13b122ecd5960b803ac97b3538c2bf1ac35491",
+    "software/stockcar/sensors.py": "14146c15d7102e9f96bd056cff3370810c2f58f6f245b84e819f5e696b340fac",
+    "software/stockcar/sensors_camera.py": "c7882bb539add156e19f0f209b7f9c026517e6d802a7baf764e8909ee7a0bf75",
+    "software/stockcar/estimator.py": "ae66e769229862e9f5e052a5740b9c2d95fdf5cb06f1f90fe0b1592905b8951f",
+    "derived/organizer-cad-v10/field-v10.json": "d3d7de9e9f7d257d6f4f095cb06836a6bb484861aeffca45cb96990dba4afdca",
+    "derived/rl-v3/world-ccw-line-sq-adv-small/trained-weights.json": "c40ca28e2aa041540465d62d50e8a2e82c7a96b0d1e6782bbb21207fec9145cc",
+    "derived/rl-v3/world-ccw-line-sq-adv-small/training.json": "fbc1ab913c820e5e4eba07bf2d7390c538c44e9d9856f01ed582e93693daef9b"
+  },
+  "output_hashes": {
+    "report.json": "65c2e0df74ea413753e34f9788472a87d874748606348a756bbbec7944326ace",
+    "summary.md": "9e02c0a06077f049e6aec4edd59393ff85d9308cc186405036f59e7cb9baef52"
+  }
+}
