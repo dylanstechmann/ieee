@@ -4,8 +4,8 @@ Each open organizer question (QA01–QA10, `derived/qa-pack-v10/QUESTIONS.md`) i
 assumption." A **world** is one coherent cast of those assumptions, versioned in
 `software/stockcar/ruleset.py` and mirrored in `software/stockcar/worlds.json`. A world branch ships
 the shared codebase with `software/stockcar/DEFAULT_WORLD` set to its name and, for a functional
-world, its own five-file `derived/rl-v3/<world>/` seal. Six worlds are functional; the `enforced`
-and `small` worlds are structural placeholders whose simulator semantics are deliberately deferred.
+world, its own five-file `derived/rl-v3/<world>/` seal. The formerly deferred `enforced` and `small`
+semantics are now implemented in unpinned world modules; each branch still ships only its own seal.
 A ruling can promote only a green functional branch to `main` after the owner approves it.
 
 Agent-written for the owner's hobby/learning project. Nothing here is an organizer ruling or a
@@ -33,26 +33,27 @@ pit openings (QA05), 75% parking (QA07), start flag (QA08), wall tolerances (QA0
 | `world-ccw-line-rd-adv-align` | Round 10 in body (QA01 round-base ruling) on the primary line world. | QA01, QA03, QA04, QA06 | Functional — own five-file RL-v3 seal |
 | `world-ccw-gate-rd-adv-align` | Round body on the gate lap model; isolates QA01 (body) from QA06 (lap). | QA01, QA03, QA04, QA06 | Functional — own five-file RL-v3 seal |
 | `world-ccw-line-sq-adv-yaw` | Obstacles at random yaw (QA03 worst-feasibility case). | QA01, QA03, QA04, QA06 | Functional — own five-file RL-v3 seal |
-| `world-ccw-line-sq-enf-align` | Enforced lanes (QA04: stay in lane, no crossing the white line). | QA01, QA03, QA04, QA06 | Structural placeholder — no seal; simulator raises `NotImplementedError` |
+| `world-ccw-line-sq-enf-align` | Enforced lanes (QA04): lane-aware physical outer/inner routing, straightaway-only white-line marking penalties in training reward, and explicit fallback diagnostics. Not a hard-stop rule. | QA01, QA03, QA04, QA06 | Functional on this branch — own five-file RL-v3 seal |
 | `world-cw-line-sq-adv-align` | Clockwise lap direction (QA06 CW ruling). | QA01, QA03, QA04, QA06 | Functional — own five-file RL-v3 seal |
-| `world-ccw-line-sq-adv-small` | Smaller official toy obstacle (QA03 small-toy ruling; dimensions remain an unverified placeholder). | QA01, QA03, QA04, QA06 | Structural placeholder — no seal; simulator raises `NotImplementedError` |
+| `world-ccw-line-sq-adv-small` | Hypothetical QA03 smaller official toy: the explicitly unverified 8 × 4 in placeholder footprint in `ruleset.SMALL_TOY`, not an official measurement. | QA01, QA03, QA04, QA06 | Functional on its named branch — implementation and seal live there; this branch carries no small seal |
 
-All eight branches exist structurally so every cast of the dimensions has an explicit branch. The
-functional set is exactly the six sealed rows; `enf-align` and `adv-small` intentionally fail
-`tools/verify-world.js` until their semantics are decided, implemented in unpinned world modules, and
-newly sealed. This is deferred work, not a failed release of those two branches.
+All eight branches exist structurally so every cast of the dimensions has an explicit branch. Each
+branch carries only its own `DEFAULT_WORLD` and its own seal: this branch ships `world-ccw-line-sq-enf-align`;
+`world-ccw-line-sq-adv-small` is implemented and independently sealed on its named branch. The
+common semantics live in `world_geometry.py`, `world_layouts.py`, `mission_worlds.py`, and
+`world_routes.py`; no pinned input is modified.
 
 ## Close-out behavior
 
-Each functional branch carries only its own seal and a branch-local `DEFAULT_WORLD`. Placeholder
-branches carry the inherited documentation, their own `DEFAULT_WORLD`, no RL-v3 directory, and the
-existing constructor errors. Do not create empty/fake seals or weaken verification to make a
-placeholder appear green.
+Each functional branch carries only its own seal and a branch-local `DEFAULT_WORLD`. This branch has
+no `world-ccw-line-sq-adv-small` seal; that world's implementation and seal live on its named branch.
+Do not create empty/fake seals or weaken verification to make a branch appear green.
 
 ## Promotion
 
 When an organizer ruling arrives, identify the matching world and ask the owner before touching
-`main`. For one of the six functional worlds, confirm `DEFAULT_WORLD`, re-run `node
-tools/check-all.js` on the branch tip, and only then fast-forward `main` to that tip. A structural
-placeholder is not promotable: decide QA04/QA03 semantics first, implement them in unpinned world
-modules, add tests, seal and verify its own RL-v3 artifact, and run the full gate.
+`main`. For a functional world, confirm `DEFAULT_WORLD`, re-run `node tools/check-all.js` on the
+branch tip, and only then fast-forward `main` to that tip. The `enforced` and `small` worlds are now
+implemented and sealed on their named branches, but their semantics remain hypothetical QA04/QA03
+assumptions: any ruling that changes them requires code/tests updates and a fresh seal before
+promotion.
