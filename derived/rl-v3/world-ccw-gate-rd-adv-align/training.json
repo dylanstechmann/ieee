@@ -1,0 +1,35 @@
+{
+ "date": "2026-11-07",
+ "method": "cross-entropy method (CEM)",
+ "world": "world-ccw-gate-rd-adv-align",
+ "master_seed": 20261107,
+ "population": 16,
+ "elite": 4,
+ "generations": 3,
+ "train_seeds": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "max_steps": 1200,
+ "best_fitness": 28.98,
+ "weight_count": 38,
+ "curve": [
+  {
+   "generation": 0,
+   "best_fitness": 28.98,
+   "mean_fitness": 28.98
+  },
+  {
+   "generation": 1,
+   "best_fitness": 28.98,
+   "mean_fitness": 28.98
+  },
+  {
+   "generation": 2,
+   "best_fitness": 28.98,
+   "mean_fitness": 28.98
+  }
+ ]
+}
