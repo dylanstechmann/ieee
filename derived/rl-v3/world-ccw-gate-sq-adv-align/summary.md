@@ -1,6 +1,6 @@
-# RL v3: trained linear policy vs the classical baseline and random (world-ccw-line-sq-adv-align)
+# RL v3: trained linear policy vs the classical baseline and random (world-ccw-gate-sq-adv-align)
 
-2026-11-07. Agent-run synthetic study over the reserved evaluation seeds 100-119 for ruleset world `world-ccw-line-sq-adv-align`. `classical` delegates to the supervised planner; `random` emits uniform actions; and `learned` is a 38-weight linear policy trained by the cross-entropy method (`tools/train-world.py`) on training seeds only.
+2026-11-07. Agent-run synthetic study over the reserved evaluation seeds 100-119 for ruleset world `world-ccw-gate-sq-adv-align`. `classical` delegates to the supervised planner; `random` emits uniform actions; and `learned` is a 38-weight linear policy trained by the cross-entropy method (`tools/train-world.py`) on training seeds only.
 
 | policy | completed | mean total reward | mean score-like | mean steps | max steps | vehicle contact steps | wall contact steps |
 |---|---:|---:|---:|---:|---:|---:|---:|

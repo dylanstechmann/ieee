@@ -1,7 +1,7 @@
 {
   "date": "2026-11-07",
   "status": "agent-run; one linear policy trained by CEM, none matched to a hardware robot",
-  "world": "world-ccw-line-sq-adv-align",
+  "world": "world-ccw-gate-sq-adv-align",
   "input_hashes": {
     "tools/evaluate-world.py": "e1d4da77f793d674b45329ab5650e5011f807bd74d06ba5e1c805ffd4418482c",
     "software/stockcar/policies.py": "f72e4ca706418cf5c972de240055f5383b6ba7c8f5be394348c1e4b09506b5df",
@@ -10,7 +10,7 @@
     "software/stockcar/world_routes.py": "8b87312b4d04407792bf8ee760a20beef30879408e1fe64d717ff9b8430702bf",
     "software/stockcar/ruleset.py": "e76999b14764e16363088e3570d4ef27f7b40a531fe1259edc039b32282fe2f8",
     "software/stockcar/worlds.json": "4502e5be9e2d925fee4b29ad5bf18074a746c6bc0dcc1227b56b39c7c93e0c45",
-    "software/stockcar/DEFAULT_WORLD": "e68520459c9f8a0f57fdd7e44bc116610723c0c98e47c25c3988532d2dd8f05a",
+    "software/stockcar/DEFAULT_WORLD": "2803b8a4e7ad843964043aa122dedcfa2eb7d26c980e7bceffdbed272326f32f",
     "software/stockcar/supervisor.py": "15bf5e68a33428ac4db1a94e54b2c5fc44ff0280ccfc1fb6b4a54b37c3b701ec",
     "software/stockcar/lapmodel.py": "943296d5f461cfef67d29934ce4129d06ad5c59762b1ebdfd21b18c098ff14a6",
     "software/stockcar/passage.py": "adda10e8ca96830a8df0438d9e07c56ba976d54c01e9bae3ad8bb49332ad9e3d",
@@ -21,11 +21,11 @@
     "software/stockcar/sensors_camera.py": "c7882bb539add156e19f0f209b7f9c026517e6d802a7baf764e8909ee7a0bf75",
     "software/stockcar/estimator.py": "ae66e769229862e9f5e052a5740b9c2d95fdf5cb06f1f90fe0b1592905b8951f",
     "derived/organizer-cad-v10/field-v10.json": "d3d7de9e9f7d257d6f4f095cb06836a6bb484861aeffca45cb96990dba4afdca",
-    "derived/rl-v3/world-ccw-line-sq-adv-align/trained-weights.json": "70cbdb2ce927a30252056aacc844cd17149226f6e6da67ecfd778e61d7715b0f",
-    "derived/rl-v3/world-ccw-line-sq-adv-align/training.json": "dce46cd142c79d1eef08c317d1c2651f24934ab6d94ba37eba34757dc64d48d4"
+    "derived/rl-v3/world-ccw-gate-sq-adv-align/trained-weights.json": "70cbdb2ce927a30252056aacc844cd17149226f6e6da67ecfd778e61d7715b0f",
+    "derived/rl-v3/world-ccw-gate-sq-adv-align/training.json": "29d9d534ef16fe14f314cd418c9db4e8a3cbab881f71faeeb2472b58c1f9eb73"
   },
   "output_hashes": {
-    "report.json": "bb67f242be70b8418e370da4976ad0ee336e1bd62969d982a1e7a37a15e39207",
-    "summary.md": "03490f6230385d6fc43621ab071bb8379aacb759347a4bcd6e750f035f6d1d96"
+    "report.json": "ad1aef20c0ca73856c7cc58914bbdb0484376389242197bf79eee707ff76cfd3",
+    "summary.md": "44230b655f65dffd55366bb14333397f48f7c334c266bc916698c1e7676b6367"
   }
 }

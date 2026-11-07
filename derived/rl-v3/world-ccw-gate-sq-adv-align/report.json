@@ -1,7 +1,7 @@
 {
  "version": "0.1.0",
  "date": "2026-11-07",
- "world": "world-ccw-line-sq-adv-align",
+ "world": "world-ccw-gate-sq-adv-align",
  "status": "agent-run; one linear policy trained by CEM, none matched to a hardware robot",
  "max_steps": 4000,
  "seeds": [
