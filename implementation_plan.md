@@ -1,133 +1,93 @@
-# Implementation Plan — IEEE SoutheastCon 2027 Stock Car Race (Tracks 1d and 2)
+# Implementation Plan — Ruleset "worlds" for the open rule questions
 
 [Overview]
 
-Goal: finish what Track 1 claimed to finish, so the simulated robot plans around vehicles it has actually sensed, then port the estimator to the firmware, with every result measured rather than inferred.
+Goal: consolidate the ten open organizer assumptions (QA01–QA10) into one versioned, single-source ruleset (`stockcar.ruleset`) so that every plausible combination of rule answers is a named, cheaply-built "world" branch; build and validate the best-guess world first, stamp out the rest with near-zero per-branch work, and only then train the RL policy per world.
 
-This is the owner's hobby and learning project. All of this is agent-run simulation and host-tested code. It does not order parts, contact organizers, post Q&A or flash a board. The previous plan is archived at `docs/plans/implementation-plan-v14-history.md`.
+Context: the v10 simulator hard-codes ten "working assumption" decisions across scattered files (`mission.py`'s route model, `supervisor.DEFAULTS`, `field.quadrants`, `obstacles.GUIDE_PLUSH`, `sensors_camera`'s TAG/FLAG poses). The owner wants to prepare for whichever answers the organizers eventually give — without contacting them — by making one branch per combination and fast-forwarding `main` to whichever branch a ruling later validates. The full cross-product of the five high-impact dimensions is 72 worlds, but most differ only across low/medium-impact knobs (QA02/07/08/09/10) that change reliability/timing/margins rather than strategy, so a **curated set of 8 named worlds** is the chosen scope. `mission.py` is a pinned input of five sealed packages and will not be edited; worlds reach it through the existing subclass/constructor seam, so it stays byte-identical.
 
-Review findings that set the scope (2026-11-06, from reading the code; details in `ERRATA-2026-11.md`):
-
-- **Vehicle sensing does not exist.** `SensedMissionSim.build_routes` passes `layout.vehicles` (truth) to `plan_straight`. There is no `vehicle_tof`, `obstacle_ring` or vehicle map. Only the AprilTag and start flag are sensed.
-- **The "two causes" finding is unmeasured.** It came from one seed. A hand check of seed 100 supports the blend idea: the low-side vehicle spans x 51.4-59.6, the blend runs to x 56, and the high-side exit blend starts at x 56 above a vehicle spanning x 47.4-55.6. But 172 contact steps per lap (8.6 s) is more than a clipped corner obviously explains, even with the 1.5 s contact slowdown. It needs measuring.
-- **The blends can be tested without editing `mission.py`.** A subclass can build its own lateral profile. Arcs and the lap definition stay fixed, so this does not touch QA05/QA06.
-- **The old plan's `vehicle_tof` was unrealistic.** A ray cast against vehicles only assumes a sensor that ignores walls. A real ToF returns the nearest thing, so this plan classifies hits against the map.
-- **The old plan's `main.mission()` step was unsafe.** With stub sensors it would give the board a motion path with no real pose source. `mission_driver.py` already says this should not exist yet. It is dropped.
-
-Process rules for this plan:
-
-- Work on branch `track1d-vehicle-sensing`, cut from current `main`. Push there after each verified batch. Do not update `main` without asking; the Release habit in `AGENTS.md` covers one-file showcases only.
-- Run `secrets-guard --staged` before each commit and `node tools/check-all.js` before each push.
-- New files and subclasses only for anything pinned. Keep negative results. Do not set a target for the contact-free rate: the study reports what it measures, and its verifier checks the recorded numbers, not a hoped-for direction.
-- Tune on seeds 0-99. Seeds 100-119 are evaluation only, per `MissionEnv`.
+Approved (2026-11-06): curated 8-world scope; primary/best-guess is **`world-ccw-line-sq-adv-align`** (the checkered band is the finish line, per QA06); build the seams first so the remaining worlds are cheap, then train.
 
 [Types]
 
-The code stays dependency-free Python with JSON at tool boundaries, so these are data-shape contracts.
+Dependency-free (stdlib Python + JSON at tool boundaries). Data-shape contracts only.
 
-- `ContactRecord = {route, vehicle, quadrant, x_in, y_in, phase, lap}`, where `phase` is one of `arc`, `entry_blend`, `lane_hold`, `lane_change`, `exit_blend`, `off_straight`.
-- `RangeHit = {ray, range_in, expected_in, world_xy, is_vehicle}`. `expected_in` is the mapped ray cast from the pose in use, or `None` beyond range.
-- `SensedVehicle = {cx, cy, yaw, side, hits, seen_extent_in, assumed_depth_in}`. Only the visible face is measured. The far side uses the guide size as a labeled prior (QA03 open).
-- `LaneSource = "v10_blend" | "oracle" | "sensed"`. `oracle` uses true positions and is the upper bound for `sensed`.
-- `ProfileResult = {points, feasible, infeasible_vehicles}`. A vehicle with no room to reach its lane inside the straight is reported, never silently passed.
-
+- `WorldName` — one of the 8 kebab-case keys, e.g. `world-ccw-line-sq-adv-align`.
+- `WorldSettings` — a dict with exactly these keys/values:
+  - `lap`: `"gate"` | `"line"` — where a lap/finish registers (route gate vs the literal checkered band).
+  - `lap_mode`: `"drive"` | `"all"` — only when `lap == "line"`; `drive` suppresses band crossings during the pit detour, `all` counts every crossing.
+  - `direction`: `"ccw"` | `"cw"`.
+  - `body`: `"square10"` | `"round10"` (maps to `footprint_kind` and `footprint_in`).
+  - `lane_rule`: `"advisory"` | `"enforced"`.
+  - `obstacle`: `"align"` | `"yaw"` | `"small"` — obstacle shape/yaw/size.
+  - `reading`: `"offsets"` | `"sixteen_from_wall"` | `"six_other"` (QA03; `"offsets"` in all 8).
+  - `yaw_mode`: `"aligned"` | `"random"`.
+  - Pinned (identical in all worlds): `tag_pose`, `flag_pose`, `flag_mode = "raise"`, `pit_fraction = 0.75`, wall/divider tolerance variants, `preset`, `envelope`.
+  - Derived helpers: `footprint_kind`, `footprint_in`, obstacle `shape` dict.
+- `WorldDeps` — `WorldName` → QA-item list, e.g. `world-ccw-line-sq-adv-align` → `[QA01, QA03, QA04, QA06]`.
+- `WorldResult` (per-world seal) — the sim's `info()` dict plus `world`, `policy_weights_file`, and train/eval seeds; the verifier compares recorded numbers, not a direction.
 [Files]
 
 New:
 
-- `software/stockcar/contact_attribution.py` — classifies each contact step into a `ContactRecord`.
-- `software/stockcar/lane_profile.py` — lateral profile that reaches each lane before the vehicle's near edge and holds it past the far edge.
-- `software/stockcar/sensors_vehicle.py` — forward range ring, map-based hit classification, `VehicleMap`.
-- `software/stockcar/mission_avoid.py` — `AvoidingMissionSim(SensedMissionSim)` and `run_avoiding`.
-- `software/stockcar/tests/test_contact_attribution.py`, `test_lane_profile.py`, `test_sensors_vehicle.py`, `test_mission_avoid.py`.
-- `tools/evaluate-avoid-v12.py`, `tools/verify-avoid-v12.js`, `tests/avoid-v12.test.js`, and `derived/avoid-v12/` (`report.json`, `summary.md`, `manifest.json`).
-- `firmware/pico2/geom.py` — MicroPython-safe `wrap`, `hypot2`, `ring_distance`, `outward_normal`, `ray_cast`, `to_world`, and the 4x4 matrix helpers.
-- `firmware/pico2/estimator.py` — `EstimatorBoard`.
-- `firmware/pico2/field_tables.py` — barrier and band constants, generated by `tools/build_field_tables.py`.
-- `firmware/host_tests/sensor_fakes.py` — `SensorFakeHal(FakeHal)`, because `fakes.py` is pinned.
-- `firmware/host_tests/test_estimator_port.py`, `test_estimator_float32.py`, `test_estimator_in_mission.py`.
+- `software/stockcar/ruleset.py` — `WORLDS` (the 8 presets), `get(name)`, `get_default()` (reads `software/stockcar/DEFAULT_WORLD`), `deps(name)`. Single source of truth.
+- `software/stockcar/DEFAULT_WORLD` — one-line file; each world branch sets it to its own name.
+- `software/stockcar/worlds.json` — machine-readable name↔settings↔QA table (for `verify-world.js`).
+- `software/stockcar/mission_worlds.py` — `WorldMissionSim(MissionSim)` and `WorldMissionEnv` (train 0–99 / eval 100–119).
+- `software/stockcar/tests/test_ruleset.py`, `software/stockcar/tests/test_worlds.py`.
+- `docs/worlds.md` — the human-readable table: branch name, one-line uniqueness, the 5 dimension values, QA items (the "name the combinations" deliverable).
+- `tools/train-world.py` (`--world`, `--out`), `tools/evaluate-world.py` (`--world`, `--out`).
+- `tools/verify-world.js` + `tests/worlds.test.js`.
+- `derived/rl-v3/<world>/` — per-world sealed package (report/summary/manifest/weights); only the DEFAULT world's package exists on a given branch.
 
-Modified, none pinned by a v10 package:
+Modified:
 
-- `software/stockcar/avoidance.py`, `software/stockcar/mission_sensed.py` — correct the "sensed" wording and rename `sense_obstacles` to `replan_lanes`. Both are inputs of v11 packages, so step 3 regenerates those manifests.
-- `tools/evaluate-avoid-v11.py` — the keyword rename only; its summary text stays as the historical record, corrected by the errata.
-- `tools/verify-avoid-v11.js` — stop printing "(entry/exit blends)" as an established cause.
-- `firmware/pico2/hal.py` — sensor stubs that raise `NotImplementedError`.
-- `firmware/README.md` — layout table, test count, and the "no estimator yet" line.
-- `SESSION-STATE-2026-11-06.md`, `implementation_plan.md`.
+- `software/stockcar/routes.py` — additive only: `lap_lines(direction)` (CCW/CW mirror) plus checker-event support so a `line` world can express "a lap ends at the checkered band". No change to `lap()`/`configurations()` signatures.
+- `tools/train-rl-policy.py`, `tools/evaluate-rl-v2.py` — left frozen; `derived/rl-v2` stays reproducible. New tools are additive.
+- `tools/check-all.js` — default steps untouched; `tests/worlds.test.js` joins the node suite but only asserts (a) the 8 worlds validate, (b) `get_default() == DEFAULT_WORLD`, (c) the primary world completes 3 laps. It must NOT require all 8 derived packages (each branch has only its own).
 
-Must not change: `software/stockcar/mission.py`, `estimator.py`, `sensors.py`, `field.py`, `firmware/host_tests/fakes.py`, `tools/build_pico_bundle.py`, `firmware/pico2/main.py`'s idle boot, and all sealed package outputs, including `derived/avoid-v11/report.json` and `summary.md`.
+Archived: `implementation_plan.md` → `docs/plans/implementation-plan-v15-history.md` (done).
+
+Branch plumbing: a world branch is the **shared codebase** with `DEFAULT_WORLD` set to its name and its `derived/rl-v3/<world>/` committed. Code is identical across worlds, so per-branch work = one line + one regeneration.
 
 [Functions]
 
-New:
-
-- `attribute(sim, layout) -> list[ContactRecord]` — `contact_attribution.py`; called each step.
-- `lateral_profile(x0, x1, y_start, y_end, spans, blend_in, min_blend_in) -> ProfileResult` — `lane_profile.py`. `spans` is `(x_near, x_far, y)` in travel order, already padded by half the robot length plus margin.
-- `scan(pose, barriers, vehicles, rng, rays, noise, dropout) -> list[RangeHit]` — `sensors_vehicle.py`; rays hit barriers and vehicles together, like a real sensor.
-- `classify(reading, expected, gate_in) -> bool` — `sensors_vehicle.py`.
-- `run_avoiding(seed, lane_source, footprint_in, yaw_mode, sensing, ...) -> info` — `mission_avoid.py`.
-- `wrap`, `hypot2`, `mat`, `mul`, `transpose`, `add` — `firmware/pico2/geom.py`. `math.remainder` and `math.hypot` are not usable there; the lint forbids `hypot`.
-- `read_gyro`, `read_reflectance`, `read_ranges`, `read_camera` — `hal.py` stubs and `sensor_fakes.py`.
-
-Modified: `SensedMissionSim.__init__`, `build_routes` and `run_sensed` (keyword rename only). Removed: none. `plan_shift` and `shifted_target` are unused by the simulator and stay, because `avoidance.py` is a sealed input of `avoid-v11`.
-
+- `ruleset.get(name)` → validated `WorldSettings`; `KeyError` unknown, `ValueError` malformed.
+- `ruleset.get_default()` → `WorldSettings` for the name in `DEFAULT_WORLD`.
+- `ruleset.deps(name)` → QA-item list.
+- `routes.lap_lines(direction)` → `[pts]` oval for CCW/CW (CCW reuses `lap()`; CW the y-reflected mirror).
+- `WorldMissionSim.build_routes(layout)` (override) → ENTER/LAP/TO_PIT/EXIT_PIT/PARK from `lap_lines(...)`, the world footprint, and corridor bounds for `enforced`.
+- `WorldMissionSim._mission()` (override) → mirrors `MissionSim._mission()` but keys the lap/finish signal per `lap`: `gate` uses route completion as today; `line` arms `LapLineDetector` and fires `checker_crossing` on a rising band crossing filtered by `lap_mode` and the supervisor's `lap_length_m`/`lap_tolerance` guard.
+- `tools/train-world.py main()` → `--world`, `--out`; CEM hyperparameters identical to `train-rl-policy.py` (POPULATION 16, ELITE 4, GENERATIONS 10, TRAIN_SEEDS [0,1,2,3], MAX_STEPS 1200); writes `trained-weights.json` + `training.json`.
+- `tools/evaluate-world.py main()` → `Classical` + `LearnedPolicy` + `Random` through `WorldMissionEnv` over eval seeds 100–119; seals report/summary/manifest.
+- `tools/verify-world.js` → checks the sealed package, report numbers, and branch↔`DEFAULT_WORLD` consistency.
 [Classes]
 
-- `VehicleMap` (`sensors_vehicle.py`) — `add(hits, pose)`, `vehicles() -> list[SensedVehicle]`. Clusters confirmed hits and requires a minimum hit count before a vehicle exists.
-- `AvoidingMissionSim(SensedMissionSim)` (`mission_avoid.py`) — overrides `build_routes` for `lane_source`, overrides `step` to scan and record, and adds `_replan()`, which rebuilds the part of the LAP route ahead of the robot when the map changes.
-- `EstimatorBoard` (`firmware/pico2/estimator.py`) — `predict`, `correct`, `pose`, and the same counters as `Estimator`.
-- `SensorFakeHal(FakeHal)` (`firmware/host_tests/sensor_fakes.py`).
-
-No classes removed.
+- `WorldMissionSim(MissionSim)` — `__init__(self, world=None, preset="aggressive", envelope="nominal", field=None, **overrides)`; `world` defaults to `ruleset.get_default()`; forwards `footprint_kind`/`footprint_in`, obstacle shape, reading/yaw to `MissionSim.__init__` and `random_layout`; overrides `build_routes` and `_mission` only. `step`/`observe`/`info`/sensing/estimation are inherited unchanged.
+- `WorldMissionEnv` — `__init__(self, world=None, evaluation=False, **kw)`; mirrors `MissionEnv` (`TRAIN = range(0,100)`, `EVAL = range(100,120)`); `reset(seed)`/`step(action)` delegate to `WorldMissionSim` with the world's `random_layout` args.
 
 [Dependencies]
 
-None added. Host code stays on Python 3.12 through `uv` and Node 24. Firmware must pass `tools/micropython_lint.py`. Real sensor drivers wait for Order B and bench-lead review. `check-all` finds the new verifier and tests automatically.
+No new third-party packages. Stdlib Python + the existing Node verifier pattern. The owner's laptop/cloud budget maps to re-running `tools/train-world.py` with larger `--generations`/`--population`, or a future nonlinear `LearnedPolicyMLP` in `software/stockcar/policies.py` (still CEM-trained in stdlib so sealed artifacts stay reproducible). No external RL framework initially.
 
 [Testing]
 
-Track 1d:
-
-- Attribution: synthetic cases for each `phase`, plus a check that record counts equal `vehicle_contact_steps`.
-- Profile: a lane is reached before the padded near edge; a vehicle at the arc exit returns `feasible=False`; no vehicles reproduces the plain lane.
-- Sensor: walls alone produce no vehicle hits; dropout gives `None`, never a fabricated range; a vehicle farther than the mapped wall is not a hit; `VehicleMap` needs its minimum hits.
-- Mission: `lane_source="v10_blend"` reproduces `SensedMissionSim` exactly; `sensed` never reads `layout.vehicles` for planning, enforced by a test that gives the planner a layout whose vehicle list raises on access.
-- `derived/avoid-v12/` cells: seeds 100-119, aligned and random yaw, `v10_blend`/`oracle`/`sensed`, footprints 10, 8 and 6 in, true pose and EKF pose. Report contact-free laps by lap number, contact-free runs, wall-contact laps, completions, infeasible vehicles, attribution by phase, and detection misses and false positives. Lap 1 is a discovery lap for `sensed`, so run-level rates alone would mislead.
-- Contacts are judged from the driven path, not the planned one. The simulator's kinematic follower cuts corners, so state that these are not firmware-loop results.
-- Regression: `verify-*-v10` and `verify-full-mission-v11` stay green, with v11 report and summary bytes unchanged after the rename.
-
-Track 2:
-
-- `test_estimator_port.py`: replay recorded `SensorSuite` sequences through both filters. Require equal gate decisions and counters, and `pose()` agreement within a stated tolerance. `sqrt` against `hypot` and `wrap` against `remainder` differ in the last bits, so exact equality is not expected. Also assert the board constants equal the host constants.
-- `test_estimator_float32.py`: MicroPython on the Pico is expected to use single-precision floats (confirm against the chosen UF2), so parity under CPython doubles does not cover the board. Round state and covariance through `struct` each step and report drift and any loss of positive variance.
-- `test_estimator_in_mission.py`: run `full_mission.run` with `Estimator` patched to the port; results must match within tolerance.
-- Lint passes on the new files, and `main.py` still boots to `idle()`.
-
-Open risk to report, not solve: each ToF update does 5 ray casts over 24 barrier edges, so 4 sensors at 20 Hz is about 9,600 edge tests per second. That may not fit interpreted MicroPython. It cannot be measured here.
-
-Validation boundary, stated in every package: synthetic simulator and host-test evidence, not physical validation, a rules ruling or a competition score.
+- `test_ruleset.py`: all 8 names present and valid; unknown world → `KeyError`; `get_default()` matches `DEFAULT_WORLD`; pinned knobs identical across worlds; QA-deps map covers every world.
+- `test_worlds.py`: (1) **regression** — `mission.py` SHA-256 unchanged; (2) CW loop is a mirror of CCW (y→48−y reflection, within 1e-9); (3) the primary world completes 3 laps on seeds 0–3 and registers the finish at a band crossing; (4) `lap_mode="drive"` suppresses band crossings during TO_PIT/EXIT_PIT; (5) `round10` vs `square10` footprint radius differs as expected.
+- `tests/worlds.test.js`: node-suite contract — 8 worlds validate, DEFAULT world completes a mission, and its sealed package (if present) re-verifies.
+- Regression guard: `node tools/check-all.js` stays green after the scaffolding lands, with `software`/node test counts only increasing.
+- Validation boundary (stated in every sealed package): synthetic simulator + host-test evidence only — not a rules ruling, competition score, or physical validation.
 
 [Implementation Order]
 
-**Requires shell approval for `git`, `uv` and `node`.** Steps 1 and 2 were done without them.
+1. Add `ruleset.py` + `DEFAULT_WORLD` + `worlds.json` + `test_ruleset.py`. Gate: `check-all` green; `mission.py` byte-identical.
+2. Add CW mirror + line-aware geometry to `routes.py` (additive only). Gate: mirror-equality test; existing verifiers green.
+3. Add `mission_worlds.py` + `test_worlds.py`, proving the primary world completes 3 laps with the finish at the checkered band.
+4. Write `docs/worlds.md`. Commit steps 1–4 after `secrets-guard`.
+5. Cut the branches from `main`, primary first: `world-ccw-line-sq-adv-align`, then `world-ccw-gate-sq-adv-align`, `world-ccw-line-rd-adv-align`, `world-ccw-gate-rd-adv-align`, `world-ccw-line-sq-adv-yaw`, `world-ccw-line-sq-enf-align`, `world-cw-line-sq-adv-align`, `world-ccw-line-sq-adv-small`. Each sets `DEFAULT_WORLD` to its name (`#4` and `#8` optional; dropping them gives 6).
+6. On the primary branch: add `train-world.py` + `evaluate-world.py` + `verify-world.js` + `tests/worlds.test.js`; train `LearnedPolicy`; seal `derived/rl-v3/world-ccw-line-sq-adv-align/`; run `check-all`; push.
+7. Stamp out the remaining 7: set `DEFAULT_WORLD`, regenerate its `derived/rl-v3/<world>/` via `train-world.py` + `evaluate-world.py`, run `check-all`, push. (Step 6 does the real work once.)
+8. Optional, after compute-budget confirmation: strengthen the policy (nonlinear MLP / larger CEM), re-compared against `Classical` per world.
+9. Promotion: when a ruling lands, confirm the matching branch's `DEFAULT_WORLD`, re-run `check-all`, and fast-forward `main` to that branch — ask the owner first, per the standing habit.
 
-Session housekeeping already completed this session (2026-11-06): the repo `dylanstechmann/ieee` was made **public**, and the standing "showcase HTML at the top of the front page" habit is now documented in `AGENTS.md` and `README.md`. Those two doc edits are uncommitted; fold them into the step 3 commit.
-
-1. Done: correct the record in `ERRATA-2026-11.md` and `SESSION-STATE-2026-11-06.md`.
-2. Done: archive the old plan and write this one.
-3. Create the branch. Commit steps 1-2 after `secrets-guard`. Apply the rename and wording fixes, regenerate the v11 manifests, confirm report and summary bytes are unchanged, run `check-all`, push.
-4. Build `contact_attribution.py` and run it on seeds 0-99. **Gate:** if contacts are not mostly in the blend phases, revise steps 5-6 before continuing and record why.
-5. Build `lane_profile.py` and the `oracle` source. Tune `blend_in` and `min_blend_in` on seeds 0-99 only. This is the actual test of the blend hypothesis.
-6. Build `sensors_vehicle.py`, `VehicleMap` and `_replan()`. Check first how a changed LAP length interacts with the supervisor's `lap_length_m` guard, which is set at reset.
-7. Generate and seal `derived/avoid-v12/`, add the verifier and test, then run `check-all` and push. Update the errata with what was measured.
-8. Add `geom.py`, `field_tables.py` and `EstimatorBoard` with the parity test. Run lint and `check-all`, then push.
-9. Add the float32 and in-mission tests, the HAL stubs and `sensor_fakes.py`, and update `firmware/README.md`. Run `check-all` and push.
-10. Close out the session state and ask the owner whether to update `main`.
-
-Track 3 (RL scaffold, owner-facing summary) stays deferred until Tracks 1d and 2 land.
-
-Owner decisions, none blocking step 3:
-
-- What to do about the Track 1 commits already on `main`: leave them (the default, since `main` builds and history is not rewritten) or something else.
-- The unsent team email cites 458 tests and 31 verifiers, which are out of date.
+Owner decisions baked in: curated 8-world scope; primary = `world-ccw-line-sq-adv-align`; scaffolding/seams first, training after.

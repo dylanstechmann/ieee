@@ -106,3 +106,21 @@ def lines_for(field, config, margin):
 def lane_lines():
     """The plain lap: the 7.5 in lanes, whatever the vehicles."""
     return {"low_west": LOW_LANE, "low_east": LOW_LANE, "high_west": HIGH_LANE, "high_east": HIGH_LANE}
+
+
+def lap_points(direction="ccw"):
+    """Plain-lap waypoints (the 7.5 in lanes, no obstacle response) in field inches.
+
+    ``ccw`` is the v10 route model: gate at the west apex, low straight eastbound, high straight
+    westbound. ``cw`` mirrors it across the field centerline ``y = (LOW_LANE + HIGH_LANE) / 2``, run
+    clockwise, so the two directions sweep the same corridor pair in opposite senses. Used by the
+    ruleset worlds (``mission_worlds.WorldMissionSim``); the simulator's own ``mission.py`` builds the
+    identical counterclockwise loop inline and is left byte-identical.
+    """
+    if direction not in ("ccw", "cw"):
+        raise ValueError(f"unknown direction {direction!r}")
+    pts = lap(lane_lines())
+    if direction == "cw":
+        cy = (LOW_LANE + HIGH_LANE) / 2.0
+        return [(x, 2 * cy - y) for x, y in pts]
+    return pts
