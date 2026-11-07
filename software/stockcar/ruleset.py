@@ -17,8 +17,8 @@ from stockcar.sensors_camera import FLAG_POSE, TAG_POSE
 ROOT = pathlib.Path(__file__).resolve().parent
 DEFAULT_FILE = ROOT / "DEFAULT_WORLD"
 
-# A smaller official toy is a QA03 possibility, not a measured fact. These are placeholder dimensions
-# until a ruling names the real toy; never treat them as a competition value.
+# A smaller official toy is a QA03 possibility, not a measured fact. These 8 x 4 in placeholder
+# dimensions stand in until a ruling names the real toy; never treat them as a competition value.
 SMALL_TOY = {"id": "small_toy", "length_in": 8.0, "width_in": 4.0,
              "source": "placeholder for a QA03 smaller-official-toy ruling; not a measured vehicle"}
 
